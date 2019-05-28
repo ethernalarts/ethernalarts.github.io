@@ -22,6 +22,31 @@
     and (max-device-width: 1600px) {
 }
 
+@font-face {
+    font-family: Lato;
+    src: url( ../fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: "Lato Light";
+    src: url( ../fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: "Oswald Light";
+    src: url( ../fonts/Oswald-Light.ttf);
+}
+@font-face {
+    font-family: "Oswald SemiBold";
+    src: url( ../fonts/Oswald-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Alfa Slab One";
+    src: url( ../fonts/AlfaSlabOne-Regular.ttf);
+}
+@font-face {
+    font-family: Federo;
+    src: url( ../fonts/Federo-Regular.ttf);
+}
+
 body {    
     width: 100%;
     min-width: 1348px;
@@ -70,19 +95,6 @@ header {
     background-color: white;
 }
 
-@font-face {
-    font-family: Lato, "Lato Light";
-    src: url( ../fonts/Lato-Regular.ttf);
-    src: url( ../fonts/Lato-Light.ttf);
-}
-@font-face {
-    font-family: "Oswald Light";
-    src: url( ../fonts/Oswald-Light.ttf);
-}
-@font-face {
-    font-family: "Alfa Slab One";
-    src: url( ../fonts/AlfaSlabOne-Regular.ttf);
-}
 nav {
     font-weight: 500;
     font-family: "Oswald Light", serif;
