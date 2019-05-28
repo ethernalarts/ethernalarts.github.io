@@ -1,0 +1,222 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;  
+  -webkit-box-sizing: border-box;	
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+	box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media screen
+    and (min-device-width: 800px)
+    and (max-device-width: 1600px) {
+}
+
+body {    
+    width: 100%;
+    min-width: 1348px;
+    height: auto;
+    margin: 0;
+    background-image: url('../images/index-bkgrd-pic-dark.jpg');
+    background-repeat: no-repeat;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    margin: 50px 0 0;
+    bottom: 0;
+    background-color: rgba(14, 14, 14, 0.9);
+    height: auto;
+    font-family: "Lato Light", serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: whitesmoke;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+
+header {
+    background-color: rgba(14, 14, 14, 0.8);
+    /*border-left: 300px solid whitesmoke;*/
+    padding: 20px 20px 20px 0;
+    width: 100%;
+    min-width: 1348px;
+    height: 95px;
+    display: block;
+    overflow: hidden;
+}
+
+.vlink-logo {
+    width: 100%;
+    padding: 0 20px;
+    margin: -40px 0 0;
+    z-index: 20;
+    position: relative;
+    background-color: whitesmoke;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url( ../fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: "Oswald Light";
+    src: url( ../fonts/Oswald-Light.ttf);
+}
+@font-face {
+    font-family: "Alfa Slab One";
+    src: url( ../fonts/AlfaSlabOne-Regular.ttf);
+}
+nav {
+    font-weight: 500;
+    font-family: "Oswald Light", serif;
+    font-size: 1.04em;
+    text-align: center;
+    width: 100%;
+    min-width: 1348px;
+    height: auto;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline;
+}
+
+.navlist {
+    list-style-type: none;
+    text-align: center;
+    float: right;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 5px 0 0;
+}
+
+.navlist li {
+    display: inline;
+}
+
+.navlistitem {
+    list-style-type: none;
+    text-align: center;
+    /*padding: 10px 25px;*/
+}
+
+.navlistitem a {
+    padding: 10px 25px;
+    display: inline-block;
+    color: whitesmoke;
+}
+
+.navlistitem a:hover {
+    padding: 10px 25px;
+    /*background-color: #d93b3b;*/
+    background-color: #010101;
+}
+
+.navlistitem a:visited,
+.navlistitem a:focus {
+    /*background-color: #191919;*/
+}
+
+.navlistitem a.active,
+.navlistitem a.active:hover {
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 10px 25px;
+    background-color: #cc3333;
+    border-radius: 0;
+}
+
+.index-welcome-container {
+    text-align: center;
+    padding: 0 200px;
+    width: 100%;
+    min-width: 1348px;
+    display: block;
+    margin: 100px auto 0;
+}
+
+.index-welcome-box {
+    text-align: center;
+    width: 748px;
+    margin: 0 auto;
+    /*background-color: rgba(14, 14, 14, 0.8);*/
+    padding: 30px;
+    font-weight: 500;
+    display: block;
+}
+
+@font-face {
+    font-family: Limelight;
+    src: url( ../fonts/Limelight-Regular.ttf);
+}
+.index-welcome-h2 {
+    font-family: "Alfa Slab One", Federo, "Oswald SemiBold", serif;
+    display: inline-block;
+    margin: -40px 0 0;
+    font-size: 2.8em;
+    font-style: normal;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+@font-face {
+    font-family: Archivo;
+    src: url( ../fonts/Archivo-Regular.ttf);
+}
+.index-welcome-content {
+    margin: 20px 94px 0;
+    padding: 15px;
+    text-align: center;
+    width: 500px;
+    /*height: 189px;*/
+    font-family: "Lato Light", serif;
+    font-weight: 500;
+    display: inline-block;
+    background-color: rgba(10, 10, 10, 0.85);
+    color: whitesmoke;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.but-getaquote {
+    margin: 35px auto 0;
+    background-color: orangered;
+    padding: 12px 30px;
+    display: inline-block;
+    color: #F6F6F6;
+    font-family: "Lato Light", serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.but-getaquote:hover,
+.but-getaquote:focus {
+    color: #F6F6F6;
+    background-color: #eb4500;
+    text-decoration: none;
+}
+
+.but-getaquote:active {
+}
+
+.copyright {
+    font-size: 12px;
+    font-weight: 500;
+    /*margin: 1px;*/
+}
