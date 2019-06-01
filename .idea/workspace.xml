@@ -66,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="60" />
     <option name="width" value="1346" />
@@ -140,7 +140,7 @@
       <workItem from="1559096378525" duration="1190000" />
       <workItem from="1559125779036" duration="595000" />
       <workItem from="1559232612525" duration="12000" />
-      <workItem from="1559385416866" duration="12185000" />
+      <workItem from="1559385416866" duration="12470000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>
@@ -160,11 +160,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65410000" />
+    <option name="totallyTimeSpent" value="65695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
