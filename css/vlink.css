@@ -43,8 +43,8 @@
     src: url( ../fonts/Oswald-Regular.ttf);
 }
 @font-face {
-    font-family: "Alfa Slab One";
-    src: url( ../fonts/AlfaSlabOne-Regular.ttf);
+    font-family: Federo;
+    src: url( ../fonts/Federo-Regular.ttf);
 }
 @font-face {
     font-family: Roboto;
@@ -184,10 +184,10 @@ nav {
 }
 
 .index-welcome-h2 {
-    font-family: Roboto, Federo, serif;
+    font-family: Federo, serif;
     display: block;
     margin: -40px auto 0;
-    font-size: 3.3em;
+    font-size: 3.4em;
     font-weight: 600;
     text-shadow: 2px 2px #010101;
     color: whitesmoke;
