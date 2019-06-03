@@ -8,10 +8,14 @@
     <title>VLink Express Courier - Services</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/back-to-top.js"></script>
+
+    <div class="thetop"></div>
 
     <style>
         .body {
@@ -21,8 +25,6 @@
             margin: 0;
             background-image: url("images/navbar-bkgrd-img.jpg");
         }
-
-
     </style>
 </head>
 
@@ -37,10 +39,9 @@
             <ul class="navlist">
                 <li class="navlistitem"><a href="index.html">Home</a></li>
                 <li class="navlistitem"><a href="services.html" class="active">Services</a></li>
-                <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
-                <li class="navlistitem"><a href="about.html">About</a></li>
-                <li class="navlistitem"><a href="contact.html">Contact</a></li>
-                <li class="navlistitem"><a href="activities.html">Track</a></li>
+                <li class="navlistitem"><a href="#">Get a Quote</a></li>
+                <li class="navlistitem"><a href="#">Contact</a></li>
+                <li class="navlistitem"><a href="#">Track</a></li>
             </ul>
         </nav>
     </header>
@@ -68,8 +69,8 @@
                     <img src="images/intl-shipping-2.jpg" class="services" alt="International Shipping"/><br>
                     <p class="body-content">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        <span id="hide" style="display: none">
+                        labore et dolore magna aliqua<span id="is-dots">...</span>
+                        <span id="is-more" style="display: none">
                             Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
                             Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
                             In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
@@ -77,18 +78,35 @@
                             in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                             elementum facilisis leo.
                         </span>
-                        <button type="button" class="but-showmore" onclick="document.getElementById('hide').style.display='block'">Show More</button>
+                        <button type="button" class="but-showmore" id="isBtn" onclick="intlShipping()">Read More</button>
                     </p>
+                    <script>
+                        function intlShipping() {
+                            var dots = document.getElementById("is-dots");
+                            var moreText = document.getElementById("is-more");
+                            var btnText = document.getElementById("isBtn");
+
+                            if (dots.style.display === "none") {
+                                dots.style.display = "inline";
+                                btnText.innerHTML = "Read More";
+                                moreText.style.display = "none";
+                            } else {
+                                dots.style.display = "none";
+                                btnText.innerHTML = "Read Less";
+                                moreText.style.display = "inline";
+                            }
+                        }
+                    </script>
                 </div>
 
-                <!-- Express Courier Service Column -->
+                <!-- Express Delivery Column -->
                 <div class="services" style="margin: 0 0 0 60px">
                     <h2 class="services">EXPRESS <br>DELIVERY</h2><br>
                     <img src="images/express-courier.jpg" class="services" alt="Domestic Package"/><br>
                     <p class="body-content">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        <span id="hide-1" style="display: none">
+                        labore et dolore magna aliqua<span id="ed-dots">...</span>
+                        <span id="ed-more" style="display: none">
                             Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
                             Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
                             In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
@@ -96,18 +114,35 @@
                             in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                             elementum facilisis leo.
                         </span>
-                        <button type="button" class="but-showmore" onclick="document.getElementById('hide-1').style.display='block'">Show More</button>
+                        <button type="button" class="but-showmore" id="edBtn" onclick="expressDelivery()">Read More</button>
                     </p>
+                    <script>
+                        function expressDelivery() {
+                            var dots = document.getElementById("ed-dots");
+                            var moreText = document.getElementById("ed-more");
+                            var btnText = document.getElementById("edBtn");
+
+                            if (dots.style.display === "none") {
+                                dots.style.display = "inline";
+                                btnText.innerHTML = "Read More";
+                                moreText.style.display = "none";
+                            } else {
+                                dots.style.display = "none";
+                                btnText.innerHTML = "Read Less";
+                                moreText.style.display = "inline";
+                            }
+                        }
+                    </script>
                 </div>
 
                 <!-- Special Services Column -->
                 <div class="services" style="margin: 0 0 0 60px">
                     <h2 class="services">SPECIAL <br>SERVICES</h2><br>
-                    <img src="images/special-services-2.jpg" class="services" alt="Domestic Package"/><br>
+                    <img src="images/special-services-3.jpg" class="services" alt="Domestic Package"/><br>
                     <p class="body-content">
                         When arriving late is simply not an option, our special service package is just right for you.
-                        Lorem ipsum dolor sit amet.
-                        <span id="hide-2" style="display: none">
+                        Lorem ipsum dolor sit amet. Feugiat in ante<span id="sps-dots">...</span>
+                        <span id="sps-more" style="display: none">
                             Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
                             Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
                             In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
@@ -115,8 +150,25 @@
                             in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                             elementum facilisis leo.
                         </span>
-                        <button type="button" class="but-showmore" onclick="document.getElementById('hide-2').style.display='block'">Show More</button>
+                        <button type="button" class="but-showmore" id="spsBtn" onclick="specialServices()">Read More</button>
                     </p>
+                    <script>
+                        function specialServices() {
+                            var dots = document.getElementById("sps-dots");
+                            var moreText = document.getElementById("sps-more");
+                            var btnText = document.getElementById("spsBtn");
+
+                            if (dots.style.display === "none") {
+                                dots.style.display = "inline";
+                                btnText.innerHTML = "Read More";
+                                moreText.style.display = "none";
+                            } else {
+                                dots.style.display = "none";
+                                btnText.innerHTML = "Read Less";
+                                moreText.style.display = "inline";
+                            }
+                        }
+                    </script>
                 </div>
             </div>
 
@@ -129,8 +181,8 @@
                     <img src="images/time-critical.jpg" class="services" alt="Domestic Package"/><br>
                     <p class="body-content">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        <span id="hide-2" style="display: none">
+                        labore et dolore magna aliqua<span id="tc-dots">...</span>
+                        <span id="tc-more" style="display: none">
                             Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
                             Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
                             In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
@@ -138,8 +190,25 @@
                             in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                             elementum facilisis leo.
                         </span>
-                        <button type="button" class="but-showmore" onclick="document.getElementById('hide-2').style.display='block'">Show More</button>
+                        <button type="button" class="but-showmore" id="tcBtn" onclick="timeCritical()">Read More</button>
                     </p>
+                    <script>
+                        function timeCritical() {
+                            var dots = document.getElementById("tc-dots");
+                            var moreText = document.getElementById("tc-more");
+                            var btnText = document.getElementById("tcBtn");
+
+                            if (dots.style.display === "none") {
+                                dots.style.display = "inline";
+                                btnText.innerHTML = "Read More";
+                                moreText.style.display = "none";
+                            } else {
+                                dots.style.display = "none";
+                                btnText.innerHTML = "Read Less";
+                                moreText.style.display = "inline";
+                            }
+                        }
+                    </script>
                 </div>
 
                 <!-- Tailor-Made Services Column -->
@@ -149,14 +218,7 @@
                     <p class="body-content">
                         Do you require a solution totally unique and designed just to suit your need?
                         When others won't do the job, we'll always find a way.
-                        <span id="hide-2" style="display: none">
-                            Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
-                            Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
-                            In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
-                            Mauris nunc congue nisi vitae suscipit tellus mauris. Tortor at auctor urna nunc. Egestas purus viverra accumsan
-                            in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
-                            elementum facilisis leo.
-                        </span>
+
                         <a href="contact.html" target="_blank" class="but-tailormade">Let's Talk</a>
                     </p>
                 </div>
@@ -167,8 +229,8 @@
                     <img src="images/secure-storage-2.jpg" class="services" alt="Secure Storage"/><br>
                     <p class="body-content">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        <span id="hide-3" style="display: none">
+                        labore et dolore magna aliqua<span id="ss-dots">...</span>
+                        <span id="ss-more" style="display: none">
                             Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
                             Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
                             In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
@@ -176,10 +238,33 @@
                             in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                             elementum facilisis leo.
                         </span>
-                        <button type="button" class="but-showmore" onclick="document.getElementById('hide-3').style.display='block'">Show More</button>
+                        <button type="button" class="but-showmore" id="ssBtn" onclick="myFunction()">Read More</button>
                     </p>
+                    <script>
+                        function myFunction() {
+                            var dots = document.getElementById("ss-dots");
+                            var moreText = document.getElementById("ss-more");
+                            var btnText = document.getElementById("ssBtn");
+
+                            if (dots.style.display === "none") {
+                                dots.style.display = "inline";
+                                btnText.innerHTML = "Read More";
+                                moreText.style.display = "none";
+                            } else {
+                                dots.style.display = "none";
+                                btnText.innerHTML = "Read Less";
+                                moreText.style.display = "inline";
+                            }
+                        }
+                    </script>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-up"></i>
         </div>
     </div>
 </body>

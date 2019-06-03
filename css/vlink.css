@@ -58,7 +58,6 @@
 body {    
     width: 100%;
     min-width: 1348px;
-    /*height: 100%;*/
     margin: 0;
     background-image: url('../images/index-bkgrd-pic-dark.jpg');
     background-repeat: no-repeat;
@@ -185,11 +184,11 @@ nav {
 }
 
 .index-welcome-h2 {
-    font-family: Lato, Federo, serif;
+    font-family: Roboto, Federo, serif;
     display: block;
     margin: -40px auto 0;
     font-size: 3.3em;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 2px #010101;
     color: whitesmoke;
 }
@@ -210,20 +209,21 @@ nav {
 
 .but-getaquote {
     margin: 35px auto 0;
-    background-color: #eb7f00;
-    padding: 12px 30px;
+    background-color: #ebeb19;
+    border-radius: 3px;
+    padding: 15px 35px;
     display: inline-block;
-    color: #e1e1e1;
+    color: #0f0f0f;
     font-family: Lato, serif;
     font-size: 1.1em;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
 }
 
 .but-getaquote:hover,
 .but-getaquote:focus {
-    color: #F6F6F6;
-    background-color: #eb7f00;
+    color: #0f0f0f;
+    background-color: #f5f519;
     text-decoration: none;
 }
 
@@ -258,7 +258,7 @@ p.body-content {
     margin: 10px 0 0;
     color: #010101;
     width: 280px;
-    padding: 0 30px 0 0;
+    padding: 0 20px 0 0;
     height: 180px;
     overflow: auto;
 }
@@ -288,7 +288,7 @@ h2.body-content {
 h2.services {
     font-family: "Oswald SemiBold", serif;
     font-size: 1.5em;
-    color: #af5a5a;
+    color: #9b4f4f;
 }
 
 img.services {
