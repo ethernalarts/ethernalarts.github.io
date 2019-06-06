@@ -66,7 +66,7 @@ body {
 .container {
     width: 100%;
     min-width: 1348px;
-    padding: 0 190px;
+    padding: 0 160px;
 }
 
 a {
@@ -187,7 +187,7 @@ nav {
     font-family: Federo, serif;
     display: block;
     margin: -40px auto 0;
-    font-size: 3.4em;
+    font-size: 3.5em;
     font-weight: 600;
     text-shadow: 2px 2px #010101;
     color: whitesmoke;
@@ -210,13 +210,13 @@ nav {
 .but-getaquote {
     margin: 35px auto 0;
     background-color: #ebeb19;
-    border-radius: 4px;
+    border-radius: 3px;
     width: 240px;
     padding: 15px 30px;
     display: inline-block;
     color: #0f0f0f;
     font-family: Lato, serif;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 600;
     text-decoration: none;
 }
@@ -224,8 +224,9 @@ nav {
 .but-getaquote:hover,
 .but-getaquote:focus {
     color: #0f0f0f;
-    background-color: #d2d219;
+    /*background-color: #d2d219;*/
     text-decoration: none;
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 25, 0.5), 0 6px 20px 0 rgba(255, 255, 25, 0.51)
 }
 
 .but-getaquote:active {
@@ -275,20 +276,24 @@ h2.body-content {
 
 .services-container {
     width: 100%;
-    min-width: 968px;
+    min-width: 1028px;
     margin: 200px 0 0;
     display: flex;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
 }
 
 .services {
     width: 100%;
     min-width: 280px;
+    position: relative;
+    z-index: 3;
 }
 
 h2.services {
     font-family: "Oswald SemiBold", serif;
     font-size: 1.5em;
-    color: #9b4f4f;
+    color: #393973;
 }
 
 img.services {
@@ -297,14 +302,16 @@ img.services {
 }
 
 .but-showmore {
-    margin: 15px 0 0;
-    background-color: orangered;
-    border: 2px solid orangered;
-    padding: 5px 25px;
-    display: inline;
     float: left;
+    position: relative;
+    z-index: 90;
+    margin: 25px 0;
+    background-color: orangered;
+    border: 0 solid orangered;
+    padding: 7px 25px;
+    display: inline;
     color: whitesmoke;
-    font-family: Lato, serif;
+    font-family: Montserrat, Lato, Roboto, serif;
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
@@ -313,29 +320,31 @@ img.services {
 
 .but-showmore:hover,
 .but-showmore:focus {
-    color: #e13900;
-    font-weight: 600;
-    background-color: transparent;
+    position: relative;
+    z-index: inherit;
+    margin: 25px 0;
     text-decoration: none;
-    border: 2px solid orangered;
+    border: 0 solid orangered;
+    box-shadow: 4px 8px 16px orangered;
+    cursor: pointer;
 }
 
 .but-showmore:active {
     color: whitesmoke;
     background-color: orangered;
     text-decoration: none;
-    border: 2px solid orangered;
+    border: 2px solid transparent;
 }
 
 .but-tailormade {
-    margin: 15px 0 0;
-    background-color: orangered;
-    border: 2px solid orangered;
-    padding: 5px 25px;
-    display: inline;
     float: left;
+    margin: 25px 0;
+    background-color: orangered;
+    border: 0 solid orangered;
+    padding: 7px 25px;
+    display: inline;
     color: whitesmoke;
-    font-family: Lato, serif;
+    font-family: Montserrat, Lato, Roboto, serif;
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
@@ -344,11 +353,10 @@ img.services {
 
 .but-tailormade:hover,
 .but-tailormade:focus {
-    color: orangered;
-    font-weight: 600;
-    background-color: transparent;
+    margin: 25px 0;
     text-decoration: none;
-    border: 2px solid orangered;
+    box-shadow: 4px 8px 16px orangered;
+    cursor: pointer;
 }
 
 .copyright {

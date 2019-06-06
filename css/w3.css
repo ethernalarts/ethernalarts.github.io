@@ -383,7 +383,7 @@ a {
 
 .w3-input {
     padding: 8px;
-    margin: 10px 0 40px;
+    margin: 0 0 40px;
     display: block;
     border: none;
     border-bottom: 1px solid #ccc;
@@ -1393,10 +1393,8 @@ a {
 
 .w3-green, .w3-hover-green:hover {
     color: #fff !important;
-    font-family: Lato, serif;
-    font-size: 1em;
     padding: 0 20px;
-    background-color: #4CAF50 !important
+    background-color: #489b4c !important
 }
 
 .w3-light-green, .w3-hover-light-green:hover {
@@ -1481,7 +1479,7 @@ a {
 
 .w3-light-grey, .w3-hover-light-grey:hover, .w3-light-gray, .w3-hover-light-gray:hover {
     color: #000 !important;
-    background-color: #f1f1f1 !important
+    background-color: #e1e1e1 !important
 }
 
 .w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
