@@ -313,7 +313,7 @@ img.services {
 
 .but-showmore:hover,
 .but-showmore:focus {
-    color: orangered;
+    color: #e13900;
     font-weight: 600;
     background-color: transparent;
     text-decoration: none;
