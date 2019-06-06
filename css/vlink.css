@@ -177,7 +177,7 @@ nav {
 .index-welcome-box {
     text-align: center;
     width: 748px;
-    margin: 0 auto;
+    margin: 0 100px;
     padding: 30px;
     font-weight: 500;
     display: block;
@@ -194,7 +194,7 @@ nav {
 }
 
 .index-welcome-content {
-    margin: 20px 94px 0;
+    margin: 20px auto 0;
     padding: 15px;
     text-align: center;
     width: 500px;
@@ -210,8 +210,9 @@ nav {
 .but-getaquote {
     margin: 35px auto 0;
     background-color: #ebeb19;
-    border-radius: 3px;
-    padding: 15px 35px;
+    border-radius: 4px;
+    width: 240px;
+    padding: 15px 30px;
     display: inline-block;
     color: #0f0f0f;
     font-family: Lato, serif;
@@ -223,7 +224,7 @@ nav {
 .but-getaquote:hover,
 .but-getaquote:focus {
     color: #0f0f0f;
-    background-color: #f5f519;
+    background-color: #d2d219;
     text-decoration: none;
 }
 
@@ -244,10 +245,9 @@ nav {
 
 .body-content {
     width: 968px;
-    margin: 130px auto 0;
+    margin: 60px auto 0;
     font-weight: 500;
-    display: block;
-    height: auto;
+    display: inline-block;
 }
 
 p.body-content {
@@ -276,7 +276,7 @@ h2.body-content {
 .services-container {
     width: 100%;
     min-width: 968px;
-    margin: 210px 0 0;
+    margin: 200px 0 0;
     display: flex;
 }
 
@@ -299,7 +299,7 @@ img.services {
 .but-showmore {
     margin: 15px 0 0;
     background-color: orangered;
-    border: 3px solid orangered;
+    border: 2px solid orangered;
     padding: 5px 25px;
     display: inline;
     float: left;
@@ -313,24 +313,25 @@ img.services {
 
 .but-showmore:hover,
 .but-showmore:focus {
-    color: whitesmoke;
-    background-color: #f54600;
+    color: orangered;
+    font-weight: 600;
+    background-color: transparent;
     text-decoration: none;
-    border: 3px solid #f54600;
+    border: 2px solid orangered;
 }
 
 .but-showmore:active {
     color: whitesmoke;
     background-color: orangered;
     text-decoration: none;
-    border: 3px solid orangered;
+    border: 2px solid orangered;
 }
 
 .but-tailormade {
     margin: 15px 0 0;
     background-color: orangered;
-    border: 3px solid orangered;
-    padding: 2px 25px;
+    border: 2px solid orangered;
+    padding: 5px 25px;
     display: inline;
     float: left;
     color: whitesmoke;
@@ -343,10 +344,11 @@ img.services {
 
 .but-tailormade:hover,
 .but-tailormade:focus {
-    color: whitesmoke;
-    background-color: #f54600;
+    color: orangered;
+    font-weight: 600;
+    background-color: transparent;
     text-decoration: none;
-    border: 3px solid #f54600;
+    border: 2px solid orangered;
 }
 
 .copyright {
