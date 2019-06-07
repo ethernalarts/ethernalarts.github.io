@@ -31,7 +31,7 @@
             font-family: Roboto, serif;
             font-size: 1.1em;
             margin: 40px 0 0;
-            padding: 0.01em 30px
+            padding: 0.01em 30px;
         }
     </style>
 </head>
@@ -74,7 +74,9 @@
 
                 <!-- Get a Quote form -->
                 <form class="container-form">
-                    <input class="w3-input w3-border w3-light-gray" placeholder="Name (or Company): *" type="text" required>
+                    <input class="w3-input w3-border w3-light-gray" placeholder="Full Name (or Company Name): *" type="text" required>
+
+                    <input class="w3-input w3-border w3-light-gray" placeholder="Contact Name: *" type="text" required>
 
                     <input class="w3-input w3-border w3-light-gray" placeholder="Country: *" type="text" required>
 
@@ -91,10 +93,16 @@
                     <input class="w3-input w3-border w3-light-gray" placeholder="Telephone: *" type="number" required>
 
                     <input class="w3-input w3-border w3-light-gray" placeholder="Email: " type="email" required>
+
+                    <div class="w3-center">
+                        <div class="w3-bar">
+                            <button type="submit" class="w3-button w3-black-continue">Continue</button>
+                            <button class="w3-button w3-red-cancel">Cancel</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
-
     </div>
 
     <div class="scrolltop">
