@@ -55,9 +55,9 @@
     src: url( ../fonts/Montserrat-Regular.ttf);
 }
 
-body {    
+body {
     width: 100%;
-    min-width: 1348px;
+    max-width: 1440px;
     margin: 0;
     background-image: url('../images/index-bkgrd-pic-dark.jpg');
     background-repeat: no-repeat;
@@ -65,8 +65,10 @@ body {
 
 .container {
     width: 100%;
+    max-width: 1440px;
     min-width: 1348px;
     padding: 0 160px;
+    display: block;
 }
 
 a {
@@ -76,8 +78,8 @@ a {
 
 footer {
     width: 100%;
+    max-width: 1440px;
     margin: 70px 0 0;
-
     left: 0;
     bottom: 0;
     background-color: rgba(14, 14, 14, 0.9);
@@ -95,14 +97,16 @@ header {
     background-color: rgba(14, 14, 14, 0.8);
     padding: 20px 20px 20px 0;
     width: 100%;
-    min-width: 1348px;
+    max-width: 1440px;
+    overflow: hidden;
     height: 95px;
     display: block;
-    overflow: hidden;
 }
 
 .vlink-logo {
     width: 100%;
+    height: auto;
+    overflow: hidden;
     padding: 0 20px 0 15px;
     margin: -40px 0 0;
     background-color: white;
@@ -113,8 +117,6 @@ nav {
     font-family: "Oswald Light", serif;
     font-size: 1.04em;
     text-align: center;
-    width: 100%;
-    min-width: 1348px;
     height: auto;
     overflow: hidden;
     vertical-align: middle;
@@ -127,7 +129,7 @@ nav {
     float: right;
     vertical-align: middle;
     display: inline-block;
-    margin: 5px 0 0;
+    margin: 5px 0 0 0;
 }
 
 .navlist li {
@@ -244,7 +246,8 @@ nav {
 }
 
 .body-content {
-    width: 968px;
+    width: 100%;
+    /*max-width: 968px;*/
     margin: 60px auto 0;
     font-weight: 500;
     display: inline-block;
@@ -253,10 +256,11 @@ nav {
 p.body-content {
     font-family: Montserrat, Lato, Arial, serif;
     font-size: 0.9em;
+    font-weight: 500;
     line-height: 1.7em;
     text-align: left;
     margin: 10px 0 0;
-    color: #010101;
+    color: #464646;
     width: 280px;
     padding: 0 20px 0 0;
     height: 180px;
@@ -285,8 +289,6 @@ h2.body-content {
 .services {
     width: 100%;
     min-width: 280px;
-    position: relative;
-    z-index: 3;
 }
 
 h2.services {
@@ -302,9 +304,7 @@ img.services {
 
 .but-showmore {
     float: left;
-    position: relative;
-    z-index: 90;
-    margin: 25px 0;
+    margin: 20px 0;
     background-color: orangered;
     border: 0 solid orangered;
     padding: 7px 25px;
@@ -318,21 +318,22 @@ img.services {
 }
 
 .but-showmore:hover,
+.but-showmore:visited,
 .but-showmore:focus {
-    position: relative;
-    z-index: inherit;
-    margin: 25px 0;
+    margin: 20px 0;
     text-decoration: none;
     border: 0 solid orangered;
     box-shadow: 4px 8px 16px orangered;
     cursor: pointer;
 }
 
-.but-showmore:active {
-    color: whitesmoke;
-    background-color: orangered;
+button.but-showmore:active,
+button.but-showmore:visited {
+    margin: 20px 0;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 0 solid orangered;
+    box-shadow: 4px 8px 16px orangered;
+    cursor: pointer;
 }
 
 .but-tailormade {

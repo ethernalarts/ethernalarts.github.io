@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
 }
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
@@ -195,7 +195,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.4em
+    font-size: 1.5em;
 }
 
 h3 {
@@ -391,7 +391,11 @@ a {
     display: block;
     border: none;
     border-bottom: 1px solid #ccc;
-    width: 100%
+    width: 100%;
+    font-family: "Open Sans", Roboto, serif;
+    font-weight: 500;
+    font-size: 1.04em;
+    font-style: normal;
 }
 
 .w3-select {
@@ -518,8 +522,6 @@ a {
 
 .w3-bar .w3-button {
     white-space: normal;
-    padding: 10px 40px;
-    font-family: Montserrat, serif;
 }
 
 .w3-bar-block .w3-bar-item {
@@ -990,7 +992,7 @@ a {
 }
 
 .w3-code, .w3-codespan {
-    font-family: Consolas, "courier new";
+    font-family: Consolas, "courier new", monospace;
     font-size: 16px
 }
 
@@ -1016,7 +1018,7 @@ a {
 
 .w3-card-4, .w3-hover-shadow:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 145px 0 0;
+    margin: 200px 0 0;
 }
 
 .w3-spin {
@@ -1456,9 +1458,14 @@ a {
 }
 
  button.w3-button.w3-red-cancel {
-     color: #fff !important;
+     color: whitesmoke !important;
      background-color: red !important;
      margin: 0 0 0 12px;
+     padding: 10px 30px;
+     font-weight: 500;
+     font-style: normal;
+     font-family: Montserrat, serif;
+     font-size: 0.95em;
 }
 
 button.w3-button.w3-red-cancel:hover {
@@ -1491,9 +1498,14 @@ button.w3-button.w3-red-cancel:hover {
 }
 
 button.w3-button.w3-black-continue {
-    color: #fff !important;
+    color: whitesmoke !important;
     background-color: #000 !important;
     margin: 0 0 0 12px;
+    padding: 10px 30px;
+    font-family: Montserrat, serif;
+    font-size: 0.95em;
+    font-style: normal;
+    font-weight: 500;
 }
 
 button.w3-button.w3-black-continue:hover {
