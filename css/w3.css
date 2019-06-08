@@ -195,7 +195,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 h3 {
@@ -386,9 +386,8 @@ a {
 }
 
 .w3-input {
-    padding: 9px;
+    padding: 15px;
     margin: 0 0 40px;
-    display: block;
     border: none;
     border-bottom: 1px solid #ccc;
     width: 100%;
@@ -1461,11 +1460,11 @@ a {
      color: whitesmoke !important;
      background-color: red !important;
      margin: 0 0 0 12px;
-     padding: 10px 30px;
+     padding: 12px 30px;
      font-weight: 500;
      font-style: normal;
      font-family: Montserrat, serif;
-     font-size: 0.95em;
+     font-size: 1em;
 }
 
 button.w3-button.w3-red-cancel:hover {
@@ -1501,9 +1500,9 @@ button.w3-button.w3-black-continue {
     color: whitesmoke !important;
     background-color: #000 !important;
     margin: 0 0 0 12px;
-    padding: 10px 30px;
+    padding: 12px 30px;
     font-family: Montserrat, serif;
-    font-size: 0.95em;
+    font-size: 1em;
     font-style: normal;
     font-weight: 500;
 }
@@ -1522,7 +1521,7 @@ button.w3-button.w3-black-continue:hover {
 }
 
 .w3-light-grey, .w3-hover-light-grey:hover, .w3-light-gray, .w3-hover-light-gray:hover {
-    color: #000 !important;
+    color: #555555 !important;
     background-color: #ebebeb !important
 }
 
