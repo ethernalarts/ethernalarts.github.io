@@ -211,7 +211,7 @@
         font-family: "Lato Light", serif;
         font-weight: 500;
         display: inline-block;
-        color: whitesmoke;
+        color: lightgray;
         font-size: 1em;
         line-height: 2em;
     }
@@ -295,7 +295,7 @@
     img.services {
         width: 280px;
         height: 219px;
-        margin: 10px 0 0;
+        margin: 15px 0 0;
     }
 
     p.services {

@@ -199,7 +199,7 @@ h2 {
 }
 
 h3 {
-    font-size: 24px
+    font-size: 22px
 }
 
 h4 {
@@ -386,14 +386,15 @@ a {
 }
 
 .w3-input {
-    padding: 15px;
+    padding: 14px;
     margin: 0 0 40px;
     border: none;
     border-bottom: 1px solid #ccc;
-    width: 100%;
-    font-family: "Open Sans", Roboto, serif;
+    width: 405px;
+    float: left;
+    font-family: Verdana, "Open Sans", Roboto, serif;
     font-weight: 500;
-    font-size: 1.04em;
+    font-size: 1.03em;
     font-style: normal;
 }
 
@@ -1018,6 +1019,8 @@ a {
 .w3-card-4, .w3-hover-shadow:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 20px 0 0;
+    width: 900px;
+
 }
 
 .w3-spin {
