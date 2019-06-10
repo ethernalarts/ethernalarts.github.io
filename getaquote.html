@@ -9,12 +9,14 @@
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/misc.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
+    <script src="js/w3.js"></script>
 
     <div class="thetop"></div>
 
@@ -27,6 +29,13 @@
             background-image: url("images/navbar-bkgrd-img.jpg");
         }
 
+        .w3-progressbar-lightgray {
+            color: #5f5f5f !important;
+            background-color: #ebebeb !important;
+            width: 900px;
+            margin: 5px 0 0;
+        }
+
         .container-form {
             margin: 30px 0 40px;
             padding: 0.01em 30px;
@@ -34,6 +43,13 @@
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 992px) {
+
+            .w3-progressbar-lightgray {
+                color: #5f5f5f !important;
+                background-color: #ebebeb !important;
+                width: 710px;
+            }
+
             .container {
                 padding: 0 100px !important;
             }
@@ -43,12 +59,19 @@
             }
 
             .w3-input {
-                width: 45.3%;
+                width: 48%;
             }
         }
 
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
+
+            .w3-progressbar-lightgray {
+                color: #5f5f5f !important;
+                background-color: #ebebeb !important;
+                width: 480px;
+            }
+
             .container {
                 padding: 0 50px !important;
             }
@@ -82,49 +105,89 @@
     <!-- Create a Shipment. Just below the navbar -->
     <div class="nav-h2">Create a Shipment</div>
 
-    <!-- Inner Container that contains body content and pads it 300px left and right to <body> -->
+    <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container" style="padding: 0 224px">
 
-        <!-- Body Contents -->
+        <!-- Inner Container -->
         <div class="body-content">
 
-            <h3>1. Where?</h3>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-padding w3-blue w3-center" style="width: 5%">5%</div>
-            </div>
+            <!-- <h3 style="font-style: italic">Hi. Please tell us about your Shipment.</h3>-->
 
-            <h3 style="margin: 50px 0 0">Hi. Please tell us about your Shipment.</h3>
+            <!-- Progress Bar -->
+             <h3 style="margin: 0 0 0; font-style: italic">1. Where?</h3>
+            <div class="w3-progressbar-lightgray">
+                <div class="w3-container w3-padding-small w3-blue w3-center" style="width: 5%">5%</div>
+            </div>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-4">
-                <div class="w3-container w3-green">
-                    <h2>Where is this shipment coming from?</h2>
+
+                <div class="w3-green">
+                    <h2>Please tell us about your shipment. Where is it coming from?</h2>
                 </div>
 
                 <!-- Get a Quote form -->
                 <form class="container-form">
-                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name (or Company):  *" type="text" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name (or Company):  *" type="text" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact Name:  *" type="text" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact Name:  *" type="text" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Country:  *" type="text" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Country:  *" type="text" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="City:  *" type="text" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="City:  *" type="text" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="State:  *" type="text" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="State:  *" type="text" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 840px" placeholder="Street Address:  *" type="text" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 840px" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 840px" placeholder="Department, c/o, etc.: " type="text">
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
+                    </label>
 
-                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>
+                    </label>
 
+                    <!-- Check Box (Email updates on shipment) -->
+                    <label class="container-checkbox">Send status updates on this email using the email above
+                        <input type="checkbox"/>
+                        <span class="checkmark"></span>
+                    </label><br>
+
+                    <!-- Toggle (different return address) -->
+                    <div class="sliderWrapper">
+                        Use a different return address?
+                        <label class="switch">
+                            <input type="checkbox" id="togBtn">
+                            <div class="slider"></div>
+                        </label>
+                    </div>
+
+                    <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
                             <button type="submit" class="w3-button w3-black-continue">Continue</button>

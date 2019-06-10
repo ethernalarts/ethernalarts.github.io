@@ -195,7 +195,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 h3 {
@@ -386,10 +386,10 @@ a {
 }
 
 .w3-input {
-    padding: 14px;
-    margin: 0 0 40px;
-    border: none;
-    border-bottom: 1px solid #ccc;
+    padding: 10px 14px;
+    margin: 0 0 33px;
+    border: 2px solid #e1e1e1;
+    /*border-bottom: 1px solid #ccc;*/
     width: 405px;
     float: left;
     font-family: Verdana, "Open Sans", Roboto, serif;
@@ -437,11 +437,16 @@ a {
     z-index: 1
 }
 
-.w3-check, .w3-radio {
+.w3-radio {
     width: 24px;
     height: 24px;
     position: relative;
     top: 6px
+}
+
+.w3-check {
+    width: 32px;
+    height: 25px;
 }
 
 .w3-sidebar {
@@ -496,7 +501,7 @@ a {
 
 .w3-bar {
     width: 100%;
-    margin: 0;
+    margin: 70px 0 0;
     padding: 30px;
     overflow: hidden
 }
@@ -1018,9 +1023,8 @@ a {
 
 .w3-card-4, .w3-hover-shadow:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 20px 0 0;
+    margin: 60px 0 0;
     width: 900px;
-
 }
 
 .w3-spin {
@@ -1304,11 +1308,12 @@ a {
 }
 
 .w3-padding-small {
-    padding: 4px 8px !important
+    padding: 0 8px !important;
+    margin: 2px 0 0;
 }
 
 .w3-padding {
-    padding: 8px 16px !important
+    padding: 4px 16px !important;
 }
 
 .w3-padding-large {
@@ -1405,9 +1410,8 @@ a {
 
 .w3-green, .w3-hover-green:hover {
     color: #fff !important;
-    padding: 0 20px;
-
-    background-color: #489b4c !important
+    padding: 3px 20px;
+    background-color: #337d33 !important
 }
 
 .w3-light-green, .w3-hover-light-green:hover {
@@ -1464,11 +1468,12 @@ a {
      color: whitesmoke !important;
      background-color: red !important;
      margin: 0 0 0 12px;
-     padding: 12px 30px;
+     padding: 10px 30px;
      font-weight: 500;
      font-style: normal;
      font-family: Montserrat, serif;
      font-size: 1.04em;
+     border-radius: 3px;
 }
 
 button.w3-button.w3-red-cancel:hover {
@@ -1504,11 +1509,12 @@ button.w3-button.w3-black-continue {
     color: whitesmoke !important;
     background-color: #000 !important;
     margin: 0 0 0 12px;
-    padding: 12px 30px;
+    padding: 10px 30px;
     font-family: Montserrat, serif;
     font-size: 1.04em;
     font-style: normal;
     font-weight: 500;
+    border-radius: 3px;
 }
 
 button.w3-button.w3-black-continue:hover {
@@ -1526,7 +1532,8 @@ button.w3-button.w3-black-continue:hover {
 
 .w3-light-grey, .w3-hover-light-grey:hover, .w3-light-gray, .w3-hover-light-gray:hover {
     color: #5f5f5f !important;
-    background-color: #ebebeb !important
+    background-color: white !important;
+    border: 1px solid #878787 !important;
 }
 
 .w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
