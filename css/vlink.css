@@ -20,7 +20,7 @@
 @media screen
     and (min-device-width: 700px)
     and (max-device-width: 1440px) {
-
+}
 
     @font-face {
         font-family: Lato;
@@ -371,4 +371,3 @@
         font-weight: 500;
         /*margin: 1px;*/
     }
-}
