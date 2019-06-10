@@ -126,7 +126,7 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-             <h3>Hi. Please tell us about your Shipment.</h3>
+<!--             <h3>Hi. Please tell us about your Shipment.</h3>-->
 
             <!-- Progress Bar -->
             <h3 style="margin: 40px 0 0; font-style: italic; font-size: 1.25em">* Indicates required fields</h3>
@@ -138,7 +138,7 @@
             <div class="w3-card-4">
 
                 <div class="w3-green">
-                    <h2>Where is it coming from?</h2>
+                    <h2>Where is it going?</h2>
                 </div>
 
                 <!-- Get a Quote form -->
@@ -156,15 +156,15 @@
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="City:  *" type="text" required>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Locality:  *" type="text" required>
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="State:  *" type="text" required>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="State: " type="text">
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
                     </label>
 
                     <label>
@@ -179,28 +179,23 @@
                         <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
                     </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
-                    </label>
-
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>
-                    </label>
-
-                    <!-- Check Box (Email updates on shipment) -->
-                    <label class="container-checkbox">Send status updates on this email using the email above
-                        <input type="checkbox"/>
-                        <span class="checkmark"></span>
-                    </label><br>
-
-                    <!-- Toggle (different return address) -->
+                    <!-- Toggle (residential address?) -->
                     <div class="sliderWrapper">
-                        Use a different return address?
+                        Is this a residential address?
                         <label class="switch">
                             <input type="checkbox" id="togBtn">
                             <div class="slider"></div>
                         </label>
                     </div>
+
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
+                    </label>
+
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " type="email">
+                    </label>
+
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">

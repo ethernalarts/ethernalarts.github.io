@@ -58,7 +58,6 @@
     body {
         width: 100%;
         max-width: 1440px;
-        min-width: 800px;
         margin: 0;
         background-image: url('../images/index-bkgrd-pic-dark.jpg');
         background-repeat: no-repeat;
@@ -67,7 +66,6 @@
     .container {
         width: 100%;
         max-width: 1440px;
-        min-width: 800px;
         padding: 0 144px;
         display: block;
     }
@@ -80,7 +78,6 @@
     footer {
         width: 100%;
         max-width: 1440px;
-        min-width: 800px;
         margin: 60px 0 0;
         left: 0;
         bottom: 0;
@@ -100,7 +97,6 @@
         padding: 20px 20px 20px 0;
         width: 100%;
         max-width: 1440px;
-        min-width: 800px;
         overflow: hidden;
         height: 95px;
         display: block;
@@ -118,7 +114,7 @@
     nav {
         font-weight: 500;
         font-family: "Oswald Light", serif;
-        font-size: 1.05em;
+        font-size: 1.1em;
         text-align: center;
         height: auto;
         overflow: hidden;
@@ -251,8 +247,8 @@
 
     .body-content {
         width: 100%;
-        padding: 50px 0 0;
-        margin: 60px auto 0;
+        padding: 100px 0 0;
+        /*margin: 60px auto 0;*/
         font-weight: 500;
         display: inline-block;
     }
