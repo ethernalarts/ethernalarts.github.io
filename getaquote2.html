@@ -126,13 +126,13 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-<!--             <h3>Hi. Please tell us about your Shipment.</h3>-->
-
             <!-- Progress Bar -->
+            <h3>Okay. Please tell us more.</h3>
+            <div class="w3-progressbar-lightgray">
+                <div class="w3-container w3-padding-small w3-blue w3-center" style="width: 25%">25%</div>
+            </div>
+
             <h3 style="margin: 40px 0 0; font-style: italic; font-size: 1.25em">* Indicates required fields</h3>
-<!--            <div class="w3-progressbar-lightgray">-->
-<!--                <div class="w3-container w3-padding-small w3-blue w3-center" style="width: 5%">5%</div>-->
-<!--            </div>-->
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-4">
@@ -180,8 +180,8 @@
                     </label>
 
                     <!-- Toggle (residential address?) -->
-                    <div class="sliderWrapper">
-                        Is this a residential address?
+                    <div class="sliderWrapper" style="margin: 10px 0 0">
+                        <span>this a residential address?</span>
                         <label class="switch">
                             <input type="checkbox" id="togBtn">
                             <div class="slider"></div>
@@ -189,17 +189,18 @@
                     </div>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right; margin: 35px 0 0;" placeholder="Telephone:  *" type="number" required>
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " type="email">
+                        <input class="w3-input w3-border-0 w3-light-gray" style="margin: 35px 0 0;" placeholder="Email: " type="email">
                     </label>
 
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
+                            <button type="submit" class="w3-button w3-light-grey-back">Back</button>
                             <button type="submit" class="w3-button w3-black-continue">Continue</button>
                             <button class="w3-button w3-red-cancel">Cancel Shipment</button>
                         </div>

@@ -203,7 +203,7 @@ w3.slideshow = function (sel, ms, func) {
     ss.milliseconds = 1000;
   }
   ss.start = function() {
-    ss.display(ss.current)
+    ss.display(ss.current);
     if (ss.ondisplaychange) {ss.ondisplaychange();}
     if (ss.milliseconds > 0) {
       window.clearTimeout(ss.timeout);
@@ -223,7 +223,7 @@ w3.slideshow = function (sel, ms, func) {
   ss.display = function (n) {
     w3.styleElements(ss.x, "display", "none");
     w3.styleElement(ss.x[n - 1], "display", "block");
-  }
+  };
   ss.start();
   return ss;
 };
@@ -242,7 +242,7 @@ w3.includeHTML = function(cb) {
           elmnt.removeAttribute("w3-include-html");
           w3.includeHTML(cb);
         }
-      }      
+      };
       xhttp.open("GET", file, true);
       xhttp.send();
       return;
@@ -326,7 +326,7 @@ w3.displayObject = function (id, data) {
       }
     } else {
       console.log("w3-repeat must be an array. " + repeat + " is not an array.");
-      continue;
+
     }
   }
   html = w3_replace_curly(html, "element");
