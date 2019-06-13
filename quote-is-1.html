@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote</title>
+    <title>VLink Express Courier - Get a Quote (origin)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -29,9 +29,9 @@
             background-image: url("images/navbar-bkgrd-img.jpg");
         }
 
-        .w3-progressbar-lightgray {
+        .w3-progressbar-lightblue {
             color: #5f5f5f !important;
-            background-color: #ebebeb !important;
+            background-color: lightsteelblue !important;
             width: 900px;
             margin: 5px 0 0;
         }
@@ -41,27 +41,12 @@
             padding: 0.01em 30px;
         }
 
-        span.step {
-            background: #cccccc;
-            border-radius: 0.8em;
-            -moz-border-radius: 0.8em;
-            -webkit-border-radius: 0.8em;
-            color: #ffffff;
-            display: inline-block;
-            font-weight: bold;
-            line-height: 1.6em;
-            margin-right: 5px;
-            text-align: center;
-            width: 1.6em;
-        }
-
-
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 992px) {
 
-            .w3-progressbar-lightgray {
+            .w3-progressbar-lightblue {
                 color: #5f5f5f !important;
-                background-color: #ebebeb !important;
+                background-color: lightsteelblue !important;
                 width: 710px;
             }
 
@@ -81,9 +66,9 @@
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
 
-            .w3-progressbar-lightgray {
+            .w3-progressbar-lightblue {
                 color: #5f5f5f !important;
-                background-color: #ebebeb !important;
+                background-color: lightsteelblue !important;
                 width: 480px;
             }
 
@@ -127,9 +112,9 @@
         <div class="body-content">
 
             <!-- Progress Bar -->
-            <h3>Okay. Please tell us more.</h3>
-            <div class="w3-progressbar-lightgray">
-                <div class="w3-container w3-padding-small w3-blue w3-center" style="width: 25%">25%</div>
+            <h3>Hi. Please tell us about your Shipment.</h3>
+            <div class="w3-progressbar-lightblue">
+                <div class="w3-container w3-padding-small w3-dark-blue w3-center" style="width: 20%">20%</div>
             </div>
 
             <h3 style="margin: 40px 0 0; font-style: italic; font-size: 1.25em">* Indicates required fields</h3>
@@ -138,7 +123,7 @@
             <div class="w3-card-4">
 
                 <div class="w3-green">
-                    <h2>Where is it going?</h2>
+                    <h2>Where is it coming from?</h2>
                 </div>
 
                 <!-- Get a Quote form -->
@@ -156,15 +141,15 @@
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Locality:  *" type="text" required>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="City:  *" type="text" required>
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="State: " type="text">
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="State:  *" type="text" required>
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
                     </label>
 
                     <label>
@@ -179,32 +164,38 @@
                         <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
                     </label>
 
-                    <!-- Toggle (residential address?) -->
-                    <div class="sliderWrapper" style="margin: 10px 0 0">
-                        <span>this a residential address?</span>
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
+                    </label>
+
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>
+                    </label>
+
+                    <!-- Check Box (Email updates on shipment) -->
+                    <label class="container-checkbox">Send status updates on this email using the email above
+                        <input type="checkbox"/>
+                        <span class="checkmark"></span>
+                    </label><br>
+
+                    <!-- Toggle (different return address) -->
+                    <div class="sliderWrapper">
+                        Use a different return address?
                         <label class="switch">
-                            <input type="checkbox" id="togBtn">
-                            <div class="slider"></div>
+                            <input type="checkbox">
+                            <span class="slider"></span>
                         </label>
                     </div>
-
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right; margin: 35px 0 0;" placeholder="Telephone:  *" type="number" required>
-                    </label>
-
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="margin: 35px 0 0;" placeholder="Email: " type="email">
-                    </label>
-
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <button type="submit" class="w3-button w3-light-grey-back">Back</button>
-                            <button type="submit" class="w3-button w3-black-continue">Continue</button>
+                            <a href="getaquote2.html" type="submit" class="w3-button w3-black-continue">Continue</a>
                             <button class="w3-button w3-red-cancel">Cancel Shipment</button>
                         </div>
                     </div>
+
+                <!-- End of form -->
                 </form>
             </div>
         </div>

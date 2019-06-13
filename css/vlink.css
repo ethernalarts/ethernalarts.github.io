@@ -96,30 +96,32 @@
         background-color: rgba(14, 14, 14, 0.8);
         padding: 20px 20px 20px 0;
         width: 100%;
-        max-width: 1440px;
+        /*max-width: 1440px;*/
         overflow: hidden;
-        height: 95px;
+        height: 85px;
         display: block;
+        vertical-align: middle;
     }
 
     .vlink-logo {
-        width: 100%;
+        width: 85%;
+        float: left;
         height: auto;
         overflow: hidden;
         padding: 0 20px 0 15px;
-        margin: -40px 0 0;
+        margin: -35px 0 0;
         background-color: white;
     }
 
     nav {
         font-weight: 500;
         font-family: "Oswald Light", serif;
-        font-size: 1.1em;
+        font-size: 1.05em;
         text-align: center;
-        height: auto;
         overflow: hidden;
         vertical-align: middle;
         display: inline;
+        color: whitesmoke;
     }
 
     .navlist {
@@ -128,7 +130,7 @@
         float: right;
         vertical-align: middle;
         display: inline-block;
-        margin: 5px 0 0 0;
+        margin: auto;
     }
 
     .navlist li {
@@ -149,7 +151,9 @@
 
     .navlistitem a:hover {
         padding: 10px 25px;
-        background-color: #010101;
+        background-color: #e1e1e1;
+        font-weight: 600;
+        color: black;
     }
 
     .navlistitem a:visited,
@@ -266,6 +270,7 @@
     }
 
     .services-container {
+        /*width: 1040px;*/
         width: 100%;
         margin: 60px auto 50px;
         display: inline-block;
@@ -292,6 +297,10 @@
         width: 280px;
         height: 219px;
         margin: 15px 0 0;
+    }
+
+    img.services:hover {
+        zoom: revert;
     }
 
     p.services {
