@@ -29,6 +29,10 @@
             background-image: url("images/navbar-bkgrd-img.jpg");
         }
 
+        #returnAdd {
+
+        }
+
         .w3-progressbar-lightblue {
             color: #5f5f5f !important;
             background-color: lightsteelblue !important;
@@ -102,8 +106,6 @@
         </nav>
     </header>
 
-    <!-- Create a Shipment. Just below the navbar -->
-    <div class="nav-h2">Int'l Shipping - Create a Shipment</div>
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container" style="padding: 0 224px">
@@ -111,11 +113,13 @@
         <!-- Inner Container -->
         <div class="body-content">
 
+            <!-- Subheader. Just below the navbar -->
+            <div class="subheader-h2" style="width: 300px;">International Shipping</div>
+
             <!-- Progress Bar -->
-            <h3>Hi. Please tell us about your Shipment.</h3>
+            <h2 style="margin: 60px 0 0;"><code class="w3-codespan">Hi. Please tell us about your Shipment.</code></h2>
 
-
-            <h3 style="margin: 40px 0 0; font-style: italic; font-size: 1.25em">* Indicates required fields</h3>
+            <h3 style="margin: 40px 0 50px;"><code class="w3-code">* Indicates required fields</code></h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
@@ -170,20 +174,28 @@
                         <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>
                     </label>
 
+
                     <!-- Check Box (Email updates on shipment) -->
-                    <label class="container-checkbox">Send status updates on this email using the email above
+                    <label class="container-checkbox">Send status updates on this shipment using the email above
                         <input type="checkbox"/>
                         <span class="checkmark"></span>
                     </label>
 
+
                     <!-- Toggle (different return address) -->
                     <div class="sliderWrapper">
                         Use a different return address?
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                        </label>
+                            <label class="switch" type="button" onclick="returdAdd()">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
                     </div>
+
+
+<!--                    <label id="returnAdd">-->
+<!--                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>-->
+<!--                    </label>-->
+
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
@@ -192,6 +204,17 @@
                             <button class="w3-button w3-red-cancel">Cancel Shipment</button>
                         </div>
                     </div>
+
+                    <script>
+                        function returnAdd() {
+                            var x = document.getElementById("returnAdd");
+                            if (x.style.display === "none") {
+                                x.style.display = "block";
+                            } else {
+                                x.style.display = "none";
+                            }
+                        }
+                    </script>
 
                 <!-- End of form -->
                 </form>

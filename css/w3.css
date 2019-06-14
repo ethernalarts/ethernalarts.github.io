@@ -583,8 +583,18 @@ a {
 }
 
 .w3-col.s4:hover {
-    /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);*/
     transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+.w3-col.s4-services {
+    width: 33.33333%;
+    transition: all .4s ease-in-out;
+}
+
+.w3-col.s4-services:hover {
+    /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);*/
+    /*transform: scale(1.1, 1.1);*/
     cursor: pointer;
 }
 
@@ -1017,6 +1027,7 @@ a {
 }
 
 .w3-code {
+    font-size: 18px;
     width: auto;
     background-color: #fff;
     padding: 8px 12px;
@@ -1029,7 +1040,7 @@ a {
     background-color: #f1f1f1;
     padding-left: 4px;
     padding-right: 4px;
-    font-size: 110%
+    font-size: 100%;
 }
 
 .w3-card, .w3-card-2 {
@@ -1045,6 +1056,11 @@ a {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 45px 0 0;
     width: 900px;
+}
+
+.w3-card-services-4 {
+    margin: 45px 0 0;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 4px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .w3-card-quote {
@@ -1274,15 +1290,25 @@ a {
     text-align: center !important;
 }
 
+.w3-center-services-p {
+    text-align: center !important;
+    font-family: Verdana, Montserrat, Lato, Arial, serif;
+    font-size: 1em;
+    /*font-weight: 500;*/
+    /*line-height: 1.5em;*/
+}
+
 .w3-center-getaquote {
     text-align: center !important;
-    margin: 70px auto 60px;
-    /*font-family: Verdana, serif;*/
-    /*font-size: 1.45em;*/
+    margin: 40px auto 10px;
+    font-family: "Oswald SemiBold", Verdana, serif;
+    text-decoration: underline;
+    font-size: 1.3em;
+    color: #232323;
     /*font-weight: 500;*/
     padding: 10px;
-    border: 2px solid #373737;
-    width: 400px;
+    /*border: 2px solid #373737;*/
+    /*width: 400px;*/
 }
 
 .w3-border-0 {

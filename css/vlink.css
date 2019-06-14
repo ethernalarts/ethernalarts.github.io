@@ -66,7 +66,7 @@
     .container {
         width: 100%;
         max-width: 1440px;
-        padding: 0 144px;
+        padding: 0 100px;
         display: block;
     }
 
@@ -205,25 +205,26 @@
         padding: 15px;
         text-align: center;
         width: 450px;
-        font-family: "Lato Light", serif;
+        font-family: Lato, serif;
         font-weight: 500;
+        font-style: italic;
         display: inline-block;
         color: #ebebeb;
         font-size: 1.05em;
         line-height: 2em;
-        border-radius: 3px;
+        border-radius: 5px;
         background-color: rgba(10, 10, 10, 0.85);
     }
 
     .but-getaquote {
         margin: 20px auto 0;
         background-color: #ebeb19;
-        width: 300px;
-        padding: 17px 30px;
+        width: 240px;
+        padding: 10px 25px;
         display: block;
         color: #0f0f0f;
         font-family: "Lato Black", serif;
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: 500;
         border-radius: 4px;
         text-decoration: none;
@@ -236,13 +237,13 @@
         box-shadow: 0 8px 16px 0 rgb(185, 185, 26), 0 6px 20px 0 rgb(185, 185, 26)
     }
 
-    .nav-h2 {
+    .subheader-h2 {
         font-family: Oswald, serif;
         display: block;
-        margin: 65px 0 0 340px;
-        background-color: rgba(14, 14, 14, 0.85);
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(15, 15, 15, 0.95);
         padding: 10px 20px;
-        float: left;
         font-size: 2em;
         font-weight: 500;
         color: #ebebeb;
@@ -250,7 +251,7 @@
 
     .body-content {
         width: 100%;
-        padding: 100px 0 0;
+        padding: 260px 0 0;
         /*margin: 60px auto 0;*/
         font-weight: 500;
         display: inline-block;
@@ -278,49 +279,35 @@
     }
 
     .services {
-        float: left;
-        width: 280px;
+        width: 100%;
         display: inline-block;
         margin: 30px 25px 0;
-        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+        /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);*/
         padding: 20px 25px 30px;
     }
 
-    h2.services {
+    .services-h2 {
         font-family: "Oswald SemiBold", serif;
-        font-size: 1.5em;
-        float: left;
-        margin: 0;
+        /*font-size: 1.5em;*/
         color: #393973;
+        margin: 20px 0 0;
     }
 
-    img.services {
-        width: 280px;
-        height: 219px;
-        margin: 15px 0 0;
-    }
-
-    img.services:hover {
-        zoom: revert;
-    }
-
-    p.services {
+    .services-p {
         font-family: Montserrat, Lato, Arial, serif;
-        font-size: 0.95em;
+        font-size: 1em;
         font-weight: 500;
         line-height: 1.7em;
-        text-align: left;
-        margin: 15px 0 0;
-        display: inline-block;
-        color: #414141;
-        width: 280px;
-        padding: 0 20px 0 0;
-        height: 190px;
+
+
+        /*color: #414141;*/
+        /*width: 280px;*/
+        /*padding: 0 20px 0 0;*/
+        height: 170px;
         overflow: auto;
     }
 
     .but-showmore {
-        float: left;
         margin: 20px 0;
         background-color: orangered;
         border: 0 solid orangered;
@@ -332,6 +319,7 @@
         font-weight: 500;
         text-decoration: none;
         cursor: pointer;
+
     }
 
     .but-showmore:hover,
@@ -340,8 +328,8 @@
         margin: 20px 0;
         text-decoration: none;
         border: 0 solid orangered;
-        box-shadow: 4px 8px 16px orangered;
         cursor: pointer;
+        box-shadow: 0 4px 10px 0 rgba(255, 69, 0, 0.71), 0 4px 20px 0 rgba(255, 69, 0, 0.71);
     }
 
     button.but-showmore:active,
@@ -354,7 +342,6 @@
     }
 
     .but-tailormade {
-        float: left;
         margin: 20px 0;
         background-color: orangered;
         border: 0 solid orangered;
@@ -368,8 +355,8 @@
         cursor: pointer;
     }
 
-    .but-tailormade:hover,
-    .but-tailormade:focus {
+    a.but-tailormade:hover,
+    a.but-tailormade:focus {
         margin: 20px 0;
         text-decoration: none;
         box-shadow: 4px 8px 16px orangered;

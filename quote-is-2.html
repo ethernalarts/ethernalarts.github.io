@@ -102,27 +102,28 @@
         </nav>
     </header>
 
-    <!-- Create a Shipment. Just below the navbar -->
-    <div class="nav-h2">Create a Shipment</div>
-
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container" style="padding: 0 224px">
 
         <!-- Inner Container -->
         <div class="body-content">
 
-            <!-- Progress Bar -->
-            <h3>Okay. We got that. Please tell us more.</h3>
-            <div class="w3-progressbar-lightblue">
-                <div class="w3-container w3-padding-small w3-dark-blue w3-center" style="width: 20%">20%</div>
-            </div>
+            <!-- Subheader. Just below the navbar -->
+            <div class="subheader-h2" style="width: 300px;">International Shipping</div>
 
-            <h3 style="margin: 40px 0 0; font-style: italic; font-size: 1.25em">* Indicates required fields</h3>
+            <!-- Progress Bar -->
+            <h2 style="margin: 60px 0 0;"><code class="w3-codespan" style="">Okay. We got that. Please tell us more.</code></h2>
+
+<!--            <div class="w3-progressbar-lightblue">-->
+<!--                <div class="w3-container w3-padding-small w3-dark-blue w3-center" style="width: 20%">20%</div>-->
+<!--            </div>-->
+
+            <h3 style="margin: 40px 0 50px;"><code class="w3-code">* Indicates required fields</code></h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-4">
 
-                <div class="w3-green">
+                <div class="w3-dark-blue">
                     <h2>Where is it going?</h2>
                 </div>
 
@@ -166,7 +167,7 @@
 
                     <!-- Toggle (residential address?) -->
                     <div class="sliderWrapper">
-                        <span style="margin: 0 0 0 11px">Is this a residential address?</span>
+                        <span style="margin: 0 0 0 12px;">Is this a residential address?</span>
                         <label class="switch">
                             <input type="checkbox">
                             <span class="slider"></span>
@@ -182,8 +183,11 @@
                     </label>
 
                     <!-- Check Box (Email updates on shipment) -->
-                    <label class="container-checkbox">Send status updates on this email using the email above
-
+                    <label class="container-checkbox" style="padding-left: 0; margin: 40px 0 0; font-size: 1em; cursor: initial">
+                        <p>
+                           We may use the email and/or phone number provided to update
+                           your receiver about the status of their package.
+                        </p>
                     </label>
 
                     <!-- Continue and Cancel Button -->
