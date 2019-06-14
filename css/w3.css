@@ -583,8 +583,13 @@ a {
 }
 
 .w3-col.s4:hover {
+    /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);*/
     transform: scale(1.1, 1.1);
     cursor: pointer;
+}
+
+.w3-col.s4:hover img {
+
 }
 
 .w3-col.s5 {
@@ -1034,6 +1039,11 @@ a {
 .w3-card-4, .w3-hover-shadow:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 45px 0 0;
+}
+
+.w3-card-quote-is {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 45px 0 0;
     width: 900px;
 }
 
@@ -1266,9 +1276,13 @@ a {
 
 .w3-center-getaquote {
     text-align: center !important;
-    margin: 40px 0;
-    font-family: Federo, serif;
-    font-size: 1.5em;
+    margin: 70px auto 60px;
+    /*font-family: Verdana, serif;*/
+    /*font-size: 1.45em;*/
+    /*font-weight: 500;*/
+    padding: 10px;
+    border: 2px solid #373737;
+    width: 400px;
 }
 
 .w3-border-0 {
@@ -1416,7 +1430,9 @@ a {
 
 .w3-dark-blue {
     color: #fff !important;
-    background-color: #1e8be1 !important
+    padding: 3px 20px;
+    /*background-color: #1e8be1 !important*/
+    background-color: #416ad7 !important;
 }
 
 .w3-light-blue, .w3-hover-light-blue:hover {

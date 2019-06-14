@@ -57,9 +57,9 @@
 
     body {
         width: 100%;
-        max-width: 1440px;
+        /*max-width: 1440px;*/
         margin: 0;
-        background-image: url('../images/index-bkgrd-pic-dark.jpg');
+        background-image: url('../images/index-bkgrd-pic-dark-2.jpg');
         background-repeat: no-repeat;
     }
 
@@ -151,9 +151,7 @@
 
     .navlistitem a:hover {
         padding: 10px 25px;
-        background-color: #e1e1e1;
-        font-weight: 600;
-        color: black;
+        background-color: #4b4b4b;
     }
 
     .navlistitem a:visited,
@@ -171,62 +169,63 @@
     }
 
     .index-welcome-container {
-        text-align: center;
-        /*padding: 0 200px;*/
+        padding: 0 150px;
         width: 100%;
-        max-width: 1440px;
-        min-width: 800px;
+        /*max-width: 1440px;*/
+        /*min-width: 800px;*/
         display: block;
         margin: 80px auto;
     }
 
     .index-welcome-box {
         text-align: center;
-        width: 650px;
+        /*width: 650px;*/
+        width: 100%;
         margin: 0 auto;
         padding: 20px 20px 40px;
-        border-radius: 5px;
         font-weight: 500;
         display: block;
-        background-color: rgba(10, 10, 10, 0.85);
+        /*background-color: rgba(10, 10, 10, 0.85);*/
     }
 
     .index-welcome-h2 {
-        font-family: Federo, serif;
+        font-family: "Lato Black", Federo, serif;
         text-align: center;
-        width: 610px;
+        /*width: 610px;*/
         display: inline-block;
-        margin: 0 auto 0;
+        margin: 0 auto;
         font-size: 3.6em;
-        font-weight: 600;
+        font-weight: 500;
         /*text-shadow: 2px 2px #010101;*/
         color: whitesmoke;
     }
 
     .index-welcome-content {
-        margin: 0 auto 0;
-        padding: 15px 0;
+        margin: 30px auto;
+        padding: 15px;
         text-align: center;
-        width: 500px;
+        width: 450px;
         font-family: "Lato Light", serif;
         font-weight: 500;
         display: inline-block;
-        color: lightgray;
-        font-size: 1em;
+        color: #ebebeb;
+        font-size: 1.05em;
         line-height: 2em;
+        border-radius: 3px;
+        background-color: rgba(10, 10, 10, 0.85);
     }
 
     .but-getaquote {
         margin: 20px auto 0;
         background-color: #ebeb19;
-        border-radius: 0;
-        /*width: 240px;*/
-        padding: 10px 30px;
-        display: inline-block;
+        width: 300px;
+        padding: 17px 30px;
+        display: block;
         color: #0f0f0f;
-        font-family: Lato, serif;
-        font-size: 1.1em;
-        font-weight: 600;
+        font-family: "Lato Black", serif;
+        font-size: 1.3em;
+        font-weight: 500;
+        border-radius: 4px;
         text-decoration: none;
     }
 
@@ -274,8 +273,8 @@
         width: 100%;
         margin: 60px auto 50px;
         display: inline-block;
-        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 20px 25px 30px;
+        /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);*/
+        /*padding: 20px 25px 30px;*/
     }
 
     .services {
@@ -283,6 +282,8 @@
         width: 280px;
         display: inline-block;
         margin: 30px 25px 0;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 20px 25px 30px;
     }
 
     h2.services {
