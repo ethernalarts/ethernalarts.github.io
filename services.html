@@ -26,33 +26,14 @@
 
         .body {
             width: 100%;
-            min-width: 800px;
-            max-width: 1440px;
-            height: auto;
             margin: 0;
             background-image: url("images/navbar-bkgrd-img.jpg");
         }
 
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
         /* On screens that are 992px wide or less, go from three columns to two columns */
-        @media screen and (max-width: 992px) {
-            .container {
-                padding: 0 100px;
-            }
-
-            .services-container {
-                width: 710px;
-            }
-
-            h2#servicesPage {
-                text-align: justify;
-                width: 710px;
+        @media screen and (max-width: 1080px) {
+            .w3-col.s4-services {
+                width: 49.99999%
             }
         }
 
@@ -98,28 +79,23 @@
     <div class="container">
 
         <!-- Body Contents -->
-        <div>
             <div class="body-content">
 
                 <!-- What We Do. -->
                 <div class="subheader-h2" style="width: 180px;">What We Do</div>
 
-<!--                <blockquote class="w3-panel w3-leftbar-services w3-quote-services">-->
-<!--                    <p class="w3-large-quote-services">-->
-<!--                        As businesses becomes more competitive and global, our portfolio is ever expanding-->
-<!--                        with solutions to deliver the best service possible for customers.-->
-<!--                        Check out all the services on offer and choose one that suits you.-->
-<!--                    </p>-->
-<!--                </blockquote>-->
-<!--                <h2 id="servicesPage" style="font-style: italic">-->
-<!--                </h2>-->
+                    <p class="w3-center-services-h2">
+                        As businesses becomes more competitive and global, our portfolio is ever expanding
+                        with solutions to deliver the best service possible for customers.
+                        Check out all the services on offer and choose one that suits you.
+                    </p>
 
                 <!-- Container containing three columns for services rendered -->
                 <div class="w3-row-padding services-container">
 
                     <!-- International Shipping -->
                     <div class="w3-col s4-services">
-                        <div class="w3-card-4" style="width: 100%">
+                        <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/intl-shipping-2.jpg" alt="International Shipping Quote" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">INTERNATIONAL SHIPPING</h2>
@@ -159,7 +135,7 @@
 
                     <!-- Express Courier -->
                     <div class="w3-col s4-services">
-                        <div class="w3-card-4" style="width: 100%">
+                        <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/express-courier.jpg" alt="Express Courier" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">EXPRESS COURIER</h2>
@@ -199,7 +175,7 @@
 
                     <!-- Special Services -->
                     <div class="w3-col s4-services">
-                        <div class="w3-card-4" style="width: 100%">
+                        <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/special-services-3.jpg" alt="Special Services" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">SPECIAL SERVICES</h2>
@@ -240,7 +216,7 @@
 
                     <!-- Time Critical -->
                     <div class="w3-col s4-services">
-                        <div class="w3-card-4" style="width: 100%">
+                        <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/time-critical.jpg" alt="Time Critical Services" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">TIME CRITICAL SERVICES</h2>
@@ -281,7 +257,7 @@
 
                     <!-- Tailor Made Services -->
                     <div class="w3-col s4-services">
-                        <div class="w3-card-4" style="width: 100%">
+                        <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/tailor-made.jpg" alt="Time Critical Services" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">TIME CRITICAL SERVICES</h2>
@@ -298,7 +274,7 @@
 
                     <!-- Secure Storage -->
                     <div class="w3-col s4-services">
-                        <div class="w3-card-4" style="width: 100%">
+                        <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/secure-storage-2.jpg" alt="Secure Storage" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">SECURE STORAGE</h2>
@@ -337,7 +313,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
     <div class="scrolltop">

@@ -32,12 +32,15 @@
             background-image: url("images/navbar-bkgrd-img.jpg");
         }
 
+        #hi {
+            margin: 60px 0 0;
+            font: 1.4em Verdana, sans-serif;
+        }
+
         #returnAdd {
             margin: 40px 0 0;
         }
 
-        .returnAdd-form {
-        }
 
         .container-form {
             margin: 0;
@@ -47,7 +50,6 @@
         .container-form input {
             padding: 10px;
             margin: 0 0 33px;
-            /*!*width: 405px;*/
             width: 47%;
         }
 
@@ -58,8 +60,15 @@
             margin: 5px 0 0;
         }
 
-        /* On screens that are 992px wide or less, go from three columns to two columns */
-        @media screen and (max-width: 992px) {
+
+        /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 1200px) {
+
+            #hi {
+                margin: 60px 0 0;
+                text-align: center;
+                font: 1.4em Verdana, sans-serif;
+            }
 
             .w3-progressbar-lightblue {
                 color: #5f5f5f !important;
@@ -68,20 +77,24 @@
             }
 
             .container {
-                padding: 0 120px !important;
+                padding: 0 90px !important;
             }
 
-            .w3-card-4 {
-                width: 710px;
-            }
-
-            .w3-input {
-                width: 48%;
+            .container-form input {
+                padding: 10px;
+                margin: 0 0 33px;
+                width: 47%;
             }
         }
 
-        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
+        /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 750px) {
+
+            #hi {
+                margin: 60px 0 0;
+                text-align: center;
+                font: 1.3em Verdana, sans-serif;
+            }
 
             .w3-progressbar-lightblue {
                 color: #5f5f5f !important;
@@ -90,11 +103,13 @@
             }
 
             .container {
-                padding: 0 50px !important;
+                padding: 0 90px !important;
             }
 
-            .w3-card-4 {
-                width: 480px;
+            .container-form input {
+                padding: 10px;
+                margin: 0 0 33px;
+                width: 100%;
             }
         }
     </style>
@@ -130,7 +145,7 @@
             <div class="subheader-h2" style="width: 300px;">International Shipping</div>
 
             <!-- Progress Bar -->
-            <h2 style="margin: 60px 0 0; font: 1.4em Verdana, sans-serif">Hi. Please tell us about your Shipment.</h2>
+            <h2 id="hi">Hi. Please tell us about your Shipment.</h2>
 
             <h3 style="margin: 50px 0 60px;"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -148,7 +163,7 @@
                         </label>
 
                         <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right; margin: 0" placeholder="Contact Name:  *" type="text" required>
+                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Contact Name:  *" type="text" required>
                         </label>
 
                         <label>
@@ -246,11 +261,11 @@
                             </label>
 
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right; margin-bottom: 0" placeholder="Telephone:  *" type="number" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="margin-bottom: 0" placeholder="Email:  *" type="email" required>
                             </label>
 
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="margin-bottom: 0" placeholder="Email:  *" type="email" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right; margin-bottom: 0" placeholder="Telephone:  *" type="number" required>
                             </label>
                         </form>
                     </div>
