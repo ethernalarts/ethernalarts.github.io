@@ -36,9 +36,17 @@
             margin: 5px 0 0;
         }
 
+
         .container-form {
-            margin: 30px 0 40px;
-            padding: 0.01em 30px;
+            margin: 0;
+            padding: 50px;
+        }
+
+        .container-form input {
+            padding: 10px;
+            margin: 0 0 33px;
+            /*!*width: 405px;*/
+            width: 47%;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -113,7 +121,7 @@
             <div class="subheader-h2" style="width: 300px;">International Shipping</div>
 
             <!-- Progress Bar -->
-            <h2 style="margin: 60px 0 0;"><code class="w3-codespan" style="">Great. Almost done. Just a few more details.</code></h2>
+            <h2 style="margin: 60px 0 0; font: 1.4em Verdana, sans-serif">Okay. We got that. Please tell us more.</h2>
 
 <!--            <div class="w3-progressbar-lightblue">-->
 <!--                <div class="w3-container w3-padding-small w3-dark-blue w3-center" style="width: 40%">40%</div>-->
@@ -129,7 +137,7 @@
                 </div>
 
                 <!-- Get a Quote form -->
-                <form class="container-form">
+                <form class="container-form" style="padding-bottom: 0">
                     <label>
                         <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (lbs):  *" type="number" required>
                     </label>
@@ -155,8 +163,8 @@
                     </label>
 
                     <!-- Toggle (residential address?) -->
-                    <div class="sliderWrapper">
-                        <span style="margin: 0 0 0 11px">Oversized Package (+$)</span>
+                    <div class="sliderWrapper" style="margin-top: 0">
+                        <span style="margin-left: 11px">Oversized Package (+$)</span>
                         <label class="switch">
                             <input type="checkbox">
                             <span class="slider"></span>
@@ -164,7 +172,7 @@
                     </div>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="margin: 30px 0 0" placeholder="Select Packaging Option: " type="number">
+                        <input class="w3-input w3-border-0 w3-light-gray" style="margin: 30px 0 40px" placeholder="Select Packaging Option: " type="number">
                     </label>
 
                     <!-- Continue and Cancel Button -->

@@ -205,9 +205,8 @@
         padding: 15px;
         text-align: center;
         width: 450px;
-        font-family: Lato, serif;
+        font-family: Montserrat, Lato, serif;
         font-weight: 500;
-        font-style: italic;
         display: inline-block;
         color: #ebebeb;
         font-size: 1.05em;
@@ -244,7 +243,7 @@
         text-align: center;
         background-color: rgba(15, 15, 15, 0.95);
         padding: 10px 20px;
-        font-size: 2em;
+        font-size: 1.9em;
         font-weight: 500;
         color: #ebebeb;
     }

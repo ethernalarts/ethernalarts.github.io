@@ -386,15 +386,11 @@ a {
 }
 
 .w3-input {
-    padding: 10px 14px;
-    margin: 0 0 33px;
-    border: 2px solid #e1e1e1;
-    width: 405px;
-    float: left;
-    font-family: Verdana, "Open Sans", Roboto, serif;
-    font-weight: 500;
-    font-size: 1.03em;
-    font-style: normal;
+    padding: 8px;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%
 }
 
 .w3-select {
@@ -500,8 +496,8 @@ a {
 
 .w3-bar {
     width: 100%;
-    margin: 70px 0 0;
-    padding: 30px;
+    margin: 0;
+    padding: 30px 30px 40px;
     overflow: hidden
 }
 
@@ -1055,7 +1051,8 @@ a {
 .w3-card-quote-is {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 45px 0 0;
-    width: 900px;
+    /*width: 900px;*/
+    width: 100%;
 }
 
 .w3-card-services-4 {
@@ -1300,13 +1297,13 @@ a {
 
 .w3-center-getaquote {
     text-align: center !important;
-    margin: 40px auto 10px;
+    margin: 50px auto 20px;
     font-family: "Oswald SemiBold", Verdana, serif;
     text-decoration: underline;
     font-size: 1.3em;
     color: #232323;
     /*font-weight: 500;*/
-    padding: 10px;
+
     /*border: 2px solid #373737;*/
     /*width: 400px;*/
 }
@@ -1546,7 +1543,7 @@ a {
  button.w3-button.w3-red-cancel {
      color: whitesmoke !important;
      background-color: red !important;
-     margin: 0 0 0 12px;
+     margin: 0 12px 0 6px;
      padding: 8px 20px;
      font-weight: 500;
      font-style: normal;
@@ -1587,7 +1584,7 @@ button.w3-button.w3-red-cancel:hover {
 a.w3-button.w3-black-continue {
     color: whitesmoke !important;
     background-color: #000 !important;
-    margin: 0 0 0 12px;
+    margin: 0 6px 0 12px;
     padding: 8px 20px;
     font-family: Montserrat, serif;
     font-size: 1em;
