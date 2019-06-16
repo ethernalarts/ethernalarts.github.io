@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VLink Express Courier - Contact Us</title>
+
+    <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/misc.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
+
+    <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/w3.js"></script>
+
+    <div class="thetop"></div>
+
+    <style>
+        .body {
+            width: 100%;
+            max-width: 1440px;
+            height: auto;
+            margin: 0;
+            background-image: url("images/navbar-bkgrd-img.jpg");
+        }
+
+        #required {
+            margin: 50px 0 60px;
+            text-align: center;
+        }
+
+        .container-form {
+            margin: 0;
+            padding: 50px;
+        }
+
+        .container-form input {
+            padding: 10px;
+            margin: 0 0 33px;
+            width: 47%;
+        }
+
+        .container-form textarea {
+            width: 100%;
+        }
+
+        /* On screens that are 992px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 1200px) {
+
+            .container {
+                padding: 0 80px !important;
+            }
+
+            .w3-center-getaquote {
+                font-size: 1.2em;
+            }
+
+            .w3-card-location {
+                width: 60%;
+            }
+        }
+
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .container {
+                padding: 0 50px !important;
+            }
+
+            .w3-card-4 {
+                width: 480px;
+            }
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <!-- Header with logo and navbar -->
+    <header>
+        <a href="index.html">
+            <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+        </a>
+        <nav>
+            <ul class="navlist">
+                <li class="navlistitem"><a href="index.html">Home</a></li>
+                <li class="navlistitem"><a href="services.html">Services</a></li>
+                <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
+                <li class="navlistitem"><a href="#">About</a></li>
+                <li class="navlistitem"><a href="contact.html" class="active">Contact</a></li>
+                <li class="navlistitem"><a href="#">Track</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
+    <div class="container" style="padding: 0 224px">
+
+        <!-- Inner Container -->
+        <div class="body-content">
+
+            <!-- Subheader. Just below the navbar -->
+            <div class="subheader-h2" style="width: 160px;">Contact Us</div>
+
+            <h3 class="w3-center-getaquote">Questions? Problems? Please tell us about it. We'll get back to you ASAP</h3>
+
+            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+
+
+            <!-- Container for Contact form  -->
+            <div class="w3-card-4" style="margin: 65px 0 80px;">
+
+                <!-- Contact Form -->
+                <form class="container-form" style="padding-bottom: 0">
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name:  *" type="text" required>
+                    </label>
+
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Email:  *" type="email" required>
+                    </label>
+
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Phone Number:  *" type="number" required>
+                    </label>
+
+                    <label>
+                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Subject: " type="text">
+                    </label>
+
+                    <label>
+                        <textarea class="w3-input w3-border-0 w3-light-gray" placeholder="Let's talk..."></textarea>
+                    </label>
+
+                    <!-- Submit and Reset Button -->
+                    <div class="w3-center">
+                        <div class="w3-bar">
+                            <button type="submit" class="w3-button w3-medium w3-green-submit">Submit</button>
+                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="subheader-h2" style="width: 200px;">Where We Are</div>
+
+            <h3 class="w3-center-getaquote">Or would you rather visit us instead?</h3>
+
+            <div class="w3-card-location" style="margin: 65px auto 65px;">
+                <p class="w3-center">
+                    <i class="fas fa-map-marker-alt" style="font-size: 24px"></i><br>
+                    No. 3M, Microkatu, 70210<br>
+                    Kuopio, Finland.<br><br>
+                    <i class="fas fa-phone" style="font-size: 20px"></i><br>
+                    +358 9 42453389
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+        </div>
+    </div>
+</body>
+
+<!-- footer   -->
+<footer>
+    <div>
+        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+    </div>
+</footer>
+</html>

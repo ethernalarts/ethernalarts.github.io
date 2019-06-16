@@ -149,7 +149,8 @@ legend {
 }
 
 textarea {
-    overflow: auto
+    overflow: auto;
+    height: 150px;
 }
 
 [type=checkbox], [type=radio] {
@@ -1006,7 +1007,7 @@ a {
 }
 
 .w3-container, .w3-panel {
-    padding: 0.01em 16px
+    padding: 0.01em 16px;
 }
 
 .w3-panel {
@@ -1025,6 +1026,7 @@ a {
     background-color: #fff;
     padding: 8px 12px;
     border-left: 4px solid #4CAF50;
+    border-right: 4px solid #4CAF50;
     word-wrap: break-word
 }
 
@@ -1060,6 +1062,12 @@ a {
     border: 0 solid black;
     background: white;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 4px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.w3-card-location {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40%;
+    padding: 40px;
 }
 
 .w3-spin {
@@ -1298,9 +1306,9 @@ a {
 .w3-center-getaquote {
     text-align: center !important;
     margin: 60px auto 30px;
-    font-family: "Oswald SemiBold", Verdana, serif;
+    font-family: Verdana, "Oswald SemiBold", serif;
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 1.3em;
     color: #232323;
 }
@@ -1482,8 +1490,28 @@ a {
 
 .w3-green, .w3-hover-green:hover {
     color: #fff !important;
-    padding: 3px 20px;
-    background-color: #337d33 !important
+    background-color: #337d33 !important;
+    padding: 8px 20px;
+    font-family: Montserrat, serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+button.w3-button.w3-green-submit {
+    color: #fff !important;
+    background-color: #2eaf2e !important;
+    padding: 8px 20px;
+    font-family: Montserrat, serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+button.w3-button.w3-green-submit:hover {
+    box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
 }
 
 .w3-light-green, .w3-hover-light-green:hover {
@@ -1615,21 +1643,19 @@ a.w3-button.w3-black-continue:hover {
     font-style: italic;
 }
 
-a.w3-button.w3-light-grey-back {
-    color: black !important;
-    background-color: white !important;
+a.w3-button.w3-green-previous {
+    color: white !important;
+    background-color: #2eaf2e !important;
     padding: 8px 20px;
     font-family: Montserrat, serif;
     font-size: 1em;
     font-style: normal;
     font-weight: 500;
     border-radius: 0;
-
 }
 
-a.w3-button.w3-light-grey-back:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+a.w3-button.w3-green-previous:hover {
+    box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
 }
 
 .w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
