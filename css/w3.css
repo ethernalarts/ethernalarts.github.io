@@ -1499,19 +1499,21 @@ a {
     border-radius: 0;
 }
 
-button.w3-button.w3-green-submit {
+.w3-button.w3-green-submit {
     color: #fff !important;
-    background-color: #2eaf2e !important;
+    background-color: #2da52d !important;
     padding: 8px 20px;
     font-family: Montserrat, serif;
     font-size: 1em;
     font-style: normal;
     font-weight: 500;
     border-radius: 0;
+    -webkit-appearance: button;
 }
 
-button.w3-button.w3-green-submit:hover {
+.w3-button.w3-green-submit:hover {
     box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
+    -webkit-appearance: none;
 }
 
 .w3-light-green, .w3-hover-light-green:hover {
@@ -1574,9 +1576,11 @@ button.w3-button.w3-green-submit:hover {
      font-family: Montserrat, serif;
      font-size: 1em;
      border-radius: 0;
+     appearance: button;
 }
 
 button.w3-button.w3-red-cancel:hover {
+    -webkit-appearance: none;
     box-shadow: 0 8px 16px 0 rgb(195, 56, 46), 0 6px 20px 0 rgb(215, 59, 49);
 }
 
@@ -1605,19 +1609,20 @@ button.w3-button.w3-red-cancel:hover {
     background-color: #000 !important
 }
 
-a.w3-button.w3-black-continue {
+a.w3-button.w3-black-previous {
     color: whitesmoke !important;
-    background-color: #000 !important;
+    background-color: #232323 !important;
     margin: 0 6px 0 12px;
     padding: 8px 20px;
     font-family: Montserrat, serif;
     font-size: 1em;
     font-style: normal;
     font-weight: 500;
-    border-radius: 3px;
+    border-radius: 0;
+    /*-webkit-appearance: button*/
 }
 
-a.w3-button.w3-black-continue:hover {
+a.w3-button.w3-black-previous:hover {
     box-shadow: 0 8px 16px 0 #373737, 0 6px 20px 0 #373737;
 }
 
@@ -1643,19 +1648,21 @@ a.w3-button.w3-black-continue:hover {
     font-style: italic;
 }
 
-a.w3-button.w3-green-previous {
+a.w3-button.w3-green-continue {
     color: white !important;
-    background-color: #2eaf2e !important;
+    background-color: #2da52d !important;
     padding: 8px 20px;
     font-family: Montserrat, serif;
     font-size: 1em;
     font-style: normal;
     font-weight: 500;
     border-radius: 0;
+    /*-webkit-appearance: button;*/
 }
 
-a.w3-button.w3-green-previous:hover {
+a.w3-button.w3-green-continue:hover {
     box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
+    -webkit-appearance: none;
 }
 
 .w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
