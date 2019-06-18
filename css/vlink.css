@@ -126,8 +126,8 @@
 
     nav {
         font-weight: 500;
-        font-family: "Oswald Light", serif;
-        font-size: 1.06em;
+        font-family: Lato, "Oswald Light", serif;
+        font-size: 1em;
         text-align: center;
         overflow: hidden;
         vertical-align: middle;
@@ -162,8 +162,8 @@
 
     .navlistitem a:hover {
         padding: 10px 25px;
-        /*background-color: #eb6262;*/
-        text-decoration: underline;
+        color: palevioletred;
+        text-decoration: none;
     }
 
     .navlistitem a:visited,
@@ -193,7 +193,7 @@
         /*width: 650px;*/
         width: 100%;
         margin: 0 auto;
-        padding: 20px 20px 40px;
+        padding: 20px;
         font-weight: 500;
         display: block;
         align-items: center;
@@ -229,6 +229,7 @@
         margin: 20px auto 0;
         background-color: #ebeb19;
         width: 240px;
+        horiz-align: center;
         padding: 15px 25px;
         display: block;
         color: #010101;
@@ -305,15 +306,12 @@
         font-size: 1em;
         font-weight: 500;
         line-height: 1.7em;
-        /*color: #414141;*/
-        /*width: 280px;*/
-        /*padding: 0 20px 0 0;*/
-        height: 170px;
+        height: auto;
         overflow: auto;
     }
 
     .but-showmore {
-        margin: 20px 0;
+        margin: 10px 0 30px;
         background-color: orangered;
         border: 0 solid orangered;
         padding: 5px 20px;
@@ -330,7 +328,7 @@
     .but-showmore:hover,
     .but-showmore:visited,
     .but-showmore:focus {
-        margin: 20px 0;
+        margin: 10px 0 30px;
         text-decoration: none;
         border: 0 solid orangered;
         cursor: pointer;
@@ -339,7 +337,7 @@
 
     button.but-showmore:active,
     button.but-showmore:visited {
-        margin: 20px 0;
+        margin: 10px 0 30px;
         text-decoration: none;
         border: 0 solid orangered;
         box-shadow: 4px 8px 16px orangered;
@@ -347,22 +345,23 @@
     }
 
     .but-tailormade {
-        margin: 20px 0;
+        margin: 10px 0 30px;
         background-color: orangered;
         border: 0 solid orangered;
         padding: 5px 20px;
-        display: inline;
+        display: inline-block;
         color: whitesmoke;
         font-family: Montserrat, Lato, Roboto, serif;
         font-size: 1em;
         font-weight: 500;
         text-decoration: none;
         cursor: pointer;
+        -webkit-appearance: none;
     }
 
     a.but-tailormade:hover,
     a.but-tailormade:focus {
-        margin: 20px 0;
+        margin: 10px 0 30px;
         text-decoration: none;
         box-shadow: 4px 8px 16px orangered;
         cursor: pointer;

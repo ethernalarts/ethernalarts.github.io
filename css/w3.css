@@ -595,8 +595,8 @@ a {
     transition: all .4s ease-in-out;
 }
 
-.w3-col-s4-services:hover {
-    transform: scale(2, 2);
+.w3-col.s4-services:hover {
+    transform: scale(1, 1);
     cursor: pointer;
 }
 
@@ -1299,8 +1299,7 @@ a {
     margin: 50px auto 20px;
     color: #0f0f0f;
     font-weight: 500;
-    width: 60%;
-    /*line-height: 1.5em;*/
+    width: 50%;
 }
 
 .w3-center-getaquote {

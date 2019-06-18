@@ -30,8 +30,37 @@
             background-image: url("images/navbar-bkgrd-img.jpg");
         }
 
+        .container {
+            padding: 0 70px;
+        }
+
+        #intl {
+
+        }
+
         /* On screens that are 992px wide or less, go from three columns to two columns */
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 1300px) {
+
+            .container {
+                padding: 0 40px;
+            }
+
+            .w3-center-services-h2 {
+                width: 60%;
+            }
+        }
+
+        /* On screens that are 992px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 900px) {
+
+            .container {
+                padding: 0 30px;
+            }
+
+            .w3-center-services-h2 {
+                width: 60%;
+            }
+
             .w3-col.s4-services {
                 width: 49.99999%
             }
@@ -39,17 +68,18 @@
 
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
+
             .container {
-                padding: 0 100px;
+                padding: 0 50px;
             }
 
-            .services-container {
-                width: 380px;
+            .w3-center-services-h2 {
+                width: 70%;
             }
 
-            h2#servicesPage{
-                text-align: center;
-                width: 380px;
+            .w3-col.s4-services {
+                width: 100%;
+                margin: 0 auto 40px;
             }
         }
     </style>
@@ -98,8 +128,8 @@
                         <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/intl-shipping-2.jpg" alt="International Shipping Quote" style="width: 100%;">
                             <div class="w3-container w3-center">
-                                <h2 class="services-h2">INTERNATIONAL SHIPPING</h2>
-                                <p class="w3-center-services-p" style="padding: 11px;">
+                                <h2 id="intl" class="services-h2">INTERNATIONAL SHIPPING</h2>
+                                <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="is-dots">...</span>
                                     <span id="is-more" style="display: none">
@@ -110,8 +140,8 @@
                                         in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                                         elementum.
                                     </span>
-                                    <button type="button" class="but-showmore" id="isBtn" onclick="intlShipping()">Read More</button>
                                 </p>
+                                <button type="button" class="but-showmore" id="isBtn" onclick="intlShipping()">Read More</button>
                                 <script>
                                     function intlShipping() {
                                         var dots = document.getElementById("is-dots");
@@ -139,7 +169,7 @@
                             <img src="images/express-courier.jpg" alt="Express Courier" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">EXPRESS COURIER</h2>
-                                <p style="padding: 11px;">
+                                <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="ed-dots">...</span>
                                     <span id="ed-more" style="display: none">
@@ -150,8 +180,8 @@
                                         in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                                         elementum.
                                     </span>
-                                    <button type="button" class="but-showmore" id="edBtn" onclick="intlShipping()">Read More</button>
                                 </p>
+                                <button type="button" class="but-showmore" id="edBtn" onclick="expressDelivery()">Read More</button>
                                 <script>
                                     function expressDelivery() {
                                         var dots = document.getElementById("ed-dots");
@@ -179,7 +209,7 @@
                             <img src="images/special-services-3.jpg" alt="Special Services" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">SPECIAL SERVICES</h2>
-                                <p style="padding: 11px;">
+                                <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="sps-dots">...</span>
                                     <span id="sps-more" style="display: none">
@@ -190,8 +220,8 @@
                                         in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                                         elementum.
                                     </span>
-                                    <button type="button" class="but-showmore" id="spsBtn" onclick="intlShipping()">Read More</button>
                                 </p>
+                                <button type="button" class="but-showmore" id="spsBtn" onclick="specialServices()">Read More</button>
                                 <script>
                                     function specialServices() {
                                         var dots = document.getElementById("sps-dots");
@@ -220,7 +250,7 @@
                             <img src="images/time-critical.jpg" alt="Time Critical Services" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">TIME CRITICAL SERVICES</h2>
-                                <p style="padding: 11px;">
+                                <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="tc-dots">...</span>
                                     <span id="tc-more" style="display: none">
@@ -231,8 +261,8 @@
                                         in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                                         elementum.
                                     </span>
-                                    <button type="button" class="but-showmore" id="tcBtn" onclick="intlShipping()">Read More</button>
                                 </p>
+                                <button type="button" class="but-showmore" id="tcBtn" onclick="timeCritical()">Read More</button>
                                 <script>
                                     function timeCritical() {
                                         var dots = document.getElementById("tc-dots");
@@ -260,13 +290,12 @@
                         <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/tailor-made.jpg" alt="Time Critical Services" style="width: 100%;">
                             <div class="w3-container w3-center">
-                                <h2 class="services-h2">TIME CRITICAL SERVICES</h2>
-                                <p style="padding: 11px;">
-                                    Do you require a solution totally unique and designed just to suit your need?
-                                    When others won't do the job, we'll always find a way.
-
-                                    <button href="contact.html" target="_blank" class="but-tailormade">Let's Talk</button>
-                                </p>
+                                <h2 class="services-h2">TAILOR MADE SERVICES</h2>
+                                <p class="w3-center services-p" style="padding: 11px;">
+                                        Do you require a solution totally unique and designed just to suit your need?
+                                        When others won't do the job, we'll always find a way.
+                                    </p>
+                                <a href="contact.html" target="_blank" class="but-tailormade">Let's Talk</a>
                             </div>
                         </div>
                     </div>
@@ -278,7 +307,7 @@
                             <img src="images/secure-storage-2.jpg" alt="Secure Storage" style="width: 100%;">
                             <div class="w3-container w3-center">
                                 <h2 class="services-h2">SECURE STORAGE</h2>
-                                <p style="padding: 11px;">
+                                <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="ss-dots">...</span>
                                     <span id="ss-more" style="display: none">
@@ -289,10 +318,10 @@
                                         in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
                                         elementum.
                                     </span>
-                                    <button type="button" class="but-showmore" id="ssBtn" onclick="intlShipping()">Read More</button>
                                 </p>
+                                <button type="button" class="but-showmore" id="ssBtn" onclick="secureStorage()">Read More</button>
                                 <script>
-                                    function myFunction() {
+                                    function secureStorage() {
                                         var dots = document.getElementById("ss-dots");
                                         var moreText = document.getElementById("ss-more");
                                         var btnText = document.getElementById("ssBtn");
