@@ -13,7 +13,6 @@
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
-    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
 
@@ -34,9 +33,10 @@
             padding: 0 70px;
         }
 
-        #intl {
+        #is, #is-h2, #ec {
 
         }
+
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1300px) {
@@ -127,8 +127,8 @@
                     <div class="w3-col s4-services">
                         <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/intl-shipping-2.jpg" alt="International Shipping Quote" style="width: 100%;">
-                            <div class="w3-container w3-center">
-                                <h2 id="intl" class="services-h2">INTERNATIONAL SHIPPING</h2>
+                            <div id="is" class="w3-container w3-center">
+                                <h2 id="is-h2" class="services-h2">INTERNATIONAL SHIPPING</h2>
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="is-dots">...</span>
@@ -163,11 +163,12 @@
                         </div>
                     </div>
 
+
                     <!-- Express Courier -->
                     <div class="w3-col s4-services">
                         <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/express-courier.jpg" alt="Express Courier" style="width: 100%;">
-                            <div class="w3-container w3-center">
+                            <div id="ec" class="w3-container w3-center">
                                 <h2 class="services-h2">EXPRESS COURIER</h2>
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -202,6 +203,7 @@
                             </div>
                         </div>
                     </div>
+
 
                     <!-- Special Services -->
                     <div class="w3-col s4-services">
@@ -349,7 +351,37 @@
             <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
         </div>
     </div>
+
+    <script>
+        function mediaQuery(x) {
+            if (x.matches) {
+
+                function fixISH2() {
+
+                    var heightIS = document.getElementById('is').offsetHeight;
+                    var heightEC = document.getElementById('ec').offsetHeight;
+
+                    if (heightIS !== heightEC) {
+                        document.getElementById('is-h2').innerHTML = "INT'L SHIPPING";
+                    }
+                    else {
+                        document.getElementById('is-h2').innerHTML = "INTERNATIONAL SHIPPING";
+                    }
+                }
+
+                fixISH2(heightIS, heightEC);
+
+                heightIS.addEventListener(fixISH2);
+                heightEC.addEventListener(fixISH2)
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 1050px) and (min-width: 600px");
+        mediaQuery(x);
+        x.addEventListener(mediaQuery)
+    </script>
 </body>
+
 
 <!-- footer   -->
 <footer>

@@ -16,6 +16,34 @@
     <script src="js/w3.js"></script>
 
     <style>
+        .container-track {
+            margin: 55px auto 0;
+            align-items: center;
+            display: inline-block;
+            width: 80%;
+        }
+
+        .container-track input {
+            padding: 25px;
+            width: 60%;
+            display: inline-block;
+        }
+
+        .container-track button {
+            padding: 25px 50px;
+            /*margin-left: 5px;*/
+            background-color: orangered;
+            display: inline-block;
+            color: whitesmoke;
+            font-family: "Oswald Medium", Lato, serif;
+            border: 2px solid orangered;
+        }
+
+        .container-track button:hover {
+            cursor: pointer;
+            background-color: rgba(245, 68, 0, 0.91);
+        }
+
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
             .index-welcome-content {
@@ -63,6 +91,13 @@
             </p>
 
             <a href="getaquote.html" class="but-getaquote">Create a Shipment</a>
+
+            <form class="container-track" method="post">
+                <label>
+                    <input placeholder="Enter Consignment Number..." type="number">
+                </label>
+                <button type="submit">Track</button>
+            </form>
         </div>
     </div>
 
