@@ -391,7 +391,7 @@ a {
     display: inline-block;
     border: none;
     border-bottom: 1px solid #ccc;
-    width: 100%
+    width: 100%;
 }
 
 .w3-select {
@@ -1639,6 +1639,10 @@ a.w3-button.w3-black-previous:hover {
     color: black !important;
     background-color: white !important;
     border: 1px solid #878787 !important;
+}
+
+.w3-light-gray input:focus {
+    border-left: 5px solid #690069;
 }
 
 .w3-quote-services {

@@ -72,7 +72,6 @@
         margin: 0;
         background-image: url('../images/index-bkgrd-pic-dark-2.jpg');
         background-repeat: no-repeat;
-        background-size: cover;
     }
 
     .container {
@@ -125,10 +124,15 @@
         background-color: white;
     }
 
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+
     nav {
         font-weight: 500;
         font-family: "Oswald Light", serif;
-        font-size: 1.1em;
+        font-size: 1.05em;
         text-align: center;
         overflow: hidden;
         vertical-align: middle;
@@ -216,11 +220,11 @@
         padding: 15px;
         text-align: center;
         width: 40%;
-        font-family: "Hind Madurai Light", Verdana, Montserrat, Lato, serif;
+        font-family: Montserrat, "Hind Madurai Light", Verdana, Lato, serif;
         font-weight: 400;
         display: inline-block;
         color: #ebebeb;
-        font-size: 1em;
+        font-size: 0.9em;
         line-height: 2em;
         border-radius: 5px;
         background-color: rgba(10, 10, 10, 0.85);
@@ -231,7 +235,7 @@
         background-color: #ebeb19;
         width: 240px;
         horiz-align: center;
-        padding: 20px 25px;
+        padding: 17px 25px;
         display: block;
         color: #010101;
         font-family: "Open Sans", Roboto, "Lato Black", serif;
@@ -245,7 +249,7 @@
     .but-getaquote:focus {
         color: #0f0f0f;
         text-decoration: none;
-        background-color: rgba(235, 235, 25, 0.8);
+        background-color: rgb(215, 215, 25);
     }
 
     .subheader-h2 {
