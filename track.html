@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VLink Express Courier - Track Package</title>
+
+    <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/misc.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
+
+    <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/w3.js"></script>
+
+    <div class="thetop"></div>
+
+    <style>
+        .body {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            background-image: url("images/navbar-bkgrd-img.jpg");
+        }
+
+        .w3-card-track {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 70px auto 60px;
+            padding: 50px 0;
+            width: 60%;
+        }
+
+        .container-track {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 70px auto 60px;
+            padding: 50px 0;
+            display: block;
+            width: 70%;
+            font-family: Montserrat, sans-serif;
+            font-weight: 500;
+        }
+
+        .container-track label {
+            color: black;
+        }
+
+        .container-track p {
+            color: white;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .container-track input {
+            padding: 20px;
+            width: 50%;
+            display: inline-block;
+            border: 1px solid #373737;
+        }
+
+        .container-track input:focus {
+            border-left: 5px solid #690069;
+        }
+
+        .container-track button {
+            padding: 20px 50px;
+            background-color: orangered;
+            display: inline;
+            color: white;
+            font-family: Montserrat, sans-serif;
+            margin-left: 4px;
+            border: 1px solid orangered;
+        }
+
+        .container-track button:hover {
+            cursor: pointer;
+            background-color: rgba(245, 68, 0, 0.91);
+        }
+
+        /* On screens that are 1200px wide or less */
+        @media screen and (max-width: 1200px) {
+
+            .container {
+                padding: 0 70px;
+            }
+
+            .container-track {
+                width: 80%;
+            }
+        }
+
+        /* On screens that are 992px wide or less */
+        @media screen and (max-width: 900px) {
+
+            .container {
+                padding: 0 90px !important;
+            }
+
+            .w3-center-services-h2 {
+                width: 80%;
+            }
+
+            .container-track {
+                width: 100%;
+                padding: 50px 30px;
+            }
+        }
+
+        /* On screens that are 600px wide or less */
+        @media screen and (max-width: 600px) {
+
+            .container {
+                padding: 0 50px !important;
+            }
+
+            .w3-center-services-h2 {
+                width: 80%;
+            }
+
+            .container-track {
+                width: 100%;
+                padding: 50px 30px;
+            }
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #2A2A2A;
+            opacity: 1; /* Firefox */
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #2A2A2A;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #2A2A2A;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <!-- Header with logo and navbar -->
+    <header>
+        <a href="index.html">
+            <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+        </a>
+        <nav>
+            <ul class="navlist">
+                <li class="navlistitem"><a href="index.html">Home</a></li>
+                <li class="navlistitem"><a href="services.html">Services</a></li>
+                <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
+                <li class="navlistitem"><a href="#">About</a></li>
+                <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                <li class="navlistitem"><a href="track.html" class="active">Track</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
+    <div class="container">
+
+        <!-- Inner Container -->
+        <div class="body-content">
+
+            <!-- Subheader. Just below the navbar -->
+            <div class="subheader-h2" style="width: 200px;">Track Package</div>
+
+            <p class="w3-center-services-h2">
+                Keep an eye on your shipment. Enter consignment number to track and trace your package.
+            </p>
+
+            <form class="w3-center container-track" method="post">
+                <label>
+                    <input placeholder="Enter Number here..." type="number">
+                </label>
+                <button type="submit">TRACK</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+        </div>
+    </div>
+</body>
+
+<!-- footer   -->
+<footer>
+    <div>
+        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+    </div>
+</footer>
+</html>

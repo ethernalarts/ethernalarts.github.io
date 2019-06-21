@@ -76,7 +76,6 @@
 
     .container {
         width: 100%;
-        /*max-width: 1440px;*/
         padding: 0 100px;
         display: block;
     }
@@ -107,7 +106,6 @@
         background-color: rgba(14, 14, 14, 0.8);
         padding: 20px 20px 20px 0;
         width: 100%;
-        /*max-width: 1440px;*/
         overflow: hidden;
         height: 85px;
         display: block;
@@ -195,7 +193,6 @@
 
     .index-welcome-box {
         text-align: center;
-        /*width: 650px;*/
         width: 100%;
         margin: 0 auto;
         padding: 20px;
@@ -207,7 +204,6 @@
     .index-welcome-h2 {
         font-family: "Lato Black", Federo, serif;
         text-align: center;
-        /*width: 610px;*/
         display: inline-block;
         margin: 0 auto;
         font-size: 3.7em;
@@ -224,7 +220,7 @@
         font-weight: 400;
         display: inline-block;
         color: #ebebeb;
-        font-size: 0.9em;
+        font-size: 1em;
         line-height: 2em;
         border-radius: 5px;
         background-color: rgba(10, 10, 10, 0.85);
@@ -238,8 +234,8 @@
         padding: 17px 25px;
         display: block;
         color: #010101;
-        font-family: "Open Sans", Roboto, "Lato Black", serif;
-        font-size: 1.2em;
+        font-family: Montserrat, "Open Sans", Roboto, "Lato Black", serif;
+        font-size: 1.25em;
         font-weight: 600;
         border-radius: 4px;
         text-decoration: none;
@@ -267,21 +263,8 @@
     .body-content {
         width: 100%;
         padding: 260px 0 0;
-        /*margin: 60px auto 0;*/
         font-weight: 500;
         display: inline-block;
-    }
-
-    h2.body-content {
-        width: 100%;
-        margin: 120px auto 0;
-        display: block;
-        color: #010101;
-        font-family: Roboto, Arial, Federo, Lato, serif;
-        font-size: 1.4em;
-        font-weight: 500;
-        float: left;
-        font-style: italic;
     }
 
     .services-container {
