@@ -25,14 +25,21 @@
             width: 100%;
             height: auto;
             margin: 0;
-            background-image: url("images/navbar-bkgrd-img.jpg");
+            background-image: none;
         }
 
-        .w3-card-track {
-            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-            margin: 70px auto 60px;
-            padding: 50px 0;
-            width: 60%;
+        .parallax {
+            /* The image used */
+            background-image: url("images/index-bkgrd-pic.jpg");
+
+            /* Set a specific height */
+            min-height: 630px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .container-track {
@@ -141,23 +148,27 @@
 </head>
 
 <body class="body">
+    <div class="parallax">
+        <!-- Header with logo and navbar -->
+        <header>
+            <a href="index.html">
+                <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+            </a>
+            <nav>
+                <ul class="navlist">
+                    <li class="navlistitem"><a href="index.html">Home</a></li>
+                    <li class="navlistitem"><a href="services.html">Services</a></li>
+                    <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
+                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="track.html" class="active">Track</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Header with logo and navbar -->
-    <header>
-        <a href="index.html">
-            <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
-        </a>
-        <nav>
-            <ul class="navlist">
-                <li class="navlistitem"><a href="index.html">Home</a></li>
-                <li class="navlistitem"><a href="services.html">Services</a></li>
-                <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
-                <li class="navlistitem"><a href="#">About</a></li>
-                <li class="navlistitem"><a href="contact.html">Contact</a></li>
-                <li class="navlistitem"><a href="track.html" class="active">Track</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-h2" style="width: 200px;">Track Package</div>
+    </div>
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
@@ -165,9 +176,6 @@
 
         <!-- Inner Container -->
         <div class="body-content">
-
-            <!-- Subheader. Just below the navbar -->
-            <div class="subheader-h2" style="width: 200px;">Track Package</div>
 
             <p class="w3-center-services-h2">
                 Keep an eye on your shipment. Enter consignment number to track and trace your package.
