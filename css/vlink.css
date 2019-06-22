@@ -103,7 +103,7 @@
     }
 
     header {
-        background-color: rgba(14, 14, 14, 0.8);
+        background-color: rgba(14, 14, 14, 0.91);
         padding: 20px 20px 20px 0;
         width: 100%;
         overflow: hidden;
@@ -130,7 +130,7 @@
     nav {
         font-weight: 500;
         font-family: "Oswald Light", serif;
-        font-size: 1.05em;
+        font-size: 1.07em;
         text-align: center;
         overflow: hidden;
         vertical-align: middle;
@@ -206,7 +206,7 @@
         text-align: center;
         display: inline-block;
         margin: 0 auto;
-        font-size: 3.7em;
+        font-size: 3.6em;
         font-weight: 500;
         color: whitesmoke;
     }
@@ -231,11 +231,11 @@
         background-color: #ebeb19;
         width: 240px;
         horiz-align: center;
-        padding: 17px 25px;
+        padding: 16px 25px;
         display: block;
         color: #010101;
-        font-family: Montserrat, "Open Sans", Roboto, "Lato Black", serif;
-        font-size: 1.25em;
+        font-family: "Open Sans", Roboto, "Lato Black", serif;
+        font-size: 1.2em;
         font-weight: 600;
         border-radius: 4px;
         text-decoration: none;
@@ -251,7 +251,7 @@
     .subheader-h2 {
         font-family: Oswald, serif;
         display: block;
-        margin: 0 auto;
+        margin: 430px auto 0;
         text-align: center;
         background-color: rgba(15, 15, 15, 0.95);
         padding: 10px 20px;
@@ -262,7 +262,7 @@
 
     .body-content {
         width: 100%;
-        padding: 260px 0 0;
+        padding: 50px 0 0;
         font-weight: 500;
         display: inline-block;
     }

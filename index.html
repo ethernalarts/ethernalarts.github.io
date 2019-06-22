@@ -19,7 +19,19 @@
         .body {
             width: 100%;
             margin: 0;
+            background-image: none;
+        }
+
+        .parallax {
+            /* The image used */
             background-image: url("images/index-bkgrd-pic-dark-2.jpg");
+
+            /* Set a specific height */
+            min-height: 630px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -80,53 +92,56 @@
 </head>
 
 <body class="body">
+    <div class="parallax">
+        <!-- Header with logo and navbar   -->
+        <header>
+            <a href="index.html">
+                <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+            </a>
+            <nav>
+                <ul class="navlist">
+                    <li class="navlistitem"><a href="index.html" class="active">Home</a></li>
+                    <li class="navlistitem"><a href="services.html">Services</a></li>
+                    <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
+                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="track.html">Track</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Header with logo and navbar   -->
-    <header>
-        <a href="index.html">
-            <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
-        </a>
-        <nav>
-            <ul class="navlist">
-                <li class="navlistitem"><a href="index.html" class="active">Home</a></li>
-                <li class="navlistitem"><a href="services.html">Services</a></li>
-                <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
-                <li class="navlistitem"><a href="about.html">About</a></li>
-                <li class="navlistitem"><a href="contact.html">Contact</a></li>
-                <li class="navlistitem"><a href="track.html">Track</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Welcome note box -->
+        <div class="index-welcome-container">
+            <div class="index-welcome-box ">
+                <h2 class="index-welcome-h2">Quality that speaks for itself</h2>
+                <p class="index-welcome-content">
+                    We are an International Courier and Storage Company based in Kuopio, Finland.
+                    Whether you ship packages to South Africa or Wine to Italy, we can get them to their destination
+                    at a time and price that works for you.
+                </p>
 
-    <!-- Welcome note box -->
-    <div class="index-welcome-container">
-        <div class="index-welcome-box ">
-            <h2 class="index-welcome-h2">Quality that speaks for itself</h2>
-            <p class="index-welcome-content">
-                We are an International Courier and Storage Company based in Kuopio, Finland.
-                Whether you ship packages to South Africa or Wine to Italy, we can get them to their destination
-                at a time and price that works for you.
-            </p>
-
-            <a href="getaquote.html" class="but-getaquote">Create a Shipment</a>
+                <a href="getaquote.html" class="but-getaquote">Create a Shipment</a>
 
 
-            <form class="w3-center container-track" method="post">
-                <p><br>Or<br><br>
-                    Track Package</p><br>
-                <label>
-                    <input placeholder="Enter Your Consignment Number" type="number" required>
-                </label>
-                <button type="submit">TRACK</button>
-            </form>
+                <form class="w3-center container-track" method="post">
+                    <p><br>Or<br><br>
+                        Track Package</p><br>
+                    <label>
+                        <input placeholder="Enter Your Consignment Number" type="number" required>
+                    </label>
+                    <button type="submit">TRACK</button>
+                </form>
+            </div>
         </div>
+        <!-- footer -->
+        <footer>
+            <p>
+                Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+            </p>
+        </footer>
     </div>
 
-    <!-- footer -->
-    <footer>
-        <p>
-            Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-        </p>
-    </footer>
+
+
 </body>
 </html>

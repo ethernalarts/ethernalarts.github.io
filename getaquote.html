@@ -23,10 +23,23 @@
     <style>
         .body {
             width: 100%;
-            max-width: 1440px;
             height: auto;
             margin: 0;
-            background-image: url("images/navbar-bkgrd-img.jpg");
+            background-image: none;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url("images/index-bkgrd-pic.jpg");
+
+            /* Set a specific height */
+            min-height: 630px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -48,24 +61,27 @@
 </head>
 
 <body class="body">
+    <div class="parallax">
+        <!-- Header with logo and navbar   -->
+        <header>
+            <a href="index.html">
+                <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+            </a>
+            <nav>
+                <ul class="navlist">
+                    <li class="navlistitem"><a href="index.html">Home</a></li>
+                    <li class="navlistitem"><a href="services.html">Services</a></li>
+                    <li class="navlistitem"><a href="getaquote.html" class="active">Get a Quote</a></li>
+                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="track.html">Track</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Header with logo and navbar   -->
-    <header>
-        <a href="index.html">
-            <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
-        </a>
-        <nav>
-            <ul class="navlist">
-                <li class="navlistitem"><a href="index.html">Home</a></li>
-                <li class="navlistitem"><a href="services.html">Services</a></li>
-                <li class="navlistitem"><a href="getaquote.html" class="active">Get a Quote</a></li>
-                <li class="navlistitem"><a href="#">About</a></li>
-                <li class="navlistitem"><a href="contact.html">Contact</a></li>
-                <li class="navlistitem"><a href="track.html">Track</a></li>
-            </ul>
-        </nav>
-    </header>
-
+        <!-- Create a Shipment. Just below the navbar -->
+        <div class="subheader-h2" style="width: 180px">Get a Quote</div>
+    </div>
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
@@ -74,9 +90,9 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-            <!-- Create a Shipment. Just below the navbar -->
-            <div class="subheader-h2" style="width: 180px">Get a Quote</div>
-            <h3 class="w3-center-getaquote" style="font-family: 'Oswald SemiBold', sans-serif">Click on a service below to get started</h3>
+            <h3 class="w3-center-getaquote" style="font-family: 'Oswald SemiBold', sans-serif;">
+                Click on a service below to get started
+            </h3>
 
             <div class="w3-row-padding">
 

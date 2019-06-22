@@ -1297,7 +1297,7 @@ a {
     text-align: center !important;
     font-family: Montserrat, Lato, Arial, serif;
     font-size: 1.3em;
-    margin: 50px auto 20px;
+    margin: 0 auto 20px;
     color: #0f0f0f;
     font-weight: 500;
     width: 50%;
@@ -1305,7 +1305,7 @@ a {
 
 .w3-center-getaquote {
     text-align: center !important;
-    margin: 60px auto 30px;
+    margin: 0 auto 30px;
     font-family: Verdana, "Oswald SemiBold", serif;
     font-weight: 500;
     text-decoration: none;
