@@ -28,20 +28,6 @@
             background-image: none;
         }
 
-        .parallax {
-            /* The image used */
-            background-image: url("images/index-bkgrd-pic.jpg");
-
-            /* Set a specific height */
-            min-height: 630px;
-
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
         .container-track {
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
             margin: 70px auto 60px;
@@ -66,12 +52,13 @@
             padding: 20px;
             width: 50%;
             display: inline-block;
-            border: 1px solid #373737;
+            border: 0 solid #373737;
+            background-color: #e1e1e1;
         }
 
-        .container-track input:focus {
-            border-left: 5px solid #690069;
-        }
+        /*.container-track input:focus {*/
+        /*    border-left: 5px solid #690069;*/
+        /*}*/
 
         .container-track button {
             padding: 20px 50px;
@@ -135,14 +122,14 @@
         }
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2A2A2A;
+            color: #737373;
             opacity: 1; /* Firefox */
         }
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
+            color: #737373;
         }
         ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
+            color: #737373;
         }
     </style>
 </head>

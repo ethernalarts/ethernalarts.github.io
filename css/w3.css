@@ -1641,10 +1641,6 @@ a.w3-button.w3-black-previous:hover {
     border: 1px solid #878787 !important;
 }
 
-.w3-light-gray input:focus {
-    border-left: 5px solid #690069;
-}
-
 .w3-quote-services {
     color: #f9f9f9 !important;
     background-color: cornflowerblue !important;

@@ -17,6 +17,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
+    <script src="//geodata.solutions/includes/countrystatecity.js"></script>
 
     <div class="thetop"></div>
 
@@ -29,20 +30,6 @@
             background-image: none;
         }
 
-        .parallax {
-            /* The image used */
-            background-image: url("images/index-bkgrd-pic.jpg");
-
-            /* Set a specific height */
-            min-height: 630px;
-
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
         .w3-progressbar-lightblue {
             color: #5f5f5f !important;
             background-color: lightsteelblue !important;
@@ -50,36 +37,25 @@
             margin: 5px 0 0;
         }
 
-        #hi {
-            margin: 0;
-            font: 1.4em Verdana, sans-serif;
-            text-align: center;
-        }
-
-        #required {
-            margin: 50px 0 60px;
-            text-align: center;
-        }
-
-        #required code {
-            font-family: Lato, sans-serif;
-            font-style: italic;
-            font-size: 0.85em;
-        }
-
         .container-form {
             margin: 0;
             padding: 50px;
         }
 
-        .container-form input {
+        .container-form select {
             padding: 10px;
             margin: 0 0 33px;
             width: 47%;
         }
 
-        .container-form input:focus {
-            border-left: 5px solid #690069;
+        .countries, .states, .cities {
+            color: black !important;
+            background-color: white !important;
+            border: 1px solid #878787 !important;
+        }
+
+        #stateId {
+            float: right;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -133,6 +109,17 @@
             a.w3-button.w3-black-previous {
                 margin: 12px 7px 0 0;
             }
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #2A2A2A;
+            opacity: 1; /* Firefox */
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #2A2A2A;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #2A2A2A;
         }
     </style>
 </head>
@@ -189,16 +176,20 @@
                         <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact Name:  *" type="text" required>
                     </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Country:  *" type="text" required>
+                    <label for="countryId">
+                        <select name="country" class="countries" id="countryId" required>
+                            <option value="">Country:  *</option>
+                        </select>
+                    </label>
+
+                    <label for="stateId">
+                        <select name="state" class="states" id="stateId" required>
+                            <option value="">State:  *</option>
+                        </select>
                     </label>
 
                     <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Locality:  *" type="text" required>
-                    </label>
-
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="State: " type="text">
+                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Locality:  *" type="text" required>
                     </label>
 
                     <label>
