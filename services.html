@@ -34,9 +34,17 @@
         }
 
         #is, #is-h2, #ec {
-
         }
 
+        #is-text {
+            height: 250px;
+            overflow: auto;
+            text-align: justify;
+            font-family: Montserrat, Lato, Arial, serif;
+            font-size: 1em;
+            font-weight: 500;
+            line-height: 1.7em;
+        }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1300px) {
@@ -124,7 +132,47 @@
                 <!-- Container containing three columns for services rendered -->
                 <div class="w3-row-padding services-container">
 
-                    <!-- International Shipping -->
+                    <!-- International Shipping Modal Pop Up -->
+                    <div id="intl" class="w3-modal">
+                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                            <header class="w3-container w3-dark-blue">
+                               <span onclick="document.getElementById('intl').style.display='none'"
+                                     class="w3-button w3-dark-blue w3-xlarge w3-display-topright">&times;</span>
+                                <h2 style="font: 1.6em Oswald, serif">INTERNATIONAL SHIPPING</h2>
+                            </header>
+
+                            <div id="is-text" class="w3-container"><br>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
+                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
+                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
+                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
+                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
+                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
+                                    nibh ut, posuere orci.
+                                </p>
+                                <br>
+                                <p>
+                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
+                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
+                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
+                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
+                                </p>
+                            </div>
+                            <br>
+                            <div class="w3-container w3-light-grey w3-padding-16">
+                                <button class="w3-button-ns w3-right w3-black"
+                                        onclick="document.getElementById('intl').style.display='none'">Close</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- International Shipping Box-->
                     <div class="w3-col s4-services">
                         <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/intl-shipping-2.jpg" alt="International Shipping Quote" style="width: 100%;">
@@ -142,24 +190,25 @@
                                         elementum.
                                     </span>
                                 </p>
-                                <button type="button" class="but-showmore" id="isBtn" onclick="intlShipping()">Read More</button>
-                                <script>
-                                    function intlShipping() {
-                                        var dots = document.getElementById("is-dots");
-                                        var moreText = document.getElementById("is-more");
-                                        var btnText = document.getElementById("isBtn");
+                                <button type="button" class="but-showmore" id="isBtn" onclick="document.getElementById('intl').style.display='block'">Read More</button>
 
-                                        if (dots.style.display === "none") {
-                                            dots.style.display = "inline";
-                                            btnText.innerHTML = "Read More";
-                                            moreText.style.display = "none";
-                                        } else {
-                                            dots.style.display = "none";
-                                            btnText.innerHTML = "Read Less";
-                                            moreText.style.display = "inline";
-                                        }
-                                    }
-                                </script>
+<!--                                <script>-->
+<!--                                    function intlShipping() {-->
+<!--                                        var dots = document.getElementById("is-dots");-->
+<!--                                        var moreText = document.getElementById("is-more");-->
+<!--                                        var btnText = document.getElementById("isBtn");-->
+
+<!--                                        if (dots.style.display === "none") {-->
+<!--                                            dots.style.display = "inline";-->
+<!--                                            btnText.innerHTML = "Read More";-->
+<!--                                            moreText.style.display = "none";-->
+<!--                                        } else {-->
+<!--                                            dots.style.display = "none";-->
+<!--                                            btnText.innerHTML = "Read Less";-->
+<!--                                            moreText.style.display = "inline";-->
+<!--                                        }-->
+<!--                                    }-->
+<!--                                </script>-->
                             </div>
                         </div>
                     </div>
