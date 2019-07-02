@@ -36,7 +36,8 @@
         #is, #is-h2, #ec {
         }
 
-        #is-text {
+        #is-text, #ec-text, #ss-text,
+        #tc-text, #sst-text {
             height: 250px;
             overflow: auto;
             text-align: justify;
@@ -44,6 +45,7 @@
             font-size: 1em;
             font-weight: 500;
             line-height: 1.7em;
+            padding: 0 20px;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -135,13 +137,13 @@
                     <!-- International Shipping Modal Pop Up -->
                     <div id="intl" class="w3-modal">
                         <div class="w3-modal-content w3-card-popup w3-animate-zoom">
-                            <header class="w3-container w3-dark-blue">
+                            <header class="w3-container w3-transparent">
                                <span onclick="document.getElementById('intl').style.display='none'"
-                                     class="w3-button w3-dark-blue w3-xlarge w3-display-topright">&times;</span>
-                                <h2 style="font: 1.6em Oswald, serif">INTERNATIONAL SHIPPING</h2>
+                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">INTERNATIONAL SHIPPING</h2>
                             </header>
 
-                            <div id="is-text" class="w3-container"><br>
+                            <div id="is-text" class="w3-container">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                                     laboris nisi ut aliquip ex ea commodo consequat.
@@ -166,7 +168,7 @@
                             </div>
                             <br>
                             <div class="w3-container w3-light-grey w3-padding-16">
-                                <button class="w3-button-ns w3-right w3-black"
+                                <button class="w3-button-ns w3-right w3-orangered w3-border-0"
                                         onclick="document.getElementById('intl').style.display='none'">Close</button>
                             </div>
                         </div>
@@ -181,38 +183,54 @@
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="is-dots">...</span>
-                                    <span id="is-more" style="display: none">
-                                        Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
-                                        Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
-                                        In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
-                                        Mauris nunc congue nisi vitae suscipit tellus mauris. Tortor at auctor urna nunc. Egestas purus viverra accumsan
-                                        in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
-                                        elementum.
-                                    </span>
                                 </p>
-                                <button type="button" class="but-showmore" id="isBtn" onclick="document.getElementById('intl').style.display='block'">Read More</button>
-
-<!--                                <script>-->
-<!--                                    function intlShipping() {-->
-<!--                                        var dots = document.getElementById("is-dots");-->
-<!--                                        var moreText = document.getElementById("is-more");-->
-<!--                                        var btnText = document.getElementById("isBtn");-->
-
-<!--                                        if (dots.style.display === "none") {-->
-<!--                                            dots.style.display = "inline";-->
-<!--                                            btnText.innerHTML = "Read More";-->
-<!--                                            moreText.style.display = "none";-->
-<!--                                        } else {-->
-<!--                                            dots.style.display = "none";-->
-<!--                                            btnText.innerHTML = "Read Less";-->
-<!--                                            moreText.style.display = "inline";-->
-<!--                                        }-->
-<!--                                    }-->
-<!--                                </script>-->
+                                <button type="button" class="but-showmore" id="isBtn" onclick="document.getElementById('intl')
+                                .style.display='block'">Read More</button>
                             </div>
                         </div>
                     </div>
 
+
+
+                    <!-- Express Courier Modal Pop Up -->
+                    <div id="exc" class="w3-modal">
+                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                            <header class="w3-container w3-transparent">
+                               <span onclick="document.getElementById('exc').style.display='none'"
+                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">EXPRESS COURIER</h2>
+                            </header>
+
+                            <div id="ec-text" class="w3-container">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
+                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
+                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
+                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
+                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
+                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
+                                    nibh ut, posuere orci.
+                                </p>
+                                <br>
+                                <p>
+                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
+                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
+                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
+                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
+                                </p>
+                            </div>
+                            <br>
+                            <div class="w3-container w3-light-grey w3-padding-16">
+                                <button class="w3-button-ns w3-right w3-orangered w3-border-0"
+                                        onclick="document.getElementById('exc').style.display='none'">Close</button>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Express Courier -->
                     <div class="w3-col s4-services">
@@ -223,37 +241,54 @@
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="ed-dots">...</span>
-                                    <span id="ed-more" style="display: none">
-                                        Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
-                                        Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
-                                        In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
-                                        Mauris nunc congue nisi vitae suscipit tellus mauris. Tortor at auctor urna nunc. Egestas purus viverra accumsan
-                                        in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
-                                        elementum.
-                                    </span>
                                 </p>
-                                <button type="button" class="but-showmore" id="edBtn" onclick="expressDelivery()">Read More</button>
-                                <script>
-                                    function expressDelivery() {
-                                        var dots = document.getElementById("ed-dots");
-                                        var moreText = document.getElementById("ed-more");
-                                        var btnText = document.getElementById("edBtn");
-
-                                        if (dots.style.display === "none") {
-                                            dots.style.display = "inline";
-                                            btnText.innerHTML = "Read More";
-                                            moreText.style.display = "none";
-                                        } else {
-                                            dots.style.display = "none";
-                                            btnText.innerHTML = "Read Less";
-                                            moreText.style.display = "inline";
-                                        }
-                                    }
-                                </script>
+                                <button type="button" class="but-showmore" id="edBtn" onclick="document.getElementById('exc')
+                                .style.display='block'">Read More</button>
                             </div>
                         </div>
                     </div>
 
+
+
+                    <!-- Special Services Modal Pop Up -->
+                    <div id="ss" class="w3-modal">
+                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                            <header class="w3-container w3-transparent">
+                               <span onclick="document.getElementById('ss').style.display='none'"
+                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">SPECIAL SERVICES</h2>
+                            </header>
+
+                            <div id="ss-text" class="w3-container">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
+                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
+                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
+                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
+                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
+                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
+                                    nibh ut, posuere orci.
+                                </p>
+                                <br>
+                                <p>
+                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
+                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
+                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
+                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
+                                </p>
+                            </div>
+                            <br>
+                            <div class="w3-container w3-light-grey w3-padding-16">
+                                <button class="w3-button-ns w3-right w3-orangered w3-border-0"
+                                        onclick="document.getElementById('ss').style.display='none'">Close</button>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Special Services -->
                     <div class="w3-col s4-services">
@@ -264,37 +299,53 @@
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="sps-dots">...</span>
-                                    <span id="sps-more" style="display: none">
-                                        Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
-                                        Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
-                                        In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
-                                        Mauris nunc congue nisi vitae suscipit tellus mauris. Tortor at auctor urna nunc. Egestas purus viverra accumsan
-                                        in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
-                                        elementum.
-                                    </span>
                                 </p>
-                                <button type="button" class="but-showmore" id="spsBtn" onclick="specialServices()">Read More</button>
-                                <script>
-                                    function specialServices() {
-                                        var dots = document.getElementById("sps-dots");
-                                        var moreText = document.getElementById("sps-more");
-                                        var btnText = document.getElementById("spsBtn");
-
-                                        if (dots.style.display === "none") {
-                                            dots.style.display = "inline";
-                                            btnText.innerHTML = "Read More";
-                                            moreText.style.display = "none";
-                                        } else {
-                                            dots.style.display = "none";
-                                            btnText.innerHTML = "Read Less";
-                                            moreText.style.display = "inline";
-                                        }
-                                    }
-                                </script>
+                                <button type="button" class="but-showmore" onclick="document.getElementById('ss')
+                                .style.display='block'">Read More</button>
                             </div>
                         </div>
                     </div>
 
+
+                    <!-- Time Critical Services Modal Pop Up -->
+                    <div id="tcs" class="w3-modal">
+                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                            <header class="w3-container w3-transparent">
+                               <span onclick="document.getElementById('tcs').style.display='none'"
+                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">TIME CRITICAL SERVICES</h2>
+                            </header>
+
+                            <div id="tc-text" class="w3-container">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
+                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
+                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
+                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
+                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
+                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
+                                    nibh ut, posuere orci.
+                                </p>
+                                <br>
+                                <p>
+                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
+                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
+                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
+                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
+                                </p>
+                            </div>
+                            <br>
+                            <div class="w3-container w3-light-grey w3-padding-16">
+                                <button class="w3-button-ns w3-right w3-orangered w3-border-0"
+                                        onclick="document.getElementById('tcs').style.display='none'">Close</button>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Time Critical -->
                     <div class="w3-col s4-services">
@@ -305,36 +356,13 @@
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="tc-dots">...</span>
-                                    <span id="tc-more" style="display: none">
-                                        Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
-                                        Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
-                                        In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
-                                        Mauris nunc congue nisi vitae suscipit tellus mauris. Tortor at auctor urna nunc. Egestas purus viverra accumsan
-                                        in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
-                                        elementum.
-                                    </span>
                                 </p>
-                                <button type="button" class="but-showmore" id="tcBtn" onclick="timeCritical()">Read More</button>
-                                <script>
-                                    function timeCritical() {
-                                        var dots = document.getElementById("tc-dots");
-                                        var moreText = document.getElementById("tc-more");
-                                        var btnText = document.getElementById("tcBtn");
-
-                                        if (dots.style.display === "none") {
-                                            dots.style.display = "inline";
-                                            btnText.innerHTML = "Read More";
-                                            moreText.style.display = "none";
-                                        } else {
-                                            dots.style.display = "none";
-                                            btnText.innerHTML = "Read Less";
-                                            moreText.style.display = "inline";
-                                        }
-                                    }
-                                </script>
+                                <button type="button" class="but-showmore" onclick="document.getElementById('tcs')
+                                .style.display='block'">Read More</button>
                             </div>
                         </div>
                     </div>
+
 
 
                     <!-- Tailor Made Services -->
@@ -353,6 +381,46 @@
                     </div>
 
 
+                    <!-- Secure Storage Service Modal Pop Up -->
+                    <div id="sst" class="w3-modal">
+                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                            <header class="w3-container w3-transparent">
+                               <span onclick="document.getElementById('sst').style.display='none'"
+                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">SECURE STORAGE</h2>
+                            </header>
+
+                            <div id="sst-text" class="w3-container">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
+                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
+                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
+                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
+                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
+                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
+                                    nibh ut, posuere orci.
+                                </p>
+                                <br>
+                                <p>
+                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
+                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
+                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
+                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
+                                </p>
+                            </div>
+                            <br>
+                            <div class="w3-container w3-light-grey w3-padding-16">
+                                <button class="w3-button-ns w3-right w3-orangered w3-border-0"
+                                        onclick="document.getElementById('sst').style.display='none'">Close</button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Secure Storage -->
                     <div class="w3-col s4-services">
                         <div class="w3-card-services-4" style="width: 100%">
@@ -362,44 +430,14 @@
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="ss-dots">...</span>
-                                    <span id="ss-more" style="display: none">
-                                        Feugiat in ante metus dictum at tempor commodo ullamcorper. Nam libero justo laoreet sit amet cursus.
-                                        Ut sem nulla pharetra diam sit amet nisl suscipit. Ultricies leo integer malesuada nunc vel risus commodo.
-                                        In nisl nisi scelerisque eu ultrices vitae auctor eu. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
-                                        Mauris nunc congue nisi vitae suscipit tellus mauris. Tortor at auctor urna nunc. Egestas purus viverra accumsan
-                                        in nisl nisi scelerisque eu. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Non enim praesent
-                                        elementum.
-                                    </span>
                                 </p>
-                                <button type="button" class="but-showmore" id="ssBtn" onclick="secureStorage()">Read More</button>
-                                <script>
-                                    function secureStorage() {
-                                        var dots = document.getElementById("ss-dots");
-                                        var moreText = document.getElementById("ss-more");
-                                        var btnText = document.getElementById("ssBtn");
-
-                                        if (dots.style.display === "none") {
-                                            dots.style.display = "inline";
-                                            btnText.innerHTML = "Read More";
-                                            moreText.style.display = "none";
-                                        } else {
-                                            dots.style.display = "none";
-                                            btnText.innerHTML = "Read Less";
-                                            moreText.style.display = "inline";
-                                        }
-                                    }
-                                </script>
+                                <button type="button" class="but-showmore" onclick="document.getElementById('sst')
+                                .style.display='block'">Read More</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-
-    <div class="scrolltop">
-        <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
-        </div>
     </div>
 
     <script>
@@ -430,6 +468,12 @@
         mediaQuery(x);
         x.addEventListener(mediaQuery)
     </script>
+
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+        </div>
+    </div>
 </body>
 
 

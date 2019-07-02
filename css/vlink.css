@@ -179,8 +179,9 @@
 
     .navlistitem a:hover {
         padding: 10px 25px;
-        color: #e15c5c;
-        text-decoration: none;
+        color: whitesmoke;
+        text-decoration: underline;
+        text-decoration-color: #e15c5c;
     }
 
     .navlistitem a:visited,

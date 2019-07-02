@@ -9,6 +9,7 @@
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
@@ -153,13 +154,33 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-
             <!-- Progress Bar -->
-            <h2 id="hi">Where is it going?</h2>
+            <div class="container-progressbar">
+                <label class="label">5%
+                    <input type="radio" class="radio" name="progress" value="five">
+                </label>
 
-<!--            <div class="w3-progressbar-lightblue">-->
-<!--                <div class="w3-container w3-padding-small w3-dark-blue w3-center" style="width: 20%">20%</div>-->
-<!--            </div>-->
+                <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>
+                <label for="twentyfive" class="label">25%</label>
+
+                <label class="label">50%
+                    <input type="radio" class="radio" name="progress" value="fifty">
+                </label>
+
+                <label class="label">75%
+                    <input type="radio" class="radio" name="progress" value="seventyfive">
+                </label>
+
+                <label class="label">100%
+                    <input type="radio" class="radio" name="progress" value="onehundred">
+                </label>
+
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+
+            <h2 id="hi">Where is it going?</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 

@@ -9,6 +9,7 @@
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
@@ -29,15 +30,13 @@
             background-image: none;
         }
 
-        .w3-progressbar-lightblue {
-            color: #5f5f5f !important;
-            background-color: #e1e9f0 !important;
-            width: 900px;
-            margin: 5px 0 0;
+        #oversizedPackage {
         }
 
-        #oversizedPackage {
-
+        .container-form select {
+            padding: 10px;
+            margin: 0 0 33px;
+            width: 47%;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -143,11 +142,32 @@
         <div class="body-content">
 
             <!-- Progress Bar -->
-            <h2 id="hi">Almost done. What is the Shipment's Dimensions?</h2>
+            <div class="container-progressbar">
+                <label class="label">5%
+                    <input type="radio" class="radio" name="progress" value="five">
+                </label>
 
-<!--            <div class="w3-progressbar-lightblue">-->
-<!--                <div class="w3-container w3-padding-small w3-dark-blue w3-center" style="width: 40%">40%</div>-->
-<!--            </div>-->
+                <label class="label">25%
+                    <input type="radio" class="radio" name="progress" value="twentyfive">
+                </label>
+
+                <input type="radio" class="radio" name="progress" value="fifty" id="fifty" checked>
+                <label for="fifty" class="label">50%</label>
+
+                <label class="label">75%
+                    <input type="radio" class="radio" name="progress" value="seventyfive">
+                </label>
+
+                <label class="label">100%
+                    <input type="radio" class="radio" name="progress" value="onehundred">
+                </label>
+
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+
+            <h2 id="hi">Almost done. What is the Shipment's Dimensions?</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -189,8 +209,11 @@
                         </label>
                     </div>
 
-                    <label id="oversizedPackage" style="display: none; margin: 30px 0 0">
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Select Packaging Option: " type="number">
+                    <label id="oversizedPackage" style="display: none; margin: 30px 0 -35px">
+                        <select class="w3-input w3-border-0 w3-light-gray">
+                            <option value="1" selected>Select Packaging Option</option>
+                            <option value="2">Additional Handling</option>
+                        </select>
                     </label>
 
                     <!-- Continue and Cancel Button -->
