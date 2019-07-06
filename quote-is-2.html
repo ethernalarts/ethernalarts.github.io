@@ -31,13 +31,6 @@
             background-image: none;
         }
 
-        .w3-progressbar-lightblue {
-            color: #5f5f5f !important;
-            background-color: lightsteelblue !important;
-            width: 900px;
-            margin: 5px 0 0;
-        }
-
         .container-form {
             margin: 0;
             padding: 50px;
@@ -47,12 +40,16 @@
             padding: 10px;
             margin: 0 0 33px;
             width: 47%;
+            border: none;
+            border-bottom: 1px solid #2d2d2d;
+            display: inline;
         }
 
-        .countries, .states, .cities {
-            color: black !important;
-            background-color: white !important;
-            border: 1px solid #878787 !important;
+        .countries, .states {
+            background-color: white;
+            border-bottom: 1px solid #878787;
+            font-size: 0.95em;
+            color: #2A2A2A;
         }
 
         #stateId {
@@ -62,12 +59,6 @@
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
 
-            .w3-progressbar-lightblue {
-                color: #5f5f5f !important;
-                background-color: lightsteelblue !important;
-                width: 710px;
-            }
-
             .container {
                 padding: 0 70px !important;
             }
@@ -75,12 +66,6 @@
 
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-
-            .w3-progressbar-lightblue {
-                color: #5f5f5f !important;
-                background-color: lightsteelblue !important;
-                width: 480px;
-            }
 
             #hi {
                 margin: 60px 0 0;
@@ -114,6 +99,7 @@
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #2A2A2A;
+            font-size: 0.95em;
             opacity: 1; /* Firefox */
         }
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
