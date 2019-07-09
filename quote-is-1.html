@@ -20,7 +20,6 @@
     <script src="js/w3.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/countrystatecity.js"></script>
-<!--    <script src="js/mobile-menu-top.js"></script>-->
 
     <div class="thetop"></div>
 
@@ -137,10 +136,10 @@
                             <button class="w3-button" onclick="dropDown()">
                                 Get a Quote <i class="fas fa-caret-down"></i>
                             </button>
-                            <div id="dropdown" class="w3-dropdown-content w3-bar-block w3-card">
-                                <a href="quote-is-1.html" class="w3-bar-item w3-button">Int'l Shipping</a>
-                                <a href="#" class="w3-bar-item w3-button">Express Courier</a>
-                                <a href="#" class="w3-bar-item w3-button">Secure Storage</a>
+                            <div id="dropdown" class="w3-dropdown-content-nav w3-bar-block w3-card">
+                                <a href="quote-is-1.html" class="w3-dropdown-content-dd">Int'l Shipping</a>
+                                <a href="#" class="">Express Courier</a>
+                                <a href="#" class="">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -165,34 +164,29 @@
 
 
     <!-- Mobile Menu -->
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
 
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <!-- Overlay content -->
-        <div class="overlay-content">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-                <div class="w3-dropdown-click">
-                    <a onclick="myFunction()">
-                        Get a Quote <i class="fas fa-caret-down"></i>
-                    </a>
-
-                </div>
-
-                <div id="demo" class="w3-dropdown-content w3-bar-block">
-                    <a href="#" class="dropdown">Int'l Shipping</a>
-                    <a href="#" class="dropdown">Express Courier</a>
-                    <a href="#" class="dropdown">Secure Storage</a>
-                </div>
-
-            <a href="#">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="track.html">Track</a>
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a class="w3-dropdown-click" onclick="myFunction()">
+                    Get a Quote <i class="fas fa-caret-down"></i>
+                    <div id="demo" class="w3-dropdown-content w3-bar-block">
+                        <a href="quote-is-1.html" class="dropdown">International Shipping</a>
+                        <a href="#" class="dropdown">Express Courier</a>
+                        <a href="#" class="dropdown">Secure Storage</a>
+                    </div>
+                </a>
+                <a href="#">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="track.html">Track</a>
+            </div>
         </div>
-    </div>
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->

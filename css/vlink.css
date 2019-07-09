@@ -138,12 +138,9 @@
         background-color: rgba(14, 14, 14, 0.86);
         padding: 20px 20px 20px 0;
         width: 100%;
-        overflow: hidden;
         height: 85px;
         display: block;
         vertical-align: middle;
-        position: relative;
-        /*z-index: 15;*/
     }
 
     .openbtn, .overlay {
@@ -151,12 +148,12 @@
     }
 
     .vlink-logo {
-        width: 85%;
-        float: left;
-        height: auto;
-        overflow: hidden;
-        padding: 0 20px 0 15px;
-        margin: -35px 0 0;
+        width: 250px;
+        height: 85px;
+        padding: 0 15px 0 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
         background-color: white;
     }
 
@@ -172,9 +169,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-
-        position: relative;
-        z-index: 2;
     }
 
     svg {
@@ -446,5 +440,9 @@
     @media screen and (max-width: 925px) {
     .openbtn, .overlay {
         display: block;
+    }
+
+    nav {
+        display: none;
     }
 }

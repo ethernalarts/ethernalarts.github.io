@@ -407,12 +407,9 @@ a {
 
 .w3-dropdown-click, .w3-dropdown-hover {
     position: relative;
+    z-index: 8;
     display: inline-block;
     cursor: pointer;
-}
-
-.w3-dropdown-click a.active {
-    color: #b93131;
 }
 
 .w3-dropdown-hover:hover .w3-dropdown-content {
@@ -437,12 +434,33 @@ a {
 .w3-dropdown-content {
     cursor: pointer;
     color: black;
+    text-align: center;
     background-color: whitesmoke;
     display: none;
     position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.w3-dropdown-content > a:hover {
+    color: #b93131;
+}
+
+.w3-dropdown-content-nav {
+    cursor: pointer;
+    color: black;
+    background-color: whitesmoke;
+    display: none;
+    position: absolute;
+    z-index: inherit;
     min-width: 160px;
     margin: 0;
     padding: 0;
+}
+
+.w3-dropdown-content a {
+    color: black;
 }
 
 .w3-radio {
