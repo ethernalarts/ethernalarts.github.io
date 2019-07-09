@@ -10,6 +10,7 @@
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
@@ -113,6 +114,14 @@
                 </ul>
             </nav>
         </header>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span>
+            <button class="openbtn" onclick="openNav()">
+                <i class="material-icons md-48">menu</i><br>
+                    <span>Menu</span>
+            </button>
+        </span>
 
         <!-- What We Do. -->
         <div class="subheader-h2" style="width: 180px;">What We Do</div>
@@ -421,6 +430,7 @@
                         </div>
                     </div>
 
+
                     <!-- Secure Storage -->
                     <div class="w3-col s4-services">
                         <div class="w3-card-services-4" style="width: 100%">
@@ -440,6 +450,39 @@
             </div>
     </div>
 
+
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                    Get a Quote <i class="fas fa-caret-down"></i>
+                    <div id="demo" class="dropdown">
+                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
+                        <a href="#">Express Courier</a>
+                        <a href="#">Secure Storage</a>
+                    </div>
+                </a>
+                <a href="#">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="track.html">Track</a>
+            </div>
+        </div>
+
+    <!-- JS fix - h2: International Shipping -->
     <script>
         function mediaQuery(x) {
             if (x.matches) {
@@ -469,11 +512,42 @@
         x.addEventListener(mediaQuery)
     </script>
 
-    <div class="scrolltop">
-        <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
-        </div>
-    </div>
+    <!-- JavaScript Full Screen Overlay Nav -->
+    <script>
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+
+    <!-- JavaScript Drop Down List -->
+    <script>
+        function dropDown() {
+            var x = document.getElementById("dropdown");
+            if (x.className.indexOf("w3-show") === -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <!-- JavaScript Drop Down List (for mobile menu) -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") === -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
 </body>
 
 

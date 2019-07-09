@@ -410,6 +410,7 @@ a {
     z-index: 8;
     display: inline-block;
     cursor: pointer;
+    padding: 10px;
 }
 
 .w3-dropdown-hover:hover .w3-dropdown-content {
@@ -443,10 +444,6 @@ a {
     padding: 0;
 }
 
-.w3-dropdown-content > a:hover {
-    color: #b93131;
-}
-
 .w3-dropdown-content-nav {
     cursor: pointer;
     color: black;
@@ -457,10 +454,6 @@ a {
     min-width: 160px;
     margin: 0;
     padding: 0;
-}
-
-.w3-dropdown-content a {
-    color: black;
 }
 
 .w3-radio {
