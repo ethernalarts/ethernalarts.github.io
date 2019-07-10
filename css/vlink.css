@@ -424,7 +424,7 @@
         padding: 50px;
     }
 
-    .container-form input {
+    .container-form input, #delivery {
         padding: 15px;
         margin: 0 0 33px;
         width: 47%;
@@ -434,7 +434,6 @@
     .copyright {
             font-size: 12px;
             font-weight: 500;
-            /*margin: 1px;*/
     }
 
     @media screen and (max-width: 925px) {

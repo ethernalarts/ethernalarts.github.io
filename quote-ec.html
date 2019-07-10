@@ -19,7 +19,7 @@
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/countrystatecity.js"></script>
+    <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
 
@@ -36,6 +36,14 @@
 
         #returnAdd {
             margin: 40px 0 0;
+        }
+
+        input:disabled {
+            padding: 15px;
+            margin: 0 0 33px;
+            width: 47%;
+            border: none;
+            border-bottom: 1px solid #2d2d2d;
         }
 
         .container-form select {
@@ -138,7 +146,7 @@
                             </button>
                             <div id="dropdown" class="w3-dropdown-content-nav w3-bar-block w3-card">
                                 <a href="quote-is-1.html" class="w3-dropdown-content-dd">International Shipping</a>
-                                <a href="#" class="active">Express Courier</a>
+                                <a href="#" class="active">Local Shipping</a>
                                 <a href="#" class="">Secure Storage</a>
                             </div>
                         </div>
@@ -159,7 +167,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 370px;">Quote - Local Shipping</div>
     </div>
 
 
@@ -232,7 +240,6 @@
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post">
-
                         <label>
                             <input class="w3-light-gray" placeholder="Name (or Company):  *" name="name" type="text" required>
                         </label>
@@ -241,44 +248,6 @@
                             <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;"
                                    name="contact_name" type="text" required />
                         </label>
-
-<!--                        <label for="countryId">-->
-<!--                            <select name="country" class="countries" id="countryId" type="select" required>-->
-<!--                                <option value="">Country:  *</option>-->
-<!--                            </select>-->
-<!--                        </label>-->
-
-<!--                        <label for="stateId">-->
-<!--                            <select name="state" class="states" id="stateId" type="select" required>-->
-<!--                                <option value="">State:  *</option>-->
-<!--                            </select>-->
-<!--                        </label>-->
-
-<!--                        <label for="cityId">-->
-<!--                            <select name="city" class="cities" id="cityId" type="select" required>-->
-<!--                                <option value="">City:  *</option>-->
-<!--                            </select>-->
-<!--                        </label>-->
-
-<!--                        <label>-->
-<!--                            <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"-->
-<!--                                   name="zip_code" type="number" required/>-->
-<!--                        </label>-->
-
-<!--                        <label>-->
-<!--                            <input class="w3-light-gray" style="width: 100%"-->
-<!--                                   placeholder="Street Address:  *" name="street-address" type="text" required>-->
-<!--                        </label>-->
-
-<!--                        <label>-->
-<!--                            <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="apartment-suite"-->
-<!--                                   placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>-->
-<!--                        </label>-->
-
-<!--                        <label>-->
-<!--                            <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="department_c/o"-->
-<!--                                   placeholder="Department, c/o, etc.: " type="text">-->
-<!--                        </label>-->
 
                         <label>
                             <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="phone"
@@ -292,14 +261,14 @@
 
 
                     <!-- Check Box (Email updates on shipment) -->
-                    <label class="container-checkbox" style="font-size: 1.05em; margin: 10px 0 40px 0">
+                    <label class="container-checkbox" style="font-size: 1.05em; margin: 10px 0 30px 0">
                         Send status updates on this package using the email above
                         <input type="checkbox" name="status-updates"/>
                         <span class="checkmark"></span>
                     </label>
 
 
-                    <!-- Toggle (different return address) -->
+                    <!-- Toggle (pickup address) -->
                     <div class="sliderWrapper">
                         Are you bringing this package to us?
                           <label class="switch">
@@ -309,23 +278,22 @@
                     </div>
 
 
-                    <!-- Return Address -->
+                    <!-- Pickup Address -->
                     <div id="returnAdd" style="display: block">
                         <form>
-                            <label for="countryId">
-                                <select name="country" class="countries" id="countryId" required>
-                                    <option value="">Country:  *</option>
-                                </select>
+                            <label>
+                                <input name="country" class="countries" id="countryId" value="Finland" disabled>
                             </label>
 
+                            <!-- <input type="hidden" name="country" id="countryId" value="FI"/> -->
                             <label for="stateId">
-                                <select name="state" class="states" id="stateId" required>
+                                <select name="state" class="states order-alpha" id="stateId" required>
                                     <option value="">State:  *</option>
                                 </select>
                             </label>
 
                             <label for="cityId">
-                                <select name="city" class="cities" id="cityId" required>
+                                <select name="city" class="cities order-alpha" id="cityId" required>
                                     <option value="">City:  *</option>
                                 </select>
                             </label>
@@ -358,7 +326,7 @@
 
 
                     <!-- Contact Address to send package to -->
-                    <div id="address" style="margin: 10px auto 40px; display: block">
+                    <div id="address" style="margin: 10px auto 40px;">
                         <p class="w3-center">
                             <i class="fas fa-map-marker-alt" style="font-size: 24px"></i><br>
                             No. 3M, Microkatu, 70210<br>
@@ -367,6 +335,16 @@
                             +358 9 42453389
                         </p>
                     </div>
+
+
+                    <!-- delivery options -->
+                    <label  style="margin: 30px 0 0 50px">
+                        <select id="delivery" class="w3-light-gray">
+                            <option value="1" selected>Select Delivery Options</option>
+                            <option value="2">Special Services</option>
+                            <option value="2">Time Critical Services</option>
+                        </select>
+                    </label>
 
 
                     <!-- Continue and Cancel Button -->
@@ -386,8 +364,8 @@
 
                         if ((e.style.display = 'block')){
                             document.getElementById('address').style.display = 'none';
-                        } else {
-
+                        } else if ((e.style.display = 'none')){
+                            document.getElementById('address').style.display = 'block';
                         }
                     </script>
 
