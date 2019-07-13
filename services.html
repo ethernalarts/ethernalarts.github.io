@@ -107,13 +107,31 @@
                 <ul class="navlist">
                     <li class="navlistitem"><a href="index.html">Home</a></li>
                     <li class="navlistitem"><a href="services.html" class="active">Services</a></li>
-                    <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.html">International Shipping</a>
+                                <a href="quote-ec.html">Local Shipping</a>
+                                <a href="quote-ss.html">Secure Storage</a>
+                            </div>
+                        </div>
+                    </li>
                     <li class="navlistitem"><a href="#">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
-                    <li class="navlistitem"><a href="track.html">Track</a></li>
+                    <li class="navlistitem active"><a href="track.html">Track</a></li>
                 </ul>
             </nav>
         </header>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span>
+            <button class="openbtn" onclick="openNav()">
+                <i class="material-icons md-48">menu</i><br>
+                    <span>Menu</span>
+            </button>
+        </span>
 
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
@@ -450,13 +468,6 @@
             </div>
     </div>
 
-
-    <div class="scrolltop">
-        <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
-        </div>
-    </div>
-
     <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -512,6 +523,13 @@
         x.addEventListener(mediaQuery)
     </script>
 
+    <!-- Scroll back to the top -->
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+        </div>
+    </div>
+
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
         /* Open */
@@ -525,10 +543,10 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
     <script>
-        function dropDown() {
-            var x = document.getElementById("dropdown");
+        function myFunction() {
+            var x = document.getElementById("demo");
             if (x.className.indexOf("w3-show") === -1) {
                 x.className += " w3-show";
             } else {
@@ -537,14 +555,25 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List (for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
     <script>
-        function myFunction() {
-            var x = document.getElementById("demo");
-            if (x.className.indexOf("w3-show") === -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDownNav() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
         }
     </script>

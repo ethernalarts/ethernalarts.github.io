@@ -424,7 +424,7 @@
         padding: 50px;
     }
 
-    .container-form input, #delivery {
+    .container-form input {
         padding: 15px;
         margin: 0 0 33px;
         width: 47%;

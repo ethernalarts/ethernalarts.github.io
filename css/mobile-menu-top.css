@@ -80,7 +80,6 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        transition: ease-out;
     }
 
     .dropdown a {
@@ -89,14 +88,17 @@
     }
 
     .dropdown a:hover{
-         color: #872222;
-         font-weight: 500;
+        color: #872222;
+        font-weight: 500;
      }
 
-    .dropdown a.active, .dropdown a:focus {
+    .dropdown a.active,
+    .dropdown a.active:hover
+    .dropdown a:focus {
         color: #872222;
         font-weight: 600;
     }
+
 
 
     /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -108,3 +110,71 @@
         right: 35px;
     }
 }
+
+
+    /* Top Nav Drop Down List css code*/
+    .dropbtn {
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        color: whitesmoke;
+        font-weight: 500;
+        padding: 10px 25px;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .dropbtn:hover {
+        color: #b93131;
+        padding: 10px 25px;
+    }
+
+    .dropbtn:focus {
+        color: whitesmoke;
+        padding: 10px 25px;
+    }
+
+    .dropdownnav {
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+        position: relative;
+    }
+
+    .dropdownnav-content {
+        margin: 20px -20px 0;
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 180px;
+        overflow: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdownnav-content a {
+        font-weight: 600;
+        font-family: "Oswald Light", serif;
+        font-size: 1.05em;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdownnav a:hover {
+        font-weight: 500;
+        color: whitesmoke;
+        background-color: #b93131;
+    }
+
+    .dropdownnav a.active,
+    .dropdownnav a.active:hover {
+        font-weight: 600;
+        color: #b93131;
+        background-color: transparent;
+    }
+
+    .show {
+        display: block;
+    }

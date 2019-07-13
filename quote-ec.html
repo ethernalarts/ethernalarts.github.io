@@ -54,6 +54,14 @@
             border-bottom: 1px solid #2d2d2d;
         }
 
+        #delivery {
+            padding: 15px;
+            width: 43%;
+            border: none;
+            border-bottom: 1px solid #2d2d2d;
+            margin: 0 0 50px 50px;
+        }
+
         .countries, .states, .cities {
             background-color: white;
             border-bottom: 1px solid #878787;
@@ -139,15 +147,14 @@
                 <ul class="navlist">
                     <li class="navlistitem"><a href="index.html">Home</a></li>
                     <li class="navlistitem"><a href="services.html">Services</a></li>
-                    <li class="navlistitem">
-                        <div class="w3-dropdown-click">
-                            <button class="w3-button-tr" onclick="dropDown()">
-                                Get a Quote <i class="fas fa-caret-down"></i>
-                            </button>
-                            <div id="dropdown" class="w3-dropdown-content-nav w3-bar-block w3-card">
-                                <a href="quote-is-1.html" class="w3-dropdown-content-dd">International Shipping</a>
-                                <a href="#" class="active">Local Shipping</a>
-                                <a href="#" class="">Secure Storage</a>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.html">International Shipping</a>
+                                <a href="quote-ec.html" class="active">Local Shipping</a>
+                                <a href="quote-ss.html">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -280,7 +287,7 @@
 
                     <!-- Pickup Address -->
                     <div id="returnAdd" style="display: block">
-                        <form>
+                        <form class="container-form">
                             <label>
                                 <input name="country" class="countries" value="Finland" disabled>
                             </label>
@@ -337,11 +344,16 @@
                         </p>
                     </div>
 
+                    <label>
+                        <input class="w3-light-gray" placeholder="Date:  " style="float: right;"
+                               name="contact_name" type="date" required />
+                    </label>
+
 
                     <!-- delivery options -->
-                    <label  style="margin: 30px 0 0 50px">
-                        <select id="delivery" class="w3-light-gray">
-                            <option value="1" selected>Select Delivery Options</option>
+                    <label>
+                        <select id="delivery" class="w3-input w3-border-0 w3-light-gray">
+                            <option value="1" selected disabled>Select a delivery option</option>
                             <option value="2">Special Services</option>
                             <option value="2">Time Critical Services</option>
                         </select>
@@ -351,7 +363,8 @@
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <a href="quote-is-2.html" class="w3-button w3-medium w3-green-continue">Continue  <i class="fa fa-chevron-right"></i></a>
+                            <a href="quote-is-2.html" class="w3-button w3-medium w3-green-continue">
+                                Continue  <i class="fa fa-chevron-right" style="margin-top: 3px"></i></a>
                             <button type="button" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
                         </div>
                     </div>
@@ -365,7 +378,7 @@
 
                         if ((e.style.display = 'block')){
                             document.getElementById('address').style.display = 'none';
-                        } else if ((e.style.display = 'none')){
+                        } else {
                             document.getElementById('address').style.display = 'block';
                         }
                     </script>
@@ -397,10 +410,10 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
     <script>
-        function dropDown() {
-            var x = document.getElementById("dropdown");
+        function myFunction() {
+            var x = document.getElementById("demo");
             if (x.className.indexOf("w3-show") === -1) {
                 x.className += " w3-show";
             } else {
@@ -409,14 +422,25 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List (for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
     <script>
-        function myFunction() {
-            var x = document.getElementById("demo");
-            if (x.className.indexOf("w3-show") === -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDownNav() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
         }
     </script>

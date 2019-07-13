@@ -1465,6 +1465,10 @@ a {
     background-color: #ccc !important
 }
 
+.w3-button-nav {
+    color: whitesmoke;
+}
+
 .w3-transparent, .w3-hover-none:hover {
     background-color: transparent !important
 }

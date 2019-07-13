@@ -131,15 +131,14 @@
                 <ul class="navlist">
                     <li class="navlistitem"><a href="index.html">Home</a></li>
                     <li class="navlistitem"><a href="services.html">Services</a></li>
-                    <li class="navlistitem">
-                        <div class="w3-dropdown-click">
-                            <button class="w3-button" onclick="dropDown()">
-                                Get a Quote <i class="fas fa-caret-down"></i>
-                            </button>
-                            <div id="dropdown" class="w3-dropdown-content-nav w3-bar-block w3-card">
-                                <a href="quote-is-1.html" class="w3-dropdown-content-dd">Int'l Shipping</a>
-                                <a href="#" class="">Express Courier</a>
-                                <a href="#" class="">Secure Storage</a>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.html" class="active">International Shipping</a>
+                                <a href="quote-ec.html">Local Shipping</a>
+                                <a href="quote-ss.html">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -232,17 +231,14 @@
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post">
-
                         <label>
                             <input class="w3-light-gray" placeholder="Name (or Company):  *" name="name" type="text" required>
                         </label>
-
 
                         <label>
                             <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;"
                                    name="contact_name" type="text" required />
                         </label>
-
 
                         <label for="countryId">
                             <select name="country" class="countries" id="countryId" type="select" required>
@@ -409,10 +405,10 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
     <script>
-        function dropDown() {
-            var x = document.getElementById("dropdown");
+        function myFunction() {
+            var x = document.getElementById("demo");
             if (x.className.indexOf("w3-show") === -1) {
                 x.className += " w3-show";
             } else {
@@ -421,14 +417,25 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List (for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
     <script>
-        function myFunction() {
-            var x = document.getElementById("demo");
-            if (x.className.indexOf("w3-show") === -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDownNav() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
         }
     </script>
