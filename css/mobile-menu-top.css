@@ -124,13 +124,8 @@
         border-radius: 0;
     }
 
-    .dropbtn:hover {
+    .dropbtn:hover, .dropbtn:focus {
         color: #b93131;
-        padding: 10px 25px;
-    }
-
-    .dropbtn:focus {
-        color: whitesmoke;
         padding: 10px 25px;
     }
 

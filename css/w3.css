@@ -619,11 +619,6 @@ a {
     transition: all .4s ease-in-out;
 }
 
-.w3-col.s4-services:hover {
-    transform: scale(1, 1);
-    cursor: pointer;
-}
-
 .w3-col.s5 {
     width: 41.66666%
 }

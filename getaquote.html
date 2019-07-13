@@ -11,6 +11,7 @@
     <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
@@ -29,10 +30,18 @@
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 900px) {
 
             .container {
-                padding: 0 120px !important;
+                padding: 0 40px !important;
+            }
+
+            .w3-col.s4 {
+                width: 49.99999%
+            }
+
+            #center-getaquote-ss {
+                margin: 45px auto 0;
             }
         }
 
@@ -40,7 +49,11 @@
         @media screen and (max-width: 600px) {
 
             .container {
-                padding: 0 50px !important;
+                padding: 0 40px !important;
+            }
+
+            .w3-col.s4 {
+                width: 100%;
             }
         }
     </style>
@@ -57,7 +70,17 @@
                 <ul class="navlist">
                     <li class="navlistitem"><a href="index.html">Home</a></li>
                     <li class="navlistitem"><a href="services.html">Services</a></li>
-                    <li class="navlistitem"><a href="getaquote.html" class="active">Get a Quote</a></li>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.html">International Shipping</a>
+                                <a href="quote-ec.html">Local Shipping</a>
+                                <a href="quote-ss.html">Secure Storage</a>
+                            </div>
+                        </div>
+                    </li>
                     <li class="navlistitem"><a href="#">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
@@ -65,13 +88,47 @@
             </nav>
         </header>
 
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span>
+            <button class="openbtn" onclick="openNav()">
+                <i class="material-icons md-48">menu</i><br>
+                    <span>Menu</span>
+            </button>
+        </span>
+
         <!-- Create a Shipment. Just below the navbar -->
         <div class="subheader-h2" style="width: 180px">Get a Quote</div>
     </div>
 
 
+    <!-- Mobile Menu -->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                    Get a Quote <i class="fas fa-caret-down"></i>
+                    <div id="demo" class="dropdown">
+                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
+                        <a href="#">Express Courier</a>
+                        <a href="#">Secure Storage</a>
+                    </div>
+                </a>
+                <a href="#">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="track.html">Track</a>
+            </div>
+        </div>
+
+
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 150px">
+    <div class="container" style="padding: 0 100px">
 
         <!-- Inner Container -->
         <div class="body-content">
@@ -88,19 +145,19 @@
                         <img src="images/get-a-quote-is.jpg" alt="International Shipping Quote" style="width: 100%;">
                         <div class="w3-container w3-left-align">
                             <p style="padding: 11px; font: 600 1.05em 'Hind Madurai', sans-serif">
-                                International Shipping<i class="fa fa-angle-right" style="margin: 0 0 0 10px"></i>
+                                International Shipping
                             </p>
                         </div>
                     </div>
                 </a>
 
-                <!-- Courier Services -->
-                <a href="#" target="_parent" class="w3-col s4">
+                <!-- Express Courier -->
+                <a href="quote-ec.html" target="_parent" class="w3-col s4">
                     <div class="w3-card-4" style="width: 100%">
                         <img src="images/get-a-quote-cs.jpg" alt="Courier Services" style="width: 100%;">
                         <div class="w3-container w3-left-align">
                             <p style="padding: 11px; font: 600 1.05em 'Hind Madurai', sans-serif">
-                                Courier Services<i class="fa fa-angle-right" style="margin: 0 0 0 10px"></i>
+                                Express Courier
                             </p>
                         </div>
                     </div>
@@ -112,7 +169,7 @@
                         <img src="images/get-a-quote-ss.jpg" alt="Secure Storage" style="width: 100%">
                         <div class="w3-container w3-left-align">
                             <p style="padding: 11px; font: 600 1.05em 'Hind Madurai', sans-serif">
-                                Secure Storage<i class="fa fa-angle-right" style="margin: 0 0 0 10px"></i>
+                                Secure Storage
                             </p>
                         </div>
                     </div>
@@ -122,11 +179,60 @@
         </div>
     </div>
 
+    <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
             <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
         </div>
     </div>
+
+    <!-- JavaScript Full Screen Overlay Nav -->
+    <script>
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") === -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDownNav() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 <!-- footer   -->
