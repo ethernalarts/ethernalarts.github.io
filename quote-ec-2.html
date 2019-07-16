@@ -203,13 +203,12 @@
 
             <!-- Progress Bar -->
             <div class="container-progressbar">
-
-                <input type="radio" class="radio" name="progress" value="five" id="five" checked>
-                <label for="five" class="label">5%</label>
-
-                <label class="label">25%
-                    <input type="radio" class="radio" name="progress" value="twentyfive">
+                <label class="label">5%
+                    <input type="radio" class="radio" name="progress" value="five">
                 </label>
+
+                <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>
+                <label for="twentyfive" class="label">25%</label>
 
                 <label class="label">50%
                     <input type="radio" class="radio" name="progress" value="fifty">
@@ -228,151 +227,56 @@
                 </div>
             </div>
 
-            <h2 id="hi">Hi. Please tell us about your Package</h2>
+            <h2 id="hi">Package Dimensions</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
 
-
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post">
-                    <fieldset style="margin: 0 0 20px">
-                        <legend>Basic Details:</legend>
-                        <label>
-                            <input class="w3-light-gray" placeholder="Name (or Company):  *" name="name" type="text" required>
-                        </label>
 
-                        <label>
-                            <select style="float: right" class="w3-input w3-border-0 w3-light-gray">
-                                <option value="1" selected disabled>Gender</option>
-                                <option value="2">Male</option>
-                                <option value="2">Female</option>
-                            </select>
-                        </label>
-
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" name="email"
-                                   placeholder="Email:  *" type="email" required>
-                        </label>
-
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="phone"
-                                   placeholder="Telephone:  *" type="number" required>
-                        </label>
-
-                        <!-- delivery options -->
-                        <label>
-                            <select class="w3-input w3-border-0 w3-light-gray">
-                                <option value="1" selected disabled>Select a delivery option</option>
-                                <option value="2">Special Service</option>
-                                <option value="2">Time Critical Service</option>
-                            </select>
-                        </label>
-
-
-                        <!-- Date -->
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Date:  " style="float: right;"
-                                   name="delivery_date" type="date" required>
-                        </label>
-                    </fieldset>
-
-
-                    <!-- Check Box (Email updates on shipment) -->
-                    <label class="container-checkbox" style="font-size: 1.05em; margin: 10px 0 30px 0">
-                        Send status updates on this package using the email above
-                        <input type="checkbox" name="status-updates"/>
-                        <span class="checkmark"></span>
-                    </label>
-
-
-                    <!-- Toggle (pickup address) -->
-                    <div class="sliderWrapper">
-                        Are you bringing this package to us?
-                          <label class="switch">
-                             <input type="checkbox" onclick="toggle_visibility('returnAdd')">
-                             <span class="slider"></span>
-                          </label>
-                    </div>
-
-
-                    <!-- Pickup Address -->
+                    <!-- Package Details -->
                     <form class="container-form">
-                        <fieldset id="returnAdd" style="display: block">
-                            <legend>Pickup Address:</legend>
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Contact's Name:  *" type="text" required>
-                                </label>
+                        <fieldset style="margin: 0">
+                            <legend>Package Details:</legend>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (lbs):  *" type="number" required>
+                            </label>
 
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact's Phone Number:  *" type="number" required>
-                                </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Length (in):  *" type="number" required>
+                            </label>
 
-                                <label>
-                                    <input name="country" class="countries" value="Finland" disabled>
-                                </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (in):  *" type="number" required>
+                            </label>
 
-                                <input type="hidden" name="country" id="countryId" value="FI"/>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Height (in):  *" type="number" required>
+                            </label>
 
-                                <label for="stateId">
-                                    <select name="state" class="states order-alpha" id="stateId" required>
-                                        <option value="">State:  *</option>
-                                    </select>
-                                </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): " type="number">
+                            </label>
 
-                                <label for="cityId">
-                                    <select name="city" class="cities order-alpha" id="cityId" required>
-                                        <option value="">City:  *</option>
-                                    </select>
-                                </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
+                            </label>
 
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
-                                </label>
-
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
-                                </label>
-
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
-                                </label>
-
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
-                                </label>
-
-                            <!-- Toggle (residential address?) -->
-                            <div class="sliderWrapper" style="margin-top: 0">
-                                <span style="margin: 0 0 0 12px;">Is this a residential address?</span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                        </fieldset>
-
-
-                        <!-- Contact Address to send package to -->
-                        <fieldset id="contactAddress" style="display: none; margin: 40px 0 0">
-                            <legend>Please bring package to this address</legend>
-                            <div >
-                                <p class="w3-center">
-                                    No. 3M, Microkatu, 70210<br>
-                                    Kuopio, Finland.<br><br>
-                                    Phone: +358 9 42453389
-                                </p>
-                            </div>
+                            <label>
+                                <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray" placeholder="Describe package..."></textarea>
+                            </label>
                         </fieldset>
                     </form>
 
-
+                    
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <a href="quote-ec-2.html" class="w3-button w3-medium w3-green-continue">
+                            <a href="quote-ec.html" class="w3-button w3-medium w3-black-previous"><i class="fa fa-chevron-left"></i>  Back</a>
+                            <a href="quote-ec-3.html" class="w3-button w3-medium w3-green-continue">
                                 Continue  <i class="fa fa-chevron-right" style="margin-top: 3px"></i></a>
                             <button type="button" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
                         </div>
