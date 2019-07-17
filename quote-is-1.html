@@ -221,7 +221,7 @@
                 </div>
             </div>
 
-            <h2 id="hi">Hi. Please tell us about your Shipment. Where is it coming from?</h2>
+            <h2 id="hi">Hi. Please tell us about your Shipment.</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -231,62 +231,65 @@
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post">
-                        <label>
-                            <input class="w3-light-gray" placeholder="Name (or Company):  *" name="name" type="text" required>
-                        </label>
+                    <fieldset style="margin: 0 0 20px">
+                        <legend>Shipment Origin:</legend>
+                            <label>
+                                <input class="w3-light-gray" placeholder="Name (or Company):  *" name="name" type="text" required>
+                            </label>
 
-                        <label>
-                            <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;"
-                                   name="contact_name" type="text" required />
-                        </label>
+                            <label>
+                                <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;"
+                                       name="contact_name" type="text" required />
+                            </label>
 
-                        <label for="countryId">
-                            <select name="country" class="countries" id="countryId" type="select" required>
-                                <option value="">Country:  *</option>
-                            </select>
-                        </label>
+                            <label for="countryId">
+                                <select name="country" class="countries" id="countryId" type="select" required>
+                                    <option value="">Country:  *</option>
+                                </select>
+                            </label>
 
-                        <label for="stateId">
-                            <select name="state" class="states" id="stateId" type="select" required>
-                                <option value="">State:  *</option>
-                            </select>
-                        </label>
+                            <label for="stateId">
+                                <select name="state" class="states" id="stateId" type="select" required>
+                                    <option value="">State:  *</option>
+                                </select>
+                            </label>
 
-                        <label for="cityId">
-                            <select name="city" class="cities" id="cityId" type="select" required>
-                                <option value="">City:  *</option>
-                            </select>
-                        </label>
+                            <label for="cityId">
+                                <select name="city" class="cities" id="cityId" type="select" required>
+                                    <option value="">City:  *</option>
+                                </select>
+                            </label>
 
-                        <label>
-                            <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
-                                   name="zip_code" type="number" required/>
-                        </label>
+                            <label>
+                                <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
+                                       name="zip_code" type="number" required/>
+                            </label>
 
-                        <label>
-                            <input class="w3-light-gray" style="width: 100%"
-                                   placeholder="Street Address:  *" name="street-address" type="text" required>
-                        </label>
+                            <label>
+                                <input class="w3-light-gray" style="width: 100%"
+                                       placeholder="Street Address:  *" name="street-address" type="text" required>
+                            </label>
 
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="apartment-suite"
-                                   placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
-                        </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="apartment-suite"
+                                       placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                            </label>
 
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="department_c/o"
-                                   placeholder="Department, c/o, etc.: " type="text">
-                        </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="department_c/o"
+                                       placeholder="Department, c/o, etc.: " type="text">
+                            </label>
 
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="phone"
-                                   placeholder="Telephone:  *" type="number" required>
-                        </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="phone"
+                                       placeholder="Telephone:  *" type="number" required>
+                            </label>
 
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" name="email"
-                                   placeholder="Email:  *" type="email" required>
-                        </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" name="email"
+                                       placeholder="Email:  *" type="email" required>
+                            </label>
+                    </fieldset>
 
 
                     <!-- Check Box (Email updates on shipment) -->
@@ -310,55 +313,58 @@
                     <!-- Return Address -->
                     <div id="returnAdd" style="display: none">
                         <form>
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name (or Company):  *" type="text" required>
-                            </label>
+                            <fieldset style="margin: 20px 0 0">
+                                <legend>Return Address:</legend>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name (or Company):  *" type="text" required>
+                                    </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact Name:  *" type="text" required>
-                            </label>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact Name:  *" type="text" required>
+                                    </label>
 
-                            <label for="countryId">
-                                <select name="country" class="countries" id="countryId" required>
-                                    <option value="">Country:  *</option>
-                                </select>
-                            </label>
+                                    <label for="countryId">
+                                        <select name="country" class="countries" id="countryId" required>
+                                            <option value="">Country:  *</option>
+                                        </select>
+                                    </label>
 
-                            <label for="stateId">
-                                <select name="state" class="states" id="stateId" required>
-                                    <option value="">State:  *</option>
-                                </select>
-                            </label>
+                                    <label for="stateId">
+                                        <select name="state" class="states" id="stateId" required>
+                                            <option value="">State:  *</option>
+                                        </select>
+                                    </label>
 
-                            <label for="cityId">
-                                <select name="city" class="cities" id="cityId" required>
-                                    <option value="">City:  *</option>
-                                </select>
-                            </label>
+                                    <label for="cityId">
+                                        <select name="city" class="cities" id="cityId" required>
+                                            <option value="">City:  *</option>
+                                        </select>
+                                    </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
-                            </label>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
+                                    </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
-                            </label>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
+                                    </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
-                            </label>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                                    </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
-                            </label>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
+                                    </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="margin-bottom: 0" placeholder="Email:  *" type="email" required>
-                            </label>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>
+                                    </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right; margin-bottom: 0" placeholder="Telephone:  *" type="number" required>
-                            </label>
+                                    <label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
+                                    </label>
+                            </fieldset>
                         </form>
                     </div>
 

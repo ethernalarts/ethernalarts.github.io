@@ -19,7 +19,6 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/countrystatecity.js"></script>
 
     <div class="thetop"></div>
@@ -215,70 +214,77 @@
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
+
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-4">
 
-                <!-- Get a Quote form -->
+
+                <!-- Package Destination -->
                 <form class="container-form" style="padding-bottom: 0">
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name (or Company):  *" type="text" required>
-                    </label>
+                    <fieldset style="margin: 0 0 20px">
+                        <legend>Shipment Destination:</legend>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name (or Company):  *" type="text" required>
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact Name:  *" type="text" required>
-                    </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact Name:  *" type="text" required>
+                            </label>
 
-                    <label for="countryId">
-                        <select name="country" class="countries" id="countryId" required>
-                            <option value="">Country:  *</option>
-                        </select>
-                    </label>
+                            <label for="countryId">
+                                <select name="country" class="countries" id="countryId" required>
+                                    <option value="">Country:  *</option>
+                                </select>
+                            </label>
 
-                    <label for="stateId">
-                        <select name="state" class="states" id="stateId" required>
-                            <option value="">State:  *</option>
-                        </select>
-                    </label>
+                            <label for="stateId">
+                                <select name="state" class="states" id="stateId" required>
+                                    <option value="">State:  *</option>
+                                </select>
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="Locality:  *" type="text" required>
-                    </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Locality:  *" type="text" required>
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
-                    </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
-                    </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
-                    </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
-                    </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
+                            </label>
 
-                    <!-- Toggle (residential address?) -->
-                    <div class="sliderWrapper" style="margin-top: 0">
-                        <span style="margin: 0 0 0 12px;">Is this a residential address?</span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone: " type="number">
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="float: right; margin: 35px 0 0;" placeholder="Telephone: " type="number">
-                    </label>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " type="email">
+                            </label>
 
-                    <label>
-                        <input class="w3-input w3-border-0 w3-light-gray" style="margin: 35px 0 0;" placeholder="Email: " type="email">
-                    </label>
+
+                            <!-- Toggle (residential address?) -->
+                            <div class="sliderWrapper" style="margin: 7px 0">
+                                <span style="margin-left: 12px;">Is this a residential address?</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                    </fieldset>
+
 
                     <!-- Check Box (Email updates on shipment) -->
-                    <label class="container-checkbox" style="padding-left: 0; margin: 40px 0; font-size: 1em; cursor: initial">
+                    <label class="container-checkbox" style="padding-left: 0; margin: 30px 0; font-size: 1em; cursor: initial">
                         <p>
                            We may use the email and/or phone number provided to update
                            your receiver about the status of their package.
