@@ -119,20 +119,20 @@
         cursor: pointer;
         color: whitesmoke;
         font-weight: 500;
-        padding: 10px 25px;
+        padding: 10px 20px;
         background-color: transparent;
         border-radius: 0;
     }
 
     .dropbtn:hover {
         border-top: 3px solid whitesmoke;
-        padding: 7px 25px;
+        padding: 7px 20px;
     }
 
     .dropbtn:focus {
         color: whitesmoke;
         border-top: 0 solid whitesmoke;
-        padding: 10px 25px;
+        padding: 10px 20px;
     }
 
     .dropdownnav {

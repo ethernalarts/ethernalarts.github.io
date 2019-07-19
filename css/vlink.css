@@ -203,18 +203,18 @@
     .navlistitem {
         list-style-type: none;
         text-align: center;
-        /*padding: 10px 25px;*/
+        padding: 0 5px;
     }
 
     .navlistitem a {
-        padding: 10px 25px;
+        padding: 10px 20px;
         display: inline-block;
         color: whitesmoke;
     }
 
     .navlistitem a:hover {
         border-top: 3px solid whitesmoke;
-        padding: 7px 25px;
+        padding: 7px 20px;
     }
 
     .navlistitem a:visited,
@@ -525,7 +525,7 @@
 
     .index-welcome-box {
         width: 100%;
-        padding: 0;
+        padding: 0 10px;
     }
 
     .index-welcome-container {
@@ -533,6 +533,6 @@
         padding: 0;
         width: 100%;
         display: block;
-        margin: 60px auto;
+        margin: 50px auto;
     }
 }
