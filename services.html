@@ -53,11 +53,11 @@
         @media screen and (max-width: 1300px) {
 
             .container {
-                padding: 0 40px;
+                padding: 0 30px;
             }
 
             .w3-center-services-h2 {
-                width: 60%;
+                width: 70%;
             }
         }
 
@@ -65,11 +65,11 @@
         @media screen and (max-width: 900px) {
 
             .container {
-                padding: 0 30px;
+                padding: 0 20px;
             }
 
             .w3-center-services-h2 {
-                width: 60%;
+                width: 80%;
             }
 
             .w3-col.s4-services {
@@ -81,16 +81,24 @@
         @media screen and (max-width: 600px) {
 
             .container {
-                padding: 0 50px;
+                padding: 0 10px;
             }
 
             .w3-center-services-h2 {
-                width: 70%;
+                width: 90%;
             }
 
             .w3-col.s4-services {
                 width: 100%;
                 margin: 0 auto 40px;
+            }
+
+            .parallax {
+                min-height: 400px;
+            }
+
+            .subheader-h2 {
+                margin: 200px auto 0;
             }
         }
     </style>
@@ -224,7 +232,7 @@
                             <header class="w3-container w3-transparent">
                                <span onclick="document.getElementById('exc').style.display='none'"
                                      class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
-                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">LOCAL SHIPPING</h2>
+                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">EXPRESS COURIER</h2>
                             </header>
 
                             <div id="ec-text" class="w3-container">
@@ -262,7 +270,7 @@
                         <div class="w3-card-services-4" style="width: 100%">
                             <img src="images/express-courier.jpg" alt="Express Courier" style="width: 100%;">
                             <div id="ec" class="w3-container w3-center">
-                                <h2 class="services-h2">LOCAL SHIPPING</h2>
+                                <h2 class="services-h2">EXPRESS COURIER</h2>
                                 <p class="w3-center services-p" style="padding: 11px;">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua<span id="ed-dots">...</span>
@@ -490,32 +498,20 @@
 
     <!-- JS fix - h2: International Shipping -->
     <script>
-        function mediaQuery(x) {
+        function intlShipping(x) {
             if (x.matches) {
-
-                function fixISH2() {
-
-                    var heightIS = document.getElementById('is').offsetHeight;
-                    var heightEC = document.getElementById('ec').offsetHeight;
-
-                    if (heightIS !== heightEC) {
-                        document.getElementById('is-h2').innerHTML = "INT'L SHIPPING";
-                    }
-                    else {
-                        document.getElementById('is-h2').innerHTML = "INTERNATIONAL SHIPPING";
-                    }
-                }
-
-                fixISH2(heightIS, heightEC);
-
-                heightIS.addEventListener(fixISH2);
-                heightEC.addEventListener(fixISH2)
+                document.getElementById
+                ('is-h2').innerHTML = "INT'L SHIPPING";
+            }
+            else {
+                document.getElementById
+                ('is-h2').innerHTML = "INTERNATIONAL SHIPPING";
             }
         }
 
         var x = window.matchMedia("(max-width: 1050px) and (min-width: 600px");
-        mediaQuery(x);
-        x.addEventListener(mediaQuery)
+        intlShipping(x);
+        x.addListener(intlShipping)
     </script>
 
     <!-- Scroll back to the top -->
