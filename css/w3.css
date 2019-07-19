@@ -522,7 +522,7 @@ a {
 .w3-bar {
     width: 100%;
     margin: 0;
-    padding: 30px 30px 40px;
+    padding: 30px 30px;
     overflow: hidden
 }
 
@@ -1608,7 +1608,6 @@ a {
      font-family: Montserrat, serif;
      font-size: 1em;
      border-radius: 0;
-     appearance: button;
 }
 
 button.w3-button.w3-red-cancel:hover {

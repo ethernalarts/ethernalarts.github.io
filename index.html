@@ -58,10 +58,6 @@
             border: 0 solid whitesmoke;
         }
 
-        .container-track input:focus {
-            border-left: 5px solid #690069;
-        }
-
         .container-track button {
             padding: 20px 50px;
             background-color: orangered;
@@ -85,20 +81,7 @@
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 600px) {
-            .index-welcome-content {
-                width: 100%;
-            }
-        }
 
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2A2A2A;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
         }
     </style>
 </head>
@@ -114,8 +97,18 @@
                 <ul class="navlist">
                     <li class="navlistitem"><a href="index.html" class="active">Home</a></li>
                     <li class="navlistitem"><a href="services.html">Services</a></li>
-                    <li class="navlistitem"><a href="getaquote.html">Get a Quote</a></li>
-                    <li class="navlistitem"><a href="about.html">About</a></li>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.html">International Shipping</a>
+                                <a href="quote-ec.html">Local Shipping</a>
+                                <a href="quote-ss.html">Secure Storage</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navlistitem"><a href="#">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -153,6 +146,8 @@
                 </form>
             </div>
         </div>
+
+
         <!-- footer -->
         <footer>
             <p>
@@ -199,10 +194,10 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
     <script>
-        function dropDown() {
-            var x = document.getElementById("dropdown");
+        function myFunction() {
+            var x = document.getElementById("demo");
             if (x.className.indexOf("w3-show") === -1) {
                 x.className += " w3-show";
             } else {
@@ -211,14 +206,25 @@
         }
     </script>
 
-    <!-- JavaScript Drop Down List (for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
     <script>
-        function myFunction() {
-            var x = document.getElementById("demo");
-            if (x.className.indexOf("w3-show") === -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDownNav() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
         }
     </script>

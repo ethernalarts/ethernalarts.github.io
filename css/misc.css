@@ -76,7 +76,7 @@
 /*--------- Toggle Box ---------*/
 
 .sliderWrapper {
-  margin: 30px 0 0;
+  margin: 30px 0 0 4px;
   font-family: Verdana, serif;
   font-weight: 600;
   font-size: 1.13em;

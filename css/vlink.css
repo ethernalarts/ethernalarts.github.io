@@ -213,8 +213,8 @@
     }
 
     .navlistitem a:hover {
-        padding: 10px 25px;
-        color: #e15c5c;
+        border-top: 3px solid whitesmoke;
+        padding: 7px 25px;
     }
 
     .navlistitem a:visited,
@@ -224,6 +224,7 @@
 
     .navlistitem a.active,
     .navlistitem a.active:hover {
+        border-top: 0 solid whitesmoke;
         color: whitesmoke;
         font-weight: 500;
         padding: 10px 25px;
@@ -434,6 +435,7 @@
     .container-form select {
         padding: 15px;
         margin: 0 0 33px;
+        font-size: 0.95em;
         width: 47%;
         border: none;
         display: inline-block;
@@ -467,6 +469,18 @@
         font-weight: 500;
     }
 
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #2a2a2a;
+        font-size: 0.95em;
+        opacity: 1; /* Firefox */
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #2A2A2A;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #2A2A2A;
+    }
+
     @media screen and (max-width: 925px) {
     .openbtn, .overlay {
         display: block;
@@ -475,4 +489,45 @@
     nav {
         display: none;
     }
+}
+
+    /* On screens that are 600px wide or less */
+    @media screen and (max-width: 600px) {
+
+    .container {
+        padding: 0;
+    }
+
+    .w3-center-services-h2 {
+        width: 90%;
+    }
+
+    .w3-col.s4-services {
+        width: 100%;
+        margin: 0 auto 40px;
+    }
+
+    .parallax {
+        min-height: 400px;
+    }
+
+    .subheader-h2 {
+        margin: 200px auto 0;
+    }
+
+    .vlink-logo {
+        width: 200px;
+    }
+
+    .index-welcome-content {
+        width: 100%;
+    }
+
+        .index-welcome-container {
+            font-size: 90%;
+            padding: 0;
+            width: 100%;
+            display: block;
+            margin: 70px auto;
+        }
 }
