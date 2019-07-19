@@ -523,11 +523,16 @@
         width: 100%;
     }
 
-        .index-welcome-container {
-            font-size: 90%;
-            padding: 0;
-            width: 100%;
-            display: block;
-            margin: 70px auto;
-        }
+    .index-welcome-box {
+        width: 100%;
+        padding: 0;
+    }
+
+    .index-welcome-container {
+        font-size: 90%;
+        padding: 0;
+        width: 100%;
+        display: block;
+        margin: 60px auto;
+    }
 }
