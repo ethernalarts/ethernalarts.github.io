@@ -16,9 +16,9 @@
     <link href="css/vlink.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/countrystatecity.js"></script>
 
     <div class="thetop"></div>
@@ -36,14 +36,6 @@
 
         #returnAdd {
             margin: 40px 0 0;
-        }
-
-        .container-form select {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
         }
 
         .countries, .states, .cities {
@@ -82,40 +74,44 @@
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
-                font: 1.3em Verdana, sans-serif;
             }
 
             .container {
-                padding: 0 50px !important;
+                font-size: 95%;
+                padding: 0 10px !important;
             }
 
             .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
                 width: 100%;
             }
 
             .container-form select {
-                padding: 10px;
-                margin: 0 0 33px;
                 width: 100%;
             }
 
             button.w3-button.w3-red-cancel {
                 margin-top: 1px;
             }
-        }
 
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2a2a2a;
-            font-size: 0.95em;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
+            .sliderWrapper {
+                text-align: center;
+                font-size: 1.10em;
+            }
+
+            .switch {
+                 position: relative;
+                 display: inline-block;
+                 width: 65px;
+                 height: 26px;
+             }
+
+            .slider:before, .slider:after {
+                margin: 0 auto;
+            }
+
+            fieldset {
+                font-size: 95%;
+            }
         }
     </style>
 </head>
@@ -137,7 +133,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.html" class="active">International Shipping</a>
-                                <a href="quote-ec.html">Local Shipping</a>
+                                <a href="quote-ec.html">Express Courier</a>
                                 <a href="quote-ss.html">Secure Storage</a>
                             </div>
                         </div>
@@ -229,7 +225,7 @@
             <div class="w3-card-quote-is">
 
 
-                <!-- Get a Quote form -->
+                <!-- Get a Quote for International Shipping form -->
                 <form class="container-form" method="post">
                     <fieldset style="margin: 0 0 20px">
                         <legend>Shipment Origin:</legend>
@@ -391,13 +387,6 @@
     </div>
 
 
-    <!-- Scroll back to the top -->
-    <div class="scrolltop">
-        <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
-        </div>
-    </div>
-
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
         /* Open */
@@ -445,6 +434,13 @@
             }
         }
     </script>
+
+    <!-- Scroll back to the top -->
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+        </div>
+    </div>
 </body>
 
 <!-- footer   -->

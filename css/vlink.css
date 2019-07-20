@@ -494,45 +494,63 @@
     /* On screens that are 600px wide or less */
     @media screen and (max-width: 600px) {
 
-    .container {
-        padding: 0;
-    }
+        .container {
+            padding: 0;
+            font-size: 95%;
+        }
 
-    .w3-center-services-h2 {
-        width: 90%;
-    }
+        .container-form input {
+            width: 100%;
+        }
 
-    .w3-col.s4-services {
-        width: 100%;
-        margin: 0 auto 40px;
-    }
+        .container-form select {
+            width: 100%;
+        }
 
-    .parallax {
-        min-height: 400px;
-    }
+        button.w3-button.w3-red-cancel {
+            margin-top: 1px;
+        }
 
-    .subheader-h2 {
-        margin: 200px auto 0;
-    }
+        .w3-center-services-h2 {
+            width: 90%;
+        }
 
-    .vlink-logo {
-        width: 200px;
-    }
+        .w3-col.s4-services {
+            width: 100%;
+            margin: 0 auto 40px;
+        }
 
-    .index-welcome-content {
-        width: 100%;
-    }
+        .parallax {
+            min-height: 400px;
+        }
 
-    .index-welcome-box {
-        width: 100%;
-        padding: 0 10px;
-    }
+        .subheader-h2 {
+            margin: 200px auto 0;
+            width: 100%;
+        }
 
-    .index-welcome-container {
-        font-size: 90%;
-        padding: 0;
-        width: 100%;
-        display: block;
-        margin: 50px auto;
-    }
+        .vlink-logo {
+            width: 200px;
+        }
+
+        .index-welcome-content {
+            width: 100%;
+        }
+
+        .index-welcome-box {
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        .index-welcome-container {
+            font-size: 90%;
+            padding: 0;
+            width: 100%;
+            display: block;
+            margin: 50px auto;
+        }
+
+        .w3-medium {
+            font-size: 12px !important
+        }
 }
