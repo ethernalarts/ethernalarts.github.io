@@ -44,7 +44,7 @@ function locationInfo() {
     this.confCity = function(id) {
      //   console.log(id);
      //   console.log('started');
-        var url = rootUrl+'?type=confCity&countryId='+ jQuery('#countryId option:selected').attr('countryid') +'&stateId=' + jQuery('#stateId option:selected').attr('stateid') + '&cityId=' + id;
+        var url = rootUrl+'?type=confCity&country_Id='+ jQuery('#country_Id option:selected').attr('country_Id') +'&state_Id=' + jQuery('#state_Id option:selected').attr('state_Id') + '&city_Id=' + id;
         var method = "post";
         var data = {};
         call.send(data, url, method, function(data) {
@@ -61,7 +61,7 @@ function locationInfo() {
     this.getCities = function(id) {
         jQuery(".cities option:gt(0)").remove();
         //get additional fields
-        var stateClasses = jQuery('#cityId').attr('class');
+        var stateClasses = jQuery('#city_Id').attr('class');
 
         var cC = stateClasses.split(" ");
         cC.shift();
@@ -71,7 +71,7 @@ function locationInfo() {
             acC = cC.join();
             addClasses = '&addClasses=' + encodeURIComponent(acC);
         }
-        var url = rootUrl+'?type=getCities&countryId='+ jQuery('#countryId option:selected').attr('countryid') +'&stateId=' + id + addParams + addClasses;
+        var url = rootUrl+'?type=getCities&country_Id='+ jQuery('#country_Id option:selected').attr('country_Id') +'&state_Id=' + id + addParams + addClasses;
         var method = "post";
         var data = {};
         jQuery('.cities').find("option:eq(0)").html("Please wait...");
@@ -101,7 +101,7 @@ function locationInfo() {
                 }
                 else
                 {
-                    var usestate = jQuery('#stateId option:selected').val();
+                    var usestate = jQuery('#state_Id option:selected').val();
                     var option = jQuery('<option />');
                     option.attr('value', usestate).text(usestate);
                     option.attr('selected', 'selected');
@@ -120,7 +120,7 @@ function locationInfo() {
         jQuery(".states option:gt(0)").remove();
         jQuery(".cities option:gt(0)").remove();
         //get additional fields
-        var stateClasses = jQuery('#stateId').attr('class');
+        var stateClasses = jQuery('#state_Id').attr('class');
 
         var cC = stateClasses.split(" ");
         cC.shift();
@@ -130,7 +130,7 @@ function locationInfo() {
             acC = cC.join();
             addClasses = '&addClasses=' + encodeURIComponent(acC);
         }
-        var url = rootUrl+'?type=getStates&countryId=' + id + addParams  + addClasses;
+        var url = rootUrl+'?type=getStates&country_Id=' + id + addParams  + addClasses;
         var method = "post";
         var data = {};
         jQuery('.states').find("option:eq(0)").html("Please wait...");
@@ -149,7 +149,7 @@ function locationInfo() {
                 jQuery.each(data['result'], function(key, val) {
                     var option = jQuery('<option />');
                     option.attr('value', val).text(val);
-                    option.attr('stateid', key);
+                    option.attr('state_Id', key);
                     jQuery('.states').append(option);
                 });
                 jQuery(".states").prop("disabled",false);
@@ -162,7 +162,7 @@ function locationInfo() {
 
     this.getCountries = function() {
         //get additional fields
-        var countryClasses = jQuery('#countryId').attr('class');
+        var countryClasses = jQuery('#country_Id').attr('class');
 
         var cC = countryClasses.split(" ");
         cC.shift();
@@ -225,7 +225,7 @@ function locationInfo() {
                         jQuery.each(optgroups, function(groupName, options) {
                             var coption = jQuery('<option />');
                             coption.attr('value', options.name).text(options.name);
-                            coption.attr('countryid', options.id);
+                            coption.attr('country_Id', options.id);
                             if(presel) {
                                 if (presel.toUpperCase() == options.id) {
                                     coption.attr('selected', 'selected');
@@ -240,7 +240,7 @@ function locationInfo() {
                     jQuery.each(data['result'], function(key, val) {
                         var option = jQuery('<option />');
                         option.attr('value', val).text(val);
-                        option.attr('countryid', key);
+                        option.attr('country_Id', key);
                         if(presel)
                         {
                             if(presel.toUpperCase() ==  key)
@@ -269,18 +269,18 @@ jQuery(function() {
     var loc = new locationInfo();
     loc.getCountries();
     jQuery(".countries").on("change", function(ev) {
-        var countryId = jQuery("option:selected", this).attr('countryid');
-        if(countryId != ''){
-            loc.getStates(countryId);
+        var country_Id = jQuery("option:selected", this).attr('country_Id');
+        if(country_Id != ''){
+            loc.getStates(country_Id);
         }
         else{
             jQuery(".states option:gt(0)").remove();
         }
     });
     jQuery(".states").on("change", function(ev) {
-        var stateId = jQuery("option:selected", this).attr('stateid');
-        if(stateId != ''){
-            loc.getCities(stateId);
+        var state_Id = jQuery("option:selected", this).attr('state_Id');
+        if(state_Id != ''){
+            loc.getCities(state_Id);
         }
         else{
             jQuery(".cities option:gt(0)").remove();
@@ -288,9 +288,9 @@ jQuery(function() {
     });
 
     jQuery(".cities").on("change", function(ev) {
-        var cityId = jQuery("option:selected", this).val();
-        if(cityId != ''){
-            loc.confCity(cityId);
+        var city_Id = jQuery("option:selected", this).val();
+        if(city_Id != ''){
+            loc.confCity(city_Id);
         }
     });
 });

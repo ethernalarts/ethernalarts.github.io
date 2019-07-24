@@ -16,9 +16,9 @@
     <link href="css/vlink.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
@@ -144,7 +144,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.html">International Shipping</a>
-                                <a href="quote-ec.html" class="active">Local Shipping</a>
+                                <a href="quote-ec.html" class="active">Express Courier</a>
                                 <a href="quote-ss.html">Secure Storage</a>
                             </div>
                         </div>
@@ -265,6 +265,24 @@
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
                             </label>
 
+
+                            <!-- delivery options -->
+                            <label>
+                                <select style="font-style: italic" class="w3-input w3-border-0 w3-light-gray">
+                                    <option value="1" selected disabled>Delivery type</option>
+                                    <option value="2">Special Service</option>
+                                    <option value="2">Time Critical Service</option>
+                                </select>
+                            </label>
+
+
+                            <!-- Delivery date -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Delivery date " style="float: right"
+                                       name="delivery_date" type="text" onfocus="(this.type='date')" id="d8" required>
+                            </label>
+
+
                             <label>
                                 <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray" placeholder="Describe package..."></textarea>
                             </label>
@@ -281,27 +299,6 @@
                             <button type="button" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
                         </div>
                     </div>
-
-
-                    <!-- js to hide/show pickup address -->
-                    <script type="text/javascript">
-
-                        var btn = document.querySelector('returnAdd');
-
-                        btn.addEventListener('click', toggle_visibility);
-                        btn.addEventListener('click', toggle_address);
-
-                        function toggle_visibility(){
-                            var e = document.getElementById('returnAdd');
-                            e.style.display = ((e.style.display !== 'block') ?  'block' : 'none');
-
-                            var e1 = document.getElementById('contactAddress');
-                            e1.style.display = ((e.style.display !== 'block') ?
-                                (e1.style.display = 'block')
-                                :
-                                (e1.style.display = 'none'));
-                        }
-                    </script>
 
                 <!-- End of form -->
                 </form>

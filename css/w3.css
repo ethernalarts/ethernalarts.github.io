@@ -1686,7 +1686,7 @@ a.w3-button.w3-black-previous:hover {
     font-style: italic;
 }
 
-a.w3-button.w3-green-continue {
+button.w3-button.w3-green-continue {
     color: white !important;
     background-color: #2da52d !important;
     padding: 8px 20px;
@@ -1698,7 +1698,7 @@ a.w3-button.w3-green-continue {
     /*-webkit-appearance: button;*/
 }
 
-a.w3-button.w3-green-continue:hover {
+button.w3-button.w3-green-continue:hover {
     box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
     -webkit-appearance: none;
 }

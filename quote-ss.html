@@ -16,9 +16,9 @@
     <link href="css/vlink.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
@@ -34,33 +34,22 @@
             background-image: none;
         }
 
-        #returnAdd {
-            margin: 40px 0 0;
-        }
+        /*#returnAdd {*/
+        /*    margin: 40px 0 0;*/
+        /*}*/
 
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
             width: 47%;
+            font-style: italic;
             border: none;
             border-bottom: 1px solid #2d2d2d;
         }
 
-        .container-form select {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
-        }
-
-        #delivery {
-            padding: 15px;
-            width: 43%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
-            margin: 0 0 50px 50px;
-        }
+        /*input[type='date']:after {*/
+        /*    content: attr(placeholder)*/
+        /*}*/
 
         .countries, .states, .cities {
             background-color: white;
@@ -83,12 +72,6 @@
 
             .container {
                 padding: 0 90px !important;
-            }
-
-            .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
-                width: 47%;
             }
         }
 
@@ -121,18 +104,6 @@
                 margin-top: 1px;
             }
         }
-
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2a2a2a;
-            font-size: 0.95em;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
-        }
     </style>
 </head>
 
@@ -153,7 +124,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.html">International Shipping</a>
-                                <a href="quote-ec.html">Local Shipping</a>
+                                <a href="quote-ec.html">Express Courier</a>
                                 <a href="quote-ss.html" class="active">Secure Storage</a>
                             </div>
                         </div>
@@ -237,7 +208,7 @@
                 </div>
             </div>
 
-            <h2 id="hi">Hi. Please tell us about what you want store.</h2>
+            <h2 id="hi">Please tell us about what you want to store.</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -245,20 +216,41 @@
             <div class="w3-card-quote-is">
 
 
-                <!-- Get a Quote form -->
-                <form class="container-form" method="post">
+                <!-- Secure Storage form -->
+                <form style="padding-bottom: 0" class="container-form" method="post">
+                    <fieldset style="margin: 0 0 20px">
+                        <legend>Basic Details:</legend>
                         <label>
-                            <input class="w3-light-gray" placeholder="Name (or Company):  *" name="name" type="text" required>
+                            <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name" type="text" required>
                         </label>
 
                         <label>
-                            <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;"
-                                   name="contact_name" type="text" required />
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Title (Mr, Mrs, Dr. etc):  " type="text">
                         </label>
 
+                        <!-- Marital Status -->
                         <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="phone"
-                                   placeholder="Telephone:  *" type="number" required>
+                            <select class="w3-input w3-border-0 w3-light-gray">
+                                <option value="1" selected disabled>Marital Status:  *</option>
+                                <option value="2">Single</option>
+                                <option value="3">Married</option>
+                                <option value="4">Divorced</option>
+                                <option value="5">Widowed</option>
+                            </select>
+                        </label>
+
+                        <!-- Age -->
+                        <label>
+                            <select style="float: right" class="w3-input w3-border-0 w3-light-gray" required>
+                                <option value="1" selected disabled>Age:  *</option>
+                                <option value="2">Below 18</option>
+                                <option value="3">18 - 30</option>
+                                <option value="4">30 - 45</option>
+                                <option value="5">45 - 55</option>
+                                <option value="6">55 - 65</option>
+                                <option value="7">65 + </option>
+                            </select>
                         </label>
 
                         <label>
@@ -266,10 +258,20 @@
                                    placeholder="Email:  *" type="email" required>
                         </label>
 
+                        <label>
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="phone"
+                                   placeholder="Telephone:  *" type="number" required>
+                        </label>
+
+                        <label>
+                            <input class="w3-light-gray" style="width: 100%" placeholder="Occupation:  *" name="name" type="text" required>
+                        </label>
+                    </fieldset>
+
 
                     <!-- Check Box (Email updates on shipment) -->
                     <label class="container-checkbox" style="font-size: 1.05em; margin: 10px 0 30px 0">
-                        Send status updates on this package using the email above
+                        Send status updates on this item using the email above
                         <input type="checkbox" name="status-updates"/>
                         <span class="checkmark"></span>
                     </label>
@@ -277,17 +279,26 @@
 
                     <!-- Toggle (pickup address) -->
                     <div class="sliderWrapper">
-                        Are you bringing this package to us?
-                          <label class="switch">
-                             <input type="checkbox" onclick="toggle_visibility('returnAdd')">
-                             <span class="slider"></span>
-                          </label>
+                        Are you bringing this item to us?
+                        <label class="switch">
+                            <input type="checkbox" onclick="toggle_visibility('returnAdd')">
+                            <span class="slider"></span>
+                        </label>
                     </div>
 
 
                     <!-- Pickup Address -->
-                    <form class="container-form">
-                        <div id="returnAdd" style="display: block">
+                    <div>
+                        <fieldset id="returnAdd" style="display: block; margin: 40px 0">
+                            <legend>Pickup Address:</legend>
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Contact's Name:  *" type="text" required>
+                            </label>
+
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact's Phone Number:  *" type="number" required>
+                            </label>
+
                             <label>
                                 <input name="country" class="countries" value="Finland" disabled>
                             </label>
@@ -315,88 +326,72 @@
                             </label>
 
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%; font-style: italic" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
                             </label>
 
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%; font-style: italic" placeholder="Department, c/o, etc.: " type="text">
                             </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" type="email" required>
-                            </label>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone:  *" type="number" required>
-                            </label>
-                        </div>
+                            <!-- Toggle (residential address?) -->
+                            <div class="sliderWrapper" style="margin: 7px 0">
+                                <span style="margin-left: 12px;">Is this a residential address?</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </fieldset>
 
 
                         <!-- Contact Address to send package to -->
-                        <div id="address" style="margin: 40px auto;">
-                            <p class="w3-center">
-                                <i class="fas fa-map-marker-alt" style="font-size: 24px"></i><br>
-                                No. 3M, Microkatu, 70210<br>
-                                Kuopio, Finland.<br><br>
-                                <i class="fas fa-phone" style="font-size: 20px"></i><br>
-                                +358 9 42453389
-                            </p>
-                        </div>
+                        <fieldset id="contactAddress" style="display: none; margin: 40px 0">
+                            <legend>Please bring the item to this address</legend>
+                            <div >
+                                <p class="w3-center">
+                                    No. 3M, Microkatu, 70210<br>
+                                    Kuopio, Finland.<br><br>
+                                    Phone: +358 9 42453389
+                                </p>
+                            </div>
+                        </fieldset>
 
-
-                        <!-- delivery options -->
-                        <label>
-                            <select class="w3-input w3-border-0 w3-light-gray">
-                                <option value="1" selected disabled>Select a delivery option</option>
-                                <option value="2">Special Services</option>
-                                <option value="2">Time Critical Services</option>
-                            </select>
-                        </label>
-
-
-                        <!-- Date -->
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Date:  " style="float: right;"
-                                   name="delivery_date" type="date" required>
-                        </label>
-                    </form>
+                    <!-- End of pickup address form -->
+                    </div>
 
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <a href="quote-is-2.html" class="w3-button w3-medium w3-green-continue">
+                            <a href="quote-ss-2.html" class="w3-button w3-medium w3-green-continue">
                                 Continue  <i class="fa fa-chevron-right" style="margin-top: 3px"></i></a>
-                            <button type="button" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
+                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
                         </div>
                     </div>
 
 
                     <!-- js to hide/show pickup address -->
                     <script type="text/javascript">
-                        function toggle_visibility(returnAdd) {
-                            var e = document.getElementById(returnAdd);
-                            e.style.display = ((e.style.display !== 'block') ?  'block' : 'none');
-                        }
+                        var btn = document.querySelector('returnAdd');
 
-                        if ((e.style.display = 'block')){
-                            document.getElementById('address').style.display = 'none';
-                        } else {
-                            document.getElementById('address').style.display = 'block';
+                        btn.addEventListener('click', toggle_visibility);
+
+                        function toggle_visibility(){
+                            var e = document.getElementById('returnAdd');
+                            e.style.display = ((e.style.display !== 'block') ?  'block' : 'none');
+
+                            var e1 = document.getElementById('contactAddress');
+                            e1.style.display = ((e.style.display !== 'block') ?
+                                (e1.style.display = 'block')
+                                :
+                                (e1.style.display = 'none'));
                         }
                     </script>
 
-                <!-- End of form -->
+                    <!-- End of form -->
                 </form>
             </div>
-        </div>
-    </div>
-
-
-    <!-- Scroll back to the top -->
-    <div class="scrolltop">
-        <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
         </div>
     </div>
 
@@ -447,6 +442,13 @@
             }
         }
     </script>
+
+    <!-- Scroll back to the top -->
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+        </div>
+    </div>
 </body>
 
 <!-- footer   -->

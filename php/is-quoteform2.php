@@ -33,5 +33,5 @@
   $_SESSION['phone'] = $_POST['phone'];
   $_SESSION['email'] = $_POST['email'];
   $_SESSION['status_updates'] = $_POST['status_updates'];
-  
+
 ?>

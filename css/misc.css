@@ -90,9 +90,9 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 78px;
+    width: 68px;
     height: 29px;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 10px;
 }
 
 .switch input {
@@ -131,7 +131,7 @@
     position: absolute;
     transform: translate(-50%,-50%);
     top: 39%;
-    left: 65%;
+    left: 70%;
     height: 21px;
     width: 25px;
     font-size: 1em;
@@ -150,7 +150,7 @@ input:focus + .slider {
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
-    transform: translateX(46px);
+    transform: translateX(36px);
 }
 
 /*------ ADDED CSS ---------*/
@@ -164,7 +164,7 @@ input:checked + .slider:after
   position: absolute;
   transform: translate(-50%,-50%);
   top: 39%;
-  left: 30%;
+  left: 25%;
   font-size: 1em;
   font-weight: 500;
   font-family: Verdana, sans-serif;

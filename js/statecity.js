@@ -4,11 +4,11 @@ function ajaxCall() {
         type = type||'json';
         var successRes = function(data) {
             success(data);
-        }
+        };
 
         var errorRes = function(e) {
             console.log(e);
-        }
+        };
         jQuery.ajax({
             url: url,
             type: method,

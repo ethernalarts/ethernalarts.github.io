@@ -112,18 +112,6 @@
                 margin-top: 1px;
             }
         }
-
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2a2a2a;
-            font-size: 0.95em;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
-        }
     </style>
 </head>
 
@@ -236,19 +224,40 @@
             <div class="w3-card-quote-is">
 
 
-                <!-- Get a Quote form -->
+                <!-- Express Courier Quote form -->
                 <form class="container-form" method="post">
                     <fieldset style="margin: 0 0 20px">
                         <legend>Basic Details:</legend>
                         <label>
-                            <input class="w3-light-gray" placeholder="Name (or Company):  *" name="name" type="text" required>
+                            <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name" type="text" required>
                         </label>
 
                         <label>
-                            <select style="float: right" class="w3-input w3-border-0 w3-light-gray">
-                                <option value="1" selected disabled>Gender</option>
-                                <option value="2">Male</option>
-                                <option value="2">Female</option>
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Title (Mr, Mrs, Dr. etc):  " type="text">
+                        </label>
+
+                        <!-- Marital Status -->
+                        <label>
+                            <select style="font-style: italic" class="w3-input w3-border-0 w3-light-gray">
+                                <option value="1" selected disabled>Marital Status:  *</option>
+                                <option value="2">Single</option>
+                                <option value="3">Married</option>
+                                <option value="4">Divorced</option>
+                                <option value="5">Widowed</option>
+                            </select>
+                        </label>
+
+                        <!-- Age -->
+                        <label>
+                            <select style="float: right; font-style: italic" class="w3-input w3-border-0 w3-light-gray" required>
+                                <option value="1" selected disabled>Age:  *</option>
+                                <option value="2">Below 18</option>
+                                <option value="3">18 - 30</option>
+                                <option value="4">30 - 45</option>
+                                <option value="5">45 - 55</option>
+                                <option value="6">55 - 65</option>
+                                <option value="7">65 + </option>
                             </select>
                         </label>
 
@@ -258,24 +267,19 @@
                         </label>
 
                         <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="phone"
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="phone"
                                    placeholder="Telephone:  *" type="number" required>
                         </label>
 
-                        <!-- delivery options -->
                         <label>
-                            <select class="w3-input w3-border-0 w3-light-gray">
-                                <option value="1" selected disabled>Select a delivery option</option>
-                                <option value="2">Special Service</option>
-                                <option value="2">Time Critical Service</option>
-                            </select>
+                            <input class="w3-light-gray" placeholder="Occupation:  *" name="name" type="text" required>
                         </label>
 
 
                         <!-- Date -->
                         <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Date:  " style="float: right;"
-                                   name="delivery_date" type="date" required>
+                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Self delivery? When? " style="float: right;"
+                                   name="delivery_date" type="text" onfocus="(this.type='date')" id="date" required>
                         </label>
                     </fieldset>
 
@@ -344,6 +348,18 @@
                                     <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
                                 </label>
 
+                            <!-- Pickup date -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Pickup date "
+                                       name="delivery_date" type="text" onfocus="(this.type='date')" id="d8" required>
+                            </label>
+
+                            <!-- Pickup time -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Pickup time " style="float: right"
+                                       name="delivery_date" type="text" onfocus="(this.type='time')" id="time" required>
+                            </label>
+
                             <!-- Toggle (residential address?) -->
                             <div class="sliderWrapper" style="margin: 7px 0">
                                 <span style="margin-left: 12px;">Is this a residential address?</span>
@@ -381,11 +397,9 @@
 
                     <!-- js to hide/show pickup address -->
                     <script type="text/javascript">
-
                         var btn = document.querySelector('returnAdd');
 
                         btn.addEventListener('click', toggle_visibility);
-                        btn.addEventListener('click', toggle_address);
 
                         function toggle_visibility(){
                             var e = document.getElementById('returnAdd');
@@ -404,7 +418,6 @@
             </div>
         </div>
     </div>
-
 
 
     <!-- JavaScript Full Screen Overlay Nav -->
