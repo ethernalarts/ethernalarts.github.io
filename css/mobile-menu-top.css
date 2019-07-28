@@ -4,20 +4,20 @@
     .openbtn {
         display: inline-block;
         cursor: pointer;
-        background-color: transparent;
+        background-color: firebrick;
         position: absolute;
         right: 0;
         top: 0;
-        padding: 15px;
+        padding: 15px 20px;
         color: whitesmoke;
         vertical-align: center;
         border: none;
-        height: auto;
+        height: 70px;
     }
 
     .openbtn:hover {
         color: white;
-        padding: 15px;
+        padding: 15px 20px;
         border: none;
     }
 }
@@ -143,7 +143,7 @@
     }
 
     .dropdownnav-content {
-        margin: 21px -20px;
+        margin: 19px -20px;
         display: none;
         position: absolute;
         background-color: #f1f1f1;

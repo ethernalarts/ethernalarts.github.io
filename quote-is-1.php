@@ -1,22 +1,22 @@
 <?php
-session_start(); // Session starts here.
+    session_start(); // Session starts here.
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>VLink Express Courier - Get a Quote</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
-    <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
-    <link href="css/misc.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
-    <link href="css/vlink.css" rel="stylesheet">
+    <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+    <link href="css/progressbar.css" type="text/css" rel="stylesheet">
+    <link href="./css/misc.css" type="text/css" rel="stylesheet">
+    <link href="./css/w3.css" type="text/css" rel="stylesheet">
+    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -130,7 +130,8 @@ session_start(); // Session starts here.
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i>
+                <i class="material-icons md-48">menu</i><br>
+                    <span>Menu</span>
             </button>
         </span>
 
@@ -171,13 +172,14 @@ session_start(); // Session starts here.
         <!-- Inner Container -->
         <div class="body-content">
 
-            <!-- Circles which indicates the steps of the form: -->
+            <!-- Progress circles which indicates the steps of the form: -->
             <div style="text-align:center; margin-bottom: 40px;">
                 <span class="step active"></span>
                 <span class="step"></span>
                 <span class="step"></span>
+                <span class="step"></span>
                 <span class="step"></span><br><br>
-                <span style="font: 1.25em Montserrat, sans-serif;">(Step 1 of 4)</span>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 1 of 5)</span>
             </div>
 
             <h2 id="hi">Hi. Please tell us about your Shipment.</h2>
@@ -188,7 +190,7 @@ session_start(); // Session starts here.
             <div class="w3-card-quote-is">
 
 
-                <!---- Initializing Session for errors --->
+                <!--- Initializing Session for errors --->
                 <span id="error">
                     <?php
                          if (!empty($_SESSION['error'])) {
@@ -377,6 +379,14 @@ session_start(); // Session starts here.
         }
     </script>
 
+    <!-- JavaScript to toggle return address ON/OFF -->
+    <script>
+        function toggle_visibility(returnAdd) {
+            var e = document.getElementById(returnAdd);
+            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
+        }
+    </script>
+
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
         /* Open */
@@ -428,7 +438,7 @@ session_start(); // Session starts here.
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-up"></i>
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
         </div>
     </div>
 </body>

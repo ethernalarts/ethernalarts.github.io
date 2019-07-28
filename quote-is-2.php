@@ -25,11 +25,11 @@
      // After sanitization Validation is performed.
      if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
-       // Validating Contact Field using regex.
-       if (!preg_match("/^[0-9]{10}$/", $_POST['phone'])){
-         $_SESSION['error'] = "10 digit contact number is required.";
-         header("location: quote-is-1.php");
-       }
+       // // Validating Contact Field using regex.
+       // if (!preg_match("/^[0-9]{10}$/", $_POST['phone'])){
+       //   $_SESSION['error'] = "10 digit contact number is required.";
+       //   header("location: quote-is-1.php");
+       // }
      } else {
        $_SESSION['error'] = "Invalid Email Address";
        header("location: quote-is-1.php");//redirecting to first page
@@ -119,6 +119,10 @@
 
             .container {
                 padding: 0 20px !important;
+            }
+
+            .container-checkbox {
+                text-align: center;
             }
 
             button.w3-button.w3-red-cancel {
@@ -213,8 +217,9 @@
                 <span class="step finish"></span>
                 <span class="step active"></span>
                 <span class="step"></span>
+                <span class="step"></span>
                 <span class="step"></span><br><br>
-                <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 4)</span>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 5)</span>
             </div>
 
             <h2 id="hi">Return Address</h2>
@@ -236,7 +241,7 @@
 
 
                 <!-- Return Address -->
-                    <form class="container-form" method="post" action="php/is-quoteform2.php" style="padding: 0 50px">
+                    <form class="container-form" method="post" action="quote-is-3.php" style="padding: 0 50px">
                         <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 0; display: none">
                             <legend>Return Address:</legend>
                             <!-- Full Name -->

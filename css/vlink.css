@@ -136,9 +136,9 @@
 
     header {
         background-color: rgba(14, 14, 14, 0.86);
-        padding: 20px 20px 20px 0;
+        padding: 17px 17px 17px 0;
         width: 100%;
-        height: 85px;
+        height: 80px;
         display: block;
         vertical-align: middle;
     }
@@ -148,8 +148,8 @@
     }
 
     .vlink-logo {
-        width: 250px;
-        height: 85px;
+        width: 240px;
+        height: 80px;
         padding: 0 15px 0 10px;
         position: absolute;
         top: 0;
@@ -185,6 +185,8 @@
         vertical-align: middle;
         display: inline;
         color: whitesmoke;
+        margin: 0;
+        padding: 0;
     }
 
     .navlist {
@@ -192,8 +194,7 @@
         text-align: center;
         float: right;
         vertical-align: middle;
-        display: inline-block;
-        margin: auto;
+        display: inline;
     }
 
     .navlist li {
@@ -426,25 +427,27 @@
     }
 
     .container-form input {
-        padding: 15px;
+        font-family: Verdana, Montserrat, serif;
+        padding: 14px;
         margin: 0 0 33px;
         width: 47%;
         display: inline-block;
     }
 
     .container-form select {
-        padding: 16px;
+        color: #696969;
+        font-family: Verdana, Montserrat, serif;
+        padding: 15px;
         margin: 0 0 33px;
-        font-size: 0.95em;
+        font-size: 0.9em;
         width: 47%;
-        border: none;
         display: inline-block;
-        border-bottom: 1px solid #2d2d2d;
+        border: 1px solid #afafaf;
     }
 
     .container-form textarea {
         width: 100%;
-        padding: 15px;
+        padding: 14px;
         margin: 0 0 33px;
     }
 
@@ -454,7 +457,7 @@
         font-weight: 600;
         display: inline-block;
         color: whitesmoke;
-        background-color: #414141;
+        background-color: #0f0f0f;
         padding: 10px;
     }
 
@@ -470,9 +473,10 @@
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #2a2a2a;
-        font-size: 0.95em;
+        color: #696969;
+        font-size: 0.9em;
         opacity: 1; /* Firefox */
+        font-family: Verdana, Montserrat, serif;
     }
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
         color: #2A2A2A;
@@ -481,10 +485,51 @@
         color: #2A2A2A;
     }
 
+    /* Make circles that indicate the steps of the form: */
+    .step {
+        height: 16px;
+        width: 16px;
+        margin: 0 10px;
+        background-color: royalblue;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+    }
+
+    .step.active {
+        opacity: 1;
+        background-color: #00007d;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+        background-color: limegreen;
+    }
+
     @media screen and (max-width: 925px) {
     .openbtn, .overlay {
         display: block;
     }
+
+        header {
+            background-color: rgba(14, 14, 14, 0.86);
+            padding: 17px 17px 17px 0;
+            width: 100%;
+            height: 70px;
+            display: block;
+            vertical-align: middle;
+        }
+
+        .vlink-logo {
+            width: 200px;
+            height: 70px;
+            padding: 0 15px 0 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+        }
 
     nav {
         display: none;
@@ -516,7 +561,6 @@
         }
 
         fieldset {
-            font-size: 95%;
             padding: 20px;
         }
 
@@ -560,7 +604,7 @@
         }
 
         .w3-medium {
-            font-size: 13px !important
+            font-size: 15px !important
         }
 
         .container-progressbar {

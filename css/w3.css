@@ -1520,7 +1520,7 @@ a {
     background-color: #607d8b !important
 }
 
-.w3-green, .w3-hover-green:hover {
+.w3-green {
     color: #fff !important;
     background-color: #337d33 !important;
     padding: 8px 20px;
@@ -1529,6 +1529,11 @@ a {
     font-style: normal;
     font-weight: 500;
     border-radius: 0;
+}
+
+.w3-hover-green:hover {
+    color: #fff !important;
+    background-color: #39a539 !important;
 }
 
 .w3-button.w3-green-submit {
@@ -1599,8 +1604,8 @@ a {
 }
 
  button.w3-button.w3-red-cancel {
-     color: whitesmoke !important;
-     background-color: red !important;
+     color: white !important;
+     background-color: #ff0000 !important;
      margin: 0 12px 0 6px;
      padding: 8px 20px;
      font-weight: 500;
@@ -1640,7 +1645,7 @@ button.w3-button.w3-red-cancel:hover {
     background-color: #000 !important
 }
 
-a.w3-button.w3-black-previous {
+button.w3-button.w3-black-previous {
     color: whitesmoke !important;
     background-color: #232323 !important;
     margin: 0 6px 0 12px;
@@ -1650,10 +1655,10 @@ a.w3-button.w3-black-previous {
     font-style: normal;
     font-weight: 500;
     border-radius: 0;
-    /*-webkit-appearance: button*/
+    -webkit-appearance: button
 }
 
-a.w3-button.w3-black-previous:hover {
+button.w3-button.w3-black-previous:hover {
     box-shadow: 0 8px 16px 0 #373737, 0 6px 20px 0 #373737;
 }
 
@@ -1675,8 +1680,7 @@ a.w3-button.w3-black-previous:hover {
 .w3-light-gray, .w3-hover-light-gray:hover {
     color: black !important;
     background-color: white !important;
-    border: none;
-    border-bottom: 1px solid #2d2d2d !important;
+    border: 1px solid #b8b8b8 !important;
 }
 
 .w3-quote-services {

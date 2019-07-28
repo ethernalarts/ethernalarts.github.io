@@ -18,8 +18,8 @@
 }
 .scroll {
     position: absolute;
-    right: 10px;
-    bottom: 8px;
+    right: 1px;
+    bottom: 1px;
     /*background-color: #FF3838;*/
     padding: 10px 18px;
     text-align: center;

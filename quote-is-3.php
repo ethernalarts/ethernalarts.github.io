@@ -16,7 +16,7 @@
 
      // Setting error message
      $_SESSION['error'] = "Mandatory field(s) are missing, Please fill it";
-     header("location: quote-is-1.php"); // Redirecting to first page
+     header("location: quote-is-2.php"); // Redirecting to first page
      } else {
 
      // Sanitizing email field to remove unwanted characters.
@@ -26,22 +26,21 @@
      if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
        // Validating Contact Field using regex.
-       if (!preg_match("/^[0-9]{10}$/", $_POST['phone'])){
-         $_SESSION['error'] = "10 digit contact number is required.";
-         header("location: quote-is-1.php");
-       }
+       // if (!preg_match("/^[0-9]{10}$/", $_POST['phone'])){
+       //   $_SESSION['error'] = "10 digit contact number is required.";
+       //   header("location: quote-is-1.php");
+       // }
      } else {
        $_SESSION['error'] = "Invalid Email Address";
-       header("location: quote-is-1.php");//redirecting to first page
+       header("location: quote-is-2.php");//redirecting to first page
      }
      }
     } else {
-     if (empty($_SESSION['error_page2'])) {
-     header("location: quote-is-1.php");//redirecting to first page
+     if (empty($_SESSION['error_page3'])) {
+     header("location: quote-is-2.php");//redirecting to first page
      }
     }
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -52,11 +51,11 @@
     <title>VLink Express Courier - Get a Quote</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
-    <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
-    <link href="css/misc.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
+    <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+    <link href="css/progressbar.css" type="text/css" rel="stylesheet">
+    <link href="css/misc.css" type="text/css" rel="stylesheet">
+    <link href="css/w3.css" type="text/css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
@@ -86,25 +85,11 @@
         #stateId {
             float: right;
         }
-
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
 
             .container {
                 padding: 0 30px !important;
-            }
-
-            .container-form {
-                margin: 0;
-                padding: 30px;
-            }
-
-            .container-checkbox {
-                text-align: center;
-            }
-
-            fieldset {
-                padding: 30px;
             }
         }
 
@@ -130,7 +115,7 @@
                 margin-right: 1px;
             }
 
-            button.w3-button.w3-black-previous {
+            a.w3-button.w3-black-previous {
                 margin: 12px 7px 0 0;
             }
         }
@@ -169,7 +154,8 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i>
+                <i class="material-icons md-48">menu</i><br>
+                    <span>Menu</span>
             </button>
         </span>
 
@@ -211,116 +197,109 @@
             <!-- Progress circles which indicates the steps of the form: -->
             <div style="text-align:center; margin-bottom: 40px;">
                 <span class="step finish"></span>
+                <span class="step finish"></span>
                 <span class="step active"></span>
                 <span class="step"></span>
                 <span class="step"></span><br><br>
-                <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 4)</span>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 5)</span>
             </div>
 
-            <h2 id="hi">Return Address</h2>
+            <h2 id="hi">Where is it going?</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
 
-            <!-- Container for Return Address  -->
-            <div style="padding: 40px 0 0" class="w3-card-4">
-
-                <!-- Toggle (different return address) -->
-                <div style="margin: 0 0 30px; text-align: center" class="sliderWrapper">
-                    Use a different return address?
-                    <label class="switch">
-                        <input type="checkbox" onclick="toggle_visibility('returnAdd')">
-                        <span class="slider"></span>
-                    </label>
-                </div>
+            <!-- Container for Get a Quote form  -->
+            <div class="w3-card-4">
 
 
-                <!-- Return Address -->
-                    <form class="container-form" method="post" action="php/is-quoteform2.php" style="padding: 0 50px">
-                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 0; display: none">
-                            <legend>Return Address:</legend>
-                            <!-- Full Name -->
+                <!-- Package Destination -->
+                <form class="container-form" method="post" action="quote-is-4.php" style="padding-bottom: 0">
+                    <fieldset style="margin: 0 0 20px">
+                        <legend>Shipment Destination:</legend>
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  *"
-                                       name="name_reAdd" type="text" required>
+                                       name="name" type="text" required>
                             </label>
 
-                            <!-- Contact Name -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Contact Name:  *" name="contact_name_reAdd" type="text" required>
+                                       name="contact_name" placeholder="Contact Name:  *" type="text" required>
                             </label>
 
-                            <!-- Country -->
                             <label for="countryId">
-                                <select name="country_reAdd" class="countries" id="countryId" required>
+                                <select name="country" class="countries" id="countryId" required>
                                     <option value="">Country:  *</option>
                                 </select>
                             </label>
 
-                            <!-- State -->
                             <label for="stateId">
-                                <select name="state_reAdd" class="states" id="stateId" required>
+                                <select name="state" class="states" id="stateId" required>
                                     <option value="">State:  *</option>
                                 </select>
                             </label>
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city_reAdd" class="cities" id="cityId" required>
+                                <select name="city" class="cities" id="cityId" type="select" required>
                                     <option value="">City:  *</option>
                                 </select>
                             </label>
 
-                            <!-- Zip Code -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Zip Code:  *" name="zip_code_reAdd" type="number" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
                             </label>
 
-                            <!-- Street Address -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Street Address:  *" name="street_address_reAdd" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
                             </label>
 
-                            <!-- Apartment, suite -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="apartment_suite_reAdd"
-                                       placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
                             </label>
 
-                            <!-- Department -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Department, c/o, etc.: " name="department_c/o_reAdd" type="text">
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
                             </label>
 
-                            <!-- Email -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *"
-                                       name="email_reAdd" type="email" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone: " type="number">
                             </label>
 
-                            <!-- Telephone -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       name="phone_reAdd" placeholder="Telephone:  *" type="number" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " type="email">
                             </label>
-                        </fieldset>
 
 
-                        <!-- Continue and Cancel Button -->
-                        <div class="w3-center">
-                            <div class="w3-bar">
-                                <button class="w3-button w3-medium w3-black-previous">Previous</button>
-                                <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
-                                <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                            <!-- Toggle (residential address?) -->
+                            <div class="sliderWrapper" style="margin: 7px 0">
+                                <span style="margin-left: 12px;">Is this a residential address?</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
                             </div>
-                        </div>
+                    </fieldset>
 
-                    <!-- End of form -->
-                    </form>
+                    <!-- Check Box (Email updates on shipment) -->
+                    <label class="container-checkbox" style="padding-left: 0; margin: 30px 0; font-size: 1em; cursor: initial">
+                        <p>
+                           We may use the email and/or phone number provided to update
+                           your receiver about the status of their package.
+                        </p>
+                    </label>
+
+                    <!-- Continue and Cancel Button -->
+                    <div class="w3-center">
+                        <div class="w3-bar">
+                            <button class="w3-button w3-medium w3-black-previous">Previous</button>
+                            <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
+                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                        </div>
+                    </div>
+
+                <!-- End of form -->
+                </form>
             </div>
         </div>
     </div>
@@ -332,14 +311,6 @@
             <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
         </div>
     </div>
-
-    <!-- JavaScript to toggle return address ON/OFF -->
-    <script>
-        function toggle_visibility(returnAdd) {
-            var e = document.getElementById(returnAdd);
-            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
-        }
-    </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
