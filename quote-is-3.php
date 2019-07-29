@@ -1,18 +1,18 @@
 <?php
     session_start();
-    // Checking first page values for empty,If it finds any blank field then redirected to first page.
-    if (isset($_POST['name'])){
-         if (empty($_POST['name'])
-         || empty($_POST['contact_name'])
-         || empty($_POST['country'])
-         || empty($_POST['state'])
-         || empty($_POST['city'])
-         || empty($_POST['zip_code'])
-         || empty($_POST['street_address'])
-         || empty($_POST['apartment_suite'])
-         || empty($_POST['department_c/o'])
-         || empty($_POST['phone'])
-         || empty($_POST['email'])){
+    // Checking second page values for empty,If it finds any blank field then redirected to second page.
+    if (isset($_POST['name_reAdd'])){
+         if (empty($_POST['name_reAdd'])
+         || empty($_POST['contact_name_reAdd'])
+         || empty($_POST['country_reAdd'])
+         || empty($_POST['state_reAdd'])
+         || empty($_POST['city_reAdd'])
+         || empty($_POST['zip_code_reAdd'])
+         || empty($_POST['street_address_reAdd'])
+         || empty($_POST['apartment_suite_reAdd'])
+         || empty($_POST['department_c/o_reAdd'])
+         || empty($_POST['phone_reAdd'])
+         || empty($_POST['email_reAdd'])){
 
      // Setting error message
      $_SESSION['error'] = "Mandatory field(s) are missing, Please fill it";
@@ -20,25 +20,30 @@
      } else {
 
      // Sanitizing email field to remove unwanted characters.
-     $_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+     $_POST['email'] = filter_var($_POST['email_reAdd'], FILTER_SANITIZE_EMAIL);
 
      // After sanitization Validation is performed.
-     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+     if (filter_var($_POST['email_reAdd'], FILTER_VALIDATE_EMAIL)){
 
        // Validating Contact Field using regex.
-       // if (!preg_match("/^[0-9]{10}$/", $_POST['phone'])){
-       //   $_SESSION['error'] = "10 digit contact number is required.";
-       //   header("location: quote-is-1.php");
-       // }
+     if (!preg_match("/^[0-9]{11}$/", $_POST['phone_reAdd'])){
+       $_SESSION['error'] = "11 digit contact number is required.";
+       header("location: quote-is-2.php");
+     } else {
+        // Fetching all values posted from second page and storing it in variable.
+         foreach ($_POST as $key => $value) {
+           $_SESSION['post'][$key] = $value;
+         }
+       }
      } else {
        $_SESSION['error'] = "Invalid Email Address";
        header("location: quote-is-2.php");//redirecting to first page
      }
      }
     } else {
-     if (empty($_SESSION['error_page3'])) {
-     header("location: quote-is-2.php");//redirecting to first page
-     }
+       if (empty($_SESSION['error_page3'])) {
+         header("location: quote-is-2.php");//redirecting to first page
+       }
     }
 ?>
 <!doctype html>
@@ -89,7 +94,11 @@
         @media screen and (max-width: 1200px) {
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 50px !important;
+            }
+
+            .container-checkbox {
+                text-align: justify;
             }
         }
 
@@ -103,7 +112,7 @@
             }
 
             .container {
-                padding: 0 20px !important;
+                padding: 0 30px !important;
             }
 
             button.w3-button.w3-red-cancel {
@@ -115,7 +124,7 @@
                 margin-right: 1px;
             }
 
-            a.w3-button.w3-black-previous {
+            button.w3-button.w3-black-previous {
                 margin: 12px 7px 0 0;
             }
         }
@@ -138,7 +147,7 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html" class="active">International Shipping</a>
+                                <a href="quote-is-1.php" class="active">International Shipping</a>
                                 <a href="quote-ec.html">Local Shipping</a>
                                 <a href="quote-ss.html">Secure Storage</a>
                             </div>
@@ -154,8 +163,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -177,7 +185,7 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0" class="active">International Shipping</a>
+                        <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
                         <a href="quote-ec.html">Express Courier</a>
                         <a href="quote-ss.html">Secure Storage</a>
                     </div>
@@ -204,35 +212,39 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 5)</span>
             </div>
 
-            <h2 id="hi">Where is it going?</h2>
+            <h2 id="hi">Halfway done. Where is it going?</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
 
-            <!-- Container for Get a Quote form  -->
+            <!-- Container for International Shipping Quote form  -->
             <div class="w3-card-4">
 
 
-                <!-- Package Destination -->
+                <!-- Shipment Destination -->
                 <form class="container-form" method="post" action="quote-is-4.php" style="padding-bottom: 0">
                     <fieldset style="margin: 0 0 20px">
                         <legend>Shipment Destination:</legend>
+                            <!-- Full Name -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  *"
                                        name="name" type="text" required>
                             </label>
 
+                            <!-- Contact Person -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
                                        name="contact_name" placeholder="Contact Name:  *" type="text" required>
                             </label>
 
+                            <!-- Country -->
                             <label for="countryId">
                                 <select name="country" class="countries" id="countryId" required>
                                     <option value="">Country:  *</option>
                                 </select>
                             </label>
 
+                            <!-- State -->
                             <label for="stateId">
                                 <select name="state" class="states" id="stateId" required>
                                     <option value="">State:  *</option>
@@ -246,26 +258,32 @@
                                 </select>
                             </label>
 
+                            <!-- Post Code -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
                             </label>
 
+                            <!-- Street Address -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
                             </label>
 
+                            <!-- Apartment, unit, suite -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
                             </label>
 
+                            <!-- Department -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
                             </label>
 
+                            <!-- Telephone -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone: " type="number">
                             </label>
 
+                            <!-- Email -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " type="email">
                             </label>
@@ -281,7 +299,7 @@
                             </div>
                     </fieldset>
 
-                    <!-- Check Box (Email updates on shipment) -->
+                    <!-- Email updates to recipient on shipment status -->
                     <label class="container-checkbox" style="padding-left: 0; margin: 30px 0; font-size: 1em; cursor: initial">
                         <p>
                            We may use the email and/or phone number provided to update
@@ -289,7 +307,7 @@
                         </p>
                     </label>
 
-                    <!-- Continue and Cancel Button -->
+                    <!-- Previous, Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
                             <button class="w3-button w3-medium w3-black-previous">Previous</button>
@@ -308,7 +326,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 

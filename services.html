@@ -14,6 +14,7 @@
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
 
@@ -59,21 +60,35 @@
             .w3-center-services-h2 {
                 width: 70%;
             }
+
+            .w3-modal {
+                z-index: 3;
+                display: none;
+                padding: 85px 40px 0;
+                width: 100%;
+            }
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 900px) {
 
             .container {
-                padding: 0 20px;
+                padding: 0 10px;
             }
 
             .w3-center-services-h2 {
-                width: 80%;
+                width: 70%;
             }
 
             .w3-col.s4-services {
-                width: 49.99999%
+                width: 50%
+            }
+
+            .w3-modal {
+                z-index: 3;
+                display: none;
+                padding: 85px 40px 0;
+                width: 100%;
             }
         }
 
@@ -85,7 +100,7 @@
             }
 
             .w3-center-services-h2 {
-                width: 90%;
+                width: 70%;
             }
 
             .w3-col.s4-services {
@@ -93,16 +108,8 @@
                 margin: 0 auto 40px;
             }
 
-            .parallax {
-                min-height: 400px;
-            }
-
             .subheader-h2 {
                 margin: 200px auto 0;
-            }
-
-            .vlink-logo {
-                width: 200px;
             }
         }
     </style>
@@ -124,7 +131,7 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html">International Shipping</a>
+                                <a href="quote-is-1.php">International Shipping</a>
                                 <a href="quote-ec.html">Express Courier</a>
                                 <a href="quote-ss.html">Secure Storage</a>
                             </div>
@@ -140,16 +147,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
-            </button>
-        </span>
-
-        <!-- Use any element to open/show the overlay navigation menu -->
-        <span>
-            <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -207,7 +205,7 @@
                             </div>
                             <br>
                             <div class="w3-container w3-light-grey w3-padding-16">
-                                <a href="quote-is-1.html" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
+                                <a href="quote-is-1.php" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
                             </div>
                         </div>
                     </div>
@@ -521,7 +519,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 

@@ -41,11 +41,6 @@
             margin: 40px 0 0;
         }
 
-        /* Hide all steps by default: */
-        .tab {
-            display: none;
-        }
-
         .countries, .states, .cities {
             background-color: white;
             border-bottom: 1px solid #878787;
@@ -130,8 +125,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -438,7 +432,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 </body>

@@ -25,23 +25,27 @@
      // After sanitization Validation is performed.
      if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
-       // // Validating Contact Field using regex.
-       // if (!preg_match("/^[0-9]{10}$/", $_POST['phone'])){
-       //   $_SESSION['error'] = "10 digit contact number is required.";
-       //   header("location: quote-is-1.php");
-       // }
+       // Validating Contact Field using regex.
+     if (!preg_match("/^[0-9]{11}$/", $_POST['phone'])){
+       $_SESSION['error'] = "11 digit contact number is required.";
+       header("location: quote-is-1.php");
+     } else {
+        // Fetching all values posted from first page and storing it in variable.
+         foreach ($_POST as $key => $value) {
+           $_SESSION['post'][$key] = $value;
+         }
+       }
      } else {
        $_SESSION['error'] = "Invalid Email Address";
        header("location: quote-is-1.php");//redirecting to first page
      }
      }
     } else {
-     if (empty($_SESSION['error_page2'])) {
-     header("location: quote-is-1.php");//redirecting to first page
-     }
+       if (empty($_SESSION['error_page2'])) {
+         header("location: quote-is-1.php");//redirecting to first page
+       }
     }
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -157,7 +161,7 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html" class="active">International Shipping</a>
+                                <a href="quote-is-1.php" class="active">International Shipping</a>
                                 <a href="quote-ec.html">Local Shipping</a>
                                 <a href="quote-ss.html">Secure Storage</a>
                             </div>
@@ -195,7 +199,7 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0" class="active">International Shipping</a>
+                        <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
                         <a href="quote-ec.html">Express Courier</a>
                         <a href="quote-ss.html">Secure Storage</a>
                     </div>
@@ -222,7 +226,7 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 5)</span>
             </div>
 
-            <h2 id="hi">Return Address</h2>
+            <h2 id="hi">Give us a return address</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -334,7 +338,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 
