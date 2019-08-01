@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -112,18 +113,6 @@
                 margin-top: 1px;
             }
         }
-
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2a2a2a;
-            font-size: 0.95em;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
-        }
     </style>
 </head>
 
@@ -143,7 +132,7 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html">International Shipping</a>
+                                <a href="quote-is-1.php">International Shipping</a>
                                 <a href="quote-ec.html" class="active">Local Shipping</a>
                                 <a href="quote-ss.html">Secure Storage</a>
                             </div>
@@ -159,8 +148,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -183,7 +171,7 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
                         <a href="quote-ec.html" class="active">Express Courier</a>
                         <a href="#">Secure Storage</a>
                     </div>
@@ -201,33 +189,17 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-            <!-- Progress Bar -->
-            <div class="container-progressbar">
-                <label class="label">5%
-                    <input type="radio" class="radio" name="progress" value="five">
-                </label>
+          <!-- Progress circles which indicates the steps of the form: -->
+          <div style="text-align:center; margin-bottom: 40px;">
+              <span class="step finish"></span>
+              <span class="step finish"></span>
+              <span class="step finish"></span>
+              <span class="step active"></span>
+              <span class="step"></span><br><br>
+              <span style="font: 1.25em Montserrat, sans-serif;">(Step 4 of 5)</span>
+          </div>
 
-                <label class="label">25%
-                    <input type="radio" class="radio" name="progress" value="twentyfive">
-                </label>
-
-                <label class="label">50%
-                    <input type="radio" class="radio" name="progress" value="fifty">
-                </label>
-
-                <input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive" checked>
-                <label for="seventyfive" class="label">75%</label>
-
-                <label class="label">100%
-                    <input type="radio" class="radio" name="progress" value="onehundred">
-                </label>
-
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
-            </div>
-
-            <h2 id="hi">Please review your details</h2>
+            <h2 id="hi">Package Destination</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -285,7 +257,7 @@
                         </fieldset>
                     </form>
 
-                    
+
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">

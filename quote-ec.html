@@ -42,8 +42,7 @@
             padding: 15px;
             margin: 0 0 33px;
             width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
+            border: 1px solid #afafaf;
         }
 
         .countries, .states, .cities {
@@ -58,10 +57,6 @@
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .container {
-                font-size: 95%;
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -69,23 +64,12 @@
             }
 
             .container {
-                padding: 0 90px !important;
-            }
-
-            .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
-                width: 47%;
+                padding: 0 40px !important;
             }
         }
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-
-            .container {
-                font-size: 90%;
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -93,18 +77,14 @@
             }
 
             .container {
-                padding: 0 50px !important;
+                padding: 0 30px !important;
             }
 
             .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
                 width: 100%;
             }
 
             .container-form select {
-                padding: 10px;
-                margin: 0 0 33px;
                 width: 100%;
             }
 
@@ -131,9 +111,9 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html">International Shipping</a>
-                                <a href="quote-ec.html" class="active">Express Courier</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php" class="active">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -147,8 +127,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -171,9 +150,9 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.html" class="active">Express Courier</a>
-                        <a href="#">Secure Storage</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php" class="active">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>
@@ -189,31 +168,14 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-            <!-- Progress Bar -->
-            <div class="container-progressbar">
-
-                <input type="radio" class="radio" name="progress" value="five" id="five" checked>
-                <label for="five" class="label">5%</label>
-
-                <label class="label">25%
-                    <input type="radio" class="radio" name="progress" value="twentyfive">
-                </label>
-
-                <label class="label">50%
-                    <input type="radio" class="radio" name="progress" value="fifty">
-                </label>
-
-                <label class="label">75%
-                    <input type="radio" class="radio" name="progress" value="seventyfive">
-                </label>
-
-                <label class="label">100%
-                    <input type="radio" class="radio" name="progress" value="onehundred">
-                </label>
-
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
+            <!-- Progress circles which indicates the steps of the form: -->
+            <div style="text-align:center; margin-bottom: 40px;">
+                <span class="step active"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span><br><br>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 1 of 5)</span>
             </div>
 
             <h2 id="hi">Hi. Please tell us about your Package</h2>
@@ -225,21 +187,24 @@
 
 
                 <!-- Express Courier Quote form -->
-                <form class="container-form" method="post">
-                    <fieldset style="margin: 0 0 20px">
+                <form class="container-form" style="padding-bottom: 0" action="quote-ec-2.php" method="post">
+                    <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
                         <legend>Basic Details:</legend>
+
+                        <!-- Full Name -->
                         <label>
                             <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name" type="text" required>
                         </label>
 
+                        <!-- Title -->
                         <label>
                             <input style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                   placeholder="Title (Mr, Mrs, Dr. etc):  " type="text">
+                                   name="title" placeholder="Title (Mr, Mrs, Dr. etc):  " type="text">
                         </label>
 
                         <!-- Marital Status -->
                         <label>
-                            <select style="font-style: italic" class="w3-input w3-border-0 w3-light-gray">
+                            <select name="marital_status" class="w3-input w3-border-0 w3-light-gray">
                                 <option value="1" selected disabled>Marital Status:  *</option>
                                 <option value="2">Single</option>
                                 <option value="3">Married</option>
@@ -250,7 +215,7 @@
 
                         <!-- Age -->
                         <label>
-                            <select style="float: right; font-style: italic" class="w3-input w3-border-0 w3-light-gray" required>
+                            <select name="age" style="float: right;" class="w3-input w3-border-0 w3-light-gray" required>
                                 <option value="1" selected disabled>Age:  *</option>
                                 <option value="2">Below 18</option>
                                 <option value="3">18 - 30</option>
@@ -261,25 +226,21 @@
                             </select>
                         </label>
 
+                        <!-- Email -->
                         <label>
                             <input class="w3-input w3-border-0 w3-light-gray" name="email"
                                    placeholder="Email:  *" type="email" required>
                         </label>
 
+                        <!-- Telephone -->
                         <label>
                             <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="phone"
                                    placeholder="Telephone:  *" type="number" required>
                         </label>
 
+                        <!-- Occupation -->
                         <label>
-                            <input class="w3-light-gray" placeholder="Occupation:  *" name="name" type="text" required>
-                        </label>
-
-
-                        <!-- Date -->
-                        <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Self delivery? When? " style="float: right;"
-                                   name="delivery_date" type="text" onfocus="(this.type='date')" id="date" required>
+                            <input style="width: 100%" class="w3-light-gray" placeholder="Occupation:  *" name="name" type="text" required>
                         </label>
                     </fieldset>
 
@@ -292,18 +253,7 @@
                     </label>
 
 
-                    <!-- Toggle (pickup address) -->
-                    <div class="sliderWrapper">
-                        Are you bringing this package to us?
-                          <label class="switch">
-                             <input type="checkbox" onclick="toggle_visibility('returnAdd')">
-                             <span class="slider"></span>
-                          </label>
-                    </div>
-
-
                     <!-- Pickup Address -->
-                    <form class="container-form">
                         <fieldset id="returnAdd" style="display: block">
                             <legend>Pickup Address:</legend>
                                 <label>
@@ -372,8 +322,8 @@
 
 
                         <!-- Contact Address to send package to -->
-                        <fieldset id="contactAddress" style="display: none; margin: 40px 0 0">
-                            <legend>Please bring package to this address</legend>
+                        <fieldset id="contactAddress" style="display: block; margin: 60px 0 40px">
+                            <legend>If convenient, you could bring the package to us</legend>
                             <div >
                                 <p class="w3-center">
                                     No. 3M, Microkatu, 70210<br>
@@ -382,36 +332,15 @@
                                 </p>
                             </div>
                         </fieldset>
-                    </form>
 
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <a href="quote-ec-2.html" class="w3-button w3-medium w3-green-continue">
-                                Continue  <i class="fa fa-chevron-right" style="margin-top: 3px"></i></a>
-                            <button type="button" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
+                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">Next</button>
+                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                         </div>
                     </div>
-
-
-                    <!-- js to hide/show pickup address -->
-                    <script type="text/javascript">
-                        var btn = document.querySelector('returnAdd');
-
-                        btn.addEventListener('click', toggle_visibility);
-
-                        function toggle_visibility(){
-                            var e = document.getElementById('returnAdd');
-                            e.style.display = ((e.style.display !== 'block') ?  'block' : 'none');
-
-                            var e1 = document.getElementById('contactAddress');
-                            e1.style.display = ((e.style.display !== 'block') ?
-                                (e1.style.display = 'block')
-                                :
-                                (e1.style.display = 'none'));
-                        }
-                    </script>
 
                 <!-- End of form -->
                 </form>
@@ -471,7 +400,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 </body>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    // Checking second page values for empty,If it finds any blank field then redirected to second page.
+    // Checking third page values for empty,If it finds any blank field then redirected to third page.
     if (isset($_POST['name_dest'])){
          if (empty($_POST['name_dest'])
          || empty($_POST['contact_name_dest'])
@@ -16,33 +16,33 @@
 
      // Setting error message
      $_SESSION['error'] = "Mandatory field(s) are missing, Please fill it";
-     header("location: quote-is-3.php"); // Redirecting to first page
+     header("location: quote-is-3.php"); // Redirecting to third page
      } else {
 
      // Sanitizing email field to remove unwanted characters.
-     $_POST['email'] = filter_var($_POST['email_reAdd'], FILTER_SANITIZE_EMAIL);
+     $_POST['email'] = filter_var($_POST['email_dest'], FILTER_SANITIZE_EMAIL);
 
      // After sanitization Validation is performed.
-     if (filter_var($_POST['email_reAdd'], FILTER_VALIDATE_EMAIL)){
+     if (filter_var($_POST['email_dest'], FILTER_VALIDATE_EMAIL)){
 
      // Validating Contact Field using regex.
-     if (!preg_match("/^[0-9]{11}$/", $_POST['phone_reAdd'])){
+     if (!preg_match("/^[0-9]{11}$/", $_POST['phone_dest'])){
        $_SESSION['error'] = "11 digit contact number is required.";
        header("location: quote-is-3.php");
      } else {
-        // Fetching all values posted from second page and storing it in variable.
+        // Fetching all values posted from third page and storing it in variable.
          foreach ($_POST as $key => $value) {
            $_SESSION['post'][$key] = $value;
          }
        }
      } else {
        $_SESSION['error'] = "Invalid Email Address";
-       header("location: quote-is-3.php");//redirecting to first page
+       header("location: quote-is-3.php");//redirecting to third page
      }
      }
     } else {
        if (empty($_SESSION['error_page4'])) {
-         header("location: quote-is-3.php");//redirecting to first page
+         header("location: quote-is-3.php");//redirecting to third page
        }
     }
 ?>
@@ -89,12 +89,6 @@
 
             .container {
                 padding: 0 90px !important;
-            }
-
-            .container-form input {
-                padding: 10px;
-                margin: 0 0 33px;
-                width: 47%;
             }
         }
 
@@ -149,7 +143,7 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html" class="active">International Shipping</a>
+                                <a href="quote-is-1.php" class="active">International Shipping</a>
                                 <a href="quote-ec.html">Express Courier</a>
                                 <a href="quote-ss.html">Secure Storage</a>
                             </div>
@@ -187,7 +181,7 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0" class="active">International Shipping</a>
+                        <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
                         <a href="quote-ec.html">Express Courier</a>
                         <a href="quote-ss.html">Secure Storage</a>
                     </div>
@@ -215,17 +209,17 @@
               <span style="font: 1.25em Montserrat, sans-serif;">(Step 4 of 5)</span>
           </div>
 
-            <h2 id="hi">Almost done. Package Details</h2>
+            <h2 id="hi">Almost done. Package Description</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
             <!-- Container -->
             <div class="w3-card-4">
 
-                <!-- Package Dimensions -->
+                <!-- Shipment Dimensions -->
                 <form class="container-form" style="padding-bottom: 0">
                     <fieldset style="margin: 0">
-                        <legend>Package Dimensions:</legend>
+                        <legend>Shipment Details:</legend>
                             <!-- Weight -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (lbs):  *"
@@ -257,22 +251,22 @@
                             </label>
 
                             <!-- Package type -->
-                            <label>
-                                <select style="float: right" name="shipment_type" class="w3-input w3-border-0 w3-light-gray">
-                                    <option value="1" selected disabled>Package type  *</option>
-                                    <option value="2">Luggage</option>
-                                    <option value="3">Jewellery</option>
-                                    <option value="4">Electronic</option>
-                                    <option value="5">Document</option>
-                                    <option value="6">Battery</option>
-                                    <option value="7">Machine Parts</option>
-                                    <option value="8">Other</option>
-                                </select>
-                            </label>
+                                <label>
+                                    <select style="float: right" name="package_type" class="w3-input w3-border-0 w3-light-gray">
+                                        <option value="1" selected disabled>Package type  *</option>
+                                        <option value="2">Luggage</option>
+                                        <option value="3">Jewellery</option>
+                                        <option value="4">Electronic</option>
+                                        <option value="5">Document</option>
+                                        <option value="6">Battery</option>
+                                        <option value="7">Machine Parts</option>
+                                        <option value="8">Other</option>
+                                    </select>
+                                </label>
 
-                            <!-- Toggle (Oversize package) -->
+                            <!-- Toggle (Oversize Shipment) -->
                             <div class="sliderWrapper" style="margin: 7px 0">
-                                <span style="margin-left: 3px">Oversized Package (+$)</span>
+                                <span style="margin-left: 11px">Oversized Package (+$)</span>
                                 <label class="switch">
                                     <input type="checkbox" onclick="toggle_visibility('oversizePackage')">
                                     <span class="slider"></span>
@@ -280,7 +274,7 @@
                             </div>
 
 
-                            <!-- oversize package options -->
+                            <!-- oversize Shipment options -->
                             <label id="oversizePackage" style="display: none; margin: 20px 0 0">
                                 <select class="w3-input w3-border-0 w3-light-gray">
                                     <option value="1" selected disabled>Select a packaging option</option>

@@ -109,9 +109,9 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html" class="active">International Shipping</a>
-                                <a href="quote-ec.html">Express Courier</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-is-1.php" class="active">International Shipping</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -148,9 +148,9 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.html">Express Courier</a>
-                        <a href="quote-ss.html">Secure Storage</a>
+                        <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>

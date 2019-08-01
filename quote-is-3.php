@@ -25,7 +25,7 @@
      // After sanitization Validation is performed.
      if (filter_var($_POST['email_reAdd'], FILTER_VALIDATE_EMAIL)){
 
-       // Validating Contact Field using regex.
+     // Validating Contact Field using regex.
      if (!preg_match("/^[0-9]{11}$/", $_POST['phone_reAdd'])){
        $_SESSION['error'] = "11 digit contact number is required.";
        header("location: quote-is-2.php");
@@ -228,64 +228,69 @@
                             <!-- Full Name -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  *"
-                                       name="name" type="text" required>
+                                       name="name_dest" type="text" required>
                             </label>
 
                             <!-- Contact Person -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       name="contact_name" placeholder="Contact Name:  *" type="text" required>
+                                       name="contact_name_dest" placeholder="Contact Name:  *" type="text" required>
                             </label>
 
                             <!-- Country -->
                             <label for="countryId">
-                                <select name="country" class="countries" id="countryId" required>
+                                <select name="country_dest" class="countries" id="countryId" required>
                                     <option value="">Country:  *</option>
                                 </select>
                             </label>
 
                             <!-- State -->
                             <label for="stateId">
-                                <select name="state" class="states" id="stateId" required>
+                                <select name="state_dest" class="states" id="stateId" required>
                                     <option value="">State:  *</option>
                                 </select>
                             </label>
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city" class="cities" id="cityId" type="select" required>
+                                <select name="city_dest" class="cities" id="cityId" type="select" required>
                                     <option value="">City:  *</option>
                                 </select>
                             </label>
 
                             <!-- Post Code -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: " type="number">
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: "
+                                name="post_code_dest"type="number">
                             </label>
 
                             <!-- Street Address -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
+                                name="street_address_dest"type="text" required>
                             </label>
 
                             <!-- Apartment, unit, suite -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *"
+                                name="apartment_suite_dest"type="text" required>
                             </label>
 
                             <!-- Department -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: "
+                                name="department_c/o_dest"type="text">
                             </label>
 
                             <!-- Telephone -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone: " type="number">
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone: "
+                                name="phone_dest"type="number">
                             </label>
 
                             <!-- Email -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " type="email">
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " name="email_dest" type="email">
                             </label>
 
 
