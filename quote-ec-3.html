@@ -1,3 +1,13 @@
+<?php
+    $_SESSION['weight'] = $_POST['weight'];
+    $_SESSION['length'] = $_POST['length'];
+    $_SESSION['width'] = $_POST['width'];
+    $_SESSION['height'] = $_POST['height'];
+    $_SESSION['worth'] = $_POST['worth'];
+    $_SESSION['delivery_options'] = $_POST['delivery_options'];
+    $_SESSION['package_description'] = $_POST['package_description'];
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote</title>
+    <title>VLink Express Courier - Get a Quote (Express Courier - Package Destination)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -34,16 +44,15 @@
             background-image: none;
         }
 
-        #returnAdd {
-            margin: 40px 0 0;
+        #stateId {
+            float: right;
         }
 
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
             width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
+            border: 1px solid #afafaf;
         }
 
         .countries, .states, .cities {
@@ -52,16 +61,8 @@
             font-size: 0.95em;
         }
 
-        #stateId {
-            float: right;
-        }
-
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .container {
-                font-size: 95%;
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -71,21 +72,10 @@
             .container {
                 padding: 0 90px !important;
             }
-
-            .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
-                width: 47%;
-            }
         }
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-
-            .container {
-                font-size: 90%;
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -93,36 +83,16 @@
             }
 
             .container {
-                padding: 0 50px !important;
+                padding: 0 30px !important;
             }
 
-            .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
-                width: 100%;
-            }
-
-            .container-form select {
-                padding: 10px;
-                margin: 0 0 33px;
+            .container-form input, .container-form select{
                 width: 100%;
             }
 
             button.w3-button.w3-red-cancel {
                 margin-top: 1px;
             }
-        }
-
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2a2a2a;
-            font-size: 0.95em;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
         }
     </style>
 </head>
@@ -201,30 +171,14 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-            <!-- Progress Bar -->
-            <div class="container-progressbar">
-                <label class="label">5%
-                    <input type="radio" class="radio" name="progress" value="five">
-                </label>
-
-                <label class="label">25%
-                    <input type="radio" class="radio" name="progress" value="twentyfive">
-                </label>
-
-                <input type="radio" class="radio" name="progress" value="fifty" id="fifty" checked>
-                <label for="fifty" class="label">50%</label>
-
-                <label class="label">75%
-                    <input type="radio" class="radio" name="progress" value="seventyfive">
-                </label>
-
-                <label class="label">100%
-                    <input type="radio" class="radio" name="progress" value="onehundred">
-                </label>
-
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
+            <!-- Progress circles which indicates the steps of the form: -->
+            <div style="text-align:center; margin-bottom: 40px;">
+                <span class="step finish"></span>
+                <span class="step finish"></span>
+                <span class="step active"></span>
+                <span class="step"></span>
+                <span class="step"></span><br><br>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 5)</span>
             </div>
 
             <h2 id="hi">Where is it going?</h2>
@@ -234,95 +188,94 @@
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
 
-                <!-- Get a Quote form -->
-                <form class="container-form" method="post">
+                <!-- Package Destination -->
+                <form class="container-form" method="post" action="quote-ec-4.php" style="padding-bottom: 0">
+                    <fieldset id="returnAdd" style="margin: 0 0 30px">
+                         <legend>Package Destination:</legend>
 
-                    <!-- Package Destination -->
-                    <form class="container-form">
-                        <fieldset style="margin: 0">
-                            <legend>Package Destination:</legend>
+                            <!-- Contact Name -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Contact's Name:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Contact's Name:  *"
+                                       name="contact_name_dest" type="text" required>
                             </label>
 
+                            <!-- Contact's Phone Number -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact's Phone Number:  *" type="number" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact's Phone Number:  *"
+                                       name="contact_phone_dest" type="number" required>
                             </label>
 
+                            <!-- Country (Finland) -->
                             <label>
                                 <input name="country" class="countries" value="Finland" disabled>
                             </label>
 
                             <input type="hidden" name="country" id="countryId" value="FI"/>
 
+                            <!-- State -->
                             <label for="stateId">
                                 <select name="state" class="states order-alpha" id="stateId" required>
                                     <option value="">State:  *</option>
                                 </select>
                             </label>
 
+                            <!-- City -->
                             <label for="cityId">
                                 <select name="city" class="cities order-alpha" id="cityId" required>
                                     <option value="">City:  *</option>
                                 </select>
                             </label>
 
+                            <!-- Zip Code -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *"
+                                       name="zip_code_dest" type="number" required>
                             </label>
 
+                            <!-- Street Address -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
+                                       name="street_address_dest" type="text" required>
                             </label>
 
+                            <!-- Apartment, Suite, Unit -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *"
+                                       name="apartment_dest" type="text" required>
                             </label>
 
+                            <!-- Department -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
+                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: "
+                                       name="department_dest" type="text">
                             </label>
+
+                            <!-- Toggle (residential address?) -->
+                            <div class="sliderWrapper" style="margin: 7px 0">
+                                <span style="margin-left: 12px;">Is this a residential address?</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="residential_add_dest">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
                         </fieldset>
-                    </form>
-
-                    
-                    <!-- Continue and Cancel Button -->
-                    <div class="w3-center">
-                        <div class="w3-bar">
-                            <a href="quote-ec-2.html" class="w3-button w3-medium w3-black-previous"><i class="fa fa-chevron-left"></i>  Back</a>
-                            <a href="quote-ec-4.html" class="w3-button w3-medium w3-green-continue">
-                                Continue  <i class="fa fa-chevron-right" style="margin-top: 3px"></i></a>
-                            <button type="button" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
-                        </div>
-                    </div>
 
 
-                    <!-- js to hide/show pickup address -->
-                    <script type="text/javascript">
-
-                        var btn = document.querySelector('returnAdd');
-
-                        btn.addEventListener('click', toggle_visibility);
-                        btn.addEventListener('click', toggle_address);
-
-                        function toggle_visibility(){
-                            var e = document.getElementById('returnAdd');
-                            e.style.display = ((e.style.display !== 'block') ?  'block' : 'none');
-
-                            var e1 = document.getElementById('contactAddress');
-                            e1.style.display = ((e.style.display !== 'block') ?
-                                (e1.style.display = 'block')
-                                :
-                                (e1.style.display = 'none'));
-                        }
-                    </script>
+                            <!-- Continue and Cancel Button -->
+                            <div class="w3-center">
+                                <div class="w3-bar">
+                                    <button class="w3-button w3-medium w3-black-previous">Previous</button>
+                                    <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">
+                                        Next</button>
+                                    <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                                </div>
+                            </div>
 
                 <!-- End of form -->
                 </form>
             </div>
         </div>
     </div>
-
 
 
     <!-- JavaScript Full Screen Overlay Nav -->
@@ -376,7 +329,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 </body>

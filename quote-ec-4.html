@@ -1,3 +1,15 @@
+<?php
+    $_SESSION['contact_name_dest'] = $_POST['contact_name_dest'];
+    $_SESSION['contact_phone_dest'] = $_POST['contact_phone_dest'];
+    $_SESSION['country'] = $_POST['country'];
+    $_SESSION['state'] = $_POST['state'];
+    $_SESSION['city'] = $_POST['city'];
+    $_SESSION['zip_code_dest'] = $_POST['zip_code_dest'];
+    $_SESSION['street_address_dest'] = $_POST['street_address_dest'];
+    $_SESSION['apartment_dest'] = $_POST['apartment_dest'];
+    $_SESSION['department_dest'] = $_POST['department_dest'];
+    $_SESSION['residential_add_dest'] = $_POST['residential_add_dest'];
+?>
 
 <!doctype html>
 <html lang="en">
@@ -6,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote</title>
+    <title>VLink Express Courier - Get a Quote (Express Courier - Review Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -35,10 +47,6 @@
             background-image: none;
         }
 
-        #returnAdd {
-            margin: 40px 0 0;
-        }
-
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
@@ -47,22 +55,8 @@
             border-bottom: 1px solid #2d2d2d;
         }
 
-        .countries, .states, .cities {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
-        }
-
-        #stateId {
-            float: right;
-        }
-
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .container {
-                font-size: 95%;
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -70,23 +64,12 @@
             }
 
             .container {
-                padding: 0 90px !important;
-            }
-
-            .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
-                width: 47%;
+                padding: 0 40px !important;
             }
         }
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-
-            .container {
-                font-size: 90%;
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -97,15 +80,7 @@
                 padding: 0 50px !important;
             }
 
-            .container-form input {
-                padding: 15px;
-                margin: 0 0 33px;
-                width: 100%;
-            }
-
-            .container-form select {
-                padding: 10px;
-                margin: 0 0 33px;
+            .container-form input, .container-form select {
                 width: 100%;
             }
 
@@ -133,8 +108,8 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.html" class="active">Local Shipping</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-ec.php" class="active">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -172,8 +147,8 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.html" class="active">Express Courier</a>
-                        <a href="#">Secure Storage</a>
+                        <a href="quote-ec.php" class="active">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>
@@ -199,7 +174,7 @@
               <span style="font: 1.25em Montserrat, sans-serif;">(Step 4 of 5)</span>
           </div>
 
-            <h2 id="hi">Package Destination</h2>
+            <h2 id="hi">Please review your details</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -208,94 +183,47 @@
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post">
+                    <fieldset>
+                        <legend>Package Origin</legend>
+                            <fieldset>
+                                <li>
+                                    Basic Details:<br>
+                                    <?php echo $_SESSION['name'] ?><br>
+                                    <?php echo $_SESSION['title'] ?><br>
+                                    <?php echo $_SESSION['marital_status'] ?><br>
+                                    <?php echo $_SESSION['age'] ?><br>
+                                    <?php echo $_SESSION['email'] ?><br>
+                                    <?php echo $_SESSION['phone'] ?><br>
+                                    <?php echo $_SESSION['occupation'] ?><br>
 
-                    <!-- Package Destination -->
-                    <form class="container-form">
-                        <fieldset style="margin: 0">
-                            <legend>Package Destination:</legend>
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Contact's Name:  *" type="text" required>
-                            </label>
+                                    Pickup Address:<br>
+                                    <?php echo $_SESSION['contact_name'] ?><br>
+                                    <?php echo $_SESSION['contact_phone'] ?><br>
+                                </li>
 
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Contact's Phone Number:  *" type="number" required>
-                            </label>
 
-                            <label>
-                                <input name="country" class="countries" value="Finland" disabled>
-                            </label>
-
-                            <input type="hidden" name="country" id="countryId" value="FI"/>
-
-                            <label for="stateId">
-                                <select name="state" class="states order-alpha" id="stateId" required>
-                                    <option value="">State:  *</option>
-                                </select>
-                            </label>
-
-                            <label for="cityId">
-                                <select name="city" class="cities order-alpha" id="cityId" required>
-                                    <option value="">City:  *</option>
-                                </select>
-                            </label>
-
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Zip Code:  *" type="number" required>
-                            </label>
-
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *" type="text" required>
-                            </label>
-
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
-                            </label>
-
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: " type="text">
-                            </label>
-                        </fieldset>
-                    </form>
+                                <li>Page 2: <?php echo $_SESSION['contact_name_dest'] ?></li>
+                                <li>Page 3: <?php echo $_SESSION['contact_phone_dest'] ?></li>
+                            </fieldset>
+                    </fieldset>
 
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <a href="quote-ec-3.html" class="w3-button w3-medium w3-black-previous"><i class="fa fa-chevron-left"></i>  Back</a>
-                            <a href="quote-ec-final.html" class="w3-button w3-medium w3-green-continue">
-                                Continue  <i class="fa fa-chevron-right" style="margin-top: 3px"></i></a>
-                            <button type="button" class="w3-button w3-medium w3-red-cancel">Cancel Shipment</button>
+                            <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
+                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">
+                                Submit</button>
+                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
                         </div>
                     </div>
 
-
-                    <!-- js to hide/show pickup address -->
-                    <script type="text/javascript">
-
-                        var btn = document.querySelector('returnAdd');
-
-                        btn.addEventListener('click', toggle_visibility);
-                        btn.addEventListener('click', toggle_address);
-
-                        function toggle_visibility(){
-                            var e = document.getElementById('returnAdd');
-                            e.style.display = ((e.style.display !== 'block') ?  'block' : 'none');
-
-                            var e1 = document.getElementById('contactAddress');
-                            e1.style.display = ((e.style.display !== 'block') ?
-                                (e1.style.display = 'block')
-                                :
-                                (e1.style.display = 'none'));
-                        }
-                    </script>
-
-                <!-- End of form -->
+                    <!-- End of form -->
                 </form>
+
             </div>
         </div>
     </div>
-
-
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
@@ -348,7 +276,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 </body>

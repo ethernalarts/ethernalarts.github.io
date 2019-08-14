@@ -29,7 +29,8 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     z-index: 99;
-    background-color: rgba(33, 150, 243, 0.51);
+    background-color: #2187e2;
+    color: white;
     border-radius: 50%;
 }
 .scroll:hover {

@@ -1,51 +1,31 @@
 <?php
+    //start the session
     session_start();
-    // Checking second page values for empty,If it finds any blank field then redirected to second page.
-    if (isset($_POST['name_reAdd'])){
-         if (empty($_POST['name_reAdd'])
-         || empty($_POST['contact_name_reAdd'])
-         || empty($_POST['country_reAdd'])
-         || empty($_POST['state_reAdd'])
-         || empty($_POST['city_reAdd'])
-         || empty($_POST['zip_code_reAdd'])
-         || empty($_POST['street_address_reAdd'])
-         || empty($_POST['apartment_suite_reAdd'])
-         || empty($_POST['department_c/o_reAdd'])
-         || empty($_POST['phone_reAdd'])
-         || empty($_POST['email_reAdd'])){
 
-     // Setting error message
-     $_SESSION['error'] = "Mandatory field(s) are missing, Please fill it";
-     header("location: quote-is-2.php"); // Redirecting to first page
-     } else {
+    $_SESSION['name_reAdd'] = $_POST['name_reAdd'];
+    $_SESSION['contact_name_reAdd'] = $_POST['contact_name_reAdd'];
+    $_SESSION['country_reAdd'] = $_POST['country_reAdd'];
+    $_SESSION['state_reAdd'] = $_POST['state_reAdd'];
+    $_SESSION['city_reAdd'] = $_POST['city_reAdd'];
+    $_SESSION['zip_code_reAdd'] = $_POST['zip_code_reAdd'];
+    $_SESSION['street_address_reAdd'] = $_POST['street_address_reAdd'];
+    $_SESSION['apartment_suite_reAdd'] = $_POST['apartment_suite_reAdd'];
+    $_SESSION['department_c/o_reAdd'] = $_POST['department_c/o_reAdd'];
+    $_SESSION['phone_reAdd'] = $_POST['phone_reAdd'];
+    $_SESSION['email_reAdd'] = $_POST['email_reAdd'];
 
-     // Sanitizing email field to remove unwanted characters.
-     $_POST['email'] = filter_var($_POST['email_reAdd'], FILTER_SANITIZE_EMAIL);
+    // Sanitizing email field to remove unwanted characters.
+    $_POST['email_reAdd'] = filter_var($_POST['email_reAdd'], FILTER_SANITIZE_EMAIL);
 
-     // After sanitization Validation is performed.
-     if (filter_var($_POST['email_reAdd'], FILTER_VALIDATE_EMAIL)){
+    // Validate email.
+    if (filter_var($_POST['email_reAdd'], FILTER_VALIDATE_EMAIL)){
 
-     // Validating Contact Field using regex.
-     if (!preg_match("/^[0-9]{11}$/", $_POST['phone_reAdd'])){
-       $_SESSION['error'] = "11 digit contact number is required.";
-       header("location: quote-is-2.php");
-     } else {
-        // Fetching all values posted from second page and storing it in variable.
-         foreach ($_POST as $key => $value) {
-           $_SESSION['post'][$key] = $value;
-         }
-       }
-     } else {
-       $_SESSION['error'] = "Invalid Email Address";
-       header("location: quote-is-2.php");//redirecting to first page
-     }
-     }
     } else {
-       if (empty($_SESSION['error_page3'])) {
-         header("location: quote-is-2.php");//redirecting to first page
-       }
+        $_SESSION['error'] = "Invalid Email Address";
+        header("location: quote-is-2.php");     //redirecting to second page
     }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,7 +33,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote</title>
+    <title>VLink Express Courier - Get a Quote (International Shipping - Shipment Destination)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
@@ -92,7 +72,6 @@
         }
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
-
             .container {
                 padding: 0 50px !important;
             }
@@ -104,7 +83,6 @@
 
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -129,6 +107,7 @@
             }
         }
     </style>
+
 </head>
 
 <body class="body">
@@ -148,8 +127,8 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.html">Local Shipping</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -186,11 +165,11 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.html">Express Courier</a>
-                        <a href="quote-ss.html">Secure Storage</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -212,7 +191,7 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 5)</span>
             </div>
 
-            <h2 id="hi">Halfway done. Where is it going?</h2>
+            <h2 id="hi">Where is it going?</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
@@ -315,7 +294,7 @@
                     <!-- Previous, Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <button class="w3-button w3-medium w3-black-previous">Previous</button>
+                            <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
                             <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
                             <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                         </div>

@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote</title>
+    <title>VLink Express Courier - Get a Quote (International Shipping - Shipment Origin)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
@@ -37,10 +37,6 @@
             background-image: none;
         }
 
-        #returnAdd {
-            margin: 40px 0 0;
-        }
-
         .countries, .states, .cities {
             background-color: white;
             border-bottom: 1px solid #878787;
@@ -53,7 +49,6 @@
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-
             #hi {
                 margin: 40px 0 0;
                 text-align: center;
@@ -67,7 +62,6 @@
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
-
             #hi {
                 margin: 40px 0 0;
                 text-align: center;
@@ -78,14 +72,10 @@
                 padding: 0 30px !important;
             }
 
-            .container-form input {
+            .container-form input, .container-form select {
                 width: 100%;
             }
-
-            .container-form select {
-                width: 100%;
-            }
-
+            
             button.w3-button.w3-red-cancel {
                 margin-top: 1px;
             }
@@ -176,32 +166,19 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 1 of 5)</span>
             </div>
 
-            <h2 id="hi">Hi. Please tell us about your Shipment.</h2>
+            <h2 id="hi">Please tell us about your Shipment.</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
 
-
-                <!--- Initializing Session for errors --->
-                <span id="error">
-                    <?php
-                         if (!empty($_SESSION['error'])) {
-                         echo $_SESSION['error'];
-                         unset($_SESSION['error']);
-                         }
-                     ?>
-                </span>
-
-
                 <!-- International Shipping Quote form -->
                 <form class="container-form" method="post" style="padding-bottom: 0" action="quote-is-2.php">
 
                     <!-- Shipment Origin -->
-                    <div class="tab">
-                        <fieldset style="margin: 0 0 20px; padding-bottom: 0">
-                            <legend>Shipment Origin:</legend>
+                    <fieldset style="margin: 0 0 20px; padding-bottom: 0">
+                        <legend>Shipment Origin:</legend>
                             <!-- Full Name -->
                             <label>
                                 <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name" type="text" required>
@@ -278,17 +255,13 @@
                             <span class="checkmark"></span>
                         </label>
 
-                    </div>
-
-                    <!-- Continue and Cancel Button -->
-                    <div class="w3-center">
-                        <div class="w3-bar">
-                            <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">
-                                Next
-                            </button>
-                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                        <!-- Continue and Cancel Button -->
+                        <div class="w3-center">
+                            <div class="w3-bar">
+                                <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
+                                <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                            </div>
                         </div>
-                    </div>
 
                 <!-- End of form -->
                 </form>

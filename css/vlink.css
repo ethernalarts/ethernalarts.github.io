@@ -435,7 +435,6 @@
     }
 
     .container-form select {
-        color: #696969;
         font-family: Verdana, Montserrat, serif;
         padding: 15px;
         margin: 0 0 33px;
@@ -451,13 +450,16 @@
         margin: 0 0 33px;
     }
 
+    .choice option { color: black; }
+    .empty { color: #696969; }
+
     legend {
         font-family: Verdana, "Oswald SemiBold", sans-serif;
         font-size: 1em;
         font-weight: 600;
         display: inline-block;
         color: whitesmoke;
-        background-color: #1e1e1e;
+        background-color: #0f0f0f;
         padding: 10px;
     }
 
@@ -487,8 +489,8 @@
 
     /* Make circles that indicate the steps of the form: */
     .step {
-        height: 16px;
-        width: 16px;
+        height: 17px;
+        width: 17px;
         margin: 0 10px;
         background-color: royalblue;
         border: none;
@@ -499,11 +501,12 @@
 
     .step.active {
         opacity: 1;
-        background-color: #00007d;
+        color: #00007d;
     }
 
     /* Mark the steps that are finished and valid: */
     .step.finish {
+        opacity: 1;
         background-color: limegreen;
     }
 
@@ -621,6 +624,6 @@
         }
 
         .container-checkbox {
-            text-align: center;
+            text-align: justify;
         }
     }

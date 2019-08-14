@@ -1,29 +1,27 @@
 <?php
-    //start the session
+    //let's start the session
     session_start();
 
-    $_SESSION['name_dest'] = $_POST['name_dest'];
-    $_SESSION['contact_name_dest'] = $_POST['contact_name_dest'];
-    $_SESSION['country_dest'] = $_POST['country_dest'];
-    $_SESSION['state_dest'] = $_POST['state_dest'];
-    $_SESSION['city_dest'] = $_POST['city_dest'];
-    $_SESSION['post_code_dest'] = $_POST['post_code_dest'];
-    $_SESSION['street_address_dest'] = $_POST['street_address_dest'];
-    $_SESSION['apartment_suite_dest'] = $_POST['apartment_suite_dest'];
-    $_SESSION['department_c/o_dest'] = $_POST['department_c/o_dest'];
-    $_SESSION['phone_dest'] = $_POST['phone_dest'];
-    $_SESSION['email_dest'] = $_POST['email_dest'];
+    $_SESSION['name'] = $_POST['name'];
+    $_SESSION['title'] = $_POST['title'];
+    $_SESSION['gender'] = $_POST['gender'];
+    $_SESSION['marital_status'] = $_POST['marital_status'];
+    $_SESSION['age'] = $_POST['age'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['phone'] = $_POST['phone'];
+    $_SESSION['occupation'] = $_POST['occupation'];
 
-    // Sanitizing email field to remove unwanted characters.
-    $_POST['email_dest'] = filter_var($_POST['email_dest'], FILTER_SANITIZE_EMAIL);
-
-    // Validate email.
-    if (filter_var($_POST['email_dest'], FILTER_VALIDATE_EMAIL)){
-
-    } else {
-        $_SESSION['error'] = "Invalid Email Address";
-        header("location: quote-is-3.php");     //redirecting to third page
-    }
+    $_SESSION['contact_name'] = $_POST['contact_name'];
+    $_SESSION['contact_phone'] = $_POST['contact_phone'];
+    $_SESSION['state'] = $_POST['state'];
+    $_SESSION['city'] = $_POST['city'];
+    $_SESSION['zip_code'] = $_POST['zip_code'];
+    $_SESSION['street_address'] = $_POST['street_address'];
+    $_SESSION['apartment'] = $_POST['apartment'];
+    $_SESSION['department'] = $_POST['department'];
+    $_SESSION['pickup_date'] = $_POST['pickup_date'];
+    $_SESSION['pickup_time'] = $_POST['pickup_time'];
+    $_SESSION['residential_add'] = $_POST['residential_add'];
 ?>
 
 <!doctype html>
@@ -33,47 +31,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (International Shipping - Shipment Details)</title>
+    <title>VLink Express Courier - Get a Quote (Express Courier - Package Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" rel="stylesheet">
-    <link href="css/vlink.css" rel="stylesheet" type="text/css">
+    <link href="css/w3.css" rel="stylesheet">
+    <link href="css/vlink.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         .body {
             width: 100%;
-            max-width: 1440px;
-            height: auto;
             margin: 0;
             background-image: none;
         }
 
-        #oversizedPackage {
+        input:disabled {
+            padding: 15px;
+            margin: 0 0 33px;
+            width: 47%;
+            border: none;
+            border-bottom: 1px solid #2d2d2d;
         }
 
-        /* On screens that are 992px wide or less, go from three columns to two columns */
+        /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
+            .container {
+            }
+
+            #hi {
+                margin: 60px 0 0;
+                text-align: center;
+                font: 1.4em Verdana, sans-serif;
+            }
 
             .container {
-                padding: 0 90px !important;
+                padding: 0 30px !important;
             }
         }
 
-        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-            #hi {
+          #hi {
                 margin: 60px 0 0;
                 text-align: center;
                 font: 1.3em Verdana, sans-serif;
@@ -88,16 +100,7 @@
             }
 
             button.w3-button.w3-red-cancel {
-                margin-top: 12px;
-            }
-
-            button.w3-button.w3-green-continue {
-                margin-top: 12px;
-                margin-right: 1px;
-            }
-
-            button.w3-button.w3-black-previous {
-                margin: 12px 7px 0 0;
+                margin-top: 1px;
             }
         }
     </style>
@@ -105,7 +108,7 @@
 
 <body class="body">
     <div class="parallax">
-        <!-- Header with logo and navbar -->
+        <!-- Header with logo and navbar   -->
         <header>
             <a href="index.html">
                 <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
@@ -119,13 +122,13 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php" class="active">Express Courier</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="about.html">About</a></li>
+                    <li class="navlistitem"><a href="#">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -140,8 +143,9 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 380px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
     </div>
+
 
     <!-- Mobile Menu -->
         <!-- The overlay -->
@@ -157,12 +161,12 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php" class="active">Express Courier</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="about.html">About</a>
+                <a href="#">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -175,107 +179,85 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-          <!-- Progress circles which indicates the steps of the form: -->
-          <div style="text-align:center; margin-bottom: 40px;">
-              <span class="step finish"></span>
-              <span class="step finish"></span>
-              <span class="step finish"></span>
-              <span class="step active"></span>
-              <span class="step"></span><br><br>
-              <span style="font: 1.25em Montserrat, sans-serif;">(Step 4 of 5)</span>
-          </div>
+            <!-- Progress circles which indicates the steps of the form: -->
+            <div style="text-align:center; margin-bottom: 40px;">
+                <span class="step finish"></span>
+                <span class="step active"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span><br><br>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 5)</span>
+            </div>
 
-            <h2 id="hi">Almost done. Package Description</h2>
+            <h2 id="hi">Package Dimensions</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
-            <!-- Container -->
-            <div class="w3-card-4">
+            <!-- Container for Get a Quote form  -->
+            <div class="w3-card-quote-is">
 
-                <!-- Shipment Dimensions -->
-                <form class="container-form" style="padding-bottom: 0" method="post" action="quote-is-review.php">
-                    <fieldset style="margin: 0">
-                        <legend>Shipment Details:</legend>
+                    <!-- Express Courier Get a quote form -->
+                    <form class="container-form" method="post" action="quote-ec-3.php" style="padding-bottom: 0">
+                        <fieldset style="margin: 0 0 20px; padding-bottom: 10px">
+                            <legend>Package Details</legend>
+
                             <!-- Weight -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (lbs):  *"
-                                name="weight" type="number" required>
+                                       name="weight" type="number" required>
                             </label>
 
                             <!-- Length -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Length (in):  *"
-                                name="length" type="number" required>
+                                       name="length" type="number" required>
                             </label>
 
                             <!-- Width -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (in):  *"
-                                name="width" type="number" required>
+                                       name="width" type="number" required>
                             </label>
 
                             <!-- Height -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Height (in):  *"
-                                name="height" type="number" required>
+                                       name="height" type="number" required>
                             </label>
 
-                            <!-- Shipment's worth -->
+                            <!-- Shipment's Worth -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): "
-                                name="worth" type="number">
+                                       name="worth" type="number" required>
                             </label>
 
-                            <!-- Package type -->
-                                <label>
-                                    <select style="float: right" name="package_type" class="w3-input w3-border-0 w3-light-gray">
-                                        <option value="" selected disabled>Package type  *</option>
-                                        <option value="luggage">Luggage</option>
-                                        <option value="jewellery">Jewellery</option>
-                                        <option value="electronic">Electronic</option>
-                                        <option value="document">Document</option>
-                                        <option value="battery">Battery</option>
-                                        <option value="machine_parts">Machine Parts</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </label>
 
-                            <!-- Toggle (Oversize Shipment) -->
-                            <div class="sliderWrapper" style="margin: 7px 0">
-                                <span style="margin-left: 11px">Oversized Package (+$)</span>
-                                <label class="switch">
-                                    <input type="checkbox" onclick="toggle_visibility('oversizePackage')">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-
-
-                            <!-- oversize Shipment options -->
-                            <label id="oversizePackage" style="display: none; margin: 20px 0 0">
-                                <select name="oversize_shipment" class="w3-input w3-border-0 w3-light-gray" type="select">
-                                    <option value="" selected disabled>Select a packaging option</option>
-                                    <option value="additional_handling">Additional Handling</option>
+                            <!-- delivery options -->
+                            <label>
+                                <select name="delivery_options" style="float: right" class="w3-input w3-border-0 w3-light-gray">
+                                    <option value="" selected disabled>Delivery type</option>
+                                    <option value="special_service">Special Service</option>
+                                    <option value="time_critical_service">Time Critical Service</option>
                                 </select>
                             </label>
-                    </fieldset>
+
+
+                            <!-- Package Description -->
+                            <label>
+                                <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
+                                          name="package_description" placeholder="Briefly describe package..."></textarea>
+                            </label>
+                        </fieldset>
 
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
-                        <div class="w3-bar" style="margin: 40px 0 0">
-                            <button value="Previous" onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
-                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">Next</button>
-                            <button value="Reset" type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                        <div class="w3-bar">
+                            <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
+                            <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
+                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                         </div>
                     </div>
-
-                    <!-- Oversized Package toggle -->
-                    <script type="text/javascript">
-                        function toggle_visibility(oversizedPackage) {
-                            var e = document.getElementById(oversizedPackage);
-                            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
-                        }
-                    </script>
 
                 <!-- End of form -->
                 </form>
@@ -283,12 +265,7 @@
         </div>
     </div>
 
-    <!-- Scroll back to the top -->
-    <div class="scrolltop">
-        <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
-        </div>
-    </div>
+
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
@@ -337,6 +314,13 @@
             }
         }
     </script>
+
+    <!-- Scroll back to the top -->
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
+        </div>
+    </div>
 </body>
 
 <!-- footer   -->

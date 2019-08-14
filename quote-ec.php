@@ -185,7 +185,7 @@
                 <!-- Express Courier Quote form -->
                 <form class="container-form" style="padding-bottom: 0" action="quote-ec-2.php" method="post">
                     <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
-                        <legend>Basic Details:</legend>
+                        <legend>Basic Details</legend>
 
                         <!-- Full Name -->
                         <label>
@@ -198,45 +198,45 @@
                                    name="title" placeholder="Title (Mr, Mrs, Dr. etc):  " type="text">
                         </label>
 
+                        <!-- Gender -->
+                        <select class="choice" name="gender" required>
+                            <option value="0" selected="selected">Gender:   *</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+
                         <!-- Marital Status -->
                         <label>
-                            <select name="marital_status" class="w3-input w3-border-0 w3-light-gray">
-                                <option value="" selected disabled>Marital Status:  *</option>
-                                <option value="single">Single</option>
-                                <option value="married">Married</option>
-                                <option value="divorced">Divorced</option>
-                                <option value="widowed">Widowed</option>
+                            <select style="float: right" name="marital_status" class="choice" required>
+                                <option value="0" selected="selected">Marital Status:   *</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
+                                <option value="Widowed">Widowed</option>
                             </select>
                         </label>
 
                         <!-- Age -->
                         <label>
-                            <select name="age" style="float: right;" class="w3-input w3-border-0 w3-light-gray" required>
-                                <option value="" selected disabled>Age:  *</option>
-                                <option value="below18">Below 18</option>
-                                <option value="18-30">18 - 30</option>
-                                <option value="30-45">30 - 45</option>
-                                <option value="45-55">45 - 55</option>
-                                <option value=55-65>55 - 65</option>
-                                <option value="65+">65 + </option>
-                            </select>
+                            <input name="age" class="w3-input w3-border-0 w3-light-gray" placeholder="Age:  *"
+                                   type="number" required>
                         </label>
 
                         <!-- Email -->
                         <label>
-                            <input class="w3-input w3-border-0 w3-light-gray" name="email"
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="email"
                                    placeholder="Email:  *" type="email" required>
                         </label>
 
                         <!-- Telephone -->
                         <label>
-                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="phone"
+                            <input class="w3-input w3-border-0 w3-light-gray" name="phone"
                                    placeholder="Telephone:  *" type="number" required>
                         </label>
 
                         <!-- Occupation -->
                         <label>
-                            <input style="width: 100%" class="w3-light-gray" placeholder="Occupation:  *" name="occupation" type="text" required>
+                            <input style="float: right" class="w3-light-gray" placeholder="Occupation:  *" name="occupation" type="text" required>
                         </label>
                     </fieldset>
 
@@ -249,8 +249,8 @@
                     </label>
 
 
-                    <!-- Pickup Address -->
-                        <fieldset id="returnAdd" style="display: block; margin-bottom: 20px">
+                        <!-- Pickup Address -->
+                        <fieldset id="returnAdd" style="display: block; margin-bottom: 20px; padding-bottom: 20px">
                             <legend>Pickup Address:</legend>
                                 <!-- Contact Name -->
                                 <label>
@@ -273,15 +273,15 @@
 
                                 <!-- State -->
                                 <label for="stateId">
-                                    <select name="state" class="states order-alpha" id="stateId" required>
-                                        <option value="">State:  *</option>
+                                    <select name="state" class="choice states order-alpha" id="stateId" required>
+                                        <option value="0" selected="selected">State:  *</option>
                                     </select>
                                 </label>
 
                                 <!-- City -->
                                 <label for="cityId">
-                                    <select name="city" class="cities order-alpha" id="cityId" required>
-                                        <option value="">City:  *</option>
+                                    <select name="city" class="choice cities order-alpha" id="cityId" required>
+                                        <option value="0" selected="selected">City:  *</option>
                                     </select>
                                 </label>
 
@@ -321,14 +321,29 @@
                                            name="pickup_time" type="text" onfocus="(this.type='time')" id="time" required>
                                 </label>
 
+                                <!-- Email (Pickup Address) -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" name="email_pickupAdd"
+                                           placeholder="Email:  *" type="email" required>
+                                </label>
+
+                                <!-- Residential Address -->
+                                <label>
+                                    <select  style="float: right" name="residential_add" class="choice">
+                                        <option value="0" selected="selected">Is this a residential address?   *</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+
                                 <!-- Toggle (residential address?) -->
-                                <div class="sliderWrapper" style="margin: 7px 0">
-                                    <span style="margin-left: 12px;">Is this a residential address?</span>
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                </div>
+<!--                                <div class="sliderWrapper" style="margin: 7px 0">-->
+<!--                                    <span style="margin-left: 5px;">Is this a residential address?</span>-->
+<!--                                    <label class="switch">-->
+<!--                                        <input type="seheckbox" name="residential_add">-->
+<!--                                        <span class="slider"></span>-->
+<!--                                    </label>-->
+<!--                                </div>-->
                         </fieldset>
 
 
@@ -344,7 +359,6 @@
                                 </div>
                             </fieldset>
 
-
                                 <!-- Continue and Cancel Button -->
                                 <div class="w3-center">
                                     <div class="w3-bar">
@@ -358,6 +372,16 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        $(".choice").change(function () {
+            if($(this).val() === "0") $(this).addClass("empty");
+            else $(this).removeClass("empty")
+        });
+
+        $(".choice").change();
+    </script>
 
 
     <!-- JavaScript Full Screen Overlay Nav -->

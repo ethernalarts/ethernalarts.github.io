@@ -1,51 +1,31 @@
 <?php
+    //start the session
     session_start();
-    // Checking first page values for empty,If it finds any blank field then redirected to first page.
-    if (isset($_POST['name'])){
-         if (empty($_POST['name'])
-         || empty($_POST['contact_name'])
-         || empty($_POST['country'])
-         || empty($_POST['state'])
-         || empty($_POST['city'])
-         || empty($_POST['zip_code'])
-         || empty($_POST['street_address'])
-         || empty($_POST['apartment_suite'])
-         || empty($_POST['department_c/o'])
-         || empty($_POST['phone'])
-         || empty($_POST['email'])){
 
-     // Setting error message
-     $_SESSION['error'] = "Mandatory field(s) are missing, Please fill it";
-     header("location: quote-is-1.php"); // Redirecting to first page
-     } else {
+    $_SESSION['name'] = $_POST['name'];
+    $_SESSION['contact_name'] = $_POST['contact_name'];
+    $_SESSION['country'] = $_POST['country'];
+    $_SESSION['state'] = $_POST['state'];
+    $_SESSION['city'] = $_POST['city'];
+    $_SESSION['zip_code'] = $_POST['zip_code'];
+    $_SESSION['street_address'] = $_POST['street_address'];
+    $_SESSION['apartment_suite'] = $_POST['apartment_suite'];
+    $_SESSION['department_c/o'] = $_POST['department_c/o'];
+    $_SESSION['phone'] = $_POST['phone'];
+    $_SESSION['email'] = $_POST['email'];
 
-     // Sanitizing email field to remove unwanted characters.
-     $_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    // Sanitizing email field to remove unwanted characters.
+    $_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-     // After sanitization Validation is performed.
-     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+    // Validate email.
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
-       // Validating Contact Field using regex.
-     if (!preg_match("/^[0-9]{11}$/", $_POST['phone'])){
-       $_SESSION['error'] = "11 digit contact number is required.";
-       header("location: quote-is-1.php");
-     } else {
-        // Fetching all values posted from first page and storing it in variable.
-         foreach ($_POST as $key => $value) {
-           $_SESSION['post'][$key] = $value;
-         }
-       }
-     } else {
-       $_SESSION['error'] = "Invalid Email Address";
-       header("location: quote-is-1.php");//redirecting to first page
-     }
-     }
     } else {
-       if (empty($_SESSION['error_page2'])) {
-         header("location: quote-is-1.php");//redirecting to first page
-       }
+        $_SESSION['error'] = "Invalid Email Address";
+        header("location: quote-is-1.php");//redirecting to first page
     }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,7 +33,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote</title>
+    <title>VLink Express Courier - Get a Quote (International Shipping - Return Address)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -162,8 +142,8 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.html">Local Shipping</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -200,11 +180,11 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.html">Express Courier</a>
-                        <a href="quote-ss.html">Secure Storage</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -244,59 +224,59 @@
                 </div>
 
 
-                <!-- Return Address -->
+                    <!-- Return Address Form -->
                     <form class="container-form" method="post" action="quote-is-3.php" style="padding: 0 50px">
                         <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 0; display: none">
-                            <legend>Return Address:</legend>
+                            <legend>Return Address</legend>
                             <!-- Full Name -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  *"
-                                       name="name_reAdd" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  "
+                                       name="name_reAdd" type="text">
                             </label>
 
                             <!-- Contact Name -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Contact Name:  *" name="contact_name_reAdd" type="text" required>
+                                       placeholder="Contact Name:  " name="contact_name_reAdd" type="text">
                             </label>
 
                             <!-- Country -->
                             <label for="countryId">
-                                <select name="country_reAdd" class="countries" id="countryId" required>
-                                    <option value="">Country:  *</option>
+                                <select name="country_reAdd" class="countries" id="countryId">
+                                    <option value="">Country:  </option>
                                 </select>
                             </label>
 
                             <!-- State -->
                             <label for="stateId">
-                                <select name="state_reAdd" class="states" id="stateId" required>
-                                    <option value="">State:  *</option>
+                                <select name="state_reAdd" class="states" id="stateId">
+                                    <option value="">State:  </option>
                                 </select>
                             </label>
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city_reAdd" class="cities" id="cityId" required>
-                                    <option value="">City:  *</option>
+                                <select name="city_reAdd" class="cities" id="cityId">
+                                    <option value="">City:  </option>
                                 </select>
                             </label>
 
                             <!-- Zip Code -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Zip Code:  *" name="zip_code_reAdd" type="number" required>
+                                       placeholder="Zip Code:  " name="zip_code_reAdd" type="number">
                             </label>
 
                             <!-- Street Address -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Street Address:  *" name="street_address_reAdd" type="text" required>
+                                       placeholder="Street Address:  " name="street_address_reAdd" type="text">
                             </label>
 
                             <!-- Apartment, suite -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="apartment_suite_reAdd"
-                                       placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                                       placeholder="Apartment, unit, suite, building, floor, etc.:  " type="text">
                             </label>
 
                             <!-- Department -->
@@ -307,14 +287,14 @@
 
                             <!-- Email -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *"
-                                       name="email_reAdd" type="email" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  "
+                                       name="email_reAdd" type="email">
                             </label>
 
                             <!-- Telephone -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       name="phone_reAdd" placeholder="Telephone:  *" type="number" required>
+                                       name="phone_reAdd" placeholder="Telephone:  " type="number">
                             </label>
                         </fieldset>
 
@@ -322,7 +302,7 @@
                         <!-- Continue and Cancel Button -->
                         <div class="w3-center">
                             <div class="w3-bar">
-                                <button class="w3-button w3-medium w3-black-previous">Previous</button>
+                                <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
                                 <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
                                 <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                             </div>
