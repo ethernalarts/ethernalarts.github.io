@@ -2,16 +2,13 @@
     //start the session
     session_start();
 
-    $_SESSION['contact_name_dest'] = $_POST['contact_name_dest'];
-    $_SESSION['contact_phone_dest'] = $_POST['contact_phone_dest'];
-    $_SESSION['country'] = $_POST['country'];
-    $_SESSION['state'] = $_POST['state'];
-    $_SESSION['city'] = $_POST['city'];
-    $_SESSION['zip_code_dest'] = $_POST['zip_code_dest'];
-    $_SESSION['street_address_dest'] = $_POST['street_address_dest'];
-    $_SESSION['apartment_dest'] = $_POST['apartment_dest'];
-    $_SESSION['department_dest'] = $_POST['department_dest'];
-    $_SESSION['residential_add_dest'] = $_POST['residential_add_dest'];
+    //store posted values in the session variables
+    $_SESSION['weight'] = $_POST['weight'];
+    $_SESSION['length'] = $_POST['length'];
+    $_SESSION['width'] = $_POST['width'];
+    $_SESSION['height'] = $_POST['height'];
+    $_SESSION['worth'] = $_POST['worth'];
+    $_SESSION['package_type'] = $_POST['package_type'];
 ?>
 
 <!doctype html>
@@ -193,86 +190,28 @@
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post" style="padding-bottom: 0">
-                    <!-- Package Origin Preview -->
+                    <!-- Shipment Origin Preview -->
                     <fieldset style="padding-bottom: 50px; margin: 0 0 30px">
-                        <legend>Package Origin</legend>
-                            <!-- Basic Details Preview -->
+                        <legend>Shipment Origin</legend>
+                            <!-- Shipment Origin Preview -->
                             <fieldset>
                                 <legend class="sub-legend">Basic Details</legend>
-
                                     <!-- Full Name -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
                                                placeholder="Full Name: <?php echo $_SESSION['name'] ?> ">
                                     </label>
 
-                                    <!-- Title -->
+                                    <!-- Contact Name -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Title: <?php echo $_SESSION['title'] ?> ">
-                                    </label>
-
-                                    <!-- Gender -->
-                                    <label>
-                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Gender: <?php echo $_SESSION['gender'] ?> ">
-                                    </label>
-
-                                    <!-- Marital Status -->
-                                    <label>
-                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Marital Status: <?php echo $_SESSION['marital_status'] ?> ">
-                                    </label>
-
-                                    <!-- Age -->
-                                    <label>
-                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Age: <?php echo $_SESSION['age'] ?> ">
-                                    </label>
-
-                                    <!-- Email -->
-                                    <label>
-                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Email: <?php echo $_SESSION['email'] ?> ">
-                                    </label>
-
-                                    <!-- Phone Number -->
-                                    <label>
-                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Phone Number: <?php echo $_SESSION['phone'] ?> ">
-                                    </label>
-
-                                    <!-- Occupation -->
-                                    <label>
-                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Occupation: <?php echo $_SESSION['occupation'] ?> ">
-                                    </label>
-
-                                    <!-- Edit Button -->
-                                    <label>
-                                        <button style="float: left" onClick="javascript:history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
-                                    </label>
-                            </fieldset>
-
-                            <!-- Pickup Address Preview -->
-                            <fieldset style="margin: 50px 0 0">
-                                <legend class="sub-legend">Pickup Address</legend>
-                                    <!-- Contact's Name -->
-                                    <label>
-                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Contact's Name: <?php echo $_SESSION['contact_name'] ?> ">
-                                    </label>
-
-                                    <!-- Contact's Phone Number -->
-                                    <label>
-                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Contact's Phone Number: <?php echo $_SESSION['contact_phone'] ?> ">
+                                               placeholder="Contact Name: <?php echo $_SESSION['contact_name'] ?> ">
                                     </label>
 
                                     <!-- Country -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Country: Finland">
+                                               placeholder="Country: <?php echo $_SESSION['country'] ?> ">
                                     </label>
 
                                     <!-- State -->
@@ -302,31 +241,100 @@
                                     <!-- Apartment -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Apartment: <?php echo $_SESSION['apartment'] ?> ">
+                                               placeholder="Apartment: <?php echo $_SESSION['apartment_suite'] ?> ">
                                     </label>
 
                                     <!-- Department -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Department: <?php echo $_SESSION['department'] ?> ">
+                                               placeholder="Department: <?php echo $_SESSION['department_c/o'] ?> ">
                                     </label>
 
-                                    <!-- Pickup Date -->
+                                    <!-- Email -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Pickup Date: <?php echo $_SESSION['pickup_date'] ?> ">
+                                               placeholder="Email: <?php echo $_SESSION['email'] ?> ">
                                     </label>
 
-                                    <!-- Pickup Time -->
+                                    <!-- Phone Number -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Pickup Time: <?php echo $_SESSION['pickup_time'] ?> ">
+                                               placeholder="Phone Number: <?php echo $_SESSION['phone'] ?> ">
                                     </label>
 
-                                    <!-- Residential Address -->
+                                    <!-- Edit Button -->
+                                    <label>
+                                        <button style="float: left" onClick="javascript:history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                                    </label>
+                            </fieldset>
+
+                            <!-- Return Address Preview -->
+                            <fieldset style="margin: 50px 0 0">
+                                <legend class="sub-legend">Return Address</legend>
+                                    <!-- Full Name -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Full Name: <?php echo $_SESSION['name_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Contact Name -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Residential Address? <?php echo $_SESSION['residential_add'] ?> ">
+                                               placeholder="Contact Name: <?php echo $_SESSION['contact_name_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Country -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Country: <?php echo $_SESSION['country_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- State -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="State: <?php echo $_SESSION['state_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- City -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="City: <?php echo $_SESSION['city_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Zip Code -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Zip Code: <?php echo $_SESSION['zip_code_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Street Address -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Street Address: <?php echo $_SESSION['street_address_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Apartment -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Apartment: <?php echo $_SESSION['apartment_suite_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Department -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Department: <?php echo $_SESSION['department_c/o_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Email -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Email: <?php echo $_SESSION['email_reAdd'] ?> ">
+                                    </label>
+
+                                    <!-- Phone Number -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Phone Number: <?php echo $_SESSION['phone_reAdd'] ?> ">
                                     </label>
 
                                     <!-- Edit Button -->

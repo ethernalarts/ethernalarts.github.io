@@ -2,6 +2,7 @@
     //start the session
     session_start();
 
+    //store posted values in the session variables
     $_SESSION['name_dest'] = $_POST['name_dest'];
     $_SESSION['contact_name_dest'] = $_POST['contact_name_dest'];
     $_SESSION['country_dest'] = $_POST['country_dest'];
@@ -228,15 +229,15 @@
 
                             <!-- Package type -->
                                 <label>
-                                    <select style="float: right" name="package_type" class="w3-input w3-border-0 w3-light-gray">
-                                        <option value="" selected disabled>Package type  *</option>
-                                        <option value="luggage">Luggage</option>
-                                        <option value="jewellery">Jewellery</option>
-                                        <option value="electronic">Electronic</option>
-                                        <option value="document">Document</option>
-                                        <option value="battery">Battery</option>
-                                        <option value="machine_parts">Machine Parts</option>
-                                        <option value="other">Other</option>
+                                    <select style="float: right" name="package_type" class="choice">
+                                        <option value="0" selected="selected">Package type  *</option>
+                                        <option value="Luggage">Luggage</option>
+                                        <option value="Jewellery">Jewellery</option>
+                                        <option value="Electronic">Electronic</option>
+                                        <option value="Document">Document</option>
+                                        <option value="Battery">Battery</option>
+                                        <option value="Machine Parts">Machine Parts</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </label>
 
@@ -282,6 +283,16 @@
             </div>
         </div>
     </div>
+
+    <!-- JavaScript to change color of <option selected> -->
+    <script>
+        $(".choice").change(function () {
+            if($(this).val() === "0") $(this).addClass("empty");
+            else $(this).removeClass("empty")
+        });
+
+        $(".choice").change();
+    </script>
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">

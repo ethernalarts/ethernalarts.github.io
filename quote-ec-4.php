@@ -11,6 +11,7 @@
     $_SESSION['street_address_dest'] = $_POST['street_address_dest'];
     $_SESSION['apartment_dest'] = $_POST['apartment_dest'];
     $_SESSION['department_dest'] = $_POST['department_dest'];
+    $_SESSION['email_dest'] = $_POST['email_dest'];
     $_SESSION['residential_add_dest'] = $_POST['residential_add_dest'];
 ?>
 
@@ -447,9 +448,15 @@
                                        placeholder="Department: <?php echo $_SESSION['department_dest'] ?> ">
                             </label>
 
+                            <!-- Email (Destination) -->
+                            <label>
+                                <input disabled style="float: right;" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Email: <?php echo $_SESSION['email_dest'] ?> ">
+                            </label>
+
                             <!-- Residential Address -->
                             <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
                                        placeholder="Residential Address? <?php echo $_SESSION['residential_add_dest'] ?> ">
                             </label>
 

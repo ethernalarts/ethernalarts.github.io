@@ -2,6 +2,7 @@
     //start the session
     session_start();
 
+    //store posted values in the session variables
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['contact_name'] = $_POST['contact_name'];
     $_SESSION['country'] = $_POST['country'];
@@ -64,7 +65,6 @@
             background-color: white;
             border-bottom: 1px solid #878787;
             font-size: 0.95em;
-            color: #2A2A2A;
         }
 
         #stateId {
@@ -226,7 +226,7 @@
 
                     <!-- Return Address Form -->
                     <form class="container-form" method="post" action="quote-is-3.php" style="padding: 0 50px">
-                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 0; display: none">
+                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px; display: none">
                             <legend>Return Address</legend>
                             <!-- Full Name -->
                             <label>
@@ -242,22 +242,22 @@
 
                             <!-- Country -->
                             <label for="countryId">
-                                <select name="country_reAdd" class="countries" id="countryId">
-                                    <option value="">Country:  </option>
+                                <select name="country_reAdd" class="choice countries" id="countryId">
+                                    <option value="0" selected="selected">Country:  </option>
                                 </select>
                             </label>
 
                             <!-- State -->
                             <label for="stateId">
-                                <select name="state_reAdd" class="states" id="stateId">
-                                    <option value="">State:  </option>
+                                <select name="state_reAdd" class="choice states" id="stateId">
+                                    <option value="0" selected="selected">State:  </option>
                                 </select>
                             </label>
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city_reAdd" class="cities" id="cityId">
-                                    <option value="">City:  </option>
+                                <select name="city_reAdd" class="choice cities" id="cityId">
+                                    <option value="0" selected="selected">City:  </option>
                                 </select>
                             </label>
 
@@ -314,6 +314,15 @@
         </div>
     </div>
 
+    <!-- JavaScript to change color of <option selected> -->
+    <script>
+        $(".choice").change(function () {
+            if($(this).val() === "0") $(this).addClass("empty");
+            else $(this).removeClass("empty")
+        });
+
+        $(".choice").change();
+    </script>
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">

@@ -191,22 +191,22 @@
 
                             <!-- Country -->
                             <label for="countryId">
-                                <select name="country" class="countries" id="countryId" type="select" required>
-                                    <option value="">Country:  *</option>
+                                <select name="country" class="choice countries" id="countryId" type="select" required>
+                                    <option value="0" selected="selected">Country:  *</option>
                                 </select>
                             </label>
 
                             <!-- State -->
                             <label for="stateId">
-                                <select name="state" class="states" id="stateId" type="select" required>
-                                    <option value="">State:  *</option>
+                                <select name="state" class="choice states" id="stateId" type="select" required>
+                                    <option value="0" selected="selected">State:  *</option>
                                 </select>
                             </label>
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city" class="cities" id="cityId" type="select" required>
-                                    <option value="">City:  *</option>
+                                <select name="city" class="choice cities" id="cityId" type="select" required>
+                                    <option value="0" selected="selected">City:  *</option>
                                 </select>
                             </label>
 
@@ -268,6 +268,16 @@
             </div>
         </div>
     </div>
+
+    <!-- JavaScript to change color of <option selected> -->
+    <script>
+        $(".choice").change(function () {
+            if($(this).val() === "0") $(this).addClass("empty");
+            else $(this).removeClass("empty")
+        });
+
+        $(".choice").change();
+    </script>
 
 
     <!-- JavaScript to loop through quote form -->

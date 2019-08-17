@@ -250,7 +250,7 @@
 
 
                         <!-- Pickup Address -->
-                        <fieldset id="returnAdd" style="display: block; margin-bottom: 20px; padding-bottom: 20px">
+                        <fieldset id="returnAdd" style="margin-bottom: 20px; padding-bottom: 20px">
                             <legend>Pickup Address:</legend>
                                 <!-- Contact Name -->
                                 <label>
@@ -373,7 +373,7 @@
         </div>
     </div>
 
-
+    <!-- JavaScript to change color of <option selected> -->
     <script>
         $(".choice").change(function () {
             if($(this).val() === "0") $(this).addClass("empty");
@@ -382,7 +382,6 @@
 
         $(".choice").change();
     </script>
-
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>

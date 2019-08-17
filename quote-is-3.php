@@ -2,6 +2,7 @@
     //start the session
     session_start();
 
+    //store posted values in the session variables
     $_SESSION['name_reAdd'] = $_POST['name_reAdd'];
     $_SESSION['contact_name_reAdd'] = $_POST['contact_name_reAdd'];
     $_SESSION['country_reAdd'] = $_POST['country_reAdd'];
@@ -64,7 +65,6 @@
             background-color: white;
             border-bottom: 1px solid #878787;
             font-size: 0.95em;
-            color: #2A2A2A;
         }
 
         #stateId {
@@ -202,7 +202,7 @@
 
                 <!-- Shipment Destination -->
                 <form class="container-form" method="post" action="quote-is-4.php" style="padding-bottom: 0">
-                    <fieldset style="margin: 0 0 20px">
+                    <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
                         <legend>Shipment Destination:</legend>
                             <!-- Full Name -->
                             <label>
@@ -218,22 +218,22 @@
 
                             <!-- Country -->
                             <label for="countryId">
-                                <select name="country_dest" class="countries" id="countryId" required>
-                                    <option value="">Country:  *</option>
+                                <select name="country_dest" class="choice countries" id="countryId" required>
+                                    <option value="0" selected="selected">Country:  *</option>
                                 </select>
                             </label>
 
                             <!-- State -->
                             <label for="stateId">
-                                <select name="state_dest" class="states" id="stateId" required>
-                                    <option value="">State:  *</option>
+                                <select name="state_dest" class="choice states" id="stateId" required>
+                                    <option value="0" selected="selected">State:  *</option>
                                 </select>
                             </label>
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city_dest" class="cities" id="cityId" type="select" required>
-                                    <option value="">City:  *</option>
+                                <select name="city_dest" class="choice cities" id="cityId" type="select" required>
+                                    <option value="0" selected="selected">City:  *</option>
                                 </select>
                             </label>
 
@@ -257,30 +257,40 @@
 
                             <!-- Department -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Department, c/o, etc.: "
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Department, c/o, etc.: "
                                 name="department_c/o_dest"type="text">
-                            </label>
-
-                            <!-- Telephone -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Telephone: "
-                                name="phone_dest"type="number">
                             </label>
 
                             <!-- Email -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email: " name="email_dest" type="email">
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" style="float: right"
+                                       name="email_dest" type="email" required>
+                            </label>
+
+                            <!-- Telephone -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Telephone:  *"
+                                name="phone_dest"type="number" required>
+                            </label>
+
+                            <!-- Residential Address -->
+                            <label>
+                                <select  style="float: right" name="residential_add" class="choice">
+                                    <option value="0" selected="selected">Is this a residential address?   *</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
                             </label>
 
 
                             <!-- Toggle (residential address?) -->
-                            <div class="sliderWrapper" style="margin: 7px 0">
-                                <span style="margin-left: 12px;">Is this a residential address?</span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
+<!--                            <div class="sliderWrapper" style="margin: 7px 0">-->
+<!--                                <span style="margin-left: 12px;">Is this a residential address?</span>-->
+<!--                                <label class="switch">-->
+<!--                                    <input type="checkbox">-->
+<!--                                    <span class="slider"></span>-->
+<!--                                </label>-->
+<!--                            </div>-->
                     </fieldset>
 
                     <!-- Email updates to recipient on shipment status -->
@@ -306,6 +316,15 @@
         </div>
     </div>
 
+    <!-- JavaScript to change color of <option selected> -->
+    <script>
+        $(".choice").change(function () {
+            if($(this).val() === "0") $(this).addClass("empty");
+            else $(this).removeClass("empty")
+        });
+
+        $(".choice").change();
+    </script>
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">

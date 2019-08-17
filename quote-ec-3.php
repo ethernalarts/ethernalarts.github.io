@@ -2,6 +2,7 @@
     //let's start the session
     session_start();
 
+    //store posted values in the session variables
     $_SESSION['weight'] = $_POST['weight'];
     $_SESSION['length'] = $_POST['length'];
     $_SESSION['width'] = $_POST['width'];
@@ -193,7 +194,7 @@
 
                 <!-- Package Destination -->
                 <form class="container-form" method="post" action="quote-ec-4.php" style="padding-bottom: 0">
-                      <fieldset id="returnAdd" style="margin: 0 0 30px">
+                      <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 20px"">
                           <legend>Package Destination</legend>
 
                               <!-- Contact Name -->
@@ -213,19 +214,17 @@
                                   <input name="country" class="countries_dest" value="Finland" disabled>
                               </label>
 
-                              <input type="hidden" name="country" id="countryId_dest" value="FI"/>
-
                               <!-- State -->
                               <label for="stateId_dest">
-                                  <select name="state_dest" class="states_dest order-alpha" id="stateId_dest" required>
-                                      <option value="">State:  *</option>
+                                  <select name="state_dest" class="choice states_dest order-alpha" id="stateId_dest" required>
+                                      <option value="0" selected="selected">State:  *</option>
                                   </select>
                               </label>
 
                               <!-- City -->
                               <label for="cityId_dest">
-                                  <select name="city_dest" class="cities_dest order-alpha" id="cityId_dest" required>
-                                      <option value="">City:  *</option>
+                                  <select name="city_dest" class="choice cities_dest order-alpha" id="cityId_dest" required>
+                                      <option value="0" selected="selected">City:  *</option>
                                   </select>
                               </label>
 
@@ -253,14 +252,29 @@
                                          name="department_dest" type="text">
                               </label>
 
+                              <!-- Email (Pickup Address) -->
+                              <label>
+                                  <input class="w3-input w3-border-0 w3-light-gray" name="email_dest"
+                                         placeholder="Email:  *" type="email" required>
+                              </label>
+
+                              <!-- Residential Address -->
+                              <label>
+                                  <select  style="float: right" name="residential_add_dest" class="choice">
+                                      <option value="0" selected="selected">Is this a residential address?   *</option>
+                                      <option value="Yes">Yes</option>
+                                      <option value="No">No</option>
+                                  </select>
+                              </label>
+
                               <!-- Toggle (residential address?) -->
-                              <div class="sliderWrapper" style="margin: 7px 0">
-                                  <span style="margin-left: 12px">Is this a residential address?</span>
-                                  <label class="switch">
-                                      <input type="checkbox" name="residential_add_dest">
-                                      <span class="slider"></span>
-                                  </label>
-                              </div>
+<!--                              <div class="sliderWrapper" style="margin: 7px 0">-->
+<!--                                  <span style="margin-left: 12px">Is this a residential address?</span>-->
+<!--                                  <label class="switch">-->
+<!--                                      <input type="checkbox" name="residential_add_dest">-->
+<!--                                      <span class="slider"></span>-->
+<!--                                  </label>-->
+<!--                              </div>-->
                         </fieldset>
 
 
@@ -280,6 +294,15 @@
         </div>
     </div>
 
+    <!-- JavaScript to change color of <option selected> -->
+    <script>
+        $(".choice").change(function () {
+            if($(this).val() === "0") $(this).addClass("empty");
+            else $(this).removeClass("empty")
+        });
+
+        $(".choice").change();
+    </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>

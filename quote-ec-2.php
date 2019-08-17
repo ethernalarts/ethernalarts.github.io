@@ -2,6 +2,7 @@
     //let's start the session
     session_start();
 
+    //store posted values in the session variables
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['title'] = $_POST['title'];
     $_SESSION['gender'] = $_POST['gender'];
@@ -10,7 +11,6 @@
     $_SESSION['email'] = $_POST['email'];
     $_SESSION['phone'] = $_POST['phone'];
     $_SESSION['occupation'] = $_POST['occupation'];
-
     $_SESSION['contact_name'] = $_POST['contact_name'];
     $_SESSION['contact_phone'] = $_POST['contact_phone'];
     $_SESSION['state'] = $_POST['state'];
@@ -234,8 +234,8 @@
 
                             <!-- delivery options -->
                             <label>
-                                <select name="delivery_options" style="float: right" class="w3-input w3-border-0 w3-light-gray">
-                                    <option value="" selected disabled>Delivery type</option>
+                                <select name="delivery_options" style="float: right" class="choice">
+                                    <option value="0" selected="selected">Delivery type</option>
                                     <option value="special_service">Special Service</option>
                                     <option value="time_critical_service">Time Critical Service</option>
                                 </select>
@@ -265,7 +265,15 @@
         </div>
     </div>
 
+    <!-- JavaScript to change color of <option selected> -->
+    <script>
+        $(".choice").change(function () {
+            if($(this).val() === "0") $(this).addClass("empty");
+            else $(this).removeClass("empty")
+        });
 
+        $(".choice").change();
+    </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
