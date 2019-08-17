@@ -190,7 +190,7 @@
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post" style="padding-bottom: 0">
-                    <!-- Shipment Origin Preview -->
+                    <!-- International Shipping Quote Form Preview -->
                     <fieldset style="padding-bottom: 50px; margin: 0 0 30px">
                         <legend>Shipment Origin</legend>
                             <!-- Shipment Origin Preview -->
