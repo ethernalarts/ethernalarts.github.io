@@ -1649,7 +1649,7 @@ button.w3-button.w3-red-cancel:hover {
 
 button.w3-button.w3-black-previous {
     color: whitesmoke !important;
-    background-color: #373737 !important;
+    background-color: #414141 !important;
     margin: 0 6px 0 12px;
     padding: 8px 20px;
     font-family: Montserrat, serif;
@@ -1661,7 +1661,7 @@ button.w3-button.w3-black-previous {
 }
 
 button.w3-button.w3-black-previous:hover {
-    box-shadow: 0 8px 16px 0 #373737, 0 6px 20px 0 #373737;
+    box-shadow: 0 8px 16px 0 #414141, 0 6px 20px 0 #414141;
 }
 
 .w3-black-cancel:hover {

@@ -156,7 +156,7 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.php"  class="active" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-is-1.php" class="active" style="padding-top: 0">International Shipping</a>
                         <a href="quote-ec.php">Express Courier</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
@@ -190,7 +190,7 @@
             <div class="w3-card-quote-is">
 
                 <!-- International Shipping Quote Form Preview -->
-                <form class="container-form" method="post" action="php/is-submit.php" style="padding-bottom: 0">
+                <form class="container-form" method="post" action="is-submit-skip.php" style="padding-bottom: 0">
 
                     <!-- Shipment Origin Preview -->
                     <fieldset style="margin: 0 0 30px">
@@ -291,13 +291,13 @@
                                     <!-- Full Name -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Full Name (Company): <?php echo $_SESSION['name_reAdd'] ?> ">
+                                               placeholder="Full Name (Company): <?php echo $_SESSION['name'] ?> ">
                                     </label>
 
                                     <!-- Contact Name -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Contact Name: <?php echo $_SESSION['contact_name_reAdd'] ?> ">
+                                               placeholder="Contact Name: <?php echo $_SESSION['contact_name'] ?> ">
                                     </label>
 
                                     <!-- Gender -->
@@ -309,61 +309,61 @@
                                     <!-- Country -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Country: <?php echo $_SESSION['country_reAdd'] ?> ">
+                                               placeholder="Country: <?php echo $_SESSION['country'] ?> ">
                                     </label>
 
                                     <!-- State -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="State: <?php echo $_SESSION['state_reAdd'] ?> ">
+                                               placeholder="State: <?php echo $_SESSION['state'] ?> ">
                                     </label>
 
                                     <!-- City -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="City: <?php echo $_SESSION['city_reAdd'] ?> ">
+                                               placeholder="City: <?php echo $_SESSION['city'] ?> ">
                                     </label>
 
                                     <!-- Zip Code -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Zip Code: <?php echo $_SESSION['zip_code_reAdd'] ?> ">
+                                               placeholder="Zip Code: <?php echo $_SESSION['zip_code'] ?> ">
                                     </label>
 
                                     <!-- Email -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Email: <?php echo $_SESSION['email_reAdd'] ?> ">
+                                               placeholder="Email: <?php echo $_SESSION['email'] ?> ">
                                     </label>
 
                                     <!-- Street Address -->
                                     <label>
                                         <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Street Address: <?php echo $_SESSION['street_address_reAdd'] ?> ">
+                                               placeholder="Street Address: <?php echo $_SESSION['street_address'] ?> ">
                                     </label>
 
                                     <!-- Apartment -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Apartment: <?php echo $_SESSION['apartment_suite_reAdd'] ?> ">
+                                               placeholder="Apartment/Floor etc: <?php echo $_SESSION['apartment_suite'] ?> ">
                                     </label>
 
                                     <!-- Department -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Department: <?php echo $_SESSION['department_reAdd'] ?> ">
+                                               placeholder="Department: <?php echo $_SESSION['department'] ?> ">
                                     </label>
 
                                     <!-- Phone Number -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Phone Number: <?php echo $_SESSION['phone_reAdd'] ?> ">
+                                               placeholder="Phone Number: <?php echo $_SESSION['phone'] ?> ">
                                     </label>
 
                                     <!-- Residential Address? -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Residential Address? <?php echo $_SESSION['residential_reAdd'] ?> ">
+                                               placeholder="Residential Address? <?php echo $_SESSION['residential_add'] ?> ">
                                     </label><br>
 
                                     <!-- Edit Button -->

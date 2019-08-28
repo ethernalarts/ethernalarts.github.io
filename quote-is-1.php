@@ -43,10 +43,6 @@
             font-size: 1.03em;
         }
 
-        #stateId, #state_Id {
-            float: right;
-        }
-
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
             #hi {
@@ -177,21 +173,30 @@
                 <form class="container-form" method="post" style="padding-bottom: 0" action="quote-is-2.php">
 
                     <!-- Shipment Origin -->
-                    <fieldset style="margin: 0 0 20px; padding-bottom: 0">
+                    <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
                         <legend>Shipment Origin:</legend>
                             <!-- Full Name -->
                             <label>
-                                <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name" type="text" required>
+                                <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name" 
+                                       id="name" type="text" required>
                             </label>
 
                             <!-- Contact Name -->
                             <label>
-                                <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;" name="contact_name" type="text" required>
+                                <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;" name="contact_name"
+                                       id="contact_name" type="text" required>
                             </label>
+
+                            <!-- Gender -->
+                            <select class="choice" name="gender" required>
+                                <option value="0" selected="selected">Gender:   *</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
 
                             <!-- Country -->
                             <label for="countryId">
-                                <select name="country" class="choice countries" id="countryId" type="select" required>
+                                <select name="country" style="float: right" class="choice countries" id="countryId" type="select" required>
                                     <option value="0" selected="selected">Country:  *</option>
                                 </select>
                             </label>
@@ -205,15 +210,21 @@
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city" class="choice cities" id="cityId" type="select" required>
+                                <select name="city" style="float: right" class="choice cities" id="cityId" type="select" required>
                                     <option value="0" selected="selected">City:  *</option>
                                 </select>
                             </label>
 
                             <!-- Zip Code -->
                             <label>
-                                <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
+                                <input class="w3-light-gray" placeholder="Zip Code:  *"
                                        name="zip_code" type="number" required>
+                            </label>
+
+                            <!-- Email -->
+                            <label>
+                                <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="email"
+                                       placeholder="Email:  *" type="email" required>
                             </label>
 
                             <!-- Street Address -->
@@ -224,27 +235,31 @@
 
                             <!-- Apartment, suite, building -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="apartment_suite"
-                                       placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" name="apartment_suite"
+                                       placeholder="Apartment, unit, suite, building, floor, etc.:  *" type="text">
                             </label>
 
                             <!-- Department -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="department_c/o"
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="department"
                                        placeholder="Department, c/o, etc.: " type="text">
                             </label>
 
                             <!-- Telephone -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="phone"
+                                <input class="w3-input w3-border-0 w3-light-gray" name="phone"
                                        placeholder="Telephone:  *" type="number" required>
                             </label>
 
-                            <!-- Email -->
+                            <!-- Residential Address -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" name="email"
-                                       placeholder="Email:  *" type="email" required>
+                                <select  style="float: right" name="residential_add" class="choice" required>
+                                    <option value="0" selected="selected">Is this a residential address?   *</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
                             </label>
+
                         </fieldset>
 
 

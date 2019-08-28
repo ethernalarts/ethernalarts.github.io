@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/quote-ec-2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec-3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec-4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-is-review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm">
+      <change afterPath="$PROJECT_DIR$/quote-is-4-skip.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quote-is-review-skip.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/back-to-top.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/back-to-top.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/misc.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/misc.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/mobile-menu-top.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mobile-menu-top.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/vlink.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vlink.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/w3.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/w3.css" afterDir="false" />
@@ -23,17 +17,14 @@
       <change beforePath="$PROJECT_DIR$/getaquote3.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/images/index-bkgrd-pic-dark.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/images/intl-shipping.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-tracker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/package-tracker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-tracker/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/package-tracker/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/is-submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/is-submit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quote-is-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quote-is-2.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quote-is-3-skip.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-3-skip.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quote-is-3.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quote-is-4.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quote-is-final.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-final.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quote-is-review.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-review.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +142,9 @@
       <workItem from="1564954947158" duration="6605000" />
       <workItem from="1565428775598" duration="26701000" />
       <workItem from="1565981573583" duration="10631000" />
-      <workItem from="1566050219485" duration="688000" />
+      <workItem from="1566050219485" duration="35703000" />
+      <workItem from="1566566820491" duration="23176000" />
+      <workItem from="1566901095110" duration="6363000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>
@@ -237,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564520057588</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
+      <created>1566575493938</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1566575493938</updated>
+    </task>
+    <task id="LOCAL-00014" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
+      <created>1566575591669</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1566575591669</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

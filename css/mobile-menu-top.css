@@ -129,7 +129,7 @@
         padding: 7px 20px;
     }
 
-    .dropbtn:focus {
+    .dropbtn:focus, .dropbtn a.active {
         color: whitesmoke;
         border-top: 0 solid whitesmoke;
         padding: 10px 20px;
@@ -163,10 +163,10 @@
     }
 
     .dropdownnav-content a:hover {
-        font-weight: 500;
+        font-weight: 600;
         width: 100%;
-        color: whitesmoke;
-        background-color: #b93131;
+        color: #b93131;
+        background-color: transparent;
     }
 
     .dropdownnav-content a:focus {
@@ -178,9 +178,10 @@
 
     .dropdownnav-content a.active,
     .dropdownnav-content a.active:hover {
-        font-weight: 600;
-        color: #b93131;
-        background-color: transparent;
+        font-weight: 500;
+        width: 100%;
+        color: whitesmoke;
+        background-color: #b93131;
     }
 
     .show {

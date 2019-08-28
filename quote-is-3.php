@@ -11,9 +11,10 @@
     $_SESSION['zip_code_reAdd'] = $_POST['zip_code_reAdd'];
     $_SESSION['street_address_reAdd'] = $_POST['street_address_reAdd'];
     $_SESSION['apartment_suite_reAdd'] = $_POST['apartment_suite_reAdd'];
-    $_SESSION['department_c/o_reAdd'] = $_POST['department_c/o_reAdd'];
+    $_SESSION['department_reAdd'] = $_POST['department_reAdd'];
     $_SESSION['phone_reAdd'] = $_POST['phone_reAdd'];
     $_SESSION['email_reAdd'] = $_POST['email_reAdd'];
+    $_SESSION['residential_reAdd'] = $_POST['residential_reAdd'];
 
     // Sanitizing email field to remove unwanted characters.
     $_POST['email_reAdd'] = filter_var($_POST['email_reAdd'], FILTER_SANITIZE_EMAIL);
@@ -67,9 +68,6 @@
             font-size: 0.95em;
         }
 
-        #stateId {
-            float: right;
-        }
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
             .container {
@@ -206,76 +204,83 @@
                         <legend>Shipment Destination:</legend>
                             <!-- Full Name -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  *"
-                                       name="name_dest" type="text" required>
+                                <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_dest" type="text" required>
                             </label>
 
-                            <!-- Contact Person -->
+                            <!-- Contact Name -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       name="contact_name_dest" placeholder="Contact Name:  *" type="text" required>
+                                <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;" name="contact_name_dest" type="text" required>
+                            </label>
+
+                            <!-- Gender -->
+                            <label>
+                                <select class="choice" name="gender" required>
+                                    <option value="0" selected="selected">Gender:   *</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
                             </label>
 
                             <!-- Country -->
                             <label for="countryId">
-                                <select name="country_dest" class="choice countries" id="countryId" required>
+                                <select name="country_dest" style="float: right" class="choice countries" id="countryId" type="select" required>
                                     <option value="0" selected="selected">Country:  *</option>
                                 </select>
                             </label>
 
                             <!-- State -->
                             <label for="stateId">
-                                <select name="state_dest" class="choice states" id="stateId" required>
+                                <select name="state_dest" class="choice states" id="stateId" type="select" required>
                                     <option value="0" selected="selected">State:  *</option>
                                 </select>
                             </label>
 
                             <!-- City -->
                             <label for="cityId">
-                                <select name="city_dest" class="choice cities" id="cityId" type="select" required>
+                                <select name="city_dest" style="float: right" class="choice cities" id="cityId" type="select" required>
                                     <option value="0" selected="selected">City:  *</option>
                                 </select>
                             </label>
 
                             <!-- Post Code -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Post Code: "
-                                name="post_code_dest"type="number">
-                            </label>
-
-                            <!-- Street Address -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
-                                name="street_address_dest"type="text" required>
-                            </label>
-
-                            <!-- Apartment, unit, suite -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Apartment, unit, suite, building, floor, etc.:  *"
-                                name="apartment_suite_dest"type="text" required>
-                            </label>
-
-                            <!-- Department -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Department, c/o, etc.: "
-                                name="department_c/o_dest"type="text">
+                                <input class="w3-light-gray" placeholder="Post Code:  *"
+                                       name="post_code_dest" type="number" required>
                             </label>
 
                             <!-- Email -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *" style="float: right"
-                                       name="email_dest" type="email" required>
+                                <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="email_dest"
+                                       placeholder="Email:  *" type="email" required>
+                            </label>
+
+                            <!-- Street Address -->
+                            <label>
+                                <input class="w3-light-gray" style="width: 100%"
+                                       placeholder="Street Address:  *" name="street_address_dest" type="text" required>
+                            </label>
+
+                            <!-- Apartment, suite, building -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" name="apartment_suite_dest"
+                                       placeholder="Apartment, unit, suite, building, floor, etc.:  " type="text">
+                            </label>
+
+                            <!-- Department -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" name="department_dest"
+                                       placeholder="Department, c/o, etc.: " type="text">
                             </label>
 
                             <!-- Telephone -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Telephone:  *"
-                                name="phone_dest"type="number" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" name="phone_dest"
+                                       placeholder="Telephone:  *" type="number" required>
                             </label>
 
                             <!-- Residential Address -->
                             <label>
-                                <select  style="float: right" name="residential_add" class="choice">
+                                <select  style="float: right" name="residential_add_dest" class="choice" required>
                                     <option value="0" selected="selected">Is this a residential address?   *</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
@@ -304,7 +309,7 @@
                     <!-- Previous, Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
+                            <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
                             <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
                             <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                         </div>

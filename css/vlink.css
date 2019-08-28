@@ -162,7 +162,7 @@
         background-image: url('../images/index-bkgrd-pic.jpg');
 
         /* Set a specific height */
-        min-height: 500px;
+        min-height: 480px;
 
         /* Create the parallax scrolling effect */
         background-attachment: fixed;
@@ -302,7 +302,7 @@
     .subheader-h2 {
         font-family: Oswald, serif;
         display: block;
-        margin: 300px auto 0;
+        margin: 280px auto 0;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.95);
         padding: 10px 20px;
@@ -432,6 +432,7 @@
         margin: 0 0 33px;
         width: 47%;
         display: inline-block;
+        overflow: visible;
     }
 
     .container-form select {
@@ -450,7 +451,12 @@
         margin: 0 0 33px;
     }
 
-    .choice option { color: black; }
+    .choice option {
+        color: black;
+        padding: 15px;
+        font-family: Verdana, Montserrat, serif;
+    }
+
     .empty { color: #696969; }
 
     legend {

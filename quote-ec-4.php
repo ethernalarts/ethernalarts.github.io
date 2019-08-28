@@ -252,7 +252,7 @@
 
                                     <!-- Edit Button -->
                                     <label>
-                                        <button style="float: left" onClick="javascript:history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                                        <button style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
                                     </label>
                             </fieldset>
 
@@ -333,7 +333,7 @@
 
                                     <!-- Edit Button -->
                                     <label>
-                                        <button style="float: left" onClick="javascript:history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                                        <button style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
                                     </label>
                             </fieldset>
                     </fieldset>
@@ -386,7 +386,7 @@
 
                             <!-- Edit Button -->
                             <label>
-                                <button style="float: left" onClick="javascript:history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                                <button style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</button>
                             </label>
                     </fieldset>
 
@@ -462,7 +462,7 @@
 
                             <!-- Edit Button -->
                             <label>
-                                <button style="float: left" onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                                <button style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</button>
                             </label>
 
                     </fieldset>

@@ -199,11 +199,13 @@
                         </label>
 
                         <!-- Gender -->
-                        <select class="choice" name="gender" required>
-                            <option value="0" selected="selected">Gender:   *</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
+                        <label>
+                            <select class="choice" name="gender" required>
+                                <option value="0" selected="selected">Gender:   *</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </label>
 
                         <!-- Marital Status -->
                         <label>

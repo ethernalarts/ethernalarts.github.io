@@ -2,18 +2,23 @@
     //start the session
     session_start();
 
+    $name = $_SESSION['name'];
+
     //store posted values in the session variables
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['contact_name'] = $_POST['contact_name'];
+    $_SESSION['gender'] = $_POST['gender'];
     $_SESSION['country'] = $_POST['country'];
     $_SESSION['state'] = $_POST['state'];
     $_SESSION['city'] = $_POST['city'];
     $_SESSION['zip_code'] = $_POST['zip_code'];
     $_SESSION['street_address'] = $_POST['street_address'];
     $_SESSION['apartment_suite'] = $_POST['apartment_suite'];
-    $_SESSION['department_c/o'] = $_POST['department_c/o'];
+    $_SESSION['department'] = $_POST['department'];
     $_SESSION['phone'] = $_POST['phone'];
     $_SESSION['email'] = $_POST['email'];
+    $_SESSION['residential_add'] = $_POST['residential_add'];
+    $_SESSION['status_updates'] = $_POST['status_updates'];
 
     // Sanitizing email field to remove unwanted characters.
     $_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
@@ -61,14 +66,26 @@
             background-image: none;
         }
 
+        .skip {
+            margin: 40px 0 0;
+            text-align: center;
+            font-family: Verdana, serif;
+            font-weight: 600;
+            font-size: 1.2em;
+            color: #555555;
+            text-decoration: underline;
+        }
+
+        .w3-button:hover {
+            color: #414141 !important;
+            background-color: transparent !important;
+            box-shadow: none;
+        }
+
         .countries, .states {
             background-color: white;
             border-bottom: 1px solid #878787;
             font-size: 0.95em;
-        }
-
-        #stateId {
-            float: right;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -101,12 +118,12 @@
                 font: 1.3em Verdana, sans-serif;
             }
 
-            .container {
-                padding: 0 20px !important;
+            #skip {
+                font-size: 1.1em;
             }
 
-            .container-checkbox {
-                text-align: center;
+            .container {
+                padding: 0 20px !important;
             }
 
             button.w3-button.w3-red-cancel {
@@ -206,103 +223,125 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 5)</span>
             </div>
 
-            <h2 id="hi">Give us a return address</h2>
+            <h2 id="hi">Return Address</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
 
             <!-- Container for Return Address  -->
-            <div style="padding: 40px 0 0" class="w3-card-4">
+            <div class="w3-card-4">
 
                 <!-- Toggle (different return address) -->
-                <div style="margin: 0 0 30px; text-align: center" class="sliderWrapper">
-                    Use a different return address?
-                    <label class="switch">
-                        <input type="checkbox" onclick="toggle_visibility('returnAdd')">
-                        <span class="slider"></span>
-                    </label>
-                </div>
+                <form method="post" style="text-align: center" action="quote-is-3-skip.php">
+                    <button type="submit" class="skip w3-button w3-medium">
+                        Skip, use shipment's origin's address
+                    </button>
+                </form>
 
+<!--                <div style="margin: 0 0 30px; text-align: center" class="sliderWrapper">-->
+<!--                    Skip, I do not want to use a different Return Address-->
+<!--                    <label class="switch">-->
+<!--                        <input type="checkbox" onclick="toggle_visibility('returnAdd')">-->
+<!--                        <span class="slider"></span>-->
+<!--                    </label>-->
+<!--                </div>-->
 
                     <!-- Return Address Form -->
-                    <form class="container-form" method="post" action="quote-is-3.php" style="padding: 0 50px">
-                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px; display: none">
+                    <form class="container-form" method="post" action="quote-is-3.php" style="padding-bottom: 0">
+                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
                             <legend>Return Address</legend>
-                            <!-- Full Name -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  "
-                                       name="name_reAdd" type="text">
-                            </label>
+                                <!-- Full Name -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Full Name (or Company):  *"
+                                           name="name_reAdd" type="text"required>
+                                </label>
 
-                            <!-- Contact Name -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Contact Name:  " name="contact_name_reAdd" type="text">
-                            </label>
+                                <!-- Contact Name -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                           placeholder="Contact Name:  *" name="contact_name_reAdd" type="text" required>
+                                </label>
 
-                            <!-- Country -->
-                            <label for="countryId">
-                                <select name="country_reAdd" class="choice countries" id="countryId">
-                                    <option value="0" selected="selected">Country:  </option>
-                                </select>
-                            </label>
+                                <!-- Gender -->
+                                <label>
+                                    <select class="choice" name="gender" required>
+                                        <option value="0" selected="selected">Gender:  *</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </label>
 
-                            <!-- State -->
-                            <label for="stateId">
-                                <select name="state_reAdd" class="choice states" id="stateId">
-                                    <option value="0" selected="selected">State:  </option>
-                                </select>
-                            </label>
+                                <!-- Country -->
+                                <label for="countryId">
+                                    <select name="country_reAdd" style="float: right" class="choice countries" id="countryId" required>
+                                        <option value="0" selected="selected">Country:  *</option>
+                                    </select>
+                                </label>
 
-                            <!-- City -->
-                            <label for="cityId">
-                                <select name="city_reAdd" class="choice cities" id="cityId">
-                                    <option value="0" selected="selected">City:  </option>
-                                </select>
-                            </label>
+                                <!-- State -->
+                                <label for="stateId">
+                                    <select name="state_reAdd" class="choice states" id="stateId" required>
+                                        <option value="0" selected="selected">State:  *</option>
+                                    </select>
+                                </label>
 
-                            <!-- Zip Code -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Zip Code:  " name="zip_code_reAdd" type="number">
-                            </label>
+                                <!-- City -->
+                                <label for="cityId">
+                                    <select name="city_reAdd" style="float: right" class="choice cities" id="cityId" required>
+                                        <option value="0" selected="selected">City:  *</option>
+                                    </select>
+                                </label>
 
-                            <!-- Street Address -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Street Address:  " name="street_address_reAdd" type="text">
-                            </label>
+                                <!-- Zip Code -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray"
+                                           placeholder="Zip Code:  *" name="zip_code_reAdd" type="number" required>
+                                </label>
 
-                            <!-- Apartment, suite -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" name="apartment_suite_reAdd"
-                                       placeholder="Apartment, unit, suite, building, floor, etc.:  " type="text">
-                            </label>
+                                <!-- Email -->
+                                <label>
+                                    <input style="float: right" class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  *"
+                                           name="email_reAdd" type="email" required>
+                                </label>
 
-                            <!-- Department -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Department, c/o, etc.: " name="department_c/o_reAdd" type="text">
-                            </label>
+                                <!-- Street Address -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
+                                           placeholder="Street Address:  *" name="street_address_reAdd" type="text" required>
+                                </label>
 
-                            <!-- Email -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Email:  "
-                                       name="email_reAdd" type="email">
-                            </label>
+                                <!-- Apartment, suite -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" name="apartment_suite_reAdd"
+                                           placeholder="Apartment, unit, suite, building, floor, etc.:  " type="text">
+                                </label>
 
-                            <!-- Telephone -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       name="phone_reAdd" placeholder="Telephone:  " type="number">
-                            </label>
+                                <!-- Department -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                           placeholder="Department, c/o, etc.: " name="department_reAdd" type="text">
+                                </label>
+
+                                <!-- Telephone -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" name="phone_reAdd"
+                                           placeholder="Telephone:  *" type="number" required>
+                                </label>
+
+                                <!-- Residential Address -->
+                                <label>
+                                    <select  style="float: right" name="residential_reAdd" class="choice" required>
+                                        <option value="0" selected="selected">Is this a residential address?   *</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
                         </fieldset>
-
 
                         <!-- Continue and Cancel Button -->
                         <div class="w3-center">
                             <div class="w3-bar">
-                                <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
+                                <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
                                 <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
                                 <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                             </div>
