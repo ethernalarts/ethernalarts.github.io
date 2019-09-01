@@ -275,7 +275,7 @@
                             <!-- Telephone -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" name="phone_dest"
-                                       placeholder="Telephone:  *" type="number" required>
+                                       placeholder="Telephone:  *" type="tel" required>
                             </label>
 
                             <!-- Residential Address -->

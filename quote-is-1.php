@@ -14,6 +14,7 @@
     <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
     <link href="css/progressbar.css" type="text/css" rel="stylesheet">
     <link href="./css/misc.css" type="text/css" rel="stylesheet">
+    <link href="css/intlTelInput.css" rel="stylesheet">
     <link href="./css/w3.css" type="text/css" rel="stylesheet">
     <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
     <link href="./css/vlink.css" type="text/css" rel="stylesheet">
@@ -119,7 +120,6 @@
         <div class="subheader-h2" style="width: 370px;">Quote - International Shipping</div>
     </div>
 
-
     <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -173,8 +173,9 @@
                 <form class="container-form" method="post" style="padding-bottom: 0" action="quote-is-2.php">
 
                     <!-- Shipment Origin -->
-                    <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
+                    <fieldset style="margin: 0 0 20px; padding-bottom: 30px">
                         <legend>Shipment Origin:</legend>
+
                             <!-- Full Name -->
                             <label>
                                 <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name" 
@@ -194,37 +195,49 @@
                                 <option value="Female">Female</option>
                             </select>
 
-                            <!-- Country -->
-                            <label for="countryId">
-                                <select name="country" style="float: right" class="choice countries" id="countryId" type="select" required>
-                                    <option value="0" selected="selected">Country:  *</option>
-                                </select>
-                            </label>
-
-                            <!-- State -->
-                            <label for="stateId">
-                                <select name="state" class="choice states" id="stateId" type="select" required>
-                                    <option value="0" selected="selected">State:  *</option>
-                                </select>
-                            </label>
-
-                            <!-- City -->
-                            <label for="cityId">
-                                <select name="city" style="float: right" class="choice cities" id="cityId" type="select" required>
-                                    <option value="0" selected="selected">City:  *</option>
-                                </select>
-                            </label>
-
-                            <!-- Zip Code -->
+                            <!-- Title -->
                             <label>
-                                <input class="w3-light-gray" placeholder="Zip Code:  *"
-                                       name="zip_code" type="number" required>
+                                <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
+                                       name="title" type="text" required>
+                            </label>
+
+                            <!-- Telephone -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" id="phone" name="phone"
+                                       placeholder="Telephone:  *" type="tel" required>
                             </label>
 
                             <!-- Email -->
                             <label>
                                 <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="email"
                                        placeholder="Email:  *" type="email" required>
+                            </label>
+
+                            <!-- Country -->
+                            <label for="countryId">
+                                <select name="country" class="choice countries" id="countryId" type="select" required>
+                                    <option value="0" selected="selected">Country:  *</option>
+                                </select>
+                            </label>
+
+                            <!-- State -->
+                            <label for="stateId">
+                                <select name="state" style="float: right" class="choice states" id="stateId" type="select" required>
+                                    <option value="0" selected="selected">State:  *</option>
+                                </select>
+                            </label>
+
+                            <!-- City -->
+                            <label for="cityId">
+                                <select name="city" class="choice cities" id="cityId" type="select" required>
+                                    <option value="0" selected="selected">City:  *</option>
+                                </select>
+                            </label>
+
+                            <!-- Zip Code -->
+                            <label>
+                                <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
+                                       name="zip_code" type="number" required>
                             </label>
 
                             <!-- Street Address -->
@@ -245,21 +258,23 @@
                                        placeholder="Department, c/o, etc.: " type="text">
                             </label>
 
-                            <!-- Telephone -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" name="phone"
-                                       placeholder="Telephone:  *" type="number" required>
-                            </label>
-
                             <!-- Residential Address -->
-                            <label>
-                                <select  style="float: right" name="residential_add" class="choice" required>
-                                    <option value="0" selected="selected">Is this a residential address?   *</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                            </label>
+<!--                            <label>-->
+<!--                                <select  style="float: right" name="residential_add" class="choice" required>-->
+<!--                                    <option value="0" selected="selected">Is this a residential address?   *</option>-->
+<!--                                    <option value="Yes">Yes</option>-->
+<!--                                    <option value="No">No</option>-->
+<!--                                </select>-->
+<!--                            </label>-->
 
+                            <!-- Toggle (residential address?) -->
+                            <div class="sliderWrapper" style="margin: 7px 0">
+                                <span style="margin-left: 3px;">Is this a residential address?</span>
+                                <label class="switch">
+                                    <input type="checkbox" name="residential_add">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
                         </fieldset>
 
 
@@ -292,6 +307,15 @@
         });
 
         $(".choice").change();
+    </script>
+
+    <!-- International Telephone Country Code -->
+    <script src="js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            utilsScript: "js/utils.js?1562189064761"
+        });
     </script>
 
     <!-- JavaScript to loop through quote form -->

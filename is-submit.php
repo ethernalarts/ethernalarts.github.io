@@ -25,19 +25,19 @@
   $residential_add = $_SESSION['residential_add'];
 
   //Return Address (IS)
-  $name_reAdd = $_SESSION['name'];
-  $contact_name_reAdd = $_SESSION['contact_name'];
+  $name_reAdd = $_SESSION['name_reAdd'];
+  $contact_name_reAdd = $_SESSION['contact_name_reAdd'];
   $gender = $_SESSION['gender'];
-  $country_reAdd = $_SESSION['country'];
-  $state_reAdd = $_SESSION['state'];
-  $city_reAdd = $_SESSION['city'];
-  $zip_code_reAdd = $_SESSION['zip_code'];
-  $street_address_reAdd = $_SESSION['street_address'];
-  $apartment_suite_reAdd = $_SESSION['apartment_suite'];
-  $department_reAdd = $_SESSION['department'];
-  $email_reAdd = $_SESSION['email'];
-  $phone_reAdd = $_SESSION['phone'];
-  $residential_reAdd = $_SESSION['residential_add'];
+  $country_reAdd = $_SESSION['country_reAdd'];
+  $state_reAdd = $_SESSION['state_reAdd'];
+  $city_reAdd = $_SESSION['city_reAdd'];
+  $zip_code_reAdd = $_SESSION['zip_code_reAdd'];
+  $street_address_reAdd = $_SESSION['street_address_reAdd'];
+  $apartment_suite_reAdd = $_SESSION['apartment_suite_reAdd'];
+  $department_reAdd = $_SESSION['department_reAdd'];
+  $email_reAdd = $_SESSION['email_reAdd'];
+  $phone_reAdd = $_SESSION['phone_reAdd'];
+  $residential_reAdd = $_SESSION['residential_reAdd'];
 
   //Shipment Destination (IS)
   $name_dest = $_SESSION['name_dest'];

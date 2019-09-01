@@ -3,25 +3,20 @@
     session_start();
 
     //store posted values in the session variables
-    $_SESSION['name'] = $_POST['name'];
-    $_SESSION['title'] = $_POST['title'];
-    $_SESSION['gender'] = $_POST['gender'];
-    $_SESSION['marital_status'] = $_POST['marital_status'];
-    $_SESSION['age'] = $_POST['age'];
-    $_SESSION['email'] = $_POST['email'];
-    $_SESSION['phone'] = $_POST['phone'];
-    $_SESSION['occupation'] = $_POST['occupation'];
-    $_SESSION['contact_name'] = $_POST['contact_name'];
-    $_SESSION['contact_phone'] = $_POST['contact_phone'];
-    $_SESSION['state'] = $_POST['state'];
-    $_SESSION['city'] = $_POST['city'];
-    $_SESSION['zip_code'] = $_POST['zip_code'];
-    $_SESSION['street_address'] = $_POST['street_address'];
-    $_SESSION['apartment'] = $_POST['apartment'];
-    $_SESSION['department'] = $_POST['department'];
-    $_SESSION['pickup_date'] = $_POST['pickup_date'];
-    $_SESSION['pickup_time'] = $_POST['pickup_time'];
-    $_SESSION['residential_add'] = $_POST['residential_add'];
+    $_SESSION['name_ec_ra'] = $_POST['name_ec_ra'];
+    $_SESSION['contactname_ec_ra'] = $_POST['contactname_ec_ra'];
+    $_SESSION['gender_ec_ra'] = $_POST['gender_ec_ra'];
+    $_SESSION['title_ec_ra'] = $_POST['title_ec_ra'];
+    $_SESSION['phone_ec_ra'] = $_POST['phone_ec_ra'];
+    $_SESSION['email_ec_ra'] = $_POST['email_ec_ra'];
+    $_SESSION['country_ec_ra'] = $_POST['country_ec_ra'];
+    $_SESSION['state_ec_ra'] = $_POST['state_ec_ra'];
+    $_SESSION['city_ec_ra'] = $_POST['city_ec_ra'];
+    $_SESSION['zipcode_ec_ra'] = $_POST['zipcode_ec_ra'];
+    $_SESSION['address_ec_ra'] = $_POST['address_ec_ra'];
+    $_SESSION['apt_ec_ra'] = $_POST['apt_ec_ra'];
+    $_SESSION['dept_ec_ra'] = $_POST['dept_ec_ra'];
+    $_SESSION['resAdd_ec_ra'] = $_POST['resAdd_ec_ra'];
 ?>
 
 <!doctype html>
@@ -146,7 +141,6 @@
         <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
     </div>
 
-
     <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -172,7 +166,6 @@
             </div>
         </div>
 
-
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container" style="padding: 0 210px">
 
@@ -182,11 +175,11 @@
             <!-- Progress circles which indicates the steps of the form: -->
             <div style="text-align:center; margin-bottom: 40px;">
                 <span class="step finish"></span>
+                <span class="step finish"></span>
                 <span class="step active"></span>
                 <span class="step"></span>
-                <span class="step"></span>
                 <span class="step"></span><br><br>
-                <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 5)</span>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 5)</span>
             </div>
 
             <h2 id="hi">Package Dimensions</h2>
@@ -198,66 +191,66 @@
 
                     <!-- Express Courier Get a quote form -->
                     <form class="container-form" method="post" action="quote-ec-3.php" style="padding-bottom: 0">
+
                         <fieldset style="margin: 0 0 20px; padding-bottom: 10px">
+
                             <legend>Package Details</legend>
 
-                            <!-- Weight -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (lbs):  *"
-                                       name="weight" type="number" required>
-                            </label>
+                                <!-- Weight -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Weight (pounds):  *"
+                                           name="weight" type="number" required>
+                                </label>
 
-                            <!-- Length -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Length (in):  *"
-                                       name="length" type="number" required>
-                            </label>
+                                <!-- Length -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Length (inches):  *"
+                                           name="length" type="number" required>
+                                </label>
 
-                            <!-- Width -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (in):  *"
-                                       name="width" type="number" required>
-                            </label>
+                                <!-- Width -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Width (inches):  *"
+                                           name="width" type="number" required>
+                                </label>
 
-                            <!-- Height -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Height (in):  *"
-                                       name="height" type="number" required>
-                            </label>
+                                <!-- Height -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  *"
+                                           name="height" type="number" required>
+                                </label>
 
-                            <!-- Shipment's Worth -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): "
-                                       name="worth" type="number" required>
-                            </label>
+                                <!-- Shipment's Worth -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): "
+                                           name="worth" type="number" required>
+                                </label>
 
+                                <!-- delivery options -->
+                                <label>
+                                    <select name="delivery_options" style="float: right" class="choice">
+                                        <option value="0" selected="selected">== Delivery type ==</option>
+                                        <option value="Special Service">Special Service</option>
+                                        <option value="Time Critical Service">Time Critical Service</option>
+                                    </select>
+                                </label>
 
-                            <!-- delivery options -->
-                            <label>
-                                <select name="delivery_options" style="float: right" class="choice">
-                                    <option value="0" selected="selected">Delivery type</option>
-                                    <option value="special_service">Special Service</option>
-                                    <option value="time_critical_service">Time Critical Service</option>
-                                </select>
-                            </label>
-
-
-                            <!-- Package Description -->
-                            <label>
-                                <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
-                                          name="package_description" placeholder="Briefly describe package..."></textarea>
-                            </label>
+                                <!-- Package Description -->
+                                <label>
+                                    <textarea style="height: 120px" class="w3-light-gray"
+                                              name="pkg_descr" placeholder="Briefly describe package..."></textarea>
+                                </label>
                         </fieldset>
 
 
-                    <!-- Continue and Cancel Button -->
-                    <div class="w3-center">
-                        <div class="w3-bar">
-                            <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
-                            <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
-                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                        <!-- Continue and Cancel Button -->
+                        <div class="w3-center">
+                            <div class="w3-bar">
+                                <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
+                                <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
+                                <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                            </div>
                         </div>
-                    </div>
 
                 <!-- End of form -->
                 </form>

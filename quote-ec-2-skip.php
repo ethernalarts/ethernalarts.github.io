@@ -3,13 +3,20 @@
     session_start();
 
     //store posted values in the session variables
-    $_SESSION['weight'] = $_POST['weight'];
-    $_SESSION['length'] = $_POST['length'];
-    $_SESSION['width'] = $_POST['width'];
-    $_SESSION['height'] = $_POST['height'];
-    $_SESSION['worth'] = $_POST['worth'];
-    $_SESSION['delivery_options'] = $_POST['delivery_options'];
-    $_SESSION['pkg_descr'] = $_POST['pkg_descr'];
+    $_SESSION['name_ec'] = $_POST['name'];
+    $_SESSION['contactname_ec'] = $_POST['contactname_ec'];
+    $_SESSION['gender_ec'] = $_POST['gender_ec'];
+    $_SESSION['title_ec'] = $_POST['title_ec'];
+    $_SESSION['phone_ec'] = $_POST['phone_ec'];
+    $_SESSION['email_ec'] = $_POST['email_ec'];
+    $_SESSION['country_ec'] = $_POST['country_ec'];
+    $_SESSION['state_ec'] = $_POST['state_ec'];
+    $_SESSION['city_ec'] = $_POST['city_ec'];
+    $_SESSION['zipcode_ec'] = $_POST['zipcode_ec'];
+    $_SESSION['address_ec'] = $_POST['address_ec'];
+    $_SESSION['apt_ec'] = $_POST['apt_ec'];
+    $_SESSION['dept_ec'] = $_POST['dept_ec'];
+    $_SESSION['resAdd_ec'] = $_POST['resAdd_ec'];
 ?>
 
 <!doctype html>
@@ -19,21 +26,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Express Courier - Package Destination)</title>
+    <title>VLink Express Courier - Get a Quote (Express Courier - Package Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/statecity_dest.js"></script>
+    <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
 
@@ -48,25 +54,19 @@
             background-image: none;
         }
 
-        #stateId_dest {
-            float: right;
-        }
-
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
             width: 47%;
-            border: 1px solid #afafaf;
-        }
-
-        .countries_dest, .states_dest, .cities_dest {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
+            border: none;
+            border-bottom: 1px solid #2d2d2d;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
+            .container {
+            }
+
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -74,13 +74,13 @@
             }
 
             .container {
-                padding: 0 90px !important;
+                padding: 0 30px !important;
             }
         }
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-            #hi {
+          #hi {
                 margin: 60px 0 0;
                 text-align: center;
                 font: 1.3em Verdana, sans-serif;
@@ -90,7 +90,7 @@
                 padding: 0 30px !important;
             }
 
-            .container-form input, .container-form select{
+            .container-form input, .container-form select {
                 width: 100%;
             }
 
@@ -99,12 +99,11 @@
             }
         }
     </style>
-
 </head>
 
 <body class="body">
     <div class="parallax">
-        <!-- Header with logo and navbar -->
+        <!-- Header with logo and navbar   -->
         <header>
             <a href="index.html">
                 <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
@@ -159,7 +158,7 @@
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
                         <a href="quote-ec.php" class="active">Express Courier</a>
-                        <a href="quote-ss-1.php">Secure Storage</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>
@@ -179,135 +178,81 @@
             <div style="text-align:center; margin-bottom: 40px;">
                 <span class="step finish"></span>
                 <span class="step finish"></span>
-                <span class="step finish"></span>
                 <span class="step active"></span>
+                <span class="step"></span>
                 <span class="step"></span><br><br>
-                <span style="font: 1.25em Montserrat, sans-serif;">(Step 4 of 5)</span>
+                <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 5)</span>
             </div>
 
-            <h2 id="hi">Where is it going?</h2>
+            <h2 id="hi">Package Dimensions</h2>
 
             <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
 
-                <!-- Package Destination -->
-                <form class="container-form" method="post" action="quote-ec-review.php" style="padding-bottom: 0">
+                    <!-- Express Courier Get a quote form -->
+                    <form class="container-form" method="post" action="quote-ec-3-skip.php" style="padding-bottom: 0">
 
-                    <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 30px"">
+                        <fieldset style="margin: 0 0 20px; padding-bottom: 10px">
 
-                    <legend>Package Destination</legend>
+                            <legend>Package Details</legend>
 
-                            <!-- Full Name -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Contact Name -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
-                                       name="contactname_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Gender -->
-                            <label>
-                                <select class="choice" name="gender_ec_dest" required>
-                                    <option value="0" selected="selected">== Gender ==  *</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </label>
-
-                            <!-- Title -->
-                            <label>
-                                <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
-                                       name="title_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Telephone -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Telephone:   *" name="phone_ec_dest" type="tel" required>
-                            </label>
-
-                            <!-- Email -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" name="email_ec_dest" placeholder="Email:  *"
-                                       type="email" required>
-                            </label>
-
-                            <!-- Country (Finland) -->
-                            <label>
-                                <input name="country_ec_dest" class="countries" value="Finland" disabled>
-                            </label>
-                            <input type="hidden" name="country" id="countryId" value="FI"/>
-
-                            <!-- State -->
-                            <label for="stateId">
-                                <select name="state_ec_dest" style="float: right" class="choice states order-alpha" id="stateId" required>
-                                    <option value="0" selected="selected">State:  *</option>
-                                </select>
-                            </label><br>
-
-                            <!-- City -->
-                            <label for="cityId">
-                                <select name="city_ec_dest" style="float: left" class="choice cities order-alpha" id="cityId" required>
-                                    <option value="0" selected="selected">City:  *</option>
-                                </select>
-                            </label>
-
-                            <!-- Zip Code -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
-                                       name="zipcode_ec_dest" type="number" required>
-                            </label>
-
-                            <!-- Street Address -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
-                                       name="address_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Apartment, Suite, Unit -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
-                                       name="apt_ec_dest" type="text">
-                            </label>
-
-                            <!-- Department -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
-                                       name="dept_ec_dest" type="text">
-                            </label>
-
-                            <!-- Toggle (residential address?) -->
-                            <div class="sliderWrapper" style="margin: 7px 0">
-                                <span style="margin-left: 3px;">Is this a residential address?</span>
-                                <label class="switch">
-                                    <input type="checkbox" name="resAdd_ec_dest">
-                                    <span class="slider"></span>
+                                <!-- Weight -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Weight (pounds):  *"
+                                           name="weight" type="number" required>
                                 </label>
-                            </div>
 
-                              <!-- Residential Address -->
-<!--                              <label>-->
-<!--                                  <select  style="float: right" name="residential_add_dest" class="choice">-->
-<!--                                      <option value="0" selected="selected">Is this a residential address?   *</option>-->
-<!--                                      <option value="Yes">Yes</option>-->
-<!--                                      <option value="No">No</option>-->
-<!--                                  </select>-->
-<!--                              </label>-->
+                                <!-- Length -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Length (inches):  *"
+                                           name="length" type="number" required>
+                                </label>
+
+                                <!-- Width -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Width (inches):  *"
+                                           name="width" type="number" required>
+                                </label>
+
+                                <!-- Height -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  *"
+                                           name="height" type="number" required>
+                                </label>
+
+                                <!-- Shipment's Worth -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): "
+                                           name="worth" type="number" required>
+                                </label>
+
+                                <!-- delivery options -->
+                                <label>
+                                    <select name="delivery_options" style="float: right" class="choice">
+                                        <option value="0" selected="selected">== Delivery type ==</option>
+                                        <option value="Special Service">Special Service</option>
+                                        <option value="Time Critical Service">Time Critical Service</option>
+                                    </select>
+                                </label>
+
+                                <!-- Package Description -->
+                                <label>
+                                    <textarea style="height: 120px" class="w3-light-gray"
+                                              name="pkg_descr" placeholder="Briefly describe package..."></textarea>
+                                </label>
                         </fieldset>
 
-                            <!-- Continue and Cancel Button -->
-                            <div class="w3-center">
-                                <div class="w3-bar">
-                                    <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
-                                    <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">
-                                        Next</button>
-                                    <button type="reset" value="Reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
-                                </div>
+
+                        <!-- Continue and Cancel Button -->
+                        <div class="w3-center">
+                            <div class="w3-bar">
+                                <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
+                                <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
+                                <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                             </div>
+                        </div>
 
                 <!-- End of form -->
                 </form>

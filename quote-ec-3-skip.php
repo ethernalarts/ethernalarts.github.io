@@ -142,7 +142,6 @@
         <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
     </div>
 
-
     <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -168,7 +167,6 @@
             </div>
         </div>
 
-
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container" style="padding: 0 210px">
 
@@ -193,110 +191,101 @@
             <div class="w3-card-quote-is">
 
                 <!-- Package Destination -->
-                <form class="container-form" method="post" action="quote-ec-review.php" style="padding-bottom: 0">
+                <form class="container-form" method="post" action="quote-ec-review-skip.php" style="padding-bottom: 0">
 
-                    <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 30px"">
+                      <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 30px"">
 
-                    <legend>Package Destination</legend>
+                          <legend>Package Destination</legend>
 
-                            <!-- Full Name -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Contact Name -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
-                                       name="contactname_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Gender -->
-                            <label>
-                                <select class="choice" name="gender_ec_dest" required>
-                                    <option value="0" selected="selected">== Gender ==  *</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </label>
-
-                            <!-- Title -->
-                            <label>
-                                <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
-                                       name="title_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Telephone -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Telephone:   *" name="phone_ec_dest" type="tel" required>
-                            </label>
-
-                            <!-- Email -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" name="email_ec_dest" placeholder="Email:  *"
-                                       type="email" required>
-                            </label>
-
-                            <!-- Country (Finland) -->
-                            <label>
-                                <input name="country_ec_dest" class="countries" value="Finland" disabled>
-                            </label>
-                            <input type="hidden" name="country" id="countryId" value="FI"/>
-
-                            <!-- State -->
-                            <label for="stateId">
-                                <select name="state_ec_dest" style="float: right" class="choice states order-alpha" id="stateId" required>
-                                    <option value="0" selected="selected">State:  *</option>
-                                </select>
-                            </label><br>
-
-                            <!-- City -->
-                            <label for="cityId">
-                                <select name="city_ec_dest" style="float: left" class="choice cities order-alpha" id="cityId" required>
-                                    <option value="0" selected="selected">City:  *</option>
-                                </select>
-                            </label>
-
-                            <!-- Zip Code -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
-                                       name="zipcode_ec_dest" type="number" required>
-                            </label>
-
-                            <!-- Street Address -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
-                                       name="address_ec_dest" type="text" required>
-                            </label>
-
-                            <!-- Apartment, Suite, Unit -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
-                                       name="apt_ec_dest" type="text">
-                            </label>
-
-                            <!-- Department -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
-                                       name="dept_ec_dest" type="text">
-                            </label>
-
-                            <!-- Toggle (residential address?) -->
-                            <div class="sliderWrapper" style="margin: 7px 0">
-                                <span style="margin-left: 3px;">Is this a residential address?</span>
-                                <label class="switch">
-                                    <input type="checkbox" name="resAdd_ec_dest">
-                                    <span class="slider"></span>
+                                <!-- Full Name -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ec_dest" type="text" required>
                                 </label>
-                            </div>
 
-                              <!-- Residential Address -->
-<!--                              <label>-->
-<!--                                  <select  style="float: right" name="residential_add_dest" class="choice">-->
-<!--                                      <option value="0" selected="selected">Is this a residential address?   *</option>-->
-<!--                                      <option value="Yes">Yes</option>-->
-<!--                                      <option value="No">No</option>-->
-<!--                                  </select>-->
-<!--                              </label>-->
+                                <!-- Contact Name -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
+                                           name="contactname_ec_dest" type="text" required>
+                                </label>
+
+                                <!-- Gender -->
+                                <label>
+                                    <select class="choice" name="gender_ec_dest" required>
+                                        <option value="0" selected="selected">== Gender ==  *</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </label>
+
+                                <!-- Title -->
+                                <label>
+                                    <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
+                                           name="title_ec_dest" type="text" required>
+                                </label>
+
+                                <!-- Telephone -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Telephone:   *" name="phone_ec_dest" type="tel" required>
+                                </label>
+
+                                <!-- Email -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" name="email_ec_dest" placeholder="Email:  *"
+                                           type="email" required>
+                                </label>
+
+                                <!-- Country (Finland) -->
+                                <label>
+                                    <input name="country_ec_dest" class="countries" value="Finland" disabled>
+                                </label>
+                                <input type="hidden" name="country" id="countryId" value="FI"/>
+
+                                <!-- State -->
+                                <label for="stateId">
+                                    <select name="state_ec_dest" style="float: right" class="choice states order-alpha" id="stateId" required>
+                                        <option value="0" selected="selected">State:  *</option>
+                                    </select>
+                                </label><br>
+
+                                <!-- City -->
+                                <label for="cityId">
+                                    <select name="city_ec_dest" style="float: left" class="choice cities order-alpha" id="cityId" required>
+                                        <option value="0" selected="selected">City:  *</option>
+                                    </select>
+                                </label>
+
+                                <!-- Zip Code -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
+                                           name="zipcode_ec_dest" type="number" required>
+                                </label>
+
+                                <!-- Street Address -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
+                                           name="address_ec_dest" type="text" required>
+                                </label>
+
+                                <!-- Apartment, Suite, Unit -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
+                                           name="apt_ec_dest" type="text">
+                                </label>
+
+                                <!-- Department -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
+                                           name="dept_ec_dest" type="text">
+                                </label>
+
+                                <!-- Toggle (residential address?) -->
+                                <div class="sliderWrapper" style="margin: 7px 0">
+                                    <span style="margin-left: 3px;">Is this a residential address?</span>
+                                    <label class="switch">
+                                        <input type="checkbox" name="resAdd_ec_dest">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
                         </fieldset>
 
                             <!-- Continue and Cancel Button -->
