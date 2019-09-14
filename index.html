@@ -103,8 +103,8 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.html">Express Courier</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -136,27 +136,18 @@
 
 
                 <!-- Track Package-->
-                <form class="w3-center container-track" method="post">
-                    <p><br>Or<br><br>
-                        Track Package</p><br>
-                    <label>
-                        <input placeholder="Enter Your Consignment Number" type="number" required>
-                    </label>
-                    <button type="submit">TRACK</button>
-                </form>
+<!--                <div class="w3-center container-track">-->
+<!--                    <p><br>Or<br><br>-->
+<!--&lt;!&ndash;                        Track Package</p><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input placeholder="Enter Your Consignment Number" type="number" required>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </label>&ndash;&gt;-->
+<!--                    <a type="submit">Track Package</a>-->
+<!--                </div>-->
             </div>
         </div>
 
-
-        <!-- footer -->
-        <footer>
-            <p>
-                Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-            </p>
-        </footer>
-    </div>
-
-    <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
 
@@ -170,9 +161,9 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
-                        <a href="#">Express Courier</a>
-                        <a href="#">Secure Storage</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>
@@ -181,53 +172,79 @@
             </div>
         </div>
 
-    <!-- JavaScript Full Screen Overlay Nav -->
-    <script>
-        /* Open */
-        function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-        }
-
-        /* Close */
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
-    </script>
-
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
-    <script>
-        function myFunction() {
-            var x = document.getElementById("demo");
-            if (x.className.indexOf("w3-show") === -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+        <!-- JavaScript Full Screen Overlay Nav -->
+        <script>
+            /* Open */
+            function openNav() {
+                document.getElementById("myNav").style.height = "100%";
             }
-        }
-    </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
-    <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-        function dropDownNav() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+            /* Close */
+            function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+            }
+        </script>
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdownnav-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
+        <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("demo");
+                if (x.className.indexOf("w3-show") === -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+        <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+        <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function dropDownNav() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
                     }
                 }
             }
-        }
-    </script>
+        </script>
 
+
+        <!-- footer -->
+        <footer>
+            <p style="font-size: 1.5em">
+                3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+            </p>
+            <p style="margin: 10px 0 0; color: gray">
+                Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+            </p>
+
+            <div class="div-footer-followus">
+            <!-- <p class="footerCONTACT-h2">Follow Us</p> -->
+                <p>
+                    <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                        <i class="footer-FB fab fa-facebook-f" alt="facebook-icon"></i>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/hagco">
+                        <i class="footer-INSTA fab fa-instagram" alt="instagram-icon"></i>
+                    </a>
+                    <a target="_blank" href="https://www.twitter.com/hagco">
+                        <i class="footer-TWITTER fab fa-twitter" alt="twitter-icon"></i>
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

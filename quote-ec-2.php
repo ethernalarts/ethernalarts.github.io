@@ -17,6 +17,19 @@
     $_SESSION['apt_ec_ra'] = $_POST['apt_ec_ra'];
     $_SESSION['dept_ec_ra'] = $_POST['dept_ec_ra'];
     $_SESSION['resAdd_ec_ra'] = $_POST['resAdd_ec_ra'];
+    $_SESSION['notify_ec'] = $_POST['notify_ec'];
+
+
+    // Sanitizing email field to remove unwanted characters.
+    $_POST['email_ec_ra'] = filter_var($_POST['email_ec_ra'], FILTER_SANITIZE_EMAIL);
+
+    // Validate email.
+    if (filter_var($_POST['email_ec_ra'], FILTER_VALIDATE_EMAIL)){
+
+    } else {
+        $_SESSION['error'] = "Invalid Email Address";
+        header("location: quote-ec-1.php");//redirecting to first page
+    }
 ?>
 
 <!doctype html>
@@ -184,13 +197,17 @@
 
             <h2 id="hi">Package Dimensions</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
 
                     <!-- Express Courier Get a quote form -->
-                    <form class="container-form" method="post" action="quote-ec-3.php" style="padding-bottom: 0">
+                    <form class="container-form"  style="padding-bottom: 0" method="post" action="quote-ec-3.php">
 
                         <fieldset style="margin: 0 0 20px; padding-bottom: 10px">
 
@@ -229,7 +246,7 @@
                                 <!-- delivery options -->
                                 <label>
                                     <select name="delivery_options" style="float: right" class="choice">
-                                        <option value="0" selected="selected">== Delivery type ==</option>
+                                        <option value="0" selected="selected">Delivery type  *</option>
                                         <option value="Special Service">Special Service</option>
                                         <option value="Time Critical Service">Time Critical Service</option>
                                     </select>

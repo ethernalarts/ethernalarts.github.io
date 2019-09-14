@@ -33,7 +33,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/statecity_dest.js"></script>
+    <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
 
@@ -185,13 +185,17 @@
 
             <h2 id="hi">Where is it going?</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
 
                 <!-- Package Destination -->
-                <form class="container-form" method="post" action="quote-ec-review-skip.php" style="padding-bottom: 0">
+                <form class="container-form" style="padding-bottom: 0" method="post" action="quote-ec-review-skip.php" >
 
                       <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 30px"">
 
@@ -238,7 +242,7 @@
                                 <label>
                                     <input name="country_ec_dest" class="countries" value="Finland" disabled>
                                 </label>
-                                <input type="hidden" name="country" id="countryId" value="FI"/>
+                                <input type="hidden" name="country_ec_dest" id="countryId" value="FI"/>
 
                                 <!-- State -->
                                 <label for="stateId">
@@ -278,11 +282,11 @@
                                            name="dept_ec_dest" type="text">
                                 </label>
 
-                                <!-- Toggle (residential address?) -->
+                                !-- Toggle (residential address?) -->
                                 <div class="sliderWrapper" style="margin: 7px 0">
                                     <span style="margin-left: 3px;">Is this a residential address?</span>
                                     <label class="switch">
-                                        <input type="checkbox" name="resAdd_ec_dest">
+                                        <input type="checkbox" value="No" id="res" onclick="resAdd()" name="resAdd_ec_dest">
                                         <span class="slider"></span>
                                     </label>
                                 </div>
@@ -303,6 +307,14 @@
             </div>
         </div>
     </div>
+
+    <!-- JS to change "value" text for residential address -->
+    <script>
+        function resAdd() {
+            const res = document.getElementById("res");
+            res.value = "Yes";
+        }
+    </script>
 
     <!-- JavaScript to change color of <option selected> -->
     <script>

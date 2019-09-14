@@ -131,16 +131,63 @@
         bottom: 0;
         background-color: rgba(14, 14, 14, 0.9);
         height: auto;
-        font-family: "Lato Light", serif;
-        font-size: 0.9em;
+        font-family: "Montserrat", serif;
+        font-size: 0.85em;
         font-weight: 500;
         color: whitesmoke;
-        padding: 30px;
+        padding: 40px;
         display: block;
-        text-align: center;
+        text-align: justify;
     }
 
-    header {
+    .div-footer-followus{
+        display: inline-block;
+        float: right;
+        margin: -40px 0 0;
+    }
+
+    .footerCONTACT-h2 {
+        color: #1659FF;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 0 0 20px;
+        margin: 0;
+        font-family: Verdana, Oswald, "Oswald SemiBold", serif;
+    }
+
+    .footer-FB {
+        color: whitesmoke;
+        margin: 1px 0 0;
+        font-weight: bolder;
+        font-size: 24px;
+    }
+
+    .footer-FB:hover {
+        color: #b93131;
+    }
+
+    .footer-INSTA {
+        color: whitesmoke;
+        margin: 0 32px;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+
+    .footer-INSTA:hover {
+        color: #b93131;
+    }
+
+    .footer-TWITTER {
+        color: whitesmoke;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+
+    .footer-TWITTER:hover {
+        color: #b93131;
+    }
+
+header {
         background-color: rgba(14, 14, 14, 0.86);
         padding: 17px 17px 17px 0;
         width: 100%;
@@ -251,7 +298,7 @@
         text-align: center;
         width: 100%;
         margin: 0 auto;
-        padding: 20px;
+        padding: 0 20px 30px;
         font-weight: 500;
         display: block;
         align-items: center;
@@ -352,6 +399,26 @@
         line-height: 1.7em;
         height: auto;
         overflow: auto;
+    }
+
+    .aboutus-p {
+        text-align: left;
+        font-family: Verdana, Montserrat, Lato, Arial, serif;
+        font-size: 1.1em;
+        margin: 0 0 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        width: 70%;
+    }
+
+    .aboutus-h2 {
+        text-align: left;
+        font-family: Verdana, Montserrat, Lato, Arial, serif;
+        font-size: 1.3em;
+        margin: 0 0 20px;
+        color: #0f0f0f;
+        font-weight: 600;
+        width: 70%;
     }
 
     .but-showmore {
@@ -481,7 +548,7 @@
     }
 
     .copyright {
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 500;
     }
 
@@ -522,9 +589,16 @@
     }
 
     @media screen and (max-width: 925px) {
-    .openbtn, .overlay {
-        display: block;
-    }
+        .openbtn, .overlay {
+            display: block;
+        }
+
+        .div-footer-followus {
+            display: block;
+            float: none;
+            text-align: center;
+            margin: 40px 0 0;
+        }
 
         header {
             background-color: rgba(14, 14, 14, 0.86);
@@ -552,6 +626,22 @@
 
     /* On screens that are 600px wide or less */
     @media screen and (max-width: 600px) {
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            padding: 40px 30px;
+        }
+
+        .div-footer-followus{
+            display: inline-block;
+            float: none;
+            margin: 40px 0 0;
+        }
+
+        #edit {
+            float: left;
+            position: relative;
+        }
 
         .container {
             padding: 0;

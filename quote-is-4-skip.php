@@ -5,16 +5,20 @@
     //store posted values in the session variables
     $_SESSION['name_dest'] = $_POST['name_dest'];
     $_SESSION['contact_name_dest'] = $_POST['contact_name_dest'];
+    $_SESSION['gender'] = $_POST['gender'];
+    $_SESSION['title_dest'] = $_POST['title_dest'];
+    $_SESSION['countryCode_dest'] = $_POST['countryCode_dest'];
+    $_SESSION['phone_dest'] = $_POST['phone_dest'];
     $_SESSION['country_dest'] = $_POST['country_dest'];
     $_SESSION['state_dest'] = $_POST['state_dest'];
     $_SESSION['city_dest'] = $_POST['city_dest'];
-    $_SESSION['post_code_dest'] = $_POST['post_code_dest'];
-    $_SESSION['street_address_dest'] = $_POST['street_address_dest'];
-    $_SESSION['apartment_suite_dest'] = $_POST['apartment_suite_dest'];
+    $_SESSION['zip_code_dest'] = $_POST['zip_code_dest'];
+    $_SESSION['street_add_dest'] = $_POST['street_add_dest'];
+    $_SESSION['street_add2_dest'] = $_POST['street_add2_dest'];
     $_SESSION['department_dest'] = $_POST['department_dest'];
-    $_SESSION['phone_dest'] = $_POST['phone_dest'];
     $_SESSION['email_dest'] = $_POST['email_dest'];
     $_SESSION['residential_add_dest'] = $_POST['residential_add_dest'];
+    $_SESSION['notify_dest'] = $_POST['notify_dest'];
 
     // Sanitizing email field to remove unwanted characters.
     $_POST['email_dest'] = filter_var($_POST['email_dest'], FILTER_SANITIZE_EMAIL);

@@ -37,8 +37,7 @@
         #is, #is-h2, #ec {
         }
 
-        #is-text, #ec-text, #ss-text,
-        #tc-text, #sst-text {
+        #is-text, #ec-text, #ss-text {
             height: 250px;
             overflow: auto;
             text-align: justify;
@@ -124,9 +123,9 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html">International Shipping</a>
-                                <a href="quote-ec.html">Express Courier</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -159,189 +158,23 @@
 
 
     <!-- Inner Container that contains body content and pads it 160px left and right from <body> -->
-    <div class="container">
+    <div class="container" style="padding: 0 100px">
 
         <!-- Body Contents -->
             <div class="body-content">
 
-                    <p class="w3-center-services-h2">
-                        As businesses becomes more competitive and global, our portfolio is ever expanding
-                        with solutions to deliver the best service possible for customers.
-                        Check out all the services on offer and choose one that suits you.
+                    <p class="aboutus-h2">A Team of Specialists</p>
+                    <p class="aboutus-p">
+                        We excel at the logistics business, because we are more than a courier company.
+                        We are a solutions company powered as much by brainpower as by horsepower.
+                        Together, over 10,000 of our problem-solvers ensure your shipment(s) moves as efficiently
+                        and safely as possible. <br><br>
+
+                        By staying true to our core ideals, VLink Express Courier has achieved
+                        exponential growth.
                     </p>
 
-                <!-- Container containing three columns for services rendered -->
-                <div class="w3-row-padding services-container">
 
-                    <!-- International Shipping Modal Pop Up -->
-                    <div id="intl" class="w3-modal">
-                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
-                            <header class="w3-container w3-transparent">
-                               <span onclick="document.getElementById('intl').style.display='none'"
-                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
-                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">INTERNATIONAL SHIPPING</h2>
-                            </header>
-
-                            <div id="is-text" class="w3-container">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                                <br>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
-                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
-                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
-                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
-                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
-                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
-                                    nibh ut, posuere orci.
-                                </p>
-                                <br>
-                                <p>
-                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
-                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
-                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
-                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
-                                </p>
-                            </div>
-                            <br>
-                            <div class="w3-container w3-light-grey w3-padding-16">
-                                <a href="quote-is-1.html" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- International Shipping Box-->
-                    <div class="w3-col s4-services">
-                        <div class="w3-card-services-4" style="width: 100%">
-                            <img src="images/intl-shipping-2.jpg" alt="International Shipping Quote" style="width: 100%;">
-                            <div id="is" class="w3-container w3-center">
-                                <h2 id="is-h2" class="services-h2">INTERNATIONAL SHIPPING</h2>
-                                <p class="w3-center services-p" style="padding: 11px;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua<span id="is-dots">...</span>
-                                </p>
-                                <button type="button" class="but-showmore" id="isBtn" onclick="document.getElementById('intl')
-                                .style.display='block'">Read More</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Express Courier Modal Pop Up -->
-                    <div id="exc" class="w3-modal">
-                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
-                            <header class="w3-container w3-transparent">
-                               <span onclick="document.getElementById('exc').style.display='none'"
-                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
-                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">EXPRESS COURIER</h2>
-                            </header>
-
-                            <div id="ec-text" class="w3-container">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                                <br>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
-                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
-                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
-                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
-                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
-                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
-                                    nibh ut, posuere orci.
-                                </p>
-                                <br>
-                                <p>
-                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
-                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
-                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
-                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
-                                </p>
-                            </div>
-                            <br>
-                            <div class="w3-container w3-light-grey w3-padding-16">
-                                <a href="quote-ec.html" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Express Courier -->
-                    <div class="w3-col s4-services">
-                        <div class="w3-card-services-4" style="width: 100%">
-                            <img src="images/express-courier.jpg" alt="Express Courier" style="width: 100%;">
-                            <div id="ec" class="w3-container w3-center">
-                                <h2 class="services-h2">EXPRESS COURIER</h2>
-                                <p class="w3-center services-p" style="padding: 11px;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua<span id="ed-dots">...</span>
-                                </p>
-                                <button type="button" class="but-showmore" id="edBtn" onclick="document.getElementById('exc')
-                                .style.display='block'">Read More</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Special Services Modal Pop Up -->
-                    <div id="ss" class="w3-modal">
-                        <div class="w3-modal-content w3-card-popup w3-animate-zoom">
-                            <header class="w3-container w3-transparent">
-                               <span onclick="document.getElementById('ss').style.display='none'"
-                                     class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
-                                <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">SPECIAL SERVICES</h2>
-                            </header>
-
-                            <div id="ss-text" class="w3-container">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                                <br>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a nunc eros.
-                                    Cras vehicula mi ut ex laoreet placerat. Integer suscipit molestie augue. Vestibulum
-                                    id blandit quam. Ut efficitur euismod libero, ut egestas eros tempor ut. Ut et sem
-                                    sollicitudin, scelerisque tortor vitae, rhoncus felis. Nullam commodo rutrum blandit.
-                                    Sed maximus posuere felis, vel lobortis ligula maximus nec. Nunc id eros ultrices,
-                                    cursus purus sit amet, faucibus ante. Curabitur vitae enim sollicitudin, consequat
-                                    nibh ut, posuere orci.
-                                </p>
-                                <br>
-                                <p>
-                                    Aliquam a dui bibendum felis fermentum blandit eget eu velit.
-                                    Pellentesque vehicula mauris eros, id iaculis tortor viverra vestibulum. Vestibulum
-                                    vulputate tincidunt mauris, ut mollis eros suscipit sed. Vivamus consequat eros id arcu
-                                    luctus ultricies. Proin lacinia justo ac orci tristique, hendrerit venenatis erat maximus.
-                                </p>
-                            </div>
-                            <br>
-                            <div class="w3-container w3-light-grey w3-padding-16">
-                                <a href="quote-ec.html" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Special Services -->
-                    <div class="w3-col s4-services">
-                        <div class="w3-card-services-4" style="width: 100%">
-                            <img src="images/special-services-3.jpg" alt="Special Services" style="width: 100%;">
-                            <div class="w3-container w3-center">
-                                <h2 class="services-h2">SPECIAL SERVICES</h2>
-                                <p class="w3-center services-p" style="padding: 11px;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua<span id="sps-dots">...</span>
-                                </p>
-                                <button type="button" class="but-showmore" onclick="document.getElementById('ss')
-                                .style.display='block'">Read More</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
     </div>
 
@@ -369,24 +202,6 @@
                 <a href="track.html">Track</a>
             </div>
         </div>
-
-    <!-- JS fix - h2: International Shipping -->
-    <script>
-        function intlShipping(x) {
-            if (x.matches) {
-                document.getElementById
-                ('is-h2').innerHTML = "INT'L SHIPPING";
-            }
-            else {
-                document.getElementById
-                ('is-h2').innerHTML = "INTERNATIONAL SHIPPING";
-            }
-        }
-
-        var x = window.matchMedia("(max-width: 1050px) and (min-width: 600px");
-        intlShipping(x);
-        x.addListener(intlShipping)
-    </script>
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">

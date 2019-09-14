@@ -88,18 +88,6 @@
                 width: 70%;
             }
         }
-
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2A2A2A;
-            font-size: 0.95em;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
-        }
     </style>
 </head>
 
@@ -119,13 +107,13 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html">International Shipping</a>
-                                <a href="quote-ec.html">Express Courier</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html" class="active">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -158,9 +146,9 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.html">Express Courier</a>
-                        <a href="#">Secure Storage</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>
@@ -178,34 +166,47 @@
 
             <h3 class="w3-center-getaquote">Questions? Problems? Please tell us about it.</h3>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
 
             <!-- Container for Contact form  -->
             <div class="w3-card-4" style="margin: 65px 0 80px;">
 
                 <!-- Contact Form -->
-                <form class="container-form" style="padding-bottom: 0">
+                <form class="container-form" style="padding-bottom: 0" method="post" action="php/contact-form.php">
                     <fieldset style="margin: 0 0 20px">
                         <legend>Contact Us</legend>
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name:  *" type="text" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name:  *" name="name"
+                                       type="text" required>
+                                <span class="error"><?php echo $nameError;?></span>
                             </label>
 
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Email:  *" type="email" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Email:  *" name="email"
+                                       type="email" required>
+                                <span class="error"><?php echo $emailError;?></span>
                             </label>
 
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Phone Number:  *" type="number" required>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Phone Number:  *" name="phone"
+                                       type="tel" required>
+                                <span class="error"><?php echo $phoneError;?></span>
                             </label>
 
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Subject: " type="text">
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Subject: " name="subject"
+                                       type="text" required>
+                                <span class="error"><?php echo $subjectError;?></span>
                             </label>
 
                             <label>
-                                <textarea style="margin-bottom: 20px" class="w3-input w3-border-0 w3-light-gray" placeholder="Let's talk..."></textarea>
+                                <textarea style="margin-bottom: 20px" class="w3-input w3-border-0 w3-light-gray" name="message"
+                                          placeholder="Let's talk..."></textarea>
                             </label>
                     </fieldset>
 
@@ -213,8 +214,9 @@
                     <!-- Submit and Reset Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <button type="submit" class="w3-button w3-medium w3-green-submit">Submit</button>
-                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                            <button type="submit" value="Submit" name="submit" class="w3-button w3-medium w3-green-submit">Submit</button>
+                            <button type="reset" value="Reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
+                            <span class="success"><?php echo $successMessage;?></span>
                         </div>
                     </div>
                 </form>
@@ -293,7 +295,7 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
 </body>

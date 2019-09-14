@@ -1,3 +1,7 @@
+<?php
+session_start(); // Session starts here.
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -128,7 +132,6 @@
         <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
     </div>
 
-
     <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -154,7 +157,6 @@
             </div>
         </div>
 
-
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container" style="padding: 0 210px">
 
@@ -173,7 +175,11 @@
 
             <h2 id="hi">Hi. Please tell us about your Package</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
@@ -182,7 +188,7 @@
                 <form class="container-form" style="padding-bottom: 0"  method="post" action="quote-ec-1.php">
 
                         <!-- Package Origin -->
-                        <fieldset style="margin: 0 0 20px; padding-bottom: 30px">
+                        <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
 
                             <legend>Package Origin</legend>
 
@@ -200,7 +206,7 @@
                                 <!-- Gender -->
                                 <label>
                                     <select class="choice" name="gender_ec" required>
-                                        <option value="0" selected="selected">== Gender ==  *</option>
+                                        <option value="0" selected="selected">Gender  *</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
@@ -223,12 +229,11 @@
                                            type="email" required>
                                 </label>
 
-
                                 <!-- Country (Finland) -->
                                 <label>
                                     <input name="country_ec" class="countries" value="Finland" disabled>
                                 </label>
-                                <input type="hidden" name="country" id="countryId" value="FI"/>
+                                <input type="hidden" name="country_ec" id="countryId" value="FI"/>
 
                                 <!-- State -->
                                 <label for="stateId">
@@ -271,40 +276,33 @@
                                 <!-- Pickup date -->
                                 <label>
                                     <input class="w3-input w3-border-0 w3-light-gray" placeholder="Pickup date  *"
-                                           name="pickup_date" type="text" onfocus="(this.type='date')" id="d8" required>
+                                           name="pickupdate" type="text" onfocus="(this.type='date')" id="d8" required>
                                 </label>
 
                                 <!-- Pickup time -->
                                 <label>
                                     <input class="w3-input w3-border-0 w3-light-gray" placeholder="Pickup time  *" style="float: right"
-                                           name="pickup_time" type="text" required>
+                                           name="pickuptime" type="text" required>
                                 </label>
 
                                 <!-- Residential Address -->
-<!--                                <label>-->
-<!--                                    <select  style="float: right" name="residential_add" class="choice">-->
-<!--                                        <option value="0" selected="selected">Is this a residential address?   *</option>-->
-<!--                                        <option value="Yes">Yes</option>-->
-<!--                                        <option value="No">No</option>-->
-<!--                                    </select>-->
-<!--                                </label>-->
+                                <label>
+                                    <select  name="resAdd_ec" class="choice">
+                                        <option value="0" selected="selected">Is this a residential address?  *</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
 
-                                <!-- Toggle (residential address?) -->
-                                <div class="sliderWrapper" style="margin: 7px 0">
-                                    <span style="margin-left: 3px;">Is this a residential address?</span>
-                                    <label class="switch">
-                                        <input type="checkbox" name="resAdd_ec">
-                                        <span class="slider"></span>
-                                    </label>
-                                </div>
+                                <!-- Status Updates on Package -->
+                                <label>
+                                    <select  style="float: right" name="pkg_update_ec" class="choice">
+                                        <option value="0" selected="selected">Email you package updates? </option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
                         </fieldset>
-
-                            <!-- Check Box (Email updates on shipment) -->
-                            <label class="container-checkbox" style="font-size: 1.05em; margin: 10px 0 20px 0">
-                                Send status updates on this package using the email above
-                                <input type="checkbox" name="stat-upd8s_ec"/>
-                                <span class="checkmark"></span>
-                            </label>
 
                             <!-- Contact Address to send package to -->
                             <fieldset id="contactAddress" style="display: block; margin: 60px 0 40px">
@@ -321,8 +319,7 @@
                             <!-- Continue and Cancel Button -->
                             <div class="w3-center">
                                 <div class="w3-bar">
-                                    <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">Next
-                                    </button>
+                                    <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">Next</button>
                                     <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                                 </div>
                             </div>
@@ -332,6 +329,22 @@
             </div>
         </div>
     </div>
+
+    <!-- JS to change "value" text for residential address -->
+    <script>
+        function resAdd() {
+            const res = document.getElementById("res");
+            res.value = "Yes";
+        }
+    </script>
+
+    <!-- JS to change "value" text for Package Updates -->
+    <script>
+        function status() {
+            const x = document.getElementById("stat");
+            x.value = "Yes";
+        }
+    </script>
 
     <!-- JavaScript to change color of <option selected> -->
     <script>

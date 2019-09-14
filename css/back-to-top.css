@@ -29,7 +29,7 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     z-index: 99;
-    background-color: #2187e2;
+    background-color: rgba(33, 135, 226, 0.31);
     color: white;
     border-radius: 50%;
 }
@@ -40,24 +40,25 @@
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
-    /*border: 2px solid #7A7A7A;*/
 }
-.scroll .fa:hover {
-    padding-top: -10px;
-    color: #D3D3D3;
-}
+
 .scroll .fa {
-	font-size: 30px;
+	font-size: 20px;
 	margin-top: -5px;
 	margin-left: 1px;
 	transition: 0.5s;
 	-moz-transition: 0.5s;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
-	color: #ebebeb;
+	color: white;
+}
+
+.scroll .fa:hover {
+    padding-top: -10px;
+    color: #D3D3D3;
 }
 
 .scroll-icon {
-    color: gainsboro;
+    color: white;
     font-size: 30px;
 }

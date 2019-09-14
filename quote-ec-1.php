@@ -16,16 +16,16 @@
     $_SESSION['address_ec'] = $_POST['address_ec'];
     $_SESSION['apt_ec'] = $_POST['apt_ec'];
     $_SESSION['dept_ec'] = $_POST['dept_ec'];
-    $_SESSION['pickup_date'] = $_POST['pickup_date'];
-    $_SESSION['pickup_time'] = $_POST['pickup_time'];
+    $_SESSION['pickupdate'] = $_POST['pickupdate'];
+    $_SESSION['pickuptime'] = $_POST['pickuptime'];
     $_SESSION['resAdd_ec'] = $_POST['resAdd_ec'];
-    $_SESSION['stat_upd8s_ec'] = $_POST['stat_upd8s_ec'];
+    $_SESSION['pkg_update_ec'] = $_POST['pkg_update_ec'];
 
     // Sanitizing email field to remove unwanted characters.
-    $_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $_POST['email_ec'] = filter_var($_POST['email_ec'], FILTER_SANITIZE_EMAIL);
 
     // Validate email.
-    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+    if (filter_var($_POST['email_ec'], FILTER_VALIDATE_EMAIL)){
 
     } else {
         $_SESSION['error'] = "Invalid Email Address";
@@ -54,7 +54,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/countrystatecity.js"></script>
+    <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
 
@@ -70,7 +70,6 @@
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
-            width: 47%;
             border: 1px solid #afafaf;
             background-color: #f5f5f5;
         }
@@ -234,7 +233,11 @@
 
             <h2 id="hi">Return Address</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
 
             <!-- Container for Return Address  -->
@@ -248,9 +251,9 @@
                 </form>
 
                     <!-- Return Address Form -->
-                    <form class="container-form" method="post" action="quote-ec-2.php" style="padding-bottom: 0">
+                    <form class="container-form" method="post" action="quote-ec-2.php" style="padding-bottom: 5px">
 
-                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 30px">
+                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
 
                             <legend>Return Address</legend>
 
@@ -287,23 +290,22 @@
 
                                 <!-- Email -->
                                 <label>
-                                    <input class="w3-light-gray" style="float: right" name="email" placeholder="Email:  *"
-                                           type="email_ec_ra" required>
+                                    <input class="w3-light-gray" style="float: right" name="email_ec_ra" placeholder="Email:  *"
+                                           type="email" required>
                                 </label>
-
 
                                 <!-- Country (Finland) -->
                                 <label>
                                     <input name="country_ec_ra" class="countries" value="Finland" disabled>
                                 </label>
-                                <input type="hidden" name="country" id="countryId" value="FI"/>
+                                <input type="hidden" name="country_ec_ra" id="countryId" value="FI">
 
                                 <!-- State -->
                                 <label for="stateId">
                                     <select name="state_ec_ra" style="float: right" class="choice states order-alpha" id="stateId" required>
                                         <option value="0" selected="selected">State:  *</option>
                                     </select>
-                                </label><br>
+                                </label>
 
                                 <!-- City -->
                                 <label for="cityId">
@@ -340,11 +342,18 @@
                                 <div class="sliderWrapper" style="margin: 7px 0">
                                     <span style="margin-left: 3px;">Is this a residential address?</span>
                                     <label class="switch">
-                                        <input type="checkbox" name="resAdd_ec_ra">
+                                        <input type="checkbox" value="No" id="res" onclick="resAdd()" name="resAdd_ec_ra">
                                         <span class="slider"></span>
                                     </label>
                                 </div>
                         </fieldset>
+
+                            <!-- Check Box (Email updates on shipment) -->
+                            <label class="container-checkbox" style="font-size: 1.05em; margin: 5px 0 30px 0">
+                                Notify of return using the email above
+                                <input type="checkbox" value="No" id="stat" onclick="status()" name="notify_ec">
+                                <span class="checkmark"></span>
+                            </label>
 
                         <!-- Continue and Cancel Button -->
                         <div class="w3-center">
@@ -360,6 +369,22 @@
             </div>
         </div>
     </div>
+
+    <!-- JS to change "value" text for residential address -->
+    <script>
+        function resAdd() {
+            const res = document.getElementById("res");
+            res.value = "Yes";
+        }
+    </script>
+
+    <!-- JS to change "value" text for Package Updates -->
+    <script>
+        function status() {
+            const x = document.getElementById("stat");
+            x.value = "Yes";
+        }
+    </script>
 
     <!-- JavaScript to change color of <option selected> -->
     <script>

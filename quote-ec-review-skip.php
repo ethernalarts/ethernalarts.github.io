@@ -17,7 +17,7 @@
     $_SESSION['apt_ec_dest'] = $_POST['apt_ec_dest'];
     $_SESSION['dept_ec_dest'] = $_POST['dept_ec_dest'];
     $_SESSION['resAdd_ec_dest'] = $_POST['resAdd_ec_dest'];
-?>
+    ?>
 
 <!doctype html>
 <html lang="en">
@@ -89,12 +89,13 @@
                 font: 1.3em Verdana, sans-serif;
             }
 
-            .container {
-                padding: 0 30px !important;
+            #edit {
+                width: 40%;
+                padding: 12px;
             }
 
-            fieldset {
-                font-size: 98%;
+            .container {
+                padding: 0 30px !important;
             }
 
             .container-form input, .container-form select {
@@ -149,7 +150,6 @@
         <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
     </div>
 
-
     <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -175,7 +175,6 @@
             </div>
         </div>
 
-
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container" style="padding: 0 200px">
 
@@ -198,7 +197,7 @@
             <div class="w3-card-quote-is">
 
                 <!-- Get a Quote form -->
-                <form class="container-form" method="post" style="padding-bottom: 0" action="ec-submit.php">
+                <form class="container-form" method="post" style="padding-bottom: 0" action="ec-submit-skip.php">
 
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
@@ -286,19 +285,19 @@
                                 <!-- Pickup Date -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Pickup Date: <?php echo $_SESSION['pickup_date'] ?> ">
+                                           placeholder="Pickup Date: <?php echo $_SESSION['pickupdate'] ?> ">
                                 </label>
 
                                 <!-- Pickup Time -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                           placeholder="Pickup Time: <?php echo $_SESSION['pickup_time'] ?> ">
+                                           placeholder="Pickup Time: <?php echo $_SESSION['pickuptime'] ?> ">
                                 </label>
 
-                                <!-- Status Updates -->
+                                <!-- Package Updates -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Status Updates? <?php echo $_SESSION['stat_upd8s_ec'] ?> ">
+                                           placeholder="Email Package Updates? <?php echo $_SESSION['pkg_update_ec'] ?> ">
                                 </label>
 
                                 <!-- Residential Address -->
@@ -309,7 +308,7 @@
 
                                 <!-- Edit Button -->
                                 <label>
-                                    <button style="float: left" onClick="history.go(-3)"
+                                    <button style="float: left" onClick="history.go(-3)" id="edit"
                                             class="w3-button w3-medium w3-green-continue">Edit
                                     </button>
                                 </label>
@@ -323,37 +322,37 @@
                             <!-- Name -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Full Name: <?php echo $_SESSION['name_ec_ra'] ?> ">
+                                       placeholder="Full Name: <?php echo $_SESSION['name_ec'] ?> ">
                             </label>
 
                             <!-- Contact Name -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Contact Name: <?php echo $_SESSION['contactname_ec_ra'] ?> ">
+                                       placeholder="Contact Name: <?php echo $_SESSION['contactname_ec'] ?> ">
                             </label>
 
                             <!-- Gender -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Gender: <?php echo $_SESSION['gender_ec_ra'] ?> ">
+                                       placeholder="Gender: <?php echo $_SESSION['gender_ec'] ?> ">
                             </label>
 
                             <!-- Title -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Title: <?php echo $_SESSION['title_ec_ra'] ?> ">
+                                       placeholder="Title: <?php echo $_SESSION['title_ec'] ?> ">
                             </label>
 
                             <!-- Phone Number -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Phone Number: <?php echo $_SESSION['phone_ec_ra'] ?> ">
+                                       placeholder="Phone Number: <?php echo $_SESSION['phone_ec'] ?> ">
                             </label>
 
                             <!-- Email -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Email: <?php echo $_SESSION['email_ec_ra'] ?> ">
+                                       placeholder="Email: <?php echo $_SESSION['email_ec'] ?> ">
                             </label>
 
                             <!-- Country -->
@@ -365,55 +364,55 @@
                             <!-- State -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="State: <?php echo $_SESSION['state_ec_ra'] ?> ">
+                                       placeholder="State: <?php echo $_SESSION['state_ec'] ?> ">
                             </label>
 
                             <!-- City -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="City: <?php echo $_SESSION['city_ec_ra'] ?> ">
+                                       placeholder="City: <?php echo $_SESSION['city_ec'] ?> ">
                             </label>
 
                             <!-- Zip Code -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Zip Code: <?php echo $_SESSION['zipcode_ec_ra'] ?> ">
+                                       placeholder="Zip Code: <?php echo $_SESSION['zipcode_ec'] ?> ">
                             </label>
 
                             <!-- Street Address -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Street Address: <?php echo $_SESSION['address_ec_ra'] ?> ">
+                                       placeholder="Street Address: <?php echo $_SESSION['address_ec'] ?> ">
                             </label>
 
                             <!-- Apartment -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Apartment: <?php echo $_SESSION['apt_ec_ra'] ?> ">
+                                       placeholder="Apartment: <?php echo $_SESSION['apt_ec'] ?> ">
                             </label>
 
                             <!-- Department -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Department: <?php echo $_SESSION['dept_ec_ra'] ?> ">
+                                       placeholder="Department: <?php echo $_SESSION['dept_ec'] ?> ">
                             </label>
 
                             <!-- Notify of Return -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Notify of Return? <?php echo $_SESSION['notify_ec'] ?> ">
+                                       placeholder="Notify of Return? <?php echo $_SESSION['stat_upd8s_ec'] ?> ">
                             </label>
 
                             <!-- Residential Address -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec_ra'] ?> ">
+                                       placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec'] ?> ">
                             </label>
 
                             <!-- Edit Button -->
                             <label>
                                 <button style="float: left" onClick="history.go(-3)"
-                                        class="w3-button w3-medium w3-green-continue">Edit
+                                        id="edit" class="w3-button w3-medium w3-green-continue">Edit
                                 </button>
                             </label>
                     </fieldset>
@@ -466,7 +465,7 @@
 
                             <!-- Edit Button -->
                             <label>
-                                <button style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                                <button style="float: left" onClick="history.go(-2)" id="edit" class="w3-button w3-medium w3-green-continue">Edit</button>
                             </label>
                     </fieldset>
 
@@ -561,7 +560,7 @@
 
                             <!-- Edit Button -->
                             <label>
-                                <button style="float: left" onClick="history.go(-3)"
+                                <button style="float: left" onClick="history.go(-3)" id="edit"
                                         class="w3-button w3-medium w3-green-continue">Edit
                                 </button>
                             </label>

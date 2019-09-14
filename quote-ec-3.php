@@ -33,7 +33,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/statecity_dest.js"></script>
+    <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
 
@@ -187,7 +187,11 @@
 
             <h2 id="hi">Where is it going?</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
             <!-- Container for Get a Quote form  -->
             <div class="w3-card-quote-is">
@@ -240,7 +244,7 @@
                             <label>
                                 <input name="country_ec_dest" class="countries" value="Finland" disabled>
                             </label>
-                            <input type="hidden" name="country" id="countryId" value="FI"/>
+                            <input type="hidden" name="country_ec_dest" id="countryId" value="FI"/>
 
                             <!-- State -->
                             <label for="stateId">
@@ -280,23 +284,14 @@
                                        name="dept_ec_dest" type="text">
                             </label>
 
-                            <!-- Toggle (residential address?) -->
+                            <!-- Toggle (Residential Address?) -->
                             <div class="sliderWrapper" style="margin: 7px 0">
                                 <span style="margin-left: 3px;">Is this a residential address?</span>
                                 <label class="switch">
-                                    <input type="checkbox" name="resAdd_ec_dest">
+                                    <input type="checkbox" value="No" id="res" onclick="resAdd()" name="resAdd_ec_dest">
                                     <span class="slider"></span>
                                 </label>
                             </div>
-
-                              <!-- Residential Address -->
-<!--                              <label>-->
-<!--                                  <select  style="float: right" name="residential_add_dest" class="choice">-->
-<!--                                      <option value="0" selected="selected">Is this a residential address?   *</option>-->
-<!--                                      <option value="Yes">Yes</option>-->
-<!--                                      <option value="No">No</option>-->
-<!--                                  </select>-->
-<!--                              </label>-->
                         </fieldset>
 
                             <!-- Continue and Cancel Button -->
@@ -314,6 +309,14 @@
             </div>
         </div>
     </div>
+
+    <!-- JS to change "value" text for residential address -->
+    <script>
+        function resAdd() {
+            const res = document.getElementById("res");
+            res.value = "Yes";
+        }
+    </script>
 
     <!-- JavaScript to change color of <option selected> -->
     <script>

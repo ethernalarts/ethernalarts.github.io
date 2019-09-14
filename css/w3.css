@@ -1048,7 +1048,7 @@ a {
     padding: 10px 12px;
     border-left: 4px solid #4CAF50;
     border-right: 4px solid #4CAF50;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 .w3-codespan {
@@ -1605,16 +1605,16 @@ a {
     background-color: red !important;
 }
 
- button.w3-button.w3-red-cancel {
-     color: white !important;
-     background-color: #ff0000 !important;
-     margin: 0 12px 0 6px;
-     padding: 8px 20px;
-     font-weight: 500;
-     font-style: normal;
-     font-family: Montserrat, serif;
-     font-size: 1em;
-     border-radius: 0;
+button.w3-button.w3-red-cancel {
+    color: white !important;
+    background-color: #ff0000 !important;
+    margin: 0 12px 0 6px;
+    padding: 8px 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Montserrat, serif;
+    font-size: 1em;
+    border-radius: 0;
 }
 
 button.w3-button.w3-red-cancel:hover {

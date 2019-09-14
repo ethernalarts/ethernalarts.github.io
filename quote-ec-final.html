@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote</title>
+    <title>VLink Express Courier - Get a Quote (Express Courier - Complete)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" rel="stylesheet">
@@ -18,7 +17,7 @@
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
@@ -36,10 +35,6 @@
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .container {
-                font-size: 95%;
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -47,10 +42,15 @@
             }
 
             .container {
-                padding: 0 100px !important;
+                padding: 0 60px !important;
+            }
+
+            .container-form {
+                padding: 20px;
             }
 
             .w3-card-quote-is {
+                padding: 0;
                 width: 100%;
                 margin: 45px auto 50px;
             }
@@ -75,18 +75,6 @@
                 margin: 45px auto 50px;
             }
         }
-
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #2a2a2a;
-            font-size: 0.95em;
-            opacity: 1; /* Firefox */
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #2A2A2A;
-        }
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #2A2A2A;
-        }
     </style>
 </head>
 
@@ -106,9 +94,9 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.html">International Shipping</a>
-                                <a href="quote-ec.html" class="active">Express Courier</a>
-                                <a href="quote-ss.html">Secure Storage</a>
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php" class="active">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -122,13 +110,12 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 380px;">Quote - International Shipping</div>
     </div>
 
 
@@ -146,9 +133,9 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.html" class="active">Express Courier</a>
-                        <a href="#">Secure Storage</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php" class="active">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>
@@ -164,36 +151,20 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-            <!-- Progress Bar -->
-            <div class="container-progressbar">
-                <label class="label">5%
-                    <input type="radio" class="radio" name="progress" value="five">
-                </label>
-
-                <label class="label">25%
-                    <input type="radio" class="radio" name="progress" value="twentyfive">
-                </label>
-
-                <label class="label">50%
-                    <input type="radio" class="radio" name="progress" value="fifty">
-                </label>
-
-                <label class="label">75%
-                    <input type="radio" class="radio" name="progress" value="seventyfive">
-                </label>
-
-                <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred" checked>
-                <label for="onehundred" class="label">100%</label>
-
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
+            <!-- Progress circles which indicates the steps of the form: -->
+            <div style="text-align:center; margin-bottom: 40px;">
+                <span class="step finish"></span>
+                <span class="step finish"></span>
+                <span class="step finish"></span>
+                <span class="step finish"></span>
+                <span class="step finish"></span><br><br>
+                <span style="font: 1.25em Montserrat, sans-serif;">Complete</span>
             </div>
 
             <h2 id="hi">Done!</h2>
 
             <!-- Container for Get a Quote form  -->
-            <div class="w3-card-quote-is" style="margin-bottom: 50px;">
+            <div style="padding-bottom: 0">
 
                 <!-- Thank you note -->
                 <div class="container-form" style="padding: 50px 0 0">
@@ -212,12 +183,10 @@
                                 Get another Quote</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
@@ -276,7 +245,7 @@
 </body>
 
 <!-- footer   -->
-<footer>
+<footer style="margin-top: 20px">
     <div>
         Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
     </div>

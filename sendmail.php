@@ -6,6 +6,7 @@
     $from = $_SESSION['email'];
     $name = $_SESSION['name'];
     $country = $_SESSION['country'];
+    $package_type = $_SESSION['package_type']
     $country_dest = $_SESSION['$country_dest'];
 
     // To send HTML mail, the Content-type header must be set
@@ -23,8 +24,9 @@
     $message .= '<p style="color:#080;font-size:18px;">You have a new International Shipping Order. "<br>".
                 Client: '$name'."<br>"
                 Shipment Origin: '$country'."<br>"
+                Package type: '$package_type'."<br>"
                 Shipment Destination: '$country_dest'."<br><br>"
-                Please connect to your database to view this order.</p>';
+                Please connect to your database to view the full details of this order.</p>';
     $message .= '</body></html>';
 
     // Sending email

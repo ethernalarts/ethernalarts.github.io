@@ -1,16 +1,3 @@
-<?php
-    $_SESSION['contact_name_dest'] = $_POST['contact_name_dest'];
-    $_SESSION['contact_phone_dest'] = $_POST['contact_phone_dest'];
-    $_SESSION['country'] = $_POST['country'];
-    $_SESSION['state'] = $_POST['state'];
-    $_SESSION['city'] = $_POST['city'];
-    $_SESSION['zip_code_dest'] = $_POST['zip_code_dest'];
-    $_SESSION['street_address_dest'] = $_POST['street_address_dest'];
-    $_SESSION['apartment_dest'] = $_POST['apartment_dest'];
-    $_SESSION['department_dest'] = $_POST['department_dest'];
-    $_SESSION['residential_add_dest'] = $_POST['residential_add_dest'];
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Express Courier - Review Details)</title>
+    <title>VLink Express Courier - Get a Quote (Secure Storage - Complete)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
-    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/statecity.js"></script>
 
     <div class="thetop"></div>
@@ -47,14 +33,6 @@
             background-image: none;
         }
 
-        input:disabled {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
-        }
-
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
             #hi {
@@ -64,12 +42,23 @@
             }
 
             .container {
-                padding: 0 40px !important;
+                padding: 0 60px !important;
+            }
+
+            .container-form {
+                padding: 20px;
+            }
+
+            .w3-card-quote-is {
+                padding: 0;
+                width: 100%;
+                margin: 45px auto 50px;
             }
         }
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
+
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -77,15 +66,13 @@
             }
 
             .container {
-                padding: 0 50px !important;
+                padding: 0 60px !important;
             }
 
-            .container-form input, .container-form select {
+            .w3-card-quote-is {
+                padding: 0;
                 width: 100%;
-            }
-
-            button.w3-button.w3-red-cancel {
-                margin-top: 1px;
+                margin: 45px auto 50px;
             }
         }
     </style>
@@ -108,8 +95,8 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php" class="active">Express Courier</a>
-                                <a href="quote-ss.php">Secure Storage</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php" class="active">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -128,7 +115,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 380px;">Quote - International Shipping</div>
     </div>
 
 
@@ -147,8 +134,8 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php" class="active">Express Courier</a>
-                        <a href="quote-ss.php">Secure Storage</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php" class="active">Secure Storage</a>
                     </div>
                 </a>
                 <a href="#">About</a>
@@ -164,63 +151,37 @@
         <!-- Inner Container -->
         <div class="body-content">
 
-          <!-- Progress circles which indicates the steps of the form: -->
-          <div style="text-align:center; margin-bottom: 40px;">
-              <span class="step finish"></span>
-              <span class="step finish"></span>
-              <span class="step finish"></span>
-              <span class="step active"></span>
-              <span class="step"></span><br><br>
-              <span style="font: 1.25em Montserrat, sans-serif;">(Step 4 of 5)</span>
-          </div>
+            <!-- Progress circles which indicates the steps of the form: -->
+            <div style="text-align:center; margin-bottom: 40px;">
+                <span class="step finish"></span>
+                <span class="step finish"></span>
+                <span class="step finish"></span><br><br>
+                <span style="font: 1.25em Montserrat, sans-serif;">Complete</span>
+            </div>
 
-            <h2 id="hi">Please review your details</h2>
-
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h2 id="hi">Done!</h2>
 
             <!-- Container for Get a Quote form  -->
-            <div class="w3-card-quote-is">
+            <div style="padding-bottom: 0">
 
-                <!-- Get a Quote form -->
-                <form class="container-form" method="post">
-                    <fieldset>
-                        <legend>Package Origin</legend>
-                            <fieldset>
-                                <li>
-                                    Basic Details:<br>
-                                    <?php echo $_SESSION['name'] ?><br>
-                                    <?php echo $_SESSION['title'] ?><br>
-                                    <?php echo $_SESSION['marital_status'] ?><br>
-                                    <?php echo $_SESSION['age'] ?><br>
-                                    <?php echo $_SESSION['email'] ?><br>
-                                    <?php echo $_SESSION['phone'] ?><br>
-                                    <?php echo $_SESSION['occupation'] ?><br>
-
-                                    Pickup Address:<br>
-                                    <?php echo $_SESSION['contact_name'] ?><br>
-                                    <?php echo $_SESSION['contact_phone'] ?><br>
-                                </li>
-
-
-                                <li>Page 2: <?php echo $_SESSION['contact_name_dest'] ?></li>
-                                <li>Page 3: <?php echo $_SESSION['contact_phone_dest'] ?></li>
-                            </fieldset>
-                    </fieldset>
-
-
-                    <!-- Continue and Cancel Button -->
+                <!-- Thank you note -->
+                <div class="container-form" style="padding: 50px 0 0">
+                    <div >
+                        <p class="w3-justify w3-center-services-h2">
+                            We have received your details.<br><br>
+                            We will get back to you soon with an invoice. Please keep an eye on your inbox.<br><br>
+                            Thank You
+                        </p>
+                    </div>
+                    
+                    <!-- Get another quote -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
-                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">
-                                Submit</button>
-                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
+                            <a href="getaquote.html" class="w3-button w3-medium w3-green-continue">
+                                Get another Quote</a>
                         </div>
                     </div>
-
-                    <!-- End of form -->
-                </form>
-
+                </div>
             </div>
         </div>
     </div>
@@ -276,13 +237,13 @@
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
+            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
         </div>
     </div>
 </body>
 
 <!-- footer   -->
-<footer>
+<footer style="margin-top: 20px">
     <div>
         Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
     </div>
