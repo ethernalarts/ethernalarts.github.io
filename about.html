@@ -14,6 +14,7 @@
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
 
@@ -34,18 +35,23 @@
             padding: 0 70px;
         }
 
-        #is, #is-h2, #ec {
+        .parallax {
+            /* The image used */
+            background-image: url("images/shipping2.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
-        #is-text, #ec-text, #ss-text {
-            height: 250px;
-            overflow: auto;
-            text-align: justify;
-            font-family: Montserrat, Lato, Arial, serif;
-            font-size: 1em;
-            font-weight: 500;
-            line-height: 1.7em;
-            padding: 0 20px;
+        .subheader-h2 {
+            margin: 300px auto 0;
+            width: 100%;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -147,8 +153,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -163,15 +168,34 @@
         <!-- Body Contents -->
             <div class="body-content">
 
-                    <p class="aboutus-h2">A Team of Specialists</p>
+                    <p class="aboutus-h2">Quality That Speaks for Itself</p>
                     <p class="aboutus-p">
+                        Founded in September of 2003, VLink Express Courier just celebrated its sixteenth
+                        anniversary as the highest quality provider of shipping services this side of the Baltic Sea.
+                        After sixteen years of helping our customers sail or fly their shipment(s) the
+                        world over, and arranging the handling, servicing, and customs clearing,
+                        we have grown from a small shipping agency to a full provider of complete shipping services.
                         We excel at the logistics business, because we are more than a courier company.
                         We are a solutions company powered as much by brainpower as by horsepower.
-                        Together, over 10,000 of our problem-solvers ensure your shipment(s) moves as efficiently
+                        Together, over 7,000 of our problem-solvers ensure your shipment(s) moves as efficiently
                         and safely as possible. <br><br>
 
+                        VLink’s service standards are second to none in the industry, and the company is continually
+                        searching for new ways to improve service to our customers. All members of the VLink team –
+                        drivers, contractors, managers, couriers, clerks and mechanics – take pride in providing reasonable rates
+                        and dependable deliveries. The company is focused on the safety of its employees, equipment, shipments and the general public.
+                        VLink Express Courier has a specific department to cater to each customer’s shipping needs.
+                        Whether you require an international freight service, customs clearing, local express courier delivery
+                        or secure storage of items, a team of specialists at VLink will see that your specific needs
+                        are met in the most cost-effective way possible. <br><br>
+
                         By staying true to our core ideals, VLink Express Courier has achieved
-                        exponential growth.
+                        exponential growth. Eager to harness the power of technology for the good of our customers and our
+                        employees, VLink was one of the first courier company to fully integrate satellite communications aboard the fleet.
+                        In fact, we surpassed $300 million in annual revenue faster than any teenage courier company in history.
+                        In the process, our fleet has grown from those original 48 trucks to 7,000 tractors and 15,500 trailers.
+                        And the innovative spirit that first launched VLink Express Courier is now fueled by over 7,000
+                        solutions-minded problem- solvers. So no matter what new challenges the future may bring, you can count on US.
                     </p>
 
 
@@ -202,13 +226,6 @@
                 <a href="track.html">Track</a>
             </div>
         </div>
-
-    <!-- Scroll back to the top -->
-    <div class="scrolltop">
-        <div class="scroll icon">
-            <i class="scroll-icon fas fa-3x fa-arrow-circle-up"></i>
-        </div>
-    </div>
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
@@ -257,13 +274,38 @@
             }
         }
     </script>
+
+    <!-- Scroll back to the top -->
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
+        </div>
+    </div>
 </body>
 
 
-<!-- footer   -->
+<!-- footer -->
 <footer>
-    <div>
+    <p style="font-size: 1.5em">
+        3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+    </p>
+    <p style="margin: 10px 0 0; color: gray">
         Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+    </p>
+
+    <div class="div-footer-followus">
+        <!-- <p class="footerCONTACT-h2">Follow Us</p> -->
+        <p>
+            <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                <i class="footer-FB fab fa-facebook-f" alt="facebook-icon"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/hagco">
+                <i class="footer-INSTA fab fa-instagram" alt="instagram-icon"></i>
+            </a>
+            <a target="_blank" href="https://www.twitter.com/hagco">
+                <i class="footer-TWITTER fab fa-twitter" alt="twitter-icon"></i>
+            </a>
+        </p>
     </div>
 </footer>
 </html>

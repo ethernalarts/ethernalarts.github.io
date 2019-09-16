@@ -6,6 +6,7 @@
       <change afterPath="$PROJECT_DIR$/css/intlTelInput.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ec-submit-skip.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ec-submit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Shipping.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/images/flags.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/images/flags@2x.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/is-submit-skip.php" afterDir="false" />
@@ -214,7 +215,8 @@
       <workItem from="1567506745970" duration="2755000" />
       <workItem from="1567522787669" duration="2611000" />
       <workItem from="1568373239046" duration="22658000" />
-      <workItem from="1568456923118" duration="12931000" />
+      <workItem from="1568456923118" duration="13654000" />
+      <workItem from="1568672102920" duration="5315000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>

@@ -157,7 +157,6 @@
 
     .footer-FB {
         color: whitesmoke;
-        margin: 1px 0 0;
         font-weight: bolder;
         font-size: 24px;
     }
@@ -187,7 +186,7 @@
         color: #b93131;
     }
 
-header {
+    header {
         background-color: rgba(14, 14, 14, 0.86);
         padding: 17px 17px 17px 0;
         width: 100%;
@@ -402,8 +401,8 @@ header {
     }
 
     .aboutus-p {
-        text-align: left;
-        font-family: Verdana, Montserrat, Lato, Arial, serif;
+        text-align: justify;
+        font-family: Montserrat, Lato, Arial, serif;
         font-size: 1.1em;
         margin: 0 0 20px;
         color: #0f0f0f;
@@ -413,8 +412,8 @@ header {
 
     .aboutus-h2 {
         text-align: left;
-        font-family: Verdana, Montserrat, Lato, Arial, serif;
-        font-size: 1.3em;
+        font-family: Verdana, Lato, Arial, serif;
+        font-size: 1.5em;
         margin: 0 0 20px;
         color: #0f0f0f;
         font-weight: 600;
