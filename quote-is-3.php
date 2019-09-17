@@ -63,6 +63,20 @@
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/is-pic3.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         .countries, .states {
             background-color: white;
             border-bottom: 1px solid #878787;

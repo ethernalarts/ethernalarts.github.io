@@ -38,6 +38,25 @@ session_start(); // Session starts here.
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/ec-pic.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin: 290px auto 0;
+            width: 100%;
+        }
+
         #returnAdd {
             margin: 40px 0 0;
         }

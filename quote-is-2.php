@@ -66,6 +66,25 @@
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/is-pic2.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin: 300px auto 0;
+            width: 100%;
+        }
+
         .skip {
             margin: 40px 0 0;
             text-align: center;

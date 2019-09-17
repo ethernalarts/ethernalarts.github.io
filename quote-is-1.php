@@ -38,6 +38,25 @@
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/is-pic.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin: 300px auto 0;
+            width: 100%;
+        }
+
         .countries, .states, .cities {
             background-color: white;
             border-bottom: 1px solid #878787;
@@ -102,7 +121,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
