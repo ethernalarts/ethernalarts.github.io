@@ -38,6 +38,10 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 210px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/is-pic.jpg");
@@ -72,7 +76,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 50px;
             }
         }
 
@@ -85,7 +89,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 40px;
             }
 
             .container-form input, .container-form select {
@@ -158,7 +162,7 @@
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -166,7 +170,7 @@
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">

@@ -33,7 +33,7 @@
       left: 0;
       top: 0;
       background-color: rgb(0,0,0); /* Black fallback color */
-      background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+      background-color: rgba(0, 0, 0, 0.93); /* Black w/opacity */
       overflow-x: hidden; /* Disable horizontal scroll */
       transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
     }
@@ -41,10 +41,10 @@
     /* Position the content inside the overlay */
     .overlay-content {
       position: relative;
-      top: 15%; /* 15% from the top */
+      top: 10%; /* 15% from the top */
       width: 100%; /* 100% width */
       text-align: center; /* Centered text/links */
-      margin-top: 25px; /* 25px top margin to avoid conflict with the close button on smaller screens */
+      margin-top: 20px; /* 25px top margin to avoid conflict with the close button on smaller screens */
     }
 
     /* The navigation links inside the overlay */
@@ -60,21 +60,21 @@
 
     /* When you mouse over the navigation links, change their color */
     .overlay a:hover, .overlay a:focus, .overlay a.active {
-        color: white;
+        color: whitesmoke;
     }
 
     /* Position the close button (top right corner) */
     .overlay .closebtn {
       position: absolute;
-      top: 15px;
-      right: 40px;
+      top: 10px;
+      right: 35px;
       font-size: 45px;
     }
 
     .dropdown {
         cursor: pointer;
         text-align: center;
-        background-color: whitesmoke;
+        /*background-color: whitesmoke;*/
         display: none;
         position: relative;
         width: 100%;
@@ -84,11 +84,10 @@
 
     .dropdown a {
         color: #5f5f5f;
-        font-size: 20px;
+        font-size: 23px;
     }
 
-    .dropdown a:hover{
-        color: #872222;
+    .dropdown a:hover {
         font-weight: 500;
      }
 

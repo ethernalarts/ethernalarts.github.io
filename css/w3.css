@@ -522,22 +522,24 @@ a {
 
 .w3-bar {
     width: 100%;
-    margin: 0;
+    position: relative;
+    margin: 0 auto;
     padding: 30px 30px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .w3-center .w3-bar {
     display: inline-block;
-    width: auto
+    width: auto;
 }
 
 .w3-bar .w3-bar-item {
-    padding: 8px 16px;
-    float: left;
+    padding: 8px 20px;
+    /*float: left;*/
+    margin: 0;
     width: auto;
     border: none;
-    display: block;
+    display: inline-block;
     outline: 0
 }
 

@@ -32,7 +32,7 @@
         }
 
         .container {
-            padding: 0 70px;
+            padding: 0 100px;
         }
 
         .parallax {
@@ -58,11 +58,12 @@
         @media screen and (max-width: 1300px) {
 
             .container {
-                padding: 0 30px;
+                padding: 0 50px;
             }
 
-            .w3-center-services-h2 {
-                width: 70%;
+            .aboutus-p {
+                width: 90%;
+                text-align: justify;
             }
         }
 
@@ -70,15 +71,12 @@
         @media screen and (max-width: 900px) {
 
             .container {
-                padding: 0 20px;
+                padding: 0 50px;
             }
 
-            .w3-center-services-h2 {
-                width: 80%;
-            }
-
-            .w3-col.s4-services {
-                width: 49.99999%
+            .aboutus-p {
+                width: 100%;
+                text-align: justify;
             }
         }
 
@@ -86,16 +84,12 @@
         @media screen and (max-width: 600px) {
 
             .container {
-                padding: 0;
+                padding: 0 50px;
             }
 
-            .w3-center-services-h2 {
-                width: 90%;
-            }
-
-            .w3-col.s4-services {
+            .aboutus-p {
                 width: 100%;
-                margin: 0 auto 40px;
+                text-align: justify;
             }
 
             .parallax {
@@ -145,8 +139,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -163,7 +156,7 @@
 
 
     <!-- Inner Container that contains body content and pads it 160px left and right from <body> -->
-    <div class="container" style="padding: 0 100px">
+    <div class="container">
 
         <!-- Body Contents -->
             <div class="body-content">
@@ -193,11 +186,35 @@
                         exponential growth. Eager to harness the power of technology for the good of our customers and our
                         employees, VLink was one of the first courier company to fully integrate satellite communications aboard the fleet.
                         In fact, we surpassed $300 million in annual revenue faster than any teenage courier company in history.
-                        In the process, our fleet has grown from those original 48 trucks to 7,000 tractors and 15,500 trailers.
+                        In the process, our fleet has grown from 32 vans to 16 ocean liners, 56 planes, 6,700 motorcycles and 13,200 vans.
                         And the innovative spirit that first launched VLink Express Courier is now fueled by over 7,000
                         solutions-minded problem- solvers. So no matter what new challenges the future may bring, you can count on US.
                     </p>
 
+                    <!-- Our Partners -->
+                    <div class="subheader-h2" style="width: 180px; margin: 130px auto 30px">Our Partners</div>
+                    <div class="w3-center">
+                        <div class="w3-bar">
+                            <img class="w3-bar-item" src="images/redline-logo.png">
+                            <img class="w3-bar-item" src="images/cheetah-logo.png">
+                            <img class="w3-bar-item" src="images/pigeon-ship-logo.png">
+                            <img class="w3-bar-item" src="images/max-express-logo.png">
+                            <img class="w3-bar-item" src="images/courier-services-logo.png">
+                            <img class="w3-bar-item" src="images/bolt-express-logo1.png">
+                        </div>
+                    </div>
+
+                    <!-- Accreditation -->
+                    <div class="subheader-h2" style="width: 250px; margin: 130px auto 10px">We are members of</div>
+                    <div class="w3-center">
+                        <div class="w3-bar">
+                            <img style="padding-left: 0" class="w3-bar-item" src="images/iata-logo.png">
+                            <img class="w3-bar-item" src="images/aeo-logo.png">
+                            <img class="w3-bar-item" src="images/tapa-logo.png">
+                            <img class="w3-bar-item" src="images/burea-veritas-logo.png">
+                            <img class="w3-bar-item" src="images/gdp-logo.png">
+                        </div>
+                    </div>
 
             </div>
     </div>
@@ -212,16 +229,16 @@
             <!-- Overlay content -->
             <div class="overlay-content">
                 <a href="index.html">Home</a>
-                <a href="services.html" class="active">Services</a>
+                <a href="services.html">Services</a>
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.html">Express Courier</a>
-                        <a href="#">Secure Storage</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html" class="active">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -299,11 +316,14 @@
             <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
                 <i class="footer-FB fab fa-facebook-f" alt="facebook-icon"></i>
             </a>
-            <a target="_blank" href="https://www.instagram.com/hagco">
+            <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
                 <i class="footer-INSTA fab fa-instagram" alt="instagram-icon"></i>
             </a>
-            <a target="_blank" href="https://www.twitter.com/hagco">
+            <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
                 <i class="footer-TWITTER fab fa-twitter" alt="twitter-icon"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                <i class="footer-INSTA fab fa-linkedin" alt="linkedin-icon"></i>
             </a>
         </p>
     </div>

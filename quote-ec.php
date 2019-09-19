@@ -133,7 +133,7 @@ session_start(); // Session starts here.
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -170,7 +170,7 @@ session_start(); // Session starts here.
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>

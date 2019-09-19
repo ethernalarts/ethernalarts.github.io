@@ -172,7 +172,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
