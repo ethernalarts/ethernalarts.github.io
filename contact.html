@@ -28,6 +28,10 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 210px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/contactus-pic.jpg");
@@ -62,7 +66,7 @@
         @media screen and (max-width: 1200px) {
 
             .container {
-                padding: 0 120px !important;
+                padding: 0 120px;
             }
 
             .w3-center-getaquote {
@@ -78,15 +82,11 @@
         @media screen and (max-width: 900px) {
 
             .container {
-                padding: 0 120px !important;
+                padding: 0 120px;
             }
 
             .w3-center-getaquote {
                 font-size: 1.2em;
-            }
-
-            .w3-card-location {
-                width: 75%;
             }
         }
 
@@ -94,17 +94,13 @@
         @media screen and (max-width: 600px) {
 
             .container {
-                padding: 0 60px !important;
+                padding: 0 60px;
             }
 
             .container-form input {
                 padding: 10px;
                 margin: 0 0 33px;
                 width: 100%;
-            }
-
-            .w3-card-location {
-                width: 70%;
             }
         }
     </style>
@@ -142,8 +138,7 @@
         <!-- Use any element to open/show the overlay navigation menu -->
         <span>
             <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i><br>
-                    <span>Menu</span>
+                <i class="material-icons md-48">menu</i>
             </button>
         </span>
 
@@ -178,7 +173,7 @@
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">

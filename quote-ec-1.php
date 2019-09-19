@@ -67,6 +67,24 @@
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/ec-pic1.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin-top: 290px;
+        }
+
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
@@ -187,7 +205,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 380px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 380px;">Quote - Express Courier</div>
     </div>
 
     <!-- Mobile Menu -->

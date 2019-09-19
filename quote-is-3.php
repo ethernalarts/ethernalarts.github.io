@@ -77,6 +77,10 @@
             background-size: cover;
         }
 
+        .subheader-h2 {
+            margin-top: 300px;
+        }
+
         .countries, .states {
             background-color: white;
             border-bottom: 1px solid #878787;

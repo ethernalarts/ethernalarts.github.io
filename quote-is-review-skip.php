@@ -48,17 +48,30 @@
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/is-review.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin-top: 300px;
+        }
+
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
             width: 47%;
             border: none;
             border-bottom: 1px solid #2d2d2d;
-        }
-
-        .sub-legend {
-            background-color: #72b7e1;
-            color: white;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */

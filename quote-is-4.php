@@ -66,6 +66,24 @@
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/is-pic4.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin-top: 300px;
+        }
+
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
 

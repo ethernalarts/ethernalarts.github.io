@@ -40,7 +40,7 @@ session_start(); // Session starts here.
 
         .parallax {
             /* The image used */
-            background-image: url("images/ss-pic.jpg");
+            background-image: url("images/ss-pic1.jpg");
 
             /* Set a specific height */
             min-height: 480px;

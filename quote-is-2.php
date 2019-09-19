@@ -81,8 +81,7 @@
         }
 
         .subheader-h2 {
-            margin: 300px auto 0;
-            width: 100%;
+            margin-top: 300px;
         }
 
         .skip {
