@@ -169,10 +169,9 @@
     }
 
     .dropdownnav-content a:focus {
-        font-weight: 500;
+        font-weight: 600;
         width: 100%;
-        color: whitesmoke;
-        background-color: #b93131;
+        color: #b93131;
     }
 
     .dropdownnav-content a.active,

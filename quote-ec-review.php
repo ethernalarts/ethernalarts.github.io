@@ -55,6 +55,24 @@
             background-image: none;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("images/ec-review.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin-top: 290px;
+        }
+
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;

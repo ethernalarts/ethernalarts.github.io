@@ -1,73 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm">
-      <change afterPath="$PROJECT_DIR$/css/intlTelInput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/intlTelInput.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ec-submit-skip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ec-submit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/aboutus-pic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ec-pic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/flags.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/flags@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ss-pic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/is-submit-skip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/is-submit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/intlTelInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/is-submit-skip-2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/is-submit-skip-3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec-1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec-2-skip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec-3-skip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec-review-skip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ec-review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-is-4-skip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-is-review-skip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ss-1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ss-final.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ss-review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-ss.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendmail-ec.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss-submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/back-to-top.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/back-to-top.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/misc.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/misc.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/mobile-menu-top.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mobile-menu-top.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/vlink.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vlink.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/w3.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/w3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/MontserratAlternates-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/MontserratAlternates-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/MontserratAlternates-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/MontserratAlternates-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/getaquote.html" beforeDir="false" afterPath="$PROJECT_DIR$/getaquote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getaquote0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/getaquote2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/getaquote3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/index-bkgrd-pic-dark.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/intl-shipping.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/is-submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/is-submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-2.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec-2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-3.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec-3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec-final.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec-final.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ec.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ec.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-2.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-3-skip.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-3-skip.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-3.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-4.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-final.html" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-final.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-is-review.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-is-review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote-ss.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
-    </list>
+    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +154,7 @@
       <workItem from="1568456923118" duration="13654000" />
       <workItem from="1568672102920" duration="9007000" />
       <workItem from="1568731450300" duration="4887000" />
+      <workItem from="1568962728718" duration="3261000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>

@@ -38,6 +38,10 @@ session_start(); // Session starts here.
             background-image: none;
         }
 
+        .container {
+            padding: 0 210px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/ec-pic.jpg");
@@ -55,10 +59,6 @@ session_start(); // Session starts here.
         .subheader-h2 {
             margin: 290px auto 0;
             width: 100%;
-        }
-
-        #returnAdd {
-            margin: 40px 0 0;
         }
 
         input:disabled {
@@ -84,7 +84,7 @@ session_start(); // Session starts here.
             }
 
             .container {
-                padding: 0 40px !important;
+                padding: 0 40px;
             }
         }
 
@@ -97,7 +97,7 @@ session_start(); // Session starts here.
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 30px;
             }
 
             .container-form input, .container-form select {
@@ -177,7 +177,7 @@ session_start(); // Session starts here.
         </div>
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">
