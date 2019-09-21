@@ -8,6 +8,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
   <link rel="dns-prefetch" href="https://github.githubassets.com">
   <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
   <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
@@ -15,6 +16,173 @@
   <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
   <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
   <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+=======
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VLink Express Courier - Track Package</title>
+
+    <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/misc.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" rel="stylesheet">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
+
+    <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/w3.js"></script>
+
+    <div class="thetop"></div>
+
+    <style>
+        .body {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            background-image: none;
+        }
+
+        .container-track {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 70px auto 60px;
+            padding: 50px 0;
+            display: block;
+            width: 70%;
+            font-family: Montserrat, sans-serif;
+            font-weight: 500;
+        }
+
+        .container-track label {
+            color: black;
+        }
+
+        .container-track p {
+            color: white;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .container-track input {
+            padding: 20px;
+            width: 50%;
+            display: inline-block;
+            border: 0 solid #373737;
+            background-color: #e1e1e1;
+        }
+
+        .container-track button {
+            padding: 20px 50px;
+            background-color: orangered;
+            display: inline;
+            color: white;
+            font-family: Montserrat, sans-serif;
+            margin-left: 4px;
+            border: 1px solid orangered;
+        }
+
+        .container-track button:hover {
+            cursor: pointer;
+            background-color: rgba(245, 68, 0, 0.91);
+        }
+
+        /* On screens that are 1200px wide or less */
+        @media screen and (max-width: 1200px) {
+
+            .container {
+                padding: 0 70px;
+            }
+
+            .container-track {
+                width: 80%;
+            }
+        }
+
+        /* On screens that are 992px wide or less */
+        @media screen and (max-width: 900px) {
+
+            .container {
+                padding: 0 90px !important;
+            }
+
+            .w3-center-services-h2 {
+                width: 80%;
+            }
+
+            .container-track {
+                width: 100%;
+                padding: 50px 30px;
+            }
+        }
+
+        /* On screens that are 600px wide or less */
+        @media screen and (max-width: 600px) {
+
+            .container {
+                padding: 0 50px !important;
+            }
+
+            .w3-center-services-h2 {
+                width: 80%;
+            }
+
+            .container-track {
+                width: 100%;
+                padding: 50px 30px;
+            }
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #737373;
+            opacity: 1; /* Firefox */
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #737373;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #737373;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="parallax">
+        <!-- Header with logo and navbar -->
+        <header>
+            <a href="index.html">
+                <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+            </a>
+            <nav>
+                <ul class="navlist">
+                    <li class="navlistitem"><a href="index.html">Home</a></li>
+                    <li class="navlistitem"><a href="services.html">Services</a></li>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.html">International Shipping</a>
+                                <a href="quote-ec.html">Local Shipping</a>
+                                <a href="quote-ss.html">Secure Storage</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="/package-tracker/" class="active">Track</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span>
+            <button class="openbtn" onclick="openNav()">
+                <i class="material-icons md-48">menu</i><br>
+                    <span>Menu</span>
+            </button>
+        </span>
+>>>>>>> 7951e8b0a4bbb3512ad7660292f59664215552a0
 
 
 
@@ -280,6 +448,31 @@
     </li>
 </ul>
 
+<<<<<<< HEAD
+=======
+    <!-- Mobile Menu -->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                    Get a Quote <i class="fas fa-caret-down"></i>
+                    <div id="demo" class="dropdown">
+                        <a href="quote-is-1.html" style="padding-top: 0">International Shipping</a>
+                        <a href="#">Express Courier</a>
+                        <a href="#">Secure Storage</a>
+                    </div>
+                </a>
+                <a href="#">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="/package-tracker/" class="active">Track</a>
+>>>>>>> 7951e8b0a4bbb3512ad7660292f59664215552a0
             </div>
       </label>
 </form>  </div>

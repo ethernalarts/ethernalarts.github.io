@@ -138,7 +138,7 @@
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
-                    <li class="navlistitem"><a href="track.html">Track</a></li>
+                    <li class="navlistitem"><a href="/package-tracker/">Track</a></li>
                 </ul>
             </nav>
         </header>
@@ -175,7 +175,7 @@
                 </a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="track.html">Track</a>
+                <a href="/package-tracker/">Track</a>
             </div>
         </div>
 
