@@ -154,7 +154,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -169,7 +169,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
     </div>
 
     <!-- Mobile Menu -->

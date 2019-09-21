@@ -205,7 +205,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 380px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
     </div>
 
     <!-- Mobile Menu -->

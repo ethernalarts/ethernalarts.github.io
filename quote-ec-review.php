@@ -55,6 +55,10 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 200px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/ec-review.jpg");
@@ -81,9 +85,10 @@
             border-bottom: 1px solid #2d2d2d;
         }
 
-        .sub-legend {
-            background-color: #72b7e1;
+        .w3-button.w3-green-continue {
             color: white;
+            background-color: #2da52d;
+            padding: 15px 25px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -108,11 +113,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
-            }
-
-            fieldset {
-                font-size: 98%;
+                padding: 0 30px;
             }
 
             .container-form input, .container-form select {
@@ -149,7 +150,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -187,7 +188,7 @@
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -195,7 +196,7 @@
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 200px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">

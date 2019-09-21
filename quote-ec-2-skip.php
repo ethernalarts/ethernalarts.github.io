@@ -38,6 +38,29 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 210px;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url("images/ec-pic2.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin: 290px auto 0;
+            width: 100%;
+        }
+
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
@@ -58,7 +81,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 30px;
             }
         }
 
@@ -71,7 +94,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 30px;
             }
 
             .container-form input, .container-form select {
@@ -107,7 +130,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -122,7 +145,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
     </div>
 
 
@@ -145,7 +168,7 @@
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -153,7 +176,7 @@
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">
@@ -227,7 +250,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                    <textarea style="height: 120px" class="w3-light-gray"
+                                    <textarea style="height: 150px" class="w3-light-gray"
                                               name="pkg_descr" placeholder="Briefly describe package..."></textarea>
                                 </label>
                         </fieldset>

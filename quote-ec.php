@@ -148,7 +148,7 @@ session_start(); // Session starts here.
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
     </div>
 
     <!-- Mobile Menu -->

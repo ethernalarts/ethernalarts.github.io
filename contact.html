@@ -32,6 +32,10 @@
             padding: 0 210px;
         }
 
+        .w3-card-4 {
+            margin: 65px 0 80px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/contactus-pic.jpg");
@@ -66,23 +70,28 @@
         @media screen and (max-width: 1200px) {
 
             .container {
-                padding: 0 120px;
+                padding: 0 40px;
+            }
+
+            .container-form {
+                margin: 0;
+                padding: 40px;
             }
 
             .w3-center-getaquote {
                 font-size: 1.2em;
             }
-
-            .w3-card-location {
-                width: 50%;
-            }
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 900px) {
-
             .container {
-                padding: 0 120px;
+                padding: 0 30px;
+            }
+
+            .container-form {
+                margin: 0;
+                padding: 30px;
             }
 
             .w3-center-getaquote {
@@ -94,13 +103,17 @@
         @media screen and (max-width: 600px) {
 
             .container {
-                padding: 0 60px;
+                padding: 0 30px;
             }
 
             .container-form input {
-                padding: 10px;
+                padding: 14px;
                 margin: 0 0 33px;
                 width: 100%;
+            }
+
+            .w3-center-getaquote {
+                width: 70%;
             }
         }
     </style>
@@ -188,7 +201,7 @@
 
 
             <!-- Container for Contact form  -->
-            <div class="w3-card-4" style="margin: 65px 0 80px;">
+            <div class="w3-card-4">
 
                 <!-- Contact Form -->
                 <form class="container-form" style="padding-bottom: 0" method="post" action="php/contact-form.php">

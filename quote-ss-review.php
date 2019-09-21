@@ -49,6 +49,28 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 190px;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url("images/ss-review.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin-top: 290px;
+        }
+
         input:disabled {
             padding: 15px;
             margin: 0 0 33px;
@@ -65,7 +87,7 @@
             }
 
             .container {
-                padding: 0 40px !important;
+                padding: 0 40px;
             }
         }
 
@@ -78,7 +100,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 30px;
             }
 
             .container-form input, .container-form select {
@@ -115,7 +137,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -130,7 +152,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Secure Storage</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -152,7 +174,7 @@
                         <a href="quote-ss.php" class="active">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
@@ -160,7 +182,7 @@
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 200px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">

@@ -48,6 +48,10 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 190px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/ec-pic3.jpg");
@@ -73,12 +77,6 @@
             border: 1px solid #afafaf;
         }
 
-        .countries_dest, .states_dest, .cities_dest {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
-        }
-
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
             #hi {
@@ -88,7 +86,7 @@
             }
 
             .container {
-                padding: 0 90px !important;
+                padding: 0 90px;
             }
         }
 
@@ -101,7 +99,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 30px;
             }
 
             .container-form input, .container-form select{
@@ -138,7 +136,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
@@ -153,7 +151,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -175,14 +173,14 @@
                         <a href="quote-ss-1.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="track.html">Track</a>
             </div>
         </div>
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">

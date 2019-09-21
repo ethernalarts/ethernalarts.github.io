@@ -75,7 +75,7 @@
 
         .parallax {
             /* The image used */
-            background-image: url("images/ss-pic.jpg");
+            background-image: url("images/ss-pic1.jpg");
 
             /* Set a specific height */
             min-height: 480px;
@@ -172,7 +172,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -234,7 +234,7 @@
 
                                 <!-- Storage type -->
                                 <label>
-                                    <select class="choice w3-light-gray" name="storage_type_ss" type="select" required>
+                                    <select class="choice" name="storage_type_ss" type="select" required>
                                         <option value="0" selected="selected">Storage Type  *</option>
                                         <option value="Secure Storage">Secure Storage</option>
                                         <option value="Secure Storage plus">Secure Storage + (+$)</option>
@@ -243,7 +243,7 @@
 
                                 <!-- Item type -->
                                 <label>
-                                    <select style="float: right" class="choice w3-light-gray" name="item_type_ss" required>
+                                    <select style="float: right" class="choice" name="item_type_ss" required>
                                         <option value="0" selected="selected">Item Type  *</option>
                                         <option value="Document">Document</option>
                                         <option value="Jewellery">Jewellery</option>
@@ -371,6 +371,7 @@
             }
         }
     </script>
+
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">

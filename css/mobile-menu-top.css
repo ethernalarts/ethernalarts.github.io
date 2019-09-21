@@ -128,8 +128,10 @@
         padding: 7px 20px;
     }
 
-    .dropbtn:focus, .dropbtn a.active {
+    .dropbtn:focus,
+    .dropbtn a, .dropbtn a.active {
         color: whitesmoke;
+        background-color: #b93131;
         border-top: 0 solid whitesmoke;
         padding: 10px 20px;
     }
@@ -139,6 +141,20 @@
         list-style-type: none;
         text-align: center;
         position: relative;
+    }
+
+    .dropdownnav a {
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+        position: relative;
+    }
+
+    .dropdownnav a.active {
+        font-weight: 500;
+        width: 100%;
+        color: whitesmoke;
+        background-color: #b93131;
     }
 
     .dropdownnav-content {

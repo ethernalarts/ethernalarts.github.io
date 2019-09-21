@@ -38,9 +38,13 @@ session_start(); // Session starts here.
             background-image: none;
         }
 
+        .container {
+            padding: 0 210px;
+        }
+
         .parallax {
             /* The image used */
-            background-image: url("images/ss-pic1.jpg");
+            background-image: url("images/ss-pic.jpg");
 
             /* Set a specific height */
             min-height: 480px;
@@ -53,12 +57,7 @@ session_start(); // Session starts here.
         }
 
         .subheader-h2 {
-            margin: 290px auto 0;
-            width: 100%;
-        }
-
-        #returnAdd {
-            margin: 40px 0 0;
+            margin-top: 290px;
         }
 
         input:disabled {
@@ -148,7 +147,7 @@ session_start(); // Session starts here.
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Secure Storage</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -177,7 +176,7 @@ session_start(); // Session starts here.
         </div>
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">
@@ -336,22 +335,6 @@ session_start(); // Session starts here.
         </div>
     </div>
 
-    <!-- JS to change "value" text for residential address -->
-    <script>
-        function resAdd() {
-            const res = document.getElementById("res");
-            res.value = "Yes";
-        }
-    </script>
-
-    <!-- JS to change "value" text for Package Updates -->
-    <script>
-        function status() {
-            const x = document.getElementById("stat");
-            x.value = "Yes";
-        }
-    </script>
-
     <!-- JavaScript to change color of <option selected> -->
     <script>
         $(".choice").change(function () {
@@ -360,15 +343,6 @@ session_start(); // Session starts here.
         });
 
         $(".choice").change();
-    </script>
-
-    <!-- International Telephone Country Code -->
-    <script src="js/intlTelInput.js"></script>
-    <script>
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            utilsScript: "js/utils.js?1562189064761"
-        });
     </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
@@ -402,15 +376,16 @@ session_start(); // Session starts here.
         toggle between hiding and showing the dropdown content */
         function dropDownNav() {
             document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementsByClassName("dropbtn").style.backgroundColor = "#b93131";
         }
 
         // Close the dropdown if the user clicks outside of it
         window.onclick = function(event) {
             if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdownnav-content");
-                var i;
+                let dropdowns = document.getElementsByClassName("dropdownnav-content");
+                let i;
                 for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
+                    let openDropdown = dropdowns[i];
                     if (openDropdown.classList.contains('show')) {
                         openDropdown.classList.remove('show');
                     }
@@ -418,6 +393,14 @@ session_start(); // Session starts here.
             }
         }
     </script>
+
+<!--    <script>-->
+<!--        /* When the user clicks on the button,-->
+<!--        toggle between hiding and showing the dropdown content */-->
+<!--        function hiLite() {-->
+<!--            document.getElementById("hiLite").style.backgroundColor = "#b93131";-->
+<!--        }-->
+<!--    </script>-->
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">
