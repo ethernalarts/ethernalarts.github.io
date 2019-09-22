@@ -150,7 +150,7 @@ legend {
 
 textarea {
     overflow: auto;
-    height: 250px;
+    height: 200px;
 }
 
 [type=checkbox], [type=radio] {
@@ -543,6 +543,16 @@ a {
     outline: 0
 }
 
+.w3-bar .w3-bar-item-services {
+    padding: 8px 20px;
+    /*float: left;*/
+    margin: 0 auto;
+    width: 33.33333%;
+    border: none;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+}
+
 .w3-bar .w3-dropdown-hover, .w3-bar .w3-dropdown-click {
     position: static;
     float: left
@@ -611,15 +621,15 @@ a {
     cursor: pointer;
 }
 
-.w3-col.s4:hover ~ img {
-    opacity: 0.8;
-    transform: scale(1.1, 1.1);
-    cursor: pointer;
-}
-
 .w3-col.s4-services {
     width: 33.33333%;
     transition: all .4s ease-in-out;
+    padding: 8px 20px;
+    /*float: left;*/
+    margin: 0 auto;
+    border: none;
+    display: inline-block;
+    outline: 0
 }
 
 .w3-col.s5 {
@@ -1082,7 +1092,7 @@ a {
 }
 
 .w3-card-services-4, .w3-hover-shadow:hover {
-    margin: 0;
+    margin: 0 auto;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

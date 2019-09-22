@@ -170,7 +170,7 @@
                         <a href="quote-ss-1.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
@@ -209,7 +209,7 @@
 
                     <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 30px"">
 
-                    <legend>Package Destination</legend>
+                        <legend>Package Destination</legend>
 
                             <!-- Full Name -->
                             <label>
@@ -300,7 +300,7 @@
                                     <span class="slider"></span>
                                 </label>
                             </div>
-                        </fieldset>
+                    </fieldset>
 
                             <!-- Continue and Cancel Button -->
                             <div class="w3-center">

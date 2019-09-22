@@ -191,7 +191,7 @@
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>

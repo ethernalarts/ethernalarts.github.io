@@ -373,7 +373,7 @@
     .services-container {
         width: 100%;
         display: inline-block;
-        margin: 50px 0 0;
+        margin: 40px 0 0;
     }
 
     .services {
@@ -396,7 +396,7 @@
         font-size: 1em;
         font-weight: 500;
         line-height: 1.7em;
-        height: auto;
+        height: 125px;
         overflow: auto;
     }
 
