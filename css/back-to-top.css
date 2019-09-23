@@ -1,0 +1,64 @@
+
+/* .testheight Not required - unless testing ;) */
+
+.testheight {
+  height:1200px;
+  font-size:20px;
+  text-align:center;
+  padding: 100px 20px;
+}
+.scrolltop {
+	display:none;
+	width:100%;
+	margin:0 auto;
+	position:fixed;
+	z-index: 99;
+	bottom:10px;
+	right:10px;	
+}
+.scroll {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    padding: 7px 14px;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    z-index: 99;
+    background-color: rgba(33, 135, 226, 0.31);
+    color: white;
+    border-radius: 50%;
+}
+.scroll:hover {
+    background-color: #2187e2;
+    border-radius: 50%;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.scroll .fa {
+	font-size: 20px;
+	margin-top: -5px;
+	margin-left: 1px;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	color: white;
+}
+
+.scroll .fa:hover {
+    padding-top: -10px;
+    color: #D3D3D3;
+}
+
+.scroll-icon {
+    color: white;
+    font-size: 30px;
+}

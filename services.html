@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VLink Express Courier - Services</title>
+
+    <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" rel="stylesheet">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
+
+    <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/w3.js"></script>
+
+    <div class="thetop"></div>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .body {
+            width: 100%;
+            margin: 0;
+            background-image: none;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 50px;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url("images/services-pic1.jpg");
+
+            /* Set a specific height */
+            min-height: 480px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subheader-h2 {
+            margin: 305px auto 0;
+            width: 100%;
+        }
+
+        #is, #is-h2, #ec {
+        }
+
+        #is-text, #ec-text, #sst-text,
+        #ss-text, #tc-text {
+            height: 250px;
+            overflow: auto;
+            text-align: justify;
+            font-family: Montserrat, Lato, Arial, serif;
+            font-size: 1em;
+            font-weight: 500;
+            line-height: 1.7em;
+            padding: 0 40px;
+        }
+
+        .h3 {
+            font-size: 1.2em;
+            font-family: 'Oswald SemiBold', serif;
+            font-weight: 600;
+            color: #393973;
+        }
+
+        .w3-bar {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .w3-bar .w3-bar-item-services {
+            padding: 0 20px 18px;
+            margin: 0 auto;
+            width: 33.33333%;
+            border: none;
+            display: inline-block;
+        }
+
+        /* On screens that are 992px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 1100px) {
+
+            .container {
+                padding: 0 30px;
+            }
+
+            .w3-center-services-h2 {
+                width: 70%;
+            }
+
+            .w3-col.s4-services {
+                width: 50%
+            }
+
+            .w3-bar .w3-bar-item-services {
+                width: 50%;
+            }
+
+            .w3-modal {
+                z-index: 3;
+                display: none;
+                padding: 85px 40px 0;
+                width: 100%;
+            }
+        }
+
+        /* On screens that are 992px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 900px) {
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .w3-center-services-h2 {
+                width: 70%;
+            }
+
+            .w3-col.s4-services {
+                width: 50%
+            }
+
+            .w3-bar .w3-bar-item-services {
+                width: 50%;
+            }
+
+            .w3-modal {
+                z-index: 3;
+                display: none;
+                padding: 85px 40px 0;
+                width: 100%;
+            }
+        }
+
+        /* On screens that are 600px wide or less */
+        @media screen and (max-width: 600px) {
+
+            .container {
+                padding: 0;
+            }
+
+            .w3-bar {
+                padding: 0 30px;
+            }
+
+            .subheader-h2 {
+                margin-top: 220px;
+            }
+
+            .w3-center-services-h2 {
+                width: 70%;
+            }
+
+            .w3-bar .w3-bar-item-services {
+                width: 100%;
+            }
+
+            .w3-col.s4-services {
+                width: 100%;
+                margin: 0 auto 40px;
+            }
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="parallax">
+        <!-- Header with logo and navbar   -->
+        <header>
+            <a href="index.html">
+                <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+            </a>
+            <nav>
+                <ul class="navlist">
+                    <li class="navlistitem"><a href="index.html">Home</a></li>
+                    <li class="navlistitem"><a href="services.html" class="active">Services</a></li>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ss.php">Secure Storage</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
+                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span>
+            <button class="openbtn" onclick="openNav()">
+                <i class="material-icons md-48">menu</i>
+            </button>
+        </span>
+
+        <!-- What We Do. -->
+        <div class="subheader-h2" style="width: 180px;">What We Do</div>
+    </div>
+
+
+    <!-- Inner Container that contains body content and pads it 80px left and right from <body> -->
+    <div class="container">
+
+        <!-- Body Contents -->
+            <div class="body-content">
+                    <p class="w3-center-services-h2">
+                        As businesses becomes more competitive and global, our portfolio is ever expanding
+                        with solutions to deliver the best service possible for customers.
+                        Check out all the services on offer and choose one that suits you.
+                    </p>
+
+                    <div class="w3-center">
+                        <div class="w3-bar">
+                            <!-- Container containing four columns for services rendered -->
+                            <div class="w3-row-padding services-container">
+
+                                <!-- International Shipping Modal Pop Up -->
+                                <div id="intl" class="w3-modal">
+                                    <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                                        <header class="w3-container w3-transparent">
+                                            <span onclick="document.getElementById('intl').style.display='none'"
+                                            class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                            <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">INTERNATIONAL SHIPPING</h2>
+                                        </header>
+
+                                        <div id="is-text" class="w3-container">
+                                            <p>
+                                                <span class="h3">Our expertise saves you time</span><br>
+                                                We understand the ins and outs of shipping internationally,
+                                                especially when it comes to customs, regulations, rules and tariffs.
+                                                Let us handle the details. We’re conveniently located in your neighborhood and
+                                                want to help simplify the international shipping process. Whether you're sending
+                                                something to Europe, Asia, Canada, Mexico, Latin America or Africa, we're here to help.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span style="color: #393973; font-weight: 600">From package pick-up to customs and delivery, VLink
+                                                oversees the entire process.</span> VLink has more than 1,000 daily flights to
+                                                170 countries and territories and offers a variety of day and time-specific delivery
+                                                options, full tracking visibility, and expertise in customs clearance regulations.
+                                                We'd love to work together with you to make processing your international package easier than ever.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">International shipping services, tailored to your needs</span><br>
+                                                The next time you need to ship a package internationally, let the experts at VLink take
+                                                care of it. We can help you find the right international shipping option to meet your needs,
+                                                whether you're sending something business-related and need it there as fast as possible, or
+                                                you're sending personal effects to friends or family for a celebration next week.
+                                            </p>
+                                            <br><br>
+                                            <p>
+                                                <span class="h3">International Shipping Service Options</span><br><br>
+                                                VLink offers unprecedented flexibility and expanded geographic coverage for international shipments.
+                                                Choose from three guaranteed, time-definite international delivery options (Some restrictions and
+                                                limitations apply to the UPS delivery options):
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Standard</span><br><br>
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Day-definite delivery based on origin and destination</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Worldwide Express</span><br><br>
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery by 10:30 am or 12:00 noon</li>
+                                                    <li>Delivery by the next business day to Sweden and for documents to Russia</li>
+                                                    <li>Second business day delivery to Asia</li>
+                                                    <li>Delivery within two or three business days to America and Latin America</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Worldwide Express Plus</span><br><br>
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery by 8:30 am to Sweden</li>
+                                                    <li>9:00 am to all other destinations</li>
+                                                    <li>Next day delivery to Russia</li>
+                                                    <li>Delivery within two business days to America</li>
+                                                    <li>Delivery within two or three business days to Latin America</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Worldwide TimeSaver</span><br><br>
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery by end of day</li>
+                                                    <li>Next business day delivery to Sweden and for documents to Russia</li>
+                                                    <li>Second business day delivery to America and Latin America</li>
+                                                    <li>Delivery within two business days to America</li>
+                                                    <li>Delivery within two or three business days to Asia</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Pack & Ship Guarantee</span><br>
+                                                You don’t have to worry about a thing at VLink. If an item packed by our
+                                                associates and shipped via VLink is damaged or lost, you’ll be reimbursed for the item’s
+                                                value (subject to the lesser of actual value, replacement or repair cost), the full retail
+                                                price of packaging materials and services, and shipping charges (excluding declared value charges).
+                                                Restrictions apply.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Keep an eye on your package</span><br>
+                                                Go <a href="/package-tracker/" target="_blank" style="color: #42429b; font-weight: 600">here</a>
+                                                to track your package and get the estimated delivery date.
+                                            </p>
+                                        </div>
+                                        <br>
+                                        <div class="w3-container w3-light-grey w3-padding-16">
+                                            <a href="quote-is-1.php" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- International Shipping Box-->
+                                <div class="w3-col s4-services">
+                                    <div class="w3-card-services-4" style="width: 100%">
+                                        <img src="images/intl-shipping-2.jpg" alt="International Shipping Quote" style="width: 100%;">
+                                        <div id="is" class="w3-container w3-center">
+                                            <h2 id="is-h2" class="services-h2">INTERNATIONAL SHIPPING</h2>
+                                            <p class="w3-center services-p" style="padding: 11px;">
+                                                We understand the ins and outs of shipping internationally,
+                                                especially when it comes to customs, regulations, rules and
+                                                tariffs<span id="is-dots">...</span>
+                                            </p>
+                                            <button type="button" class="but-showmore" id="isBtn" onclick="document.getElementById('intl')
+                                            .style.display='block'">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Express Courier Modal Pop Up -->
+                                <div id="exc" class="w3-modal">
+                                    <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                                        <header class="w3-container w3-transparent">
+                                            <span onclick="document.getElementById('exc').style.display='none'"
+                                            class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                            <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">EXPRESS COURIER</h2>
+                                        </header>
+
+                                        <div id="ec-text" class="w3-container">
+                                            <p>
+                                                Having established a wide network of agents, VLink provides domestic shipping
+                                                to all Finland states. Depending on the time the order is placed and the distance to the
+                                                Finland shipping destination, we can send your package within the same day or in 1-5 business days.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Our range of shipping options include:</span>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Ground (Standard)</span><br>
+                                                Delivery commitment: 1-5 business days
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery based on distance to destination</li>
+                                                    <li>With guaranteed delivery, know in advance when your shipment will arrive</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Next Day Air</span><br>
+                                                Delivery commitment: Next business day
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery as early as 9 a.m.</li>
+                                                    <li>Ideal for shipments that must arrive early in the business day</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink 2nd Day Air A.M.</span><br>
+                                                Delivery commitment: 2 business days
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery as early as 8 am</li>
+                                                    <li>Guaranteed, second business day delivery</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink 2nd Day Air</span><br>
+                                                Delivery commitment: 2 business days
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery typically by end of day</li>
+                                                    <li>Ideal for shipments that do not need overnight service</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink 3 Day Select</span><br>
+                                                Delivery commitment: 3 business days
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Delivery by end of day</li>
+                                                    <li>An ideal mix of economy and guaranteed delivery</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Pack & Ship Guarantee</span><br>
+                                                You don’t have to worry about a thing at VLink. If an item packed by our
+                                                associates and shipped via VLink is damaged or lost, you’ll be reimbursed for the item’s
+                                                value (subject to the lesser of actual value, replacement or repair cost), the full retail
+                                                price of packaging materials and services, and shipping charges (excluding declared value charges).
+                                                Restrictions apply.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Keep an eye on your package</span><br>
+                                                Go <a href="/package-tracker/" target="_blank" style="color: #42429b; font-weight: 600">here</a>
+                                                to track your package and get the estimated delivery date.
+                                            </p>
+                                        </div>
+                                        <br>
+                                        <div class="w3-container w3-light-grey w3-padding-16">
+                                            <a href="quote-ec.php" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Express Courier -->
+                                <div class="w3-col s4-services">
+                                    <div class="w3-card-services-4" style="width: 100%">
+                                        <img src="images/express-courier.jpg" alt="Express Courier" style="width: 100%;">
+                                        <div id="ec" class="w3-container w3-center">
+                                            <h2 class="services-h2">EXPRESS COURIER</h2>
+                                            <p class="w3-center services-p" style="padding: 11px;">
+                                                Having established a wide network of agents, VLink provides domestic shipping
+                                                to all Finland states. Depending<span id="ed-dots">...</span>
+                                            </p>
+                                            <button type="button" class="but-showmore" id="edBtn" onclick="document.getElementById('exc')
+                                            .style.display='block'">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Special Services Modal Pop Up -->
+                                <div id="ss" class="w3-modal">
+                                    <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                                        <header class="w3-container w3-transparent">
+                                            <span onclick="document.getElementById('ss').style.display='none'"
+                                            class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                            <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">SPECIAL SERVICES</h2>
+                                        </header>
+
+                                        <div id="ss-text" class="w3-container">
+                                            <p>
+                                                <span class="h3">Need to send a one-off special shipment?</span><br>
+                                                Whatever you need to get from A to B, however special, delicate or urgent, we can help.
+                                                We can transport that delicate or valuable item with extra special care, quickly and reliably.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Our range of shipping options include:</span>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Dangerous goods services</span><br>
+                                                We advise you on the classification of your goods. We handle the documentation.
+                                                Our experienced and qualified experts will transport your goods in specially
+                                                equipped vehicles for maximum safety.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Secure transport</span><br>
+                                                Our in-house security experts can advise you on transporting high value goods.
+                                                We use specially built and alarmed vehicles which are tracked using GPS technology.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Clinical Express services</span><br>
+                                                Our unique urgent delivery service for the medical, pharmaceutical and biotech industries.
+                                                <br><br>
+                                                <span style="font-weight: 600">We also handle...</span>
+                                                <br><br>
+                                                Perishable loads in temperature controlled environments and delicate shipments.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Pack & Ship Guarantee</span><br>
+                                                You don’t have to worry about a thing at VLink. If an item packed by our
+                                                associates and shipped via VLink is damaged or lost, you’ll be reimbursed for the item’s
+                                                value (subject to the lesser of actual value, replacement or repair cost), the full retail
+                                                price of packaging materials and services, and shipping charges (excluding declared value charges).
+                                                Restrictions apply.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Keep an eye on your package</span><br>
+                                                Go <a href="/package-tracker/" target="_blank" style="color: #42429b; font-weight: 600">here</a>
+                                                to track your package and get the estimated delivery date.
+                                            </p>
+                                        </div>
+                                        <br>
+                                        <div class="w3-container w3-light-grey w3-padding-16">
+                                            <a href="quote-ec.html" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Special Services -->
+                                <div class="w3-col s4-services">
+                                    <div class="w3-card-services-4" style="width: 100%">
+                                        <img src="images/special-services-3.jpg" alt="Special Services" style="width: 100%;">
+                                        <div class="w3-container w3-center">
+                                            <h2 class="services-h2">SPECIAL SERVICES</h2>
+                                            <p class="w3-center services-p" style="padding: 11px;">
+                                                Need to send a one-off special shipment?
+                                                We can transport your delicate or valuable item with extra special care, quickly
+                                                and reliably<span id="sps-dots">...</span>
+                                            </p>
+                                            <button type="button" class="but-showmore" onclick="document.getElementById('ss')
+                                            .style.display='block'">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Time Critical Services Modal Pop Up -->
+                                <div id="tcs" class="w3-modal">
+                                    <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                                        <header class="w3-container w3-transparent">
+                                            <span onclick="document.getElementById('tcs').style.display='none'"
+                                            class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                            <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">TIME CRITICAL SERVICES</h2>
+                                        </header>
+
+                                        <div id="tc-text" class="w3-container">
+                                            <p>
+                                                <span class="h3">An immediate response</span><br>
+                                                Time Critical Service is our special service for especially time-critical and
+                                                high-value air freight, regardless of weight or size. Whether it is 40 kg
+                                                or six tons - the combination of personal supervision on the ground, maximum
+                                                speed and short-term capacity access makes our Time Critical Service the first choice
+                                                for sensitive shipments. Our worldwide logistics network offers fast flight connections
+                                                to some 300 destinations in more than 100 countries.
+                                                We get your express freight where it needs to be - fast and supervised.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                We offer two time critical services, <span style="color: #393973; font-weight: 600">
+                                                VLink Dedicated Express and VLink Special Express.</span>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Dedicated Express</span><br>
+                                                Whatever transport is needed, we provide a vehicle or courier dedicated to your delivery.
+                                                We carry your shipment direct to its destination, outside our network.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">VLink Special Express</span><br>
+                                                If we can utilise our network for some or part of the journey and still match the transit time
+                                                we can offer you using Dedicated Express, it reduces the cost of the service to you. This is
+                                                still a tailored, premium service in which your shipment receives the utmost priority and attention,
+                                                so we call it Special Express.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Totally flexible</span><br>
+                                                These are unique solutions for you, providing whatever you need including
+                                                <br><br>
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>out of hours pick-up and delivery times</li>
+                                                    <li>no limitations on the size or weight of the shipment</li>
+                                                </ul>
+                                                <br>
+                                                <span style="font-weight: 600">You may also be interested in...</span>
+                                                <br><br>
+                                                ...our <span style="color: #42429b; font-weight: 600">special services</span> which
+                                                we can combine with a time critical delivery, if your shipment needs high security,
+                                                delicate handling or environmental control. Just inform us when you book.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Pack & Ship Guarantee</span><br>
+                                                You don’t have to worry about a thing at VLink. If an item packed by our
+                                                associates and shipped via VLink is damaged or lost, you’ll be reimbursed for the item’s
+                                                value (subject to the lesser of actual value, replacement or repair cost), the full retail
+                                                price of packaging materials and services, and shipping charges (excluding declared value charges).
+                                                Restrictions apply.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Keep an eye on your package</span><br>
+                                                Go <a href="/package-tracker/" target="_blank" style="color: #42429b; font-weight: 600">here</a>
+                                                to track your package and get the estimated delivery date.
+                                            </p>
+                                        </div>
+                                        <br>
+                                        <div class="w3-container w3-light-grey w3-padding-16">
+                                            <a href="quote-ec.php" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Time Critical -->
+                                <div class="w3-col s4-services">
+                                    <div class="w3-card-services-4" style="width: 100%">
+                                        <img src="images/time-critical.jpg" alt="Time Critical Services" style="width: 100%;">
+                                        <div class="w3-container w3-center">
+                                            <h2 class="services-h2">TIME CRITICAL SERVICES</h2>
+                                            <p class="w3-center services-p" style="padding: 11px;">
+                                                When you have no time to lose and arriving late or not showing up at all is simply
+                                                not an option, our Time Critical Service is just right for you.
+                                            </p>
+                                            <button type="button" class="but-showmore" onclick="document.getElementById('tcs')
+                                            .style.display='block'">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Secure Storage Service Modal Pop Up -->
+                                <div id="sst" class="w3-modal">
+                                    <div class="w3-modal-content w3-card-popup w3-animate-zoom">
+                                        <header class="w3-container w3-transparent">
+                                            <span onclick="document.getElementById('sst').style.display='none'"
+                                            class="w3-button-ns w3-transparent w3-xlarge w3-display-topright">&times;</span>
+                                            <h2 style="font: 1.6em 'Oswald SemiBold', serif; color: #393973;">SECURE STORAGE</h2>
+                                        </header>
+
+                                        <div id="sst-text" class="w3-container">
+                                            <p>
+                                                <span class="h3">The perfect space for your valuables</span><br>
+                                                Looking for the right place to store your valuables? Need a place to store
+                                                temperature-sensitive items? You've come to the right place. VLink
+                                                offers self-storage solutions that are secure and private.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                With 400 units of all sizes, we're sure to have the storage space you need
+                                                at a price you can afford. We offer <span style="color: #42429b; font-weight: 600">exterior storage units, premium wine and
+                                                cigar cellars</span>, other <span style="color: #42429b; font-weight: 600">specialty
+                                                storage units</span> and more! You'll have 24/7 access
+                                                to your storage unit. We are open 7 days a week for your convenience.
+                                                Get in touch with us today to schedule a tour of your private self-storage unit.
+                                            </p>
+                                            <br>
+                                            <p>
+                                                <span class="h3">Security matters</span><br>
+                                                We employ the highest levels of security at our storage facility in Kuopio, Finland.
+                                                When you make us your preferred self-storage option, your belongings will be protected by:
+                                                <br><br>
+                                                <ul style="padding: 0 0 0 17px">
+                                                    <li>Remote monitoring</li>
+                                                    <li>Keypad access</li>
+                                                    <li>24/7 interior and exterior surveillance</li>
+                                                </ul>
+                                            </p>
+                                            <br>
+                                            <p>
+                                                You can rest assured that your items are safe and secure in one of our self-storage units.
+                                                And, because our self-storage units are climate-controlled, your delicate items won't be damaged by heat or humidity.
+                                                Get in touch with us today to schedule a tour of your private self-storage unit.
+                                            </p>
+                                        </div>
+                                        <br>
+                                        <div class="w3-container w3-light-grey w3-padding-16">
+                                            <a href="quote-ss.php" target="_blank" class="w3-button-ns w3-right w3-orangered w3-border-0">Get a Quote</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Secure Storage -->
+                                <div class="w3-col s4-services">
+                                    <div class="w3-card-services-4" style="width: 100%">
+                                        <img src="images/secure-storage-3.jpg" alt="Secure Storage" style="width: 100%;">
+                                        <div class="w3-container w3-center">
+                                            <h2 class="services-h2">SECURE STORAGE</h2>
+                                            <p class="w3-center services-p" style="padding: 11px;">
+                                                Looking for the right place to store your valuables? Need a place to store temperature-sensitive items?
+                                                VLink is the right place.
+                                            </p>
+                                            <button type="button" class="but-showmore" onclick="document.getElementById('sst')
+                                            .style.display='block'">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Tailor Made Services -->
+                                <div class="w3-bar-item-services">
+                                    <div class="w3-card-services-4" style="width: 100%">
+                                        <img src="images/tailor-made.jpg" alt="Time Critical Services" style="width: 100%;">
+                                        <div class="w3-container w3-center">
+                                            <h2 class="services-h2">TAILOR MADE SERVICES</h2>
+                                            <p class="w3-center services-p" style="padding: 11px;">
+                                                Do you require a solution totally unique and designed just to suit your need?
+                                                When others won't do the job, we'll always find a way.
+                                            </p>
+                                            <a href="contact.html" target="_blank" class="but-tailormade">Let's Talk</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </div>
+
+    <!-- Mobile Menu -->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                    Get a Quote <i class="fas fa-caret-down"></i>
+                    <div id="demo" class="dropdown">
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
+                    </div>
+                </a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="/package-tracker/" target="_blank">Track</a>
+            </div>
+        </div>
+
+    <!-- JS fix - h2: International Shipping -->
+    <script>
+        function intlShipping(x) {
+            if (x.matches) {
+                document.getElementById
+                ('is-h2').innerHTML = "INT'L SHIPPING";
+            }
+            else {
+                document.getElementById
+                ('is-h2').innerHTML = "INTERNATIONAL SHIPPING";
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 1050px) and (min-width: 600px");
+        intlShipping(x);
+        x.addListener(intlShipping)
+    </script>
+
+    <!-- Scroll back to the top -->
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
+        </div>
+    </div>
+
+    <!-- JavaScript Full Screen Overlay Nav -->
+    <script>
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") === -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDownNav() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+
+    <!-- footer -->
+    <footer>
+        <p style="font-size: 1.5em">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p style="margin: 10px 0 0; color: gray">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <!-- <p class="footerCONTACT-h2">Follow Us</p> -->
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f" alt="facebook-icon"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram" alt="instagram-icon"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter" alt="twitter-icon"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin" alt="linkedin-icon"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
+</html>

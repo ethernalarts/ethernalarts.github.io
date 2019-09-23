@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VLink Express Courier - Get a Quote</title>
+
+    <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/back-to-top.css" rel="stylesheet">
+    <link href="css/misc.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" rel="stylesheet">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
+
+    <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/w3.js"></script>
+
+    <div class="thetop"></div>
+
+    <style>
+        .body {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            background-image: none;
+        }
+
+        /* On screens that are 992px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 900px) {
+
+            .container {
+                padding: 0 40px !important;
+            }
+
+            .w3-col.s4 {
+                width: 49.99999%
+            }
+
+            #center-getaquote-ss {
+                margin: 45px auto 0;
+            }
+        }
+
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .container {
+                padding: 0 40px !important;
+            }
+
+            .w3-col.s4 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="parallax">
+        <!-- Header with logo and navbar   -->
+        <header>
+            <a href="index.html">
+                <img src="images/SVG/vlink-logo.svg" class="vlink-logo" alt="v-link logo"/>
+            </a>
+            <nav>
+                <ul class="navlist">
+                    <li class="navlistitem"><a href="index.html">Home</a></li>
+                    <li class="navlistitem"><a href="services.html">Services</a></li>
+                    <li>
+                        <div class="dropdownnav">
+                            <button onclick="dropDownNav()" class="dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <div id="myDropdown" class="dropdownnav-content">
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php">Local Shipping</a>
+                                <a href="quote-ss.php">Secure Storage</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navlistitem"><a href="#">About</a></li>
+                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span>
+            <button class="openbtn" onclick="openNav()">
+                <i class="material-icons md-48">menu</i>
+            </button>
+        </span>
+
+        <!-- Create a Shipment. Just below the navbar -->
+        <div class="subheader-h2" style="width: 180px">Get a Quote</div>
+    </div>
+
+
+    <!-- Mobile Menu -->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                    Get a Quote <i class="fas fa-caret-down"></i>
+                    <div id="demo" class="dropdown">
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ss.php">Secure Storage</a>
+                    </div>
+                </a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="/package-tracker/" target="_blank">Track</a>
+            </div>
+        </div>
+
+
+    <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
+    <div class="container" style="padding: 0 100px">
+
+        <!-- Inner Container -->
+        <div class="body-content">
+
+            <h3 class="w3-center-getaquote" style="font-family: 'Oswald SemiBold', sans-serif;">
+                Click on a service below to get started
+            </h3>
+
+            <div class="w3-row-padding">
+
+                <!-- International Shipping -->
+                <a href="quote-is-1.php" target="_parent" class="w3-col s4">
+                    <div class="w3-card-4" style="width: 100%">
+                        <img src="images/get-a-quote-is.jpg" alt="International Shipping Quote" style="width: 100%;">
+                        <div class="w3-container w3-left-align">
+                            <p style="padding: 11px; font: 600 1.05em 'Hind Madurai', sans-serif">
+                                International Shipping
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Express Courier -->
+                <a href="quote-ec.php" target="_parent" class="w3-col s4">
+                    <div class="w3-card-4" style="width: 100%">
+                        <img src="images/get-a-quote-cs.jpg" alt="Courier Services" style="width: 100%;">
+                        <div class="w3-container w3-left-align">
+                            <p style="padding: 11px; font: 600 1.05em 'Hind Madurai', sans-serif">
+                                Express Courier
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Secure Storage-->
+                <a href="quote-ss.php" target="_parent" class="w3-col s4">
+                    <div class="w3-card-4" style="width: 100%">
+                        <img src="images/get-a-quote-ss.jpg" alt="Secure Storage" style="width: 100%">
+                        <div class="w3-container w3-left-align">
+                            <p style="padding: 11px; font: 600 1.05em 'Hind Madurai', sans-serif">
+                                Secure Storage
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll back to the top -->
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="scroll-icon fas fa-3x fa-angle-up"></i>
+        </div>
+    </div>
+
+    <!-- JavaScript Full Screen Overlay Nav -->
+    <script>
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") === -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDownNav() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdownnav-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+<!-- footer   -->
+<footer>
+    <div>
+        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+    </div>
+</footer>
+</html>
