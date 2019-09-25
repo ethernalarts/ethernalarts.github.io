@@ -59,7 +59,7 @@
   $street_address_dest = $_SESSION['address_ec_dest'];
   $apartment_dest = $_SESSION['apt_ec_dest'];
   $department_dest = $_SESSION['dept_ec_dest'];
-  $residen_add_dest = $_SESSION['resAdd_ec_dest'];
+  $residen_add_dest = $_SESSION['resadd_ec_dest'];
 
   //Package Dimensions (IS)
   $weight = $_SESSION['weight'];

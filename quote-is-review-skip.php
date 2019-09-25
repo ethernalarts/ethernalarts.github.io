@@ -203,7 +203,7 @@
             <div class="w3-card-quote-is">
 
                 <!-- International Shipping Quote Form Preview -->
-                <form class="container-form" method="post" action="is-submit-skip.php" style="padding-bottom: 0">
+                <form class="container-form" method="post" action="savesend-is-skip.php" style="padding-bottom: 0">
 
                     <!-- Shipment Origin Preview -->
                     <fieldset style="margin: 0 0 30px">
@@ -276,8 +276,14 @@
 
                                     <!-- Street Address 2 -->
                                     <label>
-                                        <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
                                                placeholder="Street Address 2/Apartment, Building, Suite, Unit etc: <?php echo $_SESSION['street_add2'] ?> ">
+                                    </label>
+
+                                    <!-- Shipping Service Option -->
+                                    <label>
+                                        <input style="float: right" disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipping Option: <?php echo $_SESSION['shipping_options'] ?> ">
                                     </label>
 
                                     <!-- Department -->
@@ -576,7 +582,7 @@
                     <div class="w3-center">
                         <div class="w3-bar">
                             <!-- <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button> -->
-                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">
+                            <button value="Next" name="submit" type="submit" class="w3-button w3-medium w3-green-continue">
                                 Submit</button>
                             <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
                         </div>

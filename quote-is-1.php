@@ -495,8 +495,19 @@
 
                             <!-- Street Address 2 (Apartment, suite, building) -->
                             <label>
-                                <input style="width: 100%" class="w3-input w3-border-0 w3-light-gray" name="street_add2"
+                                <input class="w3-input w3-border-0 w3-light-gray" name="street_add2"
                                        placeholder="Street Address 2 (or Apartment, suite, etc.:  " type="text">
+                            </label>
+
+                            <!-- Shipping Service Options -->
+                            <label>
+                                <select style="float: right" class="choice" name="shipping_options" required>
+                                    <option value="0" selected="selected">Choose Shipping Option  *</option>
+                                    <option value="VLink Standard">VLink Standard</option>
+                                    <option value="VLink Worldwide Express">VLink Worldwide Express</option>
+                                    <option value="VLink Worldwide Express Plus">VLink Worldwide Express Plus</option>
+                                    <option value="VLink Worldwide TimeSaver">VLink Worldwide TimeSaver</option>
+                                </select>
                             </label>
 
                             <!-- Department -->

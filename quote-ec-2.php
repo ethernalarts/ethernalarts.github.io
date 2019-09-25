@@ -264,9 +264,17 @@
                                 <!-- delivery options -->
                                 <label>
                                     <select name="delivery_options" style="float: right" class="choice">
-                                        <option value="0" selected="selected">Delivery type  *</option>
-                                        <option value="Special Service">Special Service</option>
-                                        <option value="Time Critical Service">Time Critical Service</option>
+                                        <option value="0" selected="selected">Choose Delivery type  *</option>
+                                        <option value="VLink Ground">VLink Ground</option>
+                                        <option value="VLink Next Day Air">VLink Next Day Air</option>
+                                        <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
+                                        <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
+                                        <option value="VLink 3 Day Select">VLink 3 Day Select</option>
+                                        <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                        <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
+                                        <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
+                                        <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
+                                        <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
                                     </select>
                                 </label>
 

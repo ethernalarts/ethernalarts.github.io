@@ -16,7 +16,8 @@
     $_SESSION['address_ec_dest'] = $_POST['address_ec_dest'];
     $_SESSION['apt_ec_dest'] = $_POST['apt_ec_dest'];
     $_SESSION['dept_ec_dest'] = $_POST['dept_ec_dest'];
-    $_SESSION['resAdd_ec_dest'] = $_POST['resAdd_ec_dest'];
+    $_SESSION['resadd_dest'] = $_POST['resadd_dest'];
+    $_SESSION['notify_dest'] = $_POST['notify_dest'];
 ?>
 
 <!doctype html>
@@ -217,7 +218,7 @@
             <div class="w3-card-quote-is">
 
                 <!-- Get a Quote form -->
-                <form class="container-form" method="post" style="padding-bottom: 0" action="ec-submit.php">
+                <form class="container-form" method="post" style="padding-bottom: 0" action="savesend-ec.php">
 
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
@@ -314,16 +315,16 @@
                                            placeholder="Pickup Time: <?php echo $_SESSION['pickup_time'] ?> ">
                                 </label>
 
-                                <!-- Status Updates -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Status Updates? <?php echo $_SESSION['stat_upd8s_ec'] ?> ">
-                                </label>
-
                                 <!-- Residential Address -->
                                 <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
                                            placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec'] ?> ">
+                                </label>
+
+                                <!-- Package Updates? -->
+                                <label>
+                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                           placeholder="Package Updates? <?php echo $_SESSION['pkg_update_ec'] ?> ">
                                 </label>
 
                                 <!-- Edit Button -->
@@ -578,6 +579,12 @@
                                        placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec_dest'] ?> ">
                             </label><br>
 
+                            <!-- Notify Receiver? -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Notify Receiver? <?php echo $_SESSION['notify_dest'] ?> ">
+                            </label>
+
                             <!-- Edit Button -->
                             <label>
                                 <button style="float: left" onClick="history.go(-3)"
@@ -591,7 +598,7 @@
                     <div class="w3-center">
                         <div class="w3-bar">
 <!--                            <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>-->
-                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">
+                            <button value="Next" name="submit" type="submit" class="w3-button w3-medium w3-green-continue">
                                 Submit</button>
                             <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
                         </div>

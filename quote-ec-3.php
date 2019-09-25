@@ -225,7 +225,7 @@
                             <!-- Gender -->
                             <label>
                                 <select class="choice" name="gender_ec_dest" required>
-                                    <option value="0" selected="selected">== Gender ==  *</option>
+                                    <option value="0" selected="selected">Gender  *</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
@@ -292,14 +292,23 @@
                                        name="dept_ec_dest" type="text">
                             </label>
 
-                            <!-- Toggle (Residential Address?) -->
-                            <div class="sliderWrapper" style="margin: 7px 0">
-                                <span style="margin-left: 3px;">Is this a residential address?</span>
-                                <label class="switch">
-                                    <input type="checkbox" value="No" id="res" onclick="resAdd()" name="resAdd_ec_dest">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
+                            <!-- Residential Address? -->
+                            <label>
+                                <select  name="resadd_dest" class="choice" required>
+                                    <option value="0" selected="selected">Is this a residential address?   *</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </label>
+
+                            <!-- Notify Receiver? -->
+                            <label>
+                                <select  style="float: right" name="notify_dest" class="choice">
+                                    <option value="0" selected="selected">Notify Receiver? </option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </label>
                     </fieldset>
 
                             <!-- Continue and Cancel Button -->

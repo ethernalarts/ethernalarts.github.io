@@ -15,6 +15,7 @@
     $_SESSION['zip_code'] = $_POST['zip_code'];
     $_SESSION['street_add'] = $_POST['street_add'];
     $_SESSION['street_add2'] = $_POST['street_add2'];
+    $_SESSION['shipping_options'] = $_POST['shipping_options'];
     $_SESSION['department'] = $_POST['department'];
     $_SESSION['email'] = $_POST['email'];
     $_SESSION['residential_add'] = $_POST['residential_add'];

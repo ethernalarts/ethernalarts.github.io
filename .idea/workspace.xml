@@ -30,6 +30,13 @@
   <component name="FavoritesManager">
     <favorites_list name="VLink Express Courier" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io" />
   </component>
@@ -37,9 +44,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HAGCO-mobile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,7 +166,9 @@
       <workItem from="1568995716050" duration="19505000" />
       <workItem from="1569176379776" duration="14463000" />
       <workItem from="1569232699196" duration="1502000" />
-      <workItem from="1569257937945" duration="18856000" />
+      <workItem from="1569257937945" duration="20053000" />
+      <workItem from="1569311600883" duration="6370000" />
+      <workItem from="1569350516893" duration="22020000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>

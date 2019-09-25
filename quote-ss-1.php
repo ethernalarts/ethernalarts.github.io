@@ -251,6 +251,8 @@
                                         <option value="Fabric">Fabric</option>
                                         <option value="Battery">Battery</option>
                                         <option value="Wine">Wine and/or Cigars</option>
+                                        <option value="Automobile">Automobile</option>
+                                        <option value="Perishable">Perishable</option>
                                         <option value="Machine Parts">Machine Parts</option>
                                         <option value="Other">Other</option>
                                     </select>
