@@ -203,7 +203,7 @@
             <div class="w3-card-quote-is">
 
                 <!-- International Shipping Quote Form Preview -->
-                <form class="container-form" method="post" action="savesend-is.php" style="padding-bottom: 0">
+                <form class="container-form" method="post" action="saveinfo-is.php" style="padding-bottom: 0">
 
                     <!-- Shipment Origin Preview -->
                     <fieldset style="margin: 0 0 30px">

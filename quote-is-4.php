@@ -273,41 +273,142 @@
                                               name="shipment_description" placeholder="Briefly describe shipment..."></textarea>
                             </label>
 
-                            <!-- Toggle (Oversize Shipment) -->
-<!--                            <div class="sliderWrapper" style="margin: 7px 0">-->
-<!--                                <span style="margin-left: 11px">Oversized Package (+$)</span>-->
-<!--                                <label class="switch">-->
-<!--                                    <input type="checkbox" onclick="toggle_visibility('oversizePackage')">-->
-<!--                                    <span class="slider"></span>-->
-<!--                                </label>-->
-<!--                            </div>-->
+                            <!-- Add another shipment -->
+                            <div class="sliderWrapper">
+                                <span style="margin-left: 0" onclick="toggle_visibility('oversizePackage')">
+                                    + Add another shipment
+                                </span>
+                            </div>
 
-                            <!-- oversize Shipment options -->
-<!--                            <label id="oversizePackage" style="display: none; margin: 20px 0 0">-->
-<!--                                <select name="oversize_shipment" class="w3-input w3-border-0 w3-light-gray" type="select">-->
-<!--                                    <option value="" selected disabled>Select a packaging option</option>-->
-<!--                                    <option value="additional_handling">Additional Handling</option>-->
-<!--                                </select>-->
-<!--                            </label>-->
+                            <!-- Shipment no 2 -->
+                            <fieldset id="oversizePackage" style="margin: 0 0 20px; display: none">
+
+                                <legend>Shipment (2) Details:</legend>
+                                <!-- Weight -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                           name="weight" type="number" required>
+                                </label>
+
+                                <!-- Length -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Length (inches):  *"
+                                           name="length" type="number" required>
+                                </label>
+
+                                <!-- Width -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                           name="width" type="number" required>
+                                </label>
+
+                                <!-- Height -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Height (inches):  *"
+                                           name="height" type="number" required>
+                                </label>
+
+                                <!-- Shipment's worth -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): "
+                                           name="worth" type="number">
+                                </label>
+
+                                <!-- Package type -->
+                                <label>
+                                    <select style="float: right" name="package_type" class="choice" type="select">
+                                        <option value="0" selected="selected">Package type  *</option>
+                                        <option value="Luggage">Luggage</option>
+                                        <option value="Jewellery">Jewellery</option>
+                                        <option value="Electronic">Electronic</option>
+                                        <option value="Document">Document</option>
+                                        <option value="Battery">Battery</option>
+                                        <option value="Machine Parts">Machine Parts</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </label>
+
+                                <!-- Package Description -->
+                                <label>
+                                        <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
+                                                  name="shipment_description" placeholder="Briefly describe shipment..."></textarea>
+                                </label>
+
+                            </fieldset>
+
+                            <!-- Add another shipment -->
+                            <div class="sliderWrapper">
+                                <span style="margin-left: 0" onclick="toggle_visibility('oversizePackage')">
+                                    (+) Add another shipment
+                                </span>
+                            </div>
+
+                            <!-- Shipment no 3 -->
+                            <fieldset id="oversizePackage" style="margin: 0 0 20px; display: none">
+
+                                <legend>Shipment No 3 Details:</legend>
+                                <!-- Weight -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                           name="weight" type="number" required>
+                                </label>
+
+                                <!-- Length -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Length (inches):  *"
+                                           name="length" type="number" required>
+                                </label>
+
+                                <!-- Width -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                           name="width" type="number" required>
+                                </label>
+
+                                <!-- Height -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Height (inches):  *"
+                                           name="height" type="number" required>
+                                </label>
+
+                                <!-- Shipment's worth -->
+                                <label>
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): "
+                                           name="worth" type="number">
+                                </label>
+
+                                <!-- Package type -->
+                                <label>
+                                    <select style="float: right" name="package_type" class="choice" type="select">
+                                        <option value="0" selected="selected">Package type  *</option>
+                                        <option value="Luggage">Luggage</option>
+                                        <option value="Jewellery">Jewellery</option>
+                                        <option value="Electronic">Electronic</option>
+                                        <option value="Document">Document</option>
+                                        <option value="Battery">Battery</option>
+                                        <option value="Machine Parts">Machine Parts</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </label>
+
+                                <!-- Package Description -->
+                                <label>
+                                        <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
+                                                  name="shipment_description" placeholder="Briefly describe shipment..."></textarea>
+                                </label>
+
+                            </fieldset>
+
                     </fieldset>
-
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
-                        <div class="w3-bar" style="margin: 40px 0 0">
+                        <div class="w3-bar" style="margin: 20px 0 0">
                             <button value="Previous" onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
                             <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">Next</button>
                             <button value="Reset" type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                         </div>
                     </div>
-
-                    <!-- Oversized Package toggle -->
-                    <script type="text/javascript">
-                        function toggle_visibility(oversizedPackage) {
-                            var e = document.getElementById(oversizedPackage);
-                            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
-                        }
-                    </script>
 
                 <!-- End of form -->
                 </form>
@@ -377,6 +478,14 @@
                     }
                 }
             }
+        }
+    </script>
+
+    <!-- Oversized Package toggle -->
+    <script type="text/javascript">
+        function toggle_visibility(oversizedPackage) {
+            var e = document.getElementById(oversizedPackage);
+            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
         }
     </script>
 </body>

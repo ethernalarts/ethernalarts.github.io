@@ -151,7 +151,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
     </div>
 
 
@@ -203,11 +203,11 @@
             <div class="w3-card-quote-is">
 
                 <!-- International Shipping Quote Form Preview -->
-                <form class="container-form" method="post" action="savesend-is-skip.php" style="padding-bottom: 0">
+                <form class="container-form" method="post" action="saveinfo-is-skip.php" style="padding-bottom: 0">
 
                     <!-- Shipment Origin Preview -->
                     <fieldset style="margin: 0 0 30px">
-                                <legend>Shipment Origin</legend>
+                            <legend>Shipment Origin</legend>
                                     <!-- Full Name -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
@@ -559,10 +559,10 @@
                                                placeholder="Shipment's Worth (USD): $<?php echo $_SESSION['worth'] ?> ">
                                     </label>
 
-                                    <!-- Package Type -->
+                                    <!-- Shipment Type -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Package Type: <?php echo $_SESSION['package_type'] ?> ">
+                                               placeholder="Shipment Type: <?php echo $_SESSION['package_type'] ?> ">
                                     </label>
 
                                     <!-- Brief Shipment Description -->

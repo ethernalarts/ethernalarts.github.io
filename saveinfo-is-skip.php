@@ -5,7 +5,7 @@
     {
         $myfile = fopen("data\IS-quote-skip.txt", "w") or die("Unable to open file");
 
-        $h1 = '<b>NEW INTERNATIONAL SHIPPING ORDER!</b>'."\r\n\r\n";
+        $h1 = 'NEW INTERNATIONAL SHIPPING ORDER!'."\r\n\r\n";
         fwrite($myfile, $h1);
 
         //Shipment Origin - IS (International Shipping)
@@ -146,5 +146,8 @@
         fclose($myfile);
     }
 
-    echo 'Data has been saved successfully.';
+    // echo 'Data has been saved successfully.';
+
+    // include('attach-is-skip.php');
+    header ("Location: attach-is-skip.php");
 ?>
