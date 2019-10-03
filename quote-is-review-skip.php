@@ -1,15 +1,51 @@
 <?php
-    //start the session
-    session_start();
+//start the session
+session_start();
 
     //store posted values in the session variables
+    //1st shipment variables
     $_SESSION['weight'] = $_POST['weight'];
     $_SESSION['length'] = $_POST['length'];
     $_SESSION['width'] = $_POST['width'];
     $_SESSION['height'] = $_POST['height'];
+    $_SESSION['colour'] = $_POST['colour'];
+    $_SESSION['texture'] = $_POST['texture'];
     $_SESSION['worth'] = $_POST['worth'];
-    $_SESSION['package_type'] = $_POST['package_type'];
+    $_SESSION['shipment_type'] = $_POST['shipment_type'];
     $_SESSION['shipment_description'] = $_POST['shipment_description'];
+
+    //2nd shipment variables
+    $_SESSION['weight_2'] = $_POST['weight_2'];
+    $_SESSION['length_2'] = $_POST['length_2'];
+    $_SESSION['width_2'] = $_POST['width_2'];
+    $_SESSION['height_2'] = $_POST['height_2'];
+    $_SESSION['colour_2'] = $_POST['colour_2'];
+    $_SESSION['texture_2'] = $_POST['texture_2'];
+    $_SESSION['worth_2'] = $_POST['worth_2'];
+    $_SESSION['shipment_type_2'] = $_POST['shipment_type_2'];
+    $_SESSION['shipment_description_2'] = $_POST['shipment_description_2'];
+
+    //3rd shipment variables
+    $_SESSION['weight_3'] = $_POST['weight_3'];
+    $_SESSION['length_3'] = $_POST['length_3'];
+    $_SESSION['width_3'] = $_POST['width_3'];
+    $_SESSION['height_3'] = $_POST['height_3'];
+    $_SESSION['colour_3'] = $_POST['colour_3'];
+    $_SESSION['texture_3'] = $_POST['texture_3'];
+    $_SESSION['worth_3'] = $_POST['worth_3'];
+    $_SESSION['shipment_type_3'] = $_POST['shipment_type_3'];
+    $_SESSION['shipment_description_3'] = $_POST['shipment_description_3'];
+
+    //4th shipment variables
+    $_SESSION['weight_4'] = $_POST['weight_4'];
+    $_SESSION['length_4'] = $_POST['length_4'];
+    $_SESSION['width_4'] = $_POST['width_4'];
+    $_SESSION['height_4'] = $_POST['height_4'];
+    $_SESSION['colour_4'] = $_POST['colour_4'];
+    $_SESSION['texture_4'] = $_POST['texture_4'];
+    $_SESSION['worth_4'] = $_POST['worth_4'];
+    $_SESSION['shipment_type_4'] = $_POST['shipment_type_4'];
+    $_SESSION['shipment_description_4'] = $_POST['shipment_description_4'];
 ?>
 
 <!doctype html>
@@ -19,7 +55,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Express Courier - Review Details)</title>
+    <title>VLink Express Courier - Get a Quote (International Shipping - Review Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -57,7 +93,7 @@
             background-image: url("images/is-review.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -67,7 +103,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 300px;
+            margin-top: 260px;
         }
 
         input:disabled {
@@ -131,7 +167,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -170,7 +206,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" class="active" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -526,56 +562,275 @@
                                     </label>
                         </fieldset>
 
-                    <!-- Package Details Preview -->
+                    <!-- Shipment Details Preview -->
                     <fieldset style="margin: 50px 0 30px">
-                                <legend>Package Details</legend>
+                        <legend>Shipment Details</legend>
+                            <!-- Weight -->
+                            <label>
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Weight: <?php echo $_SESSION['weight'] ?> inches">
+                            </label>
+
+                            <!-- Length -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Length: <?php echo $_SESSION['length'] ?> inches">
+                            </label>
+
+                            <!-- Width -->
+                            <label>
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Width: <?php echo $_SESSION['width'] ?> inches">
+                            </label>
+
+                            <!-- Height -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Height: <?php echo $_SESSION['height'] ?> inches">
+                            </label>
+
+                            <!-- Shipment's Worth (USD) -->
+                            <label>
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Shipment's Worth (USD): $<?php echo $_SESSION['worth'] ?> ">
+                            </label>
+
+                            <!-- Shipment Type -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Shipment Type: <?php echo $_SESSION['shipment_type'] ?> ">
+                            </label>
+
+                            <!-- Shipment Type (Other) -->
+                            <label>
+                                <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Shipment Type (Other): <?php echo $_SESSION['other'] ?> ">
+                            </label>
+
+                            <!-- Colour -->
+                            <label>
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Colour: <?php echo $_SESSION['colour'] ?> ">
+                            </label>
+
+                            <!-- Texture -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Texture: <?php echo $_SESSION['texture'] ?> ">
+                            </label>
+
+                            <!-- Brief Shipment Description -->
+                            <label>
+                                <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Shipment Description: <?php echo $_SESSION['shipment_description'] ?> ">
+                            </label>
+
+                                <!-- Show other shipments -->
+                                <div style="margin: 0 0 30px;" class="sliderWrapper">
+                                    <span style="margin-left: 0" onclick="secondShipment()">
+                                        + show other shipments
+                                    </span>
+                                </div>
+
+                                <!-- 2nd shipment -->
+                                <fieldset id="secondShipment" style="margin: 10px 0 30px; display: none">
+                                    <legend>2nd Shipment Details</legend>
                                     <!-- Weight -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Weight: <?php echo $_SESSION['weight'] ?> inches">
+                                               placeholder="Weight: <?php echo $_SESSION['weight_2'] ?> inches">
                                     </label>
 
                                     <!-- Length -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Length: <?php echo $_SESSION['length'] ?> inches">
+                                               placeholder="Length: <?php echo $_SESSION['length_2'] ?> inches">
                                     </label>
 
                                     <!-- Width -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Width: <?php echo $_SESSION['width'] ?> inches">
+                                               placeholder="Width: <?php echo $_SESSION['width_2'] ?> inches">
                                     </label>
 
                                     <!-- Height -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Height: <?php echo $_SESSION['height'] ?> inches">
+                                               placeholder="Height: <?php echo $_SESSION['height_2'] ?> inches">
                                     </label>
 
                                     <!-- Shipment's Worth (USD) -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Shipment's Worth (USD): $<?php echo $_SESSION['worth'] ?> ">
+                                               placeholder="Shipment's Worth (USD): $<?php echo $_SESSION['worth_2'] ?> ">
                                     </label>
 
                                     <!-- Shipment Type -->
                                     <label>
                                         <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Shipment Type: <?php echo $_SESSION['package_type'] ?> ">
+                                               placeholder="Shipment Type: <?php echo $_SESSION['shipment_type_2'] ?> ">
+                                    </label>
+
+                                    <!-- Shipment Type (Other) -->
+                                    <label>
+                                        <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment Type (Other): <?php echo $_SESSION['other_2'] ?> ">
+                                    </label>
+
+                                    <!-- Colour -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Colour: <?php echo $_SESSION['colour_2'] ?> ">
+                                    </label>
+
+                                    <!-- Texture -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Texture: <?php echo $_SESSION['texture_2'] ?> ">
                                     </label>
 
                                     <!-- Brief Shipment Description -->
                                     <label>
                                         <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Shipment Description: <?php echo $_SESSION['shipment_description'] ?> ">
+                                               placeholder="Shipment Description: <?php echo $_SESSION['shipment_description_2'] ?> ">
+                                    </label>
+                                </fieldset>
+
+                                <!-- 3rd Shipment Details -->
+                                <fieldset id="thirdShipment" style="margin: 0 0 30px; display: none">
+
+                                    <legend>3rd Shipment Details</legend>
+                                    <!-- Weight -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Weight: <?php echo $_SESSION['weight_3'] ?> inches">
                                     </label>
 
-                                    <!-- Edit Button -->
+                                    <!-- Length -->
                                     <label>
-                                        <button style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Length: <?php echo $_SESSION['length_3'] ?> inches">
                                     </label>
-                            </fieldset>
+
+                                    <!-- Width -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Width: <?php echo $_SESSION['width_3'] ?> inches">
+                                    </label>
+
+                                    <!-- Height -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Height: <?php echo $_SESSION['height_3'] ?> inches">
+                                    </label>
+
+                                    <!-- Shipment's Worth (USD) -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment's Worth (USD): $<?php echo $_SESSION['worth_3'] ?> ">
+                                    </label>
+
+                                    <!-- Shipment Type -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment Type: <?php echo $_SESSION['shipment_type_3'] ?> ">
+                                    </label>
+
+                                    <!-- Shipment Type (Other) -->
+                                    <label>
+                                        <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment Type (Other): <?php echo $_SESSION['other_3'] ?> ">
+                                    </label>
+
+                                    <!-- Colour -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Colour: <?php echo $_SESSION['colour_3'] ?> ">
+                                    </label>
+
+                                    <!-- Texture -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Texture: <?php echo $_SESSION['texture_3'] ?> ">
+                                    </label>
+
+                                    <!-- Brief Shipment Description -->
+                                    <label>
+                                        <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment Description: <?php echo $_SESSION['shipment_description_3'] ?> ">
+                                    </label>
+                                </fieldset>
+
+                                <!-- 4th Shipment Details -->
+                                <fieldset id="fourthShipment" style="margin: 0 0 30px; display: none">
+
+                                    <legend>4th Shipment Details</legend>
+                                    <!-- Weight -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Weight: <?php echo $_SESSION['weight_4'] ?> inches">
+                                    </label>
+
+                                    <!-- Length -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Length: <?php echo $_SESSION['length_4'] ?> inches">
+                                    </label>
+
+                                    <!-- Width -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Width: <?php echo $_SESSION['width_4'] ?> inches">
+                                    </label>
+
+                                    <!-- Height -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Height: <?php echo $_SESSION['height_4'] ?> inches">
+                                    </label>
+
+                                    <!-- Shipment's Worth (USD) -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment's Worth (USD): $<?php echo $_SESSION['worth_4'] ?> ">
+                                    </label>
+
+                                    <!-- Shipment Type -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment Type: <?php echo $_SESSION['shipment_type_4'] ?> ">
+                                    </label>
+
+                                    <!-- Shipment Type (Other) -->
+                                    <label>
+                                        <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment Type (Other): <?php echo $_SESSION['other_4'] ?> ">
+                                    </label>
+
+                                    <!-- Colour -->
+                                    <label>
+                                        <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Colour: <?php echo $_SESSION['colour_4'] ?> ">
+                                    </label>
+
+                                    <!-- Texture -->
+                                    <label>
+                                        <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Texture: <?php echo $_SESSION['texture_4'] ?> ">
+                                    </label>
+
+                                    <!-- Brief Shipment Description -->
+                                    <label>
+                                        <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                               placeholder="Shipment Description: <?php echo $_SESSION['shipment_description_4'] ?> ">
+                                    </label>
+                                </fieldset>
+
+                            <!-- Edit Button -->
+                            <label>
+                                <button style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</button>
+                            </label>
+                    </fieldset>
 
 
                     <!-- Continue and Cancel Button -->
@@ -650,12 +905,59 @@
             <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
+
+    <!-- other Shipment toggle -->
+    <script>
+        var btn = document.querySelector('secondShipment');
+        btn.addEventListener('click', secondShipment);
+
+        function secondShipment() {
+            var e = document.getElementById('secondShipment');
+            e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
+
+            var e1 = document.getElementById('thirdShipment');
+            e1.style.display = ((e1.style.display !== 'none') ?  'none' : 'block');
+
+            var e2 = document.getElementById('fourthShipment');
+            e2.style.display = ((e2.style.display !== 'none') ?  'none' : 'block');
+        }
+    </script>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

@@ -78,7 +78,7 @@
             background-image: url("images/ss-pic1.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -88,7 +88,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 290px;
+            margin-top: 250px;
         }
 
         input:disabled {
@@ -152,14 +152,14 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php" class="active">Secure Storage</a>
                             </div>
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
                     <li class="navlistitem"><a href="contact.html">Contact</a></li>
-                    <li class="navlistitem"><a href="track.html">Track</a></li>
+                    <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
         </header>
@@ -190,13 +190,13 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php" class="active">Secure Storage</a>
                     </div>
                 </a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="track.html">Track</a>
+                <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
 

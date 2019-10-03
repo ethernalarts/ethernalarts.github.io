@@ -61,10 +61,10 @@
     // echo $mail?"<h1>Mail sent.</h1>":"<h1>Mail sending failed.</h1>";
 
     if ($mail) {
-        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-final.html\">";
+        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-success.html\">";
     }
     else {
-        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-final.html\">";
+        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-error.html\">";
         // die("Sorry but the email could not be sent. Please go back and try again!");
     }
 ?>

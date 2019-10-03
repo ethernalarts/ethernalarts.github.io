@@ -3,9 +3,9 @@
 
     if (isset($_POST['submit']))
     {
-        $myfile = fopen("data\EC-quote.txt", "w") or die("Unable to open file");
+        $myfile = fopen("data\EC-quote-skip.txt", "w") or die("Unable to open file");
 
-        $h1 = 'NEW DOMESTIC SHIPPING (EXPRESS COURIER) ORDER!'."\r\n\r\n";
+        $h1 = 'NEW DOMESTIC SHIPPING ORDER!'."\r\n\r\n";
         fwrite($myfile, $h1);
 
         //Package Origin - EC (Express Courier)
@@ -142,37 +142,6 @@
         fclose($myfile);
     }
 
-    $to = 'pnnwokoro@gmail.com';
-    $subject = 'New Order - International Shipping!';
-    $from = $_SESSION['email'];
-    $name = $_SESSION['name'];
-    $country = $_SESSION['country'];
-    $package_type = $_SESSION['package_type']
-    $country_dest = $_SESSION['$country_dest'];
-
-    // To send HTML mail, the Content-type header must be set
-    $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-    // Create email headers
-    $headers .= 'From: '.$from."\r\n".
-        'Reply-To: '.$from."\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-
-    // Compose a simple HTML email message
-    $message = '<html><body>';
-    $message .= '<h1 style="color:#f40;">New International Shipping Order</h1>';
-    $message .= 'You have a new International Shipping Order from '$name'<'$email>'. "\r\n".
-                See attached file for shipment details."<br>".</p>';
-    $message .= '</body></html>';
-
-    // Sending email
-    if(mail($to, $subject, $message, $headers)){
-        // echo 'Your mail has been sent successfully.';
-        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-final.html\">";
-    } else{
-        echo 'Unable to send email. Please try again.';
-    }
-
-    echo 'Data has been saved successfully.';
+    // echo 'Data has been saved successfully.';
+    header ("Location: attach-ec-skip.php");
 ?>

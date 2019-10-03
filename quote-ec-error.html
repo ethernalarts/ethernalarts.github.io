@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Express Courier - Complete)</title>
+    <title>VLink Express Courier - Get a Quote (Domestic Shipping - Error)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -34,15 +34,15 @@
         }
 
         .container {
-            padding: 0 200px;
+            padding: 0 190px;
         }
 
         .parallax {
             /* The image used */
-            background-image: url("images/ec-final.jpg");
+            background-image: url("images/ec-review.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 270px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -52,13 +52,17 @@
         }
 
         .subheader-h2 {
-            margin-top: 290px;
+            margin-top: 90px;
         }
 
-        .w3-button.w3-green-continue {
-            color: white;
-            background-color: #2da52d;
-            padding: 15px 25px;
+        .w3-center-services-h2 {
+            text-align: center;
+            font-family: Montserrat, Lato, Arial, serif;
+            font-size: 1.3em;
+            margin: 0 auto 20px;
+            color: #0f0f0f;
+            font-weight: 500;
+            width: 100%;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -70,7 +74,7 @@
             }
 
             .container {
-                padding: 0 50px;
+                padding: 0 60px;
             }
 
             .container-form {
@@ -111,7 +115,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php" class="active">Express Courier</a>
+                                <a href="quote-ec.php" class="active">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -131,7 +135,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 330px;">Quote - Domestic Shipping</div>
     </div>
 
 
@@ -149,8 +153,8 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php" class="active">Express Courier</a>
+                        <a href="quote-is-1.php" class="active" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -168,26 +172,22 @@
         <div class="body-content">
 
             <!-- Progress circles which indicates the steps of the form: -->
-            <div style="text-align:center; margin-bottom: 40px;">
-                <span class="step finish"></span>
-                <span class="step finish"></span>
-                <span class="step finish"></span>
-                <span class="step finish"></span>
-                <span class="step finish"></span><br><br>
-                <span style="font: 1.25em Montserrat, sans-serif;">Complete</span>
+            <div style="text-align:center; margin-bottom: 10px">
+                <i class="error fas fa-frown"></i>
             </div>
-
-            <h2 id="hi">Done!</h2>
 
             <!-- Container for Get a Quote form  -->
             <div style="padding-bottom: 0">
 
                 <!-- Thank you note -->
-                <div class="container-form" style="padding: 50px 0 0">
+                <div class="container-form" style="padding: 30px 0 0">
                     <div >
                         <p class="w3-justify w3-center-services-h2">
-                            We have received your details.<br><br>
-                            We will get back to you soon with an invoice. Please keep an eye on your inbox.<br><br>
+                            Oops!<br><br>
+                            Apologies. An error has occurred and <br>
+                            we haven't received your package order.<br><br>
+                            Please go back and try again. If the issue persists,
+                            <a href="contact.html" style="color: #6489e1" target="_blank">contact us</a><br><br>
                             Thank You
                         </p>
                     </div>
@@ -260,10 +260,31 @@
     </div>
 </body>
 
-<!-- footer   -->
-<footer style="margin-top: 20px">
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer style="margin: 10px 0 0">
+        <p style="font-size: 1.5em">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p style="margin: 10px 0 0; color: gray">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Domestic Shipping. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <!-- <p class="footerCONTACT-h2">Follow Us</p> -->
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f" alt="facebook-icon"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram" alt="instagram-icon"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter" alt="twitter-icon"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin" alt="linkedin-icon"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
 </html>

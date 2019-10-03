@@ -47,7 +47,7 @@
             background-image: url("images/is-pic.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -57,8 +57,7 @@
         }
 
         .subheader-h2 {
-            margin: 300px auto 0;
-            width: 100%;
+            margin-top: 250px;
         }
 
         .countries, .states, .cities {
@@ -89,7 +88,7 @@
             }
 
             .container {
-                padding: 0 40px;
+                padding: 0 30px;
             }
 
             .container-form input, .container-form select {
@@ -120,7 +119,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -158,7 +157,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -189,7 +188,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -499,9 +498,30 @@
                                        placeholder="Street Address 2 (or Apartment, suite, etc.:  " type="text">
                             </label>
 
+                            <!-- Department -->
+                            <label>
+                                <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="department"
+                                       placeholder="Department, c/o, etc.: " type="text">
+                            </label>
+
+                            <!-- Email -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" name="email"
+                                       placeholder="Email:  *" type="email" required>
+                            </label>
+
+                            <!-- Residential Address -->
+                            <label>
+                                <select style="float: right" name="residential_add" class="choice" required>
+                                    <option value="0" selected="selected">Is this a residential address?   *</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </label>
+
                             <!-- Shipping Service Options -->
                             <label>
-                                <select style="float: right" class="choice" name="shipping_options" required>
+                                <select class="choice" name="shipping_options" required>
                                     <option value="0" selected="selected">Choose Shipping Option  *</option>
                                     <option value="VLink Standard">VLink Standard</option>
                                     <option value="VLink Worldwide Express">VLink Worldwide Express</option>
@@ -510,31 +530,10 @@
                                 </select>
                             </label>
 
-                            <!-- Department -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" name="department"
-                                       placeholder="Department, c/o, etc.: " type="text">
-                            </label>
-
-                            <!-- Email -->
-                            <label>
-                                <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="email"
-                                       placeholder="Email:  *" type="email" required>
-                            </label>
-
-                            <!-- Residential Address -->
-                            <label>
-                                <select  name="residential_add" class="choice" required>
-                                    <option value="0" selected="selected">Is this a residential address?   *</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                            </label>
-
                             <!-- Send shipment updates -->
                             <label>
                                 <select  style="float: right" name="status_updates" class="choice">
-                                    <option value="0" selected="selected">Send you shipment updates? </option>
+                                    <option value="0" selected="selected">Should we send you shipment updates? </option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
@@ -555,22 +554,6 @@
         </div>
     </div>
 
-    <!-- JS to change "value" text for residential address -->
-    <script>
-        function resAdd() {
-            const res = document.getElementById("res");
-            res.value = "Yes";
-        }
-    </script>
-
-    <!-- JS to change "value" text for Package Updates -->
-    <script>
-        function status() {
-            const x = document.getElementById("stat");
-            x.value = "Yes";
-        }
-    </script>
-
     <!-- JavaScript to change color of <option selected> -->
     <script>
         $(".choice").change(function () {
@@ -590,90 +573,6 @@
         });
     </script>
 
-    <!-- JavaScript to loop through quote form -->
-    <script>
-        var currentTab = 0; // Current tab is set to be the first tab (0)
-        showTab(currentTab); // Display the current tab
-
-        function showTab(n) {
-            // This function will display the specified tab of the form...
-            var x = document.getElementsByClassName("tab");
-            x[n].style.display = "block";
-            //... and fix the Previous/Next buttons:
-            if (n === 0) {
-                document.getElementById("prevBtn").style.display = "none";
-            } else {
-                document.getElementById("prevBtn").style.display = "inline";
-            }
-            if (n === (x.length - 1)) {
-                document.getElementById("nextBtn").innerHTML = "Submit";
-            } else {
-                document.getElementById("nextBtn").innerHTML = "Next";
-            }
-            //... and run a function that will display the correct step indicator:
-            fixStepIndicator(n)
-        }
-
-        function nextPrev(n) {
-            // This function will figure out which tab to display
-            var x = document.getElementsByClassName("tab");
-            // Exit the function if any field in the current tab is invalid:
-            if (n === 1 && !validateForm()) return false;
-            // Hide the current tab:
-            x[currentTab].style.display = "none";
-            // Increase or decrease the current tab by 1:
-            currentTab = currentTab + n;
-            // if you have reached the end of the form...
-            if (currentTab >= x.length) {
-                // ... the form gets submitted:
-                document.getElementById("regForm").submit();
-                return false;
-            }
-            // Otherwise, display the correct tab:
-            showTab(currentTab);
-        }
-
-        function validateForm() {
-            // This function deals with validation of the form fields
-            var x, y, i, valid = true;
-            x = document.getElementsByClassName("tab");
-            y = x[currentTab].getElementsByTagName("input");
-            // A loop that checks every input field in the current tab:
-            for (i = 0; i < y.length; i++) {
-                // If a field is empty...
-                if (y[i].value === "") {
-                    // add an "invalid" class to the field:
-                    y[i].className += " invalid";
-                    // and set the current valid status to false
-                    valid = false;
-                }
-            }
-            // If the valid status is true, mark the step as finished and valid:
-            if (valid) {
-                document.getElementsByClassName("step")[currentTab].className += " finish";
-            }
-            return valid; // return the valid status
-        }
-
-        function fixStepIndicator(n) {
-            // This function removes the "active" class of all steps...
-            var i, x = document.getElementsByClassName("step");
-            for (i = 0; i < x.length; i++) {
-                x[i].className = x[i].className.replace(" active", "");
-            }
-            //... and adds the "active" class on the current step:
-            x[n].className += " active";
-        }
-    </script>
-
-    <!-- JavaScript to toggle return address ON/OFF -->
-    <script>
-        function toggle_visibility(returnAdd) {
-            var e = document.getElementById(returnAdd);
-            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
-        }
-    </script>
-
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
         /* Open */
@@ -687,7 +586,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -699,7 +598,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
@@ -730,10 +629,40 @@
     </div>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

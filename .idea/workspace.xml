@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm" />
+    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm">
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/about.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/about.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/attach-is-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/attach-is-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/attach-is.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/attach-is.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/contact.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/contact.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/back-to-top.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/back-to-top.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/vlink.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/vlink.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/w3.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/w3.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/ec-submit-skip.php" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/ec-submit.php" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/error-is.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/aboutus-pic.jpg" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/aboutus-pic.jpg" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/ec-pic3.jpg" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/ec-pic3.jpg" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/is-pic2.jpg" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/is-pic2.jpg" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/is-pic4.jpg" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/is-pic4.jpg" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/index.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/index.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/is-submit-skip.php" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/is-submit.php" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/php/is-submit-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/php/is-submit-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/php/is-submit.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/php/is-submit.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-1.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-1.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-2-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-2-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-2.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-2.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-2.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-3-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-3-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-3.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-3.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-3.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-final.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-review-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-review-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-review.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-review.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-1.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-1.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-1.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-2.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-2.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-2.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-final.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-final.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-1.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-1.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-2.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-final.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-review.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-review.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-ec-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-ec-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-ec.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-ec.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/services.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/services.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +225,10 @@
       <workItem from="1569257937945" duration="20053000" />
       <workItem from="1569311600883" duration="6370000" />
       <workItem from="1569350516893" duration="34170000" />
+      <workItem from="1569681296484" duration="26598000" />
+      <workItem from="1569763567655" duration="2417000" />
+      <workItem from="1569828022453" duration="19260000" />
+      <workItem from="1570043289406" duration="34310000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>

@@ -27,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Express Courier - Review Details)</title>
+    <title>VLink Express Courier - Get a Quote (Domestic Shipping - Review Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -57,7 +57,7 @@
         }
 
         .container {
-            padding: 0 200px;
+            padding: 0 190px;
         }
 
         .parallax {
@@ -65,7 +65,7 @@
             background-image: url("images/ec-review.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 430px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -75,7 +75,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 290px;
+            margin-top: 260px;
         }
 
         input:disabled {
@@ -101,7 +101,7 @@
             }
 
             .container {
-                padding: 0 40px !important;
+                padding: 0 50px;
             }
         }
 
@@ -114,7 +114,7 @@
             }
 
             .container {
-                padding: 0 30px;
+                padding: 0 40px;
             }
 
             .container-form input, .container-form select {
@@ -146,7 +146,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php" class="active">Express Courier</a>
+                                <a href="quote-ec.php" class="active">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 330px;">Quote - Domestic Shipping</div>
     </div>
 
 
@@ -185,7 +185,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php" class="active">Express Courier</a>
+                        <a href="quote-ec.php" class="active">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -218,7 +218,7 @@
             <div class="w3-card-quote-is">
 
                 <!-- Get a Quote form -->
-                <form class="container-form" method="post" style="padding-bottom: 0" action="savesend-ec.php">
+                <form class="container-form" method="post" style="padding-bottom: 0" action="saveinfo-ec.php">
 
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
@@ -671,7 +671,7 @@
 <!-- footer   -->
 <footer>
     <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Domestic Shipping. All Rights Reserved.
     </div>
 </footer>
 </html>

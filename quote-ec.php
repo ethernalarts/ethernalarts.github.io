@@ -9,7 +9,7 @@ session_start(); // Session starts here.
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Express Courier - Package Origin)</title>
+    <title>VLink Express Courier - Get a Quote (Domestic Shipping - Package Origin)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -39,7 +39,7 @@ session_start(); // Session starts here.
         }
 
         .container {
-            padding: 0 210px;
+            padding: 0 190px;
         }
 
         .parallax {
@@ -47,7 +47,7 @@ session_start(); // Session starts here.
             background-image: url("images/ec-pic.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 430px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -57,8 +57,7 @@ session_start(); // Session starts here.
         }
 
         .subheader-h2 {
-            margin: 290px auto 0;
-            width: 100%;
+            margin-top: 260px;
         }
 
         input:disabled {
@@ -128,7 +127,7 @@ session_start(); // Session starts here.
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php" class="active">Express Courier</a>
+                                <a href="quote-ec.php" class="active">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -148,7 +147,7 @@ session_start(); // Session starts here.
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 330px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -166,7 +165,7 @@ session_start(); // Session starts here.
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php" class="active">Express Courier</a>
+                        <a href="quote-ec.php" class="active">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>

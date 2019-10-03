@@ -41,7 +41,7 @@
             background-image: url("images/contactus-pic.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -51,8 +51,7 @@
         }
 
         .subheader-h2 {
-            margin: 300px auto 0;
-            width: 100%;
+            margin-top: 260px;
         }
 
         #required {
@@ -136,7 +135,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -174,7 +173,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -210,25 +209,21 @@
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Name:  *" name="name"
                                        type="text" required>
-                                <span class="error"><?php echo $nameError;?></span>
                             </label>
 
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Email:  *" name="email"
                                        type="email" required>
-                                <span class="error"><?php echo $emailError;?></span>
                             </label>
 
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" placeholder="Phone Number:  *" name="phone"
                                        type="tel" required>
-                                <span class="error"><?php echo $phoneError;?></span>
                             </label>
 
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Subject: " name="subject"
                                        type="text" required>
-                                <span class="error"><?php echo $subjectError;?></span>
                             </label>
 
                             <label>
@@ -252,7 +247,6 @@
             <div class="subheader-h2" style="width: 250px; margin: 100px auto 50px">Visit Us Instead?</div>
 
             <div>
-
                 <!-- Contact Address -->
                 <fieldset style="display: block; margin: 65px auto;">
                     <legend>Where We Are</legend>
@@ -327,10 +321,40 @@
     </div>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

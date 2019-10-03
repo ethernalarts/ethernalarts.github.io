@@ -72,7 +72,7 @@
             background-image: url("images/is-pic3.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -82,7 +82,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 300px;
+            margin-top: 260px;
         }
 
         .countries, .states {
@@ -148,7 +148,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>

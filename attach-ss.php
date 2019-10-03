@@ -9,15 +9,15 @@
     $senderName = $_SESSION['name'];
 
     //email subject
-    $subject = 'New International Shipping Order';
+    $subject = 'New Domestic Shipping Order';
 
     //attachment file path
-    $file = "data\IS-quote.txt";
+    $file = "data\SS-quote.txt";
 
     //email body content
-    $htmlContent = '<h1>International Shipping Quote Request</h1>
+    $htmlContent = '<h1>Secure Storage Quote Request</h1>
         <p>
-          Hi. Please find attached my details for an International Shipment.
+          Hi. Please find attached my details for an item(s) for Secure Storage.
           I await your response with an invoice.
           Thank you.
         </p>';
@@ -61,10 +61,10 @@
     // echo $mail?"<h1>Mail sent.</h1>":"<h1>Mail sending failed.</h1>";
 
     if ($mail) {
-        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-success.html\">";
+        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-ss-success.html\">";
     }
     else {
-        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-error.html\">";
+        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-ss-error.html\">";
         // die("Sorry but the email could not be sent. Please go back and try again!");
     }
 ?>

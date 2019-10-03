@@ -125,35 +125,107 @@
 
 
         //Shipment Dimensions - IS (International Shipping)
-        $dimensions = 'SHIPMENT DIMENSIONS'."\r\n";
+        $dimensions = 'SHIPMENT DIMENSIONS'."\r\n\r\n";
         fwrite($myfile, $dimensions);
 
-        $weight = 'Weight = '.$_SESSION['weight']."\r\n";   //name
+        $firstshipdeets = '1ST SHIPMENT DETAILS:'."\r\n";
+        fwrite($myfile, $firstshipdeets);
+        $weight = 'Weight = '.$_SESSION['weight']."\r\n";   //Name
         fwrite($myfile, $weight);
-        $length = 'Length = '.$_SESSION['length']."\r\n";    //contact name
+        $length = 'Length = '.$_SESSION['length']."\r\n";    //Contact name
         fwrite($myfile, $length);
-        $width = 'Width = '.$_SESSION['width']."\r\n";   //gender
+        $width = 'Width = '.$_SESSION['width']."\r\n";   //Gender
         fwrite($myfile, $width);
-        $height = 'Height = '.$_SESSION['height']."\r\n";   //title
+        $height = 'Height = '.$_SESSION['height']."\r\n";   //Title
         fwrite($myfile, $height);
-        $worth = 'Shipment Worth = '.$_SESSION['worth']."\r\n";   //country code
+        $worth = 'Shipment Worth = '.$_SESSION['worth']."\r\n";   //Country code
         fwrite($myfile, $worth);
-        $package_type = 'Package Type = '.$_SESSION['package_type']."\r\n";   //phone
-        fwrite($myfile, $package_type);
-        $shipment_description = 'Shipment Description = '.$_SESSION['shipment_description']."\r\n";   //country
+        $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type']."\r\n";   //Shipment Type
+        fwrite($myfile, $shipment_type);
+        $other = 'Shipment Type (Other)= '.$_SESSION['other']."\r\n";   //Shipment Type (Other)
+        fwrite($myfile, $other);
+        $colour = 'Colour = '.$_SESSION['colour']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $shipment_description = 'Shipment Description = '.$_SESSION['shipment_description']."\r\n\r\n";   //Shipment Description
+        fwrite($myfile, $shipment_description);
+
+
+        $secondshipdeets = '2ND SHIPMENT DETAILS:'."\r\n";
+        fwrite($myfile, $secondshipdeets);
+        $weight = 'Weight = '.$_SESSION['weight_2']."\r\n";   //Name
+        fwrite($myfile, $weight);
+        $length = 'Length = '.$_SESSION['length_2']."\r\n";    //Contact name
+        fwrite($myfile, $length);
+        $width = 'Width = '.$_SESSION['width_2']."\r\n";   //Gender
+        fwrite($myfile, $width);
+        $height = 'Height = '.$_SESSION['height_2']."\r\n";   //Title
+        fwrite($myfile, $height);
+        $worth = 'Shipment Worth = '.$_SESSION['worth_2']."\r\n";   //Country code
+        fwrite($myfile, $worth);
+        $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type_2']."\r\n";   //Shipment Type
+        fwrite($myfile, $shipment_type);
+        $other = 'Shipment Type (Other)= '.$_SESSION['other_2']."\r\n";   //Shipment Type (Other)
+        fwrite($myfile, $other);
+        $colour = 'Colour = '.$_SESSION['colour_2']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture_2']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $shipment_description = 'Shipment Description = '.$_SESSION['shipment_description_2']."\r\n\r\n";   //Shipment Description
+        fwrite($myfile, $shipment_description);
+
+
+        $thirdshipdeets = '3RD SHIPMENT DETAILS:'."\r\n";
+        fwrite($myfile, $thirdshipdeets);
+        $weight = 'Weight = '.$_SESSION['weight_3']."\r\n";   //Name
+        fwrite($myfile, $weight);
+        $length = 'Length = '.$_SESSION['length_3']."\r\n";    //Contact name
+        fwrite($myfile, $length);
+        $width = 'Width = '.$_SESSION['width_3']."\r\n";   //Gender
+        fwrite($myfile, $width);
+        $height = 'Height = '.$_SESSION['height_3']."\r\n";   //Title
+        fwrite($myfile, $height);
+        $worth = 'Shipment Worth = '.$_SESSION['worth_3']."\r\n";   //Country code
+        fwrite($myfile, $worth);
+        $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type_3']."\r\n";   //Shipment Type
+        fwrite($myfile, $shipment_type);
+        $other = 'Shipment Type (Other)= '.$_SESSION['other_3']."\r\n";   //Shipment Type (Other)
+        fwrite($myfile, $other);
+        $colour = 'Colour = '.$_SESSION['colour_3']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture_3']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $shipment_description = 'Shipment Description = '.$_SESSION['shipment_description_3']."\r\n\r\n";   //Shipment Description
+        fwrite($myfile, $shipment_description);
+
+
+        $fourthshipdeets = '4TH SHIPMENT DETAILS:'."\r\n";
+        fwrite($myfile, $fourthshipdeets);
+        $weight = 'Weight = '.$_SESSION['weight_4']."\r\n";   //Name
+        fwrite($myfile, $weight);
+        $length = 'Length = '.$_SESSION['length_4']."\r\n";    //Contact name
+        fwrite($myfile, $length);
+        $width = 'Width = '.$_SESSION['width_4']."\r\n";   //Gender
+        fwrite($myfile, $width);
+        $height = 'Height = '.$_SESSION['height_4']."\r\n";   //Title
+        fwrite($myfile, $height);
+        $worth = 'Shipment Worth = '.$_SESSION['worth_4']."\r\n";   //Country code
+        fwrite($myfile, $worth);
+        $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type_4']."\r\n";   //Shipment Type
+        fwrite($myfile, $shipment_type);
+        $other = 'Shipment Type (Other)= '.$_SESSION['other_4']."\r\n";   //Shipment Type (Other)
+        fwrite($myfile, $other);
+        $colour = 'Colour = '.$_SESSION['colour_4']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture_4']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $shipment_description = 'Shipment Description = '.$_SESSION['shipment_description_4']."\r\n\r\n";   //Shipment Description
         fwrite($myfile, $shipment_description);
 
         fclose($myfile);
     }
 
-    // Sending email
-    if(mail($to, $subject, $message, $headers)){
-        // echo 'Your mail has been sent successfully.';
-        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-is-final.html\">";
-    } else{
-        echo 'Unable to send email. Please try again.';
-    }
-
     // echo 'Data has been saved successfully.';
-    include('attach-is.php');
+    header ("Location: attach-is.php");
 ?>

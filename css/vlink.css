@@ -125,17 +125,17 @@
 
     footer {
         width: 100%;
-        max-width: 1440px;
+        /*max-width: 1440px;*/
         margin: 60px 0 0;
         left: 0;
         bottom: 0;
-        background-color: rgba(14, 14, 14, 0.9);
+        background-color: rgba(0, 0, 0, 0.96);
         height: auto;
         font-family: "Montserrat", serif;
         font-size: 0.85em;
         font-weight: 500;
         color: whitesmoke;
-        padding: 40px;
+        padding: 40px 30px;
         display: block;
         text-align: justify;
     }
@@ -143,7 +143,7 @@
     .div-footer-followus{
         display: inline-block;
         float: right;
-        margin: -40px 0 0;
+        margin: -50px 0 0;
     }
 
     .footerCONTACT-h2 {
@@ -184,6 +184,56 @@
 
     .footer-TWITTER:hover {
         color: #b93131;
+    }
+
+    .footerlinks {
+        text-align: right;
+        list-style: none;
+        font-family: "Oswald Light", serif;
+        font-size: 1.2em;
+        margin: 10px 0 0;
+        display: block;
+    }
+
+    .footerlinks li {
+        display: inline;
+    }
+
+    .footerlinkitem {
+        padding: 8px;
+    }
+
+    .footerlinkitem a {
+        font-weight: 500;
+        color: whitesmoke;
+        display: inline-block;
+        padding: 8px 15px;
+    }
+
+    .footerlinkitem a:hover,
+    .footerlinkitem a:focus {
+        /*color: #c3c3c3;*/
+        color: #b93131;
+    }
+
+    .footerlinkitem a.active,
+    .footerlinkitem a.active:hover {
+        border-bottom: 2px solid transparent;
+        color: whitesmoke;
+        font-weight: 500;
+        padding: 8px 15px;
+        background-color: #b93131;
+        border-radius: 0;
+        text-decoration: none;
+    }
+
+    .footeradd {
+        font-size: 1.4em;
+    }
+
+    .footercopyrite {
+        margin: 10px 0 0;
+        color: gray;
     }
 
     header {
@@ -355,7 +405,7 @@
         /*display: inline-block;*/
         margin: 280px auto 0;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.95);
+        background-color: rgba(0, 0, 0, 0.96);
         padding: 10px 20px;
         font-size: 1.9em;
         font-weight: 500;
@@ -401,21 +451,21 @@
 
     .aboutus-p {
         text-align: left;
-        font-family: Montserrat, Lato, Arial, serif;
+        font-family: Verdana, Montserrat, Lato, serif;
         font-size: 1.1em;
         margin: 0 0 20px;
-        color: #0f0f0f;
+        color: #696969;
         font-weight: 500;
-        width: 70%;
+        width: 75%;
     }
 
     .aboutus-h2 {
         text-align: left;
-        font-family: Verdana, Lato, Arial, serif;
-        font-size: 1.5em;
+        font-family: "Oswald SemiBold", Lato, Arial, serif;
+        font-size: 1.6em;
         margin: 0 0 20px;
-        color: #0f0f0f;
-        font-weight: 600;
+        color: black;
+        font-weight: 500;
         width: 100%;
     }
 
@@ -535,7 +585,7 @@
         font-weight: 600;
         display: inline-block;
         color: whitesmoke;
-        background-color: #0f0f0f;
+        background-color: #5888d7;
         padding: 10px;
     }
 
@@ -587,8 +637,20 @@
     }
 
     .error {
-        color: red;
-        font-size: 50px;
+        color: #b94c4c;
+        font-size: 4.5em;
+    }
+
+    @media screen and (max-width: 1000px) {
+        footer {
+            text-align: left;
+            font-size: 0.9em;
+            padding: 40px 30px;
+        }
+
+        .footeradd {
+            font-size: 1.3em;
+        }
     }
 
     @media screen and (max-width: 925px) {
@@ -596,11 +658,27 @@
             display: block;
         }
 
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            padding: 40px 30px;
+        }
+
         .div-footer-followus {
             display: block;
             float: none;
             text-align: center;
             margin: 40px 0 0;
+        }
+
+        .footerlinks {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 30px 0 0;
+        }
+
+        .footeradd {
+            font-size: 1.3em;
         }
 
         header {
@@ -622,10 +700,18 @@
             background-color: white;
         }
 
-    nav {
-        display: none;
+        nav {
+            display: none;
+        }
     }
-}
+
+    @media screen and (max-width: 850px) {
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            padding: 40px 30px;
+        }
+    }
 
     /* On screens that are 600px wide or less */
     @media screen and (max-width: 600px) {
@@ -635,10 +721,21 @@
             padding: 40px 30px;
         }
 
-        .div-footer-followus{
+        .div-footer-followus {
             display: inline-block;
             float: none;
+            text-align: center;
             margin: 40px 0 0;
+        }
+
+        .footerlinks {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 30px 0 0;
+        }
+
+        .footeradd {
+            font-size: 1.3em;
         }
 
         #edit {
@@ -710,7 +807,7 @@
         }
 
         .w3-medium {
-            font-size: 15px !important
+            font-size: 15px;
         }
 
         .w3-modal {
@@ -721,12 +818,16 @@
         }
 
         .sliderWrapper {
-            text-align: center;
+            text-align: left;
             font-size: 1.05em;
-            margin: 30px 0 0;
+            margin: 30px 0;
         }
 
         .container-checkbox {
             text-align: justify;
+        }
+
+        .aboutus-h2 {
+            text-align: center;
         }
     }

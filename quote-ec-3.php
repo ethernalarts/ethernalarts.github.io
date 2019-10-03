@@ -3,13 +3,57 @@
     session_start();
 
     //store posted values in the session variables
+    //1st package details
+    $_SESSION['package_type'] = $_POST['package_type'];
+    $_SESSION['delivery_options'] = $_POST['delivery_options'];
+    $_SESSION['other'] = $_POST['other'];
+    $_SESSION['worth'] = $_POST['worth'];
     $_SESSION['weight'] = $_POST['weight'];
     $_SESSION['length'] = $_POST['length'];
     $_SESSION['width'] = $_POST['width'];
     $_SESSION['height'] = $_POST['height'];
-    $_SESSION['worth'] = $_POST['worth'];
-    $_SESSION['delivery_options'] = $_POST['delivery_options'];
+    $_SESSION['colour'] = $_POST['colour'];
+    $_SESSION['texture'] = $_POST['texture'];
     $_SESSION['pkg_descr'] = $_POST['pkg_descr'];
+
+    //2nd package details
+    $_SESSION['package_type_2'] = $_POST['package_type_2'];
+    $_SESSION['delivery_options_2'] = $_POST['delivery_options_2'];
+    $_SESSION['other_2'] = $_POST['other_2'];
+    $_SESSION['worth_2'] = $_POST['worth_2'];
+    $_SESSION['weight_2'] = $_POST['weight_2'];
+    $_SESSION['length_2'] = $_POST['length_2'];
+    $_SESSION['width_2'] = $_POST['width_2'];
+    $_SESSION['height_2'] = $_POST['height_2'];
+    $_SESSION['colour_2'] = $_POST['colour_2'];
+    $_SESSION['texture_2'] = $_POST['texture_2'];
+    $_SESSION['pkg_descr_2'] = $_POST['pkg_descr_2'];
+
+    //3rd package details
+    $_SESSION['package_type_3'] = $_POST['package_type_3'];
+    $_SESSION['delivery_options_3'] = $_POST['delivery_options_3'];
+    $_SESSION['other_3'] = $_POST['other_3'];
+    $_SESSION['worth_3'] = $_POST['worth_3'];
+    $_SESSION['weight_3'] = $_POST['weight_3'];
+    $_SESSION['length_3'] = $_POST['length_3'];
+    $_SESSION['width_3'] = $_POST['width_3'];
+    $_SESSION['height_3'] = $_POST['height_3'];
+    $_SESSION['colour_3'] = $_POST['colour_3'];
+    $_SESSION['texture_3'] = $_POST['texture_3'];
+    $_SESSION['pkg_descr_3'] = $_POST['pkg_descr_3'];
+
+    //4th package details
+    $_SESSION['package_type_4'] = $_POST['package_type_4'];
+    $_SESSION['delivery_options_4'] = $_POST['delivery_options_4'];
+    $_SESSION['other_4'] = $_POST['other_4'];
+    $_SESSION['worth_4'] = $_POST['worth_4'];
+    $_SESSION['weight_4'] = $_POST['weight_4'];
+    $_SESSION['length_4'] = $_POST['length_4'];
+    $_SESSION['width_4'] = $_POST['width_4'];
+    $_SESSION['height_4'] = $_POST['height_4'];
+    $_SESSION['colour_4'] = $_POST['colour_4'];
+    $_SESSION['texture_4'] = $_POST['texture_4'];
+    $_SESSION['pkg_descr_4'] = $_POST['pkg_descr_4'];
 ?>
 
 <!doctype html>
@@ -19,7 +63,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Express Courier - Package Destination)</title>
+    <title>VLink Express Courier - Get a Quote (Domestic Shipping - Package Destination)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -48,12 +92,16 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 190px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/ec-pic3.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 430px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -63,7 +111,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 290px;
+            margin-top: 250px;
         }
 
         input:disabled {
@@ -82,7 +130,7 @@
             }
 
             .container {
-                padding: 0 90px !important;
+                padding: 0 90px;
             }
         }
 
@@ -95,7 +143,7 @@
             }
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 40px;
             }
 
             .container-form input, .container-form select{
@@ -127,7 +175,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php" class="active">Express Courier</a>
+                                <a href="quote-ec.php" class="active">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -147,7 +195,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 300px;">Quote - Express Courier</div>
+        <div class="subheader-h2" style="width: 330px;">Quote - Domestic Shipping</div>
     </div>
 
 
@@ -166,7 +214,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php" class="active">Express Courier</a>
+                        <a href="quote-ec.php" class="active">Domestic Shipping</a>
                         <a href="quote-ss-1.php">Secure Storage</a>
                     </div>
                 </a>
@@ -178,7 +226,7 @@
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">
@@ -404,7 +452,7 @@
 <!-- footer   -->
 <footer>
     <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Domestic Shipping. All Rights Reserved.
     </div>
 </footer>
 </html>

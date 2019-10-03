@@ -46,7 +46,7 @@
             background-image: url("images/is-pic3.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -56,7 +56,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 300px;
+            margin-top: 260px;
         }
 
         .countries, .states {

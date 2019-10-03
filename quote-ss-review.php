@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (Secure Storage - Review Details)</title>
+    <title>VLink Domestic Shipping - Get a Quote (Secure Storage - Review Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -132,7 +132,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php" class="active">Secure Storage</a>
                             </div>
                         </div>
@@ -170,7 +170,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php" class="active">Secure Storage</a>
                     </div>
                 </a>
@@ -201,7 +201,7 @@
             <div class="w3-card-quote-is">
 
                 <!-- Get a Quote form -->
-                <form class="container-form" method="post" style="padding-bottom: 0" action="ss-submit.php">
+                <form class="container-form" method="post" style="padding-bottom: 0" action="saveinfo-ss.php">
 
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
@@ -461,7 +461,7 @@
 <!-- footer   -->
 <footer>
     <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
+        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Domestic Shipping. All Rights Reserved.
     </div>
 </footer>
 </html>

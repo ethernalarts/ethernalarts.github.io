@@ -39,7 +39,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (International Shipping - Shipment Details)</title>
+    <title>VLink Express Courier Ltd - Get a Quote (International Shipping - Shipment Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -75,7 +75,7 @@
             background-image: url("images/is-pic4.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 430px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -85,14 +85,18 @@
         }
 
         .subheader-h2 {
-            margin-top: 300px;
+            margin-top: 260px;
+        }
+
+        .secondShipment {
+
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
 
             .container {
-                padding: 0 50px
+                padding: 0 50px;
             }
         }
 
@@ -145,7 +149,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -183,7 +187,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -195,7 +199,7 @@
 
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">
@@ -210,54 +214,65 @@
               <span style="font: 1.25em Montserrat, sans-serif;">(Step 4 of 5)</span>
           </div>
 
-            <h2 id="hi">Almost done. Package Description</h2>
+            <h2 id="hi">Almost done. Shipment Description</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
             <!-- Container -->
             <div class="w3-card-4">
 
                 <!-- Shipment Dimensions -->
                 <form class="container-form" style="padding-bottom: 0" method="post" action="quote-is-review-skip.php">
-                    <fieldset style="margin: 0; padding-bottom: 10px">
-                        <legend>Shipment Details:</legend>
+
+                    <fieldset style="margin: 0 0 20px">
+
+                        <legend>Shipment Details</legend>
                             <!-- Weight -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (lbs):  *"
-                                name="weight" type="number" required>
+                                <input class="w3-light-gray" placeholder="Weight (pounds):  *"
+                                       name="weight" type="number" required>
                             </label>
 
                             <!-- Length -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Length (in):  *"
-                                name="length" type="number" required>
+                                <input class="w3-light-gray" style="float: right"
+                                       placeholder="Length (inches):  *"
+                                       name="length" type="number" required>
                             </label>
 
                             <!-- Width -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (in):  *"
-                                name="width" type="number" required>
+                                <input class="w3-light-gray" placeholder="Width (inches):  *"
+                                       name="width" type="number" required>
                             </label>
 
                             <!-- Height -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right" placeholder="Height (in):  *"
-                                name="height" type="number" required>
+                                <input class="w3-light-gray" style="float: right"
+                                       placeholder="Height (inches):  *"
+                                       name="height" type="number" required>
                             </label>
 
                             <!-- Shipment's worth -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD): "
-                                name="worth" type="number">
+                                <input class="w3-light-gray"
+                                       placeholder="Declared Value (Shipment's worth) (USD): "
+                                       name="worth" type="number">
                             </label>
 
-                            <!-- Package type -->
+                            <!-- Shipment type -->
                             <label>
-                                <select style="float: right" name="package_type" class="choice" type="select">
-                                    <option value="0" selected="selected">Package type  *</option>
+                                <select style="float: right" name="shipment_type" class="choice" type="select" required>
+                                    <option value="0" selected="selected">Shipment type *</option>
                                     <option value="Luggage">Luggage</option>
                                     <option value="Jewellery">Jewellery</option>
                                     <option value="Electronic">Electronic</option>
+                                    <option value="Laptop">Computer (Laptop)</option>
+                                    <option value="Desktop">Computer (Desktop)</option>
                                     <option value="Document">Document</option>
                                     <option value="Battery">Battery</option>
                                     <option value="Machine Parts">Machine Parts</option>
@@ -265,49 +280,299 @@
                                 </select>
                             </label>
 
-                            <!-- Package Description -->
+                            <!-- Other (Shipment type) -->
                             <label>
-                                    <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
-                                              name="shipment_description" placeholder="Briefly describe shipment..."></textarea>
+                                <input style="width: 100%" class="w3-light-gray" name="other" type="text"
+                                       placeholder="If shipment type selected above is OTHER, please specify: ">
                             </label>
 
-                            <!-- Toggle (Oversize Shipment) -->
-<!--                            <div class="sliderWrapper" style="margin: 7px 0">-->
-<!--                                <span style="margin-left: 11px">Oversized Package (+$)</span>-->
-<!--                                <label class="switch">-->
-<!--                                    <input type="checkbox" onclick="toggle_visibility('oversizePackage')">-->
-<!--                                    <span class="slider"></span>-->
-<!--                                </label>-->
-<!--                            </div>-->
+                            <!-- Colour -->
+                            <label>
+                                <input class="w3-light-gray" placeholder="Color:  *"
+                                       name="colour" type="text" required>
+                            </label>
 
-                            <!-- oversize Shipment options -->
-<!--                            <label id="oversizePackage" style="display: none; margin: 20px 0 0">-->
-<!--                                <select name="oversize_shipment" class="w3-input w3-border-0 w3-light-gray" type="select">-->
-<!--                                    <option value="" selected disabled>Select a packaging option</option>-->
-<!--                                    <option value="additional_handling">Additional Handling</option>-->
-<!--                                </select>-->
-<!--                            </label>-->
+                            <!-- Texture -->
+                            <label>
+                                <input class="w3-light-gray" style="float: right"
+                                       placeholder="Texture:  "  name="texture" type="text">
+                            </label>
+
+                            <!-- Shipment Description -->
+                            <label>
+                                <textarea style="height: 120px" class=" w3-light-gray" name="shipment_description"
+                                          placeholder="Briefly describe shipment..."></textarea>
+                            </label>
+                    </fieldset>
+
+                    <!-- Add 2nd shipment -->
+                    <div class="sliderWrapper">
+                        <span style="margin-left: 0" onclick="secondShipment()">
+                            + Add a 2nd shipment
+                        </span>
+                    </div>
+
+                    <!-- 2nd Shipment Details -->
+                    <fieldset id="secondShipment" style="margin: 0 0 20px; display: none">
+
+                        <legend>2nd Shipment Details</legend>
+                            <!-- Weight -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                       name="weight_2" type="number">
+                            </label>
+
+                            <!-- Length -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                       placeholder="Length (inches):  *"
+                                       name="length_2" type="number">
+                            </label>
+
+                            <!-- Width -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                       name="width_2" type="number">
+                            </label>
+
+                            <!-- Height -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                       placeholder="Height (inches):  *"
+                                       name="height_2" type="number">
+                            </label>
+
+                            <!-- Shipment's worth -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Declared Value (Shipment's worth) (USD): "
+                                       name="worth_2" type="number">
+                            </label>
+
+                            <!-- Shipment type -->
+                            <label>
+                                <select style="float: right" name="shipment_type_2" class="choice" type="select">
+                                    <option value="0" selected="selected">Shipment type *</option>
+                                    <option value="Luggage">Luggage</option>
+                                    <option value="Jewellery">Jewellery</option>
+                                    <option value="Electronic">Electronic</option>
+                                    <option value="Laptop">Computer (Laptop)</option>
+                                    <option value="Desktop">Computer (Desktop)</option>
+                                    <option value="Document">Document</option>
+                                    <option value="Battery">Battery</option>
+                                    <option value="Machine Parts">Machine Parts</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </label>
+
+                            <!-- Other (Shipment type) -->
+                            <label>
+                                <input style="width: 100%" class="w3-light-gray" name="other_2" type="text"
+                                       placeholder="If shipment type selected above is OTHER, please specify: ">
+                            </label>
+
+                            <!-- Colour -->
+                            <label>
+                                <input class="w3-light-gray" placeholder="Color:  *"
+                                       name="colour_2" type="text" required>
+                            </label>
+
+                            <!-- Texture -->
+                            <label>
+                                <input class="w3-light-gray" style="float: right"
+                                       placeholder="Texture:  "  name="texture_2" type="text">
+                            </label>
+
+                            <!-- Shipment Description -->
+                            <label>
+                                <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
+                                          name="shipment_description_2" placeholder="Briefly describe shipment..."></textarea>
+                            </label>
+                    </fieldset>
+
+
+                    <!-- Add 3rd shipment -->
+                    <div class="sliderWrapper">
+                        <span style="margin-left: 0; display: none" id="add3rdShipment" onclick="thirdShipment()">
+                            + Add a 3rd shipment
+                        </span>
+                    </div>
+
+                    <!-- 3rd Shipment Details -->
+                    <fieldset id="thirdShipment" style="margin: 0 0 20px; display: none">
+
+                        <legend>3rd Shipment Details</legend>
+                            <!-- Weight -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                       name="weight_3" type="number">
+                            </label>
+
+                            <!-- Length -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                       placeholder="Length (inches):  *"
+                                       name="length_3" type="number">
+                            </label>
+
+                            <!-- Width -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                       name="width_3" type="number">
+                            </label>
+
+                            <!-- Height -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                       placeholder="Height (inches):  *"
+                                       name="height_3" type="number">
+                            </label>
+
+                            <!-- Shipment's worth -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Declared Value (Shipment's worth) (USD): "
+                                       name="worth_3" type="number">
+                            </label>
+
+                            <!-- Shipment type -->
+                            <label>
+                                <select style="float: right" name="shipment_type_3" class="choice" type="select">
+                                    <option value="0" selected="selected">Shipment type *</option>
+                                    <option value="Luggage">Luggage</option>
+                                    <option value="Jewellery">Jewellery</option>
+                                    <option value="Electronic">Electronic</option>
+                                    <option value="Laptop">Computer (Laptop)</option>
+                                    <option value="Desktop">Computer (Desktop)</option>
+                                    <option value="Document">Document</option>
+                                    <option value="Battery">Battery</option>
+                                    <option value="Machine Parts">Machine Parts</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </label>
+
+                            <!-- Other (Shipment type) -->
+                            <label>
+                                <input style="width: 100%" class="w3-light-gray" name="other_3" type="text"
+                                       placeholder="If shipment type selected above is OTHER, please specify: ">
+                            </label>
+
+                            <!-- Colour -->
+                            <label>
+                                <input class="w3-light-gray" placeholder="Color:  *"
+                                       name="colour_3" type="text" required>
+                            </label>
+
+                            <!-- Texture -->
+                            <label>
+                                <input class="w3-light-gray" style="float: right"
+                                       placeholder="Texture:  "  name="texture_3" type="text">
+                            </label>
+
+                            <!-- Shipment Description -->
+                            <label>
+                                <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
+                                        name="shipment_description_3" placeholder="Briefly describe shipment..."></textarea>
+                            </label>
+                    </fieldset>
+
+
+                    <!-- Add 4th shipment -->
+                    <div class="sliderWrapper">
+                        <span style="margin-left: 0; display: none" id="add4thShipment" onclick="fourthShipment('fourthShipment')">
+                            + Add a 4th shipment
+                        </span>
+                    </div>
+
+                    <!-- 4th Shipment Details -->
+                    <fieldset id="fourthShipment" style="margin: 0 0 20px; display: none">
+
+                        <legend>4th Shipment Details</legend>
+                            <!-- Weight -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                       name="weight_4" type="number">
+                            </label>
+
+                            <!-- Length -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                       placeholder="Length (inches):  *"
+                                       name="length_4" type="number">
+                            </label>
+
+                            <!-- Width -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                       name="width_4" type="number">
+                            </label>
+
+                            <!-- Height -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                       placeholder="Height (inches):  *"
+                                       name="height_4" type="number">
+                            </label>
+
+                            <!-- Shipment's worth -->
+                            <label>
+                                <input class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Declared Value (Shipment's worth) (USD): "
+                                       name="worth_4" type="number">
+                            </label>
+
+                            <!-- Shipment type -->
+                            <label>
+                                <select style="float: right" name="shipment_type_4" class="choice" type="select">
+                                    <option value="0" selected="selected">Shipment type *</option>
+                                    <option value="Luggage">Luggage</option>
+                                    <option value="Jewellery">Jewellery</option>
+                                    <option value="Electronic">Electronic</option>
+                                    <option value="Laptop">Computer (Laptop)</option>
+                                    <option value="Desktop">Computer (Desktop)</option>
+                                    <option value="Document">Document</option>
+                                    <option value="Battery">Battery</option>
+                                    <option value="Machine Parts">Machine Parts</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </label>
+
+                            <!-- Other (Shipment type) -->
+                            <label>
+                                <input style="width: 100%" class="w3-light-gray" name="other_4" type="text"
+                                       placeholder="If shipment type selected above is OTHER, please specify: ">
+                            </label>
+
+                            <!-- Colour -->
+                            <label>
+                                <input class="w3-light-gray" placeholder="Color:  *"
+                                       name="colour_4" type="text" required>
+                            </label>
+
+                            <!-- Texture -->
+                            <label>
+                                <input class="w3-light-gray" style="float: right"
+                                       placeholder="Texture:  "  name="texture_4" type="text">
+                            </label>
+
+                            <!-- Shipment Description -->
+                            <label>
+                                <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
+                                          name="shipment_description_4" placeholder="Briefly describe shipment..."></textarea>
+                            </label>
                     </fieldset>
 
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
-                        <div class="w3-bar" style="margin: 40px 0 0">
+                        <div class="w3-bar" style="margin: 20px 0 0">
                             <button value="Previous" onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
                             <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">Next</button>
                             <button value="Reset" type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                         </div>
                     </div>
 
-                    <!-- Oversized Package toggle -->
-                    <script type="text/javascript">
-                        function toggle_visibility(oversizedPackage) {
-                            var e = document.getElementById(oversizedPackage);
-                            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
-                        }
-                    </script>
-
-                <!-- End of form -->
+                    <!-- End of form -->
                 </form>
             </div>
         </div>
@@ -377,12 +642,78 @@
             }
         }
     </script>
+
+    <!-- Second Shipment toggle -->
+    <script>
+        var btn = document.querySelector('secondShipment');
+        btn.addEventListener('click', secondShipment);
+
+        function secondShipment() {
+            var e = document.getElementById('secondShipment');
+            e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
+
+            var e1 = document.getElementById('add3rdShipment');
+            e1.style.display = ((e1.style.display !== 'none') ?  'none' : 'block');
+        }
+    </script>
+
+    <!-- Third Shipment toggle -->
+    <script>
+        var btn = document.querySelector('thirdShipment');
+        btn.addEventListener('click', thirdShipment);
+
+        function thirdShipment() {
+            var e = document.getElementById('thirdShipment');
+            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
+
+            var e1 = document.getElementById('add4thShipment');
+            e1.style.display = ((e1.style.display!== 'none') ?  'none' : 'block');
+        }
+    </script>
+
+    <!-- 4th Shipment toggle -->
+    <script>
+        function fourthShipment(fourthShipment) {
+            var e = document.getElementById(fourthShipment);
+            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
+        }
+    </script>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

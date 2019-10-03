@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Express Courier - Get a Quote (International Shipping - Complete)</title>
+    <title>VLink Express Courier - Get a Quote (Domestic Shipping - Complete)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
         .parallax {
             /* The image used */
-            background-image: url("images/is-final.jpg");
+            background-image: url("images/ec-pic.jpg");
 
             /* Set a specific height */
             min-height: 270px;
@@ -53,6 +53,16 @@
 
         .subheader-h2 {
             margin-top: 90px;
+        }
+
+        .w3-center-services-h2 {
+            text-align: center;
+            font-family: Montserrat, Lato, Arial, serif;
+            font-size: 1.3em;
+            margin: 0 auto 20px;
+            color: #0f0f0f;
+            font-weight: 500;
+            width: 100%;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -104,8 +114,8 @@
                             <button onclick="dropDownNav()" class="dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-is-1.php">International Shipping</a>
+                                <a href="quote-ec.php" class="active">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -125,7 +135,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 380px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 330px;">Quote - Domestic Shipping</div>
     </div>
 
 
@@ -143,8 +153,8 @@
                 <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.php"  class="active" style="padding-top: 0">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-is-1.php"style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php" class="active">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -168,21 +178,25 @@
                 <span class="step finish"></span>
                 <span class="step finish"></span>
                 <span class="step finish"></span><br><br>
-                <span style="font: 1.25em Montserrat, sans-serif;">Complete</span>
+                <span style="font: 1.25em Montserrat, sans-serif;">Complete!</span>
             </div>
 
-            <h2 id="hi">Done!</h2>
+            <!-- Smiling icon -->
+            <div style="text-align:center; margin-bottom: 0">
+                <i style="color: green" class="error fas fa-smile"></i>
+            </div>
 
             <!-- Container for Get a Quote form  -->
             <div style="padding-bottom: 0">
 
                 <!-- Thank you note -->
-                <div class="container-form" style="padding: 50px 0 0">
+                <div class="container-form" style="padding: 30px 0 0">
                     <div >
                         <p class="w3-justify w3-center-services-h2">
                             We have received your details.<br><br>
-                            We will get back to you soon with an invoice. Please keep an eye on your inbox.<br><br>
-                            Thank You
+                            We will get back to you soon with an invoice.<br>
+                            Please keep an eye on your inbox.<br><br>
+                            Thank You.
                         </p>
                     </div>
                     

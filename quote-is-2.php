@@ -67,12 +67,16 @@
             background-image: none;
         }
 
+        .container {
+            padding: 0 190px;
+        }
+
         .parallax {
             /* The image used */
             background-image: url("images/is-pic2.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -82,7 +86,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 300px;
+            margin-top: 255px;
         }
 
         .skip {
@@ -111,7 +115,7 @@
         @media screen and (max-width: 1200px) {
 
             .container {
-                padding: 0 30px !important;
+                padding: 0 30px;
             }
 
             .container-form {
@@ -142,7 +146,7 @@
             }
 
             .container {
-                padding: 0 20px !important;
+                padding: 0 30px;
             }
 
             button.w3-button.w3-red-cancel {
@@ -178,7 +182,7 @@
                                 Get a Quote <i class="fas fa-caret-down"></i></button>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
-                                <a href="quote-ec.php">Express Courier</a>
+                                <a href="quote-ec.php">Domestic Shipping</a>
                                 <a href="quote-ss.php">Secure Storage</a>
                             </div>
                         </div>
@@ -216,7 +220,7 @@
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.php">Express Courier</a>
+                        <a href="quote-ec.php">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -227,7 +231,7 @@
         </div>
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">
