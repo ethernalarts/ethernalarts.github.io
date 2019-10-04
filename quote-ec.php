@@ -57,7 +57,7 @@ session_start(); // Session starts here.
         }
 
         .subheader-h2 {
-            margin-top: 260px;
+            margin-top: 250px;
         }
 
         input:disabled {
@@ -315,7 +315,7 @@ session_start(); // Session starts here.
                                 <!-- Status Updates on Package -->
                                 <label>
                                     <select  style="float: right" name="pkg_update_ec" class="choice">
-                                        <option value="0" selected="selected">Email you package updates? </option>
+                                        <option value="0" selected="selected">Should we send you package updates? </option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -439,10 +439,40 @@ session_start(); // Session starts here.
     </div>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

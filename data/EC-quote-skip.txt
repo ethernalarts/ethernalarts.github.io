@@ -1,0 +1,112 @@
+NEW DOMESTIC SHIPPING ORDER!
+
+PACKAGE ORIGIN
+Name = Ethernal Arts
+Contact Name = Uwa
+Gender = Male
+Title = Mr
+Phone = 08058346994
+Country = FI
+State = South Karelia
+City = Lemi
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Room 6
+Department = Web Development
+Email = email@email.com
+Pickup Date = 2019-10-18
+Pickup Time = 5pm
+Residential Address? = Yes
+Package Updates? = Yes
+
+
+RETURN ADDRESS
+Name = Ethernal Arts
+Contact Name = Uwa
+Gender = Male
+Title = Mr
+Phone = 08058346994
+Country = FI
+State = South Karelia
+City = Lemi
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Room 6
+Department = Web Development
+Email = email@email.com
+Residential Address? = Yes
+Notify of return? = 
+
+
+PACKAGE DESTINATION
+Name = Pabs Couture
+Contact Name = Donald
+Gender = Male
+Title = Mr.
+Phone = 0987654321
+Country = FI
+State = Haeme
+City = Hauho
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Office 4
+Department = Fashion
+Email = 
+Residential Address? = No
+Notify Receiver? = Yes
+
+
+PACKAGE DETAILS
+
+1ST PACKAGE DETAILS:
+Package Type = Luggage
+Delivery option = VLink 2nd Day Air A.M.
+Package Type (Other) = 
+Shipment Worth = 300
+Weight = 10
+Length = 7
+Width = 5
+Height = 6
+Colour = Brown
+Texture = Leather
+Package Description = Luggage has a FENDI logo on it
+
+2ND PACKAGE DETAILS:
+Package Type = Luggage
+Delivery option = VLink 2nd Day Air A.M.
+Package Type (Other) = 
+Shipment Worth = 250
+Weight = 10
+Length = 6
+Width = 5
+Height = 4
+Colour = Black
+Texture = Leather
+Package Description = A FENDI duffel bag
+
+3RD PACKAGE DETAILS:
+Package Type = 0
+Delivery option = 0
+Package Type (Other) = 
+Shipment Worth = 
+Weight = 
+Length = 
+Width = 
+Height = 
+Colour = 
+Texture = 
+Package Description = 
+
+4TH PACKAGE DETAILS:
+Package Type = 0
+Delivery option = 0
+Package Type (Other) = 
+Shipment Worth = 
+Weight = 
+Length = 
+Width = 
+Height = 
+Colour = 
+Texture = 
+Package Description = 
+

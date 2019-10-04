@@ -120,10 +120,20 @@
         fwrite($myfile, $notify_receiver);
 
 
-        //Package Dimensions - EC (Express Courier)
-        $dimensions = 'PACKAGE DIMENSIONS'."\r\n";
-        fwrite($myfile, $dimensions);
+        //Package Details - Domestic Shipping
+        $package_details = 'PACKAGE DETAILS'."\r\n\r\n";
+        fwrite($myfile, $package_details);
 
+        $firstpackage = '1ST PACKAGE DETAILS:'."\r\n";
+        fwrite($myfile, $firstpackage);
+        $package_type = 'Package Type = '.$_SESSION['package_type']."\r\n";    //Package Type
+        fwrite($myfile, $package_type);
+        $delivery_option = 'Delivery option = '.$_SESSION['delivery_options']."\r\n";   //Delivery options
+        fwrite($myfile, $delivery_option);
+        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other']."\r\n";   //Package Type (Other)
+        fwrite($myfile, $pkgtype_other);
+        $worth = 'Shipment Worth = '.$_SESSION['worth']."\r\n";   //worth
+        fwrite($myfile, $worth);
         $weight = 'Weight = '.$_SESSION['weight']."\r\n";   //weight
         fwrite($myfile, $weight);
         $length = 'Length = '.$_SESSION['length']."\r\n";    //length
@@ -132,11 +142,89 @@
         fwrite($myfile, $width);
         $height = 'Height = '.$_SESSION['height']."\r\n";   //height
         fwrite($myfile, $height);
-        $worth = 'Shipment Worth = '.$_SESSION['worth']."\r\n";   //worth
-        fwrite($myfile, $worth);
-        $delivery_option = 'Delivery Type = '.$_SESSION['delivery_options']."\r\n";   //delivery options
+        $colour = 'Colour = '.$_SESSION['colour']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $package_description = 'Package Description = '.$_SESSION['package_description']."\r\n\r\n";   //package description
+        fwrite($myfile, $package_description);
+
+
+        $secondpackage = '2ND PACKAGE DETAILS:'."\r\n";
+        fwrite($myfile, $secondpackage);
+        $package_type = 'Package Type = '.$_SESSION['package_type_2']."\r\n";    //Package Type
+        fwrite($myfile, $package_type);
+        $delivery_option = 'Delivery option = '.$_SESSION['delivery_options_2']."\r\n";   //Delivery options
         fwrite($myfile, $delivery_option);
-        $package_description = 'Package Description = '.$_SESSION['pkg_descr']."\r\n";   //package description
+        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other_2']."\r\n";   //Package Type (Other)
+        fwrite($myfile, $pkgtype_other);
+        $worth = 'Shipment Worth = '.$_SESSION['worth_2']."\r\n";   //worth
+        fwrite($myfile, $worth);
+        $weight = 'Weight = '.$_SESSION['weight_2']."\r\n";   //weight
+        fwrite($myfile, $weight);
+        $length = 'Length = '.$_SESSION['length_2']."\r\n";    //length
+        fwrite($myfile, $length);
+        $width = 'Width = '.$_SESSION['width_2']."\r\n";   //width
+        fwrite($myfile, $width);
+        $height = 'Height = '.$_SESSION['height_2']."\r\n";   //height
+        fwrite($myfile, $height);
+        $colour = 'Colour = '.$_SESSION['colour_2']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture_2']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $package_description = 'Package Description = '.$_SESSION['package_description_2']."\r\n\r\n";   //package description
+        fwrite($myfile, $package_description);
+
+
+        $thirdpackage = '3RD PACKAGE DETAILS:'."\r\n";
+        fwrite($myfile, $thirdpackage);
+        $package_type = 'Package Type = '.$_SESSION['package_type_3']."\r\n";    //Package Type
+        fwrite($myfile, $package_type);
+        $delivery_option = 'Delivery option = '.$_SESSION['delivery_options_3']."\r\n";   //Delivery options
+        fwrite($myfile, $delivery_option);
+        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other_3']."\r\n";   //Package Type (Other)
+        fwrite($myfile, $pkgtype_other);
+        $worth = 'Shipment Worth = '.$_SESSION['worth_3']."\r\n";   //worth
+        fwrite($myfile, $worth);
+        $weight = 'Weight = '.$_SESSION['weight_3']."\r\n";   //weight
+        fwrite($myfile, $weight);
+        $length = 'Length = '.$_SESSION['length_3']."\r\n";    //length
+        fwrite($myfile, $length);
+        $width = 'Width = '.$_SESSION['width_3']."\r\n";   //width
+        fwrite($myfile, $width);
+        $height = 'Height = '.$_SESSION['height_3']."\r\n";   //height
+        fwrite($myfile, $height);
+        $colour = 'Colour = '.$_SESSION['colour_3']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture_3']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $package_description = 'Package Description = '.$_SESSION['package_description_3']."\r\n\r\n";   //package description
+        fwrite($myfile, $package_description);
+
+
+        $fourthpackage = '4TH PACKAGE DETAILS:'."\r\n";
+        fwrite($myfile, $fourthpackage);
+        $package_type = 'Package Type = '.$_SESSION['package_type_4']."\r\n";    //Package Type
+        fwrite($myfile, $package_type);
+        $delivery_option = 'Delivery option = '.$_SESSION['delivery_options_4']."\r\n";   //Delivery options
+        fwrite($myfile, $delivery_option);
+        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other_4']."\r\n";   //Package Type (Other)
+        fwrite($myfile, $pkgtype_other);
+        $worth = 'Shipment Worth = '.$_SESSION['worth_4']."\r\n";   //worth
+        fwrite($myfile, $worth);
+        $weight = 'Weight = '.$_SESSION['weight_4']."\r\n";   //weight
+        fwrite($myfile, $weight);
+        $length = 'Length = '.$_SESSION['length_4']."\r\n";    //length
+        fwrite($myfile, $length);
+        $width = 'Width = '.$_SESSION['width_4']."\r\n";   //width
+        fwrite($myfile, $width);
+        $height = 'Height = '.$_SESSION['height_4']."\r\n";   //height
+        fwrite($myfile, $height);
+        $colour = 'Colour = '.$_SESSION['colour_4']."\r\n";   //Colour
+        fwrite($myfile, $colour);
+        $texture = 'Texture = '.$_SESSION['texture_4']."\r\n";   //Texture
+        fwrite($myfile, $texture);
+        $package_description = 'Package Description = '.$_SESSION['package_description_4']."\r\n\r\n";   //package description
         fwrite($myfile, $package_description);
 
         fclose($myfile);

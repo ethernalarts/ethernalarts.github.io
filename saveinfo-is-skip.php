@@ -175,7 +175,7 @@
         $shipment_description = 'Shipment Description = '.$_SESSION['shipment_description_2']."\r\n\r\n";   //Shipment Description
         fwrite($myfile, $shipment_description);
 
-
+              
         $thirdshipdeets = '3RD SHIPMENT DETAILS:'."\r\n";
         fwrite($myfile, $thirdshipdeets);
         $weight = 'Weight = '.$_SESSION['weight_3']."\r\n";   //Name

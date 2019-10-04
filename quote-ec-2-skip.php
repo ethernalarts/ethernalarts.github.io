@@ -1,35 +1,6 @@
 <?php
     //let's start the session
     session_start();
-
-    //store posted values in the session variables
-    $_SESSION['name_ec_ra'] = $_POST['name_ec_ra'];
-    $_SESSION['contactname_ec_ra'] = $_POST['contactname_ec_ra'];
-    $_SESSION['gender_ec_ra'] = $_POST['gender_ec_ra'];
-    $_SESSION['title_ec_ra'] = $_POST['title_ec_ra'];
-    $_SESSION['phone_ec_ra'] = $_POST['phone_ec_ra'];
-    $_SESSION['email_ec_ra'] = $_POST['email_ec_ra'];
-    $_SESSION['country_ec_ra'] = $_POST['country_ec_ra'];
-    $_SESSION['state_ec_ra'] = $_POST['state_ec_ra'];
-    $_SESSION['city_ec_ra'] = $_POST['city_ec_ra'];
-    $_SESSION['zipcode_ec_ra'] = $_POST['zipcode_ec_ra'];
-    $_SESSION['address_ec_ra'] = $_POST['address_ec_ra'];
-    $_SESSION['apt_ec_ra'] = $_POST['apt_ec_ra'];
-    $_SESSION['dept_ec_ra'] = $_POST['dept_ec_ra'];
-    $_SESSION['resAdd_ec_ra'] = $_POST['resAdd_ec_ra'];
-    $_SESSION['notify_ec'] = $_POST['notify_ec'];
-
-
-    // Sanitizing email field to remove unwanted characters.
-    $_POST['email_ec_ra'] = filter_var($_POST['email_ec_ra'], FILTER_SANITIZE_EMAIL);
-
-    // Validate email.
-    if (filter_var($_POST['email_ec_ra'], FILTER_VALIDATE_EMAIL)){
-
-    } else {
-        $_SESSION['error'] = "Invalid Email Address";
-        header("location: quote-ec-1.php");//redirecting to first page
-    }
 ?>
 
 <!doctype html>
@@ -275,7 +246,7 @@
 
                                 <!-- Package's Worth -->
                                 <label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD): "
+                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD):  *"
                                            name="worth" type="number" required>
                                 </label>
 
@@ -316,7 +287,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                    <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr"
+                                    <textarea style="height: 120px" class="w3-light-gray" name="package_description"
                                               placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>
@@ -414,7 +385,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr_2"
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_2"
                                                   placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>
@@ -512,7 +483,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr_3"
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_3"
                                                   placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>
@@ -610,7 +581,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr_4"
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_4"
                                                   placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>

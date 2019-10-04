@@ -14,7 +14,7 @@
     $_SESSION['height'] = $_POST['height'];
     $_SESSION['colour'] = $_POST['colour'];
     $_SESSION['texture'] = $_POST['texture'];
-    $_SESSION['pkg_descr'] = $_POST['pkg_descr'];
+    $_SESSION['package_description'] = $_POST['package_description'];
 
     //2nd package details
     $_SESSION['package_type_2'] = $_POST['package_type_2'];
@@ -27,7 +27,7 @@
     $_SESSION['height_2'] = $_POST['height_2'];
     $_SESSION['colour_2'] = $_POST['colour_2'];
     $_SESSION['texture_2'] = $_POST['texture_2'];
-    $_SESSION['pkg_descr_2'] = $_POST['pkg_descr_2'];
+    $_SESSION['package_description_2'] = $_POST['package_description_2'];
 
     //3rd package details
     $_SESSION['package_type_3'] = $_POST['package_type_3'];
@@ -40,7 +40,7 @@
     $_SESSION['height_3'] = $_POST['height_3'];
     $_SESSION['colour_3'] = $_POST['colour_3'];
     $_SESSION['texture_3'] = $_POST['texture_3'];
-    $_SESSION['pkg_descr_3'] = $_POST['pkg_descr_3'];
+    $_SESSION['package_description_3'] = $_POST['package_description_3'];
 
     //4th package details
     $_SESSION['package_type_4'] = $_POST['package_type_4'];
@@ -53,7 +53,7 @@
     $_SESSION['height_4'] = $_POST['height_4'];
     $_SESSION['colour_4'] = $_POST['colour_4'];
     $_SESSION['texture_4'] = $_POST['texture_4'];
-    $_SESSION['pkg_descr_4'] = $_POST['pkg_descr_4'];
+    $_SESSION['package_description_4'] = $_POST['package_description_4'];
 ?>
 
 <!doctype html>

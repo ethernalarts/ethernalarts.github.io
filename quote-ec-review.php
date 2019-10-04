@@ -89,7 +89,7 @@
         .w3-button.w3-green-continue {
             color: white;
             background-color: #2da52d;
-            padding: 15px 25px;
+            padding: 8px 20px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -222,9 +222,7 @@
 
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
-
                         <legend>Package Origin</legend>
-
                                 <!-- Name -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray"
@@ -337,9 +335,7 @@
 
                     <!-- Return Address Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
-
                         <legend>Return Address</legend>
-
                             <!-- Name -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
@@ -441,6 +437,29 @@
                     <!-- Package Details Preview -->
                     <fieldset style="margin: 50px 0 30px">
                         <legend>Package Details</legend>
+                            <!-- Package Type -->
+                            <label>
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Package Type: <?php echo $_SESSION['package_type'] ?> ">
+                            </label>
+
+                            <!-- Delivery Options -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Delivery option: <?php echo $_SESSION['delivery_options'] ?> ">
+                            </label>
+
+                            <!-- Package Type (Other) -->
+                            <label>
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Package Type (Other): <?php echo $_SESSION['other'] ?> ">
+                            </label>
+
+                            <!-- Package's Worth (USD) -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth'] ?> ">
+                            </label>
 
                             <!-- Weight -->
                             <label>
@@ -466,23 +485,240 @@
                                        placeholder="Height: <?php echo $_SESSION['height'] ?> inches">
                             </label>
 
-                            <!-- Package's Worth (USD) -->
+                            <!-- Colour -->
                             <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth'] ?> ">
+                                <input disabled class="w3-light-gray"
+                                       placeholder="Colour: <?php echo $_SESSION['colour'] ?> ">
                             </label>
 
-                            <!-- Delivery Options -->
+                            <!-- Texture -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Delivery Type: <?php echo $_SESSION['delivery_options'] ?> ">
+                                       placeholder="Texture: <?php echo $_SESSION['texture'] ?> ">
                             </label>
 
                             <!-- Brief Package Description -->
                             <label>
                                 <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Brief Package Description: <?php echo $_SESSION['package_description'] ?> ">
+                                       placeholder="Additional info about package: <?php echo $_SESSION['package_description'] ?> ">
                             </label>
+
+                                <!-- Show other shipments -->
+                                <div style="margin: 0 0 30px;" class="sliderWrapper">
+                                    <span style="margin-left: 0" onclick="secondPackage()">
+                                        + show other packages
+                                    </span>
+                                </div>
+
+                                <!-- 2nd package -->
+                                <fieldset id="secondPackage" style="margin: 10px 0 30px; display: none">
+                                    <legend>2nd Package Details</legend>
+                                        <!-- Package Type -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package Type: <?php echo $_SESSION['package_type_2'] ?> ">
+                                        </label>
+
+                                        <!-- Delivery Options -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Delivery option: <?php echo $_SESSION['delivery_options_2'] ?> ">
+                                        </label>
+
+                                        <!-- Package Type (Other) -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package Type (Other): <?php echo $_SESSION['other_2'] ?> ">
+                                        </label>
+
+                                        <!-- Package's Worth (USD) -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth_2'] ?> ">
+                                        </label>
+
+                                        <!-- Weight -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Weight: <?php echo $_SESSION['weight_2'] ?> inches">
+                                        </label>
+
+                                        <!-- Length -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Length: <?php echo $_SESSION['length_2'] ?> inches">
+                                        </label>
+
+                                        <!-- Width -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Width: <?php echo $_SESSION['width_2'] ?> inches">
+                                        </label>
+
+                                        <!-- Height -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Height: <?php echo $_SESSION['height_2'] ?> inches">
+                                        </label>
+
+                                        <!-- Colour -->
+                                        <label>
+                                            <input disabled class="w3-light-gray"
+                                                   placeholder="Colour: <?php echo $_SESSION['colour_2'] ?> ">
+                                        </label>
+
+                                        <!-- Texture -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Texture: <?php echo $_SESSION['texture_2'] ?> ">
+                                        </label>
+
+                                        <!-- Brief Package Description -->
+                                        <label>
+                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Additional info about package: <?php echo $_SESSION['package_description_2'] ?> ">
+                                        </label>
+                                </fieldset>
+
+                                <!-- 3rd package -->
+                                <fieldset id="thirdPackage" style="margin: 10px 0 30px; display: none">
+                                    <legend>3rd Package Details</legend>
+                                        <!-- Package Type -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package Type: <?php echo $_SESSION['package_type_3'] ?> ">
+                                        </label>
+
+                                        <!-- Delivery Options -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Delivery option: <?php echo $_SESSION['delivery_options_3'] ?> ">
+                                        </label>
+
+                                        <!-- Package Type (Other) -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package Type (Other): <?php echo $_SESSION['other_3'] ?> ">
+                                        </label>
+
+                                        <!-- Package's Worth (USD) -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth_3'] ?> ">
+                                        </label>
+
+                                        <!-- Weight -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Weight: <?php echo $_SESSION['weight_3'] ?> inches">
+                                        </label>
+
+                                        <!-- Length -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Length: <?php echo $_SESSION['length_3'] ?> inches">
+                                        </label>
+
+                                        <!-- Width -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Width: <?php echo $_SESSION['width_3'] ?> inches">
+                                        </label>
+
+                                        <!-- Height -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Height: <?php echo $_SESSION['height_3'] ?> inches">
+                                        </label>
+
+                                        <!-- Colour -->
+                                        <label>
+                                            <input disabled class="w3-light-gray"
+                                                   placeholder="Colour: <?php echo $_SESSION['colour_3'] ?> ">
+                                        </label>
+
+                                        <!-- Texture -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Texture: <?php echo $_SESSION['texture_3'] ?> ">
+                                        </label>
+
+                                        <!-- Brief Package Description -->
+                                        <label>
+                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Additional info about package: <?php echo $_SESSION['package_description_3'] ?> ">
+                                        </label>
+                                </fieldset>
+
+                                <!-- 4th package -->
+                                <fieldset id="fourthPackage" style="margin: 10px 0 30px; display: none">
+                                    <legend>4th Package Details</legend>
+                                        <!-- Package Type -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package Type: <?php echo $_SESSION['package_type_4'] ?> ">
+                                        </label>
+
+                                        <!-- Delivery Options -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Delivery option: <?php echo $_SESSION['delivery_options_4'] ?> ">
+                                        </label>
+
+                                        <!-- Package Type (Other) -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package Type (Other): <?php echo $_SESSION['other_4'] ?> ">
+                                        </label>
+
+                                        <!-- Package's Worth (USD) -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth_4'] ?> ">
+                                        </label>
+
+                                        <!-- Weight -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Weight: <?php echo $_SESSION['weight_4'] ?> inches">
+                                        </label>
+
+                                        <!-- Length -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Length: <?php echo $_SESSION['length_4'] ?> inches">
+                                        </label>
+
+                                        <!-- Width -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Width: <?php echo $_SESSION['width_4'] ?> inches">
+                                        </label>
+
+                                        <!-- Height -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Height: <?php echo $_SESSION['height_4'] ?> inches">
+                                        </label>
+
+                                        <!-- Colour -->
+                                        <label>
+                                            <input disabled class="w3-light-gray"
+                                                   placeholder="Colour: <?php echo $_SESSION['colour_4'] ?> ">
+                                        </label>
+
+                                        <!-- Texture -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Texture: <?php echo $_SESSION['texture_4'] ?> ">
+                                        </label>
+
+                                        <!-- Brief Package Description -->
+                                        <label>
+                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Additional info about package: <?php echo $_SESSION['package_description_4'] ?> ">
+                                        </label>
+                                </fieldset>
 
                             <!-- Edit Button -->
                             <label>
@@ -492,9 +728,7 @@
 
                     <!-- Package Destination Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
-
                         <legend>Package Destination</legend>
-
                             <!-- Name -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
@@ -597,9 +831,7 @@
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-<!--                            <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>-->
-                            <button value="Next" name="submit" type="submit" class="w3-button w3-medium w3-green-continue">
-                                Submit</button>
+                            <button value="Next" name="submit" type="submit" class="w3-button w3-medium w3-green-continue">Submit</button>
                             <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
                         </div>
                     </div>
@@ -625,7 +857,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -637,7 +869,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
@@ -666,12 +898,59 @@
             <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
+
+    <!-- other package toggle -->
+    <script>
+        var btn = document.querySelector('secondPackage');
+        btn.addEventListener('click', secondPackage);
+
+        function secondPackage() {
+            var e = document.getElementById('secondPackage');
+            e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
+
+            var e1 = document.getElementById('thirdPackage');
+            e1.style.display = ((e1.style.display !== 'none') ?  'none' : 'block');
+
+            var e2 = document.getElementById('fourthPackage');
+            e2.style.display = ((e2.style.display !== 'none') ?  'none' : 'block');
+        }
+    </script>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Domestic Shipping. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

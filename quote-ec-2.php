@@ -275,7 +275,7 @@
 
                                 <!-- Package's Worth -->
                                 <label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD): "
+                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD):  *"
                                            name="worth" type="number" required>
                                 </label>
 
@@ -316,7 +316,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                    <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr"
+                                    <textarea style="height: 120px" class="w3-light-gray" name="package_description"
                                               placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>
@@ -414,7 +414,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr_2"
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_2"
                                                   placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>
@@ -512,7 +512,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr_3"
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_3"
                                                   placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>
@@ -610,7 +610,7 @@
 
                                 <!-- Package Description -->
                                 <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="pkg_descr_4"
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_4"
                                                   placeholder="Additional information about package..."></textarea>
                                 </label>
                         </fieldset>
