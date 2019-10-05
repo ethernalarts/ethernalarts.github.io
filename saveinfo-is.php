@@ -142,7 +142,7 @@
         fwrite($myfile, $worth);
         $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type']."\r\n";   //Shipment Type
         fwrite($myfile, $shipment_type);
-        $other = 'Shipment Type (Other)= '.$_SESSION['other']."\r\n";   //Shipment Type (Other)
+        $other = 'Shipment Type (Other) = '.$_SESSION['other']."\r\n";   //Shipment Type (Other)
         fwrite($myfile, $other);
         $colour = 'Colour = '.$_SESSION['colour']."\r\n";   //Colour
         fwrite($myfile, $colour);
@@ -166,7 +166,7 @@
         fwrite($myfile, $worth);
         $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type_2']."\r\n";   //Shipment Type
         fwrite($myfile, $shipment_type);
-        $other = 'Shipment Type (Other)= '.$_SESSION['other_2']."\r\n";   //Shipment Type (Other)
+        $other = 'Shipment Type (Other) = '.$_SESSION['other_2']."\r\n";   //Shipment Type (Other)
         fwrite($myfile, $other);
         $colour = 'Colour = '.$_SESSION['colour_2']."\r\n";   //Colour
         fwrite($myfile, $colour);
@@ -190,7 +190,7 @@
         fwrite($myfile, $worth);
         $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type_3']."\r\n";   //Shipment Type
         fwrite($myfile, $shipment_type);
-        $other = 'Shipment Type (Other)= '.$_SESSION['other_3']."\r\n";   //Shipment Type (Other)
+        $other = 'Shipment Type (Other) = '.$_SESSION['other_3']."\r\n";   //Shipment Type (Other)
         fwrite($myfile, $other);
         $colour = 'Colour = '.$_SESSION['colour_3']."\r\n";   //Colour
         fwrite($myfile, $colour);
@@ -214,7 +214,7 @@
         fwrite($myfile, $worth);
         $shipment_type = 'Shipment Type = '.$_SESSION['shipment_type_4']."\r\n";   //Shipment Type
         fwrite($myfile, $shipment_type);
-        $other = 'Shipment Type (Other)= '.$_SESSION['other_4']."\r\n";   //Shipment Type (Other)
+        $other = 'Shipment Type (Other) = '.$_SESSION['other_4']."\r\n";   //Shipment Type (Other)
         fwrite($myfile, $other);
         $colour = 'Colour = '.$_SESSION['colour_4']."\r\n";   //Colour
         fwrite($myfile, $colour);

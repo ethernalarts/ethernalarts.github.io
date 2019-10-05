@@ -5,12 +5,15 @@
     //store posted values in the session variables
     $_SESSION['name_reAdd'] = $_POST['name_reAdd'];
     $_SESSION['contact_name_reAdd'] = $_POST['contact_name_reAdd'];
+    $_SESSION['gender_reAdd'] = $_POST['gender_reAdd'];
+    $_SESSION['title_reAdd'] = $_POST['title_reAdd'];
+    $_SESSION['countryCode_reAdd'] = $_POST['countryCode_reAdd'];
     $_SESSION['country_reAdd'] = $_POST['country_reAdd'];
     $_SESSION['state_reAdd'] = $_POST['state_reAdd'];
     $_SESSION['city_reAdd'] = $_POST['city_reAdd'];
     $_SESSION['zip_code_reAdd'] = $_POST['zip_code_reAdd'];
-    $_SESSION['street_address_reAdd'] = $_POST['street_address_reAdd'];
-    $_SESSION['apartment_suite_reAdd'] = $_POST['apartment_suite_reAdd'];
+    $_SESSION['street_add_reAdd'] = $_POST['street_add_reAdd'];
+    $_SESSION['street_add2_reAdd'] = $_POST['street_add2_reAdd'];
     $_SESSION['department_reAdd'] = $_POST['department_reAdd'];
     $_SESSION['phone_reAdd'] = $_POST['phone_reAdd'];
     $_SESSION['email_reAdd'] = $_POST['email_reAdd'];
@@ -214,7 +217,11 @@
 
             <h2 id="hi">Where is it going?</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
 
             <!-- Container for International Shipping Quote form  -->
@@ -222,7 +229,7 @@
 
 
                 <!-- Shipment Destination -->
-                <form class="container-form" method="post" action="quote-is-4-skip.php" style="padding-bottom: 0">
+                <form class="container-form" method="post" action="quote-is-4.php" style="padding-bottom: 0">
 
                     <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
 
@@ -243,7 +250,7 @@
                             <!-- Gender -->
                             <label>
                                 <select class="choice" name="gender" required>
-                                    <option value="0" selected="selected">== Gender ==  *</option>
+                                    <option value="0" selected="selected">Gender  *</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
@@ -258,7 +265,7 @@
                             <!-- country codes (ISO 3166) and Dial codes. -->
                             <label for="">
                                 <select class="choice" name="countryCode_dest" id="">
-                                    <option value="0" selected="selected">== Select Country Code ==  *</option>
+                                    <option value="0" selected="selected">Select Country Code  *</option>
                                     <optgroup label="Other countries">
                                         <option data-countryCode="DZ" value="213">Algeria (+213)</option>
                                         <option data-countryCode="AD" value="376">Andorra (+376)</option>
@@ -547,7 +554,7 @@
                             <!-- Email updates to recipient on shipment status -->
                             <label>
                                 <select  style="float: right" name="notify_dest" class="choice">
-                                    <option value="0" selected="selected">Send receiver shipment status? </option>
+                                    <option value="0" selected="selected">Should we send recipient shipment status? </option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
@@ -635,10 +642,40 @@
     </script>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

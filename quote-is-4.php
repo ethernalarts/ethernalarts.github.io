@@ -301,7 +301,7 @@
                             <!-- Shipment Description -->
                             <label>
                                 <textarea style="height: 120px" class=" w3-light-gray" name="shipment_description"
-                                          placeholder="Briefly describe shipment..."></textarea>
+                                          placeholder="Additional information about shipment..."></textarea>
                             </label>
                     </fieldset>
 
@@ -318,27 +318,27 @@
                         <legend>2nd Shipment Details</legend>
                             <!-- Weight -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
                                        name="weight_2" type="number">
                             </label>
 
                             <!-- Length -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Length (inches):  *"
+                                       placeholder="Length (inches):  "
                                        name="length_2" type="number">
                             </label>
 
                             <!-- Width -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
                                        name="width_2" type="number">
                             </label>
 
                             <!-- Height -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Height (inches):  *"
+                                       placeholder="Height (inches):  "
                                        name="height_2" type="number">
                             </label>
 
@@ -352,7 +352,7 @@
                             <!-- Shipment type -->
                             <label>
                                 <select style="float: right" name="shipment_type_2" class="choice" type="select">
-                                    <option value="0" selected="selected">Shipment type *</option>
+                                    <option value="0" selected="selected">Shipment type </option>
                                     <option value="Luggage">Luggage</option>
                                     <option value="Jewellery">Jewellery</option>
                                     <option value="Electronic">Electronic</option>
@@ -373,8 +373,8 @@
 
                             <!-- Colour -->
                             <label>
-                                <input class="w3-light-gray" placeholder="Color:  *"
-                                       name="colour_2" type="text" required>
+                                <input class="w3-light-gray" placeholder="Color:  "
+                                       name="colour_2" type="text">
                             </label>
 
                             <!-- Texture -->
@@ -386,7 +386,7 @@
                             <!-- Shipment Description -->
                             <label>
                                 <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
-                                          name="shipment_description_2" placeholder="Briefly describe shipment..."></textarea>
+                                          name="shipment_description_2" placeholder="Additional information about shipment..."></textarea>
                             </label>
                     </fieldset>
 
@@ -404,27 +404,27 @@
                         <legend>3rd Shipment Details</legend>
                             <!-- Weight -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
                                        name="weight_3" type="number">
                             </label>
 
                             <!-- Length -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Length (inches):  *"
+                                       placeholder="Length (inches):  "
                                        name="length_3" type="number">
                             </label>
 
                             <!-- Width -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
                                        name="width_3" type="number">
                             </label>
 
                             <!-- Height -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Height (inches):  *"
+                                       placeholder="Height (inches):  "
                                        name="height_3" type="number">
                             </label>
 
@@ -438,7 +438,7 @@
                             <!-- Shipment type -->
                             <label>
                                 <select style="float: right" name="shipment_type_3" class="choice" type="select">
-                                    <option value="0" selected="selected">Shipment type *</option>
+                                    <option value="0" selected="selected">Shipment type </option>
                                     <option value="Luggage">Luggage</option>
                                     <option value="Jewellery">Jewellery</option>
                                     <option value="Electronic">Electronic</option>
@@ -459,8 +459,8 @@
 
                             <!-- Colour -->
                             <label>
-                                <input class="w3-light-gray" placeholder="Color:  *"
-                                       name="colour_3" type="text" required>
+                                <input class="w3-light-gray" placeholder="Color:  "
+                                       name="colour_3" type="text">
                             </label>
 
                             <!-- Texture -->
@@ -472,7 +472,7 @@
                             <!-- Shipment Description -->
                             <label>
                                 <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
-                                        name="shipment_description_3" placeholder="Briefly describe shipment..."></textarea>
+                                        name="shipment_description_3" placeholder="Additional information about shipment..."></textarea>
                             </label>
                     </fieldset>
 
@@ -490,27 +490,27 @@
                         <legend>4th Shipment Details</legend>
                             <!-- Weight -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  *"
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
                                        name="weight_4" type="number">
                             </label>
 
                             <!-- Length -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Length (inches):  *"
+                                       placeholder="Length (inches):  "
                                        name="length_4" type="number">
                             </label>
 
                             <!-- Width -->
                             <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  *"
+                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
                                        name="width_4" type="number">
                             </label>
 
                             <!-- Height -->
                             <label>
                                 <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Height (inches):  *"
+                                       placeholder="Height (inches):  "
                                        name="height_4" type="number">
                             </label>
 
@@ -524,7 +524,7 @@
                             <!-- Shipment type -->
                             <label>
                                 <select style="float: right" name="shipment_type_4" class="choice" type="select">
-                                    <option value="0" selected="selected">Shipment type *</option>
+                                    <option value="0" selected="selected">Shipment type </option>
                                     <option value="Luggage">Luggage</option>
                                     <option value="Jewellery">Jewellery</option>
                                     <option value="Electronic">Electronic</option>
@@ -545,8 +545,8 @@
 
                             <!-- Colour -->
                             <label>
-                                <input class="w3-light-gray" placeholder="Color:  *"
-                                       name="colour_4" type="text" required>
+                                <input class="w3-light-gray" placeholder="Color:  "
+                                       name="colour_4" type="text">
                             </label>
 
                             <!-- Texture -->
@@ -558,7 +558,7 @@
                             <!-- Shipment Description -->
                             <label>
                                 <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
-                                          name="shipment_description_4" placeholder="Briefly describe shipment..."></textarea>
+                                          name="shipment_description_4" placeholder="Additional information about shipment..."></textarea>
                             </label>
                     </fieldset>
 

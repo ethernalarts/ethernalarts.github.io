@@ -1,6 +1,6 @@
 <?php
-//start the session
-session_start();
+    //start the session
+    session_start();
 
     //store posted values in the session variables
     //1st shipment variables

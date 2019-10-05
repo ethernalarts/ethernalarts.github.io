@@ -1,0 +1,110 @@
+NEW INTERNATIONAL SHIPPING ORDER!
+
+SHIPMENT ORIGIN
+Name = Ethernal Arts
+Contact Name = Uwa
+Gender = Male
+Title = Mr.
+Country Code = 33
+Phone = 0987654321
+Country = France
+State = Pays de la Loire
+City = Avrille
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Room 6
+Shipping Option = VLink Worldwide Express
+Department = Web Development
+Email = email@email.com
+Residential Address? = No
+Status Updates? = Yes
+
+
+RETURN ADDRESS
+Name = Ethernal Arts
+Contact Name = Uwa
+Gender = Male
+Title = Mr.
+Country Code = 33
+Phone = 0987654321
+Country = France
+State = Pays de la Loire
+City = Avrille
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Room 6
+Department = Web Development
+Email = email@email.com
+Residential Address? = No
+Notify of return? = Yes
+
+
+SHIPMENT DESTINATION
+Name = Pabs Couture
+Contact Name = Donald
+Gender = Male
+Title = Mr.
+Country Code = 44
+Phone = 0987654321
+Country = United Kingdom
+State = England
+City = Acton
+Zip Code = 56789
+Street Address = 6 Maincamp
+Street Address 2/Apartment, Suite, Floor etc = Room 6
+Department = Fashion
+Email = email@email.com
+Residential Address? = No
+Notify of return? = Yes
+
+
+SHIPMENT DIMENSIONS
+
+1ST SHIPMENT DETAILS:
+Weight = 23
+Length = 12
+Width = 11
+Height = 9
+Shipment Worth = 450
+Shipment Type = Luggage
+Shipment Type (Other)= 
+Colour = Red
+Texture = Leather
+Shipment Description = A FENDI duffel
+
+2ND SHIPMENT DETAILS:
+Weight = 23
+Length = 12
+Width = 11
+Height = 11
+Shipment Worth = 800
+Shipment Type = Laptop
+Shipment Type (Other)= 
+Colour = Silver
+Texture = Metal
+Shipment Description = An HP Envy laptop
+
+3RD SHIPMENT DETAILS:
+Weight = 
+Length = 
+Width = 
+Height = 
+Shipment Worth = 
+Shipment Type = 0
+Shipment Type (Other)= 
+Colour = 
+Texture = 
+Shipment Description = 
+
+4TH SHIPMENT DETAILS:
+Weight = 
+Length = 
+Width = 
+Height = 
+Shipment Worth = 
+Shipment Type = 0
+Shipment Type (Other)= 
+Colour = 
+Texture = 
+Shipment Description = 
+

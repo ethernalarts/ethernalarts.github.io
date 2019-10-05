@@ -188,7 +188,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -233,7 +233,7 @@
                             <!-- country codes (ISO 3166) and Dial codes. -->
                             <label>
                                 <select class="choice" name="countryCode" id="">
-                                    <option value="0" selected="selected">USA (+1)  *</option>
+                                    <option value="0" selected="selected">Select Country Code  *</option>
                                     <optgroup label="Other Countries">
                                         <option data-countryCode="DZ" value="213">Algeria (+213)</option>
                                         <option data-countryCode="AD" value="376">Andorra (+376)</option>

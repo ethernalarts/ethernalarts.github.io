@@ -837,8 +837,7 @@
                     <div class="w3-center">
                         <div class="w3-bar">
                             <!-- <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button> -->
-                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">
-                                Submit</button>
+                            <button name="submit" type="submit" class="w3-button w3-medium w3-green-continue">Submit</button>
                             <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
                         </div>
                     </div>
