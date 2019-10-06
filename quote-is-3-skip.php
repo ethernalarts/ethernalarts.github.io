@@ -188,7 +188,11 @@
 
             <h2 id="hi">Where is it going?</h2>
 
-            <h3 id="required"><code class="w3-code">* Indicates required fields</code></h3>
+            <h3 id="required">
+                <code class="w3-code">
+                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                </code>
+            </h3>
 
 
             <!-- Container for International Shipping Quote form  -->
@@ -616,10 +620,40 @@
     </script>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

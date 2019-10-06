@@ -257,7 +257,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 

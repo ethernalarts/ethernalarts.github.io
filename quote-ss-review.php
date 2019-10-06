@@ -3,15 +3,57 @@
     session_start();
 
     //store posted values in the session variables
+    //1st item variables
     $_SESSION['storage_type_ss'] = $_POST['storage_type_ss'];
     $_SESSION['item_type_ss'] = $_POST['item_type_ss'];
     $_SESSION['worth_ss'] = $_POST['worth_ss'];
+    $_SESSION['other_ss'] = $_POST['other_ss'];
     $_SESSION['duration_ss'] = $_POST['duration_ss'];
     $_SESSION['weight_ss'] = $_POST['weight_ss'];
     $_SESSION['length_ss'] = $_POST['length_ss'];
     $_SESSION['width_ss'] = $_POST['width_ss'];
+    $_SESSION['colour_ss'] = $_POST['colour_ss'];
     $_SESSION['height_ss'] = $_POST['height_ss'];
     $_SESSION['item_descr_ss'] = $_POST['item_descr_ss'];
+
+    //2nd item variables
+    $_SESSION['storage_type_ss_2'] = $_POST['storage_type_ss_2'];
+    $_SESSION['item_type_ss_2'] = $_POST['item_type_ss_2'];
+    $_SESSION['worth_ss_2'] = $_POST['worth_ss_2'];
+    $_SESSION['other_ss_2'] = $_POST['other_ss_2'];
+    $_SESSION['duration_ss_2'] = $_POST['duration_ss_2'];
+    $_SESSION['weight_ss_2'] = $_POST['weight_ss_2'];
+    $_SESSION['length_ss_2'] = $_POST['length_ss_2'];
+    $_SESSION['width_ss_2'] = $_POST['width_ss_2'];
+    $_SESSION['colour_ss_2'] = $_POST['colour_ss_2'];
+    $_SESSION['height_ss_2'] = $_POST['height_ss_2'];
+    $_SESSION['item_descr_ss_2'] = $_POST['item_descr_ss_2'];
+
+    //3rd item variables
+    $_SESSION['storage_type_ss_3'] = $_POST['storage_type_ss_3'];
+    $_SESSION['item_type_ss_3'] = $_POST['item_type_ss_3'];
+    $_SESSION['worth_ss_3'] = $_POST['worth_ss_3'];
+    $_SESSION['other_ss_3'] = $_POST['other_ss_3'];
+    $_SESSION['duration_ss_3'] = $_POST['duration_ss_3'];
+    $_SESSION['weight_ss_3'] = $_POST['weight_ss_3'];
+    $_SESSION['length_ss_3'] = $_POST['length_ss_3'];
+    $_SESSION['width_ss_3'] = $_POST['width_ss_3'];
+    $_SESSION['colour_ss_3'] = $_POST['colour_ss_3'];
+    $_SESSION['height_ss_3'] = $_POST['height_ss_3'];
+    $_SESSION['item_descr_ss_3'] = $_POST['item_descr_ss_3'];
+
+    //4th item variables
+    $_SESSION['storage_type_ss_4'] = $_POST['storage_type_ss_4'];
+    $_SESSION['item_type_ss_4'] = $_POST['item_type_ss_4'];
+    $_SESSION['worth_ss_4'] = $_POST['worth_ss_4'];
+    $_SESSION['other_ss_4'] = $_POST['other_ss_4'];
+    $_SESSION['duration_ss_4'] = $_POST['duration_ss_4'];
+    $_SESSION['weight_ss_4'] = $_POST['weight_ss_4'];
+    $_SESSION['length_ss_4'] = $_POST['length_ss_4'];
+    $_SESSION['width_ss_4'] = $_POST['width_ss_4'];
+    $_SESSION['colour_ss_4'] = $_POST['colour_ss_4'];
+    $_SESSION['height_ss_4'] = $_POST['height_ss_4'];
+    $_SESSION['item_descr_ss_4'] = $_POST['item_descr_ss_4'];
 ?>
 
 <!doctype html>
@@ -205,9 +247,7 @@
 
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
-
                         <legend>Basic Information</legend>
-
                                 <!-- Name -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray"
@@ -320,62 +360,296 @@
 
                     <!-- Item Details Preview -->
                     <fieldset style="margin: 50px 0 30px">
-
                         <legend>Item Details</legend>
-
-                            <!-- Storage Type -->
+                            <!-- Storage option -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Storage Type: <?php echo $_SESSION['storage_type_ss'] ?> inches">
+                                       placeholder="Storage Type: <?php echo $_SESSION['storage_type_ss'] ?>">
                             </label>
 
                             <!-- Item Type -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Item Type: <?php echo $_SESSION['item_type_ss'] ?> inches">
+                                       placeholder="Item Type: <?php echo $_SESSION['item_type_ss'] ?>">
                             </label>
 
                             <!-- Item's Worth (USD) -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Item's Worth (USD): $<?php echo $_SESSION['worth_ss'] ?> ">
+                                       placeholder="Item's Worth (USD): <?php echo $_SESSION['worth_ss'] ?> ">
+                            </label>
+
+                            <!-- Item Type (other) -->
+                            <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Item Type (other): <?php echo $_SESSION['other_ss'] ?>">
                             </label>
 
                             <!-- Storage Duration -->
                             <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Storage Duration: <?php echo $_SESSION['duration_ss'] ?> inches">
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Storage Duration (weeks): <?php echo $_SESSION['duration_ss'] ?>">
                             </label>
 
                             <!-- Weight -->
                             <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Weight: <?php echo $_SESSION['weight_ss'] ?> inches">
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Weight (inches): <?php echo $_SESSION['weight_ss'] ?>">
                             </label>
 
                             <!-- Width -->
                             <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Width: <?php echo $_SESSION['width_ss'] ?> inches">
+                                <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Width (pounds): <?php echo $_SESSION['width_ss'] ?>">
                             </label>
 
                             <!-- Length -->
                             <label>
+                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                       placeholder="Length (inches): <?php echo $_SESSION['length_ss'] ?>">
+                            </label>
+
+                            <!-- Colour -->
+                            <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Length: <?php echo $_SESSION['length_ss'] ?> inches">
+                                       placeholder="Colour: <?php echo $_SESSION['colour_ss'] ?>">
                             </label>
 
                             <!-- Height -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Height: <?php echo $_SESSION['height_ss'] ?> inches">
+                                       placeholder="Height (inches): <?php echo $_SESSION['height_ss'] ?>">
                             </label>
 
                             <!-- Brief Description of Item -->
                             <label>
                                 <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Brief Item Description: <?php echo $_SESSION['item_descr_ss'] ?> ">
+                                       placeholder="Additional info about item: <?php echo $_SESSION['item_descr_ss'] ?> ">
                             </label>
+
+                                <!-- Show other shipments -->
+                                <div style="margin: 0 0 30px;" class="sliderWrapper">
+                                    <span style="margin-left: 0" onclick="secondItem()">
+                                    + show other items
+                                    </span>
+                                </div>
+
+                                <!-- 2nd item -->
+                                <fieldset id="secondItem" style="margin: 10px 0 30px; display: none">
+                                    <legend>2nd Item Details</legend>
+                                        <!-- Storage option -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Storage Type: <?php echo $_SESSION['storage_type_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Item Type -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item Type: <?php echo $_SESSION['item_type_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Item's Worth (USD) -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item's Worth (USD): <?php echo $_SESSION['worth_ss_2'] ?> ">
+                                        </label>
+
+                                        <!-- Item Type (other) -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item Type (other): <?php echo $_SESSION['other_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Storage Duration -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Storage Duration (weeks): <?php echo $_SESSION['duration_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Weight -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Width -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Width (inches): <?php echo $_SESSION['width_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Length -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Length (inches): <?php echo $_SESSION['length_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Colour -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Colour: <?php echo $_SESSION['colour_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Height -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Height (inches): <?php echo $_SESSION['height_ss_2'] ?>">
+                                        </label>
+
+                                        <!-- Brief Description of Item -->
+                                        <label>
+                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Additional info about item: <?php echo $_SESSION['item_descr_ss_2'] ?> ">
+                                        </label>
+                                </fieldset>
+
+                                <!-- 3rd item -->
+                                <fieldset id="thirdItem" style="margin: 10px 0 30px; display: none">
+                                    <legend>3rd Item Details</legend>
+                                        <!-- Storage option -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Storage Type: <?php echo $_SESSION['storage_type_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Item Type -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item Type: <?php echo $_SESSION['item_type_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Item's Worth (USD) -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item's Worth (USD): <?php echo $_SESSION['worth_ss_3'] ?> ">
+                                        </label>
+
+                                        <!-- Item Type (other) -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item Type (other): <?php echo $_SESSION['other_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Storage Duration -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Storage Duration (weeks): <?php echo $_SESSION['duration_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Weight -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Width -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Width (inches): <?php echo $_SESSION['width_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Length -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Length (inches): <?php echo $_SESSION['length_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Colour -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Colour: <?php echo $_SESSION['colour_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Height -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Height (inches): <?php echo $_SESSION['height_ss_3'] ?>">
+                                        </label>
+
+                                        <!-- Brief Description of Item -->
+                                        <label>
+                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Additional info about item: <?php echo $_SESSION['item_descr_ss_3'] ?> ">
+                                        </label>
+                                </fieldset>
+
+                                <!-- 4th item -->
+                                <fieldset id="fourthItem" style="margin: 10px 0 30px; display: none">
+                                    <legend>4th Item Details</legend>
+                                        <!-- Storage option -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Storage Type: <?php echo $_SESSION['storage_type_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Item Type -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item Type: <?php echo $_SESSION['item_type_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Item's Worth (USD) -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item's Worth (USD): <?php echo $_SESSION['worth_ss_4'] ?> ">
+                                        </label>
+
+                                        <!-- Item Type (other) -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Item Type (other): <?php echo $_SESSION['other_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Storage Duration -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Storage Duration (weeks): <?php echo $_SESSION['duration_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Weight -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Width -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Width (inches): <?php echo $_SESSION['width_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Length -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Length (inches): <?php echo $_SESSION['length_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Colour -->
+                                        <label>
+                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Colour: <?php echo $_SESSION['colour_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Height -->
+                                        <label>
+                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Height (inches): <?php echo $_SESSION['height_ss_4'] ?>">
+                                        </label>
+
+                                        <!-- Brief Description of Item -->
+                                        <label>
+                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
+                                                   placeholder="Additional info about item: <?php echo $_SESSION['item_descr_ss_4'] ?> ">
+                                        </label>
+
+                                            <!-- hide other items -->
+                                            <div style="margin: 0 0 7px;" class="sliderWrapper">
+                                                <span id="fourthItem" style="margin-left: 0" onclick="hideItems()">
+                                                    - hide other items
+                                                </span>
+                                            </div>
+                                </fieldset>
 
                             <!-- Edit Button -->
                             <label>
@@ -387,9 +661,7 @@
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-<!--                            <button onClick="javascript:history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>-->
-                            <button value="Next" type="submit" class="w3-button w3-medium w3-green-continue">
-                                Submit</button>
+                            <button name="submit" type="submit" class="w3-button w3-medium w3-green-continue">Submit</button>
                             <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
                         </div>
                     </div>
@@ -456,12 +728,76 @@
             <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
+
+    <!-- show other items -->
+    <script>
+        var btn = document.querySelector('secondItem');
+        btn.addEventListener('click', secondItem);
+
+        function secondItem() {
+            var e = document.getElementById('secondItem');
+            e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
+
+            var e1 = document.getElementById('thirdItem');
+            e1.style.display = ((e1.style.display !== 'none') ?  'none' : 'block');
+
+            var e2 = document.getElementById('fourthItem');
+            e2.style.display = ((e2.style.display !== 'none') ?  'none' : 'block');
+        }
+    </script>
+
+    <!-- hide other items -->
+    <script>
+        var btn = document.querySelector('hideItems');
+        btn.addEventListener('click', hideItems);
+
+        function hideItems() {
+            var e = document.getElementById('secondItem');
+            e.style.display = 'none';
+
+            var e1 = document.getElementById('thirdItem');
+            e1.style.display = 'none';
+
+            var e2 = document.getElementById('fourthItem');
+            e2.style.display = 'none';
+        }
+    </script>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Domestic Shipping. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

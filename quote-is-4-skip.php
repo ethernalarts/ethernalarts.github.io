@@ -85,11 +85,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 260px;
-        }
-
-        .secondShipment {
-
+            margin-top: 250px;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -218,7 +214,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -228,81 +224,80 @@
                 <!-- Shipment Dimensions -->
                 <form class="container-form" style="padding-bottom: 0" method="post" action="quote-is-review-skip.php">
 
+                    <!-- 1st shipment details -->
                     <fieldset style="margin: 0 0 20px">
-
                         <legend>Shipment Details</legend>
-                            <!-- Weight -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Weight (pounds):  *"
-                                       name="weight" type="number" required>
-                            </label>
+                        <!-- Shipment type -->
+                        <label>
+                            <select name="shipment_type" class="choice" type="select" required>
+                                <option value="0" selected="selected">Shipment type *</option>
+                                <option value="Luggage">Luggage</option>
+                                <option value="Jewellery">Jewellery</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Laptop">Computer (Laptop)</option>
+                                <option value="Desktop">Computer (Desktop)</option>
+                                <option value="Document">Document</option>
+                                <option value="Battery">Battery</option>
+                                <option value="Machine Parts">Machine Parts</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
 
-                            <!-- Length -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right"
-                                       placeholder="Length (inches):  *"
-                                       name="length" type="number" required>
-                            </label>
+                        <!-- Shipment's worth -->
+                        <label>
+                            <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Shipment's worth) (USD):  *"
+                                   name="worth" type="number">
+                        </label>
 
-                            <!-- Width -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Width (inches):  *"
-                                       name="width" type="number" required>
-                            </label>
+                        <!-- Other (Shipment type) -->
+                        <label>
+                            <input style="width: 100%" class="w3-light-gray" name="other" type="text"
+                                   placeholder="If shipment type selected above is OTHER, please specify: ">
+                        </label>
 
-                            <!-- Height -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right"
-                                       placeholder="Height (inches):  *"
-                                       name="height" type="number" required>
-                            </label>
+                        <!-- Weight -->
+                        <label>
+                            <input class="w3-light-gray" placeholder="Weight (pounds):  *"
+                                   name="weight" type="number" required>
+                        </label>
 
-                            <!-- Shipment's worth -->
-                            <label>
-                                <input class="w3-light-gray"
-                                       placeholder="Declared Value (Shipment's worth) (USD): "
-                                       name="worth" type="number">
-                            </label>
+                        <!-- Length -->
+                        <label>
+                            <input class="w3-light-gray" style="float: right"
+                                   placeholder="Length (inches):  *"
+                                   name="length" type="number" required>
+                        </label>
 
-                            <!-- Shipment type -->
-                            <label>
-                                <select style="float: right" name="shipment_type" class="choice" type="select" required>
-                                    <option value="0" selected="selected">Shipment type *</option>
-                                    <option value="Luggage">Luggage</option>
-                                    <option value="Jewellery">Jewellery</option>
-                                    <option value="Electronic">Electronic</option>
-                                    <option value="Laptop">Computer (Laptop)</option>
-                                    <option value="Desktop">Computer (Desktop)</option>
-                                    <option value="Document">Document</option>
-                                    <option value="Battery">Battery</option>
-                                    <option value="Machine Parts">Machine Parts</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </label>
+                        <!-- Width -->
+                        <label>
+                            <input class="w3-light-gray" placeholder="Width (inches):  *"
+                                   name="width" type="number" required>
+                        </label>
 
-                            <!-- Other (Shipment type) -->
-                            <label>
-                                <input style="width: 100%" class="w3-light-gray" name="other" type="text"
-                                       placeholder="If shipment type selected above is OTHER, please specify: ">
-                            </label>
+                        <!-- Height -->
+                        <label>
+                            <input class="w3-light-gray" style="float: right"
+                                   placeholder="Height (inches):  *"
+                                   name="height" type="number" required>
+                        </label>
 
-                            <!-- Colour -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Color:  *"
-                                       name="colour" type="text" required>
-                            </label>
+                        <!-- Colour -->
+                        <label>
+                            <input class="w3-light-gray" placeholder="Color:  *"
+                                   name="colour" type="text" required>
+                        </label>
 
-                            <!-- Texture -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right"
-                                       placeholder="Texture:  "  name="texture" type="text">
-                            </label>
+                        <!-- Texture -->
+                        <label>
+                            <input class="w3-light-gray" style="float: right"
+                                   placeholder="Texture:  "  name="texture" type="text">
+                        </label>
 
-                            <!-- Shipment Description -->
-                            <label>
+                        <!-- Shipment Description -->
+                        <label>
                                 <textarea style="height: 120px" class=" w3-light-gray" name="shipment_description"
                                           placeholder="Additional information about shipment..."></textarea>
-                            </label>
+                        </label>
                     </fieldset>
 
                     <!-- Add 2nd shipment -->
@@ -314,79 +309,81 @@
 
                     <!-- 2nd Shipment Details -->
                     <fieldset id="secondShipment" style="margin: 0 0 20px; display: none">
-
                         <legend>2nd Shipment Details</legend>
-                            <!-- Weight -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
-                                       name="weight_2" type="number">
-                            </label>
+                        <!-- Shipment type -->
+                        <label>
+                            <select name="shipment_type_2" class="choice" type="select">
+                                <option value="0" selected="selected">Shipment type </option>
+                                <option value="Luggage">Luggage</option>
+                                <option value="Jewellery">Jewellery</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Laptop">Computer (Laptop)</option>
+                                <option value="Desktop">Computer (Desktop)</option>
+                                <option value="Document">Document</option>
+                                <option value="Battery">Battery</option>
+                                <option value="Machine Parts">Machine Parts</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
 
-                            <!-- Length -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Length (inches):  "
-                                       name="length_2" type="number">
-                            </label>
+                        <!-- Shipment's worth -->
+                        <label>
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Declared Value (Shipment's worth) (USD): "
+                                   name="worth_2" type="number">
+                        </label>
 
-                            <!-- Width -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
-                                       name="width_2" type="number">
-                            </label>
+                        <!-- Other (Shipment type) -->
+                        <label>
+                            <input style="width: 100%" class="w3-light-gray" name="other_2" type="text"
+                                   placeholder="If shipment type selected above is OTHER, please specify: ">
+                        </label>
 
-                            <!-- Height -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Height (inches):  "
-                                       name="height_2" type="number">
-                            </label>
+                        <!-- Weight -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
+                                   name="weight_2" type="number">
+                        </label>
 
-                            <!-- Shipment's worth -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Declared Value (Shipment's worth) (USD): "
-                                       name="worth_2" type="number">
-                            </label>
+                        <!-- Length -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                   placeholder="Length (inches):  "
+                                   name="length_2" type="number">
+                        </label>
 
-                            <!-- Shipment type -->
-                            <label>
-                                <select style="float: right" name="shipment_type_2" class="choice" type="select">
-                                    <option value="0" selected="selected">Shipment type </option>
-                                    <option value="Luggage">Luggage</option>
-                                    <option value="Jewellery">Jewellery</option>
-                                    <option value="Electronic">Electronic</option>
-                                    <option value="Laptop">Computer (Laptop)</option>
-                                    <option value="Desktop">Computer (Desktop)</option>
-                                    <option value="Document">Document</option>
-                                    <option value="Battery">Battery</option>
-                                    <option value="Machine Parts">Machine Parts</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </label>
+                        <!-- Width -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
+                                   name="width_2" type="number">
+                        </label>
 
-                            <!-- Other (Shipment type) -->
-                            <label>
-                                <input style="width: 100%" class="w3-light-gray" name="other_2" type="text"
-                                       placeholder="If shipment type selected above is OTHER, please specify: ">
-                            </label>
+                        <!-- Height -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                   placeholder="Height (inches):  "
+                                   name="height_2" type="number">
+                        </label>
 
-                            <!-- Colour -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Color:  " name="colour_2" type="text">
-                            </label>
 
-                            <!-- Texture -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right"
-                                       placeholder="Texture:  "  name="texture_2" type="text">
-                            </label>
 
-                            <!-- Shipment Description -->
-                            <label>
+                        <!-- Colour -->
+                        <label>
+                            <input class="w3-light-gray" placeholder="Color:  "
+                                   name="colour_2" type="text">
+                        </label>
+
+                        <!-- Texture -->
+                        <label>
+                            <input class="w3-light-gray" style="float: right"
+                                   placeholder="Texture:  "  name="texture_2" type="text">
+                        </label>
+
+                        <!-- Shipment Description -->
+                        <label>
                                 <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
                                           name="shipment_description_2" placeholder="Additional information about shipment..."></textarea>
-                            </label>
+                        </label>
                     </fieldset>
 
 
@@ -399,78 +396,79 @@
 
                     <!-- 3rd Shipment Details -->
                     <fieldset id="thirdShipment" style="margin: 0 0 20px; display: none">
-
                         <legend>3rd Shipment Details</legend>
-                            <!-- Weight -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
-                                       name="weight_3" type="number">
-                            </label>
+                        <!-- Shipment type -->
+                        <label>
+                            <select name="shipment_type_3" class="choice" type="select">
+                                <option value="0" selected="selected">Shipment type </option>
+                                <option value="Luggage">Luggage</option>
+                                <option value="Jewellery">Jewellery</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Laptop">Computer (Laptop)</option>
+                                <option value="Desktop">Computer (Desktop)</option>
+                                <option value="Document">Document</option>
+                                <option value="Battery">Battery</option>
+                                <option value="Machine Parts">Machine Parts</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
 
-                            <!-- Length -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Length (inches):  "
-                                       name="length_3" type="number">
-                            </label>
+                        <!-- Shipment's worth -->
+                        <label>
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Declared Value (Shipment's worth) (USD): "
+                                   name="worth_3" type="number">
+                        </label>
 
-                            <!-- Width -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
-                                       name="width_3" type="number">
-                            </label>
+                        <!-- Other (Shipment type) -->
+                        <label>
+                            <input style="width: 100%" class="w3-light-gray" name="other_3" type="text"
+                                   placeholder="If shipment type selected above is OTHER, please specify: ">
+                        </label>
 
-                            <!-- Height -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Height (inches):  "
-                                       name="height_3" type="number">
-                            </label>
+                        <!-- Weight -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
+                                   name="weight_3" type="number">
+                        </label>
 
-                            <!-- Shipment's worth -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Declared Value (Shipment's worth) (USD): "
-                                       name="worth_3" type="number">
-                            </label>
+                        <!-- Length -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                   placeholder="Length (inches):  "
+                                   name="length_3" type="number">
+                        </label>
 
-                            <!-- Shipment type -->
-                            <label>
-                                <select style="float: right" name="shipment_type_3" class="choice" type="select">
-                                    <option value="0" selected="selected">Shipment type </option>
-                                    <option value="Luggage">Luggage</option>
-                                    <option value="Jewellery">Jewellery</option>
-                                    <option value="Electronic">Electronic</option>
-                                    <option value="Laptop">Computer (Laptop)</option>
-                                    <option value="Desktop">Computer (Desktop)</option>
-                                    <option value="Document">Document</option>
-                                    <option value="Battery">Battery</option>
-                                    <option value="Machine Parts">Machine Parts</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </label>
+                        <!-- Width -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
+                                   name="width_3" type="number">
+                        </label>
 
-                            <!-- Other (Shipment type) -->
-                            <label>
-                                <input style="width: 100%" class="w3-light-gray" name="other_3" type="text"
-                                       placeholder="If shipment type selected above is OTHER, please specify: ">
-                            </label>
+                        <!-- Height -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                   placeholder="Height (inches):  "
+                                   name="height_3" type="number">
+                        </label>
 
-                            <!-- Colour -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Color:  " name="colour_3" type="text">
-                            </label>
+                        <!-- Colour -->
+                        <label>
+                            <input class="w3-light-gray" placeholder="Color:  "
+                                   name="colour_3" type="text">
+                        </label>
 
-                            <!-- Texture -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" placeholder="Texture:  "  name="texture_3" type="text">
-                            </label>
+                        <!-- Texture -->
+                        <label>
+                            <input class="w3-light-gray" style="float: right"
+                                   placeholder="Texture:  "  name="texture_3" type="text">
+                        </label>
 
-                            <!-- Shipment Description -->
-                            <label>
+                        <!-- Shipment Description -->
+                        <label>
                                 <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
-                                        name="shipment_description_3" placeholder="Additional information about shipment..."></textarea>
-                            </label>
+                                          name="shipment_description_3" placeholder="Additional information about shipment..."></textarea>
+                        </label>
                     </fieldset>
 
 
@@ -485,78 +483,78 @@
                     <fieldset id="fourthShipment" style="margin: 0 0 20px; display: none">
 
                         <legend>4th Shipment Details</legend>
-                            <!-- Weight -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
-                                       name="weight_4" type="number">
-                            </label>
+                        <!-- Shipment type -->
+                        <label>
+                            <select name="shipment_type_4" class="choice" type="select">
+                                <option value="0" selected="selected">Shipment type </option>
+                                <option value="Luggage">Luggage</option>
+                                <option value="Jewellery">Jewellery</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Laptop">Computer (Laptop)</option>
+                                <option value="Desktop">Computer (Desktop)</option>
+                                <option value="Document">Document</option>
+                                <option value="Battery">Battery</option>
+                                <option value="Machine Parts">Machine Parts</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
 
-                            <!-- Length -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Length (inches):  "
-                                       name="length_4" type="number">
-                            </label>
+                        <!-- Shipment's worth -->
+                        <label>
+                            <input style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Declared Value (Shipment's worth) (USD): "
+                                   name="worth_4" type="number">
+                        </label>
 
-                            <!-- Width -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
-                                       name="width_4" type="number">
-                            </label>
+                        <!-- Other (Shipment type) -->
+                        <label>
+                            <input style="width: 100%" class="w3-light-gray" name="other_4" type="text"
+                                   placeholder="If shipment type selected above is OTHER, please specify: ">
+                        </label>
 
-                            <!-- Height -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                       placeholder="Height (inches):  "
-                                       name="height_4" type="number">
-                            </label>
+                        <!-- Weight -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Weight (pounds):  "
+                                   name="weight_4" type="number">
+                        </label>
 
-                            <!-- Shipment's worth -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Declared Value (Shipment's worth) (USD): "
-                                       name="worth_4" type="number">
-                            </label>
+                        <!-- Length -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                   placeholder="Length (inches):  "
+                                   name="length_4" type="number">
+                        </label>
 
-                            <!-- Shipment type -->
-                            <label>
-                                <select style="float: right" name="shipment_type_4" class="choice" type="select">
-                                    <option value="0" selected="selected">Shipment type </option>
-                                    <option value="Luggage">Luggage</option>
-                                    <option value="Jewellery">Jewellery</option>
-                                    <option value="Electronic">Electronic</option>
-                                    <option value="Laptop">Computer (Laptop)</option>
-                                    <option value="Desktop">Computer (Desktop)</option>
-                                    <option value="Document">Document</option>
-                                    <option value="Battery">Battery</option>
-                                    <option value="Machine Parts">Machine Parts</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </label>
+                        <!-- Width -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" placeholder="Width (inches):  "
+                                   name="width_4" type="number">
+                        </label>
 
-                            <!-- Other (Shipment type) -->
-                            <label>
-                                <input style="width: 100%" class="w3-light-gray" name="other_4" type="text"
-                                       placeholder="If shipment type selected above is OTHER, please specify: ">
-                            </label>
+                        <!-- Height -->
+                        <label>
+                            <input class="w3-input w3-border-0 w3-light-gray" style="float: right"
+                                   placeholder="Height (inches):  "
+                                   name="height_4" type="number">
+                        </label>
 
-                            <!-- Colour -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Color:  "
-                                       name="colour_4" type="text">
-                            </label>
+                        <!-- Colour -->
+                        <label>
+                            <input class="w3-light-gray" placeholder="Color:  "
+                                   name="colour_4" type="text">
+                        </label>
 
-                            <!-- Texture -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right"
-                                       placeholder="Texture:  "  name="texture_4" type="text">
-                            </label>
+                        <!-- Texture -->
+                        <label>
+                            <input class="w3-light-gray" style="float: right"
+                                   placeholder="Texture:  "  name="texture_4" type="text">
+                        </label>
 
-                            <!-- Shipment Description -->
-                            <label>
+                        <!-- Shipment Description -->
+                        <label>
                                 <textarea style="height: 120px" class="w3-input w3-border-0 w3-light-gray"
                                           name="shipment_description_4" placeholder="Additional information about shipment..."></textarea>
-                            </label>
+                        </label>
                     </fieldset>
 
 

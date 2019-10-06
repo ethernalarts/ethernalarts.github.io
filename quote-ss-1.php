@@ -228,14 +228,13 @@
                     <!-- Express Courier Get a quote form -->
                     <form class="container-form"  style="padding-bottom: 0" method="post" action="quote-ss-review.php">
 
+                        <!-- 1st Item details -->
                         <fieldset style="margin: 0 0 20px; padding-bottom: 10px">
-
                             <legend>Item Details</legend>
-
-                                <!-- Storage type -->
+                                <!-- Storage option -->
                                 <label>
                                     <select class="choice" name="storage_type_ss" type="select" required>
-                                        <option value="0" selected="selected">Storage Type  *</option>
+                                        <option value="0" selected="selected">Storage option  *</option>
                                         <option value="Secure Storage">Secure Storage</option>
                                         <option value="Secure Storage plus">Secure Storage + (+$)</option>
                                     </select>
@@ -264,40 +263,321 @@
                                            name="worth_ss" type="number" required>
                                 </label>
 
+                                <!-- Other (Item type) -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" name="other_ss" type="text"
+                                           placeholder="If item type is OTHER, please specify: ">
+                                </label>
+
                                 <!-- Storage Duration -->
                                 <label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Storage Duration (weeks):  *"
+                                    <input class="w3-light-gray" placeholder="Storage Duration (weeks):  *"
                                            name="duration_ss" type="number" required>
                                 </label>
 
                                 <!-- Weight -->
                                 <label>
-                                    <input class="w3-light-gray" placeholder="Weight (pounds):  *"
-                                           name="weight_ss" type="number" required>
+                                    <input style="float: right" class="w3-light-gray" placeholder="Weight (pounds):  "
+                                           name="weight_ss" type="number">
                                 </label>
 
                                 <!-- Length -->
                                 <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Length (inches):  *"
+                                    <input class="w3-light-gray" placeholder="Length (inches):  *"
                                            name="length_ss" type="number" required>
                                 </label>
 
                                 <!-- Width -->
                                 <label>
-                                    <input class="w3-light-gray" placeholder="Width (inches):  *"
+                                    <input style="float: right" class="w3-light-gray" placeholder="Width (inches):  *"
                                            name="width_ss" type="number" required>
+                                </label>
+
+                                <!-- Colour -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Color:  *" name="colour_ss" type="text">
                                 </label>
 
                                 <!-- Height -->
                                 <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  *"
-                                           name="height_ss" type="number" required>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  "
+                                           name="height_ss" type="number">
                                 </label>
 
-                                <!-- Package Description -->
+                                <!-- Item Description -->
                                 <label>
                                     <textarea style="height: 120px" class="w3-light-gray"
-                                              name="item_descr_ss" placeholder="Briefly describe item..."></textarea>
+                                              name="item_descr_ss" placeholder="Additional information about item..."></textarea>
+                                </label>
+                        </fieldset>
+
+                        <!-- Add 2nd shipment -->
+                        <div class="sliderWrapper">
+                            <span style="margin-left: 0" onclick="secondItem()">
+                                + Add a 2nd item
+                            </span>
+                        </div>
+
+                        <!-- 2nd Item details -->
+                        <fieldset id="secondItem" style="margin: 0 0 20px; padding-bottom: 10px; display: none">
+                            <legend>2nd Item Details</legend>
+                                <!-- Storage option -->
+                                <label>
+                                    <select class="choice" name="storage_type_ss_2" type="select">
+                                        <option value="0" selected="selected">Storage option</option>
+                                        <option value="Secure Storage">Secure Storage</option>
+                                        <option value="Secure Storage plus">Secure Storage + (+$)</option>
+                                    </select>
+                                </label>
+
+                                <!-- Item type -->
+                                <label>
+                                    <select style="float: right" class="choice" name="item_type_ss_2" required>
+                                        <option value="0" selected="selected">Item Type</option>
+                                        <option value="Document">Document</option>
+                                        <option value="Jewellery">Jewellery</option>
+                                        <option value="Electronic">Electronic</option>
+                                        <option value="Fabric">Fabric</option>
+                                        <option value="Battery">Battery</option>
+                                        <option value="Wine">Wine and/or Cigars</option>
+                                        <option value="Automobile">Automobile</option>
+                                        <option value="Perishable">Perishable</option>
+                                        <option value="Machine Parts">Machine Parts</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </label>
+
+                                <!-- Item's Worth -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Declared Value (Item's worth) (USD): "
+                                           name="worth_ss_2" type="number">
+                                </label>
+
+                                <!-- Other (Item type) -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" name="other_ss_2" type="text"
+                                           placeholder="If item type is OTHER, please specify: ">
+                                </label>
+
+                                <!-- Storage Duration -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Storage Duration (weeks): "
+                                           name="duration_ss_2" type="number">
+                                </label>
+
+                                <!-- Weight -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" placeholder="Weight (pounds):  "
+                                           name="weight_ss_2" type="number">
+                                </label>
+
+                                <!-- Length -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Length (inches):  "
+                                           name="length_ss_2" type="number">
+                                </label>
+
+                                <!-- Width -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" placeholder="Width (inches):  "
+                                           name="width_ss_2" type="number">
+                                </label>
+
+                                <!-- Colour -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Color:  " name="colour_ss_2" type="text">
+                                </label>
+
+                                <!-- Height -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  "
+                                           name="height_ss_2" type="number">
+                                </label>
+
+                                <!-- Item Description -->
+                                <label>
+                                        <textarea style="height: 120px" class="w3-light-gray"
+                                                  name="item_descr_ss_2" placeholder="Additional information about item..."></textarea>
+                                </label>
+                        </fieldset>
+
+                        <!-- Add 3rd shipment -->
+                        <div class="sliderWrapper">
+                            <span id="add3rdItem" style="margin-left: 0; display: none" onclick="thirdItem()">
+                                + Add a 3rd item
+                            </span>
+                        </div>
+
+                        <!-- 3rd Item details -->
+                        <fieldset id="thirdItem" style="margin: 0 0 20px; padding-bottom: 10px; display: none">
+                            <legend>3rd Item Details</legend>
+                                <!-- Storage option -->
+                                <label>
+                                    <select class="choice" name="storage_type_ss_3" type="select">
+                                        <option value="0" selected="selected">Storage option</option>
+                                        <option value="Secure Storage">Secure Storage</option>
+                                        <option value="Secure Storage plus">Secure Storage + (+$)</option>
+                                    </select>
+                                </label>
+
+                                <!-- Item type -->
+                                <label>
+                                    <select style="float: right" class="choice" name="item_type_ss_3">
+                                        <option value="0" selected="selected">Item Type</option>
+                                        <option value="Document">Document</option>
+                                        <option value="Jewellery">Jewellery</option>
+                                        <option value="Electronic">Electronic</option>
+                                        <option value="Fabric">Fabric</option>
+                                        <option value="Battery">Battery</option>
+                                        <option value="Wine">Wine and/or Cigars</option>
+                                        <option value="Automobile">Automobile</option>
+                                        <option value="Perishable">Perishable</option>
+                                        <option value="Machine Parts">Machine Parts</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </label>
+
+                                <!-- Item's Worth -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Declared Value (Item's worth) (USD): "
+                                           name="worth_ss_3" type="number">
+                                </label>
+
+                                <!-- Other (Item type) -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" name="other_ss_3" type="text"
+                                           placeholder="If item type is OTHER, please specify: ">
+                                </label>
+
+                                <!-- Storage Duration -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Storage Duration (weeks): "
+                                           name="duration_ss_3" type="number">
+                                </label>
+
+                                <!-- Weight -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" placeholder="Weight (pounds):  "
+                                           name="weight_ss_3" type="number">
+                                </label>
+
+                                <!-- Length -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Length (inches):  "
+                                           name="length_ss_3" type="number">
+                                </label>
+
+                                <!-- Width -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" placeholder="Width (inches):  "
+                                           name="width_ss_3" type="number">
+                                </label>
+
+                                <!-- Colour -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Color:  " name="colour_ss_3" type="text">
+                                </label>
+
+                                <!-- Height -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  "
+                                           name="height_ss_3" type="number">
+                                </label>
+
+                                <!-- Item Description -->
+                                <label>
+                                        <textarea style="height: 120px" class="w3-light-gray"
+                                                  name="item_descr_ss_3" placeholder="Additional information about item..."></textarea>
+                                </label>
+                        </fieldset>
+
+                        <!-- Add 4th shipment -->
+                        <div class="sliderWrapper">
+                            <span id="add4thItem" style="margin-left: 0; display: none" onclick="fourthItem('fourthItem')">
+                                + Add a 4th item
+                            </span>
+                        </div>
+
+                        <!-- 4th Item details -->
+                        <fieldset id="fourthItem" style="margin: 0 0 20px; padding-bottom: 10px; display: none">
+                            <legend>4th Item Details</legend>
+                                <!-- Storage option -->
+                                <label>
+                                    <select class="choice" name="storage_type_ss_4" type="select">
+                                        <option value="0" selected="selected">Storage option</option>
+                                        <option value="Secure Storage">Secure Storage</option>
+                                        <option value="Secure Storage plus">Secure Storage + (+$)</option>
+                                    </select>
+                                </label>
+
+                                <!-- Item type -->
+                                <label>
+                                    <select style="float: right" class="choice" name="item_type_ss_4">
+                                        <option value="0" selected="selected">Item Type</option>
+                                        <option value="Document">Document</option>
+                                        <option value="Jewellery">Jewellery</option>
+                                        <option value="Electronic">Electronic</option>
+                                        <option value="Fabric">Fabric</option>
+                                        <option value="Battery">Battery</option>
+                                        <option value="Wine">Wine and/or Cigars</option>
+                                        <option value="Automobile">Automobile</option>
+                                        <option value="Perishable">Perishable</option>
+                                        <option value="Machine Parts">Machine Parts</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </label>
+
+                                <!-- Item's Worth -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Declared Value (Item's worth) (USD): "
+                                           name="worth_ss_4" type="number">
+                                </label>
+
+                                <!-- Other (Item type) -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" name="other_ss_4" type="text"
+                                           placeholder="If item type is OTHER, please specify: ">
+                                </label>
+
+                                <!-- Storage Duration -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Storage Duration (weeks): "
+                                           name="duration_ss_4" type="number">
+                                </label>
+
+                                <!-- Weight -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" placeholder="Weight (pounds):  "
+                                           name="weight_ss_4" type="number">
+                                </label>
+
+                                <!-- Length -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Length (inches):  "
+                                           name="length_ss_4" type="number">
+                                </label>
+
+                                <!-- Width -->
+                                <label>
+                                    <input style="float: right" class="w3-light-gray" placeholder="Width (inches):  "
+                                           name="width_ss_4" type="number">
+                                </label>
+
+                                <!-- Colour -->
+                                <label>
+                                    <input class="w3-light-gray" placeholder="Color:  " name="colour_ss_4" type="text">
+                                </label>
+
+                                <!-- Height -->
+                                <label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  "
+                                           name="height_ss_4" type="number">
+                                </label>
+
+                                <!-- Item Description -->
+                                <label>
+                                        <textarea style="height: 120px" class="w3-light-gray"
+                                                  name="item_descr_ss_4" placeholder="Additional information about item..."></textarea>
                                 </label>
                         </fieldset>
 
@@ -375,6 +655,42 @@
         }
     </script>
 
+    <!-- Second Shipment toggle -->
+    <script>
+        var btn = document.querySelector('secondItem');
+        btn.addEventListener('click', secondItem);
+
+        function secondItem() {
+            var e = document.getElementById('secondItem');
+            e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
+
+            var e1 = document.getElementById('add3rdItem');
+            e1.style.display = ((e1.style.display !== 'none') ?  'none' : 'block');
+        }
+    </script>
+
+    <!-- Third Shipment toggle -->
+    <script>
+        var btn = document.querySelector('thirdItem');
+        btn.addEventListener('click', thirdItem);
+
+        function thirdItem() {
+            var e = document.getElementById('thirdItem');
+            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
+
+            var e1 = document.getElementById('add4thItem');
+            e1.style.display = ((e1.style.display!== 'none') ?  'none' : 'block');
+        }
+    </script>
+
+    <!-- 4th Shipment toggle -->
+    <script>
+        function fourthItem(fourthItem) {
+            var e = document.getElementById(fourthItem);
+            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
+        }
+    </script>
+
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">
@@ -384,10 +700,40 @@
     </div>
 </body>
 
-<!-- footer   -->
-<footer>
-    <div>
-        Copyright <i class="copyright far fa-copyright"></i> 2019 V-Link Express Courier. All Rights Reserved.
-    </div>
-</footer>
+    <!-- footer -->
+    <footer>
+        <p class="footeradd">
+            3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
+        </p>
+        <p class="footercopyrite">
+            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+        </p>
+
+        <div class="div-footer-followus">
+            <p>
+                <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
+                    <i class="footer-FB fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
+                    <i class="footer-TWITTER fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
+                    <i class="footer-INSTA fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+
+        <!-- Footer Links   -->
+        <div>
+            <ul class="footerlinks">
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
+                <li class="footerlinkitem"><a href="about.html">About</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>

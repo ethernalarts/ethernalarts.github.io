@@ -243,7 +243,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 16px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -253,7 +253,7 @@
                 <!-- Package Destination -->
                 <form class="container-form" style="padding-bottom: 0" method="post" action="quote-ec-review-skip.php" >
 
-                      <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 30px"">
+                      <fieldset id="returnAdd" style="margin: 0 0 30px; padding-bottom: 30px">
                           <legend>Package Destination</legend>
                                 <!-- Full Name -->
                                 <label>
@@ -348,7 +348,7 @@
                                 <!-- Notify Receiver? -->
                                 <label>
                                     <select  style="float: right" name="notify_dest" class="choice">
-                                        <option value="0" selected="selected">Notify Receiver? </option>
+                                        <option value="0" selected="selected">Should we notify recipient of package status?</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>

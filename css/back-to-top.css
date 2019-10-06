@@ -35,8 +35,8 @@
     border-radius: 50%;
 }
 .scroll:hover {
-    /*background-color: #2187e2;*/
-    background-color: rgba(33, 135, 226, 0.31);
+    /*background-color: transparent;*/
+    background-color: rgba(33, 135, 226, 0.2);
     border-radius: 50%;
     transition: 0.5s;
     -moz-transition: 0.5s;

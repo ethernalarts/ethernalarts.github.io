@@ -1,0 +1,76 @@
+NEW SECURE STORAGE ORDER!
+
+BASIC INFORMATION
+Name = Ethernal Arts
+Contact Name = Uwa
+Gender = Male
+Title = Mr.
+Phone = 0987654321
+Age = 34
+Occupation = Web Developer
+Country = FI
+State = Haeme
+City = Humppila
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Office 4
+Department = Web Development
+Email = email@mail.com
+Residential Address? = No
+Item status updates? = Yes
+
+
+ITEM DETAILS
+
+1ST ITEM DETAILS:
+Storage option = Secure Storage plus
+Item Type = Document
+Item Worth = 1000
+Item Type (other) = 
+Storage Duration = 4
+Weight (inches) = 
+Length (inches) = 9
+Width (inches)= 4
+Colour = white
+Height (inches)= 
+Item Description = Sensitive Bank Statement
+
+2ND ITEM DETAILS:
+Storage option = Secure Storage plus
+Item Type = Jewellery
+Item Worth = 50000
+Item Type (other) = 
+Storage Duration = 3
+Weight (inches) = 10
+Length (inches) = 25
+Width (inches)= 35
+Colour = Blue
+Height (inches)= 
+Item Description = Blue Sapphire Diamond
+
+3RD ITEM DETAILS:
+Storage option = 0
+Item Type = 0
+Item Worth = 
+Item Type (other) = 
+Storage Duration = 
+Weight (inches) = 
+Length (inches) = 
+Width (inches)= 
+Colour = 
+Height (inches)= 
+Item Description = 
+
+4TH ITEM DETAILS:
+Storage option = 0
+Item Type = 0
+Item Worth = 
+Item Type (other) = 
+Storage Duration = 
+Weight (inches) = 
+Length (inches) = 
+Width (inches)= 
+Colour = 
+Height (inches)= 
+Item Description = 
+

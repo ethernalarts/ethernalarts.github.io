@@ -49,25 +49,111 @@
 
 
         //Item Details
-        $dimensions = 'ITEM DETAILS'."\r\n";
+        $dimensions = 'ITEM DETAILS'."\r\n\r\n";
         fwrite($myfile, $dimensions);
 
-        $worth = 'Storage Type = '.$_SESSION['storage_type_ss']."\r\n";   //worth
-        fwrite($myfile, $worth);
-        $worth = 'Item Type = '.$_SESSION['item_type_ss']."\r\n";   //worth
-        fwrite($myfile, $worth);
-        $weight = 'Weight = '.$_SESSION['weight_ss']."\r\n";   //weight
-        fwrite($myfile, $weight);
-        $length = 'Length = '.$_SESSION['length_ss']."\r\n";    //length
-        fwrite($myfile, $length);
-        $width = 'Width = '.$_SESSION['width_ss']."\r\n";   //width
-        fwrite($myfile, $width);
-        $height = 'Height = '.$_SESSION['height_ss']."\r\n";   //height
-        fwrite($myfile, $height);
+        $firstitem = '1ST ITEM DETAILS:'."\r\n";
+        fwrite($myfile, $firstitem);
+        $storage_option = 'Storage option = '.$_SESSION['storage_type_ss']."\r\n";   //storage option
+        fwrite($myfile, $storage_option);
+        $item_type = 'Item Type = '.$_SESSION['item_type_ss']."\r\n";   //item type
+        fwrite($myfile, $item_type);
         $worth = 'Item Worth = '.$_SESSION['worth_ss']."\r\n";   //worth
         fwrite($myfile, $worth);
-        $package_description = 'Item Description = '.$_SESSION['item_descr_ss']."\r\n";   //package description
+        $type_other = 'Item Type (other) = '.$_SESSION['other_ss']."\r\n";   //other
+        fwrite($myfile, $type_other);
+        $duration = 'Storage Duration = '.$_SESSION['duration_ss']."\r\n";   //duration
+        fwrite($myfile, $duration);
+        $weight = 'Weight (inches) = '.$_SESSION['weight_ss']."\r\n";   //weight
+        fwrite($myfile, $weight);
+        $length = 'Length (inches) = '.$_SESSION['length_ss']."\r\n";    //length
+        fwrite($myfile, $length);
+        $width = 'Width (inches)= '.$_SESSION['width_ss']."\r\n";   //width
+        fwrite($myfile, $width);
+        $colour = 'Colour = '.$_SESSION['colour_ss']."\r\n";   //colour
+        fwrite($myfile, $colour);
+        $height = 'Height (inches)= '.$_SESSION['height_ss']."\r\n";   //height
+        fwrite($myfile, $height);
+        $package_description = 'Item Description = '.$_SESSION['item_descr_ss']."\r\n\r\n";   //package description
         fwrite($myfile, $package_description);
+
+
+        $seconditem = '2ND ITEM DETAILS:'."\r\n";
+        fwrite($myfile, $seconditem);
+        $storage_option = 'Storage option = '.$_SESSION['storage_type_ss_2']."\r\n";   //storage option
+        fwrite($myfile, $storage_option);
+        $item_type = 'Item Type = '.$_SESSION['item_type_ss_2']."\r\n";   //item type
+        fwrite($myfile, $item_type);
+        $worth = 'Item Worth = '.$_SESSION['worth_ss_2']."\r\n";   //worth
+        fwrite($myfile, $worth);
+        $type_other = 'Item Type (other) = '.$_SESSION['other_ss_2']."\r\n";   //other
+        fwrite($myfile, $type_other);
+        $duration = 'Storage Duration = '.$_SESSION['duration_ss_2']."\r\n";   //duration
+        fwrite($myfile, $duration);
+        $weight = 'Weight (inches) = '.$_SESSION['weight_ss_2']."\r\n";   //weight
+        fwrite($myfile, $weight);
+        $length = 'Length (inches) = '.$_SESSION['length_ss_2']."\r\n";    //length
+        fwrite($myfile, $length);
+        $width = 'Width (inches)= '.$_SESSION['width_ss_2']."\r\n";   //width
+        fwrite($myfile, $width);
+        $colour = 'Colour = '.$_SESSION['colour_ss_2']."\r\n";   //colour
+        fwrite($myfile, $colour);
+        $height = 'Height (inches)= '.$_SESSION['height_ss_2']."\r\n";   //height
+        fwrite($myfile, $height);
+        $item_description = 'Item Description = '.$_SESSION['item_descr_ss_2']."\r\n\r\n";   //item description
+        fwrite($myfile, $item_description);
+
+
+        $thirditem = '3RD ITEM DETAILS:'."\r\n";
+        fwrite($myfile, $thirditem);
+        $storage_option = 'Storage option = '.$_SESSION['storage_type_ss_3']."\r\n";   //storage option
+        fwrite($myfile, $storage_option);
+        $item_type = 'Item Type = '.$_SESSION['item_type_ss_3']."\r\n";   //item type
+        fwrite($myfile, $item_type);
+        $worth = 'Item Worth = '.$_SESSION['worth_ss_3']."\r\n";   //worth
+        fwrite($myfile, $worth);
+        $type_other = 'Item Type (other) = '.$_SESSION['other_ss_3']."\r\n";   //other
+        fwrite($myfile, $type_other);
+        $duration = 'Storage Duration = '.$_SESSION['duration_ss_3']."\r\n";   //duration
+        fwrite($myfile, $duration);
+        $weight = 'Weight (inches) = '.$_SESSION['weight_ss_3']."\r\n";   //weight
+        fwrite($myfile, $weight);
+        $length = 'Length (inches) = '.$_SESSION['length_ss_3']."\r\n";    //length
+        fwrite($myfile, $length);
+        $width = 'Width (inches)= '.$_SESSION['width_ss_3']."\r\n";   //width
+        fwrite($myfile, $width);
+        $colour = 'Colour = '.$_SESSION['colour_ss_3']."\r\n";   //colour
+        fwrite($myfile, $colour);
+        $height = 'Height (inches)= '.$_SESSION['height_ss_3']."\r\n";   //height
+        fwrite($myfile, $height);
+        $item_description = 'Item Description = '.$_SESSION['item_descr_ss_3']."\r\n\r\n";   //item description
+        fwrite($myfile, $item_description);
+
+
+        $fourthitem = '4TH ITEM DETAILS:'."\r\n";
+        fwrite($myfile, $fourthitem);
+        $storage_option = 'Storage option = '.$_SESSION['storage_type_ss_4']."\r\n";   //storage option
+        fwrite($myfile, $storage_option);
+        $item_type = 'Item Type = '.$_SESSION['item_type_ss_4']."\r\n";   //item type
+        fwrite($myfile, $item_type);
+        $worth = 'Item Worth = '.$_SESSION['worth_ss_4']."\r\n";   //worth
+        fwrite($myfile, $worth);
+        $type_other = 'Item Type (other) = '.$_SESSION['other_ss_4']."\r\n";   //other
+        fwrite($myfile, $type_other);
+        $duration = 'Storage Duration = '.$_SESSION['duration_ss_4']."\r\n";   //duration
+        fwrite($myfile, $duration);
+        $weight = 'Weight (inches) = '.$_SESSION['weight_ss_4']."\r\n";   //weight
+        fwrite($myfile, $weight);
+        $length = 'Length (inches) = '.$_SESSION['length_ss_4']."\r\n";    //length
+        fwrite($myfile, $length);
+        $width = 'Width (inches)= '.$_SESSION['width_ss_4']."\r\n";   //width
+        fwrite($myfile, $width);
+        $colour = 'Colour = '.$_SESSION['colour_ss_4']."\r\n";   //colour
+        fwrite($myfile, $colour);
+        $height = 'Height (inches)= '.$_SESSION['height_ss_4']."\r\n";   //height
+        fwrite($myfile, $height);
+        $item_description = 'Item Description = '.$_SESSION['item_descr_ss_4']."\r\n\r\n";   //item description
+        fwrite($myfile, $item_description);
 
         fclose($myfile);
     }

@@ -87,7 +87,7 @@
         //Package Destination - EC (Express Courier)
         $package_dest = 'PACKAGE DESTINATION'."\r\n";
         fwrite($myfile, $package_dest);
-        
+
         $name_dest = 'Name = '.$_SESSION['name_ec_dest']."\r\n";   //name
         fwrite($myfile, $name_dest);
         $contactname_dest = 'Contact Name = '.$_SESSION['contactname_ec_dest']."\r\n";    //contact name
@@ -124,7 +124,7 @@
         $package_details = 'PACKAGE DETAILS'."\r\n\r\n";
         fwrite($myfile, $package_details);
 
-        $firspackage = '1ST PACKAGE DETAILS:'."\r\n";
+        $firstpackage = '1ST PACKAGE DETAILS:'."\r\n";
         fwrite($myfile, $firstpackage);
         $package_type = 'Package Type = '.$_SESSION['package_type']."\r\n";    //Package Type
         fwrite($myfile, $package_type);

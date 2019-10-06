@@ -304,13 +304,13 @@
                                 <!-- Pickup Date -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Pickup Date: <?php echo $_SESSION['pickup_date'] ?> ">
+                                           placeholder="Pickup Date: <?php echo $_SESSION['pickupdate'] ?> ">
                                 </label>
 
                                 <!-- Pickup Time -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                           placeholder="Pickup Time: <?php echo $_SESSION['pickup_time'] ?> ">
+                                           placeholder="Pickup Time: <?php echo $_SESSION['pickuptime'] ?> ">
                                 </label>
 
                                 <!-- Residential Address -->
@@ -458,31 +458,31 @@
                             <!-- Package's Worth (USD) -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth'] ?> ">
+                                       placeholder="Package's Worth (USD): <?php echo $_SESSION['worth'] ?> ">
                             </label>
 
                             <!-- Weight -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Weight: <?php echo $_SESSION['weight'] ?> inches">
+                                       placeholder="Weight (pounds): <?php echo $_SESSION['weight'] ?>">
                             </label>
 
                             <!-- Length -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Length: <?php echo $_SESSION['length'] ?> inches">
+                                       placeholder="Length (inches): <?php echo $_SESSION['length'] ?>">
                             </label>
 
                             <!-- Width -->
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Width: <?php echo $_SESSION['width'] ?> inches">
+                                       placeholder="Width (inches): <?php echo $_SESSION['width'] ?>">
                             </label>
 
                             <!-- Height -->
                             <label>
                                 <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Height: <?php echo $_SESSION['height'] ?> inches">
+                                       placeholder="Height (inches): <?php echo $_SESSION['height'] ?>">
                             </label>
 
                             <!-- Colour -->
@@ -534,31 +534,31 @@
                                         <!-- Package's Worth (USD) -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth_2'] ?> ">
+                                                   placeholder="Package's Worth (USD): <?php echo $_SESSION['worth_2'] ?> ">
                                         </label>
 
                                         <!-- Weight -->
                                         <label>
                                             <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Weight: <?php echo $_SESSION['weight_2'] ?> inches">
+                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_2'] ?>">
                                         </label>
 
                                         <!-- Length -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Length: <?php echo $_SESSION['length_2'] ?> inches">
+                                                   placeholder="Length (inches): <?php echo $_SESSION['length_2'] ?>">
                                         </label>
 
                                         <!-- Width -->
                                         <label>
                                             <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Width: <?php echo $_SESSION['width_2'] ?> inches">
+                                                   placeholder="Width (inches): <?php echo $_SESSION['width_2'] ?>">
                                         </label>
 
                                         <!-- Height -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Height: <?php echo $_SESSION['height_2'] ?> inches">
+                                                   placeholder="Height (inches): <?php echo $_SESSION['height_2'] ?>">
                                         </label>
 
                                         <!-- Colour -->
@@ -604,31 +604,31 @@
                                         <!-- Package's Worth (USD) -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth_3'] ?> ">
+                                                   placeholder="Package's Worth (USD): <?php echo $_SESSION['worth_3'] ?> ">
                                         </label>
 
                                         <!-- Weight -->
                                         <label>
                                             <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Weight: <?php echo $_SESSION['weight_3'] ?> inches">
+                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_3'] ?>">
                                         </label>
 
                                         <!-- Length -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Length: <?php echo $_SESSION['length_3'] ?> inches">
+                                                   placeholder="Length (inches): <?php echo $_SESSION['length_3'] ?>">
                                         </label>
 
                                         <!-- Width -->
                                         <label>
                                             <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Width: <?php echo $_SESSION['width_3'] ?> inches">
+                                                   placeholder="Width (inches): <?php echo $_SESSION['width_3'] ?>">
                                         </label>
 
                                         <!-- Height -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Height: <?php echo $_SESSION['height_3'] ?> inches">
+                                                   placeholder="Height (inches): <?php echo $_SESSION['height_3'] ?>">
                                         </label>
 
                                         <!-- Colour -->
@@ -674,31 +674,31 @@
                                         <!-- Package's Worth (USD) -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package's Worth (USD): $<?php echo $_SESSION['worth_4'] ?> ">
+                                                   placeholder="Package's Worth (USD): <?php echo $_SESSION['worth_4'] ?> ">
                                         </label>
 
                                         <!-- Weight -->
                                         <label>
                                             <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Weight: <?php echo $_SESSION['weight_4'] ?> inches">
+                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_4'] ?>">
                                         </label>
 
                                         <!-- Length -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Length: <?php echo $_SESSION['length_4'] ?> inches">
+                                                   placeholder="Length (inches): <?php echo $_SESSION['length_4'] ?>">
                                         </label>
 
                                         <!-- Width -->
                                         <label>
                                             <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Width: <?php echo $_SESSION['width_4'] ?> inches">
+                                                   placeholder="Width (inches): <?php echo $_SESSION['width_4'] ?>">
                                         </label>
 
                                         <!-- Height -->
                                         <label>
                                             <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Height: <?php echo $_SESSION['height_4'] ?> inches">
+                                                   placeholder="Height (inches): <?php echo $_SESSION['height_4'] ?>">
                                         </label>
 
                                         <!-- Colour -->
@@ -718,6 +718,13 @@
                                             <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
                                                    placeholder="Additional info about package: <?php echo $_SESSION['package_description_4'] ?> ">
                                         </label>
+
+                                            <!-- hide other items -->
+                                            <div style="margin: 0 0 7px;" class="sliderWrapper">
+                                                <span id="fourthItem" style="margin-left: 0" onclick="hidePackages()">
+                                                    - hide other packages
+                                                </span>
+                                            </div>
                                 </fieldset>
 
                             <!-- Edit Button -->
@@ -811,7 +818,7 @@
                             <label>
                                 <input disabled class="w3-input w3-border-0 w3-light-gray"
                                        placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec_dest'] ?> ">
-                            </label><br>
+                            </label>
 
                             <!-- Notify Receiver? -->
                             <label>
@@ -899,7 +906,7 @@
         </div>
     </div>
 
-    <!-- other package toggle -->
+    <!-- show other packages -->
     <script>
         var btn = document.querySelector('secondPackage');
         btn.addEventListener('click', secondPackage);
@@ -913,6 +920,23 @@
 
             var e2 = document.getElementById('fourthPackage');
             e2.style.display = ((e2.style.display !== 'none') ?  'none' : 'block');
+        }
+    </script>
+
+    <!-- hide other packages -->
+    <script>
+        var btn = document.querySelector('hidePackages');
+        btn.addEventListener('click', hidePackages);
+
+        function hidePackages() {
+            var e = document.getElementById('secondPackage');
+            e.style.display = 'none';
+
+            var e1 = document.getElementById('thirdPackage');
+            e1.style.display = 'none';
+
+            var e2 = document.getElementById('fourthPackage');
+            e2.style.display = 'none';
         }
     </script>
 </body>
