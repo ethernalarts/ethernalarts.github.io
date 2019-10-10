@@ -322,7 +322,7 @@
                             <legend>2nd Item Details</legend>
                                 <!-- Storage option -->
                                 <label>
-                                    <select class="choice" name="storage_type_ss_2" type="select" required>
+                                    <select class="choice" name="storage_type_ss_2" type="select">
                                         <option <?php echo in_array($_SESSION['storage_type_ss_2'], ['Secure Storage', 'Secure Storage plus']) ? '': 'selected="selected"'; ?> value="0" selected="selected">Storage option  *</option>
                                         <option <?php echo $_SESSION['storage_type_ss_2'] == 'Secure Storage' ? 'selected="selected"': ''; ?> value="Secure Storage">Secure Storage</option>
                                         <option <?php echo $_SESSION['storage_type_ss_2'] == 'Secure Storage plus' ? 'selected="selected"': ''; ?> value="Secure Storage plus">Secure Storage + (+$)</option>
@@ -331,7 +331,7 @@
 
                                 <!-- Item type -->
                                 <label>
-                                    <select style="float: right" class="choice" name="item_type_ss_2" required>
+                                    <select style="float: right" class="choice" name="item_type_ss_2">
                                         <option <?php echo !isset($_SESSION['item_type_ss_2']) || empty($_SESSION['item_type_ss_2']) || $_SESSION['item_type_ss_2'] == "0" ? 'selected="selected"': ''; ?> value="0" selected="selected">Item Type  *</option>
                                         <option <?php echo $_SESSION['item_type_ss_2'] == 'Document' ? 'selected="selected"': ''; ?> value="Document">Document</option>
                                         <option <?php echo $_SESSION['item_type_ss_2'] == 'Jewellery' ? 'selected="selected"': ''; ?> value="Jewellery">Jewellery</option>
@@ -349,7 +349,7 @@
                                 <!-- Item's Worth -->
                                 <label>
                                     <input value="<?php echo $_SESSION['worth_ss_2'] ?>" class="w3-light-gray" placeholder="Declared Value (Item's worth) (USD):  *"
-                                           name="worth_ss_2" type="number" required>
+                                           name="worth_ss_2" type="number">
                                 </label>
 
                                 <!-- Other (Item type) -->
@@ -361,7 +361,7 @@
                                 <!-- Storage Duration -->
                                 <label>
                                     <input value="<?php echo $_SESSION['duration_ss_2'] ?>" class="w3-light-gray" placeholder="Storage Duration (weeks):  *"
-                                           name="duration_ss_2" type="number" required>
+                                           name="duration_ss_2" type="number">
                                 </label>
 
                                 <!-- Weight -->
@@ -373,13 +373,13 @@
                                 <!-- Length -->
                                 <label>
                                     <input value="<?php echo $_SESSION['length_ss_2'] ?>" class="w3-light-gray" placeholder="Length (inches):  *"
-                                           name="length_ss_2" type="number" required>
+                                           name="length_ss_2" type="number">
                                 </label>
 
                                 <!-- Width -->
                                 <label>
                                     <input value="<?php echo $_SESSION['width_ss_2'] ?>" style="float: right" class="w3-light-gray" placeholder="Width (inches):  *"
-                                           name="width_ss_2" type="number" required>
+                                           name="width_ss_2" type="number">
                                 </label>
 
                                 <!-- Colour -->
@@ -412,7 +412,7 @@
                             <legend>3rd Item Details</legend>
                                 <!-- Storage option -->
                                 <label>
-                                    <select class="choice" name="storage_type_ss_3" type="select" required>
+                                    <select class="choice" name="storage_type_ss_3" type="select">
                                         <option <?php echo in_array($_SESSION['storage_type_ss_3'], ['Secure Storage', 'Secure Storage plus']) ? '': 'selected="selected"'; ?> value="0" selected="selected">Storage option  *</option>
                                         <option <?php echo $_SESSION['storage_type_ss_3'] == 'Secure Storage' ? 'selected="selected"': ''; ?> value="Secure Storage">Secure Storage</option>
                                         <option <?php echo $_SESSION['storage_type_ss_3'] == 'Secure Storage plus' ? 'selected="selected"': ''; ?> value="Secure Storage plus">Secure Storage + (+$)</option>
@@ -421,7 +421,7 @@
 
                                 <!-- Item type -->
                                 <label>
-                                    <select style="float: right" class="choice" name="item_type_ss_3" required>
+                                    <select style="float: right" class="choice" name="item_type_ss_3">
                                         <option <?php echo !isset($_SESSION['item_type_ss_3']) || empty($_SESSION['item_type_ss_3']) || $_SESSION['item_type_ss_3'] == "0" ? 'selected="selected"': ''; ?> value="0" selected="selected">Item Type  *</option>
                                         <option <?php echo $_SESSION['item_type_ss_3'] == 'Document' ? 'selected="selected"': ''; ?> value="Document">Document</option>
                                         <option <?php echo $_SESSION['item_type_ss_3'] == 'Jewellery' ? 'selected="selected"': ''; ?> value="Jewellery">Jewellery</option>
@@ -439,7 +439,7 @@
                                 <!-- Item's Worth -->
                                 <label>
                                     <input value="<?php echo $_SESSION['worth_ss_3'] ?>" class="w3-light-gray" placeholder="Declared Value (Item's worth) (USD):  *"
-                                           name="worth_ss_3" type="number" required>
+                                           name="worth_ss_3" type="number">
                                 </label>
 
                                 <!-- Other (Item type) -->
@@ -451,7 +451,7 @@
                                 <!-- Storage Duration -->
                                 <label>
                                     <input value="<?php echo $_SESSION['duration_ss_3'] ?>" class="w3-light-gray" placeholder="Storage Duration (weeks):  *"
-                                           name="duration_ss_3" type="number" required>
+                                           name="duration_ss_3" type="number">
                                 </label>
 
                                 <!-- Weight -->
@@ -463,13 +463,13 @@
                                 <!-- Length -->
                                 <label>
                                     <input value="<?php echo $_SESSION['length_ss_3'] ?>" class="w3-light-gray" placeholder="Length (inches):  *"
-                                           name="length_ss_3" type="number" required>
+                                           name="length_ss_3" type="number">
                                 </label>
 
                                 <!-- Width -->
                                 <label>
                                     <input value="<?php echo $_SESSION['width_ss_3'] ?>" style="float: right" class="w3-light-gray" placeholder="Width (inches):  *"
-                                           name="width_ss_3" type="number" required>
+                                           name="width_ss_3" type="number">
                                 </label>
 
                                 <!-- Colour -->
@@ -502,7 +502,7 @@
                             <legend>4th Item Details</legend>
                                 <!-- Storage option -->
                                 <label>
-                                    <select class="choice" name="storage_type_ss_4" type="select" required>
+                                    <select class="choice" name="storage_type_ss_4" type="select">
                                         <option <?php echo in_array($_SESSION['storage_type_ss_4'], ['Secure Storage', 'Secure Storage plus']) ? '': 'selected="selected"'; ?> value="0" selected="selected">Storage option  *</option>
                                         <option <?php echo $_SESSION['storage_type_ss_4'] == 'Secure Storage' ? 'selected="selected"': ''; ?> value="Secure Storage">Secure Storage</option>
                                         <option <?php echo $_SESSION['storage_type_ss_4'] == 'Secure Storage plus' ? 'selected="selected"': ''; ?> value="Secure Storage plus">Secure Storage + (+$)</option>
@@ -511,7 +511,7 @@
 
                                 <!-- Item type -->
                                 <label>
-                                    <select style="float: right" class="choice" name="item_type_ss_4" required>
+                                    <select style="float: right" class="choice" name="item_type_ss_4">
                                         <option <?php echo !isset($_SESSION['item_type_ss_4']) || empty($_SESSION['item_type_ss_4']) || $_SESSION['item_type_ss_4'] == "0" ? 'selected="selected"': ''; ?> value="0" selected="selected">Item Type  *</option>
                                         <option <?php echo $_SESSION['item_type_ss_4'] == 'Document' ? 'selected="selected"': ''; ?> value="Document">Document</option>
                                         <option <?php echo $_SESSION['item_type_ss_4'] == 'Jewellery' ? 'selected="selected"': ''; ?> value="Jewellery">Jewellery</option>
@@ -529,7 +529,7 @@
                                 <!-- Item's Worth -->
                                 <label>
                                     <input value="<?php echo $_SESSION['worth_ss_4'] ?>" class="w3-light-gray" placeholder="Declared Value (Item's worth) (USD):  *"
-                                           name="worth_ss_4" type="number" required>
+                                           name="worth_ss_4" type="number">
                                 </label>
 
                                 <!-- Other (Item type) -->
@@ -541,7 +541,7 @@
                                 <!-- Storage Duration -->
                                 <label>
                                     <input value="<?php echo $_SESSION['duration_ss_4'] ?>" class="w3-light-gray" placeholder="Storage Duration (weeks):  *"
-                                           name="duration_ss_4" type="number" required>
+                                           name="duration_ss_4" type="number">
                                 </label>
 
                                 <!-- Weight -->
@@ -553,13 +553,13 @@
                                 <!-- Length -->
                                 <label>
                                     <input value="<?php echo $_SESSION['length_ss_4'] ?>" class="w3-light-gray" placeholder="Length (inches):  *"
-                                           name="length_ss_4" type="number" required>
+                                           name="length_ss_4" type="number">
                                 </label>
 
                                 <!-- Width -->
                                 <label>
                                     <input value="<?php echo $_SESSION['width_ss_4'] ?>" style="float: right" class="w3-light-gray" placeholder="Width (inches):  *"
-                                           name="width_ss_4" type="number" required>
+                                           name="width_ss_4" type="number">
                                 </label>
 
                                 <!-- Colour -->
