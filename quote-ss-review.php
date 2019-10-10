@@ -114,10 +114,14 @@
         }
 
         input:disabled {
-            padding: 15px;
+            padding: 14px;
             margin: 0 0 33px;
             border: none;
             border-bottom: 1px solid #2d2d2d;
+        }
+
+        .editField {10px;
+            margin-top:
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -250,25 +254,25 @@
                         <legend>Basic Information</legend>
                                 <!-- Name -->
                                 <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Full Name: <?php echo $_SESSION['name_ss'] ?> ">
+                                    <input id="edit" disabled class="w3-light-gray" placeholder="Full Name: "
+                                           value="<?php echo $_SESSION['name_ss'] ?>">
                                 </label>
 
                                 <!-- Contact Name -->
                                 <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                    <input disabled style="float: right" class="w3-light-gray"
                                            placeholder="Contact Name: <?php echo $_SESSION['contactname_ss'] ?> ">
                                 </label>
 
                                 <!-- Gender -->
                                 <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                    <input disabled class="w3-light-gray"
                                            placeholder="Gender: <?php echo $_SESSION['gender_ss'] ?> ">
                                 </label>
 
                                 <!-- Title -->
                                 <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                    <input disabled style="float: right" class="w3-light-gray"
                                            placeholder="Title: <?php echo $_SESSION['title_ss'] ?> ">
                                 </label>
 
@@ -352,9 +356,9 @@
 
                                 <!-- Edit Button -->
                                 <label>
-                                    <button id="" style="float: left" onClick="history.go(-3)"
-                                            class="w3-button w3-medium w3-green-continue">Edit
-                                    </button>
+                                    <div style="float: left" class="w3-button w3-medium w3-green-continue">
+                                        <span onclick="editInfo()" id="info">Edit (OFF)</span>
+                                    </div>
                                 </label>
                     </fieldset>
 
@@ -430,7 +434,7 @@
                                 <!-- Show other shipments -->
                                 <div style="margin: 0 0 30px;" class="sliderWrapper">
                                     <span style="margin-left: 0" onclick="secondItem()">
-                                    + show other items
+                                        + show other items
                                     </span>
                                 </div>
 
@@ -674,6 +678,20 @@
     </div>
 
 
+    <!-- Edit button -->
+    <script>
+        let but = document.querySelector('editInfo');
+        but.addEventListener('click', editInfo);
+
+        function editInfo() {
+            let e = document.getElementById('edit');
+            e.disabled = ((e.disabled !== true));
+
+            let b = document.getElementById('info');
+            b.innerHTML = ((b.innerHTML !== 'Edit (ON)') ?  'Edit (ON)' : 'Edit (OFF)');
+        }
+    </script>
+
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
         /* Open */
@@ -687,7 +705,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -699,7 +717,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */

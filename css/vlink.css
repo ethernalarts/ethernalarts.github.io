@@ -369,7 +369,7 @@
         text-align: center;
         width: 40%;
         font-family: Montserrat, "Hind Madurai Light", Verdana, Lato, serif;
-        font-style: normal;
+        font-style: italic;
         font-weight: 400;
         display: inline-block;
         color: #ebebeb;
@@ -452,7 +452,7 @@
     .aboutus-p {
         text-align: left;
         font-family: Verdana, Montserrat, Lato, serif;
-        font-size: 1.1em;
+        font-size: 1.05em;
         margin: 0 0 20px;
         color: #696969;
         font-weight: 500;
@@ -738,9 +738,24 @@
             font-size: 1.3em;
         }
 
-        #edit {
-            float: left;
-            position: relative;
+        .editbutton {
+            color: white;
+            background-color: #2da52d;
+            padding: 8px 20px;
+            font-family: Montserrat, serif;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .editbutton div {
+            cursor: pointer;
+        }
+
+        .editbutton:hover {
+            box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
+            -webkit-appearance: none;
         }
 
         .container {
@@ -785,8 +800,14 @@
             margin-top: 200px;
         }
 
+        header {
+
+        }
+
         .vlink-logo {
             width: 200px;
+            /*background-image: url("../images/logo-@4x-mobile.png");*/
+            /*img: src = "images/SVG/vlink-logo.svg";*/
         }
 
         .index-welcome-content {
