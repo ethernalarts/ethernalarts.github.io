@@ -61,6 +61,9 @@
     // echo $mail?"<h1>Mail sent.</h1>":"<h1>Mail sending failed.</h1>";
 
     if ($mail) {
+        session_reset();
+        session_unset();
+        session_destroy();
         print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-ss-success.html\">";
     }
     else {

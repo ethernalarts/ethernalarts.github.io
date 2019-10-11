@@ -23,21 +23,21 @@ Item status updates? = Yes
 ITEM DETAILS
 
 1ST ITEM DETAILS:
-Storage option = 
-Item Type = 
-Item Worth = 
-Item Type (other) = 
-Storage Duration = 
-Weight (inches) = 
-Length (inches) = 
-Width (inches)= 
-Colour = 
-Height (inches)= 
-Item Description = 
+Storage option = Secure Storage plus
+Item Type = Jewellery
+Item Worth = 4
+Item Type (other) = sdjkfbvsdj 
+Storage Duration = 9
+Weight (inches) = 12
+Length (inches) = 15
+Width (inches)= 16
+Colour = sdmhjfv sdibk j
+Height (inches)= 21
+Item Description = sdmjyvf sdfiu sduiffihsd s
 
 2ND ITEM DETAILS:
-Storage option = 
-Item Type = 
+Storage option = 0
+Item Type = 0
 Item Worth = 
 Item Type (other) = 
 Storage Duration = 
@@ -49,8 +49,8 @@ Height (inches)=
 Item Description = 
 
 3RD ITEM DETAILS:
-Storage option = 
-Item Type = 
+Storage option = 0
+Item Type = 0
 Item Worth = 
 Item Type (other) = 
 Storage Duration = 
@@ -62,8 +62,8 @@ Height (inches)=
 Item Description = 
 
 4TH ITEM DETAILS:
-Storage option = 
-Item Type = 
+Storage option = 0
+Item Type = 0
 Item Worth = 
 Item Type (other) = 
 Storage Duration = 
