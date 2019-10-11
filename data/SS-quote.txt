@@ -1,23 +1,23 @@
 NEW SECURE STORAGE ORDER!
 
 BASIC INFORMATION
-Name = 
-Contact Name = 
-Gender = 
-Title = 
-Phone = 
-Age = 
-Occupation = 
-Country = 
-State = 
-City = 
-Zip Code = 
-Street Address = 
+Name = Artlas
+Contact Name = jhfgn ukyfj kuig iulgk
+Gender = Male
+Title = sdeds
+Phone = +2348064580107
+Age = 23
+Occupation = jf vku,jh kju,gik
+Country = FI
+State = 0
+City = 0
+Zip Code = 540222
+Street Address = #24 Asari Eso Layout off Ikot Nsisuk Street, Calabar.
 Street Address 2/Apartment, Suite, Floor etc = 
-Department = 
-Email = 
-Residential Address? = 
-Item status updates? = 
+Department = fefef
+Email = entewshi@gmail.com
+Residential Address? = Yes
+Item status updates? = Yes
 
 
 ITEM DETAILS

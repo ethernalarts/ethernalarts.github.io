@@ -5,14 +5,14 @@
     $to = 'pnnwokoro@gmail.com';
 
     //sender
-    $sender = $_SESSION['email'];
-    $senderName = $_SESSION['name'];
+    $sender = $_SESSION['email_ss'];
+    $senderName = $_SESSION['name_ss'];
 
     //email subject
     $subject = 'New Domestic Shipping Order';
 
     //attachment file path
-    $file = "data\SS-quote.txt";
+    $file = __DIR__ . DIRECTORY_SEPARATOR . "data" . DIRECTORY_SEPARATOR . "SS-quote.txt";
 
     //email body content
     $htmlContent = '<h1>Secure Storage Quote Request</h1>
