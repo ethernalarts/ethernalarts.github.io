@@ -2,31 +2,33 @@
     //let's start the session
     session_start();
 
-    //store posted values in the session variables
-    $_SESSION['name_ss'] = $_POST['name_ss'];
-    $_SESSION['contactname_ss'] = $_POST['contactname_ss'];
-    $_SESSION['gender_ss'] = $_POST['gender_ss'];
-    $_SESSION['title_ss'] = $_POST['title_ss'];
-    $_SESSION['age_ss'] = $_POST['age_ss'];
-    $_SESSION['occupation_ss'] = $_POST['occupation_ss'];
-    $_SESSION['phone_ss'] = $_POST['phone_ss'];
-    $_SESSION['email_ss'] = $_POST['email_ss'];
-    $_SESSION['country_ss'] = $_POST['country_ss'];
-    $_SESSION['state_ss'] = $_POST['state_ss'];
-    $_SESSION['city_ss'] = $_POST['city_ss'];
-    $_SESSION['zipcode_ss'] = $_POST['zipcode_ss'];
-    $_SESSION['address_ss'] = $_POST['address_ss'];
-    $_SESSION['apt_ss'] = $_POST['apt_ss'];
-    $_SESSION['dept_ss'] = $_POST['dept_ss'];
-    $_SESSION['resAdd_ss'] = $_POST['resAdd_ss'];
-    $_SESSION['item_update_ss'] = $_POST['item_update_ss'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        //store posted values in the session variables
+        $_SESSION['name_ss'] = $_POST['name_ss'];
+        $_SESSION['contactname_ss'] = $_POST['contactname_ss'];
+        $_SESSION['gender_ss'] = $_POST['gender_ss'];
+        $_SESSION['title_ss'] = $_POST['title_ss'];
+        $_SESSION['age_ss'] = $_POST['age_ss'];
+        $_SESSION['occupation_ss'] = $_POST['occupation_ss'];
+        $_SESSION['phone_ss'] = $_POST['phone_ss'];
+        $_SESSION['email_ss'] = $_POST['email_ss'];
+        $_SESSION['country_ss'] = $_POST['country_ss'];
+        $_SESSION['state_ss'] = $_POST['state_ss'];
+        $_SESSION['city_ss'] = $_POST['city_ss'];
+        $_SESSION['zipcode_ss'] = $_POST['zipcode_ss'];
+        $_SESSION['address_ss'] = $_POST['address_ss'];
+        $_SESSION['apt_ss'] = $_POST['apt_ss'];
+        $_SESSION['dept_ss'] = $_POST['dept_ss'];
+        $_SESSION['resAdd_ss'] = $_POST['resAdd_ss'];
+        $_SESSION['item_update_ss'] = $_POST['item_update_ss'];
+   }
 
 
     // Sanitizing email field to remove unwanted characters.
-    $_POST['email_ss'] = filter_var($_POST['email_ss'], FILTER_SANITIZE_EMAIL);
+    $_SESSION['email_ss'] = filter_var($_SESSION['email_ss'], FILTER_SANITIZE_EMAIL);
 
     // Validate email.
-    if (filter_var($_POST['email_ss'], FILTER_VALIDATE_EMAIL)){
+    if (filter_var($_SESSION['email_ss'], FILTER_VALIDATE_EMAIL)){
 
     } else {
         $_SESSION['error'] = "Invalid Email Address";
@@ -312,8 +314,8 @@
 
                         <!-- Add 2nd shipment -->
                         <div class="sliderWrapper">
-                            <span style="margin-left: 0" onclick="secondItem">
-                                + Add a 2nd item
+                            <span style="margin-left: 0" onclick="secondItem()">
+                            <?php echo $_SESSION['worth_ss_2'] ? 'Edit' : '+ Add a' ?> 2nd item
                             </span>
                         </div>
 
@@ -402,8 +404,8 @@
 
                         <!-- Add 3rd shipment -->
                         <div class="sliderWrapper">
-                            <span id="add3rdItem" style="margin-left: 0; display: none" onclick="thirdItem">
-                                + Add a 3rd item
+                            <span id="add3rdItem" style="margin-left: 0; display: none" onclick="thirdItem()">
+                            <?php echo $_SESSION['worth_ss_3'] ? 'Edit' : '+ Add a' ?> 3rd item
                             </span>
                         </div>
 
@@ -492,8 +494,8 @@
 
                         <!-- Add 4th shipment -->
                         <div class="sliderWrapper">
-                            <span id="add4thItem" style="margin-left: 0; display: none" onclick="fourthItem">
-                                + Add a 4th item
+                            <span id="add4thItem" style="margin-left: 0; display: none" onclick="fourthItem()">
+                                <?php echo $_SESSION['worth_ss_4'] ? 'Edit' : '+ Add a' ?> 4th item
                             </span>
                         </div>
 
@@ -584,7 +586,7 @@
                         <!-- Continue and Cancel Button -->
                         <div class="w3-center">
                             <div class="w3-bar">
-                                <button onClick="history.go(-1)" class="w3-button w3-medium w3-black-previous">Previous</button>
+                                <button type="button" onClick="location.href='quote-ss.php'" class="w3-button w3-medium w3-black-previous">Previous</button>
                                 <button type="submit" value="Next" class="w3-button w3-medium w3-green-continue">Next</button>
                                 <button type="reset" class="w3-button w3-medium w3-red-cancel">Reset</button>
                             </div>
