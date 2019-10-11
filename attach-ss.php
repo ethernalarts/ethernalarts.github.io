@@ -5,14 +5,14 @@
     $to = 'pnnwokoro@gmail.com';
 
     //sender
-    $sender = $_SESSION['email_ss'];
-    $senderName = $_SESSION['name_ss'];
+    $sender = $_SESSION['email'];
+    $senderName = $_SESSION['name'];
 
     //email subject
     $subject = 'New Domestic Shipping Order';
 
     //attachment file path
-    $file = __DIR__ . DIRECTORY_SEPARATOR . "data" . DIRECTORY_SEPARATOR . "SS-quote.txt";
+    $file = "data\SS-quote.txt";
 
     //email body content
     $htmlContent = '<h1>Secure Storage Quote Request</h1>
@@ -61,9 +61,6 @@
     // echo $mail?"<h1>Mail sent.</h1>":"<h1>Mail sending failed.</h1>";
 
     if ($mail) {
-        session_reset();
-        session_unset();
-        session_destroy();
         print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-ss-success.html\">";
     }
     else {

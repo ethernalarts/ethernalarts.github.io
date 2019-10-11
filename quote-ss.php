@@ -1,4 +1,6 @@
-<?php session_start(); // Session starts here. ?>
+<?php
+session_start(); // Session starts here.
+?>
 
 <!doctype html>
 <html lang="en">
@@ -208,52 +210,50 @@
 
                                 <!-- Full Name -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['name_ss'] ?>" class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ss" type="text" required>
+                                    <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ss" type="text" required>
                                 </label>
 
                                 <!-- Contact Name -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['contactname_ss'] ?>" class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
+                                    <input class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
                                            name="contactname_ss" type="text" required>
                                 </label>
 
                                 <!-- Gender -->
                                 <label>
                                     <select class="choice" name="gender_ss" required>
-                                        <option <?php echo in_array($_SESSION['gender_ss'], ['Male', 'Female']) ? '': 'selected="selected"'; ?> value="0">Gender   *</option>
-                                        <option <?php echo $_SESSION['gender_ss'] == 'Male' ? 'selected="selected"': ''; ?> value="Male">Male</option>
-                                        <option <?php echo $_SESSION['gender_ss'] == 'Female' ? 'selected="selected"': ''; ?> value="Female">Female</option>
+                                        <option value="0" selected="selected">Gender   *</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
                                     </select>
                                 </label>
 
                                 <!-- Title -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['title_ss'] ?>" class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
+                                    <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
                                            name="title_ss" type="text" required>
                                 </label>
 
-                                <div style="clear: both;"></div>
-
                                 <!-- Age -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['age_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Age:  *"
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Age:  *"
                                            name="age_ss" type="text" required>
                                 </label>
 
                                 <!-- Occupation -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['occupation_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Occupation:  *" style="float: right"
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Occupation:  *" style="float: right"
                                            name="occupation_ss" type="text" required>
                                 </label>
 
                                 <!-- Telephone -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['phone_ss'] ?>" class="w3-light-gray" placeholder="Telephone:   *" name="phone_ss" type="tel" required>
+                                    <input class="w3-light-gray" placeholder="Telephone:   *" name="phone_ss" type="tel" required>
                                 </label>
 
                                 <!-- Email -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['email_ss'] ?>" class="w3-light-gray" style="float: right" name="email_ss" placeholder="Email:  *"
+                                    <input class="w3-light-gray" style="float: right" name="email_ss" placeholder="Email:  *"
                                            type="email" required>
                                 </label>
 
@@ -261,7 +261,6 @@
                                 <label>
                                     <input name="country_ss" class="countries" value="Finland" disabled>
                                 </label>
-
                                 <input type="hidden" name="country_ss" id="countryId" value="FI"/>
 
                                 <!-- State -->
@@ -280,43 +279,43 @@
 
                                 <!-- Zip Code -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['zipcode_ss'] ?>" class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
+                                    <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
                                            name="zipcode_ss" type="number" required>
                                 </label>
 
                                 <!-- Street Address -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['address_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
                                            name="address_ss" type="text" required>
                                 </label>
 
                                 <!-- Apartment, Suite, Unit -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['apt_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
+                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
                                            name="apt_ss" type="text">
                                 </label>
 
                                 <!-- Department -->
                                 <label>
-                                    <input value="<?php echo $_SESSION['dept_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
+                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
                                            name="dept_ss" type="text">
                                 </label>
 
                                 <!-- Residential address? -->
                                 <label>
-                                    <select name="resAdd_ss" class="choice">
-                                        <option <?php echo in_array($_SESSION['resAdd_ss'], ['Yes', 'No']) ? '': 'selected="selected"'; ?> value="0">Is this a residential address?  *</option>
-                                        <option <?php echo $_SESSION['resAdd_ss'] == 'Yes' ? 'selected="selected"': ''; ?> value="Yes">Yes</option>
-                                        <option <?php echo $_SESSION['resAdd_ss'] == 'No' ? 'selected="selected"': ''; ?> value="No">No</option>
+                                    <select  name="resAdd_ss" class="choice">
+                                        <option value="0" selected="selected">Is this a residential address?  *</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
                                     </select>
                                 </label>
 
                                 <!-- Storage Status on Item -->
                                 <label>
                                     <select  style="float: right" name="item_update_ss" class="choice">
-                                        <option <?php echo in_array($_SESSION['item_update_ss'], ['Yes', 'No']) ? '': 'selected="selected"'; ?> value="0">Should we email you storage status? </option>
-                                        <option <?php echo $_SESSION['item_update_ss'] == 'Yes' ? 'selected="selected"': ''; ?> value="Yes">Yes</option>
-                                        <option <?php echo $_SESSION['item_update_ss'] == 'No' ? 'selected="selected"': ''; ?> value="No">No</option>
+                                        <option value="0" selected="selected">Should we email you storage status? </option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
                                     </select>
                                 </label>
 

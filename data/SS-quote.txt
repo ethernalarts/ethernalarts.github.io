@@ -1,43 +1,43 @@
 NEW SECURE STORAGE ORDER!
 
 BASIC INFORMATION
-Name = Artlas
-Contact Name = jhfgn ukyfj kuig iulgk
-Gender = Male
-Title = sdeds
-Phone = +2348064580107
-Age = 23
-Occupation = jf vku,jh kju,gik
-Country = FI
-State = 0
-City = 0
-Zip Code = 540222
-Street Address = #24 Asari Eso Layout off Ikot Nsisuk Street, Calabar.
+Name = 
+Contact Name = 
+Gender = 
+Title = 
+Phone = 
+Age = 
+Occupation = 
+Country = 
+State = 
+City = 
+Zip Code = 
+Street Address = 
 Street Address 2/Apartment, Suite, Floor etc = 
-Department = fefef
-Email = entewshi@gmail.com
-Residential Address? = Yes
-Item status updates? = Yes
+Department = 
+Email = 
+Residential Address? = 
+Item status updates? = 
 
 
 ITEM DETAILS
 
 1ST ITEM DETAILS:
-Storage option = Secure Storage plus
-Item Type = Jewellery
-Item Worth = 4
-Item Type (other) = sdjkfbvsdj 
-Storage Duration = 9
-Weight (inches) = 12
-Length (inches) = 15
-Width (inches)= 16
-Colour = sdmhjfv sdibk j
-Height (inches)= 21
-Item Description = sdmjyvf sdfiu sduiffihsd s
+Storage option = 
+Item Type = 
+Item Worth = 
+Item Type (other) = 
+Storage Duration = 
+Weight (inches) = 
+Length (inches) = 
+Width (inches)= 
+Colour = 
+Height (inches)= 
+Item Description = 
 
 2ND ITEM DETAILS:
-Storage option = 0
-Item Type = 0
+Storage option = 
+Item Type = 
 Item Worth = 
 Item Type (other) = 
 Storage Duration = 
@@ -49,8 +49,8 @@ Height (inches)=
 Item Description = 
 
 3RD ITEM DETAILS:
-Storage option = 0
-Item Type = 0
+Storage option = 
+Item Type = 
 Item Worth = 
 Item Type (other) = 
 Storage Duration = 
@@ -62,8 +62,8 @@ Height (inches)=
 Item Description = 
 
 4TH ITEM DETAILS:
-Storage option = 0
-Item Type = 0
+Storage option = 
+Item Type = 
 Item Worth = 
 Item Type (other) = 
 Storage Duration = 
