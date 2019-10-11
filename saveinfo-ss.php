@@ -3,7 +3,7 @@
 
     if (isset($_POST['submit']))
     {
-        $myfile = fopen("data\SS-quote.txt", "w") or die("Unable to open file");
+        $myfile = fopen(__DIR__ . DIRECTORY_SEPARATOR . "data" . DIRECTORY_SEPARATOR . "SS-quote.txt", "w") or die("Unable to open file");
 
         $h1 = 'NEW SECURE STORAGE ORDER!'."\r\n\r\n";
         fwrite($myfile, $h1);
@@ -159,5 +159,5 @@
     }
 
     // echo 'Data has been saved successfully.';
-    header ("Location: attach-ss.php");
+    header("Location: attach-ss.php");
 ?>
