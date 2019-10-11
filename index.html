@@ -72,8 +72,15 @@
             background-color: rgba(245, 68, 0, 0.91);
         }
 
-        /* On screens that are 992px wide or less, go from three columns to two columns */
+        /* On screens that are 1200px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
+            .index-welcome-content {
+                width: 50%;
+            }
+        }
+
+        /* On screens that are 992px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 900px) {
             .index-welcome-content {
                 width: 60%;
             }
@@ -81,7 +88,20 @@
 
         /* On screens that are 600px wide or less, go from three columns to two columns */
         @media screen and (max-width: 600px) {
+            .index-welcome-content {
+                width: 80%;
+            }
 
+            .index-welcome-box {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            .index-welcome-container {
+                width: 100%;
+                display: block;
+                margin: 50px auto;
+            }
         }
     </style>
 </head>

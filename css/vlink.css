@@ -337,7 +337,7 @@
     }
 
     .index-welcome-container {
-        padding: 0 70px;
+        padding: 0 30px;
         width: 100%;
         display: block;
         margin: 70px auto;
@@ -347,7 +347,7 @@
         text-align: center;
         width: 100%;
         margin: 0 auto;
-        padding: 0 20px 30px;
+        padding: 0 0 20px;
         font-weight: 500;
         display: block;
         align-items: center;
@@ -356,9 +356,9 @@
     .index-welcome-h2 {
         font-family: "Lato Black", Federo, serif;
         text-align: center;
-        display: inline-block;
+        display: block;
         margin: 0 auto;
-        font-size: 3.6em;
+        font-size: 3.7em;
         font-weight: 500;
         color: whitesmoke;
     }
@@ -382,7 +382,7 @@
     .but-getaquote {
         margin: 20px auto 0;
         background-color: #ebeb19;
-        width: 240px;
+        width: 200px;
         padding: 16px 20px;
         display: block;
         color: #010101;
@@ -561,7 +561,6 @@
         margin: 0 0 33px;
         font-size: 0.9em;
         width: 47%;
-        height: 52px;
         display: inline-block;
         border: 1px solid #afafaf;
     }
@@ -750,10 +749,6 @@
             cursor: pointer;
         }
 
-        .editbutton div {
-            cursor: pointer;
-        }
-
         .editbutton:hover {
             box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
             -webkit-appearance: none;
@@ -801,31 +796,10 @@
             margin-top: 200px;
         }
 
-        header {
-
-        }
-
         .vlink-logo {
             width: 200px;
-            /*background-image: url("../images/logo-@4x-mobile.png");*/
-            /*img: src = "images/SVG/vlink-logo.svg";*/
-        }
+            /*background-image: url("../images/logo-@4x-mobile.png") !important;*/
 
-        .index-welcome-content {
-            width: 100%;
-        }
-
-        .index-welcome-box {
-            width: 100%;
-            padding: 0 10px;
-        }
-
-        .index-welcome-container {
-            font-size: 90%;
-            padding: 0;
-            width: 100%;
-            display: block;
-            margin: 50px auto;
         }
 
         .w3-medium {

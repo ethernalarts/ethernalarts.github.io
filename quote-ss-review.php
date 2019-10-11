@@ -63,7 +63,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Domestic Shipping - Get a Quote (Secure Storage - Review Details)</title>
+    <title>VLink Express Courier Ltd - Get a Quote (Secure Storage - Review Details)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -119,10 +119,6 @@
             margin: 0 0 33px;
             border: none;
             border-bottom: 1px solid #2d2d2d;
-        }
-
-        .editField {10px;
-            margin-top:
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */

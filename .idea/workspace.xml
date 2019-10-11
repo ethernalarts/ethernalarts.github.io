@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm" />
+    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quote-ss-review.php" beforeDir="false" afterPath="$PROJECT_DIR$/quote-ss-review.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1OsPvYfa3sTNfMzlXBAHQpIH9vf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -175,6 +178,7 @@
       <workItem from="1570043289406" duration="37942000" />
       <workItem from="1570185528554" duration="1439000" />
       <workItem from="1570197951489" duration="72956000" />
+      <workItem from="1570775053872" duration="2499000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>
