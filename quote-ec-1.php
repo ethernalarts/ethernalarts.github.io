@@ -276,9 +276,7 @@
                     <form class="container-form" method="post" action="quote-ec-2.php" style="padding-bottom: 5px">
 
                         <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
-
                             <legend>Return Address</legend>
-
                                 <!-- Full Name -->
                                 <label>
                                     <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ec_ra" type="text" required>
