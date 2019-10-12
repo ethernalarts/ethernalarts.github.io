@@ -123,8 +123,8 @@ session_start(); // Session starts here.
                     <li class="navlistitem"><a href="services.html">Services</a></li>
                     <li>
                         <div class="dropdownnav">
-                            <button onclick="dropDownNav()" class="dropbtn">
-                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <a onclick="dropDownNav()" class="active dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></a>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
                                 <a href="quote-ec.php">Domestic Shipping</a>
@@ -147,7 +147,7 @@ session_start(); // Session starts here.
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 300px;">Quote - Secure Storage</div>
+        <div class="subheader-h2" style="width: 290px;">Quote - Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -161,7 +161,7 @@ session_start(); // Session starts here.
             <div class="overlay-content">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
-                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                <a class="active w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
@@ -210,7 +210,8 @@ session_start(); // Session starts here.
 
                                 <!-- Full Name -->
                                 <label>
-                                    <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ss" type="text" required>
+                                    <input  class="w3-light-gray" placeholder="Full Name (or Company):  *"
+                                           name="name_ss" type="text" required>
                                 </label>
 
                                 <!-- Contact Name -->
@@ -372,11 +373,9 @@ session_start(); // Session starts here.
 
     <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
         function dropDownNav() {
             document.getElementById("myDropdown").classList.toggle("show");
-            document.getElementsByClassName("dropbtn").style.backgroundColor = "#b93131";
         }
 
         // Close the dropdown if the user clicks outside of it
@@ -391,14 +390,6 @@ session_start(); // Session starts here.
                     }
                 }
             }
-        }
-    </script>
-
-    <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-        function hiLite() {
-            document.getElementById("hiLite").style.backgroundColor = "#b93131";
         }
     </script>
 

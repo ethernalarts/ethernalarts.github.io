@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm">
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/vlink.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/vlink.css" afterDir="false" />
-    </list>
+    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +175,7 @@
       <workItem from="1570043289406" duration="37942000" />
       <workItem from="1570185528554" duration="1439000" />
       <workItem from="1570197951489" duration="79571000" />
-      <workItem from="1570790857621" duration="1283000" />
+      <workItem from="1570790857621" duration="25543000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>

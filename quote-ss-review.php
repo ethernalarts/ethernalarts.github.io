@@ -400,7 +400,7 @@
                             </div>
 
                             <!-- Edit Button -->
-                            <button type="button" onclick="editInfo()" class="w3-button w3-medium w3-green-continue">Edit</button>
+                            <button type="button" onclick="editInfo()" class="w3-button w3-medium w3-green-continue">Go back to form</button>
                     </fieldset>
 
                     <!-- Item Details Preview -->

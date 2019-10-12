@@ -171,8 +171,8 @@
                     <li class="navlistitem"><a href="services.html">Services</a></li>
                     <li>
                         <div class="dropdownnav">
-                            <button onclick="dropDownNav()" class="dropbtn">
-                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <a onclick="dropDownNav()" class="active dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></a>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
                                 <a href="quote-ec.php" class="active">Domestic Shipping</a>
@@ -195,7 +195,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 330px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 320px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -209,7 +209,7 @@
             <div class="overlay-content">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
-                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                <a class="active w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
@@ -371,14 +371,6 @@
         </div>
     </div>
 
-    <!-- JS to change "value" text for residential address -->
-    <script>
-        function resAdd() {
-            const res = document.getElementById("res");
-            res.value = "Yes";
-        }
-    </script>
-
     <!-- JavaScript to change color of <option selected> -->
     <script>
         $(".choice").change(function () {
@@ -402,7 +394,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -414,7 +406,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */

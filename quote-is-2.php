@@ -178,8 +178,8 @@
                     <li class="navlistitem"><a href="services.html">Services</a></li>
                     <li>
                         <div class="dropdownnav">
-                            <button onclick="dropDownNav()" class="dropbtn">
-                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <a onclick="dropDownNav()" class="active dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></a>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php" class="active">International Shipping</a>
                                 <a href="quote-ec.php">Domestic Shipping</a>
@@ -202,7 +202,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 380px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 360px;">Quote - International Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -216,7 +216,7 @@
             <div class="overlay-content">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
-                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                <a class="active w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
@@ -268,7 +268,6 @@
                     <form class="container-form" method="post" action="quote-is-3.php" style="padding-bottom: 0">
 
                         <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
-
                             <legend>Return Address</legend>
                                 <!-- Full Name -->
                                 <label>
@@ -619,14 +618,6 @@
         }
     </script>
 
-    <!-- JS to change "value" text for Package Updates -->
-    <script>
-        function status() {
-            const x = document.getElementById("stat");
-            x.value = "Yes";
-        }
-    </script>
-
     <!-- JavaScript to change color of <option selected> -->
     <script>
         $(".choice").change(function () {
@@ -644,14 +635,6 @@
         </div>
     </div>
 
-    <!-- JavaScript to toggle return address ON/OFF -->
-    <script>
-        function toggle_visibility(returnAdd) {
-            var e = document.getElementById(returnAdd);
-            e.style.display = ((e.style.display!== 'none') ?  'none' : 'block');
-        }
-    </script>
-
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
         /* Open */
@@ -665,7 +648,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -677,7 +660,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
