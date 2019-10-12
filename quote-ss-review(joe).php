@@ -71,6 +71,7 @@
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -198,7 +199,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 290px;">Quote - Secure Storage</div>
+        <div class="subheader-h2" style="width: 300px;">Quote - Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -252,110 +253,154 @@
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
                         <legend>Basic Information</legend>
-                                <!-- Name -->
-                                <label>
-                                    <input id="edit" disabled class="w3-light-gray"
-                                           placeholder="Full Name: <?php echo $_SESSION['name_ss'] ?>">
-                                </label>
-
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="name_ss"> Full Name (or Company):  *</label>
+                                    <input disabled value="<?php echo $_SESSION['name_ss'] ?>" class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ss" id="name_ss" type="text" required>
+                                </div>
                                 <!-- Contact Name -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-light-gray"
-                                           placeholder="Contact Name: <?php echo $_SESSION['contactname_ss'] ?> ">
-                                </label>
-
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="contactname_ss"> Contact's Name:  *</label>
+                                    <input disabled value="<?php echo $_SESSION['contactname_ss'] ?>" class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
+                                        name="contactname_ss" id="contactname_ss" type="text" required>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <!-- Gender -->
-                                <label>
-                                    <input disabled class="w3-light-gray"
-                                           placeholder="Gender: <?php echo $_SESSION['gender_ss'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="gender_ss"> Gender   *</label>
+                            
+                                <select disabled class="choice" name="gender_ss" id="gender_ss" required>
+                                    <option <?php echo in_array($_SESSION['gender_ss'], ['Male', 'Female']) ? '': 'selected="selected"'; ?> value="0">Gender   *</option>
+                                    <option <?php echo $_SESSION['gender_ss'] == 'Male' ? 'selected="selected"': ''; ?> value="Male">Male</option>
+                                    <option <?php echo $_SESSION['gender_ss'] == 'Female' ? 'selected="selected"': ''; ?> value="Female">Female</option>
+                                </select>
+                                </div>
 
                                 <!-- Title -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-light-gray"
-                                           placeholder="Title: <?php echo $_SESSION['title_ss'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="title_ss"> Title (Mr, Mrs, Dr. etc):   *</label>
+                                    <input disabled value="<?php echo $_SESSION['title_ss'] ?>" class="w3-light-gray" style="padding: 13px;" placeholder="Title (Mr, Mrs, Dr. etc):   *"
+                                        name="title_ss" id="title_ss" type="text" required>
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Age -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Age: <?php echo $_SESSION['age_ss'] ?> ">
-                                </label>
-
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="age_ss"> Age:  *</label>
+                            
+                                    <input disabled value="<?php echo $_SESSION['age_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Age:  *"
+                                        name="age_ss" id="age_ss" type="text" required>
+                                </div>
+                            
                                 <!-- Occupation -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Occupation: <?php echo $_SESSION['occupation_ss'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="occupation_ss"> Occupation:  *</label>
+                                    <input disabled value="<?php echo $_SESSION['occupation_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Occupation:  *"
+                                        name="occupation_ss" id="occupation_ss" type="text" required>
+                                </div>
+                            </div>
 
-                                <!-- Phone Number -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Phone Number: <?php echo $_SESSION['phone_ss'] ?> ">
-                                </label>
-
+                            <div class="row">
+                                <!-- Telephone -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="phone_ss"> Telephone:   *</label>
+                                    <input disabled value="<?php echo $_SESSION['phone_ss'] ?>" id="phone_ss" class="w3-light-gray" placeholder="Telephone:   *" name="phone_ss" type="tel" required>
+                                </div>
+                                
                                 <!-- Email -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Email: <?php echo $_SESSION['email_ss'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="email_ss"> Email:  *</label>
+                                    <input disabled value="<?php echo $_SESSION['email_ss'] ?>" class="w3-light-gray" name="email_ss" placeholder="Email:  *"
+                                            type="email" id="email_ss" required>
+                                </div>
+                            </div>
 
-                                <!-- Country -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Country: Finland">
-                                </label>
-
+                            <div class="row">
+                                <!-- Country (Finland) -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="countryId"> Country:   *</label>
+                                    <input name="country_ss" class="countries" value="Finland" disabled>
+                                    <input type="hidden" name="country_ss" id="countryId" value="FI"/>
+                                </div>
+                                
                                 <!-- State -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="State: <?php echo $_SESSION['state_ss'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="stateId"> State:  *</label>
+                                    <select disabled name="state_ss" class="choice states order-alpha" id="stateId" required>
+                                        <option value="0" selected="selected">State:  *</option>
+                                    </select>
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- City -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="City: <?php echo $_SESSION['city_ss'] ?> ">
-                                </label>
-
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="cityId"> City:  *</label>
+                                    <select disabled name="city_ss" class="choice cities order-alpha" id="cityId" required>
+                                        <option value="0" selected="selected">City:  *</option>
+                                    </select>
+                                </div>
+                                
                                 <!-- Zip Code -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Zip Code: <?php echo $_SESSION['zipcode_ss'] ?> ">
-                                </label>
-
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="zipcode_ss"> Zip Code:  *</label>
+                                    <input disabled value="<?php echo $_SESSION['zipcode_ss'] ?>" class="w3-light-gray" placeholder="Zip Code:  *"
+                                            name="zipcode_ss" id="zipcode_ss" type="number" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
                                 <!-- Street Address -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                           placeholder="Street Address: <?php echo $_SESSION['address_ss'] ?> ">
-                                </label>
-
-                                <!-- Street Address 2 -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Apt, Building, Floor etc: <?php echo $_SESSION['apt_ss'] ?> ">
-                                </label>
-
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="address_ss"> Street Address:  *</label>
+                                    <input disabled value="<?php echo $_SESSION['address_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
+                                        name="address_ss" id="address_ss" type="text" required>
+                                </div>
+                                
+                                <!-- Apartment, Suite, Unit -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="apt_ss"> Apartment, suite, floor, etc.:  </label>
+                                    <input disabled value="<?php echo $_SESSION['apt_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
+                                            name="apt_ss" id="apt_ss" type="text">
+                                </div>
+                            </div>
+                            
+                            <div class="row">
                                 <!-- Department -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Department: <?php echo $_SESSION['dept_ss'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="dept_ss"> Department, c/o, etc.:</label>
+                                    <input disabled value="<?php echo $_SESSION['dept_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Department, c/o, etc.: "
+                                            name="dept_ss" id="dept_ss" type="text">
+                                </div>
+                                
+                                <!-- Residential address? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="resAdd_ss"> Is this a residential address?</label>
+                                    <select disabled name="resAdd_ss" id="resAdd_ss" class="choice">
+                                        <option <?php echo in_array($_SESSION['resAdd_ss'], ['Yes', 'No']) ? '': 'selected="selected"'; ?> value="0">Is this a residential address?  *</option>
+                                        <option <?php echo $_SESSION['resAdd_ss'] == 'Yes' ? 'selected="selected"': ''; ?> value="Yes">Yes</option>
+                                        <option <?php echo $_SESSION['resAdd_ss'] == 'No' ? 'selected="selected"': ''; ?> value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                                <!-- Storage Status Updates -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Storage Status Updates? <?php echo $_SESSION['item_update_ss'] ?> ">
-                                </label>
+                            <div class="row">
+                                <!-- Storage Status on Item -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="item_update_ss"> Should we email you storage status?</label>
+                                    <select disabled name="item_update_ss" id="item_update_ss" class="choice">
+                                        <option <?php echo in_array($_SESSION['item_update_ss'], ['Yes', 'No']) ? '': 'selected="selected"'; ?> value="0">Should we email you storage status? </option>
+                                        <option <?php echo $_SESSION['item_update_ss'] == 'Yes' ? 'selected="selected"': ''; ?> value="Yes">Yes</option>
+                                        <option <?php echo $_SESSION['item_update_ss'] == 'No' ? 'selected="selected"': ''; ?> value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                                <!-- Residential Address -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Residential Address? <?php echo $_SESSION['resAdd_ss'] ?> ">
-                                </label>
-
-                                <!-- Edit Button -->
-                                <a style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                            <!-- Edit Button -->
+                            <button type="button" onclick="editInfo()" class="w3-button w3-medium w3-green-continue">Edit</button>
                     </fieldset>
 
                     <!-- Item Details Preview -->
@@ -653,7 +698,7 @@
 
                             <!-- Edit Button -->
                             <label>
-                                <a style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </label>
                     </fieldset>
 
@@ -676,15 +721,15 @@
 
     <!-- Edit button -->
     <script>
-        let but = document.querySelector('editInfo');
-        but.addEventListener('click', editInfo);
-
         function editInfo() {
-            let e = document.getElementById('edit');
-            e.disabled = ((e.disabled !== true));
+            location.href='quote-ss.php';
+        }
+    </script>
 
-            let b = document.getElementById('info');
-            b.innerHTML = ((b.innerHTML !== 'Edit (ON)') ?  'Edit (ON)' : 'Edit (OFF)');
+    <!-- Edit items button -->
+    <script>
+        function editItems() {
+            location.href='quote-ss-1.php';
         }
     </script>
 
@@ -745,9 +790,6 @@
 
     <!-- show other items -->
     <script>
-        var btn = document.querySelector('secondItem');
-        btn.addEventListener('click', secondItem);
-
         function secondItem() {
             var e = document.getElementById('secondItem');
             e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
@@ -762,9 +804,6 @@
 
     <!-- hide other items -->
     <script>
-        var btn = document.querySelector('hideItems');
-        btn.addEventListener('click', hideItems);
-
         function hideItems() {
             var e = document.getElementById('secondItem');
             e.style.display = 'none';
@@ -796,10 +835,10 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <i class="footer-TWITTER fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <i class="footer-INSTA fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
@@ -807,10 +846,10 @@
         <!-- Footer Links   -->
         <div>
             <ul class="footerlinks">
-                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

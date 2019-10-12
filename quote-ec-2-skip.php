@@ -120,8 +120,8 @@
                     <li class="navlistitem"><a href="services.html">Services</a></li>
                     <li>
                         <div class="dropdownnav">
-                            <button onclick="dropDownNav()" class="dropbtn">
-                                Get a Quote <i class="fas fa-caret-down"></i></button>
+                            <a onclick="dropDownNav()" class="active dropbtn">
+                                Get a Quote <i class="fas fa-caret-down"></i></a>
                             <div id="myDropdown" class="dropdownnav-content">
                                 <a href="quote-is-1.php">International Shipping</a>
                                 <a href="quote-ec.php" class="active">Domestic Shipping</a>
@@ -158,7 +158,7 @@
             <div class="overlay-content">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
-                <a class="w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
+                <a class="active w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
                         <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>

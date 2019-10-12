@@ -576,8 +576,8 @@
 
                                 <!-- Item Description -->
                                 <label>
-                                        <textarea style="height: 120px" class="w3-light-gray"
-                                                  name="item_descr_ss_4" placeholder="Additional information about item..."></textarea>
+                                        <textarea style="height: 120px" class="w3-light-gray" name="item_descr_ss_4"
+                                                  placeholder="Additional information about item..."></textarea>
                                 </label>
                         </fieldset>
 
@@ -718,10 +718,10 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
@@ -729,10 +729,10 @@
         <!-- Footer Links   -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

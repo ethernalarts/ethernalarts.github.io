@@ -18,8 +18,8 @@
 }
 .scroll {
     position: absolute;
-    right: 3px;
-    bottom: 3px;
+    right: 0;
+    bottom: 0;
     padding: 7px 14px;
     text-align: center;
     margin: 0;
