@@ -114,7 +114,7 @@
         fwrite($myfile, $department_dest);
         $email_dest = 'Email = '.$_SESSION['email_dest']."\r\n";   //email
         fwrite($myfile, $email_dest);
-        $residential_dest = 'Residential Address? = '.$_SESSION['resadd_dest']."\r\n";   //residential address
+        $residential_dest = 'Residential Address? = '.$_SESSION['resAdd_ec_dest']."\r\n";   //residential address
         fwrite($myfile, $residential_dest);
         $notify_receiver = 'Notify Receiver? = '.$_SESSION['notify_dest']."\r\n\r\n\r\n";   //status updates
         fwrite($myfile, $notify_receiver);

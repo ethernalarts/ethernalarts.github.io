@@ -2,29 +2,47 @@
     //let's start the session
     session_start();
 
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
     //store posted values in the session variables
-    $_SESSION['name_ec_ra'] = $_POST['name_ec_ra'];
-    $_SESSION['contactname_ec_ra'] = $_POST['contactname_ec_ra'];
-    $_SESSION['gender_ec_ra'] = $_POST['gender_ec_ra'];
-    $_SESSION['title_ec_ra'] = $_POST['title_ec_ra'];
-    $_SESSION['phone_ec_ra'] = $_POST['phone_ec_ra'];
-    $_SESSION['email_ec_ra'] = $_POST['email_ec_ra'];
-    $_SESSION['country_ec_ra'] = $_POST['country_ec_ra'];
-    $_SESSION['state_ec_ra'] = $_POST['state_ec_ra'];
-    $_SESSION['city_ec_ra'] = $_POST['city_ec_ra'];
-    $_SESSION['zipcode_ec_ra'] = $_POST['zipcode_ec_ra'];
-    $_SESSION['address_ec_ra'] = $_POST['address_ec_ra'];
-    $_SESSION['apt_ec_ra'] = $_POST['apt_ec_ra'];
-    $_SESSION['dept_ec_ra'] = $_POST['dept_ec_ra'];
-    $_SESSION['resAdd_ec_ra'] = $_POST['resAdd_ec_ra'];
-    $_SESSION['notify_ec'] = $_POST['notify_ec'];
+    if(isset($_POST['name_ec_ra']))
+        $_SESSION['name_ec_ra']=$_POST['name_ec_ra'];
+    if(isset($_POST['contactname_ec_ra']))
+        $_SESSION['contactname_ec_ra']=$_POST['contactname_ec_ra'];
+    if(isset($_POST['gender_ec_ra']))
+        $_SESSION['gender_ec_ra']=$_POST['gender_ec_ra'];
+    if(isset($_POST['title_ec_ra']))
+        $_SESSION['title_ec_ra']=$_POST['title_ec_ra'];
+    if(isset($_POST['phone_ec_ra']))
+        $_SESSION['phone_ec_ra']=$_POST['phone_ec_ra'];
+    if(isset($_POST['email_ec_ra']))
+        $_SESSION['email_ec_ra']=$_POST['email_ec_ra'];
+    if(isset($_POST['country_ec_ra']))
+        $_SESSION['country_ec_ra']=$_POST['country_ec_ra'];
+    if(isset($_POST['state_ec_ra']))
+        $_SESSION['state_ec_ra']=$_POST['state_ec_ra'];
+    if(isset($_POST['city_ec_ra']))
+        $_SESSION['city_ec_ra']=$_POST['city_ec_ra'];
+    if(isset($_POST['zipcode_ec_ra']))
+        $_SESSION['zipcode_ec_ra']=$_POST['zipcode_ec_ra'];
+    if(isset($_POST['address_ec_ra']))
+        $_SESSION['address_ec_ra']=$_POST['address_ec_ra'];
+    if(isset($_POST['apt_ec_ra']))
+        $_SESSION['apt_ec_ra']=$_POST['apt_ec_ra'];
+    if(isset($_POST['dept_ec_ra']))
+        $_SESSION['dept_ec_ra']=$_POST['dept_ec_ra'];
+    if(isset($_POST['resAdd_ec_ra']))
+        $_SESSION['resAdd_ec_ra']=$_POST['resAdd_ec_ra'];
+    if(isset($_POST['notify_ec']))
+        $_SESSION['notify_ec']=$_POST['notify_ec'];
 
 
     // Sanitizing email field to remove unwanted characters.
     $_POST['email_ec_ra'] = filter_var($_POST['email_ec_ra'], FILTER_SANITIZE_EMAIL);
 
     // Validate email.
-    if (filter_var($_POST['email_ec_ra'], FILTER_VALIDATE_EMAIL)){
+    if (filter_var($_POST['email_ec_ra'], FILTER_VALIDATE_EMAIL)) {
 
     } else {
         $_SESSION['error'] = "Invalid Email Address";
@@ -734,13 +752,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -750,21 +772,21 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

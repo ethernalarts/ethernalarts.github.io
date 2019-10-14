@@ -1,6 +1,12 @@
 <?php
     //let's start the session
     session_start();
+
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
+    if(isset($_POST['notify_ec']))
+        $_SESSION['notify_ec']=$_POST['notify_ec'];
 ?>
 
 <!doctype html>
@@ -705,13 +711,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -721,21 +731,21 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

@@ -2,23 +2,41 @@
     //start the session
     session_start();
 
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
     //store posted values in the session variables
-    $_SESSION['name_ec_dest'] = $_POST['name_ec_dest'];
-    $_SESSION['contactname_ec_dest'] = $_POST['contactname_ec_dest'];
-    $_SESSION['gender_ec_dest'] = $_POST['gender_ec_dest'];
-    $_SESSION['title_ec_dest'] = $_POST['title_ec_dest'];
-    $_SESSION['phone_ec_dest'] = $_POST['phone_ec_dest'];
-    $_SESSION['email_ec_dest'] = $_POST['email_ec_dest'];
-    $_SESSION['country_ec_dest'] = $_POST['country_ec_dest'];
-    $_SESSION['state_ec_dest'] = $_POST['state_ec_dest'];
-    $_SESSION['city_ec_dest'] = $_POST['city_ec_dest'];
-    $_SESSION['zipcode_ec_dest'] = $_POST['zipcode_ec_dest'];
-    $_SESSION['address_ec_dest'] = $_POST['address_ec_dest'];
-    $_SESSION['apt_ec_dest'] = $_POST['apt_ec_dest'];
-    $_SESSION['dept_ec_dest'] = $_POST['dept_ec_dest'];
-    $_SESSION['resadd_dest'] = $_POST['resadd_dest'];
-    $_SESSION['notify_dest'] = $_POST['notify_dest'];
-    ?>
+    if(isset($_POST['name_ec_dest']))
+        $_SESSION['name_ec_dest']=$_POST['name_ec_dest'];
+    if(isset($_POST['contactname_ec_dest']))
+        $_SESSION['contactname_ec_dest']=$_POST['contactname_ec_dest'];
+    if(isset($_POST['gender_ec_dest']))
+        $_SESSION['gender_ec_dest']=$_POST['gender_ec_dest'];
+    if(isset($_POST['title_ec_dest']))
+        $_SESSION['title_ec_dest']=$_POST['title_ec_dest'];
+    if(isset($_POST['phone_ec_dest']))
+        $_SESSION['phone_ec_dest']=$_POST['phone_ec_dest'];
+    if(isset($_POST['email_ec_dest']))
+        $_SESSION['email_ec_dest']=$_POST['email_ec_dest'];
+    if(isset($_POST['country_ec_dest']))
+        $_SESSION['country_ec_dest']=$_POST['country_ec_dest'];
+    if(isset($_POST['state_ec_dest']))
+        $_SESSION['state_ec_dest']=$_POST['state_ec_dest'];
+    if(isset($_POST['city_ec_dest']))
+        $_SESSION['city_ec_dest']=$_POST['city_ec_dest'];
+    if(isset($_POST['zipcode_ec_dest']))
+        $_SESSION['zipcode_ec_dest']=$_POST['zipcode_ec_dest'];
+    if(isset($_POST['address_ec_dest']))
+        $_SESSION['address_ec_dest']=$_POST['address_ec_dest'];
+    if(isset($_POST['apt_ec_dest']))
+        $_SESSION['apt_ec_dest']=$_POST['apt_ec_dest'];
+    if(isset($_POST['dept_ec_dest']))
+        $_SESSION['dept_ec_dest']=$_POST['dept_ec_dest'];
+    if(isset($_POST['resAdd_ec_dest']))
+        $_SESSION['resAdd_ec_dest']=$_POST['resAdd_ec_dest'];
+    if(isset($_POST['notify_dest']))
+        $_SESSION['notify_dest']=$_POST['notify_dest'];
+?>
 
 <!doctype html>
 <html lang="en">
@@ -95,7 +113,7 @@
             }
 
             .container {
-                padding: 0 0px;
+                padding: 0 50px;
             }
         }
 
@@ -219,9 +237,7 @@
 
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
-
                         <legend>Package Origin</legend>
-
                                 <!-- Name -->
                                 <label>
                                     <input disabled class="w3-input w3-border-0 w3-light-gray"
@@ -324,12 +340,12 @@
                                            placeholder="Email Package Updates? <?php echo $_SESSION['pkg_update_ec'] ?> ">
                                 </label>
 
-                                <!-- Edit Button -->
-                                <label>
-                                    <button style="float: left" onClick="history.go(-3)" id="edit"
-                                            class="w3-button w3-medium w3-green-continue">Edit
-                                    </button>
-                                </label>
+                            <!-- Edit Button -->
+                            <div>
+                                <a type="button" style="float: left" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">
+                                    Edit
+                                </a>
+                            </div>
                     </fieldset>
 
                     <!-- Return Address Preview -->
@@ -426,11 +442,11 @@
                             </label>
 
                             <!-- Edit Button -->
-                            <label>
-                                <button style="float: left" onClick="history.go(-3)"
-                                        id="edit" class="w3-button w3-medium w3-green-continue">Edit
-                                </button>
-                            </label>
+                            <div>
+                                <a type="button" style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">
+                                    Edit
+                                </a>
+                            </div>
                     </fieldset>
 
                     <!-- Package Details Preview -->
@@ -727,9 +743,11 @@
                         </fieldset>
 
                         <!-- Edit Button -->
-                        <label>
-                            <button style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</button>
-                        </label>
+                        <div>
+                            <a type="button" style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">
+                                Edit
+                            </a>
+                        </div>
                     </fieldset>
 
                     <!-- Package Destination Preview -->
@@ -825,12 +843,12 @@
                                        placeholder="Notify Receiver? <?php echo $_SESSION['notify_dest'] ?> ">
                             </label>
 
-                            <!-- Edit Button -->
-                            <label>
-                                <button style="float: left" onClick="history.go(-3)" id="edit"
-                                        class="w3-button w3-medium w3-green-continue">Edit
-                                </button>
-                            </label>
+                        <!-- Edit Button -->
+                        <div>
+                            <a type="button" style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">
+                                Edit
+                            </a>
+                        </div>
                     </fieldset>
 
 
@@ -849,7 +867,6 @@
         </div>
     </div>
 
-
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
         /* Open */
@@ -863,7 +880,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -875,7 +892,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
@@ -942,13 +959,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -958,21 +979,21 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

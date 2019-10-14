@@ -2,24 +2,44 @@
     //let's start the session
     session_start();
 
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
     //store posted values in the session variables
-    $_SESSION['name_ec'] = $_POST['name_ec'];
-    $_SESSION['contactname_ec'] = $_POST['contactname_ec'];
-    $_SESSION['gender_ec'] = $_POST['gender_ec'];
-    $_SESSION['title_ec'] = $_POST['title_ec'];
-    $_SESSION['phone_ec'] = $_POST['phone_ec'];
-    $_SESSION['email_ec'] = $_POST['email_ec'];
-    $_SESSION['country_ec'] = $_POST['country_ec'];
-    $_SESSION['state_ec'] = $_POST['state_ec'];
-    $_SESSION['city_ec'] = $_POST['city_ec'];
-    $_SESSION['zipcode_ec'] = $_POST['zipcode_ec'];
-    $_SESSION['address_ec'] = $_POST['address_ec'];
-    $_SESSION['apt_ec'] = $_POST['apt_ec'];
-    $_SESSION['dept_ec'] = $_POST['dept_ec'];
-    $_SESSION['pickupdate'] = $_POST['pickupdate'];
-    $_SESSION['pickuptime'] = $_POST['pickuptime'];
-    $_SESSION['resAdd_ec'] = $_POST['resAdd_ec'];
-    $_SESSION['pkg_update_ec'] = $_POST['pkg_update_ec'];
+    if(isset($_POST['name_ec']))
+        $_SESSION['name_ec']=$_POST['name_ec'];
+    if(isset($_POST['contactname_ec']))
+        $_SESSION['contactname_ec']=$_POST['contactname_ec'];
+    if(isset($_POST['gender_ec']))
+        $_SESSION['gender_ec']=$_POST['gender_ec'];
+    if(isset($_POST['title_ec']))
+        $_SESSION['title_ec']=$_POST['title_ec'];
+    if(isset($_POST['phone_ec']))
+        $_SESSION['phone_ec']=$_POST['phone_ec'];
+    if(isset($_POST['email_ec']))
+        $_SESSION['email_ec']=$_POST['email_ec'];
+    if(isset($_POST['country_ec']))
+        $_SESSION['country_ec']=$_POST['country_ec'];
+    if(isset($_POST['state_ec']))
+        $_SESSION['state_ec']=$_POST['state_ec'];
+    if(isset($_POST['city_ec']))
+        $_SESSION['city_ec']=$_POST['city_ec'];
+    if(isset($_POST['zipcode_ec']))
+        $_SESSION['zipcode_ec']=$_POST['zipcode_ec'];
+    if(isset($_POST['address_ec']))
+        $_SESSION['address_ec']=$_POST['address_ec'];
+    if(isset($_POST['apt_ec']))
+        $_SESSION['apt_ec']=$_POST['apt_ec'];
+    if(isset($_POST['dept_ec']))
+        $_SESSION['dept_ec']=$_POST['dept_ec'];
+    if(isset($_POST['pickupdate']))
+        $_SESSION['pickupdate']=$_POST['pickupdate'];
+    if(isset($_POST['pickuptime']))
+        $_SESSION['pickuptime']=$_POST['pickuptime'];
+    if(isset($_POST['resAdd_ec']))
+        $_SESSION['resAdd_ec']=$_POST['resAdd_ec'];
+    if(isset($_POST['pkg_update_ec']))
+        $_SESSION['pkg_update_ec']=$_POST['pkg_update_ec'];
 
     // Sanitizing email field to remove unwanted characters.
     $_POST['email_ec'] = filter_var($_POST['email_ec'], FILTER_SANITIZE_EMAIL);
@@ -267,6 +287,11 @@
 
                 <!-- Toggle (different return address) -->
                 <form method="post" style="text-align: center" action="quote-ec-2-skip.php">
+                    <!-- Return notification? -->
+                    <label>
+                        <input name="notify_ec" value="Yes" type="hidden">
+                    </label>
+
                     <button type="submit" class="skip w3-btn w3-medium">
                         Skip, use package's origin's address
                     </button>
@@ -367,7 +392,7 @@
                                     </select>
                                 </label>
 
-                                <!-- Send shipment updates -->
+                                <!-- Return notification? -->
                                 <label>
                                     <select  style="float: right" name="notify_ec" class="choice">
                                         <option value="0" selected="selected">Notify of return using the email above? </option>
@@ -460,13 +485,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -476,21 +505,21 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

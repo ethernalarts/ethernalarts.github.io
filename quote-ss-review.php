@@ -780,13 +780,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -804,7 +808,7 @@
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
                 <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>

@@ -2,58 +2,106 @@
     //let's start the session
     session_start();
 
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
     //store posted values in the session variables
+
     //1st package details
-    $_SESSION['package_type'] = $_POST['package_type'];
-    $_SESSION['delivery_options'] = $_POST['delivery_options'];
-    $_SESSION['other'] = $_POST['other'];
-    $_SESSION['worth'] = $_POST['worth'];
-    $_SESSION['weight'] = $_POST['weight'];
-    $_SESSION['length'] = $_POST['length'];
-    $_SESSION['width'] = $_POST['width'];
-    $_SESSION['height'] = $_POST['height'];
-    $_SESSION['colour'] = $_POST['colour'];
-    $_SESSION['texture'] = $_POST['texture'];
-    $_SESSION['package_description'] = $_POST['package_description'];
+    if(isset($_POST['package_type']))
+        $_SESSION['package_type']=$_POST['package_type'];
+    if(isset($_POST['delivery_options']))
+        $_SESSION['delivery_options']=$_POST['delivery_options'];
+    if(isset($_POST['other']))
+        $_SESSION['other']=$_POST['other'];
+    if(isset($_POST['worth']))
+        $_SESSION['worth']=$_POST['worth'];
+    if(isset($_POST['weight']))
+        $_SESSION['weight']=$_POST['weight'];
+    if(isset($_POST['length']))
+        $_SESSION['length']=$_POST['length'];
+    if(isset($_POST['width']))
+        $_SESSION['width']=$_POST['width'];
+    if(isset($_POST['height']))
+        $_SESSION['height']=$_POST['height'];
+    if(isset($_POST['color']))
+        $_SESSION['color']=$_POST['color'];
+    if(isset($_POST['texture']))
+        $_SESSION['texture']=$_POST['texture'];
+    if(isset($_POST['package_description']))
+        $_SESSION['package_description']=$_POST['package_description'];
 
     //2nd package details
-    $_SESSION['package_type_2'] = $_POST['package_type_2'];
-    $_SESSION['delivery_options_2'] = $_POST['delivery_options_2'];
-    $_SESSION['other_2'] = $_POST['other_2'];
-    $_SESSION['worth_2'] = $_POST['worth_2'];
-    $_SESSION['weight_2'] = $_POST['weight_2'];
-    $_SESSION['length_2'] = $_POST['length_2'];
-    $_SESSION['width_2'] = $_POST['width_2'];
-    $_SESSION['height_2'] = $_POST['height_2'];
-    $_SESSION['colour_2'] = $_POST['colour_2'];
-    $_SESSION['texture_2'] = $_POST['texture_2'];
-    $_SESSION['package_description_2'] = $_POST['package_description_2'];
+    if(isset($_POST['package_type_2']))
+        $_SESSION['package_type_2']=$_POST['package_type_2'];
+    if(isset($_POST['delivery_options_2']))
+        $_SESSION['delivery_options_2']=$_POST['delivery_options_2'];
+    if(isset($_POST['other_2']))
+        $_SESSION['other_2']=$_POST['other_2'];
+    if(isset($_POST['worth_2']))
+        $_SESSION['worth_2']=$_POST['worth_2'];
+    if(isset($_POST['weight_2']))
+        $_SESSION['weight_2']=$_POST['weight_2'];
+    if(isset($_POST['length_2']))
+        $_SESSION['length_2']=$_POST['length_2'];
+    if(isset($_POST['width_2']))
+        $_SESSION['width_2']=$_POST['width_2'];
+    if(isset($_POST['height_2']))
+        $_SESSION['height_2']=$_POST['height_2'];
+    if(isset($_POST['color_2']))
+        $_SESSION['color_2']=$_POST['color_2'];
+    if(isset($_POST['texture_2']))
+        $_SESSION['texture_2']=$_POST['texture_2'];
+    if(isset($_POST['package_description_2']))
+        $_SESSION['package_description_2']=$_POST['package_description_2'];
 
     //3rd package details
-    $_SESSION['package_type_3'] = $_POST['package_type_3'];
-    $_SESSION['delivery_options_3'] = $_POST['delivery_options_3'];
-    $_SESSION['other_3'] = $_POST['other_3'];
-    $_SESSION['worth_3'] = $_POST['worth_3'];
-    $_SESSION['weight_3'] = $_POST['weight_3'];
-    $_SESSION['length_3'] = $_POST['length_3'];
-    $_SESSION['width_3'] = $_POST['width_3'];
-    $_SESSION['height_3'] = $_POST['height_3'];
-    $_SESSION['colour_3'] = $_POST['colour_3'];
-    $_SESSION['texture_3'] = $_POST['texture_3'];
-    $_SESSION['package_description_3'] = $_POST['package_description_3'];
+    if(isset($_POST['package_type_3']))
+        $_SESSION['package_type_3']=$_POST['package_type_3'];
+    if(isset($_POST['delivery_options_3']))
+        $_SESSION['delivery_options_3']=$_POST['delivery_options_3'];
+    if(isset($_POST['other_3']))
+        $_SESSION['other_3']=$_POST['other_3'];
+    if(isset($_POST['worth_3']))
+        $_SESSION['worth_3']=$_POST['worth_3'];
+    if(isset($_POST['weight_3']))
+        $_SESSION['weight_3']=$_POST['weight_3'];
+    if(isset($_POST['length_3']))
+        $_SESSION['length_3']=$_POST['length_3'];
+    if(isset($_POST['width_3']))
+        $_SESSION['width_3']=$_POST['width_3'];
+    if(isset($_POST['height_3']))
+        $_SESSION['height_3']=$_POST['height_3'];
+    if(isset($_POST['color_3']))
+        $_SESSION['color_3']=$_POST['color_3'];
+    if(isset($_POST['texture_3']))
+        $_SESSION['texture_3']=$_POST['texture_3'];
+    if(isset($_POST['package_description_3']))
+        $_SESSION['package_description_3']=$_POST['package_description_3'];
 
     //4th package details
-    $_SESSION['package_type_4'] = $_POST['package_type_4'];
-    $_SESSION['delivery_options_4'] = $_POST['delivery_options_4'];
-    $_SESSION['other_4'] = $_POST['other_4'];
-    $_SESSION['worth_4'] = $_POST['worth_4'];
-    $_SESSION['weight_4'] = $_POST['weight_4'];
-    $_SESSION['length_4'] = $_POST['length_4'];
-    $_SESSION['width_4'] = $_POST['width_4'];
-    $_SESSION['height_4'] = $_POST['height_4'];
-    $_SESSION['colour_4'] = $_POST['colour_4'];
-    $_SESSION['texture_4'] = $_POST['texture_4'];
-    $_SESSION['package_description_4'] = $_POST['package_description_4'];
+    if(isset($_POST['package_type_4']))
+        $_SESSION['package_type_4']=$_POST['package_type_4'];
+    if(isset($_POST['delivery_options_4']))
+        $_SESSION['delivery_options_4']=$_POST['delivery_options_4'];
+    if(isset($_POST['other_4']))
+        $_SESSION['other_4']=$_POST['other_4'];
+    if(isset($_POST['worth_4']))
+        $_SESSION['worth_4']=$_POST['worth_4'];
+    if(isset($_POST['weight_4']))
+        $_SESSION['weight_4']=$_POST['weight_4'];
+    if(isset($_POST['length_4']))
+        $_SESSION['length_4']=$_POST['length_4'];
+    if(isset($_POST['width_4']))
+        $_SESSION['width_4']=$_POST['width_4'];
+    if(isset($_POST['height_4']))
+        $_SESSION['height_4']=$_POST['height_4'];
+    if(isset($_POST['color_4']))
+        $_SESSION['color_4']=$_POST['color_4'];
+    if(isset($_POST['texture_4']))
+        $_SESSION['texture_4']=$_POST['texture_4'];
+    if(isset($_POST['package_description_4']))
+        $_SESSION['package_description_4']=$_POST['package_description_4'];
 ?>
 
 <!doctype html>
@@ -338,7 +386,7 @@
 
                                 <!-- Residential Address? -->
                                 <label>
-                                    <select  name="resadd_dest" class="choice" required>
+                                    <select  name="resAdd_ec_dest" class="choice" required>
                                         <option value="0" selected="selected">Is this a residential address?   *</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -348,7 +396,7 @@
                                 <!-- Notify Receiver? -->
                                 <label>
                                     <select  style="float: right" name="notify_dest" class="choice">
-                                        <option value="0" selected="selected">Should we notify recipient of package status?</option>
+                                        <option value="0" selected="selected">Notify recipient of package status?</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -439,13 +487,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -455,21 +507,21 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>
