@@ -2,23 +2,41 @@
     //start the session
     session_start();
 
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
     //store posted values in the session variables
-    $_SESSION['name_reAdd'] = $_POST['name_reAdd'];
-    $_SESSION['contact_name_reAdd'] = $_POST['contact_name_reAdd'];
-    $_SESSION['gender_reAdd'] = $_POST['gender_reAdd'];
-    $_SESSION['title_reAdd'] = $_POST['title_reAdd'];
-    $_SESSION['countryCode_reAdd'] = $_POST['countryCode_reAdd'];
-    $_SESSION['country_reAdd'] = $_POST['country_reAdd'];
-    $_SESSION['state_reAdd'] = $_POST['state_reAdd'];
-    $_SESSION['city_reAdd'] = $_POST['city_reAdd'];
-    $_SESSION['zip_code_reAdd'] = $_POST['zip_code_reAdd'];
-    $_SESSION['street_add_reAdd'] = $_POST['street_add_reAdd'];
-    $_SESSION['street_add2_reAdd'] = $_POST['street_add2_reAdd'];
-    $_SESSION['department_reAdd'] = $_POST['department_reAdd'];
-    $_SESSION['phone_reAdd'] = $_POST['phone_reAdd'];
-    $_SESSION['email_reAdd'] = $_POST['email_reAdd'];
-    $_SESSION['notify'] = $_POST['notify'];
-    $_SESSION['residential_reAdd'] = $_POST['residential_reAdd'];
+    if(isset($_POST['name_reAdd']))
+        $_SESSION['name_reAdd']=$_POST['name_reAdd'];
+    if(isset($_POST['contact_name_reAdd']))
+        $_SESSION['contact_name_reAdd']=$_POST['contact_name_reAdd'];
+    if(isset($_POST['gender_reAdd']))
+        $_SESSION['gender_reAdd']=$_POST['gender_reAdd'];
+    if(isset($_POST['title_reAdd']))
+        $_SESSION['title_reAdd']=$_POST['title_reAdd'];
+    if(isset($_POST['country_reAdd']))
+        $_SESSION['country_reAdd']=$_POST['country_reAdd'];
+    if(isset($_POST['state_reAdd']))
+        $_SESSION['state_reAdd']=$_POST['state_reAdd'];
+    if(isset($_POST['city_reAdd']))
+        $_SESSION['city_reAdd']=$_POST['city_reAdd'];
+    if(isset($_POST['zip_code_reAdd']))
+        $_SESSION['zip_code_reAdd']=$_POST['zip_code_reAdd'];
+    if(isset($_POST['street_add_reAdd']))
+        $_SESSION['street_add_reAdd']=$_POST['street_add_reAdd'];
+    if(isset($_POST['street_add2_reAdd']))
+        $_SESSION['street_add2_reAdd']=$_POST['street_add2_reAdd'];
+    if(isset($_POST['department_reAdd']))
+        $_SESSION['department_reAdd']=$_POST['department_reAdd'];
+    if(isset($_POST['phone_reAdd']))
+        $_SESSION['phone_reAdd']=$_POST['phone_reAdd'];
+    if(isset($_POST['email_reAdd']))
+        $_SESSION['email_reAdd']=$_POST['email_reAdd'];
+    if(isset($_POST['notify']))
+        $_SESSION['notify']=$_POST['notify'];
+    if(isset($_POST['residential_reAdd']))
+        $_SESSION['residential_reAdd']=$_POST['residential_reAdd'];
+
 
     // Sanitizing email field to remove unwanted characters.
     $_POST['email_reAdd'] = filter_var($_POST['email_reAdd'], FILTER_SANITIZE_EMAIL);
@@ -45,9 +63,11 @@
     <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
     <link href="css/progressbar.css" type="text/css" rel="stylesheet">
     <link href="css/misc.css" type="text/css" rel="stylesheet">
+    <link href="css/intlTelInput.css" rel="stylesheet">
     <link href="css/w3.css" type="text/css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -219,7 +239,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -232,333 +252,132 @@
                 <form class="container-form" method="post" action="quote-is-4.php" style="padding-bottom: 0">
 
                     <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
+                        <legend>Shipment Destination</legend>
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="name_dest"> Full Name (or Company) <span class="required">*</span></label>
+                                    <input class="w3-light-gray" placeholder="e.g. Clark Kent (or Daily Planet)" name="name_dest" id="name_dest" type="text" required>
+                                </div>
 
-                        <legend>Shipment Destination:</legend>
+                                <!-- Contact's Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="contact_name_dest"> Contact's Name <span class="required">*</span></label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Lois Lane" name="contact_name_dest" id="contact_name_dest" type="text" required>
+                                </div>
+                            </div>
 
-                            <!-- Full Name -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_dest"
-                                       id="name" type="text" required>
-                            </label>
+                            <div class="row">
+                                <!-- Gender -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="gender_dest">Gender <span class="required">*</span></label>
+                                    <select class="choice" name="gender_dest" id="gender_dest" required>
+                                        <option value="0" selected="selected">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
 
-                            <!-- Contact Name -->
-                            <label>
-                                <input class="w3-light-gray" placeholder="Contact Name:  *" style="float: right;" name="contact_name_dest"
-                                       id="contact_name" type="text" required>
-                            </label>
+                                <!-- Title -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="title_dest">Title</label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="Mr, Mrs, Cpt, Dr. etc."
+                                           name="title_dest" id="title_dest" type="text">
+                                </div>
+                            </div>
 
-                            <!-- Gender -->
-                            <label>
-                                <select class="choice" name="gender" required>
-                                    <option value="0" selected="selected">Gender  *</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </label>
+                            <div class="row">
+                                <!-- Telephone -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="phone_dest">Telephone <span class="required">*</span></label>
+                                    <input class="w3-light-gray" name="phone_dest" id="phone_dest" type="tel" required>
+                                </div>
 
-                            <!-- Title -->
-                            <label>
-                                <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
-                                       name="title_dest" type="text" required>
-                            </label>
+                                <!-- Email -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="email_dest">Email <span class="required">*</span></label>
+                                    <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email_dest" id="email_dest" type="email" required>
+                                </div>
+                            </div>
 
-                            <!-- country codes (ISO 3166) and Dial codes. -->
-                            <label for="">
-                                <select class="choice" name="countryCode_dest" id="">
-                                    <option value="0" selected="selected">Select Country Code  *</option>
-                                    <optgroup label="Other countries">
-                                        <option data-countryCode="DZ" value="213">Algeria (+213)</option>
-                                        <option data-countryCode="AD" value="376">Andorra (+376)</option>
-                                        <option data-countryCode="AO" value="244">Angola (+244)</option>
-                                        <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
-                                        <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
-                                        <option data-countryCode="AR" value="54">Argentina (+54)</option>
-                                        <option data-countryCode="AM" value="374">Armenia (+374)</option>
-                                        <option data-countryCode="AW" value="297">Aruba (+297)</option>
-                                        <option data-countryCode="AU" value="61">Australia (+61)</option>
-                                        <option data-countryCode="AT" value="43">Austria (+43)</option>
-                                        <option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
-                                        <option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
-                                        <option data-countryCode="BH" value="973">Bahrain (+973)</option>
-                                        <option data-countryCode="BD" value="880">Bangladesh (+880)</option>
-                                        <option data-countryCode="BB" value="1246">Barbados (+1246)</option>
-                                        <option data-countryCode="BY" value="375">Belarus (+375)</option>
-                                        <option data-countryCode="BE" value="32">Belgium (+32)</option>
-                                        <option data-countryCode="BZ" value="501">Belize (+501)</option>
-                                        <option data-countryCode="BJ" value="229">Benin (+229)</option>
-                                        <option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
-                                        <option data-countryCode="BT" value="975">Bhutan (+975)</option>
-                                        <option data-countryCode="BO" value="591">Bolivia (+591)</option>
-                                        <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
-                                        <option data-countryCode="BW" value="267">Botswana (+267)</option>
-                                        <option data-countryCode="BR" value="55">Brazil (+55)</option>
-                                        <option data-countryCode="BN" value="673">Brunei (+673)</option>
-                                        <option data-countryCode="BG" value="359">Bulgaria (+359)</option>
-                                        <option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
-                                        <option data-countryCode="BI" value="257">Burundi (+257)</option>
-                                        <option data-countryCode="KH" value="855">Cambodia (+855)</option>
-                                        <option data-countryCode="CM" value="237">Cameroon (+237)</option>
-                                        <option data-countryCode="CA" value="1">Canada (+1)</option>
-                                        <option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
-                                        <option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
-                                        <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
-                                        <option data-countryCode="CL" value="56">Chile (+56)</option>
-                                        <option data-countryCode="CN" value="86">China (+86)</option>
-                                        <option data-countryCode="CO" value="57">Colombia (+57)</option>
-                                        <option data-countryCode="KM" value="269">Comoros (+269)</option>
-                                        <option data-countryCode="CG" value="242">Congo (+242)</option>
-                                        <option data-countryCode="CK" value="682">Cook Islands (+682)</option>
-                                        <option data-countryCode="CR" value="506">Costa Rica (+506)</option>
-                                        <option data-countryCode="HR" value="385">Croatia (+385)</option>
-                                        <option data-countryCode="CU" value="53">Cuba (+53)</option>
-                                        <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
-                                        <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
-                                        <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
-                                        <option data-countryCode="DK" value="45">Denmark (+45)</option>
-                                        <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
-                                        <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
-                                        <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
-                                        <option data-countryCode="EC" value="593">Ecuador (+593)</option>
-                                        <option data-countryCode="EG" value="20">Egypt (+20)</option>
-                                        <option data-countryCode="SV" value="503">El Salvador (+503)</option>
-                                        <option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
-                                        <option data-countryCode="ER" value="291">Eritrea (+291)</option>
-                                        <option data-countryCode="EE" value="372">Estonia (+372)</option>
-                                        <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
-                                        <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
-                                        <option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
-                                        <option data-countryCode="FJ" value="679">Fiji (+679)</option>
-                                        <option data-countryCode="FI" value="358">Finland (+358)</option>
-                                        <option data-countryCode="FR" value="33">France (+33)</option>
-                                        <option data-countryCode="GF" value="594">French Guiana (+594)</option>
-                                        <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
-                                        <option data-countryCode="GA" value="241">Gabon (+241)</option>
-                                        <option data-countryCode="GM" value="220">Gambia (+220)</option>
-                                        <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
-                                        <option data-countryCode="DE" value="49">Germany (+49)</option>
-                                        <option data-countryCode="GH" value="233">Ghana (+233)</option>
-                                        <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
-                                        <option data-countryCode="GR" value="30">Greece (+30)</option>
-                                        <option data-countryCode="GL" value="299">Greenland (+299)</option>
-                                        <option data-countryCode="GD" value="1473">Grenada (+1473)</option>
-                                        <option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
-                                        <option data-countryCode="GU" value="671">Guam (+671)</option>
-                                        <option data-countryCode="GT" value="502">Guatemala (+502)</option>
-                                        <option data-countryCode="GN" value="224">Guinea (+224)</option>
-                                        <option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
-                                        <option data-countryCode="GY" value="592">Guyana (+592)</option>
-                                        <option data-countryCode="HT" value="509">Haiti (+509)</option>
-                                        <option data-countryCode="HN" value="504">Honduras (+504)</option>
-                                        <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
-                                        <option data-countryCode="HU" value="36">Hungary (+36)</option>
-                                        <option data-countryCode="IS" value="354">Iceland (+354)</option>
-                                        <option data-countryCode="IN" value="91">India (+91)</option>
-                                        <option data-countryCode="ID" value="62">Indonesia (+62)</option>
-                                        <option data-countryCode="IR" value="98">Iran (+98)</option>
-                                        <option data-countryCode="IQ" value="964">Iraq (+964)</option>
-                                        <option data-countryCode="IE" value="353">Ireland (+353)</option>
-                                        <option data-countryCode="IL" value="972">Israel (+972)</option>
-                                        <option data-countryCode="IT" value="39">Italy (+39)</option>
-                                        <option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
-                                        <option data-countryCode="JP" value="81">Japan (+81)</option>
-                                        <option data-countryCode="JO" value="962">Jordan (+962)</option>
-                                        <option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
-                                        <option data-countryCode="KE" value="254">Kenya (+254)</option>
-                                        <option data-countryCode="KI" value="686">Kiribati (+686)</option>
-                                        <option data-countryCode="KP" value="850">Korea North (+850)</option>
-                                        <option data-countryCode="KR" value="82">Korea South (+82)</option>
-                                        <option data-countryCode="KW" value="965">Kuwait (+965)</option>
-                                        <option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
-                                        <option data-countryCode="LA" value="856">Laos (+856)</option>
-                                        <option data-countryCode="LV" value="371">Latvia (+371)</option>
-                                        <option data-countryCode="LB" value="961">Lebanon (+961)</option>
-                                        <option data-countryCode="LS" value="266">Lesotho (+266)</option>
-                                        <option data-countryCode="LR" value="231">Liberia (+231)</option>
-                                        <option data-countryCode="LY" value="218">Libya (+218)</option>
-                                        <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
-                                        <option data-countryCode="LT" value="370">Lithuania (+370)</option>
-                                        <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
-                                        <option data-countryCode="MO" value="853">Macao (+853)</option>
-                                        <option data-countryCode="MK" value="389">Macedonia (+389)</option>
-                                        <option data-countryCode="MG" value="261">Madagascar (+261)</option>
-                                        <option data-countryCode="MW" value="265">Malawi (+265)</option>
-                                        <option data-countryCode="MY" value="60">Malaysia (+60)</option>
-                                        <option data-countryCode="MV" value="960">Maldives (+960)</option>
-                                        <option data-countryCode="ML" value="223">Mali (+223)</option>
-                                        <option data-countryCode="MT" value="356">Malta (+356)</option>
-                                        <option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
-                                        <option data-countryCode="MQ" value="596">Martinique (+596)</option>
-                                        <option data-countryCode="MR" value="222">Mauritania (+222)</option>
-                                        <option data-countryCode="YT" value="269">Mayotte (+269)</option>
-                                        <option data-countryCode="MX" value="52">Mexico (+52)</option>
-                                        <option data-countryCode="FM" value="691">Micronesia (+691)</option>
-                                        <option data-countryCode="MD" value="373">Moldova (+373)</option>
-                                        <option data-countryCode="MC" value="377">Monaco (+377)</option>
-                                        <option data-countryCode="MN" value="976">Mongolia (+976)</option>
-                                        <option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
-                                        <option data-countryCode="MA" value="212">Morocco (+212)</option>
-                                        <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
-                                        <option data-countryCode="MN" value="95">Myanmar (+95)</option>
-                                        <option data-countryCode="NA" value="264">Namibia (+264)</option>
-                                        <option data-countryCode="NR" value="674">Nauru (+674)</option>
-                                        <option data-countryCode="NP" value="977">Nepal (+977)</option>
-                                        <option data-countryCode="NL" value="31">Netherlands (+31)</option>
-                                        <option data-countryCode="NC" value="687">New Caledonia (+687)</option>
-                                        <option data-countryCode="NZ" value="64">New Zealand (+64)</option>
-                                        <option data-countryCode="NI" value="505">Nicaragua (+505)</option>
-                                        <option data-countryCode="NE" value="227">Niger (+227)</option>
-                                        <option data-countryCode="NG" value="234">Nigeria (+234)</option>
-                                        <option data-countryCode="NU" value="683">Niue (+683)</option>
-                                        <option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
-                                        <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
-                                        <option data-countryCode="NO" value="47">Norway (+47)</option>
-                                        <option data-countryCode="OM" value="968">Oman (+968)</option>
-                                        <option data-countryCode="PW" value="680">Palau (+680)</option>
-                                        <option data-countryCode="PA" value="507">Panama (+507)</option>
-                                        <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
-                                        <option data-countryCode="PY" value="595">Paraguay (+595)</option>
-                                        <option data-countryCode="PE" value="51">Peru (+51)</option>
-                                        <option data-countryCode="PH" value="63">Philippines (+63)</option>
-                                        <option data-countryCode="PL" value="48">Poland (+48)</option>
-                                        <option data-countryCode="PT" value="351">Portugal (+351)</option>
-                                        <option data-countryCode="PR" value="1787">Puerto Rico (+1787)</option>
-                                        <option data-countryCode="QA" value="974">Qatar (+974)</option>
-                                        <option data-countryCode="RE" value="262">Reunion (+262)</option>
-                                        <option data-countryCode="RO" value="40">Romania (+40)</option>
-                                        <option data-countryCode="RU" value="7">Russia (+7)</option>
-                                        <option data-countryCode="RW" value="250">Rwanda (+250)</option>
-                                        <option data-countryCode="SM" value="378">San Marino (+378)</option>
-                                        <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
-                                        <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
-                                        <option data-countryCode="SN" value="221">Senegal (+221)</option>
-                                        <option data-countryCode="CS" value="381">Serbia (+381)</option>
-                                        <option data-countryCode="SC" value="248">Seychelles (+248)</option>
-                                        <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
-                                        <option data-countryCode="SG" value="65">Singapore (+65)</option>
-                                        <option data-countryCode="SK" value="421">Slovak Republic (+421)</option>
-                                        <option data-countryCode="SI" value="386">Slovenia (+386)</option>
-                                        <option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
-                                        <option data-countryCode="SO" value="252">Somalia (+252)</option>
-                                        <option data-countryCode="ZA" value="27">South Africa (+27)</option>
-                                        <option data-countryCode="ES" value="34">Spain (+34)</option>
-                                        <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
-                                        <option data-countryCode="SH" value="290">St. Helena (+290)</option>
-                                        <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
-                                        <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
-                                        <option data-countryCode="SD" value="249">Sudan (+249)</option>
-                                        <option data-countryCode="SR" value="597">Suriname (+597)</option>
-                                        <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
-                                        <option data-countryCode="SE" value="46">Sweden (+46)</option>
-                                        <option data-countryCode="CH" value="41">Switzerland (+41)</option>
-                                        <option data-countryCode="SI" value="963">Syria (+963)</option>
-                                        <option data-countryCode="TW" value="886">Taiwan (+886)</option>
-                                        <option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
-                                        <option data-countryCode="TH" value="66">Thailand (+66)</option>
-                                        <option data-countryCode="TG" value="228">Togo (+228)</option>
-                                        <option data-countryCode="TO" value="676">Tonga (+676)</option>
-                                        <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
-                                        <option data-countryCode="TN" value="216">Tunisia (+216)</option>
-                                        <option data-countryCode="TR" value="90">Turkey (+90)</option>
-                                        <option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
-                                        <option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
-                                        <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
-                                        <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
-                                        <option data-countryCode="UG" value="256">Uganda (+256)</option>
-                                        <option data-countryCode="GB" value="44">UK (+44)</option>
-                                        <option data-countryCode="UA" value="380">Ukraine (+380)</option>
-                                        <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
-                                        <option data-countryCode="UY" value="598">Uruguay (+598)</option>
-                                        <option data-countryCode="US" value="1">USA (+1)</option>
-                                        <option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
-                                        <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
-                                        <option data-countryCode="VA" value="379">Vatican City (+379)</option>
-                                        <option data-countryCode="VE" value="58">Venezuela (+58)</option>
-                                        <option data-countryCode="VN" value="84">Vietnam (+84)</option>
-                                        <option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
-                                        <option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
-                                        <option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</option>
-                                        <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
-                                        <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
-                                        <option data-countryCode="ZM" value="260">Zambia (+260)</option>
-                                        <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-                                    </optgroup>
-                                </select>
-                            </label>
+                            <div class="row">
+                                <!-- Country -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="countryId">Country <span class="required">*</span></label>
+                                    <select name="country_dest" class="choice countries" id="countryId" type="select" required>
+                                        <option value="0" selected="selected">Select Country</option>
+                                    </select>
+                                </div>
 
-                            <!-- Telephone -->
-                            <label>
-                                <input style="float: right; padding: 13px" class="w3-input w3-border-0 w3-light-gray" id="" name="phone_dest"
-                                       placeholder="Telephone:  *" type="tel" required>
-                            </label>
+                                <!-- State -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="stateId">State <span class="required">*</span></label>
+                                    <select name="state_dest" style="float: right" class="choice states" id="stateId" type="select" required>
+                                        <option value="0" selected="selected">Select State</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                            <!-- Country -->
-                            <label for="countryId">
-                                <select name="country_dest" class="choice countries" id="countryId" type="select" required>
-                                    <option value="0" selected="selected">Country:  *</option>
-                                </select>
-                            </label>
+                            <div class="row">
+                                <!-- City -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="cityId">City <span class="required">*</span></label>
+                                    <select name="city_dest" class="choice cities" id="cityId" type="select" required>
+                                        <option value="0" selected="selected">Select City</option>
+                                    </select>
+                                </div>
 
-                            <!-- State -->
-                            <label for="stateId">
-                                <select name="state_dest" style="float: right" class="choice states" id="stateId" type="select" required>
-                                    <option value="0" selected="selected">State:  *</option>
-                                </select>
-                            </label>
+                                <!-- Zip Code -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="zip_code_dest">Zip Code <span class="required">*</span></label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. 123456" name="zip_code_dest" id="zip_code_dest" type="number" required>
+                                </div>
+                            </div>
 
-                            <!-- City -->
-                            <label for="cityId">
-                                <select name="city_dest" class="choice cities" id="cityId" type="select" required>
-                                    <option value="0" selected="selected">City:  *</option>
-                                </select>
-                            </label>
+                            <div class="row">
+                                <!-- Street Address -->
+                                <div class="col-xs-12 col-sm-12">
+                                    <label for="street_add_dest">Street Address <span class="required">*</span></label>
+                                    <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="street_add_dest" id="street_add_dest" type="text" required>
+                                </div>
+                            </div>
 
-                            <!-- Zip Code -->
-                            <label>
-                                <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
-                                       name="zip_code_dest" type="number" required>
-                            </label>
+                            <div class="row">
+                                <!-- Street Address 2 -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="street_add2_destreAdd">Street Address 2</label>
+                                    <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
+                                           name="street_add2_dest" id="street_add2_dest" type="text">
+                                </div>
 
-                            <!-- Street Address -->
-                            <label>
-                                <input class="w3-light-gray" style="width: 100%"
-                                       placeholder="Street Address:  *" name="street_add_dest" type="text" required>
-                            </label>
+                                <!-- Department -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="department_dest">Department, c/o, etc.</label>
+                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Editorial (or c/o Martha Lane)" name="department_dest" id="department_dest" type="text">
+                                </div>
+                            </div>
 
-                            <!-- Street Address 2 (Apartment, suite, building) -->
-                            <label>
-                                <input style="width: 100%" class="w3-input w3-border-0 w3-light-gray" name="street_add2_dest"
-                                       placeholder="Street Address 2 (or Apartment, suite, etc.:  " type="text">
-                            </label>
+                            <div class="row">
+                                <!-- Residential Address? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="residential_add_dest">Is this a residential address? <span class="required">*</span></label>
+                                    <select  name="residential_add_dest" id="residential_add_dest" class="choice" required>
+                                        <option value="0" selected="selected">Select an answer</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
 
-                            <!-- Department -->
-                            <label>
-                                <input class="w3-input w3-border-0 w3-light-gray" name="department_dest"
-                                       placeholder="Department, c/o, etc.: " type="text">
-                            </label>
-
-                            <!-- Email -->
-                            <label>
-                                <input style="float: right" class="w3-input w3-border-0 w3-light-gray" name="email_dest"
-                                       placeholder="Email:  *" type="email" required>
-                            </label>
-
-                            <!-- Residential Address -->
-                            <label>
-                                <select  name="residential_add_dest" class="choice" required>
-                                    <option value="0" selected="selected">Is this a residential address?   *</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                            </label>
-
-                            <!-- Email updates to recipient on shipment status -->
-                            <label>
-                                <select  style="float: right" name="notify_dest" class="choice">
-                                    <option value="0" selected="selected">Should we send recipient shipment status? </option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                            </label>
+                                <!-- Email updates to recipient on shipment status? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="notify_dest">Should we send recipient shipment status? <span class="required">*</span></label>
+                                    <select  style="float: right" name="notify_dest" id="notify_dest" class="choice">
+                                        <option value="0" selected="selected">Select an answer</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
                     </fieldset>
 
                     <!-- Previous, Continue and Cancel Button -->
@@ -592,6 +411,15 @@
             <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
+
+    <!-- International Telephone Country Code -->
+    <script src="js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone_dest");
+        window.intlTelInput(input, {
+            utilsScript: "js/utils.js?1562189064761"
+        });
+    </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
@@ -644,13 +472,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -660,21 +492,21 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

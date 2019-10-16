@@ -121,10 +121,6 @@
             border-bottom: 1px solid #2d2d2d;
         }
 
-        .editField {10px;
-            margin-top:
-        }
-
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
             #hi {

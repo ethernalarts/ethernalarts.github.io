@@ -550,23 +550,23 @@
     }
 
     .container-form input {
-        font-family: Montserrat, serif;
-        color: #7d7d7d;
-        padding: 14px;
-        margin: 0 0 33px;
+        font-family: Roboto, Montserrat, serif;
+        color: #737373;
+        padding: 12px;
+        margin: 0 0 30px;
+        font-size: 1em;
         font-weight: 500;
-        width: 47%;
         display: inline-block;
+        border-bottom: 1px solid #afafaf;
     }
 
     .container-form select {
         font-family: Roboto, Verdana, Montserrat, serif;
-        color: #7d7d7d;
-        padding: 15px;
-        margin: 0 0 33px;
+        color: #9b9b9b;
+        padding: 13px;
+        margin: 0 0 30px;
         font-size: 1em;
         font-weight: 500;
-        width: 47%;
         display: inline-block;
         border: 1px solid #afafaf;
     }
@@ -574,7 +574,7 @@
     .container-form textarea {
         width: 100%;
         padding: 14px;
-        margin: 0 0 33px;
+        margin: 0 0 30px;
     }
 
     .choice option {
@@ -600,6 +600,23 @@
         padding: 10px;
     }
 
+    label {
+        font-family: "Oswald SemiBold", Roboto, Verdana, serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.15em;
+        color: #737373;
+    }
+
+    .required {
+        font-family: Roboto, Verdana, serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1em;
+        color: #f00000;
+
+    }
+
     fieldset {
         width: 100%;
         padding: 30px;
@@ -612,9 +629,10 @@
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #7d7d7d;
+        color: #9b9b9b;
         font-size: 1em;
         font-weight: 500;
+        font-style: italic;
         opacity: 1; /* Firefox */
         font-family: roboto, Verdana, Montserrat, serif;
     }
@@ -629,7 +647,7 @@
     .step {
         height: 17px;
         width: 17px;
-        margin: 0 12px;
+        margin: 0 10px;
         background-color: royalblue;
         border: none;
         border-radius: 50%;

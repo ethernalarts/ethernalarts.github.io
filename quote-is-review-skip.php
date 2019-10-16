@@ -2,50 +2,92 @@
     //start the session
     session_start();
 
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
     //store posted values in the session variables
+
     //1st shipment variables
-    $_SESSION['weight'] = $_POST['weight'];
-    $_SESSION['length'] = $_POST['length'];
-    $_SESSION['width'] = $_POST['width'];
-    $_SESSION['height'] = $_POST['height'];
-    $_SESSION['colour'] = $_POST['colour'];
-    $_SESSION['texture'] = $_POST['texture'];
-    $_SESSION['worth'] = $_POST['worth'];
-    $_SESSION['shipment_type'] = $_POST['shipment_type'];
-    $_SESSION['shipment_description'] = $_POST['shipment_description'];
+    if(isset($_POST['weight']))
+        $_SESSION['weight']=$_POST['weight'];
+    if(isset($_POST['length']))
+        $_SESSION['length']=$_POST['length'];
+    if(isset($_POST['width']))
+        $_SESSION['width']=$_POST['width'];
+    if(isset($_POST['height']))
+        $_SESSION['height']=$_POST['height'];
+    if(isset($_POST['colour']))
+        $_SESSION['colour']=$_POST['colour'];
+    if(isset($_POST['texture']))
+        $_SESSION['texture']=$_POST['texture'];
+    if(isset($_POST['worth']))
+        $_SESSION['worth']=$_POST['worth'];
+    if(isset($_POST['shipment_type']))
+        $_SESSION['shipment_type']=$_POST['shipment_type'];
+    if(isset($_POST['shipment_description']))
+        $_SESSION['shipment_description']=$_POST['shipment_description'];
+
 
     //2nd shipment variables
-    $_SESSION['weight_2'] = $_POST['weight_2'];
-    $_SESSION['length_2'] = $_POST['length_2'];
-    $_SESSION['width_2'] = $_POST['width_2'];
-    $_SESSION['height_2'] = $_POST['height_2'];
-    $_SESSION['colour_2'] = $_POST['colour_2'];
-    $_SESSION['texture_2'] = $_POST['texture_2'];
-    $_SESSION['worth_2'] = $_POST['worth_2'];
-    $_SESSION['shipment_type_2'] = $_POST['shipment_type_2'];
-    $_SESSION['shipment_description_2'] = $_POST['shipment_description_2'];
+    if(isset($_POST['weight_2']))
+        $_SESSION['weight_2']=$_POST['weight_2'];
+    if(isset($_POST['length_2']))
+        $_SESSION['length_2']=$_POST['length_2'];
+    if(isset($_POST['width_2']))
+        $_SESSION['width_2']=$_POST['width_2'];
+    if(isset($_POST['height_2']))
+        $_SESSION['height_2']=$_POST['height_2'];
+    if(isset($_POST['colour_2']))
+        $_SESSION['colour_2']=$_POST['colour_2'];
+    if(isset($_POST['texture_2']))
+        $_SESSION['texture_2']=$_POST['texture_2'];
+    if(isset($_POST['worth_2']))
+        $_SESSION['worth_2']=$_POST['worth_2'];
+    if(isset($_POST['shipment_type_2']))
+        $_SESSION['shipment_type_2']=$_POST['shipment_type_2'];
+    if(isset($_POST['shipment_description_2']))
+        $_SESSION['shipment_description_2']=$_POST['shipment_description_2'];
+
 
     //3rd shipment variables
-    $_SESSION['weight_3'] = $_POST['weight_3'];
-    $_SESSION['length_3'] = $_POST['length_3'];
-    $_SESSION['width_3'] = $_POST['width_3'];
-    $_SESSION['height_3'] = $_POST['height_3'];
-    $_SESSION['colour_3'] = $_POST['colour_3'];
-    $_SESSION['texture_3'] = $_POST['texture_3'];
-    $_SESSION['worth_3'] = $_POST['worth_3'];
-    $_SESSION['shipment_type_3'] = $_POST['shipment_type_3'];
-    $_SESSION['shipment_description_3'] = $_POST['shipment_description_3'];
+    if(isset($_POST['weight_3']))
+        $_SESSION['weight_3']=$_POST['weight_3'];
+    if(isset($_POST['length_3']))
+        $_SESSION['length_3']=$_POST['length_3'];
+    if(isset($_POST['width_3']))
+        $_SESSION['width_3']=$_POST['width_3'];
+    if(isset($_POST['height_3']))
+        $_SESSION['height_3']=$_POST['height_3'];
+    if(isset($_POST['colour_3']))
+        $_SESSION['colour_3']=$_POST['colour_3'];
+    if(isset($_POST['texture_3']))
+        $_SESSION['texture_3']=$_POST['texture_3'];
+    if(isset($_POST['worth_3']))
+        $_SESSION['worth_3']=$_POST['worth_3'];
+    if(isset($_POST['shipment_type_3']))
+        $_SESSION['shipment_type_3']=$_POST['shipment_type_3'];
+    if(isset($_POST['shipment_description_3']))
+        $_SESSION['shipment_description_3']=$_POST['shipment_description_3'];
 
     //4th shipment variables
-    $_SESSION['weight_4'] = $_POST['weight_4'];
-    $_SESSION['length_4'] = $_POST['length_4'];
-    $_SESSION['width_4'] = $_POST['width_4'];
-    $_SESSION['height_4'] = $_POST['height_4'];
-    $_SESSION['colour_4'] = $_POST['colour_4'];
-    $_SESSION['texture_4'] = $_POST['texture_4'];
-    $_SESSION['worth_4'] = $_POST['worth_4'];
-    $_SESSION['shipment_type_4'] = $_POST['shipment_type_4'];
-    $_SESSION['shipment_description_4'] = $_POST['shipment_description_4'];
+    if(isset($_POST['weight_4']))
+        $_SESSION['weight_4']=$_POST['weight_4'];
+    if(isset($_POST['length_4']))
+        $_SESSION['length_4']=$_POST['length_4'];
+    if(isset($_POST['width_4']))
+        $_SESSION['width_4']=$_POST['width_4'];
+    if(isset($_POST['height_4']))
+        $_SESSION['height_4']=$_POST['height_4'];
+    if(isset($_POST['colour_4']))
+        $_SESSION['colour_4']=$_POST['colour_4'];
+    if(isset($_POST['texture_4']))
+        $_SESSION['texture_4']=$_POST['texture_4'];
+    if(isset($_POST['worth_4']))
+        $_SESSION['worth_4']=$_POST['worth_4'];
+    if(isset($_POST['shipment_type_4']))
+        $_SESSION['shipment_type_4']=$_POST['shipment_type_4'];
+    if(isset($_POST['shipment_description_4']))
+        $_SESSION['shipment_description_4']=$_POST['shipment_description_4'];
 ?>
 
 <!doctype html>
@@ -347,9 +389,12 @@
                                     </label>
 
                                     <!-- Edit Button -->
-                                    <label>
-                                        <button style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
-                                    </label>
+                                    <div>
+                                        <a type="button" style="float: left" onClick="history.go(-4)"
+                                           class="w3-button w3-medium w3-green-continue">
+                                            Edit
+                                        </a>
+                                    </div>
                             </fieldset>
 
                     <!-- Return Address Preview -->
@@ -452,9 +497,12 @@
                                     </label>
 
                                     <!-- Edit Button -->
-                                    <label>
-                                        <button style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</button>
-                                    </label>
+                                    <div>
+                                        <a type="button" style="float: left" onClick="history.go(-3)"
+                                           class="w3-button w3-medium w3-green-continue">
+                                            Edit
+                                        </a>
+                                    </div>
                             </fieldset>
 
                     <!-- Shipment Destination Preview -->
@@ -475,7 +523,7 @@
                                     <!-- Gender -->
                                     <label>
                                         <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                               placeholder="Gender: <?php echo $_SESSION['gender'] ?> ">
+                                               placeholder="Gender: <?php echo $_SESSION['gender_dest'] ?> ">
                                     </label>
 
                                     <!-- Title -->
@@ -557,9 +605,12 @@
                                     </label>
 
                                     <!-- Edit Button -->
-                                    <label>
-                                        <button style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</button>
-                                    </label>
+                                    <div>
+                                        <a type="button" style="float: left" onClick="history.go(-2)"
+                                           class="w3-button w3-medium w3-green-continue">
+                                            Edit
+                                        </a>
+                                    </div>
                         </fieldset>
 
                     <!-- Shipment Details Preview -->
@@ -832,10 +883,13 @@
                                         </div>
                                 </fieldset>
 
-                            <!-- Edit Button -->
-                            <label>
-                                <button style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</button>
-                            </label>
+                                <!-- Edit Button -->
+                                <div>
+                                    <a type="button" style="float: left" onClick="history.go(-1)"
+                                       class="w3-button w3-medium w3-green-continue">
+                                        Edit
+                                    </a>
+                                </div>
                     </fieldset>
 
 
@@ -948,13 +1002,17 @@
 
     <!-- footer -->
     <footer>
+        <!-- Address and Phone number -->
         <p class="footeradd">
             3M, Microkatu, 70210 Kuopio, Finland, +358 9 42453389
         </p>
+
+        <!-- Copyright -->
         <p class="footercopyrite">
             Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
+        <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
@@ -964,21 +1022,21 @@
                     <i class="footer-INSTA fab fa-instagram"></i>
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-TWITTER fab fa-twitter"></i>
+                    <i class="footer-INSTA fab fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-linkedin"></i>
+                    <i class="footer-LI fab fa-linkedin"></i>
                 </a>
             </p>
         </div>
 
-        <!-- Footer Links   -->
+        <!-- Footer Links -->
         <div>
             <ul class="footerlinks">
-                <li class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
+                <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

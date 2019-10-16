@@ -94,7 +94,7 @@
         fwrite($myfile, $name_dest);
         $contactname_dest = 'Contact Name = '.$_SESSION['contact_name_dest']."\r\n";    //contact name
         fwrite($myfile, $contactname_dest);
-        $gender = 'Gender = '.$_SESSION['gender']."\r\n";   //gender
+        $gender = 'Gender = '.$_SESSION['gender_dest']."\r\n";   //gender
         fwrite($myfile, $gender);
         $title_dest = 'Title = '.$_SESSION['title_dest']."\r\n";   //title
         fwrite($myfile, $title_dest);

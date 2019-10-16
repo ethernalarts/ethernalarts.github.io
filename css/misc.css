@@ -79,11 +79,11 @@
 
 .sliderWrapper {
   margin: 30px 0;
-  font-family: Verdana, serif;
+  font-family: Federo, Verdana, serif;
   font-weight: 600;
-  font-size: 1.13em;
+  font-size: 1.2em;
   color: #555555;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .sliderWrapper div {

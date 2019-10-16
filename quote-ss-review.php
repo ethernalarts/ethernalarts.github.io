@@ -2,58 +2,109 @@
     //start the session
     session_start();
 
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
     //store posted values in the session variables
+
     //1st item variables
-    $_SESSION['storage_type_ss'] = $_POST['storage_type_ss'];
-    $_SESSION['item_type_ss'] = $_POST['item_type_ss'];
-    $_SESSION['worth_ss'] = $_POST['worth_ss'];
-    $_SESSION['other_ss'] = $_POST['other_ss'];
-    $_SESSION['duration_ss'] = $_POST['duration_ss'];
-    $_SESSION['weight_ss'] = $_POST['weight_ss'];
-    $_SESSION['length_ss'] = $_POST['length_ss'];
-    $_SESSION['width_ss'] = $_POST['width_ss'];
-    $_SESSION['colour_ss'] = $_POST['colour_ss'];
-    $_SESSION['height_ss'] = $_POST['height_ss'];
-    $_SESSION['item_descr_ss'] = $_POST['item_descr_ss'];
+    if(isset($_POST['storage_type_ss']))
+        $_SESSION['storage_type_ss']=$_POST['storage_type_ss'];
+    if(isset($_POST['item_type_ss']))
+        $_SESSION['item_type_ss']=$_POST['item_type_ss'];
+    if(isset($_POST['worth_ss']))
+        $_SESSION['worth_ss']=$_POST['worth_ss'];
+    if(isset($_POST['other_ss']))
+        $_SESSION['other_ss']=$_POST['other_ss'];
+    if(isset($_POST['duration_ss']))
+        $_SESSION['duration_ss']=$_POST['duration_ss'];
+    if(isset($_POST['weight_ss']))
+        $_SESSION['weight_ss']=$_POST['weight_ss'];
+    if(isset($_POST['length_ss']))
+        $_SESSION['length_ss']=$_POST['length_ss'];
+    if(isset($_POST['width_ss']))
+        $_SESSION['width_ss']=$_POST['width_ss'];
+    if(isset($_POST['colour_ss']))
+        $_SESSION['colour_ss']=$_POST['colour_ss'];
+    if(isset($_POST['height_ss']))
+        $_SESSION['height_ss']=$_POST['height_ss'];
+    if(isset($_POST['item_descr_ss']))
+        $_SESSION['item_descr_ss']=$_POST['item_descr_ss'];
+
 
     //2nd item variables
-    $_SESSION['storage_type_ss_2'] = $_POST['storage_type_ss_2'];
-    $_SESSION['item_type_ss_2'] = $_POST['item_type_ss_2'];
-    $_SESSION['worth_ss_2'] = $_POST['worth_ss_2'];
-    $_SESSION['other_ss_2'] = $_POST['other_ss_2'];
-    $_SESSION['duration_ss_2'] = $_POST['duration_ss_2'];
-    $_SESSION['weight_ss_2'] = $_POST['weight_ss_2'];
-    $_SESSION['length_ss_2'] = $_POST['length_ss_2'];
-    $_SESSION['width_ss_2'] = $_POST['width_ss_2'];
-    $_SESSION['colour_ss_2'] = $_POST['colour_ss_2'];
-    $_SESSION['height_ss_2'] = $_POST['height_ss_2'];
-    $_SESSION['item_descr_ss_2'] = $_POST['item_descr_ss_2'];
+    if(isset($_POST['storage_type_ss_2']))
+        $_SESSION['storage_type_ss_2']=$_POST['storage_type_ss_2'];
+    if(isset($_POST['item_type_ss_2']))
+        $_SESSION['item_type_ss_2']=$_POST['item_type_ss_2'];
+    if(isset($_POST['worth_ss_2']))
+        $_SESSION['worth_ss_2']=$_POST['worth_ss_2'];
+    if(isset($_POST['other_ss_2']))
+        $_SESSION['other_ss_2']=$_POST['other_ss_2'];
+    if(isset($_POST['duration_ss_2']))
+        $_SESSION['duration_ss_2']=$_POST['duration_ss_2'];
+    if(isset($_POST['weight_ss_2']))
+        $_SESSION['weight_ss_2']=$_POST['weight_ss_2'];
+    if(isset($_POST['length_ss_2']))
+        $_SESSION['length_ss_2']=$_POST['length_ss_2'];
+    if(isset($_POST['width_ss_2']))
+        $_SESSION['width_ss_2']=$_POST['width_ss_2'];
+    if(isset($_POST['colour_ss_2']))
+        $_SESSION['colour_ss_2']=$_POST['colour_ss_2'];
+    if(isset($_POST['height_ss_2']))
+        $_SESSION['height_ss_2']=$_POST['height_ss_2'];
+    if(isset($_POST['item_descr_ss_2']))
+        $_SESSION['item_descr_ss_2']=$_POST['item_descr_ss_2'];
+
 
     //3rd item variables
-    $_SESSION['storage_type_ss_3'] = $_POST['storage_type_ss_3'];
-    $_SESSION['item_type_ss_3'] = $_POST['item_type_ss_3'];
-    $_SESSION['worth_ss_3'] = $_POST['worth_ss_3'];
-    $_SESSION['other_ss_3'] = $_POST['other_ss_3'];
-    $_SESSION['duration_ss_3'] = $_POST['duration_ss_3'];
-    $_SESSION['weight_ss_3'] = $_POST['weight_ss_3'];
-    $_SESSION['length_ss_3'] = $_POST['length_ss_3'];
-    $_SESSION['width_ss_3'] = $_POST['width_ss_3'];
-    $_SESSION['colour_ss_3'] = $_POST['colour_ss_3'];
-    $_SESSION['height_ss_3'] = $_POST['height_ss_3'];
-    $_SESSION['item_descr_ss_3'] = $_POST['item_descr_ss_3'];
+    if(isset($_POST['storage_type_ss_3']))
+        $_SESSION['storage_type_ss_3']=$_POST['storage_type_ss_3'];
+    if(isset($_POST['item_type_ss_3']))
+        $_SESSION['item_type_ss_3']=$_POST['item_type_ss_3'];
+    if(isset($_POST['worth_ss_3']))
+        $_SESSION['worth_ss_3']=$_POST['worth_ss_3'];
+    if(isset($_POST['other_ss_3']))
+        $_SESSION['other_ss_3']=$_POST['other_ss_3'];
+    if(isset($_POST['duration_ss_3']))
+        $_SESSION['duration_ss_3']=$_POST['duration_ss_3'];
+    if(isset($_POST['weight_ss_3']))
+        $_SESSION['weight_ss_3']=$_POST['weight_ss_3'];
+    if(isset($_POST['length_ss_3']))
+        $_SESSION['length_ss_3']=$_POST['length_ss_3'];
+    if(isset($_POST['width_ss_3']))
+        $_SESSION['width_ss_3']=$_POST['width_ss_3'];
+    if(isset($_POST['colour_ss_3']))
+        $_SESSION['colour_ss_3']=$_POST['colour_ss_3'];
+    if(isset($_POST['height_ss_3']))
+        $_SESSION['height_ss_3']=$_POST['height_ss_3'];
+    if(isset($_POST['item_descr_ss_3']))
+        $_SESSION['item_descr_ss_3']=$_POST['item_descr_ss_3'];
+
 
     //4th item variables
-    $_SESSION['storage_type_ss_4'] = $_POST['storage_type_ss_4'];
-    $_SESSION['item_type_ss_4'] = $_POST['item_type_ss_4'];
-    $_SESSION['worth_ss_4'] = $_POST['worth_ss_4'];
-    $_SESSION['other_ss_4'] = $_POST['other_ss_4'];
-    $_SESSION['duration_ss_4'] = $_POST['duration_ss_4'];
-    $_SESSION['weight_ss_4'] = $_POST['weight_ss_4'];
-    $_SESSION['length_ss_4'] = $_POST['length_ss_4'];
-    $_SESSION['width_ss_4'] = $_POST['width_ss_4'];
-    $_SESSION['colour_ss_4'] = $_POST['colour_ss_4'];
-    $_SESSION['height_ss_4'] = $_POST['height_ss_4'];
-    $_SESSION['item_descr_ss_4'] = $_POST['item_descr_ss_4'];
+    if(isset($_POST['storage_type_ss_4']))
+        $_SESSION['storage_type_ss_4']=$_POST['storage_type_ss_4'];
+    if(isset($_POST['item_type_ss_4']))
+        $_SESSION['item_type_ss_4']=$_POST['item_type_ss_4'];
+    if(isset($_POST['worth_ss_4']))
+        $_SESSION['worth_ss_4']=$_POST['worth_ss_4'];
+    if(isset($_POST['other_ss_4']))
+        $_SESSION['other_ss_4']=$_POST['other_ss_4'];
+    if(isset($_POST['duration_ss_4']))
+        $_SESSION['duration_ss_4']=$_POST['duration_ss_4'];
+    if(isset($_POST['weight_ss_4']))
+        $_SESSION['weight_ss_4']=$_POST['weight_ss_4'];
+    if(isset($_POST['length_ss_4']))
+        $_SESSION['length_ss_4']=$_POST['length_ss_4'];
+    if(isset($_POST['width_ss_4']))
+        $_SESSION['width_ss_4']=$_POST['width_ss_4'];
+    if(isset($_POST['colour_ss_4']))
+        $_SESSION['colour_ss_4']=$_POST['colour_ss_4'];
+    if(isset($_POST['height_ss_4']))
+        $_SESSION['height_ss_4']=$_POST['height_ss_4'];
+    if(isset($_POST['item_descr_ss_4']))
+        $_SESSION['item_descr_ss_4']=$_POST['item_descr_ss_4'];
 ?>
 
 <!doctype html>
@@ -118,10 +169,6 @@
             margin: 0 0 33px;
             border: none;
             border-bottom: 1px solid #2d2d2d;
-        }
-
-        .editField {10px;
-            margin-top:
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -252,110 +299,115 @@
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
                         <legend>Basic Information</legend>
-                                <!-- Name -->
-                                <label>
-                                    <input id="edit" disabled class="w3-light-gray"
-                                           placeholder="Full Name: <?php echo $_SESSION['name_ss'] ?>">
-                                </label>
+                        <!-- Name -->
+                        <label>
+                            <input id="edit" disabled class="w3-light-gray"
+                                   placeholder="Full Name: <?php echo $_SESSION['name_ss'] ?>">
+                        </label>
 
-                                <!-- Contact Name -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-light-gray"
-                                           placeholder="Contact Name: <?php echo $_SESSION['contactname_ss'] ?> ">
-                                </label>
+                        <!-- Contact Name -->
+                        <label>
+                            <input disabled style="float: right" class="w3-light-gray"
+                                   placeholder="Contact Name: <?php echo $_SESSION['contactname_ss'] ?> ">
+                        </label>
 
-                                <!-- Gender -->
-                                <label>
-                                    <input disabled class="w3-light-gray"
-                                           placeholder="Gender: <?php echo $_SESSION['gender_ss'] ?> ">
-                                </label>
+                        <!-- Gender -->
+                        <label>
+                            <input disabled class="w3-light-gray"
+                                   placeholder="Gender: <?php echo $_SESSION['gender_ss'] ?> ">
+                        </label>
 
-                                <!-- Title -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-light-gray"
-                                           placeholder="Title: <?php echo $_SESSION['title_ss'] ?> ">
-                                </label>
+                        <!-- Title -->
+                        <label>
+                            <input disabled style="float: right" class="w3-light-gray"
+                                   placeholder="Title: <?php echo $_SESSION['title_ss'] ?> ">
+                        </label>
 
-                                <!-- Age -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Age: <?php echo $_SESSION['age_ss'] ?> ">
-                                </label>
+                        <!-- Age -->
+                        <label>
+                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Age: <?php echo $_SESSION['age_ss'] ?> ">
+                        </label>
 
-                                <!-- Occupation -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Occupation: <?php echo $_SESSION['occupation_ss'] ?> ">
-                                </label>
+                        <!-- Occupation -->
+                        <label>
+                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Occupation: <?php echo $_SESSION['occupation_ss'] ?> ">
+                        </label>
 
-                                <!-- Phone Number -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Phone Number: <?php echo $_SESSION['phone_ss'] ?> ">
-                                </label>
+                        <!-- Phone Number -->
+                        <label>
+                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Phone Number: <?php echo $_SESSION['phone_ss'] ?> ">
+                        </label>
 
-                                <!-- Email -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Email: <?php echo $_SESSION['email_ss'] ?> ">
-                                </label>
+                        <!-- Email -->
+                        <label>
+                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Email: <?php echo $_SESSION['email_ss'] ?> ">
+                        </label>
 
-                                <!-- Country -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Country: Finland">
-                                </label>
+                        <!-- Country -->
+                        <label>
+                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Country: Finland">
+                        </label>
 
-                                <!-- State -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="State: <?php echo $_SESSION['state_ss'] ?> ">
-                                </label>
+                        <!-- State -->
+                        <label>
+                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="State: <?php echo $_SESSION['state_ss'] ?> ">
+                        </label>
 
-                                <!-- City -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="City: <?php echo $_SESSION['city_ss'] ?> ">
-                                </label>
+                        <!-- City -->
+                        <label>
+                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="City: <?php echo $_SESSION['city_ss'] ?> ">
+                        </label>
 
-                                <!-- Zip Code -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Zip Code: <?php echo $_SESSION['zipcode_ss'] ?> ">
-                                </label>
+                        <!-- Zip Code -->
+                        <label>
+                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Zip Code: <?php echo $_SESSION['zipcode_ss'] ?> ">
+                        </label>
 
-                                <!-- Street Address -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                           placeholder="Street Address: <?php echo $_SESSION['address_ss'] ?> ">
-                                </label>
+                        <!-- Street Address -->
+                        <label>
+                            <input disabled class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
+                                   placeholder="Street Address: <?php echo $_SESSION['address_ss'] ?> ">
+                        </label>
 
-                                <!-- Street Address 2 -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Apt, Building, Floor etc: <?php echo $_SESSION['apt_ss'] ?> ">
-                                </label>
+                        <!-- Street Address 2 -->
+                        <label>
+                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Apt, Building, Floor etc: <?php echo $_SESSION['apt_ss'] ?> ">
+                        </label>
 
-                                <!-- Department -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Department: <?php echo $_SESSION['dept_ss'] ?> ">
-                                </label>
+                        <!-- Department -->
+                        <label>
+                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Department: <?php echo $_SESSION['dept_ss'] ?> ">
+                        </label>
 
-                                <!-- Storage Status Updates -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Storage Status Updates? <?php echo $_SESSION['item_update_ss'] ?> ">
-                                </label>
+                        <!-- Storage Status Updates -->
+                        <label>
+                            <input disabled class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Storage Status Updates? <?php echo $_SESSION['item_update_ss'] ?> ">
+                        </label>
 
-                                <!-- Residential Address -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Residential Address? <?php echo $_SESSION['resAdd_ss'] ?> ">
-                                </label>
+                        <!-- Residential Address -->
+                        <label>
+                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
+                                   placeholder="Residential Address? <?php echo $_SESSION['resAdd_ss'] ?> ">
+                        </label>
 
-                                <!-- Edit Button -->
-                                <a style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                        <!-- Edit Button -->
+                        <div>
+                            <a type="button" style="float: left" onClick="history.go(-2)"
+                               class="w3-button w3-medium w3-green-continue">
+                                Edit
+                            </a>
+                        </div>
                     </fieldset>
 
                     <!-- Item Details Preview -->
@@ -651,10 +703,13 @@
                                             </div>
                                 </fieldset>
 
-                            <!-- Edit Button -->
-                            <label>
-                                <a style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
-                            </label>
+                                <!-- Edit Button -->
+                                <div>
+                                    <a type="button" style="float: left" onClick="history.go(-1)"
+                                       class="w3-button w3-medium w3-green-continue">
+                                        Edit
+                                    </a>
+                                </div>
                     </fieldset>
 
 

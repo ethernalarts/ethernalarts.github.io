@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm" />
+    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm">
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-1.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-1.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-2.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-2.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-3.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-4.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-review.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-1.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-1.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-review.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-review.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is-skip.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is-skip.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/saveinfo-is.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +71,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -191,7 +205,35 @@
       <workItem from="1571068210522" duration="1734000" />
       <workItem from="1571075644827" duration="1709000" />
       <workItem from="1571117695638" duration="1686000" />
-      <workItem from="1571119551182" duration="850000" />
+      <workItem from="1571119551182" duration="1359000" />
+      <workItem from="1571131111519" duration="111000" />
+      <workItem from="1571150604137" duration="36000" />
+      <workItem from="1571153256284" duration="1716000" />
+      <workItem from="1571155154265" duration="1407000" />
+      <workItem from="1571207885600" duration="1622000" />
+      <workItem from="1571209796235" duration="664000" />
+      <workItem from="1571217240643" duration="1730000" />
+      <workItem from="1571219308076" duration="1741000" />
+      <workItem from="1571221209643" duration="1964000" />
+      <workItem from="1571223881035" duration="1725000" />
+      <workItem from="1571225904324" duration="1713000" />
+      <workItem from="1571227779469" duration="1660000" />
+      <workItem from="1571229712351" duration="1108000" />
+      <workItem from="1571233229162" duration="1722000" />
+      <workItem from="1571235132190" duration="886000" />
+      <workItem from="1571237823098" duration="2042000" />
+      <workItem from="1571239998223" duration="1724000" />
+      <workItem from="1571241935739" duration="1720000" />
+      <workItem from="1571243819859" duration="2022000" />
+      <workItem from="1571253905415" duration="1684000" />
+      <workItem from="1571255914970" duration="1436000" />
+      <workItem from="1571257492611" duration="173000" />
+      <workItem from="1571258500256" duration="95000" />
+      <workItem from="1571259360079" duration="1725000" />
+      <workItem from="1571261212799" duration="1719000" />
+      <workItem from="1571263153830" duration="1689000" />
+      <workItem from="1571265081098" duration="1692000" />
+      <workItem from="1571267007154" duration="449000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>

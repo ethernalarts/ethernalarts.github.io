@@ -192,7 +192,7 @@ function locationInfo() {
         var data = {};
         jQuery('.countries').find("option:eq(0)").html("Please wait...");
         call.send(data, url, method, function(data) {
-            jQuery('.countries').find("option:eq(0)").html("Country:  *");
+            jQuery('.countries').find("option:eq(0)").html("Select Country");
 
             if(data.tp == 1){
                 if(data.hits > 1000)

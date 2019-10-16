@@ -1,22 +1,22 @@
 NEW INTERNATIONAL SHIPPING ORDER!
 
 SHIPMENT ORIGIN
-Name = Ethernal Arts
+Name = Dove Pharmaceuticals
 Contact Name = Uwa
 Gender = Male
 Title = Mr.
-Country Code = 1
+Country Code = 
 Phone = 0987654321
 Country = United States
-State = Washington,D.C
-City = Washington, D.C.
+State = Florida
+City = Alva
 Zip Code = 345789
-Street Address = 8 Limit Hotel Road
+Street Address = 8 Limit Hotel Road, Office 4
 Street Address 2/Apartment, Suite, Floor etc = Office 4
 Shipping Option = VLink Worldwide Express
 Department = Web Development
 Email = email@mail.com
-Residential Address? = No
+Residential Address? = Yes
 Status Updates? = Yes
 
 
@@ -25,12 +25,12 @@ Name = Ethernal Arts
 Contact Name = Deborah
 Gender = Male
 Title = Commander
-Country Code = 1
+Country Code = 
 Phone = 0987654321
-Country = United States
-State = Washington,D.C
-City = Washington, D.C.
-Zip Code = 345789
+Country = Canada
+State = Manitoba
+City = Melita
+Zip Code = 123298
 Street Address = 8 Limit Hotel Road
 Street Address 2/Apartment, Suite, Floor etc = Office 4
 Department = Security
@@ -44,14 +44,14 @@ Name = Pabs Couture
 Contact Name = Donald
 Gender = Male
 Title = Mr.
-Country Code = 1
-Phone = 0987654321
-Country = Canada
-State = Manitoba
-City = Altona
-Zip Code = 345789
+Country Code = 
+Phone = 8765432134
+Country = Nigeria
+State = Edo
+City = Benin City
+Zip Code = 345776
 Street Address = 8 Limit Hotel Road
-Street Address 2/Apartment, Suite, Floor etc = Office 4
+Street Address 2/Apartment, Suite, Floor etc = Apartment 4
 Department = Fashion
 Email = email@mail.com
 Residential Address? = No
@@ -61,28 +61,28 @@ Notify of return? = Yes
 SHIPMENT DIMENSIONS
 
 1ST SHIPMENT DETAILS:
-Weight = 23
-Length = 11
-Width = 12
+Weight = 15
+Length = 9
+Width = 4
 Height = 9
-Shipment Worth = 450
-Shipment Type = Luggage
-Shipment Type (Other)= 
-Colour = Red
-Texture = Leather
-Shipment Description = A FENDI duffel bag
+Shipment Worth = 9000
+Shipment Type = Jewellery
+Shipment Type (Other) = 
+Colour = Blue
+Texture = Crystal
+Shipment Description = 
 
 2ND SHIPMENT DETAILS:
-Weight = 12
-Length = 11
-Width = 9
-Height = 6
-Shipment Worth = 700
-Shipment Type = Laptop
-Shipment Type (Other)= 
-Colour = Silver
+Weight = 
+Length = 
+Width = 
+Height = 
+Shipment Worth = 
+Shipment Type = 0
+Shipment Type (Other) = 
+Colour = 
 Texture = 
-Shipment Description = An HP Envy Laptop
+Shipment Description = 
 
 3RD SHIPMENT DETAILS:
 Weight = 
@@ -91,7 +91,7 @@ Width =
 Height = 
 Shipment Worth = 
 Shipment Type = 0
-Shipment Type (Other)= 
+Shipment Type (Other) = 
 Colour = 
 Texture = 
 Shipment Description = 
@@ -103,7 +103,7 @@ Width =
 Height = 
 Shipment Worth = 
 Shipment Type = 0
-Shipment Type (Other)= 
+Shipment Type (Other) = 
 Colour = 
 Texture = 
 Shipment Description = 

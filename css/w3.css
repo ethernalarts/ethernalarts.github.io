@@ -1677,7 +1677,8 @@ button.w3-button.w3-black-previous:hover {
 }
 
 .w3-light-gray, .w3-hover-light-gray:hover {
-    color: black !important;
+    font-family: roboto, Montserrat, serif;
+    color: #9b9b9b;
     background-color: white !important;
     border: 1px solid #b8b8b8 !important;
 }
