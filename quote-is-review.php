@@ -296,7 +296,7 @@
                                 <!-- Contact's Name -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="contact_name"> Contact's Name</label>
-                                    <input disabled class="w3-light-gray" style="float: right" placeholder="<?php echo $_SESSION['contact_name'] ?>" id="contact_name">
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['contact_name'] ?>" id="contact_name">
                                 </div>
                             </div>
 
@@ -304,13 +304,13 @@
                                 <!-- Gender -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="gender">Gender</label>
-                                    <input disabled class="w3-light-gray" style="float: right" placeholder="<?php echo $_SESSION['gender'] ?>" id="gender">
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['gender'] ?>" id="gender">
                                 </div>
 
                                 <!-- Title -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="title">Title</label>
-                                    <input disabled class="w3-light-gray" style="float: right" placeholder="<?php echo $_SESSION['title'] ?>" id="title">
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['title'] ?>" id="title">
                                 </div>
                             </div>
 

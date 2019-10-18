@@ -51,15 +51,18 @@
     <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
-    <link href="css/vlink.css" rel="stylesheet">
+    <link href="css/intlTelInput.css" rel="stylesheet">
+    <link href="./css/w3.css" type="text/css" rel="stylesheet">
+    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
     <script src="js/statecity.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -96,18 +99,16 @@
             margin-top: 260px;
         }
 
-        input:disabled {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
-        }
-
-        .w3-button.w3-green-continue {
+        .container-form.w3-green-continue input {
             color: white;
             background-color: #2da52d;
+            cursor: pointer;
             padding: 8px 20px;
+            font-family: Montserrat, serif;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 500;
+            border-radius: 0;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -187,7 +188,6 @@
         <div class="subheader-h2" style="width: 320px;">Quote - Domestic Shipping</div>
     </div>
 
-
     <!-- Mobile Menu -->
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -212,7 +212,6 @@
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
-
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container">
@@ -241,285 +240,327 @@
                     <!-- Package Origin Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
                         <legend>Package Origin</legend>
-                                <!-- Name -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Full Name: <?php echo $_SESSION['name_ec'] ?> ">
-                                </label>
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="name_ec"> Full Name (or Company)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['name_ec'] ?>" class="w3-light-gray" id="name_ec">
+                                </div>
 
-                                <!-- Contact Name -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Contact Name: <?php echo $_SESSION['contactname_ec'] ?> ">
-                                </label>
+                                <!-- Contact's Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="contactname_ec"> Contact's Name</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['contactname_ec'] ?>" id="contactname_ec">
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Gender -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Gender: <?php echo $_SESSION['gender_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="gender_ec">Gender</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['gender_ec'] ?>" id="gender_ec">
+                                </div>
 
                                 <!-- Title -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Title: <?php echo $_SESSION['title_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="title_ec">Title</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['title_ec'] ?>" id="title_ec">
+                                </div>
+                            </div>
 
-                                <!-- Phone Number -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Phone Number: <?php echo $_SESSION['phone_ec'] ?> ">
-                                </label>
+                            <div class="row">
+                                <!-- Telephone -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="phone_ec">Telephone</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['phone_ec'] ?>" id="phone_ec">
+                                </div>
 
                                 <!-- Email -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Email: <?php echo $_SESSION['email_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="email_ec">Email</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['email_ec'] ?>" id="email_ec">
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Country -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Country: Finland">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="countryId">Country</label>
+                                    <input disabled class="w3-light-gray" placeholder="Finland" id="countryId">
+                                </div>
 
                                 <!-- State -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="State: <?php echo $_SESSION['state_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="stateId">State</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['state_ec'] ?>" id="stateId">
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- City -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="City: <?php echo $_SESSION['city_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="cityId">City</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['city_ec'] ?>" id="cityId">
+                                </div>
 
                                 <!-- Zip Code -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Zip Code: <?php echo $_SESSION['zipcode_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="zipcode_ec">Zip Code</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['zipcode_ec'] ?>" id="zipcode_ec">
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Street Address -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                           placeholder="Street Address: <?php echo $_SESSION['address_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-12">
+                                    <label for="address_ec">Street Address</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec'] ?>" id="address_ec">
+                                </div>
+                            </div>
 
-                                <!-- Apartment -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Apartment: <?php echo $_SESSION['apt_ec'] ?> ">
-                                </label>
+                            <div class="row">
+                                <!-- Street Address 2 -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="apt_ec">Street Address 2 (or Apartment, suite, floor, unit etc)</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['apt_ec'] ?>" id="apt_ec">
+                                </div>
 
                                 <!-- Department -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Department: <?php echo $_SESSION['dept_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="dept_ec">Department, c/o, etc.</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['dept_ec'] ?>" id="dept_ec">
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Pickup Date -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Pickup Date: <?php echo $_SESSION['pickupdate'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="pickupdate">Pickup Date</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['pickupdate'] ?>" id="pickupdate">
+                                </div>
 
                                 <!-- Pickup Time -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray" style="float: right"
-                                           placeholder="Pickup Time: <?php echo $_SESSION['pickuptime'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="pickuptime">Pickup Time</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['pickuptime'] ?>" id="pickuptime">
+                                </div>
+                            </div>
 
-                                <!-- Residential Address -->
-                                <label>
-                                    <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec'] ?> ">
-                                </label>
+                            <div class="row">
+                                <!-- Residential Address? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="resAdd_ec">Is this a residential address?</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['resAdd_ec'] ?>" id="resAdd_ec">
+                                </div>
 
                                 <!-- Package Updates? -->
-                                <label>
-                                    <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                           placeholder="Package Updates? <?php echo $_SESSION['pkg_update_ec'] ?> ">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="pkg_update_ec">Should we send you package updates?</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['pkg_update_ec'] ?>" id="pkg_update_ec">
+                                </div>
+                            </div>
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">
-                                    Edit
-                                </a>
+                                <a type="button" style="float: left" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
                     <!-- Return Address Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
                         <legend>Return Address</legend>
-                            <!-- Name -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Full Name: <?php echo $_SESSION['name_ec_ra'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="name_ec_ra"> Full Name (or Company)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['name_ec_ra'] ?>" class="w3-light-gray" id="name_ec_ra">
+                                </div>
 
-                            <!-- Contact Name -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Contact Name: <?php echo $_SESSION['contactname_ec_ra'] ?> ">
-                            </label>
+                                <!-- Contact's Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="contactname_ec_ra"> Contact's Name</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['contactname_ec_ra'] ?>" id="contactname_ec_ra">
+                                </div>
+                            </div>
 
-                            <!-- Gender -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Gender: <?php echo $_SESSION['gender_ec_ra'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Gender -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="gender_ec_ra">Gender</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['gender_ec_ra'] ?>" id="gender_ec_ra">
+                                </div>
 
-                            <!-- Title -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Title: <?php echo $_SESSION['title_ec_ra'] ?> ">
-                            </label>
+                                <!-- Title -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="title_ec_ra">Title</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['title_ec_ra'] ?>" id="title_ec_ra">
+                                </div>
+                            </div>
 
-                            <!-- Phone Number -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Phone Number: <?php echo $_SESSION['phone_ec_ra'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Telephone -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="phone_ec_ra">Telephone</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['phone_ec_ra'] ?>" id="phone_ec_ra">
+                                </div>
 
-                            <!-- Email -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Email: <?php echo $_SESSION['email_ec_ra'] ?> ">
-                            </label>
+                                <!-- Email -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="email_ec_ra">Email</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['email_ec_ra'] ?>" id="email_ec_ra">
+                                </div>
+                            </div>
 
-                            <!-- Country -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Country: Finland">
-                            </label>
+                            <div class="row">
+                                <!-- Country -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="countryId">Country</label>
+                                    <input disabled class="w3-light-gray" placeholder="Finland" id="countryId">
+                                </div>
 
-                            <!-- State -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="State: <?php echo $_SESSION['state_ec_ra'] ?> ">
-                            </label>
+                                <!-- State -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="stateId">State</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['state_ec_ra'] ?>" id="stateId">
+                                </div>
+                            </div>
 
-                            <!-- City -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="City: <?php echo $_SESSION['city_ec_ra'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- City -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="cityId">City</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['city_ec_ra'] ?>" id="cityId">
+                                </div>
 
-                            <!-- Zip Code -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Zip Code: <?php echo $_SESSION['zipcode_ec_ra'] ?> ">
-                            </label>
+                                <!-- Zip Code -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="zipcode_ec_ra">Zip Code</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['zipcode_ec_ra'] ?>" id="zipcode_ec_ra">
+                                </div>
+                            </div>
 
-                            <!-- Street Address -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Street Address: <?php echo $_SESSION['address_ec_ra'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Street Address -->
+                                <div class="col-xs-12 col-sm-12">
+                                    <label for="address_ec_ra">Street Address</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec_ra'] ?>" id="address_ec_ra">
+                                </div>
+                            </div>
 
-                            <!-- Apartment -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Apartment: <?php echo $_SESSION['apt_ec_ra'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Street Address 2 -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="apt_ec_ra">Street Address 2 (or Apartment, suite, floor, unit etc)</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['apt_ec_ra'] ?>" id="apt_ec_ra">
+                                </div>
 
-                            <!-- Department -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Department: <?php echo $_SESSION['dept_ec_ra'] ?> ">
-                            </label>
+                                <!-- Department -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="dept_ec_ra">Department, c/o, etc.</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['dept_ec_ra'] ?>" id="dept_ec_ra">
+                                </div>
+                            </div>
 
-                            <!-- Notify of Return -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Notify of Return? <?php echo $_SESSION['notify_ec'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Residential Address? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="resAdd_ec_ra">Is this a residential address?</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['resAdd_ec_ra'] ?>" id="resAdd_ec_ra">
+                                </div>
 
-                            <!-- Residential Address -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec_ra'] ?> ">
-                            </label>
+                                <!-- Return Notification -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="notify_ec">Should we notify this person of return?</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['notify_ec'] ?>" id="notify_ec">
+                                </div>
+                            </div>
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">
-                                    Edit
-                                </a>
+                                <a type="button" style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
                     <!-- Package Details Preview -->
                     <fieldset style="margin: 50px 0 30px">
                         <legend>Package Details</legend>
-                            <!-- Package Type -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Package Type: <?php echo $_SESSION['package_type'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Package Type -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="package_type">Package Type</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['package_type'] ?>" class="w3-light-gray" id="package_type">
+                                </div>
 
-                            <!-- Delivery Options -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Delivery option: <?php echo $_SESSION['delivery_options'] ?> ">
-                            </label>
+                                <!-- Delivery Option -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="delivery_options"> Shipment's Worth (USD)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['delivery_options'] ?>" class="w3-light-gray" id="delivery_options">
+                                </div>
+                            </div>
 
-                            <!-- Package Type (Other) -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Package Type (Other): <?php echo $_SESSION['other'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Package Type (OTHER)-->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="other">Package Type (OTHER)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['other'] ?>" class="w3-light-gray" id="other">
+                                </div>
 
-                            <!-- Package's Worth (USD) -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Package's Worth (USD): <?php echo $_SESSION['worth'] ?> ">
-                            </label>
+                                <!-- Package's Worth -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="worth">Package's Worth (USD)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['worth'] ?>" class="w3-light-gray" id="worth">
+                                </div>
+                            </div>
 
-                            <!-- Weight -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Weight (pounds): <?php echo $_SESSION['weight'] ?>">
-                            </label>
+                            <div class="row">
+                                <!-- Weight -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="weight">Weight (pounds)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['weight'] ?>" class="w3-light-gray" id="weight">
+                                </div>
 
-                            <!-- Length -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Length (inches): <?php echo $_SESSION['length'] ?>">
-                            </label>
+                                <!-- Length -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="length">Length (inches)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['length'] ?>" class="w3-light-gray" id="length">
+                                </div>
+                            </div>
 
-                            <!-- Width -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Width (inches): <?php echo $_SESSION['width'] ?>">
-                            </label>
+                            <div class="row">
+                                <!-- Width -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="width">Width (inches)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['width'] ?>" class="w3-light-gray" id="width">
+                                </div>
 
-                            <!-- Height -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Height (inches): <?php echo $_SESSION['height'] ?>">
-                            </label>
+                                <!-- Height -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="height">Height (inches)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['weight'] ?>" class="w3-light-gray" id="weight">
+                                </div>
+                            </div>
 
-                            <!-- Colour -->
-                            <label>
-                                <input disabled class="w3-light-gray"
-                                       placeholder="Colour: <?php echo $_SESSION['colour'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Colour -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="colour">Colour</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['colour'] ?>" class="w3-light-gray" id="colour">
+                                </div>
 
-                            <!-- Texture -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Texture: <?php echo $_SESSION['texture'] ?> ">
-                            </label>
+                                <!-- Texture -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="texture">Texture</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['texture'] ?>" class="w3-light-gray" id="texture">
+                                </div>
+                            </div>
 
-                            <!-- Brief Package Description -->
-                            <label>
-                                <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Additional info about package: <?php echo $_SESSION['package_description'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Additional Info -->
+                                <div class="col-xs-12 col-sm-12">
+                                    <label for="package_description">Additional Information</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['package_description'] ?>" class="w3-light-gray" id="package_description">
+                                </div>
+                            </div>
 
                                 <!-- Show other shipments -->
                                 <div style="margin: 0 0 30px;" class="sliderWrapper">
@@ -531,211 +572,247 @@
                                 <!-- 2nd package -->
                                 <fieldset id="secondPackage" style="margin: 10px 0 30px; display: none">
                                     <legend>2nd Package Details</legend>
-                                        <!-- Package Type -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package Type: <?php echo $_SESSION['package_type_2'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Package Type -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="package_type_2">Package Type</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['package_type_2'] ?>" class="w3-light-gray" id="package_type_2">
+                                            </div>
 
-                                        <!-- Delivery Options -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Delivery option: <?php echo $_SESSION['delivery_options_2'] ?> ">
-                                        </label>
+                                            <!-- Delivery Option -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="delivery_options_2"> Shipment's Worth (USD)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['delivery_options_2'] ?>" class="w3-light-gray" id="delivery_options_2">
+                                            </div>
+                                        </div>
 
-                                        <!-- Package Type (Other) -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package Type (Other): <?php echo $_SESSION['other_2'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Package Type (OTHER)-->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="other_2">Package Type (OTHER)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['other_2'] ?>" class="w3-light-gray" id="other_2">
+                                            </div>
 
-                                        <!-- Package's Worth (USD) -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package's Worth (USD): <?php echo $_SESSION['worth_2'] ?> ">
-                                        </label>
+                                            <!-- Package's Worth -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="worth_2">Package's Worth (USD)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['worth_2'] ?>" class="w3-light-gray" id="worth_2">
+                                            </div>
+                                        </div>
 
-                                        <!-- Weight -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_2'] ?>">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Weight -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="weight_2">Weight (pounds)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['weight_2'] ?>" class="w3-light-gray" id="weight_2">
+                                            </div>
 
-                                        <!-- Length -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Length (inches): <?php echo $_SESSION['length_2'] ?>">
-                                        </label>
+                                            <!-- Length -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="length_2">Length (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['length_2'] ?>" class="w3-light-gray" id="length_2">
+                                            </div>
+                                        </div>
 
-                                        <!-- Width -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Width (inches): <?php echo $_SESSION['width_2'] ?>">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Width -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="width_2">Width (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['width_2'] ?>" class="w3-light-gray" id="width_2">
+                                            </div>
 
-                                        <!-- Height -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Height (inches): <?php echo $_SESSION['height_2'] ?>">
-                                        </label>
+                                            <!-- Height -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="height_2">Height (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['weight_2'] ?>" class="w3-light-gray" id="weight_2">
+                                            </div>
+                                        </div>
 
-                                        <!-- Colour -->
-                                        <label>
-                                            <input disabled class="w3-light-gray"
-                                                   placeholder="Colour: <?php echo $_SESSION['colour_2'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Colour -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="colour_2">Colour</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['colour_2'] ?>" class="w3-light-gray" id="colour_2">
+                                            </div>
 
-                                        <!-- Texture -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Texture: <?php echo $_SESSION['texture_2'] ?> ">
-                                        </label>
+                                            <!-- Texture -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="texture_2">Texture</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['texture_2'] ?>" class="w3-light-gray" id="texture_2">
+                                            </div>
+                                        </div>
 
-                                        <!-- Brief Package Description -->
-                                        <label>
-                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Additional info about package: <?php echo $_SESSION['package_description_2'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Additional Info -->
+                                            <div class="col-xs-12 col-sm-12">
+                                                <label for="package_description_2">Additional Information</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['package_description_2'] ?>" class="w3-light-gray" id="package_description_2">
+                                            </div>
+                                        </div>
                                 </fieldset>
 
                                 <!-- 3rd package -->
                                 <fieldset id="thirdPackage" style="margin: 10px 0 30px; display: none">
                                     <legend>3rd Package Details</legend>
-                                        <!-- Package Type -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package Type: <?php echo $_SESSION['package_type_3'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Package Type -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="package_type_3">Package Type</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['package_type_3'] ?>" class="w3-light-gray" id="package_type_3">
+                                            </div>
 
-                                        <!-- Delivery Options -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Delivery option: <?php echo $_SESSION['delivery_options_3'] ?> ">
-                                        </label>
+                                            <!-- Delivery Option -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="delivery_options_3"> Shipment's Worth (USD)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['delivery_options_3'] ?>" class="w3-light-gray" id="delivery_options_3">
+                                            </div>
+                                        </div>
 
-                                        <!-- Package Type (Other) -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package Type (Other): <?php echo $_SESSION['other_3'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Package Type (OTHER)-->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="other_3">Package Type (OTHER)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['other_3'] ?>" class="w3-light-gray" id="other_3">
+                                            </div>
 
-                                        <!-- Package's Worth (USD) -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package's Worth (USD): <?php echo $_SESSION['worth_3'] ?> ">
-                                        </label>
+                                            <!-- Package's Worth -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="worth_3">Package's Worth (USD)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['worth_3'] ?>" class="w3-light-gray" id="worth_3">
+                                            </div>
+                                        </div>
 
-                                        <!-- Weight -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_3'] ?>">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Weight -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="weight_3">Weight (pounds)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['weight_3'] ?>" class="w3-light-gray" id="weight_3">
+                                            </div>
 
-                                        <!-- Length -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Length (inches): <?php echo $_SESSION['length_3'] ?>">
-                                        </label>
+                                            <!-- Length -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="length_3">Length (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['length_3'] ?>" class="w3-light-gray" id="length_3">
+                                            </div>
+                                        </div>
 
-                                        <!-- Width -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Width (inches): <?php echo $_SESSION['width_3'] ?>">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Width -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="width_3">Width (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['width_3'] ?>" class="w3-light-gray" id="width_3">
+                                            </div>
 
-                                        <!-- Height -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Height (inches): <?php echo $_SESSION['height_3'] ?>">
-                                        </label>
+                                            <!-- Height -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="height_3">Height (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['weight_3'] ?>" class="w3-light-gray" id="weight_3">
+                                            </div>
+                                        </div>
 
-                                        <!-- Colour -->
-                                        <label>
-                                            <input disabled class="w3-light-gray"
-                                                   placeholder="Colour: <?php echo $_SESSION['colour_3'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Colour -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="colour_3">Colour</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['colour_3'] ?>" class="w3-light-gray" id="colour_3">
+                                            </div>
 
-                                        <!-- Texture -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Texture: <?php echo $_SESSION['texture_3'] ?> ">
-                                        </label>
+                                            <!-- Texture -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="texture_3">Texture</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['texture_3'] ?>" class="w3-light-gray" id="texture_3">
+                                            </div>
+                                        </div>
 
-                                        <!-- Brief Package Description -->
-                                        <label>
-                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Additional info about package: <?php echo $_SESSION['package_description_3'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Additional Info -->
+                                            <div class="col-xs-12 col-sm-12">
+                                                <label for="package_description_3">Additional Information</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['package_description_3'] ?>" class="w3-light-gray" id="package_description_3">
+                                            </div>
+                                        </div>
                                 </fieldset>
 
                                 <!-- 4th package -->
                                 <fieldset id="fourthPackage" style="margin: 10px 0 30px; display: none">
                                     <legend>4th Package Details</legend>
-                                        <!-- Package Type -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package Type: <?php echo $_SESSION['package_type_4'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Package Type -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="package_type_4">Package Type</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['package_type_4'] ?>" class="w3-light-gray" id="package_type_4">
+                                            </div>
 
-                                        <!-- Delivery Options -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Delivery option: <?php echo $_SESSION['delivery_options_4'] ?> ">
-                                        </label>
+                                            <!-- Delivery Option -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="delivery_options_4"> Shipment's Worth (USD)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['delivery_options_4'] ?>" class="w3-light-gray" id="delivery_options_4">
+                                            </div>
+                                        </div>
 
-                                        <!-- Package Type (Other) -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package Type (Other): <?php echo $_SESSION['other_4'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Package Type (OTHER)-->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="other_4">Package Type (OTHER)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['other_4'] ?>" class="w3-light-gray" id="other_4">
+                                            </div>
 
-                                        <!-- Package's Worth (USD) -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Package's Worth (USD): <?php echo $_SESSION['worth_4'] ?> ">
-                                        </label>
+                                            <!-- Package's Worth -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="worth_4">Package's Worth (USD)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['worth_4'] ?>" class="w3-light-gray" id="worth_4">
+                                            </div>
+                                        </div>
 
-                                        <!-- Weight -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Weight (pounds): <?php echo $_SESSION['weight_4'] ?>">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Weight -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="weight_4">Weight (pounds)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['weight_4'] ?>" class="w3-light-gray" id="weight_4">
+                                            </div>
 
-                                        <!-- Length -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Length (inches): <?php echo $_SESSION['length_4'] ?>">
-                                        </label>
+                                            <!-- Length -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="length_4">Length (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['length_4'] ?>" class="w3-light-gray" id="length_4">
+                                            </div>
+                                        </div>
 
-                                        <!-- Width -->
-                                        <label>
-                                            <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Width (inches): <?php echo $_SESSION['width_4'] ?>">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Width -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="width_4">Width (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['width_4'] ?>" class="w3-light-gray" id="width_4">
+                                            </div>
 
-                                        <!-- Height -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Height (inches): <?php echo $_SESSION['height_4'] ?>">
-                                        </label>
+                                            <!-- Height -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="height_4">Height (inches)</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['weight_4'] ?>" class="w3-light-gray" id="weight_4">
+                                            </div>
+                                        </div>
 
-                                        <!-- Colour -->
-                                        <label>
-                                            <input disabled class="w3-light-gray"
-                                                   placeholder="Colour: <?php echo $_SESSION['colour_4'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Colour -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="colour_4">Colour</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['colour_4'] ?>" class="w3-light-gray" id="colour_4">
+                                            </div>
 
-                                        <!-- Texture -->
-                                        <label>
-                                            <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Texture: <?php echo $_SESSION['texture_4'] ?> ">
-                                        </label>
+                                            <!-- Texture -->
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label for="texture_4">Texture</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['texture_4'] ?>" class="w3-light-gray" id="texture_4">
+                                            </div>
+                                        </div>
 
-                                        <!-- Brief Package Description -->
-                                        <label>
-                                            <input disabled style="width: 100%" class="w3-input w3-border-0 w3-light-gray"
-                                                   placeholder="Additional info about package: <?php echo $_SESSION['package_description_4'] ?> ">
-                                        </label>
+                                        <div class="row">
+                                            <!-- Additional Info -->
+                                            <div class="col-xs-12 col-sm-12">
+                                                <label for="package_description_4">Additional Information</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['package_description_4'] ?>" class="w3-light-gray" id="package_description_4">
+                                            </div>
+                                        </div>
 
                                             <!-- hide other items -->
                                             <div style="margin: 0 0 7px;" class="sliderWrapper">
@@ -747,110 +824,122 @@
 
                                 <!-- Edit Button -->
                                 <div>
-                                    <a type="button" style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">
-                                        Edit
-                                    </a>
+                                    <a type="button" style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
                                 </div>
                     </fieldset>
 
                     <!-- Package Destination Preview -->
                     <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
                         <legend>Package Destination</legend>
-                            <!-- Name -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Full Name: <?php echo $_SESSION['name_ec_dest'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="name_ec_dest"> Full Name (or Company)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['name_ec_dest'] ?>" class="w3-light-gray" id="name_ec_dest">
+                                </div>
 
-                            <!-- Contact Name -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Contact Name: <?php echo $_SESSION['contactname_ec_dest'] ?> ">
-                            </label>
+                                <!-- Contact's Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="contactname_ec_dest"> Contact's Name</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['contactname_ec_dest'] ?>" id="contactname_ec_dest">
+                                </div>
+                            </div>
 
-                            <!-- Gender -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Gender: <?php echo $_SESSION['gender_ec_dest'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Gender -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="gender_ec_dest">Gender</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['gender_ec_dest'] ?>" id="gender_ec_dest">
+                                </div>
 
-                            <!-- Title -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Title: <?php echo $_SESSION['title_ec_dest'] ?> ">
-                            </label>
+                                <!-- Title -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="title_ec_dest">Title</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['title_ec_dest'] ?>" id="title_ec_dest">
+                                </div>
+                            </div>
 
-                            <!-- Phone Number -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Phone Number: <?php echo $_SESSION['phone_ec_dest'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Telephone -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="phone_ec_dest">Telephone</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['phone_ec_dest'] ?>" id="phone_ec_dest">
+                                </div>
 
-                            <!-- Email -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Email: <?php echo $_SESSION['email_ec_dest'] ?> ">
-                            </label>
+                                <!-- Email -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="email_ec_dest">Email</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['email_ec_dest'] ?>" id="email_ec_dest">
+                                </div>
+                            </div>
 
-                            <!-- Country -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Country: Finland">
-                            </label>
+                            <div class="row">
+                                <!-- Country -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="countryId">Country</label>
+                                    <input disabled class="w3-light-gray" placeholder="Finland" id="countryId">
+                                </div>
 
-                            <!-- State -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="State: <?php echo $_SESSION['state_ec_dest'] ?> ">
-                            </label>
+                                <!-- State -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="stateId">State</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['state_ec_dest'] ?>" id="stateId">
+                                </div>
+                            </div>
 
-                            <!-- City -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="City: <?php echo $_SESSION['city_ec_dest'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- City -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="cityId">City</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['city_ec_dest'] ?>" id="cityId">
+                                </div>
 
-                            <!-- Zip Code -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Zip Code: <?php echo $_SESSION['zipcode_ec_dest'] ?> ">
-                            </label>
+                                <!-- Zip Code -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="zipcode_ec_dest">Zip Code</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['zipcode_ec_dest'] ?>" id="zipcode_ec_dest">
+                                </div>
+                            </div>
 
-                            <!-- Street Address -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray" style="width: 100%"
-                                       placeholder="Street Address: <?php echo $_SESSION['address_ec_dest'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Street Address -->
+                                <div class="col-xs-12 col-sm-12">
+                                    <label for="address_ec_dest">Street Address</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec_dest'] ?>" id="address_ec_dest">
+                                </div>
+                            </div>
 
-                            <!-- Apartment -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Apartment: <?php echo $_SESSION['apt_ec_dest'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Street Address 2 -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="apt_ec_dest">Street Address 2 (or Apartment, suite, floor, unit etc)</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['apt_ec_dest'] ?>" id="apt_ec_dest">
+                                </div>
 
-                            <!-- Department -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Department: <?php echo $_SESSION['dept_ec_dest'] ?> ">
-                            </label>
+                                <!-- Department -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="dept_ec_dest">Department, c/o, etc.</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['dept_ec_dest'] ?>" id="dept_ec_dest">
+                                </div>
+                            </div>
 
-                            <!-- Residential Address -->
-                            <label>
-                                <input disabled class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Residential Address? <?php echo $_SESSION['resAdd_ec_dest'] ?> ">
-                            </label>
+                            <div class="row">
+                                <!-- Residential Address? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="resAdd_ec_dest">Is this a residential address?</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['resAdd_ec_dest'] ?>" id="resAdd_ec_dest">
+                                </div>
 
-                            <!-- Notify Receiver? -->
-                            <label>
-                                <input disabled style="float: right" class="w3-input w3-border-0 w3-light-gray"
-                                       placeholder="Notify Receiver? <?php echo $_SESSION['notify_dest'] ?> ">
-                            </label>
+                                <!-- Package Updates? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="notify_dest">Should we send recipient package status?</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['notify_dest'] ?>" id="notify_dest">
+                                </div>
+                            </div>
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">
-                                    Edit
-                                </a>
+                                <a type="button" style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
@@ -858,8 +947,8 @@
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">
                         <div class="w3-bar">
-                            <button value="Next" name="submit" type="submit" class="w3-button w3-medium w3-green-continue">Submit</button>
-                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
+                            <button name="submit" type="submit" class="w3-button w3-green-continue">Submit</button>
+                            <button type="reset" class="w3-button w3-red-cancel">Cancel</button>
                         </div>
                     </div>
 
@@ -869,6 +958,22 @@
             </div>
         </div>
     </div>
+
+    <!-- International Telephone Country Code -->
+    <script src="js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
+        });
+    </script>
 
 
     <!-- JavaScript Full Screen Overlay Nav -->

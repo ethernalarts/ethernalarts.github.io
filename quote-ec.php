@@ -15,15 +15,17 @@
     <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/intlTelInput.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/vlink.css" rel="stylesheet">
+    <link href="./css/w3.css" type="text/css" rel="stylesheet">
+    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
     <script src="js/statecity.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -61,17 +63,10 @@
         }
 
         input:disabled {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
+            padding: 0.9em 13px;
+            margin: 0 0 30px;
             border: 1px solid #afafaf;
             background-color: #f5f5f5;
-        }
-
-        .countries, .states, .cities {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -195,7 +190,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -204,135 +199,150 @@
 
                 <!-- Express Courier Quote form -->
                 <form class="container-form" style="padding-bottom: 0"  method="post" action="quote-ec-1.php">
-
                         <!-- Package Origin -->
                         <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
-
                             <legend>Package Origin</legend>
+                                <div class="row">
+                                    <!-- Full Name -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="name_ec"> Full Name (or Company) <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. Bruce Wayne (or Wayne Enterprises)"
+                                               name="name_ec" id="name_ec" type="text" required>
+                                    </div>
 
-                                <!-- Full Name -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ec" type="text" required>
-                                </label>
-
-                                <!-- Contact Name -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
-                                           name="contactname_ec" type="text" required>
-                                </label>
-
-                                <!-- Gender -->
-                                <label>
-                                    <select class="choice" name="gender_ec" required>
-                                        <option value="0" selected="selected">Gender  *</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
-                                </label>
-
-                                <!-- Title -->
-                                <label>
-                                    <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
-                                           name="title_ec" type="text" required>
-                                </label>
-
-                                <!-- Telephone -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Telephone:   *" name="phone_ec" type="tel" required>
-                                </label>
-
-                                <!-- Email -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" name="email_ec" placeholder="Email:  *"
-                                           type="email" required>
-                                </label>
-
-                                <!-- Country (Finland) -->
-                                <label>
-                                    <input name="country_ec" class="countries" value="Finland" disabled>
-                                </label>
-                                <input type="hidden" name="country_ec" id="countryId" value="FI"/>
-
-                                <!-- State -->
-                                <label for="stateId">
-                                    <select name="state_ec" style="float: right" class="choice states order-alpha" id="stateId" required>
-                                        <option value="0" selected="selected">State:  *</option>
-                                    </select>
-                                </label><br>
-
-                                <!-- City -->
-                                <label for="cityId">
-                                    <select name="city_ec" style="float: left" class="choice cities order-alpha" id="cityId" required>
-                                        <option value="0" selected="selected">City:  *</option>
-                                    </select>
-                                </label>
-
-                                <!-- Zip Code -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
-                                           name="zipcode_ec" type="number" required>
-                                </label>
-
-                                <!-- Street Address -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
-                                           name="address_ec" type="text" required>
-                                </label>
-
-                                <!-- Apartment, Suite, Unit -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
-                                           name="apt_ec" type="text">
-                                </label>
-
-                                <!-- Department -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
-                                           name="dept_ec" type="text">
-                                </label>
-
-                                <!-- Pickup date -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Pickup date  *"
-                                           name="pickupdate" type="text" onfocus="(this.type='date')" id="d8" required>
-                                </label>
-
-                                <!-- Pickup time -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Pickup time  *" style="float: right"
-                                           name="pickuptime" type="text" required>
-                                </label>
-
-                                <!-- Residential Address -->
-                                <label>
-                                    <select  name="resAdd_ec" class="choice">
-                                        <option value="0" selected="selected">Is this a residential address?  *</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </label>
-
-                                <!-- Status Updates on Package -->
-                                <label>
-                                    <select  style="float: right" name="pkg_update_ec" class="choice">
-                                        <option value="0" selected="selected">Should we send you package updates? </option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </label>
-                        </fieldset>
-
-                            <!-- Contact Address to send package to -->
-                            <fieldset id="contactAddress" style="display: block; margin: 60px 0 40px">
-                                <legend>Self delivery (optional)</legend>
-                                <div>
-                                    <p class="w3-center">
-                                        No. 3M, Microkatu, 70210<br>
-                                        Kuopio, Finland.<br><br>
-                                        Phone: +358 9 42453389
-                                    </p>
+                                    <!-- Contact's Name -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="contactname_ec"> Contact's Name <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. Alfred Pennyworth"
+                                               name="contactname_ec" id="contactname_ec" type="text" required>
+                                    </div>
                                 </div>
-                            </fieldset>
+
+                                <div class="row">
+                                    <!-- Gender -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="gender_ec">Gender <span class="required">*</span></label>
+                                        <select class="choice" name="gender_ec" id="gender_ec" required>
+                                            <option value="0" selected="selected">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="title_ec">Title</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title_ec" id="title_ec" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Telephone -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="phone_ec">Telephone <span class="required">*</span></label>
+                                        <input class="w3-light-gray" name="phone_ec" id="phone_ec" type="tel" required>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="email_ec">Email <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email_ec" id="email_ec" type="email" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Country -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="countryId">Country</label>
+                                        <input name="country_ec" class="countries" value="Finland" disabled>
+                                        <input type="hidden" name="country_ec" id="countryId" value="FI"/>
+                                    </div>
+
+                                    <!-- State -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="stateId">State <span class="required">*</span></label>
+                                        <select name="state_ec" class="choice states order-alpha" id="stateId" type="select" required>
+                                            <option value="0" selected="selected">Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- City -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="cityId">City <span class="required">*</span></label>
+                                        <select name="city_ec" class="choice cities order-alpha" id="cityId" type="select" required>
+                                            <option value="0" selected="selected">Select City</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Zip Code -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="zipcode_ec">Zip Code <span class="required">*</span></label>
+                                        <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zipcode_ec" id="zipcode_ec" type="number" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Street Address -->
+                                    <div class="col-xs-12 col-sm-12">
+                                        <label for="address_ec">Street Address <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="address_ec" id="address_ec" type="text" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Street Address 2 -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="apt_ec">Street Address 2</label>
+                                        <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
+                                               name="apt_ec" id="apt_ec" type="text">
+                                    </div>
+
+                                    <!-- Department -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="dept_ec">Department, c/o, etc.</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Sales (or c/o Clark Kent)" name="dept_ec" id="dept_ec" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Pickup Date -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="d8">Pickup Date</label>
+                                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="mm/dd/yyyy e.g. 08/10/2019"
+                                               name="pickupdate" type="text" onfocus="(this.type='date')" id="d8" required>
+                                    </div>
+
+                                    <!-- Pickup Time -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="pickuptime">Pickup Time</label>
+                                        <input class="w3-light-gray" placeholder="e.g. 5pm" name="pickuptime" id="pickuptime" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Residential Address? -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="resAdd_ec">Is this a residential address? <span class="required">*</span></label>
+                                        <select name="resAdd_ec" id="resAdd_ec" class="choice" required>
+                                            <option value="0" selected="selected">Select an answer</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Package Updates? -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="pkg_update_ec">Should we send you shipment updates? <span class="required">*</span></label>
+                                        <select  name="pkg_update_ec" id="pkg_update_ec" class="choice">
+                                            <option value="0" selected="selected">Select an answer </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </fieldset>
 
                             <!-- Continue and Cancel Button -->
                             <div class="w3-center">
@@ -355,15 +365,22 @@
             else $(this).removeClass("empty")
         });
 
-        $(".choice").change();
+        // $(".choice").change();
     </script>
 
     <!-- International Telephone Country Code -->
     <script src="js/intlTelInput.js"></script>
     <script>
-        var input = document.querySelector("#phone");
+        var input = document.querySelector("#phone_ec");
         window.intlTelInput(input, {
-            utilsScript: "js/utils.js?1562189064761"
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
         });
     </script>
 

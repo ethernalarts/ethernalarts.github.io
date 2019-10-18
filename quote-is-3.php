@@ -74,6 +74,7 @@
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
     <script src="js/countrystatecity.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -243,10 +244,8 @@
                 </code>
             </h3>
 
-
             <!-- Container for International Shipping Quote form  -->
             <div class="w3-card-4">
-
 
                 <!-- Shipment Destination -->
                 <form class="container-form" method="post" action="quote-is-4.php" style="padding-bottom: 0">
@@ -263,7 +262,7 @@
                                 <!-- Contact's Name -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="contact_name_dest"> Contact's Name <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Lois Lane" name="contact_name_dest" id="contact_name_dest" type="text" required>
+                                    <input class="w3-light-gray"  placeholder="e.g. Lois Lane" name="contact_name_dest" id="contact_name_dest" type="text" required>
                                 </div>
                             </div>
 
@@ -281,7 +280,7 @@
                                 <!-- Title -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="title_dest">Title</label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Mr, Mrs, Cpt, Dr. etc."
+                                    <input class="w3-light-gray"  placeholder="Mr, Mrs, Cpt, Dr. etc."
                                            name="title_dest" id="title_dest" type="text">
                                 </div>
                             </div>
@@ -312,7 +311,7 @@
                                 <!-- State -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="stateId">State <span class="required">*</span></label>
-                                    <select name="state_dest" style="float: right" class="choice states" id="stateId" type="select" required>
+                                    <select name="state_dest"  class="choice states" id="stateId" type="select" required>
                                         <option value="0" selected="selected">Select State</option>
                                     </select>
                                 </div>
@@ -330,7 +329,7 @@
                                 <!-- Zip Code -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="zip_code_dest">Zip Code <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. 123456" name="zip_code_dest" id="zip_code_dest" type="number" required>
+                                    <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zip_code_dest" id="zip_code_dest" type="number" required>
                                 </div>
                             </div>
 
@@ -353,7 +352,7 @@
                                 <!-- Department -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="department_dest">Department, c/o, etc.</label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Editorial (or c/o Martha Lane)" name="department_dest" id="department_dest" type="text">
+                                    <input class="w3-light-gray"  placeholder="e.g. Editorial (or c/o Martha Lane)" name="department_dest" id="department_dest" type="text">
                                 </div>
                             </div>
 
@@ -371,7 +370,7 @@
                                 <!-- Email updates to recipient on shipment status? -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="notify_dest">Should we send recipient shipment status? <span class="required">*</span></label>
-                                    <select  style="float: right" name="notify_dest" id="notify_dest" class="choice">
+                                    <select name="notify_dest" id="notify_dest" class="choice">
                                         <option value="0" selected="selected">Select an answer</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -417,7 +416,14 @@
     <script>
         var input = document.querySelector("#phone_dest");
         window.intlTelInput(input, {
-            utilsScript: "js/utils.js?1562189064761"
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
         });
     </script>
 

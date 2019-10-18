@@ -544,6 +544,29 @@
         font-size: 0.85em;
     }
 
+    .skip {
+        margin: 40px 0 0;
+        text-align: center;
+        font-family: Verdana, serif;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 1em;
+        color: whitesmoke;
+        background-color: #323232;
+        text-decoration: none;
+    }
+
+    .w3-btn:hover {
+        background-color: #282828;
+        box-shadow: none;
+        text-decoration: none;
+    }
+
+    .countries, .states, .cities {
+        padding: 0.9em 13px;
+        margin: 0 0 33px;
+    }
+
     .container-form {
         margin: 0;
         padding: 50px;
@@ -552,18 +575,25 @@
     .container-form input {
         font-family: Roboto, Montserrat, serif;
         color: #737373;
-        padding: 12px;
+        padding: 0.9em 13px;
         margin: 0 0 30px;
         font-size: 1em;
         font-weight: 500;
         display: inline-block;
-        border-bottom: 1px solid #afafaf;
+        border: 1px solid #afafaf;
+    }
+
+    input:disabled {
+        padding: 0.9em 13px;
+        margin: 0 0 33px;
+        border: 1px solid #afafaf;
+        background-color: #f5f5f5;
     }
 
     .container-form select {
         font-family: Roboto, Verdana, Montserrat, serif;
         color: #9b9b9b;
-        padding: 13px;
+        padding: 0.9em 13px;
         margin: 0 0 30px;
         font-size: 1em;
         font-weight: 500;
@@ -596,7 +626,8 @@
         font-weight: 600;
         display: inline-block;
         color: whitesmoke;
-        background-color: #5888d7;
+        background-color: cornflowerblue;
+        /*background-color: #5775c3;*/
         padding: 10px;
     }
 
@@ -605,7 +636,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 1.15em;
-        color: #737373;
+        color: #696969;
     }
 
     .required {
@@ -615,6 +646,11 @@
         font-size: 1em;
         color: #f00000;
 
+    }
+
+    .emoji {
+        width: 125px;
+        height: 125px;
     }
 
     fieldset {

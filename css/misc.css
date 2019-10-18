@@ -79,10 +79,10 @@
 
 .sliderWrapper {
   margin: 30px 0;
-  font-family: Federo, Verdana, serif;
-  font-weight: 600;
-  font-size: 1.2em;
-  color: #555555;
+  font-family: "Oswald SemiBold", Verdana, Roboto, Federo serif;
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #4b4b4b;
   cursor: pointer;
 }
 

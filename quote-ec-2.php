@@ -65,6 +65,7 @@
     <link href="css/mobile-menu-top.css" rel="stylesheet">
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -239,7 +240,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -252,91 +253,109 @@
                         <!-- 1st Package Details -->
                         <fieldset style="margin: 0 0 20px; padding-bottom: 10px">
                             <legend>Package Details</legend>
-                                <!-- Package type -->
-                                <label>
-                                    <select name="package_type" class="choice" type="select">
-                                        <option value="0" selected="selected">Package type *</option>
-                                        <option value="Luggage">Luggage</option>
-                                        <option value="Jewellery">Jewellery</option>
-                                        <option value="Electronic">Electronic</option>
-                                        <option value="Laptop">Computer (Laptop)</option>
-                                        <option value="Desktop">Computer (Desktop)</option>
-                                        <option value="Document">Document</option>
-                                        <option value="Battery">Battery</option>
-                                        <option value="Machine Parts">Machine Parts</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="package_type">Package Type <span class="required">*</span></label>
+                                        <select name="package_type" id="package_type" class="choice" type="select">
+                                            <option value="0" selected="selected">Select Package type</option>
+                                            <option value="Luggage">Luggage</option>
+                                            <option value="Jewellery">Jewellery</option>
+                                            <option value="Electronic">Electronic</option>
+                                            <option value="Laptop">Computer (Laptop)</option>
+                                            <option value="Desktop">Computer (Desktop)</option>
+                                            <option value="Document">Document</option>
+                                            <option value="Battery">Battery</option>
+                                            <option value="Machine Parts">Machine Parts</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
 
-                                <!-- delivery options -->
-                                <label>
-                                    <select name="delivery_options" style="float: right" class="choice">
-                                        <option value="0" selected="selected">Delivery option  *</option>
-                                        <option value="VLink Ground">VLink Ground</option>
-                                        <option value="VLink Next Day Air">VLink Next Day Air</option>
-                                        <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
-                                        <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
-                                        <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                        <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                        <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                        <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
-                                        <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
-                                        <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
-                                    </select>
-                                </label>
+                                    <!-- Delivery Option -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="delivery_options">Delivery Option <span class="required">*</span></label>
+                                        <select name="delivery_options" id="delivery_options" class="choice">
+                                            <option value="0" selected="selected">Select Delivery Option</option>
+                                            <option value="VLink Ground">VLink Ground</option>
+                                            <option value="VLink Next Day Air">VLink Next Day Air</option>
+                                            <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
+                                            <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
+                                            <option value="VLink 3 Day Select">VLink 3 Day Select</option>
+                                            <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                            <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
+                                            <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
+                                            <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
+                                            <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                                <!-- Other (Package type) -->
-                                <label>
-                                    <input class="w3-light-gray" name="other" type="text"
-                                           placeholder="If package type is OTHER, please specify: ">
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type (OTHER) -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="other">Package Type (OTHER)</label>
+                                        <input class="w3-light-gray" placeholder="If package type is 'OTHER', please specify: "
+                                               name="other" id="other" type="text">
+                                    </div>
 
-                                <!-- Package's Worth -->
-                                <label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD):  *"
-                                           name="worth" type="number" required>
-                                </label>
+                                    <!-- Package's Worth -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="worth">Package's Worth <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="Declared Value (USD)"
+                                               name="worth" id="worth" type="number">
+                                    </div>
+                                </div>
 
-                                <!-- Weight -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Weight (pounds):  *"
-                                           name="weight" type="number" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Weight -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="weight">Weight <span class="required">*</span></label>
+                                        <input class="w3-light-gray" name="weight" placeholder="in pounds" id="weight" type="number" required>
+                                    </div>
 
-                                <!-- Length -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Length (inches):  *"
-                                           name="length" type="number" required>
-                                </label>
+                                    <!-- Length -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="length">Length <span class="required">*</span></label>
+                                        <input class="w3-light-gray" name="length" placeholder="in inches" id="length" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Width -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Width (inches):  *"
-                                           name="width" type="number" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Width -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="width">Width <span class="required">*</span></label>
+                                        <input class="w3-light-gray" name="width" placeholder="in inches" id="width" type="number" required>
+                                    </div>
 
-                                <!-- Height -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):  *"
-                                           name="height" type="number" required>
-                                </label>
+                                    <!-- Height -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="height">Height <span class="required">*</span></label>
+                                        <input class="w3-light-gray" name="height" placeholder="in inches" id="height" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Colour -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Color:  *" name="colour" type="text" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Colour -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="colour">Colour <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. Red" name="colour" id="colour" type="text" required>
+                                    </div>
 
-                                <!-- Texture -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Texture:  "
-                                           name="texture" type="text">
-                                </label>
+                                    <!-- Texture -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="texture">Texture <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture" id="texture" type="text" required>
+                                    </div>
+                                </div>
 
-                                <!-- Package Description -->
-                                <label>
-                                    <textarea style="height: 120px" class="w3-light-gray" name="package_description"
-                                              placeholder="Additional information about package..."></textarea>
-                                </label>
+                                <div class="row">
+                                    <!-- Additional Info -->
+                                    <div class="col-xs-12 col-sm-12">
+                                        <label for="package_description">Additional Information</label>
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description" id="package_description"
+                                                  placeholder="Anything else we should know about your package?"></textarea>
+                                    </div>
+                                </div>
                         </fieldset>
 
                         <!-- Add 2nd package -->
@@ -348,93 +367,110 @@
 
                         <!-- 2nd Package Details -->
                         <fieldset id="secondPackage" style="margin: 0 0 20px; display: none">
-
                             <legend>2nd Package Details</legend>
-                                <!-- Package type -->
-                                <label>
-                                    <select name="package_type_2" class="choice" type="select">
-                                        <option value="0" selected="selected">Package type</option>
-                                        <option value="Luggage">Luggage</option>
-                                        <option value="Jewellery">Jewellery</option>
-                                        <option value="Electronic">Electronic</option>
-                                        <option value="Laptop">Computer (Laptop)</option>
-                                        <option value="Desktop">Computer (Desktop)</option>
-                                        <option value="Document">Document</option>
-                                        <option value="Battery">Battery</option>
-                                        <option value="Machine Parts">Machine Parts</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="package_type_2">Package Type</label>
+                                        <select name="package_type_2" id="package_type_2" class="choice" type="select">
+                                            <option value="0" selected="selected">Select Package type</option>
+                                            <option value="Luggage">Luggage</option>
+                                            <option value="Jewellery">Jewellery</option>
+                                            <option value="Electronic">Electronic</option>
+                                            <option value="Laptop">Computer (Laptop)</option>
+                                            <option value="Desktop">Computer (Desktop)</option>
+                                            <option value="Document">Document</option>
+                                            <option value="Battery">Battery</option>
+                                            <option value="Machine Parts">Machine Parts</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
 
-                                <!-- delivery options -->
-                                <label>
-                                    <select name="delivery_options_2" style="float: right" class="choice">
-                                        <option value="0" selected="selected">Delivery option</option>
-                                        <option value="VLink Ground">VLink Ground</option>
-                                        <option value="VLink Next Day Air">VLink Next Day Air</option>
-                                        <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
-                                        <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
-                                        <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                        <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                        <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                        <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
-                                        <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
-                                        <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
-                                    </select>
-                                </label>
+                                    <!-- Delivery Option -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="delivery_options_2">Delivery Option</label>
+                                        <select name="delivery_options_2" id="delivery_options_2" class="choice">
+                                            <option value="0" selected="selected">Select Delivery Option</option>
+                                            <option value="VLink Ground">VLink Ground</option>
+                                            <option value="VLink Next Day Air">VLink Next Day Air</option>
+                                            <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
+                                            <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
+                                            <option value="VLink 3 Day Select">VLink 3 Day Select</option>
+                                            <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                            <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
+                                            <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
+                                            <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
+                                            <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                                <!-- Other (Package type) -->
-                                <label>
-                                    <input class="w3-light-gray" name="other_2" type="text"
-                                           placeholder="If package type is OTHER, please specify: ">
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type (OTHER) -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="other_2">Package Type (OTHER)</label>
+                                        <input class="w3-light-gray" placeholder="If package type is 'OTHER', please specify: "
+                                               name="other_2" id="other_2" type="text">
+                                    </div>
 
-                                <!-- Package's Worth -->
-                                <label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD): "
-                                           name="worth_2" type="number">
-                                </label>
+                                    <!-- Package's Worth -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="worth_2">Package's Worth</label>
+                                        <input class="w3-light-gray" placeholder="Declared Value (USD)"
+                                               name="worth_2" id="worth_2" type="number">
+                                    </div>
+                                </div>
 
-                                <!-- Weight -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Weight (pounds):"
-                                           name="weight_2" type="number">
-                                </label>
+                                <div class="row">
+                                    <!-- Weight -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="weight_2">Weight</label>
+                                        <input class="w3-light-gray" name="weight_2" placeholder="in pounds" id="weight_2" type="number" required>
+                                    </div>
 
-                                <!-- Length -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Length (inches):"
-                                           name="length_2" type="number">
-                                </label>
+                                    <!-- Length -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="length_2">Length</label>
+                                        <input class="w3-light-gray" name="length_2" placeholder="in inches" id="length_2" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Width -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Width (inches):"
-                                           name="width_2" type="number">
-                                </label>
+                                <div class="row">
+                                    <!-- Width -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="width_2">Width</label>
+                                        <input class="w3-light-gray" name="width_2" placeholder="in inches" id="width_2" type="number" required>
+                                    </div>
 
-                                <!-- Height -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):"
-                                           name="height_2" type="number">
-                                </label>
+                                    <!-- Height -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="height_2">Height</label>
+                                        <input class="w3-light-gray" name="height_2" placeholder="in inches" id="height_2" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Colour -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Color:" name="colour_2" type="text">
-                                </label>
+                                <div class="row">
+                                    <!-- Colour -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="colour_2">Colour</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Red" name="colour_2" id="colour_2" type="text" required>
+                                    </div>
 
-                                <!-- Texture -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Texture:  "
-                                           name="texture_2" type="text">
-                                </label>
+                                    <!-- Texture -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="texture_2">Texture</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_2" id="texture_2" type="text" required>
+                                    </div>
+                                </div>
 
-                                <!-- Package Description -->
-                                <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_2"
-                                                  placeholder="Additional information about package..."></textarea>
-                                </label>
+                                <div class="row">
+                                    <!-- Additional Info -->
+                                    <div class="col-xs-12 col-sm-12">
+                                        <label for="package_description_2">Additional Information</label>
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_2" id="package_description_2"
+                                                  placeholder="Anything else we should know about your package?"></textarea>
+                                    </div>
+                                </div>
                         </fieldset>
 
                         <!-- Add 3rd shipment -->
@@ -446,93 +482,110 @@
 
                         <!-- 3rd Package Details -->
                         <fieldset id="thirdPackage" style="margin: 0 0 20px; display: none">
-
                             <legend>3rd Package Details</legend>
-                                <!-- Package type -->
-                                <label>
-                                    <select name="package_type_3" class="choice" type="select">
-                                        <option value="0" selected="selected">Package type</option>
-                                        <option value="Luggage">Luggage</option>
-                                        <option value="Jewellery">Jewellery</option>
-                                        <option value="Electronic">Electronic</option>
-                                        <option value="Laptop">Computer (Laptop)</option>
-                                        <option value="Desktop">Computer (Desktop)</option>
-                                        <option value="Document">Document</option>
-                                        <option value="Battery">Battery</option>
-                                        <option value="Machine Parts">Machine Parts</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="package_type_3">Package Type</label>
+                                        <select name="package_type_3" id="package_type_3" class="choice" type="select">
+                                            <option value="0" selected="selected">Select Package type</option>
+                                            <option value="Luggage">Luggage</option>
+                                            <option value="Jewellery">Jewellery</option>
+                                            <option value="Electronic">Electronic</option>
+                                            <option value="Laptop">Computer (Laptop)</option>
+                                            <option value="Desktop">Computer (Desktop)</option>
+                                            <option value="Document">Document</option>
+                                            <option value="Battery">Battery</option>
+                                            <option value="Machine Parts">Machine Parts</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
 
-                                <!-- delivery options -->
-                                <label>
-                                    <select name="delivery_options_3" style="float: right" class="choice">
-                                        <option value="0" selected="selected">Delivery option</option>
-                                        <option value="VLink Ground">VLink Ground</option>
-                                        <option value="VLink Next Day Air">VLink Next Day Air</option>
-                                        <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
-                                        <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
-                                        <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                        <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                        <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                        <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
-                                        <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
-                                        <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
-                                    </select>
-                                </label>
+                                    <!-- Delivery Option -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="delivery_options_3">Delivery Option</label>
+                                        <select name="delivery_options_3" id="delivery_options_3" class="choice">
+                                            <option value="0" selected="selected">Select Delivery Option</option>
+                                            <option value="VLink Ground">VLink Ground</option>
+                                            <option value="VLink Next Day Air">VLink Next Day Air</option>
+                                            <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
+                                            <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
+                                            <option value="VLink 3 Day Select">VLink 3 Day Select</option>
+                                            <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                            <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
+                                            <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
+                                            <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
+                                            <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                                <!-- Other (Package type) -->
-                                <label>
-                                    <input class="w3-light-gray" name="other_3" type="text"
-                                           placeholder="If package type is OTHER, please specify: ">
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type (OTHER) -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="other_3">Package Type (OTHER)</label>
+                                        <input class="w3-light-gray" placeholder="If package type is 'OTHER', please specify: "
+                                               name="other_3" id="other_3" type="text">
+                                    </div>
 
-                                <!-- Package's Worth -->
-                                <label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD): "
-                                           name="worth_3" type="number">
-                                </label>
+                                    <!-- Package's Worth -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="worth_3">Package's Worth</label>
+                                        <input class="w3-light-gray" placeholder="Declared Value (USD)"
+                                               name="worth_3" id="worth_3" type="number">
+                                    </div>
+                                </div>
 
-                                <!-- Weight -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Weight (pounds):"
-                                           name="weight_3" type="number">
-                                </label>
+                                <div class="row">
+                                    <!-- Weight -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="weight_3">Weight</label>
+                                        <input class="w3-light-gray" name="weight_3" placeholder="in pounds" id="weight_3" type="number" required>
+                                    </div>
 
-                                <!-- Length -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Length (inches):"
-                                           name="length_3" type="number">
-                                </label>
+                                    <!-- Length -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="length_3">Length</label>
+                                        <input class="w3-light-gray" name="length_3" placeholder="in inches" id="length_3" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Width -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Width (inches):"
-                                           name="width_3" type="number">
-                                </label>
+                                <div class="row">
+                                    <!-- Width -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="width_3">Width</label>
+                                        <input class="w3-light-gray" name="width_3" placeholder="in inches" id="width_3" type="number" required>
+                                    </div>
 
-                                <!-- Height -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):"
-                                           name="height_3" type="number">
-                                </label>
+                                    <!-- Height -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="height_3">Height</label>
+                                        <input class="w3-light-gray" name="height_3" placeholder="in inches" id="height_3" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Colour -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Color:" name="colour_3" type="text">
-                                </label>
+                                <div class="row">
+                                    <!-- Colour -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="colour_3">Colour</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Red" name="colour_3" id="colour_3" type="text" required>
+                                    </div>
 
-                                <!-- Texture -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Texture:  "
-                                           name="texture_3" type="text">
-                                </label>
+                                    <!-- Texture -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="texture_3">Texture</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_3" id="texture_3" type="text" required>
+                                    </div>
+                                </div>
 
-                                <!-- Package Description -->
-                                <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_3"
-                                                  placeholder="Additional information about package..."></textarea>
-                                </label>
+                                <div class="row">
+                                    <!-- Additional Info -->
+                                    <div class="col-xs-12 col-sm-12">
+                                        <label for="package_description_3">Additional Information</label>
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_3" id="package_description_3"
+                                                  placeholder="Anything else we should know about your package?"></textarea>
+                                    </div>
+                                </div>
                         </fieldset>
 
                         <!-- Add 4th shipment -->
@@ -544,93 +597,110 @@
 
                         <!-- 4th Package Details -->
                         <fieldset id="fourthPackage" style="margin: 0 0 20px; display: none">
-
                             <legend>4th Package Details</legend>
-                                <!-- Package type -->
-                                <label>
-                                    <select name="package_type_4" class="choice" type="select">
-                                        <option value="0" selected="selected">Package type</option>
-                                        <option value="Luggage">Luggage</option>
-                                        <option value="Jewellery">Jewellery</option>
-                                        <option value="Electronic">Electronic</option>
-                                        <option value="Laptop">Computer (Laptop)</option>
-                                        <option value="Desktop">Computer (Desktop)</option>
-                                        <option value="Document">Document</option>
-                                        <option value="Battery">Battery</option>
-                                        <option value="Machine Parts">Machine Parts</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="package_type_4">Package Type</label>
+                                        <select name="package_type_4" id="package_type_4" class="choice" type="select">
+                                            <option value="0" selected="selected">Select Package type</option>
+                                            <option value="Luggage">Luggage</option>
+                                            <option value="Jewellery">Jewellery</option>
+                                            <option value="Electronic">Electronic</option>
+                                            <option value="Laptop">Computer (Laptop)</option>
+                                            <option value="Desktop">Computer (Desktop)</option>
+                                            <option value="Document">Document</option>
+                                            <option value="Battery">Battery</option>
+                                            <option value="Machine Parts">Machine Parts</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
 
-                                <!-- delivery options -->
-                                <label>
-                                    <select name="delivery_options_4" style="float: right" class="choice">
-                                        <option value="0" selected="selected">Delivery option</option>
-                                        <option value="VLink Ground">VLink Ground</option>
-                                        <option value="VLink Next Day Air">VLink Next Day Air</option>
-                                        <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
-                                        <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
-                                        <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                        <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                        <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                        <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
-                                        <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
-                                        <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
-                                    </select>
-                                </label>
+                                    <!-- Delivery Option -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="delivery_options_4">Delivery Option</label>
+                                        <select name="delivery_options_4" id="delivery_options_4" class="choice">
+                                            <option value="0" selected="selected">Select Delivery Option</option>
+                                            <option value="VLink Ground">VLink Ground</option>
+                                            <option value="VLink Next Day Air">VLink Next Day Air</option>
+                                            <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
+                                            <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
+                                            <option value="VLink 3 Day Select">VLink 3 Day Select</option>
+                                            <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                            <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
+                                            <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
+                                            <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
+                                            <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                                <!-- Other (Package type) -->
-                                <label>
-                                    <input class="w3-light-gray" name="other_4" type="text"
-                                           placeholder="If package type is OTHER, please specify: ">
-                                </label>
+                                <div class="row">
+                                    <!-- Package Type (OTHER) -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="other_4">Package Type (OTHER)</label>
+                                        <input class="w3-light-gray" placeholder="If package type is 'OTHER', please specify: "
+                                               name="other_4" id="other_4" type="text">
+                                    </div>
 
-                                <!-- Package's Worth -->
-                                <label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (Package's worth) (USD): "
-                                           name="worth_4" type="number">
-                                </label>
+                                    <!-- Package's Worth -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="worth_4">Package's Worth</label>
+                                        <input class="w3-light-gray" placeholder="Declared Value (USD)"
+                                               name="worth_4" id="worth_4" type="number">
+                                    </div>
+                                </div>
 
-                                <!-- Weight -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Weight (pounds):"
-                                           name="weight_4" type="number">
-                                </label>
+                                <div class="row">
+                                    <!-- Weight -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="weight_4">Weight</label>
+                                        <input class="w3-light-gray" name="weight_4" placeholder="in pounds" id="weight_4" type="number" required>
+                                    </div>
 
-                                <!-- Length -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Length (inches):"
-                                           name="length_4" type="number">
-                                </label>
+                                    <!-- Length -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="length_4">Length</label>
+                                        <input class="w3-light-gray" name="length_4" placeholder="in inches" id="length_4" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Width -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Width (inches):"
-                                           name="width_4" type="number">
-                                </label>
+                                <div class="row">
+                                    <!-- Width -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="width_4">Width</label>
+                                        <input class="w3-light-gray" name="width_4" placeholder="in inches" id="width_4" type="number" required>
+                                    </div>
 
-                                <!-- Height -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Height (inches):"
-                                           name="height_4" type="number">
-                                </label>
+                                    <!-- Height -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="height_4">Height</label>
+                                        <input class="w3-light-gray" name="height_4" placeholder="in inches" id="height_4" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Colour -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Color:" name="colour_4" type="text">
-                                </label>
+                                <div class="row">
+                                    <!-- Colour -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="colour_4">Colour</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Red" name="colour_4" id="colour_4" type="text" required>
+                                    </div>
 
-                                <!-- Texture -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Texture:"
-                                           name="texture_4" type="text">
-                                </label>
+                                    <!-- Texture -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="texture_4">Texture</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_4" id="texture_4" type="text" required>
+                                    </div>
+                                </div>
 
-                                <!-- Package Description -->
-                                <label>
-                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_4"
-                                                  placeholder="Additional information about package..."></textarea>
-                                </label>
+                                <div class="row">
+                                    <!-- Additional Info -->
+                                    <div class="col-xs-12 col-sm-12">
+                                        <label for="package_description_4">Additional Information</label>
+                                        <textarea style="height: 120px" class="w3-light-gray" name="package_description_4" id="package_description_4"
+                                                  placeholder="Anything else we should know about your package?"></textarea>
+                                    </div>
+                                </div>
                         </fieldset>
 
                         <!-- Continue and Cancel Button -->

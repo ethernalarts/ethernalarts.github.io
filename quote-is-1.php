@@ -212,7 +212,7 @@
                                 <!-- Contact's Name -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="contact_name"> Contact's Name <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Alfred Pennyworth" name="contact_name" id="contact_name" type="text" required>
+                                    <input class="w3-light-gray" placeholder="e.g. Alfred Pennyworth" name="contact_name" id="contact_name" type="text" required>
                                 </div>
                             </div>
 
@@ -230,7 +230,7 @@
                                 <!-- Title -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="title">Title</label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title" id="title" type="text">
+                                    <input class="w3-light-gray" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title" id="title" type="text">
                                 </div>
                             </div>
 
@@ -260,7 +260,7 @@
                                 <!-- State -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="stateId">State <span class="required">*</span></label>
-                                    <select name="state" style="float: right" class="choice states" id="stateId" type="select" required>
+                                    <select name="state" class="choice states" id="stateId" type="select" required>
                                         <option value="0" selected="selected">Select State</option>
                                     </select>
                                 </div>
@@ -278,7 +278,7 @@
                                 <!-- Zip Code -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="zip_code">Zip Code <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. 123456" name="zip_code" id="zip_code" type="number" required>
+                                    <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zip_code" id="zip_code" type="number" required>
                                 </div>
                             </div>
 
@@ -309,7 +309,7 @@
                                 <!-- Residential Address? -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="residential_add">Is this a residential address? <span class="required">*</span></label>
-                                    <select style="float: right" name="residential_add" id="residential_add" class="choice" required>
+                                    <select name="residential_add" id="residential_add" class="choice" required>
                                         <option value="0" selected="selected">Select an answer</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -333,7 +333,7 @@
                                 <!-- Shipment Updates? -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="status_updates">Should we send you shipment updates? <span class="required">*</span></label>
-                                    <select  style="float: right" name="status_updates" id="status_updates" class="choice">
+                                    <select name="status_updates" id="status_updates" class="choice">
                                         <option value="0" selected="selected">Select an answer </option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -371,7 +371,14 @@
     <script>
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
-            utilsScript: "js/utils.js?1562189064761"
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
         });
     </script>
 

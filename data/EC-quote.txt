@@ -1,0 +1,112 @@
+NEW DOMESTIC SHIPPING ORDER!
+
+PACKAGE ORIGIN
+Name = Ethernal Arts
+Contact Name = Uwa
+Gender = Male
+Title = Mr
+Phone = 0987654321
+Country = FI
+State = Kainuu
+City = Kajaani
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Office 4
+Department = Web Development
+Email = email@mail.com
+Pickup Date = 2019-10-26
+Pickup Time = 5pm
+Residential Address? = No
+Package Updates? = Yes
+
+
+RETURN ADDRESS
+Name = 
+Contact Name = 
+Gender = 
+Title = 
+Phone = 
+Country = 
+State = 
+City = 
+Zip Code = 
+Street Address = 
+Street Address 2/Apartment, Suite, Floor etc = 
+Department = 
+Email = 
+Residential Address? = No
+Notify of return? = Yes
+
+
+PACKAGE DESTINATION
+Name = Pabs Couture
+Contact Name = Donald
+Gender = Male
+Title = Mr.
+Phone = 0987654321
+Country = FI
+State = Paijanne Tavastia
+City = Loppi
+Zip Code = 345789
+Street Address = 8 Limit Hotel Road
+Street Address 2/Apartment, Suite, Floor etc = Office 4
+Department = Fashion
+Email = uwa@ethernalarts.com
+Residential Address? = Yes
+Notify Receiver? = Yes
+
+
+PACKAGE DETAILS
+
+1ST PACKAGE DETAILS:
+Package Type = Luggage
+Delivery option = S. Service(Secure Transport)
+Package Type (Other) = 
+Shipment Worth = 800
+Weight = 30
+Length = 9
+Width = 5
+Height = 9
+Colour = Red
+Texture = Cotton
+Package Description = 
+
+2ND PACKAGE DETAILS:
+Package Type = 0
+Delivery option = 0
+Package Type (Other) = 
+Shipment Worth = 
+Weight = 
+Length = 
+Width = 
+Height = 
+Colour = 
+Texture = 
+Package Description = 
+
+3RD PACKAGE DETAILS:
+Package Type = 0
+Delivery option = 0
+Package Type (Other) = 
+Shipment Worth = 
+Weight = 
+Length = 
+Width = 
+Height = 
+Colour = 
+Texture = 
+Package Description = 
+
+4TH PACKAGE DETAILS:
+Package Type = 0
+Delivery option = 0
+Package Type (Other) = 
+Shipment Worth = 
+Weight = 
+Length = 
+Width = 
+Height = 
+Colour = 
+Texture = 
+Package Description = 
+

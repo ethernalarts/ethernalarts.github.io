@@ -66,15 +66,18 @@
     <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
-    <link href="css/vlink.css" rel="stylesheet" type="text/css">
+    <link href="css/intlTelInput.css" rel="stylesheet">
+    <link href="./css/w3.css" type="text/css" rel="stylesheet">
+    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
     <script src="js/statecity.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -109,35 +112,6 @@
             margin-top: 250px;
         }
 
-        input:disabled {
-            padding: 15px;
-            margin: 0 0 33px;
-            border: 1px solid #afafaf;
-            background-color: #f5f5f5;
-        }
-
-        .skip {
-            margin: 40px 0 0;
-            text-align: center;
-            font-family: Verdana, serif;
-            font-weight: 600;
-            font-size: 1.2em;
-            color: #555555;
-            text-decoration: underline;
-        }
-
-        .w3-btn:hover {
-            color: #414141 !important;
-            background-color: transparent !important;
-            box-shadow: none;
-        }
-
-        .countries, .states {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
-        }
-
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
 
@@ -148,10 +122,6 @@
             .container-form {
                 margin: 0;
                 padding: 30px;
-            }
-
-            .container-checkbox {
-                text-align: center;
             }
 
             fieldset {
@@ -168,12 +138,17 @@
                 font: 1.3em Verdana, sans-serif;
             }
 
-            #skip {
-                font-size: 1.1em;
+            .skip {
+                font-size: 0.9em;
+                margin-top: 30px;
             }
 
             .container {
-                padding: 0 40px;
+                padding: 0 30px;
+            }
+
+            .container-form input, .container-form select {
+                width: 100%;
             }
 
             button.w3-button.w3-red-cancel {
@@ -246,8 +221,8 @@
                 <a class="active w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.php" style="padding-top: 0" class="active">International Shipping</a>
-                        <a href="quote-ec.php">Domestic Shipping</a>
+                        <a href="quote-is-1.php" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-ec.php" class="active">Domestic Shipping</a>
                         <a href="quote-ss.php">Secure Storage</a>
                     </div>
                 </a>
@@ -258,7 +233,7 @@
         </div>
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
-    <div class="container" style="padding: 0 210px">
+    <div class="container">
 
         <!-- Inner Container -->
         <div class="body-content">
@@ -277,7 +252,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -288,118 +263,142 @@
                 <!-- Toggle (different return address) -->
                 <form method="post" style="text-align: center" action="quote-ec-2-skip.php">
                     <!-- Return notification? -->
-                    <label>
-                        <input name="notify_ec" value="Yes" type="hidden">
-                    </label>
+                    <input name="notify_ec" value="Yes" type="hidden"/>
 
-                    <button type="submit" class="skip w3-btn w3-medium">
-                        Skip, use package's origin's address
+                    <button type="submit" class="skip w3-btn">
+                        Skip. Use Package's Origin's Details
                     </button>
                 </form>
 
                     <!-- Return Address Form -->
                     <form class="container-form" method="post" action="quote-ec-2.php" style="padding-bottom: 5px">
-
                         <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
                             <legend>Return Address</legend>
+                            <div class="row">
                                 <!-- Full Name -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Full Name (or Company):  *" name="name_ec_ra" type="text" required>
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="name_ec_ra"> Full Name (or Company) <span class="required">*</span></label>
+                                    <input class="w3-light-gray" placeholder="e.g. Bruce Wayne (or Wayne Enterprises)"
+                                           name="name_ec_ra" id="name_ec_ra" type="text" required>
+                                </div>
 
-                                <!-- Contact Name -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
-                                           name="contactname_ec_ra" type="text" required>
-                                </label>
+                                <!-- Contact's Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="contactname_ec_ra"> Contact's Name <span class="required">*</span></label>
+                                    <input class="w3-light-gray" placeholder="e.g. Alfred Pennyworth"
+                                           name="contactname_ec_ra" id="contactname_ec_ra" type="text" required>
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Gender -->
-                                <label>
-                                    <select class="choice" name="gender_ec_ra" required>
-                                        <option value="0" selected="selected">Gender  *</option>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="gender_ec_ra">Gender <span class="required">*</span></label>
+                                    <select class="choice" name="gender_ec_ra" id="gender_ec_ra" required>
+                                        <option value="0" selected="selected">Select Gender</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
-                                </label>
+                                </div>
 
                                 <!-- Title -->
-                                <label>
-                                    <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
-                                           name="title_ec_ra" type="text" required>
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="title_ec_ra">Title</label>
+                                    <input class="w3-light-gray" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title_ec_ra" id="title_ec_ra" type="text">
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Telephone -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Telephone:   *" name="phone_ec_ra" type="tel" required>
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="phone_ec_ra">Telephone <span class="required">*</span></label>
+                                    <input class="w3-light-gray" name="phone_ec_ra" id="phone_ec_ra" type="tel" required>
+                                </div>
 
                                 <!-- Email -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" name="email_ec_ra" placeholder="Email:  *"
-                                           type="email" required>
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="email_ec">Email <span class="required">*</span></label>
+                                    <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email_ec" id="email_ec" type="email" required>
+                                </div>
+                            </div>
 
-                                <!-- Country (Finland) -->
-                                <label>
+                            <div class="row">
+                                <!-- Country -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="countryId">Country</label>
                                     <input name="country_ec_ra" class="countries" value="Finland" disabled>
-                                </label>
-                                <input type="hidden" name="country_ec_ra" id="countryId" value="FI">
+                                    <input type="hidden" name="country_ec_ra" id="countryId" value="FI"/>
+                                </div>
 
                                 <!-- State -->
-                                <label for="stateId">
-                                    <select name="state_ec_ra" style="float: right" class="choice states order-alpha" id="stateId" required>
-                                        <option value="0" selected="selected">State:  *</option>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="stateId">State <span class="required">*</span></label>
+                                    <select name="state_ec_ra" class="choice states order-alpha" id="stateId" type="select" required>
+                                        <option value="0" selected="selected">Select State</option>
                                     </select>
-                                </label>
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- City -->
-                                <label for="cityId">
-                                    <select name="city_ec_ra" style="float: left" class="choice cities order-alpha" id="cityId" required>
-                                        <option value="0" selected="selected">City:  *</option>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="cityId">City <span class="required">*</span></label>
+                                    <select name="city_ec_ra" class="choice cities order-alpha" id="cityId" type="select" required>
+                                        <option value="0" selected="selected">Select City</option>
                                     </select>
-                                </label>
+                                </div>
 
                                 <!-- Zip Code -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
-                                           name="zipcode_ec_ra" type="number" required>
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="zipcode_ec_ra">Zip Code <span class="required">*</span></label>
+                                    <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zipcode_ec_ra" id="zipcode_ec_ra" type="number" required>
+                                </div>
+                            </div>
 
+                            <div class="row">
                                 <!-- Street Address -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
-                                           name="address_ec_ra" type="text" required>
-                                </label>
+                                <div class="col-xs-12 col-sm-12">
+                                    <label for="address_ec_ra">Street Address <span class="required">*</span></label>
+                                    <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="address_ec_ra" id="address_ec_ra" type="text" required>
+                                </div>
+                            </div>
 
-                                <!-- Apartment, Suite, Unit -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
-                                           name="apt_ec_ra" type="text">
-                                </label>
+                            <div class="row">
+                                <!-- Street Address 2 -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="apt_ec_ra">Street Address 2</label>
+                                    <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
+                                           name="apt_ec_ra" id="apt_ec_ra" type="text">
+                                </div>
 
                                 <!-- Department -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
-                                           name="dept_ec_ra" type="text">
-                                </label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="dept_ec_ra">Department, c/o, etc.</label>
+                                    <input class="w3-light-gray" placeholder="e.g. Sales (or c/o Clark Kent)" name="dept_ec_ra" id="dept_ec_ra" type="text">
+                                </div>
+                            </div>
 
-                                <!-- Residential Address -->
-                                <label>
-                                    <select name="resAdd_ec_ra" class="choice" required>
-                                        <option value="0" selected="selected">Is this a residential address?   *</option>
+                            <div class="row">
+                                <!-- Residential Address? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="resAdd_ec_ra">Is this a residential address? <span class="required">*</span></label>
+                                    <select name="resAdd_ec_ra" id="resAdd_ec_ra" class="choice" required>
+                                        <option value="0" selected="selected">Select an answer</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
-                                </label>
+                                </div>
 
-                                <!-- Return notification? -->
-                                <label>
-                                    <select  style="float: right" name="notify_ec" class="choice">
-                                        <option value="0" selected="selected">Notify of return using the email above? </option>
+                                <!-- Return Notification -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="notify_ec">Should we notify this person of return? <span class="required">*</span></label>
+                                    <select  name="notify_ec" id="notify_ec" class="choice">
+                                        <option value="0" selected="selected">Select an answer</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
-                                </label>
+                                </div>
+                            </div>
                         </fieldset>
 
                         <!-- Continue and Cancel Button -->
@@ -433,6 +432,21 @@
             <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
+
+    <!-- International Telephone Country Code -->
+    <script src="js/intlTelInput.js"></script>
+    <script>var input = document.querySelector("#phone_ec_ra");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
+        });
+    </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>

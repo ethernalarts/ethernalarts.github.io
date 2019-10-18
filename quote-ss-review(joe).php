@@ -286,7 +286,6 @@
                                 <!-- Age -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="age_ss"> Age:  *</label>
-                            
                                     <input disabled value="<?php echo $_SESSION['age_ss'] ?>" class="w3-input w3-border-0 w3-light-gray" placeholder="Age:  *"
                                         name="age_ss" id="age_ss" type="text" required>
                                 </div>
@@ -335,7 +334,7 @@
                                 <!-- City -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="cityId"> City:  *</label>
-                                    <select disabled name="city_ss" class="choice cities order-alpha" id="cityId" required>
+                                    <select name="city_ss" class="choice cities order-alpha" id="cityId" required>
                                         <option value="0" selected="selected">City:  *</option>
                                     </select>
                                 </div>

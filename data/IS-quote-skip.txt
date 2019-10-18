@@ -1,59 +1,59 @@
 NEW INTERNATIONAL SHIPPING ORDER!
 
 SHIPMENT ORIGIN
-Name = Ethernal Arts
-Contact Name = Uwa
-Gender = Male
-Title = Mr.
-Country Code = 33
-Phone = 0987654321
-Country = France
-State = Pays de la Loire
-City = Avrille
-Zip Code = 345789
-Street Address = 8 Limit Hotel Road
-Street Address 2/Apartment, Suite, Floor etc = Room 6
-Shipping Option = VLink Worldwide Express
-Department = Web Development
-Email = email@email.com
+Name = Mose Stores
+Contact Name = Nowe
+Gender = Female
+Title = Mrs.
+Country Code = 
+Phone = 0987643456
+Country = United States
+State = Florida
+City = Apollo Beach
+Zip Code = 675432
+Street Address = 8C, Beachtown
+Street Address 2/Apartment, Suite, Floor etc = Apartment 3B
+Shipping Option = VLink Worldwide Express Plus
+Department = Management
+Email = nowe@mosestores.com
 Residential Address? = No
 Status Updates? = Yes
 
 
 RETURN ADDRESS
-Name = Ethernal Arts
-Contact Name = Uwa
-Gender = Male
-Title = Mr.
-Country Code = 33
-Phone = 0987654321
-Country = France
-State = Pays de la Loire
-City = Avrille
-Zip Code = 345789
-Street Address = 8 Limit Hotel Road
-Street Address 2/Apartment, Suite, Floor etc = Room 6
-Department = Web Development
-Email = email@email.com
+Name = Mose Stores
+Contact Name = Nowe
+Gender = Female
+Title = Mrs.
+Country Code = 
+Phone = 0987643456
+Country = United States
+State = Florida
+City = Apollo Beach
+Zip Code = 675432
+Street Address = 8C, Beachtown
+Street Address 2/Apartment, Suite, Floor etc = Apartment 3B
+Department = Management
+Email = nowe@mosestores.com
 Residential Address? = No
 Notify of return? = Yes
 
 
 SHIPMENT DESTINATION
-Name = Pabs Couture
-Contact Name = Donald
+Name = Ethernal Arts
+Contact Name = Uwa
 Gender = Male
 Title = Mr.
-Country Code = 44
-Phone = 0987654321
+Country Code = 
+Phone = 654898765
 Country = United Kingdom
 State = England
-City = Acton
-Zip Code = 56789
-Street Address = 6 Maincamp
-Street Address 2/Apartment, Suite, Floor etc = Room 6
-Department = Fashion
-Email = email@email.com
+City = Camden Town
+Zip Code = 900765
+Street Address = 4E, Heaven's gate
+Street Address 2/Apartment, Suite, Floor etc = Office 3
+Department = Creative Arts
+Email = uwa@ethernalarts.com
 Residential Address? = No
 Notify of return? = Yes
 
@@ -61,28 +61,28 @@ Notify of return? = Yes
 SHIPMENT DIMENSIONS
 
 1ST SHIPMENT DETAILS:
-Weight = 23
-Length = 12
-Width = 11
+Weight = 30
+Length = 9
+Width = 5
 Height = 9
-Shipment Worth = 450
+Shipment Worth = 800
 Shipment Type = Luggage
 Shipment Type (Other)= 
 Colour = Red
-Texture = Leather
-Shipment Description = A FENDI duffel
+Texture = Cotton
+Shipment Description = In nomine Patris, et fili, et spiritus sancti. Amen
 
 2ND SHIPMENT DETAILS:
-Weight = 23
-Length = 12
-Width = 11
-Height = 11
-Shipment Worth = 800
-Shipment Type = Laptop
+Weight = 
+Length = 
+Width = 
+Height = 
+Shipment Worth = 
+Shipment Type = 0
 Shipment Type (Other)= 
-Colour = Silver
-Texture = Metal
-Shipment Description = An HP Envy laptop
+Colour = 
+Texture = 
+Shipment Description = 
 
 3RD SHIPMENT DETAILS:
 Weight = 

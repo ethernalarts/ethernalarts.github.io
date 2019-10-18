@@ -49,7 +49,7 @@
         $_SESSION['error'] = "Invalid Email Address";
         header("location: quote-is-1.php");//redirecting to first page
     }
-?>
+//?>
 
 <!doctype html>
 <html lang="en">
@@ -109,22 +109,6 @@
             margin-top: 255px;
         }
 
-        .skip {
-            margin: 40px 0 0;
-            text-align: center;
-            font-family: Verdana, serif;
-            font-weight: 600;
-            font-size: 1.2em;
-            color: #555555;
-            text-decoration: underline;
-        }
-
-        .w3-btn:hover {
-            color: #414141 !important;
-            background-color: transparent !important;
-            box-shadow: none;
-        }
-
         .countries, .states {
             background-color: white;
             border-bottom: 1px solid #878787;
@@ -143,10 +127,6 @@
                 padding: 30px;
             }
 
-            .container-checkbox {
-                text-align: center;
-            }
-
             fieldset {
                 padding: 30px;
             }
@@ -161,8 +141,9 @@
                 font: 1.3em Verdana, sans-serif;
             }
 
-            #skip {
-                font-size: 1.1em;
+            .skip {
+                font-size: 0.9em;
+                margin-top: 30px;
             }
 
             .container {
@@ -277,17 +258,19 @@
             <!-- Container for Return Address  -->
             <div class="w3-card-4">
 
-                <!-- Toggle (different return address) -->
-                <form method="post" style="text-align: center" action="quote-is-3-skip.php">
-                    <button type="submit" class="skip w3-btn w3-medium">
-                        Skip, use shipment's origin's address
+                <!-- Toggle (use shipment's origin address) -->
+                <form method="post" style="text-align: center" action="quote-is-3-skip.php" >
+                    <!-- Notify of Return? -->
+                    <input type="hidden" name="notify" value="Yes"/>
+
+                    <button type="submit" class="skip w3-btn">
+                        Skip. Use Shipment's Origin's Details
                     </button>
                 </form>
 
                     <!-- Return Address Form -->
                     <form class="container-form" method="post" action="quote-is-3.php" style="padding-bottom: 0">
-
-                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
+                        <fieldset style="margin: 0 0 40px; padding-bottom: 20px">
                             <legend>Return Address</legend>
                                 <div class="row">
                                     <!-- Full Name -->
@@ -300,7 +283,7 @@
                                     <!-- Contact's Name -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="contact_name_reAdd"> Contact's Name <span class="required">*</span></label>
-                                        <input class="w3-light-gray" style="float: right" placeholder="e.g. Alfred Pennyworth" name="contact_name_reAdd" id="contact_name_reAdd" type="text" required>
+                                        <input class="w3-light-gray"  placeholder="e.g. Alfred Pennyworth" name="contact_name_reAdd" id="contact_name_reAdd" type="text" required>
                                     </div>
                                 </div>
 
@@ -318,7 +301,7 @@
                                     <!-- Title -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="title_reAdd">Title</label>
-                                        <input class="w3-light-gray" style="float: right" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title_reAdd" id="title_reAdd" type="text">
+                                        <input class="w3-light-gray" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title_reAdd" id="title_reAdd" type="text">
                                     </div>
                                 </div>
 
@@ -348,7 +331,7 @@
                                     <!-- State -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="stateId">State <span class="required">*</span></label>
-                                        <select name="state_reAdd" style="float: right" class="choice states" id="stateId" type="select" required>
+                                        <select name="state_reAdd" class="choice states" id="stateId" type="select" required>
                                             <option value="0" selected="selected">Select State</option>
                                         </select>
                                     </div>
@@ -366,7 +349,7 @@
                                     <!-- Zip Code -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="zip_code_reAdd">Zip Code <span class="required">*</span></label>
-                                        <input class="w3-light-gray" style="float: right" placeholder="e.g. 123456" name="zip_code_reAdd" id="zip_code_reAdd" type="number" required>
+                                        <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zip_code_reAdd" id="zip_code_reAdd" type="number" required>
                                     </div>
                                 </div>
 
@@ -389,7 +372,7 @@
                                     <!-- Department -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="department_reAdd">Department, c/o, etc.</label>
-                                        <input class="w3-light-gray" style="float: right" placeholder="e.g. Sales (or c/o Clark Kent)" name="department_reAdd" id="department_reAdd" type="text">
+                                        <input class="w3-light-gray" placeholder="e.g. Sales (or c/o Clark Kent)" name="department_reAdd" id="department_reAdd" type="text">
                                     </div>
                                 </div>
 
@@ -407,7 +390,7 @@
                                     <!-- Notify of Return? -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="notify">Should we notify this person of return? <span class="required">*</span></label>
-                                        <select  style="float: right" name="notify" id="notify" class="choice">
+                                        <select name="notify" id="notify" class="choice">
                                             <option value="0" selected="selected">Select an answer</option>
                                             <option value="Yes">Yes</option>
                                             <option value="No">No</option>
@@ -453,8 +436,26 @@
     <script>
         var input = document.querySelector("#phone_reAdd");
         window.intlTelInput(input, {
-            utilsScript: "js/utils.js?1562189064761"
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
         });
+    </script>
+
+    <!-- toggle (return address fieldset) -->
+    <script>
+        var btn = document.querySelector('showReturn');
+        btn.addEventListener('click', showReturn);
+
+        function showReturn() {
+            var e = document.getElementById('returnAdd');
+            e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
+        }
     </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->

@@ -266,7 +266,7 @@
                                 <!-- Shipment's Worth -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="worth"> Shipment's Worth <span class="required">*</span></label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (USD)"
+                                    <input class="w3-light-gray" placeholder="Declared Value (USD)"
                                            name="worth" id="worth" type="number" required>
                                 </div>
                             </div>
@@ -290,7 +290,7 @@
                                 <!-- Length -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="length">Length <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="float: right" name="length" placeholder="in inches" id="length" type="number" required>
+                                    <input class="w3-light-gray" name="length" placeholder="in inches" id="length" type="number" required>
                                 </div>
                             </div>
 
@@ -304,7 +304,7 @@
                                 <!-- Height -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="height">Height <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="float: right" name="height" placeholder="in inches" id="height" type="number" required>
+                                    <input class="w3-light-gray" name="height" placeholder="in inches" id="height" type="number" required>
                                 </div>
                             </div>
 
@@ -318,7 +318,7 @@
                                 <!-- Texture -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="texture">Texture <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Fur, Leather etc" name="texture" id="texture" type="text" required>
+                                    <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture" id="texture" type="text" required>
                                 </div>
                             </div>
 
@@ -363,7 +363,7 @@
                                 <!-- Shipment's Worth -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="worth_2">Shipment's Worth</label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (USD)"
+                                    <input class="w3-light-gray" placeholder="Declared Value (USD)"
                                            name="worth_2" id="worth_2" type="number">
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                                 <!-- Length -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="length_2">Length</label>
-                                    <input class="w3-light-gray" style="float: right" name="length_2" placeholder="in inches" id="length_2" type="number">
+                                    <input class="w3-light-gray" name="length_2" placeholder="in inches" id="length_2" type="number">
                                 </div>
                             </div>
 
@@ -401,7 +401,7 @@
                                 <!-- Height -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="height_2">Height</label>
-                                    <input class="w3-light-gray" style="float: right" name="height_2" placeholder="in inches" id="height_2" type="number">
+                                    <input class="w3-light-gray" name="height_2" placeholder="in inches" id="height_2" type="number">
                                 </div>
                             </div>
 
@@ -415,7 +415,7 @@
                                 <!-- Texture -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="texture_2">Texture</label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Fur, Leather etc." name="texture_2" id="texture_2" type="text">
+                                    <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc." name="texture_2" id="texture_2" type="text">
                                 </div>
                             </div>
 
@@ -460,7 +460,7 @@
                                 <!-- Shipment's Worth -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="worth_3">Shipment's Worth</label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (USD)"
+                                    <input class="w3-light-gray" placeholder="Declared Value (USD)"
                                            name="worth_3" id="worth_3" type="number">
                                 </div>
                             </div>
@@ -484,7 +484,7 @@
                                 <!-- Length -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="length_3">Length</label>
-                                    <input class="w3-light-gray" style="float: right" name="length_3" placeholder="in inches" id="length_3" type="number">
+                                    <input class="w3-light-gray" name="length_3" placeholder="in inches" id="length_3" type="number">
                                 </div>
                             </div>
 
@@ -498,7 +498,7 @@
                                 <!-- Height -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="height_3">Height</label>
-                                    <input class="w3-light-gray" style="float: right" name="height_3" placeholder="in inches" id="height_3" type="number">
+                                    <input class="w3-light-gray" name="height_3" placeholder="in inches" id="height_3" type="number">
                                 </div>
                             </div>
 
@@ -512,7 +512,7 @@
                                 <!-- Texture -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="texture_3">Texture</label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Fur, Leather etc." name="texture_3" id="texture_3" type="text">
+                                    <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc." name="texture_3" id="texture_3" type="text">
                                 </div>
                             </div>
 
@@ -557,7 +557,7 @@
                                 <!-- Shipment's Worth -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="worth_4">Shipment's Worth</label>
-                                    <input style="float: right" class="w3-light-gray" placeholder="Declared Value (USD)"
+                                    <input class="w3-light-gray" placeholder="Declared Value (USD)"
                                            name="worth_4" id="worth_4" type="number">
                                 </div>
                             </div>
@@ -581,7 +581,7 @@
                                 <!-- Length -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="length_4">Length</label>
-                                    <input class="w3-light-gray" style="float: right" name="length_4" placeholder="in inches" id="length_4" type="number">
+                                    <input class="w3-light-gray" name="length_4" placeholder="in inches" id="length_4" type="number">
                                 </div>
                             </div>
 
@@ -595,7 +595,7 @@
                                 <!-- Height -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="height_4">Height</label>
-                                    <input class="w3-light-gray" style="float: right" name="height_4" placeholder="in inches" id="height_4" type="number">
+                                    <input class="w3-light-gray" name="height_4" placeholder="in inches" id="height_4" type="number">
                                 </div>
                             </div>
 
@@ -609,7 +609,7 @@
                                 <!-- Texture -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="texture_4">Texture</label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="e.g. Fur, Leather etc." name="texture_4" id="texture_4" type="text">
+                                    <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc." name="texture_4" id="texture_4" type="text">
                                 </div>
                             </div>
 
