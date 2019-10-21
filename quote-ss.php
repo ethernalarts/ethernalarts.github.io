@@ -15,15 +15,17 @@
     <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/intlTelInput.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/vlink.css" rel="stylesheet">
+    <link href="./css/w3.css" type="text/css" rel="stylesheet">
+    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
     <script src="js/statecity.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -58,20 +60,6 @@
 
         .subheader-h2 {
             margin-top: 250px;
-        }
-
-        input:disabled {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
-            border: 1px solid #afafaf;
-            background-color: #f5f5f5;
-        }
-
-        .countries, .states, .cities {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -193,7 +181,7 @@
 
             <h3 id="required">
                 <code class="w3-code">
-                    <span style="font-size: 13px"><i class="fas fa-asterisk"></i></span>&nbsp;&nbsp;Indicates required fields
+                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
                 </code>
             </h3>
 
@@ -202,124 +190,149 @@
 
                 <!-- Express Courier Quote form -->
                 <form class="container-form" style="padding-bottom: 0"  method="post" action="quote-ss-1.php">
-
                         <!-- Basic Details -->
                         <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
-
                             <legend>Basic Information</legend>
+                                <div class="row">
+                                    <!-- Full Name -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="name_ss"> Full Name (or Company) <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. Clark Kent (or Daily Planet)" name="name_ss" id="name_ss" type="text" required>
+                                    </div>
 
-                                <!-- Full Name -->
-                                <label>
-                                    <input  class="w3-light-gray" placeholder="Full Name (or Company):  *"
-                                           name="name_ss" type="text" required>
-                                </label>
+                                    <!-- Contact's Name -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="contactname_ss"> Contact's Name <span class="required">*</span></label>
+                                        <input class="w3-light-gray"  placeholder="e.g. Lois Lane" name="contactname_ss" id="contactname_ss" type="text" required>
+                                    </div>
+                                </div>
 
-                                <!-- Contact Name -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Contact's Name:  *"
-                                           name="contactname_ss" type="text" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Gender -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="gender_ss">Gender <span class="required">*</span></label>
+                                        <select class="choice" name="gender_ss" id="gender_ss" required>
+                                            <option value="0" selected="selected">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
 
-                                <!-- Gender -->
-                                <label>
-                                    <select class="choice" name="gender_ss" required>
-                                        <option value="0" selected="selected">Gender   *</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
-                                </label>
+                                    <!-- Title -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="title_ss">Title</label>
+                                        <input class="w3-light-gray"  placeholder="e.g. Mr, Mrs, Cpt, Dr. etc."
+                                               name="title_ss" id="title_ss" type="text">
+                                    </div>
+                                </div>
 
-                                <!-- Title -->
-                                <label>
-                                    <input class="w3-light-gray" style="padding: 13px; float: right" placeholder="Title (Mr, Mrs, Dr. etc):   *"
-                                           name="title_ss" type="text" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Age -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="age_ss">Age <span class="required">*</span></label>
+                                        <input class="w3-light-gray"  placeholder="e.g. 28"
+                                               name="age_ss" id="age_ss" type="text">
+                                    </div>
 
-                                <!-- Age -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Age:  *"
-                                           name="age_ss" type="text" required>
-                                </label>
+                                    <!-- Occupation -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="occupation_ss">Occupation <span class="required">*</span></label>
+                                        <input class="w3-light-gray"  placeholder="e.g. Chef, Graphics Designer etc."
+                                               name="occupation_ss" id="occupation_ss" type="text">
+                                    </div>
+                                </div>
 
-                                <!-- Occupation -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Occupation:  *" style="float: right"
-                                           name="occupation_ss" type="text" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Telephone -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="phone_ss">Telephone <span class="required">*</span></label>
+                                        <input class="w3-light-gray" name="phone_ss" id="phone_ss" type="tel" required>
+                                    </div>
 
-                                <!-- Telephone -->
-                                <label>
-                                    <input class="w3-light-gray" placeholder="Telephone:   *" name="phone_ss" type="tel" required>
-                                </label>
+                                    <!-- Email -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="email_ss">Email <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email_ss" id="email_ss" type="email" required>
+                                    </div>
+                                </div>
 
-                                <!-- Email -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" name="email_ss" placeholder="Email:  *"
-                                           type="email" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Country -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="countryId">Country</label>
+                                        <input name="country_ss" class="countries" value="Finland" disabled>
+                                        <input type="hidden" name="country_ss" id="countryId" value="FI"/>
+                                    </div>
 
-                                <!-- Country (Finland) -->
-                                <label>
-                                    <input name="country_ss" class="countries" value="Finland" disabled>
-                                </label>
-                                <input type="hidden" name="country_ss" id="countryId" value="FI"/>
+                                    <!-- State -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="stateId">State <span class="required">*</span></label>
+                                        <select name="state_ss" class="choice states order-alpha" id="stateId" type="select" required>
+                                            <option value="0" selected="selected">Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                                <!-- State -->
-                                <label for="stateId">
-                                    <select name="state_ss" style="float: right" class="choice states order-alpha" id="stateId" required>
-                                        <option value="0" selected="selected">State:  *</option>
-                                    </select>
-                                </label><br>
+                                <div class="row">
+                                    <!-- City -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="cityId">City <span class="required">*</span></label>
+                                        <select name="city_ss" class="choice cities order-alpha" id="cityId" type="select" required>
+                                            <option value="0" selected="selected">Select City</option>
+                                        </select>
+                                    </div>
 
-                                <!-- City -->
-                                <label for="cityId">
-                                    <select name="city_ss" style="float: left" class="choice cities order-alpha" id="cityId" required>
-                                        <option value="0" selected="selected">City:  *</option>
-                                    </select>
-                                </label>
+                                    <!-- Zip Code -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="zipcode_ss">Zip Code <span class="required">*</span></label>
+                                        <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zipcode_ss" id="zipcode_ss" type="number" required>
+                                    </div>
+                                </div>
 
-                                <!-- Zip Code -->
-                                <label>
-                                    <input class="w3-light-gray" style="float: right" placeholder="Zip Code:  *"
-                                           name="zipcode_ss" type="number" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Street Address -->
+                                    <div class="col-xs-12 col-sm-12">
+                                        <label for="address_ss">Street Address <span class="required">*</span></label>
+                                        <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="address_ss" id="address_ss" type="text" required>
+                                    </div>
+                                </div>
 
-                                <!-- Street Address -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="width: 100%" placeholder="Street Address:  *"
-                                           name="address_ss" type="text" required>
-                                </label>
+                                <div class="row">
+                                    <!-- Street Address 2 -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="apt_ss">Street Address 2</label>
+                                        <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
+                                               name="apt_ss" id="apt_ss" type="text">
+                                    </div>
 
-                                <!-- Apartment, Suite, Unit -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" placeholder="Apartment, unit, suite, building, floor, etc.:  "
-                                           name="apt_ss" type="text">
-                                </label>
+                                    <!-- Department -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="dept_ss">Department, c/o, etc.</label>
+                                        <input class="w3-light-gray" placeholder="e.g. Sales (or c/o Clark Kent)" name="dept_ss" id="dept_ss" type="text">
+                                    </div>
+                                </div>
 
-                                <!-- Department -->
-                                <label>
-                                    <input class="w3-input w3-border-0 w3-light-gray" style="float: right;" placeholder="Department, c/o, etc.: "
-                                           name="dept_ss" type="text">
-                                </label>
+                                <div class="row">
+                                    <!-- Residential Address? -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="resAdd_ss">Is this a residential address? <span class="required">*</span></label>
+                                        <select name="resAdd_ss" id="resAdd_ss" class="choice" required>
+                                            <option value="0" selected="selected">Select an answer</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
 
-                                <!-- Residential address? -->
-                                <label>
-                                    <select  name="resAdd_ss" class="choice">
-                                        <option value="0" selected="selected">Is this a residential address?  *</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </label>
-
-                                <!-- Storage Status on Item -->
-                                <label>
-                                    <select  style="float: right" name="item_update_ss" class="choice">
-                                        <option value="0" selected="selected">Should we email you storage status? </option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </label>
-
+                                    <!-- Item Updates? -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label for="item_update_ss">Should we email you item status updates? <span class="required">*</span></label>
+                                        <select  name="item_update_ss" id="item_update_ss" class="choice">
+                                            <option value="0" selected="selected">Select an answer </option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
                         </fieldset>
 
                             <!-- Continue and Cancel Button -->
@@ -344,6 +357,22 @@
         });
 
         $(".choice").change();
+    </script>
+
+    <!-- International Telephone Country Code -->
+    <script src="js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone_ss");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
+        });
     </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->

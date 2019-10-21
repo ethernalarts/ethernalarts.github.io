@@ -312,7 +312,7 @@
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="colour">Colour <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. Red" name="colour" id="colour" type="text" required>
+                                    <input class="w3-light-gray" name="colour" id="colour" type="color" required>
                                 </div>
 
                                 <!-- Texture -->
@@ -409,7 +409,7 @@
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="colour_2">Colour</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Red" name="colour_2" id="colour_2" type="text">
+                                    <input class="w3-light-gray" name="colour_2" id="colour_2" type="color">
                                 </div>
 
                                 <!-- Texture -->
@@ -506,7 +506,7 @@
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="colour_3">Colour</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Blue" name="colour_3" id="colour_3" type="text">
+                                    <input class="w3-light-gray" name="colour_3" id="colour_3" type="color">
                                 </div>
 
                                 <!-- Texture -->
@@ -603,7 +603,7 @@
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="colour_4">Colour</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Green" name="colour_4" id="colour_4" type="text">
+                                    <input class="w3-light-gray" name="colour_4" id="colour_4" type="color">
                                 </div>
 
                                 <!-- Texture -->
@@ -622,7 +622,6 @@
                                 </div>
                             </div>
                     </fieldset>
-
 
                     <!-- Continue and Cancel Button -->
                     <div class="w3-center">

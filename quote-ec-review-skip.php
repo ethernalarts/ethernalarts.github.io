@@ -536,7 +536,7 @@
                                 <!-- Height -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="height">Height (inches)</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['weight'] ?>" class="w3-light-gray" id="weight">
+                                    <input disabled placeholder="<?php echo $_SESSION['height'] ?>" class="w3-light-gray" id="height">
                                 </div>
                             </div>
 
@@ -557,7 +557,7 @@
                             <div class="row">
                                 <!-- Additional Info -->
                                 <div class="col-xs-12 col-sm-12">
-                                    <label for="package_description">Additional Information</label>
+                                    <label for="package_description">Additional Information about package</label>
                                     <input disabled placeholder="<?php echo $_SESSION['package_description'] ?>" class="w3-light-gray" id="package_description">
                                 </div>
                             </div>
@@ -645,7 +645,7 @@
                                         <div class="row">
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
-                                                <label for="package_description_2">Additional Information</label>
+                                                <label for="package_description_2">Additional Information about package</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['package_description_2'] ?>" class="w3-light-gray" id="package_description_2">
                                             </div>
                                         </div>
@@ -727,7 +727,7 @@
                                         <div class="row">
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
-                                                <label for="package_description_3">Additional Information</label>
+                                                <label for="package_description_3">Additional Information about package</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['package_description_3'] ?>" class="w3-light-gray" id="package_description_3">
                                             </div>
                                         </div>
@@ -809,7 +809,7 @@
                                         <div class="row">
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
-                                                <label for="package_description_4">Additional Information</label>
+                                                <label for="package_description_4">Additional Information about package</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['package_description_4'] ?>" class="w3-light-gray" id="package_description_4">
                                             </div>
                                         </div>

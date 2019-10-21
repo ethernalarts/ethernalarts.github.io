@@ -280,7 +280,7 @@
                                 <!-- Title -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="title_dest">Title</label>
-                                    <input class="w3-light-gray"  placeholder="Mr, Mrs, Cpt, Dr. etc."
+                                    <input class="w3-light-gray"  placeholder="e.g. Mr, Mrs, Cpt, Dr. etc."
                                            name="title_dest" id="title_dest" type="text">
                                 </div>
                             </div>

@@ -691,7 +691,7 @@
                                 <!-- Height -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="height">Height (inches)</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['weight'] ?>" class="w3-light-gray" id="weight">
+                                    <input disabled placeholder="<?php echo $_SESSION['height'] ?>" class="w3-light-gray" id="height">
                                 </div>
                             </div>
 
@@ -773,7 +773,7 @@
                                                     <!-- Height -->
                                                     <div class="col-xs-12 col-sm-6">
                                                         <label for="height_2">Height (inches)</label>
-                                                        <input disabled placeholder="<?php echo $_SESSION['weight_2'] ?>" class="w3-light-gray" id="weight_2">
+                                                        <input disabled placeholder="<?php echo $_SESSION['height_2'] ?>" class="w3-light-gray" id="height_2">
                                                     </div>
                                                 </div>
 
@@ -849,7 +849,7 @@
                                                     <!-- Height -->
                                                     <div class="col-xs-12 col-sm-6">
                                                         <label for="height_3">Height (inches)</label>
-                                                        <input disabled placeholder="<?php echo $_SESSION['weight_3'] ?>" class="w3-light-gray" id="weight_3">
+                                                        <input disabled placeholder="<?php echo $_SESSION['height_3'] ?>" class="w3-light-gray" id="height_3">
                                                     </div>
                                                 </div>
 
@@ -925,7 +925,7 @@
                                                     <!-- Height -->
                                                     <div class="col-xs-12 col-sm-6">
                                                         <label for="height_4">Height (inches)</label>
-                                                        <input disabled placeholder="<?php echo $_SESSION['weight_4'] ?>" class="w3-light-gray" id="weight_4">
+                                                        <input disabled placeholder="<?php echo $_SESSION['height_4'] ?>" class="w3-light-gray" id="height_4">
                                                     </div>
                                                 </div>
 

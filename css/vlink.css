@@ -104,6 +104,10 @@
         font-family: Montserrat;
         src: url(../fonts/Montserrat-Regular.ttf);
     }
+    @font-face {
+        font-family: "A Love of Thunder";
+        src: url(../fonts/a-love-of-thunder.ttf);
+    }
 
     body {
         width: 100%;
@@ -583,6 +587,19 @@
         border: 1px solid #afafaf;
     }
 
+    .container-form input[type="color"] {
+        font-family: Roboto, Montserrat, serif;
+        color: #737373;
+        padding: 0.9em 13px;
+        height: 50px;
+        cursor: pointer;
+        margin: 0 0 30px;
+        font-size: 1em;
+        font-weight: 500;
+        display: inline-block;
+        border: 1px solid #afafaf;
+    }
+
     input:disabled {
         padding: 0.9em 13px;
         margin: 0 0 33px;
@@ -632,7 +649,7 @@
     }
 
     label {
-        font-family: "Oswald SemiBold", Roboto, Verdana, serif;
+        font-family: "Roboto Black", "Oswald SemiBold", Roboto, Verdana, serif;
         font-style: normal;
         font-weight: 500;
         font-size: 1.15em;
@@ -649,8 +666,8 @@
     }
 
     .emoji {
-        width: 125px;
-        height: 125px;
+        width: 130px;
+        height: 130px;
     }
 
     fieldset {

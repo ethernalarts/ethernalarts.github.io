@@ -1611,7 +1611,7 @@ a {
     font-style: normal;
     font-family: Montserrat, serif;
     font-size: 1em;
-    border: 1px solid #e10000;
+    border: 1px solid transparent;
 }
 
 button.w3-button.w3-red-cancel:hover {
@@ -1699,7 +1699,7 @@ button.w3-button.w3-black-previous:hover {
     font-size: 1em;
     font-style: normal;
     font-weight: 500;
-    border: 1px solid green;
+    border: 1px solid transparent;
 }
 
 .w3-button.w3-green-continue:hover {

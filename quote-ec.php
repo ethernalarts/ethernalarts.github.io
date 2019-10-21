@@ -62,11 +62,44 @@
             margin-top: 250px;
         }
 
-        input:disabled {
-            padding: 0.9em 13px;
-            margin: 0 0 30px;
-            border: 1px solid #afafaf;
-            background-color: #f5f5f5;
+        input[type="date"] {
+             position: relative;
+         }
+
+        /* create a new arrow, because we are going to mess up the native one
+        see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+        input[type="date"]:after {
+            content: "\25BC";
+            color: #9b9b9b;
+            padding: 0 5px;
+        }
+
+        /* change color of symbol on hover */
+        input[type="date"]:hover:after {
+            color: #bf1400;
+        }
+
+        /* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            color: transparent;
+            background: transparent;
+        }
+
+        /* adjust increase/decrease button */
+        input[type="date"]::-webkit-inner-spin-button {
+            z-index: 1;
+        }
+
+        /* adjust clear button */
+        input[type="date"]::-webkit-clear-button {
+            z-index: 1;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -310,8 +343,7 @@
                                     <!-- Pickup Date -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="d8">Pickup Date</label>
-                                        <input class="w3-input w3-border-0 w3-light-gray" placeholder="mm/dd/yyyy e.g. 08/10/2019"
-                                               name="pickupdate" type="text" onfocus="(this.type='date')" id="d8" required>
+                                        <input class="w3-input w3-border-0 w3-light-gray" name="pickupdate" type="date" id="d8" required>
                                     </div>
 
                                     <!-- Pickup Time -->
