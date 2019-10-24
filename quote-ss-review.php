@@ -165,13 +165,6 @@
             margin-top: 290px;
         }
 
-        input:disabled {
-            padding: 14px;
-            margin: 0 0 33px;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
-        }
-
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
             #hi {

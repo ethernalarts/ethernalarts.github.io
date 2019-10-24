@@ -161,7 +161,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -198,7 +198,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
@@ -342,13 +342,13 @@
                                 <div class="row">
                                     <!-- Pickup Date -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <label for="d8">Pickup Date</label>
+                                        <label for="d8">Pickup Date <span class="required">*</span></label>
                                         <input class="w3-input w3-border-0 w3-light-gray" name="pickupdate" type="date" id="d8" required>
                                     </div>
 
                                     <!-- Pickup Time -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <label for="pickuptime">Pickup Time</label>
+                                        <label for="pickuptime">Pickup Time <span class="required">*</span></label>
                                         <input class="w3-light-gray" placeholder="e.g. 5pm" name="pickuptime" id="pickuptime" type="text">
                                     </div>
                                 </div>

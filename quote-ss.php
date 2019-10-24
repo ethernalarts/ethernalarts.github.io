@@ -135,7 +135,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 290px;">Quote - Secure Storage</div>
+        <div class="subheader-h2" style="width: 350px;">Quote - Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->

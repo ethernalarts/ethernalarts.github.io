@@ -61,7 +61,7 @@
     // echo $mail?"<h1>Mail sent.</h1>":"<h1>Mail sending failed.</h1>";
 
     if ($mail) {
-        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-ec-success.html\">";
+        print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-ec-success.php\">";
     }
     else {
         print "<meta http-equiv=\"refresh\" content=\"0;URL=quote-ec-error.html\">";
