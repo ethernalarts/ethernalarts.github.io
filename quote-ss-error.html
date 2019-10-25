@@ -39,7 +39,7 @@
 
         .parallax {
             /* The image used */
-            background-image: url("images/contact-error.jpg");
+            background-image: url("images/error2.jpg");
 
             /* Set a specific height */
             min-height: 290px;
@@ -52,25 +52,13 @@
         }
 
         .subheader-h2 {
-            margin-top: 110px;
-        }
-
-        .w3-center-services-h2 {
-            text-align: center;
-            font-family: Verdana, Montserrat, Lato, Arial, serif;
-            font-size: 1.3em;
-            margin: 0 auto 20px;
-            color: #0f0f0f;
-            font-weight: 500;
-            width: 100%;
+            margin-top: 120px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.4em Verdana, sans-serif;
+            .subheader-h2 {
+                margin-top: 130px;
             }
 
             .container {
@@ -84,11 +72,8 @@
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.3em Verdana, sans-serif;
+            .subheader-h2 {
+                margin-top: 130px;
             }
 
             .container {
@@ -121,7 +106,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -135,7 +120,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 280px;">Error - Secure Storage</div>
+        <div class="subheader-h2" style="width: 370px;">Oops! - Something went wrong</div>
     </div>
 
 
@@ -159,7 +144,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
@@ -180,23 +165,23 @@
             <div style="padding-bottom: 0">
 
                 <!-- Thank you note -->
-                <div class="container-form" style="padding: 30px 0 0">
+                <div class="container-form" style="padding: 0">
                     <div >
-                        <p class="w3-justify w3-center-services-h2">
-                            Oops!<br><br>
-                            Apologies. An error has occurred and <br>
-                            we were unable to receive your storage order.<br><br>
+                        <p class="success-message">
+                            Apologies.<br>
+                            An error has occurred.<br>
+                            We haven't received your storage order.<br>
                             Please go back and try again. If the issue persists,
-                            <a href="contact.html" style="color: #6489e1" target="_blank">tell us about it</a><br><br>
+                            <a href="contact.html" style="color: #6489e1" target="_blank">tell us about it</a><br>
                             Thank You
                         </p>
                     </div>
-                    
+
                     <!-- Get another quote -->
                     <div class="w3-center">
-                        <div class="w3-bar">
-                            <a href="getaquote.html" class="w3-button w3-large w3-green-continue">
-                                Get another Quote</a>
+                        <div class="w3-bar"style="padding-top: 0">
+                            <a onClick="history.go(-1)" class="goback">Go Back</a>
+                            <a href="quote-ss.php" class="tryagain">Start Afresh</a>
                         </div>
                     </div>
                 </div>

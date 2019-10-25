@@ -96,19 +96,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 260px;
-        }
-
-        .container-form.w3-green-continue input {
-            color: white;
-            background-color: #2da52d;
-            cursor: pointer;
-            padding: 8px 20px;
-            font-family: Montserrat, serif;
-            font-size: 1em;
-            font-style: normal;
-            font-weight: 500;
-            border-radius: 0;
+            margin-top: 270px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -120,7 +108,7 @@
             }
 
             .container {
-                padding: 0 50px;
+                padding: 0 40px;
             }
         }
 
@@ -133,7 +121,7 @@
             }
 
             .container {
-                padding: 0 40px;
+                padding: 0 20px;
             }
 
             .container-form input, .container-form select {
@@ -171,7 +159,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -185,7 +173,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 320px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -208,7 +196,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
@@ -286,7 +274,7 @@
                                 <!-- Country -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="countryId">Country</label>
-                                    <input disabled class="w3-light-gray" placeholder="Finland" id="countryId">
+                                    <input disabled class="w3-light-gray" placeholder="Finland" id="">
                                 </div>
 
                                 <!-- State -->
@@ -948,7 +936,6 @@
                     <div class="w3-center">
                         <div class="w3-bar">
                             <button name="submit" type="submit" class="w3-button w3-green-continue">Submit</button>
-                            <button type="reset" class="w3-button w3-red-cancel">Cancel</button>
                         </div>
                     </div>
 

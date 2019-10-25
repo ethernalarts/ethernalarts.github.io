@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm">
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/about.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/about.html" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/contact-success.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/contact-success.html" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/contact.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/contact.html" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/vlink.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/css/vlink.css" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/getaquote.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/getaquote.html" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/smiling-emoji.jpg" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/images/smiling-emoji.jpg" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-success.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec-success.html" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ec.php" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-1.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-1.php" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-success.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-is-success.html" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-success.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss-success.html" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/quote-ss.php" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/services.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Uwa/ethernalarts.github.io/services.html" afterDir="false" />
-    </list>
+    <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +227,7 @@
       <workItem from="1571686308868" duration="11135000" />
       <workItem from="1571823757008" duration="17569000" />
       <workItem from="1571867769897" duration="2221000" />
-      <workItem from="1571878010089" duration="5108000" />
+      <workItem from="1571878010089" duration="36837000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>

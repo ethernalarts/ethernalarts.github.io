@@ -1,3 +1,8 @@
+<?php
+    //start the session
+    session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,16 +58,6 @@
 
         .subheader-h2 {
             margin-top: 120px;
-        }
-
-        .w3-center-services-h2 {
-            text-align: center;
-            font-family: Verdana, Montserrat, Lato, Arial, serif;
-            font-size: 1.3em;
-            margin: 0 auto 20px;
-            color: #0f0f0f;
-            font-weight: 500;
-            width: 100%;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -121,7 +116,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -173,16 +168,6 @@
             <div style="text-align: center; margin: 0 0 30px">
                 <img class="emoji" src="images/smiling-emoji.jpg">
             </div>
-
-            <!-- Progress circles which indicates the steps of the form: -->
-<!--            <div style="text-align:center; margin-bottom: 30px;">-->
-<!--                <span class="step finish"></span>-->
-<!--                <span class="step finish"></span>-->
-<!--                <span class="step finish"></span>-->
-<!--                <span class="step finish"></span>-->
-<!--                <span class="step finish"></span><br><br>-->
-<!--                <span style="font: 1.25em Montserrat, sans-serif;">Complete!</span>-->
-<!--            </div>-->
 
             <!-- Container for Get a Quote form  -->
             <div style="padding-bottom: 0">

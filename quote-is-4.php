@@ -93,7 +93,7 @@
             background-image: url("images/is-pic4.jpg");
 
             /* Set a specific height */
-            min-height: 430px;
+            min-height: 440px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -103,7 +103,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 250px;
+            margin-top: 280px;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -111,6 +111,10 @@
 
             .container {
                 padding: 0 50px;
+            }
+
+            .subheader-h2 {
+                margin-top: 290px;
             }
         }
 
@@ -124,6 +128,10 @@
 
             .container {
                 padding: 0 30px;
+            }
+
+            .subheader-h2 {
+                margin-top: 290px;
             }
 
             .container-form input, .container-form select {
@@ -169,7 +177,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -183,7 +191,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 360px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 365px;">Quote - International Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -206,7 +214,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>

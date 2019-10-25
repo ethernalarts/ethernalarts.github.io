@@ -57,19 +57,17 @@
         }
 
         .subheader-h2 {
-            margin-top: 170px;
+            margin-top: 180px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.4em Verdana, sans-serif;
+            .subheader-h2 {
+                margin-top: 190px;
             }
 
             .container {
-                padding: 0 60px;
+                padding: 0 30px;
             }
 
             .container-form {
@@ -79,11 +77,8 @@
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.3em Verdana, sans-serif;
+            .subheader-h2 {
+                margin-top: 190px;
             }
 
             .container {
@@ -130,7 +125,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 270px;">Message Received!</div>
+        <div class="subheader-h2" style="width: 230px;">Message Received!</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -153,7 +148,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.php" class="active">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>

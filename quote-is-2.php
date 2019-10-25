@@ -106,7 +106,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 255px;
+            margin-top: 270px;
         }
 
         .countries, .states {
@@ -117,6 +117,9 @@
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
+            .subheader-h2 {
+                margin-top: 280px;
+            }
 
             .container {
                 padding: 0 30px;
@@ -134,6 +137,9 @@
 
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
+            .subheader-h2 {
+                margin-top: 280px;
+            }
 
             #hi {
                 margin: 60px 0 0;
@@ -189,7 +195,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -203,7 +209,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 360px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 365px;">Quote - International Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -226,7 +232,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>

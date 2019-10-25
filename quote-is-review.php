@@ -146,14 +146,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 260px;
-        }
-
-        input:disabled {
-            padding: 12px;
-            margin: 0 0 31px;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
+            margin-top: 270px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -162,6 +155,10 @@
                 margin: 60px 0 0;
                 text-align: center;
                 font: 1.4em Verdana, sans-serif;
+            }
+
+            .subheader-h2 {
+                margin-top: 280px;
             }
 
             .container {
@@ -175,6 +172,10 @@
                 margin: 60px 0 0;
                 text-align: center;
                 font: 1.3em Verdana, sans-serif;
+            }
+
+            .subheader-h2 {
+                margin-top: 280px;
             }
 
             .container {
@@ -214,8 +215,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navlistitem"><a href="#">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="about.html">About</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -229,7 +230,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 360px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 365px;">Quote - International Shipping</div>
     </div>
 
 
@@ -253,7 +254,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
@@ -332,7 +333,7 @@
                                 <!-- Country -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="countryId">Country</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['country'] ?>" id="countryId">
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['country'] ?>" id="">
                                 </div>
 
                                 <!-- State -->
@@ -968,7 +969,6 @@
                     <div class="w3-center">
                         <div class="w3-bar">
                             <button name="submit" type="submit" class="w3-button w3-medium w3-green-continue">Submit</button>
-                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
                         </div>
                     </div>
 

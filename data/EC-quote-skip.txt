@@ -5,18 +5,18 @@ Name = Ethernal Arts
 Contact Name = Uwa
 Gender = Male
 Title = Mr
-Phone = 08058346994
+Phone = 0987654321
 Country = FI
-State = South Karelia
-City = Lemi
-Zip Code = 345789
+State = Kainuu
+City = Suomussalmi
+Zip Code = 567908
 Street Address = 8 Limit Hotel Road
-Street Address 2/Apartment, Suite, Floor etc = Room 6
-Department = Web Development
-Email = email@email.com
-Pickup Date = 2019-10-18
+Street Address 2/Apartment, Suite, Floor etc = Office 4
+Department = 
+Email = email@mail.com
+Pickup Date = 2019-10-31
 Pickup Time = 5pm
-Residential Address? = Yes
+Residential Address? = No
 Package Updates? = Yes
 
 
@@ -25,17 +25,17 @@ Name = Ethernal Arts
 Contact Name = Uwa
 Gender = Male
 Title = Mr
-Phone = 08058346994
+Phone = 0987654321
 Country = FI
-State = South Karelia
-City = Lemi
-Zip Code = 345789
+State = Kainuu
+City = Suomussalmi
+Zip Code = 567908
 Street Address = 8 Limit Hotel Road
-Street Address 2/Apartment, Suite, Floor etc = Room 6
-Department = Web Development
-Email = email@email.com
-Residential Address? = Yes
-Notify of return? = 
+Street Address 2/Apartment, Suite, Floor etc = Office 4
+Department = 
+Email = email@mail.com
+Residential Address? = No
+Notify of return? = Yes
 
 
 PACKAGE DESTINATION
@@ -43,15 +43,15 @@ Name = Pabs Couture
 Contact Name = Donald
 Gender = Male
 Title = Mr.
-Phone = 0987654321
+Phone = 09076543321
 Country = FI
-State = Haeme
-City = Hauho
+State = Lapland
+City = Ranua
 Zip Code = 345789
 Street Address = 8 Limit Hotel Road
-Street Address 2/Apartment, Suite, Floor etc = Office 4
+Street Address 2/Apartment, Suite, Floor etc = Apartment 4
 Department = Fashion
-Email = 
+Email = uwa@ethernalarts.com
 Residential Address? = No
 Notify Receiver? = Yes
 
@@ -60,29 +60,29 @@ PACKAGE DETAILS
 
 1ST PACKAGE DETAILS:
 Package Type = Luggage
-Delivery option = VLink 2nd Day Air A.M.
+Delivery option = VLink 2nd Day Air
 Package Type (Other) = 
-Shipment Worth = 300
-Weight = 10
-Length = 7
+Shipment Worth = 2000
+Weight = 15
+Length = 9
 Width = 5
-Height = 6
-Colour = Brown
+Height = 9
+Colour = Red
 Texture = Leather
-Package Description = Luggage has a FENDI logo on it
+Package Description = FENDI duffel bag
 
 2ND PACKAGE DETAILS:
-Package Type = Luggage
-Delivery option = VLink 2nd Day Air A.M.
+Package Type = 0
+Delivery option = 0
 Package Type (Other) = 
-Shipment Worth = 250
-Weight = 10
-Length = 6
-Width = 5
-Height = 4
-Colour = Black
-Texture = Leather
-Package Description = A FENDI duffel bag
+Shipment Worth = 
+Weight = 
+Length = 
+Width = 
+Height = 
+Colour = 
+Texture = 
+Package Description = 
 
 3RD PACKAGE DETAILS:
 Package Type = 0

@@ -121,7 +121,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -135,7 +135,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 350px;">Quote - Secure Storage</div>
+        <div class="subheader-h2" style="width: 290px;">Quote - Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -158,7 +158,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
@@ -237,7 +237,7 @@
                                     <!-- Occupation -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="occupation_ss">Occupation <span class="required">*</span></label>
-                                        <input class="w3-light-gray"  placeholder="e.g. Chef, Graphics Designer etc."
+                                        <input class="w3-light-gray"  placeholder="e.g. Chef, Graphic Designer etc."
                                                name="occupation_ss" id="occupation_ss" type="text">
                                     </div>
                                 </div>

@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Domestic Shipping - Get a Quote (International Shipping - Complete)</title>
+    <title>VLink Express Courier - Get a Quote (Secure Storage - Success)</title>
 
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
     <link href="css/back-to-top.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
         .parallax {
             /* The image used */
-            background-image: url("images/is-final.jpg");
+            background-image: url("images/ss-final.jpg");
 
             /* Set a specific height */
             min-height: 300px;
@@ -104,9 +104,9 @@
                             <a onclick="dropDownNav()" class="active dropbtn">
                                 Get a Quote <i class="fas fa-caret-down"></i></a>
                             <div id="myDropdown" class="dropdownnav-content">
-                                <a href="quote-is-1.php" class="active">International Shipping</a>
+                                <a href="quote-is-1.php">International Shipping</a>
                                 <a href="quote-ec.php">Domestic Shipping</a>
-                                <a href="quote-ss.php">Secure Storage</a>
+                                <a href="quote-ss.php" class="active">Secure Storage</a>
                             </div>
                         </div>
                     </li>
@@ -125,9 +125,8 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 350px">Order Successfully Received!</div>
+        <div class="subheader-h2" style="width: 350px;">Order Successfully Received!</div>
     </div>
-
 
     <!-- Mobile Menu -->
         <!-- The overlay -->
@@ -143,9 +142,9 @@
                 <a class="active w3-dropdown-click" style="padding-top: 0" onclick="myFunction()">
                     Get a Quote <i class="fas fa-caret-down"></i>
                     <div id="demo" class="dropdown">
-                        <a href="quote-is-1.php"  class="active" style="padding-top: 0">International Shipping</a>
+                        <a href="quote-is-1.php"style="padding-top: 0">International Shipping</a>
                         <a href="quote-ec.php">Domestic Shipping</a>
-                        <a href="quote-ss.php">Secure Storage</a>
+                        <a href="quote-ss.php" class="active">Secure Storage</a>
                     </div>
                 </a>
                 <a href="about.html">About</a>
@@ -153,7 +152,6 @@
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
-
 
     <!-- Outer Container that contains body content and pads it 300px left and right to <body> -->
     <div class="container">
@@ -163,7 +161,7 @@
 
             <!-- Smiling emoji -->
             <div style="text-align: center; margin: 0 0 30px">
-                <img class="emoji" src="images/smiling-emoji2.jpg">
+                <img class="emoji" src="images/smiling-emoji.jpg">
             </div>
 
             <!-- Container for Get a Quote form  -->
@@ -171,12 +169,12 @@
 
                 <!-- Thank you note -->
                 <div class="container-form" style="padding: 0">
-                    <div>
+                    <div >
                         <p class="success-message">
-                            <span style="font: italic 600 1.03em 'Quicksand Medium', serif">
-                                <?php echo $_SESSION['title'] ?>. <?php echo $_SESSION['name'] ?>,
+                            <span style="font: italic 600 1.03em 'Quicksand Medium', sans-serif">
+                                <?php echo $_SESSION['title_ss'] ?>. <?php echo $_SESSION['name_ss'] ?>,
                             </span><br>
-                            We have received your International Shipping order.<br>
+                            We have received your Secure Storage order.<br>
                             We are working on it and will get back to you soon with an invoice.<br>
                             Please keep an eye on your inbox.<br>
                             Thank You.
@@ -186,7 +184,8 @@
                     <!-- Get another quote -->
                     <div class="w3-center">
                         <div class="w3-bar"style="padding-top: 0">
-                            <a href="getaquote.html" class="tryagain">Get Another Quote</a>
+                            <a href="quote-ss.php" class="tryagain">
+                                Get Another Quote</a>
                         </div>
                     </div>
                 </div>

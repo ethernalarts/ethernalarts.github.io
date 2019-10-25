@@ -162,7 +162,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 250px;
+            margin-top: 260px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -174,7 +174,11 @@
             }
 
             .container {
-                padding: 0 90px;
+                padding: 0 40px;
+            }
+
+            .subheader-h2 {
+                margin-top: 270px;
             }
         }
 
@@ -188,6 +192,10 @@
 
             .container {
                 padding: 0 30px;
+            }
+
+            .subheader-h2 {
+                margin-top: 270px;
             }
 
             .container-form input, .container-form select{
@@ -225,7 +233,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -239,7 +247,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 320px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -262,7 +270,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>

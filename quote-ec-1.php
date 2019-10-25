@@ -45,12 +45,12 @@
     $_POST['email_ec'] = filter_var($_POST['email_ec'], FILTER_SANITIZE_EMAIL);
 
     // Validate email.
-    if (filter_var($_POST['email_ec'], FILTER_VALIDATE_EMAIL)){
-
-    } else {
-        $_SESSION['error'] = "Invalid Email Address";
-        header("location: quote-ec.php");//redirecting to first page
-    }
+//    if (filter_var($_POST['email_ec'], FILTER_VALIDATE_EMAIL)){
+//
+//    } else {
+//        $_SESSION['error'] = "Invalid Email Address";
+//        header("location: quote-ec.php");//redirecting to first page
+//    }
 ?>
 
 <!doctype html>
@@ -109,14 +109,18 @@
         }
 
         .subheader-h2 {
-            margin-top: 250px;
+            margin-top: 260px;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
 
             .container {
-                padding: 0 50px;
+                padding: 0 40px;
+            }
+
+            .subheader-h2 {
+                margin-top: 270px;
             }
 
             .container-form {
@@ -139,12 +143,16 @@
             }
 
             .skip {
-                font-size: 0.9em;
+                font-size: 1.1em;
                 margin-top: 30px;
             }
 
             .container {
-                padding: 0 30px;
+                padding: 0 20px;
+            }
+
+            .subheader-h2 {
+                margin-top: 270px;
             }
 
             .container-form input, .container-form select {
@@ -190,7 +198,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -204,7 +212,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 320px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -227,7 +235,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
@@ -266,12 +274,12 @@
                     <input name="notify_ec" value="Yes" type="hidden"/>
 
                     <button type="submit" class="skip w3-btn">
-                        Skip. Use Package's Origin's Details
+                        Skip and use package origin's details
                     </button>
                 </form>
 
                     <!-- Return Address Form -->
-                    <form class="container-form" method="post" action="quote-ec-2.php" style="padding-bottom: 5px">
+                    <form class="container-form" method="post" action="quote-ec-2.php" style="padding: 30px 40px 5px">
                         <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
                             <legend>Return Address</legend>
                             <div class="row">

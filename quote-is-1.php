@@ -58,7 +58,7 @@
         }
 
         .subheader-h2 {
-            margin-top: 260px;
+            margin-top: 270px;
         }
 
         .countries, .states, .cities {
@@ -69,6 +69,10 @@
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
+            .subheader-h2 {
+                margin-top: 280px;
+            }
+
             #hi {
                 margin: 40px 0 0;
                 text-align: center;
@@ -76,12 +80,16 @@
             }
 
             .container {
-                padding: 0 50px;
+                padding: 0 30px;
             }
         }
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
+            .subheader-h2 {
+                margin-top: 280px;
+            }
+
             #hi {
                 margin: 40px 0 0;
                 text-align: center;
@@ -140,7 +148,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - International Shipping</div>
+        <div class="subheader-h2" style="width: 365px;">Quote - International Shipping</div>
     </div>
 
     <!-- Mobile Menu -->

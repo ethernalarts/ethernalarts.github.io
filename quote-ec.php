@@ -41,7 +41,7 @@
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 180px;
         }
 
         .parallax {
@@ -64,13 +64,14 @@
 
         input[type="date"] {
              position: relative;
+            color: lightsteelblue;
          }
 
         /* create a new arrow, because we are going to mess up the native one
         see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
         input[type="date"]:after {
             content: "\25BC";
-            color: #9b9b9b;
+            color: lightsteelblue;
             padding: 0 5px;
         }
 
@@ -110,6 +111,10 @@
                 font: 1.4em Verdana, sans-serif;
             }
 
+            .subheader-h2 {
+                margin-top: 260px;
+            }
+
             .container {
                 padding: 0 40px;
             }
@@ -125,6 +130,10 @@
 
             .container {
                 padding: 0 30px;
+            }
+
+            .subheader-h2 {
+                margin-top: 260px;
             }
 
             .container-form input, .container-form select {
@@ -175,7 +184,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 320px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->

@@ -64,22 +64,11 @@
         }
 
         .subheader-h2 {
-            margin-top: 250px;
-        }
-
-        input:disabled {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
+            margin-top: 260px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .container {
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -87,7 +76,11 @@
             }
 
             .container {
-                padding: 0 50px;
+                padding: 0 40px;
+            }
+
+            .subheader-h2 {
+                margin-top: 280px;
             }
         }
 
@@ -101,6 +94,10 @@
 
             .container {
                 padding: 0 30px;
+            }
+
+            .subheader-h2 {
+                margin-top: 280px;
             }
 
             .container-form input, .container-form select {
@@ -137,7 +134,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -151,7 +148,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 330px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -174,7 +171,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>
@@ -384,13 +381,13 @@
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="weight_2">Weight</label>
-                                        <input class="w3-light-gray" name="weight_2" placeholder="in pounds" id="weight_2" type="number" required>
+                                        <input class="w3-light-gray" name="weight_2" placeholder="in pounds" id="weight_2" type="number">
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="length_2">Length</label>
-                                        <input class="w3-light-gray" name="length_2" placeholder="in inches" id="length_2" type="number" required>
+                                        <input class="w3-light-gray" name="length_2" placeholder="in inches" id="length_2" type="number">
                                     </div>
                                 </div>
 
@@ -398,13 +395,13 @@
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="width_2">Width</label>
-                                        <input class="w3-light-gray" name="width_2" placeholder="in inches" id="width_2" type="number" required>
+                                        <input class="w3-light-gray" name="width_2" placeholder="in inches" id="width_2" type="number">
                                     </div>
 
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="height_2">Height</label>
-                                        <input class="w3-light-gray" name="height_2" placeholder="in inches" id="height_2" type="number" required>
+                                        <input class="w3-light-gray" name="height_2" placeholder="in inches" id="height_2" type="number">
                                     </div>
                                 </div>
 
@@ -412,13 +409,13 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="colour_2">Colour</label>
-                                        <input class="w3-light-gray" name="colour_2" id="colour_2" type="color" required>
+                                        <input class="w3-light-gray" name="colour_2" id="colour_2" type="color">
                                     </div>
 
                                     <!-- Texture -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="texture_2">Texture</label>
-                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_2" id="texture_2" type="text" required>
+                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_2" id="texture_2" type="text">
                                     </div>
                                 </div>
 
@@ -499,13 +496,13 @@
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="weight_3">Weight</label>
-                                        <input class="w3-light-gray" name="weight_3" placeholder="in pounds" id="weight_3" type="number" required>
+                                        <input class="w3-light-gray" name="weight_3" placeholder="in pounds" id="weight_3" type="number">
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="length_3">Length</label>
-                                        <input class="w3-light-gray" name="length_3" placeholder="in inches" id="length_3" type="number" required>
+                                        <input class="w3-light-gray" name="length_3" placeholder="in inches" id="length_3" type="number">
                                     </div>
                                 </div>
 
@@ -513,13 +510,13 @@
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="width_3">Width</label>
-                                        <input class="w3-light-gray" name="width_3" placeholder="in inches" id="width_3" type="number" required>
+                                        <input class="w3-light-gray" name="width_3" placeholder="in inches" id="width_3" type="number">
                                     </div>
 
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="height_3">Height</label>
-                                        <input class="w3-light-gray" name="height_3" placeholder="in inches" id="height_3" type="number" required>
+                                        <input class="w3-light-gray" name="height_3" placeholder="in inches" id="height_3" type="number">
                                     </div>
                                 </div>
 
@@ -527,13 +524,13 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="colour_3">Colour</label>
-                                        <input class="w3-light-gray" name="colour_3" id="colour_3" type="color" required>
+                                        <input class="w3-light-gray" name="colour_3" id="colour_3" type="color">
                                     </div>
 
                                     <!-- Texture -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="texture_3">Texture</label>
-                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_3" id="texture_3" type="text" required>
+                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_3" id="texture_3" type="text">
                                     </div>
                                 </div>
 
@@ -614,13 +611,13 @@
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="weight_4">Weight</label>
-                                        <input class="w3-light-gray" name="weight_4" placeholder="in pounds" id="weight_4" type="number" required>
+                                        <input class="w3-light-gray" name="weight_4" placeholder="in pounds" id="weight_4" type="number">
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="length_4">Length</label>
-                                        <input class="w3-light-gray" name="length_4" placeholder="in inches" id="length_4" type="number" required>
+                                        <input class="w3-light-gray" name="length_4" placeholder="in inches" id="length_4" type="number">
                                     </div>
                                 </div>
 
@@ -628,13 +625,13 @@
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="width_4">Width</label>
-                                        <input class="w3-light-gray" name="width_4" placeholder="in inches" id="width_4" type="number" required>
+                                        <input class="w3-light-gray" name="width_4" placeholder="in inches" id="width_4" type="number">
                                     </div>
 
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="height_4">Height</label>
-                                        <input class="w3-light-gray" name="height_4" placeholder="in inches" id="height_4" type="number" required>
+                                        <input class="w3-light-gray" name="height_4" placeholder="in inches" id="height_4" type="number">
                                     </div>
                                 </div>
 
@@ -642,13 +639,13 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="colour_4">Colour</label>
-                                        <input class="w3-light-gray" name="colour_4" id="colour_4" type="color" required>
+                                        <input class="w3-light-gray" name="colour_4" id="colour_4" type="color">
                                     </div>
 
                                     <!-- Texture -->
                                     <div class="col-xs-12 col-sm-6">
                                         <label for="texture_4">Texture</label>
-                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_4" id="texture_4" type="text" required>
+                                        <input class="w3-light-gray" placeholder="e.g. Fur, Leather etc" name="texture_4" id="texture_4" type="text">
                                     </div>
                                 </div>
 

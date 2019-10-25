@@ -12,6 +12,7 @@
     <link href="css/w3.css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" rel="stylesheet">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:700&display=swap" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -51,6 +52,17 @@
 
         .subheader-h2 {
             margin-top: 260px;
+        }
+
+        .ourpartners {
+            font-family: "Julius Sans One", "28 Days Later", Oswald, serif;
+            margin: 280px auto 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.96);
+            padding: 10px 20px;
+            font-size: 1.80em;
+            font-weight: 600;
+            color: #ebebeb;
         }
 
         /* On screens that are 992px wide or less, go from three columns to two columns */
@@ -129,7 +141,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html" class="active">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -142,15 +154,8 @@
             </button>
         </span>
 
-        <!-- Use any element to open/show the overlay navigation menu -->
-        <span>
-            <button class="openbtn" onclick="openNav()">
-                <i class="material-icons md-48">menu</i>
-            </button>
-        </span>
-
         <!-- What We Do. -->
-        <div class="subheader-h2" style="width: 190px;">Who We Are</div>
+        <div class="subheader-h2" style="width: 160px;">Who We Are</div>
     </div>
 
 
@@ -191,7 +196,7 @@
                     </p>
 
                     <!-- Our Partners -->
-                    <div class="subheader-h2" style="width: 210px; margin: 100px auto 20px">Our Partners</div>
+                    <div class="ourpartners" style="width: 250px; margin: 100px auto 20px">Our Partners</div>
                     <div class="w3-center">
                         <div class="w3-bar">
                             <img class="w3-bar-item" src="images/redline-logo.png">
@@ -204,7 +209,7 @@
                     </div>
 
                     <!-- Accreditation -->
-                    <div class="subheader-h2" style="width: 270px; margin: 130px auto 0">We are members of</div>
+                    <div class="ourpartners" style="width: 320px; margin: 130px auto 0">We are members of</div>
                     <div class="w3-center">
                         <div class="w3-bar">
                             <img style="padding-left: 0" class="w3-bar-item" src="images/iata-logo.png">
@@ -238,7 +243,7 @@
                     </div>
                 </a>
                 <a href="about.html" class="active">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>

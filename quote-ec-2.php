@@ -105,22 +105,11 @@
         }
 
         .subheader-h2 {
-            margin-top: 250px;
-        }
-
-        input:disabled {
-            padding: 15px;
-            margin: 0 0 33px;
-            width: 47%;
-            border: none;
-            border-bottom: 1px solid #2d2d2d;
+            margin-top: 270px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .container {
-            }
-
             #hi {
                 margin: 60px 0 0;
                 text-align: center;
@@ -128,7 +117,11 @@
             }
 
             .container {
-                padding: 0 50px;
+                padding: 0 40px;
+            }
+
+            .subheader-h2 {
+                margin-top: 280px;
             }
         }
 
@@ -142,6 +135,10 @@
 
             .container {
                 padding: 0 30px;
+            }
+
+            .subheader-h2 {
+                margin-top: 280px;
             }
 
             .container-form input, .container-form select {
@@ -178,7 +175,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="/package-tracker/" target="_blank">Track</a></li>
                 </ul>
             </nav>
@@ -192,7 +189,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 320px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -215,7 +212,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="/package-tracker/" target="_blank">Track</a>
             </div>
         </div>

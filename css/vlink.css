@@ -81,6 +81,10 @@
         src: url(../fonts/Quicksand-Medium.ttf);
     }
     @font-face {
+        font-family: "Quicksand Bold";
+        src: url(../fonts/Quicksand-Bold.ttf);
+    }
+    @font-face {
         font-family: "Oswald Light";
         src: url(../fonts/Oswald-Light.ttf);
     }
@@ -89,16 +93,12 @@
         src: url(../fonts/Oswald-SemiBold.ttf);
     }
     @font-face {
+        font-family: "Oswald Medium";
+        src: url(../fonts/Oswald-Medium.ttf);
+    }
+    @font-face {
         font-family: Oswald;
         src: url(../fonts/Oswald-Regular.ttf);
-    }
-    @font-face {
-        font-family: "Bowlby One SC";
-        src: url(../fonts/BowlbyOneSC-Regular.ttf);
-    }
-    @font-face {
-        font-family: Chango;
-        src: url(../fonts/Chango-Regular.ttf);
     }
     @font-face {
         font-family: "Hind Madurai";
@@ -113,12 +113,24 @@
         src: url(../fonts/Archivo-Regular.ttf);
     }
     @font-face {
+        font-family: "Archivo Bold";
+        src: url(../fonts/Archivo-Bold.ttf);
+    }
+    @font-face {
         font-family: Roboto;
         src: url(../fonts/Roboto-Regular.ttf);
     }
     @font-face {
         font-family: Montserrat;
         src: url(../fonts/Montserrat-Regular.ttf);
+    }
+    @font-face {
+        font-family: "Montserrat Medium";
+        src: url(../fonts/Montserrat-Medium.ttf);
+    }
+    @font-face {
+        font-family: "Montserrat Bold";
+        src: url(../fonts/Montserrat-Bold.ttf);
     }
     @font-face {
         font-family: "28 Days Later";
@@ -257,6 +269,7 @@
         font-family: Archivo, "Quicksand Medium", sans-serif;
         margin: 10px 0 0;
         color: gray;
+        font-size: 1.06em;
     }
 
     header {
@@ -408,8 +421,8 @@
         width: 200px;
         padding: 16px;
         display: block;
-        color: #010101;
-        font-family: Roboto, "Lato Black", serif;
+        color: #0f0f0f;
+        font-family: Archivo, Roboto, "Lato Black", serif;
         font-size: 1.3em;
         font-weight: 600;
         border-radius: 3px;
@@ -473,9 +486,9 @@
     }
 
     .aboutus-p {
-        text-align: left;
-        font-family: Verdana, Montserrat, Lato, serif;
-        font-size: 1.05em;
+        text-align: justify;
+        font-family: Archivo, Verdana, Montserrat, Lato, serif;
+        font-size: 1.1em;
         margin: 0 0 20px;
         color: #696969;
         font-weight: 500;
@@ -566,21 +579,21 @@
     }
 
     .skip {
-        margin: 40px 0 0;
+        margin: 30px 0 0;
         text-align: center;
-        font-family: Verdana, serif;
+        font-family: "Archivo Bold", Verdana, serif;
         font-weight: 500;
         cursor: pointer;
-        font-size: 1em;
-        color: whitesmoke;
-        background-color: #323232;
-        text-decoration: none;
+        font-size: 1.2em;
+        color: darkblue;
+        background-color: transparent;
+        text-decoration: underline;
     }
 
     .w3-btn:hover {
-        background-color: #282828;
+        color: #0000a5;
         box-shadow: none;
-        text-decoration: none;
+        text-decoration: underline;
     }
 
     .countries, .states, .cities {
@@ -638,54 +651,63 @@
 
     .container-form input {
         font-family: Roboto, Montserrat, serif;
-        color: #737373;
+        /*color: #737373;*/
+        color: steelblue;
         padding: 0.9em 13px;
         margin: 0 0 30px;
         font-size: 1em;
         font-weight: 500;
         display: inline-block;
-        border: 1px solid #afafaf;
+        border-radius: 0;
     }
 
     .container-form input[type="color"] {
         font-family: Roboto, Montserrat, serif;
-        color: #737373;
+        color: lightsteelblue;
         padding: 0.9em 13px;
-        height: 50px;
+        height: 55px;
         cursor: pointer;
         margin: 0 0 30px;
         font-size: 1em;
         font-weight: 500;
         display: inline-block;
-        border: 1px solid #afafaf;
+        border-radius: 0;
+        border: 3px solid lightblue;
     }
 
     input:disabled {
         padding: 0.9em 13px;
         margin: 0 0 33px;
-        border: 1px solid #afafaf;
-        background-color: #f5f5f5;
+        border: 3px solid lightblue;
+        border-radius: 0;
+        background-color: white;
+        color: lightsteelblue;
     }
 
     .container-form select {
         font-family: Roboto, Verdana, Montserrat, serif;
-        color: #9b9b9b;
+        color: lightsteelblue;
         padding: 0.9em 13px;
         margin: 0 0 30px;
         font-size: 1em;
         font-weight: 500;
         display: inline-block;
-        border: 1px solid #afafaf;
+        /*border: 2px solid #b8b8b8;*/
+        border: 3px solid lightblue;
+        border-radius: 0;
     }
 
     .container-form textarea {
         width: 100%;
         padding: 14px;
         margin: 0 0 30px;
+        border-radius: 0;
+        border: 3px solid lightblue;
+        color: lightsteelblue;
     }
 
     .choice option {
-        color: #7d7d7d;
+        color: steelblue;
         padding: 15px;
         font-family: Roboto, Verdana, Montserrat, serif;
     }
@@ -698,14 +720,14 @@
     }
 
     legend {
-        font-family: Verdana, "Oswald SemiBold", sans-serif;
+        font-family: Verdana, Quicksand, sans-serif;
         font-size: 1em;
-        font-weight: 600;
+        font-weight:600;
         display: inline-block;
-        color: whitesmoke;
-        background-color: cornflowerblue;
-        /*background-color: #5775c3;*/
+        color: white;
+        background-color: #6074c8;
         padding: 10px;
+        border-radius: 0;
     }
 
     label {
@@ -713,7 +735,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 1.15em;
-        color: #696969;
+        color: #5f5f5f;
     }
 
     .required {
@@ -732,8 +754,10 @@
 
     fieldset {
         width: 100%;
-        padding: 30px;
+        padding: 30px 40px;
         margin: 20px 0;
+        border: 3px solid cornflowerblue;
+        border-radius: 0;
     }
 
     .copyright {
@@ -742,7 +766,8 @@
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #9b9b9b;
+        /*color: #9b9b9b;*/
+        color: lightsteelblue;
         font-size: 1em;
         font-weight: 500;
         font-style: italic;
