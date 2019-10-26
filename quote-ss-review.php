@@ -225,7 +225,7 @@
                         </div>
                     </li>
                     <li class="navlistitem"><a href="about.html">About</a></li>
-                    <li class="navlistitem"><a href="contact.html">Contact</a></li>
+                    <li class="navlistitem"><a href="contact.php">Contact</a></li>
                     <li class="navlistitem"><a href="track.html">Track</a></li>
                 </ul>
             </nav>
@@ -262,7 +262,7 @@
                     </div>
                 </a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="track.html">Track</a>
             </div>
         </div>
@@ -918,7 +918,7 @@
                 <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.php">Contact</a></li>
             </ul>
         </div>
     </footer>

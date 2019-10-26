@@ -252,11 +252,11 @@
 
     .footerlinkitem a.active,
     .footerlinkitem a.active:hover {
-        border-bottom: 2px solid transparent;
+        border-top: 2px solid #b93131;
         color: whitesmoke;
         font-weight: 500;
         padding: 8px 15px;
-        background-color: #b93131;
+        background-color: transparent;
         border-radius: 0;
         text-decoration: none;
     }
@@ -266,10 +266,10 @@
     }
 
     .footercopyrite {
-        font-family: Archivo, "Quicksand Medium", sans-serif;
+        font-family: Montserrat, Archivo, "Quicksand Medium", sans-serif;
         margin: 10px 0 0;
         color: gray;
-        font-size: 1.06em;
+        font-size: 1.05em;
     }
 
     header {
@@ -665,20 +665,20 @@
         font-family: Roboto, Montserrat, serif;
         color: lightsteelblue;
         padding: 0.9em 13px;
-        height: 55px;
+        height: 54px;
         cursor: pointer;
         margin: 0 0 30px;
         font-size: 1em;
         font-weight: 500;
         display: inline-block;
         border-radius: 0;
-        border: 3px solid lightblue;
+        border: 2px solid rgba(100, 150, 238, 0.51);
     }
 
     input:disabled {
         padding: 0.9em 13px;
         margin: 0 0 33px;
-        border: 3px solid lightblue;
+        border: 2px solid rgba(100, 150, 238, 0.51);
         border-radius: 0;
         background-color: white;
         color: lightsteelblue;
@@ -693,7 +693,7 @@
         font-weight: 500;
         display: inline-block;
         /*border: 2px solid #b8b8b8;*/
-        border: 3px solid lightblue;
+        border: 2px solid rgba(100, 150, 238, 0.51);
         border-radius: 0;
     }
 
@@ -702,7 +702,7 @@
         padding: 14px;
         margin: 0 0 30px;
         border-radius: 0;
-        border: 3px solid lightblue;
+        border: 2px solid rgba(100, 150, 238, 0.51);
         color: lightsteelblue;
     }
 
@@ -713,7 +713,7 @@
     }
 
     .empty {
-        color: #7d7d7d;
+        color: lightsteelblue;
         font-size: 1em;
         font-weight: 500;
         font-family: Roboto, Verdana, Montserrat, serif;
@@ -735,7 +735,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 1.15em;
-        color: #5f5f5f;
+        color: #696969;
     }
 
     .required {
@@ -744,7 +744,6 @@
         font-weight: 500;
         font-size: 1em;
         color: #f00000;
-
     }
 
     .emoji {
@@ -756,7 +755,7 @@
         width: 100%;
         padding: 30px 40px;
         margin: 20px 0;
-        border: 3px solid cornflowerblue;
+        border: 2px solid cornflowerblue;
         border-radius: 0;
     }
 

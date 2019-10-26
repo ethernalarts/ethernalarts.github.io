@@ -279,13 +279,13 @@
             <div>
                 <!-- Contact Address -->
                 <fieldset style="display: block; margin: 65px auto 30px;">
-                    <legend>Drop by for a cup of coffee</legend>
-                    <div >
-                        <p class="w3-center">
-                            <i class="fas fa-map-marker-alt" style="font-size: 24px"></i><br>
+                    <legend>Drop by for a cup of tea</legend>
+                    <div>
+                        <p class="w3-center" style="font: 1.1em 'Montserrat', serif; line-height: 1.5em">
+                            <span style="font: italic 500 1.03em 'Quicksand Bold', serif; color: blue">Address</span><br>
                             No. 3M, Microkatu, 70210<br>
                             Kuopio, Finland.<br><br>
-                            <i class="fas fa-phone" style="font-size: 20px"></i><br>
+                            <span style="font: italic 1.03em 'Quicksand Bold', serif; color: blue">Phone</span><br>
                             +358 9 42453389
                         </p>
                     </div>
@@ -403,7 +403,7 @@
                 <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html" class="active">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.php" class="active">Contact</a></li>
             </ul>
         </div>
     </footer>

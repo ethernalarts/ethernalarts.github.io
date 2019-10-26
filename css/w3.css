@@ -1684,7 +1684,8 @@ button.w3-button.w3-black-previous:hover {
     color: #9b9b9b;
     background-color: white !important;
     /*border: 2px solid #b8b8b8 !important;*/
-    border: 3px solid lightblue !important;
+    /*border: 0;*/
+    border: 2px solid rgba(100, 150, 238, 0.51) !important;
 }
 
 .w3-quote-services {

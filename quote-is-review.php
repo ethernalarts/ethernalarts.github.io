@@ -403,7 +403,7 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">
+                                <a style="float: left" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">
                                     Edit
                                 </a>
                             </div>
@@ -520,7 +520,7 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">
+                                <a style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">
                                     Edit
                                 </a>
                             </div>
@@ -637,7 +637,7 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">
+                                <a style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">
                                     Edit
                                 </a>
                             </div>
@@ -960,7 +960,7 @@
 
                                         <!-- Edit Button -->
                                         <div>
-                                            <a type="button" style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                            <a style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
                                         </div>
                     </fieldset>
 
@@ -1105,7 +1105,7 @@
                 <li style="padding-left: 0" class="footerlinkitem"><a href="privacy.html">Privacy Policy</a></li>
                 <li class="footerlinkitem"><a href="terms.html">Terms</a></li>
                 <li class="footerlinkitem"><a href="about.html">About</a></li>
-                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.html">Contact</a></li>
+                <li style="padding-right: 0" class="footerlinkitem"><a href="contact.php">Contact</a></li>
             </ul>
         </div>
     </footer>
