@@ -45,12 +45,12 @@
     $_POST['email_ec'] = filter_var($_POST['email_ec'], FILTER_SANITIZE_EMAIL);
 
     // Validate email.
-//    if (filter_var($_POST['email_ec'], FILTER_VALIDATE_EMAIL)){
-//
-//    } else {
-//        $_SESSION['error'] = "Invalid Email Address";
-//        header("location: quote-ec.php");//redirecting to first page
-//    }
+    if (filter_var($_POST['email_ec'], FILTER_VALIDATE_EMAIL)){
+
+    } else {
+        $_SESSION['error'] = "Invalid Email Address";
+        header("location: quote-ec.php");//redirecting to first page
+    }
 ?>
 
 <!doctype html>
@@ -62,15 +62,25 @@
 
     <title>VLink Express Courier - Get a Quote (Domestic Shipping - Return Address)</title>
 
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+
     <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/intlTelInput.css" rel="stylesheet">
     <link href="./css/w3.css" type="text/css" rel="stylesheet">
     <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
-    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="css/regform2.css" rel="stylesheet" type="text/css">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -91,7 +101,7 @@
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 170px;
         }
 
         .parallax {
@@ -122,26 +132,10 @@
             .subheader-h2 {
                 margin-top: 270px;
             }
-
-            .container-form {
-                margin: 0;
-                padding: 30px;
-            }
-
-            fieldset {
-                padding: 30px;
-            }
         }
 
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
-
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.3em Verdana, sans-serif;
-            }
-
             .skip {
                 font-size: 1.1em;
                 margin-top: 30px;
@@ -159,17 +153,17 @@
                 width: 100%;
             }
 
-            button.w3-button.w3-red-cancel {
+            .w3-button.w3-red-cancel {
                 margin-top: 12px;
+                width: 40%;
             }
 
-            button.w3-button.w3-green-continue {
-                margin-top: 12px;
-                margin-right: 1px;
+            .w3-button.w3-green-continue {
+                width: 40%;
             }
 
-            button.w3-button.w3-black-previous {
-                margin: 12px 7px 0 0;
+            .w3-button.w3-black-previous {
+                width: 40% !important;
             }
         }
     </style>
@@ -212,7 +206,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 440px">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -247,7 +241,7 @@
         <div class="body-content">
 
             <!-- Progress circles which indicates the steps of the form: -->
-            <div style="text-align:center; margin-bottom: 40px;">
+            <div style="text-align:center; margin: 20px 0 40px">
                 <span class="step finish"></span>
                 <span class="step active"></span>
                 <span class="step"></span>
@@ -255,15 +249,6 @@
                 <span class="step"></span><br><br>
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 5)</span>
             </div>
-
-            <h2 id="hi">Return Address</h2>
-
-            <h3 id="required">
-                <code class="w3-code">
-                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
-                </code>
-            </h3>
-
 
             <!-- Container for Return Address  -->
             <div class="w3-card-4">
@@ -279,134 +264,173 @@
                 </form>
 
                     <!-- Return Address Form -->
-                    <form class="container-form" method="post" action="quote-ec-2.php" style="padding: 30px 40px 5px">
-                        <fieldset id="returnAdd" style="margin: 0 0 40px; padding-bottom: 20px">
-                            <legend>Return Address</legend>
-                            <div class="row">
-                                <!-- Full Name -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="name_ec_ra"> Full Name (or Company) <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. Bruce Wayne (or Wayne Enterprises)"
-                                           name="name_ec_ra" id="name_ec_ra" type="text" required>
+                    <form class="container-form" method="post" action="quote-ec-2.php" style="padding-bottom: 0">
+                        <h3 class="h3-contactform">What if nobody's home?</h3>
+                        <div class="formtitle">Return Address</div>
+                        <fieldset class="nofieldset" style="margin-bottom: 30px">
+                            <legend class="legend-middle"><span class="required">*</span>&nbsp;&nbsp;Indicates required fields</legend>
+                                <div class="row">
+                                    <!-- Full Name -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Name">
+                                            <input class="input100" type="text" name="name_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder="Full Name (or Company)  *"></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact's Name -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Contact's Name">
+                                            <input class="input100" type="text" name="contactname_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder="Contact's Name  *"></span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- Contact's Name -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="contactname_ec_ra"> Contact's Name <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. Alfred Pennyworth"
-                                           name="contactname_ec_ra" id="contactname_ec_ra" type="text" required>
-                                </div>
-                            </div>
+                                <div class="row">
+                                    <!-- Gender -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="input-group m-t-47 m-b-35">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="gender_ec_ra">
+                                                    <option disabled="disabled" selected="selected">Gender  *</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div class="row">
-                                <!-- Gender -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="gender_ec_ra">Gender <span class="required">*</span></label>
-                                    <select class="choice" name="gender_ec_ra" id="gender_ec_ra" required>
-                                        <option value="0" selected="selected">Select Gender</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
-                                </div>
-
-                                <!-- Title -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="title_ec_ra">Title</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title_ec_ra" id="title_ec_ra" type="text">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <!-- Telephone -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="phone_ec_ra">Telephone <span class="required">*</span></label>
-                                    <input class="w3-light-gray" name="phone_ec_ra" id="phone_ec_ra" type="tel" required>
+                                    <!-- Title -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Title">
+                                            <input class="input100" type="text" name="title_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder="Title  *"></span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- Email -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="email_ec">Email <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email_ec" id="email_ec" type="email" required>
-                                </div>
-                            </div>
+                                <div class="row">
+                                    <!-- Telephone -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Telephone Number">
+                                            <input class="input100" type="tel" name="phone_ec_ra" id="phone_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder=" "></span>
+                                        </div>
+                                    </div>
 
-                            <div class="row">
-                                <!-- Country -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="countryId">Country</label>
-                                    <input name="country_ec_ra" class="countries" value="Finland" disabled>
-                                    <input type="hidden" name="country_ec_ra" id="countryId" value="FI"/>
-                                </div>
-
-                                <!-- State -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="stateId">State <span class="required">*</span></label>
-                                    <select name="state_ec_ra" class="choice states order-alpha" id="stateId" type="select" required>
-                                        <option value="0" selected="selected">Select State</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <!-- City -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="cityId">City <span class="required">*</span></label>
-                                    <select name="city_ec_ra" class="choice cities order-alpha" id="cityId" type="select" required>
-                                        <option value="0" selected="selected">Select City</option>
-                                    </select>
+                                    <!-- Email -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Email Address">
+                                            <input class="input100" type="email" name="email_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder="Email  *"></span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- Zip Code -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="zipcode_ec_ra">Zip Code <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zipcode_ec_ra" id="zipcode_ec_ra" type="number" required>
-                                </div>
-                            </div>
+                                <div class="row">
+                                    <!-- Country -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" style="color: #ebebeb" >
+                                            <input class="input100 countries" name="country_ec" disabled>
+                                            <input type="hidden" name="country_ec_ra" id="countryId" value="FI"/>
+                                            <span class="focus-input100" data-placeholder="Finland"></span>
+                                        </div>
+                                    </div>
 
-                            <div class="row">
-                                <!-- Street Address -->
-                                <div class="col-xs-12 col-sm-12">
-                                    <label for="address_ec_ra">Street Address <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="address_ec_ra" id="address_ec_ra" type="text" required>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <!-- Street Address 2 -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="apt_ec_ra">Street Address 2</label>
-                                    <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
-                                           name="apt_ec_ra" id="apt_ec_ra" type="text">
-                                </div>
-
-                                <!-- Department -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="dept_ec_ra">Department, c/o, etc.</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Sales (or c/o Clark Kent)" name="dept_ec_ra" id="dept_ec_ra" type="text">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <!-- Residential Address? -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="resAdd_ec_ra">Is this a residential address? <span class="required">*</span></label>
-                                    <select name="resAdd_ec_ra" id="resAdd_ec_ra" class="choice" required>
-                                        <option value="0" selected="selected">Select an answer</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                    <!-- State -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="input-group m-t-47 m-b-35">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select class="states order-alpha" name="state_ec_ra" id="stateId" type="select" required>
+                                                    <option disabled="disabled" selected="selected">State  *</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- Return Notification -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <label for="notify_ec">Should we notify this person of return? <span class="required">*</span></label>
-                                    <select  name="notify_ec" id="notify_ec" class="choice">
-                                        <option value="0" selected="selected">Select an answer</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                <div class="row">
+                                    <!-- City -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="input-group m-t-47 m-b-35">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select class="cities order-alpha" name="city_ec_ra" id="cityId" type="select" required>
+                                                    <option disabled="disabled" selected="selected">City  *</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Zip Code -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zipcode">
+                                            <input class="input100" type="number" name="zipcode_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder="Zipcode  *"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="row">
+                                    <!-- Street Address -->
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Street">
+                                            <input class="input100" type="text" name="address_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder="Street Address  *"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Street Address 2 -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                            <input class="input100" type="text" name="apt_ec_ra" required>
+                                            <span class="focus-input100" data-placeholder="Apartment, Suite, Building, Unit etc."></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Department -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                            <input class="input100" type="text" name="dept_ec_ra">
+                                            <span class="focus-input100" data-placeholder="Department"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Residential Address? -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="input-group m-t-51 m-b-35">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="resAdd_ec_ra" type="select" required>
+                                                    <option disabled="disabled" selected="selected">Is this a residential address? *</option>
+                                                    <option value="Yes">Yes</option>
+                                                    <option value="No">No</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Return Notification -->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="input-group m-t-51 m-b-35">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="notify_ec" type="select" required>
+                                                    <option disabled="disabled" selected="selected">Should we notify this person of return? *</option>
+                                                    <option value="Yes">Yes</option>
+                                                    <option value="No">No</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </fieldset>
 
                         <!-- Continue and Cancel Button -->
@@ -423,16 +447,6 @@
             </div>
         </div>
     </div>
-
-    <!-- JavaScript to change color of <option selected> -->
-    <script>
-        $(".choice").change(function () {
-            if($(this).val() === "0") $(this).addClass("empty");
-            else $(this).removeClass("empty")
-        });
-
-        $(".choice").change();
-    </script>
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">
@@ -481,7 +495,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for GetaQuote Link -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link -->
     <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
@@ -503,6 +517,18 @@
             }
         }
     </script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
 </body>
 
     <!-- footer -->
@@ -521,16 +547,16 @@
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
-                    <i class="footer-FB fab fa-facebook-f"></i>
+                    <img src="images/facebook.png" class="footer-FB" alt="facebook icon">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-instagram"></i>
+                    <img src="images/instagram.png" class="footer-INSTA" alt="instagram icon">
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <img src="images/twitter.png" class="footer-INSTA" alt="twitter icon">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <img src="images/linkedin.png" class="footer-LI" alt="linkedin icon">
                 </a>
             </p>
         </div>

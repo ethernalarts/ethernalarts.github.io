@@ -78,8 +78,8 @@
 /*--------- Toggle Box ---------*/
 
 .sliderWrapper {
-  margin: 30px 0;
-  font-family: "Archivo Bold", Verdana, Roboto, Federo serif;
+  margin: 20px 20px 50px;
+  font-family: Poppins-SemiBold, "Archivo Bold", Verdana, Roboto, serif;
   font-weight: 500;
   font-size: 1.25em;
   color: #4b4b4b;

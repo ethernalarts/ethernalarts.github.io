@@ -133,8 +133,33 @@
         src: url(../fonts/Montserrat-Bold.ttf);
     }
     @font-face {
-        font-family: "28 Days Later";
-        src: url(../fonts/28-Days-Later.ttf);
+        font-family: Poppins-Regular;
+        src: url(../fonts/Poppins-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins-Medium;
+        src: url(../fonts/Poppins-Medium.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins-Light;
+        src: url(../fonts/Poppins-Light.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins-Bold;
+        src: url(../fonts/Poppins-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins-SemiBold;
+        src: url(../fonts/Poppins-SemiBold.ttf);
+    }
+
+    @font-face {
+        font-family: Julius Sans One;
+        src: url(../fonts/JuliusSansOne-Regular.ttf);
     }
 
     body {
@@ -180,8 +205,8 @@
     .footer-FB {
         color: whitesmoke;
         margin-right: 16px;
-        font-weight: bolder;
-        font-size: 24px;
+        width: 30px;
+        height: 30px;
     }
 
     .footer-FB:hover {
@@ -191,8 +216,8 @@
     .footer-INSTA {
         color: whitesmoke;
         margin: 0 16px;
-        font-weight: bolder;
-        font-size: 25px;
+        width: 30px;
+        height: 30px;
     }
 
     .footer-INSTA:hover {
@@ -201,9 +226,9 @@
 
     .footer-LI {
         color: whitesmoke;
-        margin-left: 16px;
-        font-weight: bolder;
-        font-size: 25px;
+        margin: 0 15px;
+        width: 30px;
+        height: 30px;
     }
 
     .footer-LI:hover {
@@ -212,8 +237,8 @@
 
     .footer-TWITTER {
         color: whitesmoke;
-        font-weight: bolder;
-        font-size: 25px;
+        width: 30px;
+        height: 30px;
     }
 
     .footer-TWITTER:hover {
@@ -223,8 +248,8 @@
     .footerlinks {
         text-align: right;
         list-style: none;
-        font-family: "Oswald Light", serif;
-        font-size: 1.2em;
+        font-family: Poppins-Light, "Oswald Light", serif;
+        font-size: 1.1em;
         margin: 10px 0 0;
         display: block;
     }
@@ -239,30 +264,31 @@
 
     .footerlinkitem a {
         font-weight: 500;
-        color: whitesmoke;
+        color: #cdcdcd;
         display: inline-block;
-        padding: 8px 0 8px 15px;
+        padding: 8px 15px;
     }
 
     .footerlinkitem a:hover,
     .footerlinkitem a:focus {
-        /*color: #c3c3c3;*/
-        color: #b93131;
+        border-top: 4px solid #b93131;
+        color: whitesmoke;
+        padding: 4px 15px;
     }
 
     .footerlinkitem a.active,
     .footerlinkitem a.active:hover {
-        border-top: 2px solid #b93131;
+        border-top: 0 solid #b93131;
         color: whitesmoke;
         font-weight: 500;
         padding: 8px 15px;
-        background-color: transparent;
+        background-color: #b93131;
         border-radius: 0;
         text-decoration: none;
     }
 
     .footeradd {
-        font-size: 1.4em;
+        font-size: 1.7em;
     }
 
     .footercopyrite {
@@ -316,13 +342,13 @@
 
     nav {
         font-weight: 500;
-        font-family: "Oswald Light", serif;
-        font-size: 1.05em;
+        font-family: Poppins-Light, "Oswald Light", serif;
+        font-size: 1em;
         text-align: center;
         overflow: hidden;
         vertical-align: middle;
         display: inline;
-        color: whitesmoke;
+        color: #e1e1e1;
         margin: 0;
         padding: 0;
     }
@@ -346,14 +372,16 @@
     }
 
     .navlistitem a {
-        padding: 10px 20px;
+        padding: 10px 15px;
         display: inline-block;
-        color: whitesmoke;
+        color: #cdcdcd;
+        font-weight: 400;
     }
 
     .navlistitem a:hover {
-        border-top: 3px solid #b93131;
-        padding: 7px 20px;
+        border-top: 4px solid #b93131;
+        padding: 6px 15px 10px;
+        color: white;
     }
 
     .navlistitem a:visited,
@@ -364,9 +392,9 @@
     .navlistitem a.active,
     .navlistitem a.active:hover {
         border-top: 0 solid whitesmoke;
-        color: whitesmoke;
+        color: white;
         font-weight: 500;
-        padding: 10px 25px;
+        padding: 10px 15px;
         background-color: #b93131;
         border-radius: 0;
         text-decoration: none;
@@ -437,7 +465,7 @@
     }
 
     .subheader-h2 {
-        font-family: Bangers, "28 Days Later", Oswald, serif;
+        font-family: "Julius Sans One", Bangers, "28 Days Later", Oswald, serif;
         /*display: inline-block;*/
         margin: 280px auto 0;
         text-align: center;
@@ -568,7 +596,7 @@
     }
 
     #required {
-        margin: 50px 0 60px;
+        margin: 0;
         text-align: center;
     }
 
@@ -579,21 +607,21 @@
     }
 
     .skip {
-        margin: 30px 0 0;
+        margin: 40px 0 0;
         text-align: center;
-        font-family: "Archivo Bold", Verdana, serif;
+        font-family: Poppins-Regular, Verdana, serif;
         font-weight: 500;
         cursor: pointer;
         font-size: 1.2em;
-        color: darkblue;
-        background-color: transparent;
-        text-decoration: underline;
+        color: whitesmoke;
+        background-color: #009100;
+        text-decoration: none;
     }
 
     .w3-btn:hover {
-        color: #0000a5;
         box-shadow: none;
-        text-decoration: underline;
+        background-color: #008700;
+
     }
 
     .countries, .states, .cities {
@@ -603,7 +631,9 @@
 
     .container-form {
         margin: 0;
-        padding: 40px;
+        padding: 10px 30px;
+        background-color: transparent;
+        border-radius: 5px;
     }
 
     .success-message {
@@ -649,16 +679,36 @@
         background-color: #4b4b4b;
     }
 
-    .container-form input {
-        font-family: Roboto, Montserrat, serif;
-        /*color: #737373;*/
-        color: steelblue;
-        padding: 0.9em 13px;
-        margin: 0 0 30px;
-        font-size: 1em;
+    .formtitle {
+        color: #232323;
+        font-family: Poppins-Bold, "lato black", sans-serif;
         font-weight: 500;
-        display: inline-block;
-        border-radius: 0;
+        font-size: 2.1em;
+        position: relative;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .h3-contactform {
+        text-align: center !important;
+        margin: 30px auto;
+        font-family: Poppins-Regular, Verdana, "Oswald SemiBold", serif;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 1.25em;
+        color: #232323;
+    }
+
+    .container-form input {
+        /*font-family: Roboto, Montserrat, serif;*/
+        /*!*color: #737373;*!*/
+        /*color: steelblue;*/
+        /*padding: 0.9em 13px;*/
+        /*margin: 0;*/
+        /*font-size: 1em;*/
+        /*font-weight: 500;*/
+        /*display: inline-block;*/
+        /*border-radius: 0;*/
     }
 
     .container-form input[type="color"] {
@@ -667,42 +717,42 @@
         padding: 0.9em 13px;
         height: 54px;
         cursor: pointer;
-        margin: 0 0 30px;
+        margin: 0;
         font-size: 1em;
         font-weight: 500;
         display: inline-block;
         border-radius: 0;
-        border: 2px solid rgba(100, 150, 238, 0.51);
+        border: 0 solid rgba(100, 150, 238, 0.51);
     }
 
     input:disabled {
         padding: 0.9em 13px;
-        margin: 0 0 33px;
-        border: 2px solid rgba(100, 150, 238, 0.51);
+        margin: 0;
+        border: 0 solid rgba(100, 150, 238, 0.51);
         border-radius: 0;
         background-color: white;
-        color: lightsteelblue;
+        color: #c3c3c3;
     }
 
     .container-form select {
         font-family: Roboto, Verdana, Montserrat, serif;
-        color: lightsteelblue;
         padding: 0.9em 13px;
-        margin: 0 0 30px;
+        margin: 0;
         font-size: 1em;
         font-weight: 500;
         display: inline-block;
         /*border: 2px solid #b8b8b8;*/
-        border: 2px solid rgba(100, 150, 238, 0.51);
+        border: 0 solid rgba(100, 150, 238, 0.51);
         border-radius: 0;
     }
 
     .container-form textarea {
         width: 100%;
+        height: 130px;
         padding: 14px;
-        margin: 0 0 30px;
+        margin: 0;
         border-radius: 0;
-        border: 2px solid rgba(100, 150, 238, 0.51);
+        border: 0 solid rgba(100, 150, 238, 0.51);
         color: lightsteelblue;
     }
 
@@ -722,20 +772,46 @@
     legend {
         font-family: Verdana, Quicksand, sans-serif;
         font-size: 1em;
-        font-weight:600;
+        font-weight: 600;
         display: inline-block;
         color: white;
         background-color: #6074c8;
-        padding: 10px;
+        padding: 10px 20px;
+        border-radius: 0;
+    }
+
+    .legend-middle {
+        font-family: Verdana, Quicksand, sans-serif;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 500;
+        display: inline-block;
+        color: white;
+        margin: 0 auto;
+        background-color: #6074c8;
+        padding: 10px 15px;
+        border-radius: 0;
+    }
+
+    .legend-right {
+        font-family: Roboto, Archivo, Poppins-SemiBold, sans-serif;
+        font-size: 1.2em;
+        font-style: normal;
+        font-weight: 500;
+        display: inline-block;
+        color: white;
+        margin: 0;
+        background-color: #6074c8;
+        padding: 10px 15px;
         border-radius: 0;
     }
 
     label {
-        font-family: "Oswald SemiBold", Roboto, Verdana, serif;
+        font-family: "Lato Black", Roboto, Verdana, serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 1.15em;
-        color: #696969;
+        font-size: 1.1em;
+        color: darkgray;
     }
 
     .required {
@@ -743,7 +819,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 1em;
-        color: #f00000;
+        color: whitesmoke;
     }
 
     .emoji {
@@ -753,10 +829,15 @@
 
     fieldset {
         width: 100%;
-        padding: 30px 40px;
-        margin: 20px 0;
-        border: 2px solid cornflowerblue;
+        display: block;
+        padding: 30px 20px;
+        margin: 20px auto;
+        border: 1px solid cornflowerblue;
         border-radius: 0;
+    }
+
+    .nofieldset {
+        border: 0 solid cornflowerblue;
     }
 
     .copyright {
@@ -765,19 +846,18 @@
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        /*color: #9b9b9b;*/
-        color: lightsteelblue;
-        font-size: 1em;
+        color: #999999;
+        font-size: 16px;
         font-weight: 500;
-        font-style: italic;
+        font-style: normal;
         opacity: 1; /* Firefox */
-        font-family: roboto, Verdana, Montserrat, serif;
+        font-family: Poppins-Medium, roboto, Verdana, Montserrat, serif;
     }
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: #696969;
+        color: #999999;
     }
     ::-ms-input-placeholder { /* Microsoft Edge */
-        color: #696969;
+        color: #999999;
     }
 
     /* Make circles that indicate the steps of the form: */
@@ -817,7 +897,7 @@
         }
 
         .footeradd {
-            font-size: 1.3em;
+            font-size: 1.6em;
         }
     }
 
@@ -830,6 +910,18 @@
             text-align: center;
             font-size: 0.9em;
             padding: 40px 30px;
+        }
+
+        .w3-button.w3-green-continue {
+            width: 27%;
+        }
+
+        .w3-button.w3-red-cancel {
+            width: 27%;
+        }
+
+        .w3-button.w3-black-previous {
+            width: 27% !important;
         }
 
         .div-footer-followus {
@@ -850,7 +942,7 @@
         }
 
         .footeradd {
-            font-size: 1.3em;
+            font-size: 1.6em;
         }
 
         header {
@@ -889,6 +981,15 @@
         }
     }
 
+
+    @media screen and (max-width: 770px) {
+        .w3-light-gray, .w3-hover-light-gray:hover {
+            border: 0 !important;
+            border-bottom: 2px solid rgba(100, 150, 238, 0.51) !important;
+        }
+    }
+
+
     /* On screens that are 600px wide or less */
     @media screen and (max-width: 600px) {
         footer {
@@ -911,36 +1012,16 @@
         }
 
         .footeradd {
-            font-size: 1.3em;
+            font-size: 1.6em;
         }
 
         .footer-LI {
             margin-right: 0;
         }
 
-        .editbutton {
-            color: white;
-            background-color: #2da52d;
-            padding: 8px 20px;
-            font-family: Montserrat, serif;
-            font-size: 1em;
-            font-style: normal;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        .editbutton:hover {
-            box-shadow: 0 8px 16px 0 forestgreen, 0 6px 20px 0 forestgreen;
-            -webkit-appearance: none;
-        }
-
-        .container {
-            padding: 0;
-        }
-
         .container-form {
             margin: 0;
-            padding: 30px;
+            padding: 10px 30px;
         }
 
         .container-form input {
@@ -951,12 +1032,9 @@
             width: 100%;
         }
 
-        button.w3-button.w3-red-cancel {
-            margin-top: 1px;
-        }
-
         fieldset {
-            padding: 30px;
+            width: 100%;
+            padding: 30px 10px;
         }
 
         .w3-center-services-h2 {
@@ -980,10 +1058,6 @@
             width: 200px;
         }
 
-        .w3-medium {
-            font-size: 15px;
-        }
-
         .w3-modal {
             z-index: 3;
             display: none;
@@ -993,12 +1067,6 @@
 
         .sliderWrapper {
             text-align: left;
-            font-size: 1.05em;
-            margin: 30px 0;
-        }
-
-        .container-checkbox {
-            text-align: justify;
         }
 
         .aboutus-h2 {

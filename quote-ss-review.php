@@ -414,7 +414,7 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
@@ -759,7 +759,7 @@
 
                                 <!-- Edit Button -->
                                 <div>
-                                    <a type="button" style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                    <a style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
                                 </div>
                     </fieldset>
 
@@ -767,7 +767,7 @@
                     <div class="w3-center">
                         <div class="w3-bar">
                             <button name="submit" type="submit" class="w3-button w3-medium w3-green-continue">Submit</button>
-                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>
+<!--                            <button type="reset" class="w3-button w3-medium w3-red-cancel">Cancel</button>-->
                         </div>
                     </div>
 
