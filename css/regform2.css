@@ -381,12 +381,13 @@ input {
 }
 
 .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
+  font-family: Poppins-SemiBold, serif;
   line-height: 36px;
-  padding-left: 5px;
-  color: #999999;
-  font-size: 16px;
-  font-family: inherit;
+  padding-left: 0;
+  color: #555555;
+  font-size: 18px;
   font-weight: 500;
+  border: none;
 }
 
 .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow {
@@ -414,7 +415,7 @@ input {
 }
 
 .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow:after {
-  font-family: "Material-Design-Iconic-Font";
+  font-family: "Material-Design-Iconic-Font", fantasy;
   content: '\f2f9';
   font-size: 18px;
   color: #ccc;
@@ -435,11 +436,11 @@ input {
 .select2-container--open .select2-dropdown--below {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 0px;
+  border-radius: 0;
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d7d7d7;
   margin-top: 10px;
   overflow: hidden;
 }
@@ -459,6 +460,10 @@ input {
 .select2-container .select2-results__option[aria-selected] {
   color: #373737;
   font-family: Poppins-Medium, serif;
+}
+
+.select2-container--open .select2-dropdown--below[aria-selected] {
+  border: 1px solid #57b846;
 }
 
 

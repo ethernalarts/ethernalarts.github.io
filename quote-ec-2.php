@@ -326,7 +326,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Weight">
                                             <input class="input100" type="number" name="weight" required>
-                                            <span class="focus-input100" data-placeholder="Weight (inches)  *"></span>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)  *"></span>
                                         </div>
                                     </div>
 
@@ -464,7 +464,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
                                             <input class="input100" type="number" name="weight_2">
-                                            <span class="focus-input100" data-placeholder="Weight (inches)"></span>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
                                         </div>
                                     </div>
 
@@ -602,7 +602,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
                                             <input class="input100" type="number" name="weight_3">
-                                            <span class="focus-input100" data-placeholder="Weight (inches)"></span>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
                                         </div>
                                     </div>
 
@@ -740,7 +740,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
                                             <input class="input100" type="number" name="weight_4">
-                                            <span class="focus-input100" data-placeholder="Weight (inches)"></span>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
                                         </div>
                                     </div>
 
@@ -775,7 +775,7 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="colour_4" type="text">
+                                            <input class="input100" name="color_4" type="text">
                                             <span class="focus-input100" data-placeholder="Color"></span>
                                         </div>
                                     </div>

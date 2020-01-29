@@ -249,7 +249,7 @@
         text-align: right;
         list-style: none;
         font-family: Poppins-Light, "Oswald Light", serif;
-        font-size: 1.1em;
+        font-size: 1.2em;
         margin: 10px 0 0;
         display: block;
     }
@@ -273,7 +273,7 @@
     .footerlinkitem a:focus {
         border-top: 4px solid #b93131;
         color: whitesmoke;
-        padding: 4px 15px;
+        padding: 4px 15px 8px;
     }
 
     .footerlinkitem a.active,
@@ -295,7 +295,7 @@
         font-family: Montserrat, Archivo, "Quicksand Medium", sans-serif;
         margin: 10px 0 0;
         color: gray;
-        font-size: 1.05em;
+        font-size: 1.08em;
     }
 
     header {
@@ -464,7 +464,18 @@
         background-color: rgb(215, 215, 25);
     }
 
-    .subheader-h2 {
+    .subheader-top {
+        font-family: "Julius Sans One", Bangers, "28 Days Later", Oswald, serif;
+        margin: 250px auto 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.96);
+        padding: 10px 20px;
+        font-size: 1.95em;
+        font-weight: 500;
+        color: #ebebeb;
+    }
+
+    .subheader-bottom {
         font-family: "Julius Sans One", Bangers, "28 Days Later", Oswald, serif;
         /*display: inline-block;*/
         margin: 280px auto 0;
@@ -609,18 +620,19 @@
     .skip {
         margin: 40px 0 0;
         text-align: center;
-        font-family: Poppins-Regular, Verdana, serif;
+        font-family: Poppins-SemiBold, Verdana, serif;
         font-weight: 500;
         cursor: pointer;
-        font-size: 1.2em;
-        color: whitesmoke;
-        background-color: #009100;
+        font-size: 1.25em;
+        color: #007d00;
+        background-color: transparent;
         text-decoration: none;
     }
 
     .w3-btn:hover {
         box-shadow: none;
-        background-color: #008700;
+        background-color: transparent;
+        text-decoration: underline;
 
     }
 
@@ -747,19 +759,14 @@
     }
 
     .container-form textarea {
+        font-family: Poppins-Medium, roboto, Verdana, Montserrat, serif;
+        font-size: 18px;
         width: 100%;
         height: 130px;
         padding: 14px;
         margin: 0;
         border-radius: 0;
-        border: 0 solid rgba(100, 150, 238, 0.51);
-        color: lightsteelblue;
-    }
-
-    .choice option {
-        color: steelblue;
-        padding: 15px;
-        font-family: Roboto, Verdana, Montserrat, serif;
+        color: #666;
     }
 
     .empty {
@@ -807,11 +814,11 @@
     }
 
     label {
-        font-family: "Lato Black", Roboto, Verdana, serif;
+        font-family: Poppins-Medium, serif;
+        font-size: 15px;
+        color: #999999;
         font-style: normal;
         font-weight: 500;
-        font-size: 1.1em;
-        color: darkgray;
     }
 
     .required {
@@ -819,7 +826,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 1em;
-        color: whitesmoke;
+        color: #999999;
     }
 
     .emoji {
@@ -830,7 +837,7 @@
     fieldset {
         width: 100%;
         display: block;
-        padding: 30px 20px;
+        padding: 30px 10px;
         margin: 20px auto;
         border: 1px solid cornflowerblue;
         border-radius: 0;
@@ -1022,19 +1029,6 @@
         .container-form {
             margin: 0;
             padding: 10px 30px;
-        }
-
-        .container-form input {
-            width: 100%;
-        }
-
-        .container-form select {
-            width: 100%;
-        }
-
-        fieldset {
-            width: 100%;
-            padding: 30px 10px;
         }
 
         .w3-center-services-h2 {

@@ -15,14 +15,11 @@
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
 
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
     <link href="css/back-to-top.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
     <link href="css/intlTelInput.css" rel="stylesheet">
-    <link href="./css/w3.css" type="text/css" rel="stylesheet">
-    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+    <link href="css/w3.css" type="text/css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -46,6 +43,7 @@
     <style>
         .body {
             width: 100%;
+            max-width: 1440px;
             margin: 0;
             background-image: none;
         }

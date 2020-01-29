@@ -47,14 +47,16 @@
 
     <title>VLink Express Courier - Get a Quote (Domestic Shipping - Review Details)</title>
 
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+
     <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
-    <link href="css/intlTelInput.css" rel="stylesheet">
     <link href="./css/w3.css" type="text/css" rel="stylesheet">
     <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
-    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
@@ -73,12 +75,13 @@
 
         .body {
             width: 100%;
+            max-width: 1440px;
             margin: 0;
             background-image: none;
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 170px;
         }
 
         .parallax {
@@ -96,7 +99,15 @@
         }
 
         .subheader-h2 {
-            margin-top: 270px;
+            margin-top: 260px;
+        }
+
+        .container-form input {
+            color: #808080;
+            font-size: 18px;
+            border: 0;
+            border-bottom: 2px solid #57b846;
+            padding: 0 0 10px;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -173,7 +184,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 440px">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -217,17 +228,16 @@
               <span style="font: 1.25em Montserrat, sans-serif;">(Step 5 of 5)</span>
           </div>
 
-            <h2 id="hi">Please review your details</h2>
-
             <!-- Container for Get a Quote form  -->
-            <div class="w3-card-quote-is">
+            <div class="w3-card-4">
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post" style="padding-bottom: 0" action="saveinfo-ec.php">
-
+                    <h3 class="h3-contactform">And that's it. We are done.</h3>
+                    <div class="formtitle">Review Your Details</div>
                     <!-- Package Origin Preview -->
-                    <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
-                        <legend>Package Origin</legend>
+                    <fieldset class="nofieldset" style="margin-bottom: 30px">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Origin Preview</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
@@ -350,13 +360,13 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left; width: 15%;" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
                     <!-- Return Address Preview -->
-                    <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
-                        <legend>Return Address</legend>
+                    <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 30px 0">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Return Address</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
@@ -465,13 +475,13 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left; width: 15%" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
                     <!-- Package Details Preview -->
-                    <fieldset style="margin: 50px 0 30px">
-                        <legend>Package Details</legend>
+                    <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 30px 0">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Details</legend>
                             <div class="row">
                                 <!-- Package Type -->
                                 <div class="col-xs-12 col-sm-6">
@@ -481,7 +491,7 @@
 
                                 <!-- Delivery Option -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="delivery_options"> Shipment's Worth (USD)</label>
+                                    <label for="delivery_options">Delivery Option</label>
                                     <input disabled placeholder="<?php echo $_SESSION['delivery_options'] ?>" class="w3-light-gray" id="delivery_options">
                                 </div>
                             </div>
@@ -558,8 +568,8 @@
                                 </div>
 
                                 <!-- 2nd package -->
-                                <fieldset id="secondPackage" style="margin: 10px 0 30px; display: none">
-                                    <legend>2nd Package Details</legend>
+                                <fieldset id="secondPackage" class="nofieldset" style="margin: 10px 0 30px; display: none">
+                                    <legend class="legend-right" style="font-size: 1.1em">2nd Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -640,8 +650,8 @@
                                 </fieldset>
 
                                 <!-- 3rd package -->
-                                <fieldset id="thirdPackage" style="margin: 10px 0 30px; display: none">
-                                    <legend>3rd Package Details</legend>
+                                <fieldset id="thirdPackage" class="nofieldset" style="margin: 10px 0 30px; display: none">
+                                    <legend class="legend-right" style="font-size: 1.1em">3rd Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -722,8 +732,8 @@
                                 </fieldset>
 
                                 <!-- 4th package -->
-                                <fieldset id="fourthPackage" style="margin: 10px 0 30px; display: none">
-                                    <legend>4th Package Details</legend>
+                                <fieldset id="fourthPackage" class="nofieldset" style="margin: 10px 0 30px; display: none">
+                                    <legend class="legend-right" style="font-size: 1.1em">4th Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -812,13 +822,13 @@
 
                                 <!-- Edit Button -->
                                 <div>
-                                    <a type="button" style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                    <a style="float: left; width: 15%" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
                                 </div>
                     </fieldset>
 
                     <!-- Package Destination Preview -->
-                    <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
-                        <legend>Package Destination</legend>
+                    <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 30px 0">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Destination</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
@@ -927,7 +937,7 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left; width: 15%" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
@@ -1069,16 +1079,16 @@
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
-                    <i class="footer-FB fab fa-facebook-f"></i>
+                    <img src="images/facebook.png" class="footer-FB" alt="facebook icon">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-instagram"></i>
+                    <img src="images/instagram.png" class="footer-INSTA" alt="instagram icon">
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <img src="images/twitter.png" class="footer-INSTA" alt="twitter icon">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <img src="images/linkedin.png" class="footer-LI" alt="linkedin icon">
                 </a>
             </p>
         </div>

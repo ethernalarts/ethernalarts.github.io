@@ -1,6 +1,11 @@
 <?php
-    //start the session
-    session_start();
+    session_start(); // Session starts here.
+
+    header("Cache-Control: no cache");
+    session_cache_limiter("private_no_expire");
+
+    if(isset($_POST['notify']))
+        $_SESSION['notify']=$_POST['notify'];
 ?>
 
 <!doctype html>
@@ -12,22 +17,30 @@
 
     <title>VLink Express Courier - Get a Quote (International Shipping - Shipment Destination)</title>
 
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+
     <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
-    <link href="css/progressbar.css" type="text/css" rel="stylesheet">
     <link href="css/misc.css" type="text/css" rel="stylesheet">
     <link href="css/intlTelInput.css" rel="stylesheet">
     <link href="css/w3.css" type="text/css" rel="stylesheet">
     <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="css/regform2.css" rel="stylesheet" type="text/css">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
     <script src="js/countrystatecity.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -41,7 +54,7 @@
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 160px;
         }
 
         .parallax {
@@ -49,7 +62,7 @@
             background-image: url("images/is-pic3.jpg");
 
             /* Set a specific height */
-            min-height: 440px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -58,54 +71,61 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 270px;
+        .subheader-top {
+            margin-top: 230px;
         }
 
-        .countries, .states {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
+        .subheader-bottom {
+            margin: 10px auto 30px;
         }
 
-        /* On screens that are 992px wide or less, go from three columns to two columns */
+        .container-form input {
+            margin: 0;
+            font-size: 18px;
+            border: 0;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        /* On screens that are 1200px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
             .container {
-                padding: 0 50px;
+                padding: 0 80px;
             }
+        }
 
-            .subheader-h2 {
-                margin-top: 280px;
+        /* On screens that are 1000px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 1000px) {
+            .container {
+                padding: 0 50px;
             }
         }
 
         /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.3em Verdana, sans-serif;
-            }
-
+        @media screen and (max-width: 770px) {
             .container {
-                padding: 0 30px;
+                padding: 0 25px;
             }
 
-            .subheader-h2 {
-                margin-top: 280px;
+            .col-sm-6 {
+                 width: 100%;
             }
+
+            /*.container-form input, .container-form select {*/
+            /*    width: 100%;*/
+            /*}*/
 
             button.w3-button.w3-red-cancel {
-                margin-top: 12px;
+                margin: 5px 0 0;
+                width: 40%;
             }
 
             button.w3-button.w3-green-continue {
-                margin-top: 12px;
-                margin-right: 1px;
+                width: 40%;
             }
 
             button.w3-button.w3-black-previous {
-                margin: 12px 7px 0 0;
+                width: 40% !important;
             }
         }
     </style>
@@ -149,7 +169,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 370px;">Quote - International Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 380px">International Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -193,150 +216,199 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 5)</span>
             </div>
 
-            <h2 id="hi">Where is it going?</h2>
-
-            <h3 id="required">
-                <code class="w3-code">
-                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
-                </code>
-            </h3>
-
-
             <!-- Container for International Shipping Quote form  -->
             <div class="w3-card-4">
 
-
-                <!-- Shipment Destination -->
+                <!-- International Shipping Quote form -->
                 <form class="container-form" method="post" action="quote-is-4-skip.php" style="padding-bottom: 0">
-
-                    <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
-                        <legend>Shipment Destination</legend>
+                    <h3 class="h3-contactform">Where is it going?</h3>
+                    <div class="formtitle">Shipment Destination</div>
+                    <!-- Shipment Destination -->
+                    <fieldset class="nofieldset" style="margin-bottom: 50px">
+                        <legend style="margin-bottom: 10px" class="legend-middle">
+                            <span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields
+                        </legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="name_dest"> Full Name (or Company) <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. Clark Kent (or Daily Planet)" name="name_dest" id="name_dest" type="text" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Name">
+                                        <label for="name">Full Name (or Company) <span class="required">*</span></label>
+                                        <input class="input100" type="text" name="name_dest"  id="name" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
                                 <!-- Contact's Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="contact_name_dest"> Contact's Name <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. Lois Lane" name="contact_name_dest" id="contact_name_dest" type="text" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Contact Name">
+                                        <label for="contact_name">Contact's Name <span class="required">*</span></label>
+                                        <input class="input100" name="contact_name_dest" id="contact_name" type="text" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Gender -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="gender_dest">Gender <span class="required">*</span></label>
-                                    <select class="choice" name="gender_dest" id="gender_dest" required>
-                                        <option value="0" selected="selected">Select Gender</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="gender">Gender <span class="required">*</span></label>
+                                            <select name="gender_dest" id="gender" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Title -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="title_dest">Title</label>
-                                    <input class="w3-light-gray" placeholder="Mr, Mrs, Cpt, Dr. etc."
-                                           name="title_dest" id="title_dest" type="text">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Title">
+                                        <label for="title">Title <span class="required">*</span></label>
+                                        <input class="input100" type="text" name="title_dest" id="title" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Telephone -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="phone_dest">Telephone <span class="required">*</span></label>
-                                    <input class="w3-light-gray" name="phone_dest" id="phone_dest" type="tel" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Telephone">
+                                        <label for="phone">Telephone <span class="required">*</span></label>
+                                        <input class="input100" type="tel" name="phone_dest" id="phone_dest" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
                                 <!-- Email -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="email_dest">Email <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email_dest" id="email_dest" type="email" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Email">
+                                        <label for="email">Email <span class="required">*</span></label>
+                                        <input class="input100" type="email" name="email_dest" id="email" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Country -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="countryId">Country <span class="required">*</span></label>
-                                    <select name="country_dest" class="choice countries" id="countryId" type="select" required>
-                                        <option value="0" selected="selected">Select Country</option>
-                                    </select>
+                                    <div class="input-group m-t-40 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="countryId">Country <span class="required">*</span></label>
+                                            <select name="country_dest" class="countries" id="countryId" type="select" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- State -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="stateId">State <span class="required">*</span></label>
-                                    <select name="state_dest" class="choice states" id="stateId" type="select" required>
-                                        <option value="0" selected="selected">Select State</option>
-                                    </select>
+                                    <div class="input-group m-t-40 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="stateId">State <span class="required">*</span></label>
+                                            <select name="state_dest" class="states" id="stateId" type="select" required>
+                                                <option selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- City -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="cityId">City <span class="required">*</span></label>
-                                    <select name="city_dest" class="choice cities" id="cityId" type="select" required>
-                                        <option value="0" selected="selected">Select City</option>
-                                    </select>
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="cityId">City <span class="required">*</span></label>
+                                            <select name="city_dest" class="cities" id="cityId" type="select" required>
+                                                <option selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Zip Code -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="zip_code_dest">Zip Code <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zip_code_dest" id="zip_code_dest" type="number" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zip Code">
+                                        <label for="zip_code">Zip Code <span class="required">*</span></label>
+                                        <input class="input100" name="zip_code_dest" id="zip_code" type="number" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Street Address -->
                                 <div class="col-xs-12 col-sm-12">
-                                    <label for="street_add_dest">Street Address <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="street_add_dest" id="street_add_dest" type="text" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Street Address">
+                                        <label for="street_add">Street Address <span class="required">*</span></label>
+                                        <input class="input100" name="street_add_dest" id="street_add" type="text" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Street Address 2 -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="street_add2_destreAdd">Street Address 2</label>
-                                    <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
-                                           name="street_add2_dest" id="street_add2_dest" type="text">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                        <label for="street_add2">Apartment, suite, floor, unit etc</label>
+                                        <input class="input100" name="street_add2_dest" id="street_add2" type="text">
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
                                 <!-- Department -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="department_dest">Department, c/o, etc.</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Editorial (or c/o Martha Lane)" name="department_dest" id="department_dest" type="text">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                        <label for="department">Department, c/o, etc.</label>
+                                        <input class="input100" name="department_dest" id="department" type="text">
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Residential Address? -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="residential_add_dest">Is this a residential address? <span class="required">*</span></label>
-                                    <select  name="residential_add_dest" id="residential_add_dest" class="choice" required>
-                                        <option value="0" selected="selected">Select an answer</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="residential_add">Is this a residential address? <span class="required">*</span></label>
+                                            <select name="residential_add_dest" id="residential_add" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Email updates to recipient on shipment status? -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="notify_dest">Should we send recipient shipment status? <span class="required">*</span></label>
-                                    <select name="notify_dest" id="notify_dest" class="choice">
-                                        <option value="0" selected="selected">Select an answer</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="notify">Send recipient shipment status <span class="required">*</span></label>
+                                            <select name="notify_dest" id="notify">
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                    </fieldset>
+                        </fieldset>
 
                     <!-- Previous, Continue and Cancel Button -->
                     <div class="w3-center">
@@ -352,16 +424,6 @@
             </div>
         </div>
     </div>
-
-    <!-- JavaScript to change color of <option selected> -->
-    <script>
-        $(".choice").change(function () {
-            if($(this).val() === "0") $(this).addClass("empty");
-            else $(this).removeClass("empty")
-        });
-
-        $(".choice").change();
-    </script>
 
     <!-- Scroll back to the top -->
     <div class="scrolltop">
@@ -433,6 +495,14 @@
             }
         }
     </script>
+
+    <script src="js/main.js"></script>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
 </body>
 
     <!-- footer -->
@@ -451,16 +521,16 @@
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
-                    <i class="footer-FB fab fa-facebook-f"></i>
+                    <img src="images/facebook.png" class="footer-FB" alt="facebook icon">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-instagram"></i>
+                    <img src="images/instagram.png" class="footer-INSTA" alt="instagram icon">
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <img src="images/twitter.png" class="footer-INSTA" alt="twitter icon">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <img src="images/linkedin.png" class="footer-LI" alt="linkedin icon">
                 </a>
             </p>
         </div>

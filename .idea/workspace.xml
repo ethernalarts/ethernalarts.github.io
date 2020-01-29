@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="387e58ff-aa56-4560-b054-5fad61c3ef7e" name="Default Changelist" comment="first V-Link Express Courier VCS with GitHub through WebStorm" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,9 +41,15 @@
   </component>
   <component name="ProjectId" id="1OsPvYfa3sTNfMzlXBAHQpIH9vf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -56,6 +61,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
@@ -65,15 +71,15 @@
       <recent name="D:\Misc\Ethernal Arts Portfolio\ViteLink Express Courier" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -227,7 +233,55 @@
       <workItem from="1571686308868" duration="11135000" />
       <workItem from="1571823757008" duration="17569000" />
       <workItem from="1571867769897" duration="2221000" />
-      <workItem from="1571878010089" duration="44726000" />
+      <workItem from="1571878010089" duration="86966000" />
+      <workItem from="1572428920307" duration="28920000" />
+      <workItem from="1572563201038" duration="27030000" />
+      <workItem from="1572726004308" duration="15043000" />
+      <workItem from="1572815795455" duration="1215000" />
+      <workItem from="1572818009447" duration="20256000" />
+      <workItem from="1573126099756" duration="6648000" />
+      <workItem from="1573251894990" duration="579000" />
+      <workItem from="1573381972189" duration="582000" />
+      <workItem from="1573388556568" duration="1762000" />
+      <workItem from="1573433889320" duration="1005000" />
+      <workItem from="1573469427747" duration="2517000" />
+      <workItem from="1573597034788" duration="3314000" />
+      <workItem from="1573640087625" duration="37281000" />
+      <workItem from="1574262409102" duration="31220000" />
+      <workItem from="1575018463729" duration="597000" />
+      <workItem from="1575110315248" duration="1012000" />
+      <workItem from="1575153378763" duration="1771000" />
+      <workItem from="1575209956697" duration="1665000" />
+      <workItem from="1575227859902" duration="971000" />
+      <workItem from="1575286248507" duration="1132000" />
+      <workItem from="1575292968913" duration="1299000" />
+      <workItem from="1575457867175" duration="602000" />
+      <workItem from="1575460212426" duration="1773000" />
+      <workItem from="1575462040441" duration="1816000" />
+      <workItem from="1575463914278" duration="1254000" />
+      <workItem from="1575465740318" duration="1766000" />
+      <workItem from="1575467575727" duration="1858000" />
+      <workItem from="1575478108676" duration="1781000" />
+      <workItem from="1575480009846" duration="1768000" />
+      <workItem from="1575481833153" duration="1720000" />
+      <workItem from="1575527657695" duration="203000" />
+      <workItem from="1575528593699" duration="84000" />
+      <workItem from="1575528715618" duration="842000" />
+      <workItem from="1575595524971" duration="303000" />
+      <workItem from="1575671001821" duration="5054000" />
+      <workItem from="1575848983353" duration="10117000" />
+      <workItem from="1576080347901" duration="3094000" />
+      <workItem from="1576175577925" duration="390000" />
+      <workItem from="1576187273470" duration="622000" />
+      <workItem from="1576359214724" duration="118000" />
+      <workItem from="1576359378356" duration="1161000" />
+      <workItem from="1576420109265" duration="3910000" />
+      <workItem from="1576626056950" duration="610000" />
+      <workItem from="1576824893248" duration="1353000" />
+      <workItem from="1576963351028" duration="11943000" />
+      <workItem from="1577110314215" duration="610000" />
+      <workItem from="1578015406389" duration="129000" />
+      <workItem from="1578015585486" duration="2570000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>
@@ -364,5 +418,15 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="first V-Link Express Courier VCS with GitHub through WebStorm" />
     <option name="LAST_COMMIT_MESSAGE" value="first V-Link Express Courier VCS with GitHub through WebStorm" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="390" y="40" key="#PHP" timestamp="1575671333465">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="390" y="40" key="#PHP/0.40.1366.728@0.40.1366.728" timestamp="1575671333465" />
+    <state x="378" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1578015606818">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="378" y="226" key="com.intellij.ide.util.TipDialog/0.40.1366.728@0.40.1366.728" timestamp="1578015606818" />
   </component>
 </project>

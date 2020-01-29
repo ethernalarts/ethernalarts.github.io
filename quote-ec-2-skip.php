@@ -285,15 +285,15 @@
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Weight">
-                                            <input class="input100" type="number" name="weight" required>
-                                            <span class="focus-input100" data-placeholder="Weight (inches)  *"></span>
+                                            <input class="input100" type="text" name="weight" required>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)  *"></span>
                                         </div>
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Length">
-                                            <input class="input100" type="number" name="length" required>
+                                            <input class="input100" type="text" name="length" required>
                                             <span class="focus-input100" data-placeholder="Length (inches) *"></span>
                                         </div>
                                     </div>
@@ -303,7 +303,7 @@
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Width">
-                                            <input class="input100" type="number" name="width" required>
+                                            <input class="input100" type="text" name="width" required>
                                             <span class="focus-input100" data-placeholder="Width (inches)  *"></span>
                                         </div>
                                     </div>
@@ -311,7 +311,7 @@
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Height">
-                                            <input class="input100" type="number" name="height" required>
+                                            <input class="input100" type="text" name="height" required>
                                             <span class="focus-input100" data-placeholder="Height (inches) *"></span>
                                         </div>
                                     </div>
@@ -321,7 +321,7 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package Color">
-                                            <input class="input100" name="colour" type="text" required>
+                                            <input class="input100" name="color" type="text" required>
                                             <span class="focus-input100" data-placeholder="Color  *"></span>
                                         </div>
                                     </div>
@@ -361,8 +361,8 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-25 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="package_type_2" type="select">
-                                                    <option disabled="disabled" selected="selected">Package Type</option>
+                                                <select name="package_type_2">
+                                                    <option disabled="disabled" value=" " selected="selected">Package Type</option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
@@ -382,18 +382,18 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-25 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="delivery_options_2" type="select">
-                                                    <option disabled="disabled" selected="selected">Delivery Option</option>
+                                                <select name="delivery_options_2">
+                                                    <option disabled="disabled" value=" " selected="selected">Delivery Option</option>
                                                     <option value="VLink Ground">VLink Ground</option>
                                                     <option value="VLink Next Day Air">VLink Next Day Air</option>
                                                     <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
                                                     <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
                                                     <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                                    <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                                    <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                                    <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
-                                                    <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
-                                                    <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
+                                                    <option value="Special Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                                    <option value="Special Service(Secure Transport)">Special Service (Secure Transport)</option>
+                                                    <option value="Special Service(Clinical Express)">Special Service (Clinical Express)</option>
+                                                    <option value="Time Critical Service(Dedicated Express)">Time Critical Service (VLink Dedicated Express)</option>
+                                                    <option value="Time Critical Service(Special Express)">Time Critical Service (VLink Special Express)</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -424,7 +424,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
                                             <input class="input100" type="number" name="weight_2">
-                                            <span class="focus-input100" data-placeholder="Weight (inches)"></span>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
                                         </div>
                                     </div>
 
@@ -459,7 +459,7 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="colour_2" type="text">
+                                            <input class="input100" name="color_2" type="text">
                                             <span class="focus-input100" data-placeholder="Color"></span>
                                         </div>
                                     </div>
@@ -562,7 +562,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
                                             <input class="input100" type="number" name="weight_3">
-                                            <span class="focus-input100" data-placeholder="Weight (inches)"></span>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
                                         </div>
                                     </div>
 
@@ -597,7 +597,7 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="colour_3" type="text">
+                                            <input class="input100" name="color_3" type="text">
                                             <span class="focus-input100" data-placeholder="Color"></span>
                                         </div>
                                     </div>
@@ -700,7 +700,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
                                             <input class="input100" type="number" name="weight_4">
-                                            <span class="focus-input100" data-placeholder="Weight (inches)"></span>
+                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
                                         </div>
                                     </div>
 
@@ -735,7 +735,7 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="colour_4" type="text">
+                                            <input class="input100" name="color_4" type="text">
                                             <span class="focus-input100" data-placeholder="Color"></span>
                                         </div>
                                     </div>
@@ -774,16 +774,6 @@
             </div>
         </div>
     </div>
-
-    <!-- JavaScript to change color of <option selected> -->
-    <script>
-        $(".choice").change(function () {
-            if($(this).val() === "0") $(this).addClass("empty");
-            else $(this).removeClass("empty")
-        });
-
-        $(".choice").change();
-    </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>

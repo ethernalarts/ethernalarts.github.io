@@ -60,15 +60,24 @@
 
     <title>VLink Express Courier - Get a Quote (International Shipping - Return Address)</title>
 
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
-    <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
-    <link href="css/misc.css" rel="stylesheet">
+
+    <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+    <link href="css/misc.css" type="text/css" rel="stylesheet">
     <link href="css/intlTelInput.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
+    <link href="css/w3.css" type="text/css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="css/regform2.css" rel="stylesheet" type="text/css">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -88,7 +97,7 @@
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 170px;
         }
 
         .parallax {
@@ -96,7 +105,7 @@
             background-image: url("images/is-pic2.jpg");
 
             /* Set a specific height */
-            min-height: 440px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -105,68 +114,62 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 270px;
+        .subheader-top {
+            margin-top: 230px;
         }
 
-        .countries, .states {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 0.95em;
+        .subheader-bottom {
+            margin: 10px auto 30px;
         }
 
-        /* On screens that are 992px wide or less, go from three columns to two columns */
+        .container-form input {
+            margin: 0;
+            font-size: 18px;
+            border: 0;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        /* On screens that are 1200px wide or less, go from three columns to two columns */
         @media screen and (max-width: 1200px) {
-            .subheader-h2 {
-                margin-top: 280px;
-            }
-
             .container {
-                padding: 0 30px;
-            }
-
-            .container-form {
-                margin: 0;
-                padding: 30px;
-            }
-
-            fieldset {
-                padding: 30px;
+                padding: 0 80px;
             }
         }
 
-        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-            .subheader-h2 {
-                margin-top: 280px;
+        /* On screens that are 1000px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 1000px) {
+            .container {
+                padding: 0 50px;
             }
+        }
 
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.3em Verdana, sans-serif;
-            }
-
+        /* On screens that are 770px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 770px) {
             .skip {
-                font-size: 0.9em;
+                font-size: 1.2em;
                 margin-top: 30px;
             }
 
             .container {
-                padding: 0 30px;
+                padding: 0 25px;
+            }
+
+            .col-sm-6 {
+                width: 100%;
             }
 
             button.w3-button.w3-red-cancel {
-                margin-top: 12px;
+                margin: 5px 0 0;
+                width: 40%;
             }
 
             button.w3-button.w3-green-continue {
-                margin-top: 12px;
-                margin-right: 1px;
+                width: 40%;
             }
 
             button.w3-button.w3-black-previous {
-                margin: 12px 7px 0 0;
+                width: 40% !important;
             }
         }
     </style>
@@ -209,7 +212,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 365px;">Quote - International Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 380px">International Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -253,14 +259,6 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 2 of 5)</span>
             </div>
 
-            <h2 id="hi">Return Address</h2>
-
-            <h3 id="required">
-                <code class="w3-code">
-                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
-                </code>
-            </h3>
-
             <!-- Container for Return Address  -->
             <div class="w3-card-4">
 
@@ -270,139 +268,199 @@
                     <input type="hidden" name="notify" value="Yes"/>
 
                     <button type="submit" class="skip w3-btn">
-                        Skip. Use Shipment's Origin's Details
+                        Skip and use Shipment's Origin's Details
                     </button>
                 </form>
 
                     <!-- Return Address Form -->
                     <form class="container-form" method="post" action="quote-is-3.php" style="padding-bottom: 0">
-                        <fieldset style="margin: 0 0 40px; padding-bottom: 20px">
-                            <legend>Return Address</legend>
-                                <div class="row">
-                                    <!-- Full Name -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="name_reAdd"> Full Name (or Company) <span class="required">*</span></label>
-                                        <input class="w3-light-gray" placeholder="e.g. Bruce Wayne (or Wayne Enterprises)"
-                                               name="name_reAdd" id="name_reAdd" type="text" required>
-                                    </div>
-
-                                    <!-- Contact's Name -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="contact_name_reAdd"> Contact's Name <span class="required">*</span></label>
-                                        <input class="w3-light-gray"  placeholder="e.g. Alfred Pennyworth" name="contact_name_reAdd" id="contact_name_reAdd" type="text" required>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <!-- Gender -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="gender_reAdd">Gender <span class="required">*</span></label>
-                                        <select class="choice" name="gender_reAdd" id="gender_reAdd" required>
-                                            <option value="0" selected="selected">Select Gender</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                        </select>
-                                    </div>
-
-                                    <!-- Title -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="title_reAdd">Title</label>
-                                        <input class="w3-light-gray" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title_reAdd" id="title_reAdd" type="text">
+                        <h3 class="h3-contactform">What if nobody's home?</h3>
+                        <div class="formtitle">Return Address</div>
+                        <!-- Shipment Origin -->
+                        <fieldset class="nofieldset" style="margin-bottom: 50px">
+                            <legend style="margin-bottom: 10px" class="legend-middle">
+                                <span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields
+                            </legend>
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Name">
+                                        <label for="name">Full Name (or Company) <span class="required">*</span></label>
+                                        <input class="input100" type="text" name="name_reAdd"  id="name" required>
+                                        <span class="focus-input100"></span>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <!-- Telephone -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="phone_reAdd">Telephone <span class="required">*</span></label>
-                                        <input class="w3-light-gray" name="phone_reAdd" id="phone_reAdd" type="tel" required>
+                                <!-- Contact's Name -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Contact Name">
+                                        <label for="contact_name">Contact's Name <span class="required">*</span></label>
+                                        <input class="input100" name="contact_name_reAdd" id="contact_name" type="text" required>
+                                        <span class="focus-input100"></span>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <!-- Email -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="email_reAdd">Email <span class="required">*</span></label>
-                                        <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email_reAdd" id="email_reAdd" type="email" required>
+                            <div class="row">
+                                <!-- Gender -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="gender">Gender <span class="required">*</span></label>
+                                            <select name="gender_reAdd" id="gender" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <!-- Country -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="countryId">Country <span class="required">*</span></label>
-                                        <select name="country_reAdd" class="choice countries" id="countryId" type="select" required>
-                                            <option value="0" selected="selected">Select Country</option>
-                                        </select>
+                                <!-- Title -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Title">
+                                        <label for="title">Title <span class="required">*</span></label>
+                                        <input class="input100" type="text" name="title_reAdd" id="title" required>
+                                        <span class="focus-input100"></span>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <!-- State -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="stateId">State <span class="required">*</span></label>
-                                        <select name="state_reAdd" class="choice states" id="stateId" type="select" required>
-                                            <option value="0" selected="selected">Select State</option>
-                                        </select>
+                            <div class="row">
+                                <!-- Telephone -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Telephone">
+                                        <label for="phone">Telephone <span class="required">*</span></label>
+                                        <input class="input100" type="tel" name="phone_reAdd" id="phone" required>
+                                        <span class="focus-input100"></span>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <!-- City -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="cityId">City <span class="required">*</span></label>
-                                        <select name="city_reAdd" class="choice cities" id="cityId" type="select" required>
-                                            <option value="0" selected="selected">Select City</option>
-                                        </select>
+                                <!-- Email -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Email">
+                                        <label for="email">Email <span class="required">*</span></label>
+                                        <input class="input100" type="email" name="email_reAdd" id="email" required>
+                                        <span class="focus-input100"></span>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <!-- Zip Code -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="zip_code_reAdd">Zip Code <span class="required">*</span></label>
-                                        <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zip_code_reAdd" id="zip_code_reAdd" type="number" required>
+                            <div class="row">
+                                <!-- Country -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-group m-t-40 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="countryId">Country <span class="required">*</span></label>
+                                            <select name="country_reAdd" class="countries" id="countryId" type="select" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <!-- Street Address -->
-                                    <div class="col-xs-12 col-sm-12">
-                                        <label for="street_add_reAdd">Street Address <span class="required">*</span></label>
-                                        <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="street_add_reAdd" id="street_add_reAdd" type="text" required>
+                                <!-- State -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-group m-t-40 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="stateId">State <span class="required">*</span></label>
+                                            <select name="state_reAdd" class="states" id="stateId" type="select" required>
+                                                <option selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- City -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="cityId">City <span class="required">*</span></label>
+                                            <select name="city_reAdd" class="cities" id="cityId" type="select" required>
+                                                <option selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <!-- Street Address 2 -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="street_add2_reAdd">Street Address 2</label>
-                                        <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
-                                               name="street_add2_reAdd" id="street_add2_reAdd" type="text">
+                                <!-- Zip Code -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zip Code">
+                                        <label for="zip_code">Zip Code <span class="required">*</span></label>
+                                        <input class="input100" name="zip_code_reAdd" id="zip_code" type="number" required>
+                                        <span class="focus-input100"></span>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <!-- Department -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="department_reAdd">Department, c/o, etc.</label>
-                                        <input class="w3-light-gray" placeholder="e.g. Sales (or c/o Clark Kent)" name="department_reAdd" id="department_reAdd" type="text">
+                            <div class="row">
+                                <!-- Street Address -->
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Street Address">
+                                        <label for="street_add">Street Address <span class="required">*</span></label>
+                                        <input class="input100" name="street_add_reAdd" id="street_add" type="text" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Street Address 2 -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                        <label for="street_add2">Apartment, suite, floor, building, unit etc</label>
+                                        <input class="input100" name="street_add2_reAdd" id="street_add2" type="text">
+                                        <span class="focus-input100"></span>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <!-- Residential Address? -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="residential_reAdd">Is this a residential address? <span class="required">*</span></label>
-                                        <select  name="residential_reAdd" id="residential_reAdd" class="choice" required>
-                                            <option value="0" selected="selected">Select an answer</option>
-                                            <option value="Yes">Yes</option>
-                                            <option value="No">No</option>
-                                        </select>
-                                    </div>
-
-                                    <!-- Notify of Return? -->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label for="notify">Should we notify this person of return? <span class="required">*</span></label>
-                                        <select name="notify" id="notify" class="choice">
-                                            <option value="0" selected="selected">Select an answer</option>
-                                            <option value="Yes">Yes</option>
-                                            <option value="No">No</option>
-                                        </select>
+                                <!-- Department -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                        <label for="department">Department, c/o, etc.</label>
+                                        <input class="input100" name="department_reAdd" id="department" type="text">
+                                        <span class="focus-input100"></span>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Residential Address? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="residential_add">Is this a residential address? <span class="required">*</span></label>
+                                            <select name="residential_reAdd" id="residential_add" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Notify of return? -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="notify">Should we notify this person of return? <span class="required">*</span></label>
+                                            <select name="notify" id="notify">
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>
 
                             <!-- Continue and Cancel Button -->
@@ -420,16 +478,6 @@
         </div>
     </div>
 
-    <!-- JavaScript to change color of <option selected> -->
-    <script>
-        $(".choice").change(function () {
-            if($(this).val() === "0") $(this).addClass("empty");
-            else $(this).removeClass("empty")
-        });
-
-        $(".choice").change();
-    </script>
-
     <!-- Scroll back to the top -->
     <div class="scrolltop">
         <div class="scroll icon">
@@ -440,7 +488,7 @@
     <!-- International Telephone Country Code -->
     <script src="js/intlTelInput.js"></script>
     <script>
-        var input = document.querySelector("#phone_reAdd");
+        var input = document.querySelector("#phone");
         window.intlTelInput(input, {
             initialCountry: "auto",
             geoIpLookup: function(callback) {
@@ -451,17 +499,6 @@
             },
             utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
         });
-    </script>
-
-    <!-- toggle (return address fieldset) -->
-    <script>
-        var btn = document.querySelector('showReturn');
-        btn.addEventListener('click', showReturn);
-
-        function showReturn() {
-            var e = document.getElementById('returnAdd');
-            e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
-        }
     </script>
 
     <!-- JavaScript Full Screen Overlay Nav -->
@@ -477,7 +514,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link (for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -511,6 +548,14 @@
             }
         }
     </script>
+
+    <script src="js/main.js"></script>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
 </body>
 
     <!-- footer -->
@@ -529,16 +574,16 @@
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
-                    <i class="footer-FB fab fa-facebook-f"></i>
+                    <img src="images/facebook.png" class="footer-FB" alt="facebook icon">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-instagram"></i>
+                    <img src="images/instagram.png" class="footer-INSTA" alt="instagram icon">
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <img src="images/twitter.png" class="footer-INSTA" alt="twitter icon">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <img src="images/linkedin.png" class="footer-LI" alt="linkedin icon">
                 </a>
             </p>
         </div>

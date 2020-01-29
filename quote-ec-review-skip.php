@@ -47,14 +47,16 @@
 
     <title>VLink Express Courier - Get a Quote (Domestic Shipping - Review Details)</title>
 
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+
     <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/misc.css" rel="stylesheet">
-    <link href="css/intlTelInput.css" rel="stylesheet">
     <link href="./css/w3.css" type="text/css" rel="stylesheet">
     <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
-    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
@@ -73,12 +75,13 @@
 
         .body {
             width: 100%;
+            max-width: 1440px;
             margin: 0;
             background-image: none;
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 170px;
         }
 
         .parallax {
@@ -96,40 +99,97 @@
         }
 
         .subheader-h2 {
-            margin-top: 270px;
+            margin-top: 250px;
+        }
+
+        .container-form input {
+            margin: 0 0 33px;
+            font-size: 18px;
+            border: 0;
+            border-bottom: 2px solid #57b846;
+            padding: 0 0 10px;
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #666;
+            font-size: 19px;
+            font-weight: 500;
+            font-style: normal;
+            opacity: 1; /* Firefox */
+            font-family: Poppins-Medium, roboto, Verdana, Montserrat, serif;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #666;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #666;
+        }
+
+        a.w3-button.w3-green-continue {
+            font-family: "Montserrat Medium", sans-serif;
+            margin: 0;
+            font-size: 16px;
+            color: #fff;
+            padding: 13px 20px 17px;
+            width: 25%;
+            height: 50px;
+            background-color: #57b846;
+            border-radius: 25px;
+
+
+            box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        a.w3-button.w3-green-continue:hover {
+
+            box-shadow: 0 10px 30px 0px rgba(79, 155, 62, 0.96);
+            -moz-box-shadow: 0 10px 30px 0px rgba(77, 155, 66, 0.96);
+            -webkit-box-shadow: 0 10px 30px 0px rgba(80, 155, 59, 0.96);
+            -o-box-shadow: 0 10px 30px 0px rgba(69, 155, 55, 0.95);
+            -ms-box-shadow: 0 10px 30px 0px rgba(77, 155, 65, 0.95);
+
+            -webkit-appearance: none;
+            border: 0 solid transparent;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.4em Verdana, sans-serif;
-            }
-
             .container {
                 padding: 0 40px;
             }
+
+            a.w3-button.w3-green-continue {
+                width: 25% !important;
+            }
         }
 
-        /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 750px) {
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.3em Verdana, sans-serif;
+        /* On screens that are 770px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 770px) {
+            .formtitle {
+                font-size: 1.83em;
             }
 
             .container {
-                padding: 0 20px;
+                padding: 0 25px;
             }
 
             .container-form input, .container-form select {
                 width: 100%;
+                border: 0;
+                border-bottom: 2px solid #57b846;
             }
 
-            button.w3-button.w3-red-cancel {
-                margin-top: 1px;
+            a.w3-button.w3-green-continue {
+                width: 40% !important;
             }
         }
     </style>
@@ -173,7 +233,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 315px;">Quote - Domestic Shipping</div>
+        <div class="subheader-h2" style="width: 470px">Quote - Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -217,17 +277,16 @@
               <span style="font: 1.25em Montserrat, sans-serif;">(Step 5 of 5)</span>
           </div>
 
-            <h2 id="hi">Please review your details</h2>
-
             <!-- Container for Get a Quote form  -->
-            <div class="w3-card-quote-is">
+            <div class="w3-card-4">
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post" style="padding-bottom: 0" action="saveinfo-ec-skip.php">
-
+                    <h3 class="h3-contactform">And that's it. We are done.</h3>
+                    <div class="formtitle">Review Your Details</div>
                     <!-- Package Origin Preview -->
-                    <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
-                        <legend>Package Origin</legend>
+                    <fieldset class="nofieldset" style="margin-bottom: 50px">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Origin Preview</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
@@ -350,52 +409,53 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left; width: 15%;" onClick="history.go(-4)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
                     <!-- Return Address Preview -->
-                    <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
-                        <legend>Return Address</legend>
+                    <div class="formtitle">Return Address</div>
+                    <fieldset class="nofieldset" style="margin: 30px 0 50px">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">In case nobody's home</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="name_ec"> Full Name (or Company)</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['name_ec'] ?>" class="w3-light-gray" id="name_ec">
+                                    <label for="name_ec_ra"> Full Name (or Company)</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['name_ec'] ?>" class="w3-light-gray" id="name_ec_ra">
                                 </div>
 
                                 <!-- Contact's Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="contactname_ec"> Contact's Name</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['contactname_ec'] ?>" id="contactname_ec">
+                                    <label for="contactname_ec_ra"> Contact's Name</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['contactname_ec'] ?>" id="contactname_ec_ra">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Gender -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="gender_ec">Gender</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['gender_ec'] ?>" id="gender_ec">
+                                    <label for="gender_ec_ra">Gender</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['gender_ec'] ?>" id="gender_ec_ra">
                                 </div>
 
                                 <!-- Title -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="title_ec">Title</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['title_ec'] ?>" id="title_ec">
+                                    <label for="title_ec_ra">Title</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['title_ec'] ?>" id="title_ec_ra">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Telephone -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="phone_ec">Telephone</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['phone_ec'] ?>" id="phone_ec">
+                                    <label for="phone_ec_ra">Telephone</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['phone_ec'] ?>" id="phone_ec_ra">
                                 </div>
 
                                 <!-- Email -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="email_ec">Email</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['email_ec'] ?>" id="email_ec">
+                                    <label for="email_ec_ra">Email</label>
+                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['email_ec'] ?>" id="email_ec_ra">
                                 </div>
                             </div>
 
@@ -403,7 +463,7 @@
                                 <!-- Country -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="countryId">Country</label>
-                                    <input disabled class="w3-light-gray" placeholder="Finland" id="">
+                                    <input disabled class="w3-light-gray" placeholder="Finland" id="countryId">
                                 </div>
 
                                 <!-- State -->
@@ -465,13 +525,14 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left; width: 15%" onClick="history.go(-3)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
                     <!-- Package Details Preview -->
-                    <fieldset style="margin: 50px 0 30px">
-                        <legend>Package Details</legend>
+                    <div class="formtitle">Package Details</div>
+                    <fieldset class="nofieldset" style="margin: 30px 0 50px">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Dimensions</legend>
                             <div class="row">
                                 <!-- Package Type -->
                                 <div class="col-xs-12 col-sm-6">
@@ -481,7 +542,7 @@
 
                                 <!-- Delivery Option -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="delivery_options"> Shipment's Worth (USD)</label>
+                                    <label for="delivery_options">Delivery Option</label>
                                     <input disabled placeholder="<?php echo $_SESSION['delivery_options'] ?>" class="w3-light-gray" id="delivery_options">
                                 </div>
                             </div>
@@ -531,8 +592,8 @@
                             <div class="row">
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="colour">Colour</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['colour'] ?>" class="w3-light-gray" id="colour">
+                                    <label for="color">Colour</label>
+                                    <input disabled placeholder="<?php echo $_SESSION['color'] ?>" class="w3-light-gray" id="color">
                                 </div>
 
                                 <!-- Texture -->
@@ -545,21 +606,21 @@
                             <div class="row">
                                 <!-- Additional Info -->
                                 <div class="col-xs-12 col-sm-12">
-                                    <label for="package_description">Additional Information about package</label>
+                                    <label for="package_description">Additional Information</label>
                                     <input disabled placeholder="<?php echo $_SESSION['package_description'] ?>" class="w3-light-gray" id="package_description">
                                 </div>
                             </div>
 
                                 <!-- Show other shipments -->
                                 <div style="margin: 0 0 30px;" class="sliderWrapper">
-                                    <span style="margin-left: 0" onclick="secondPackage()">
+                                    <span id="textchange" style="margin-left: 0" onclick="secondPackage()">
                                         + show other packages
                                     </span>
                                 </div>
 
                                 <!-- 2nd package -->
-                                <fieldset id="secondPackage" style="margin: 10px 0 30px; display: none">
-                                    <legend>2nd Package Details</legend>
+                                <fieldset id="secondPackage" class="nofieldset" style="margin: 10px 0; display: none">
+                                    <legend class="legend-right" style="font: normal 500 1.2em Roboto, sans-serif">2nd Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -569,7 +630,7 @@
 
                                             <!-- Delivery Option -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="delivery_options_2"> Shipment's Worth (USD)</label>
+                                                <label for="delivery_options_2">Delivery Option</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['delivery_options_2'] ?>" class="w3-light-gray" id="delivery_options_2">
                                             </div>
                                         </div>
@@ -612,7 +673,7 @@
                                             <!-- Height -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="height_2">Height (inches)</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['weight_2'] ?>" class="w3-light-gray" id="weight_2">
+                                                <input disabled placeholder="<?php echo $_SESSION['height_2'] ?>" class="w3-light-gray" id="height_2">
                                             </div>
                                         </div>
 
@@ -633,15 +694,15 @@
                                         <div class="row">
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
-                                                <label for="package_description_2">Additional Information about package</label>
+                                                <label for="package_description_2">Additional Information</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['package_description_2'] ?>" class="w3-light-gray" id="package_description_2">
                                             </div>
                                         </div>
                                 </fieldset>
 
                                 <!-- 3rd package -->
-                                <fieldset id="thirdPackage" style="margin: 10px 0 30px; display: none">
-                                    <legend>3rd Package Details</legend>
+                                <fieldset id="thirdPackage" class="nofieldset" style="margin: 10px 0; display: none">
+                                    <legend class="legend-right" style="font-size: 1.1em">3rd Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -694,7 +755,7 @@
                                             <!-- Height -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="height_3">Height (inches)</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['weight_3'] ?>" class="w3-light-gray" id="weight_3">
+                                                <input disabled placeholder="<?php echo $_SESSION['height_3'] ?>" class="w3-light-gray" id="height_3">
                                             </div>
                                         </div>
 
@@ -715,15 +776,15 @@
                                         <div class="row">
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
-                                                <label for="package_description_3">Additional Information about package</label>
+                                                <label for="package_description_3">Additional Information</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['package_description_3'] ?>" class="w3-light-gray" id="package_description_3">
                                             </div>
                                         </div>
                                 </fieldset>
 
                                 <!-- 4th package -->
-                                <fieldset id="fourthPackage" style="margin: 10px 0 30px; display: none">
-                                    <legend>4th Package Details</legend>
+                                <fieldset id="fourthPackage" class="nofieldset" style="padding-bottom: 0; margin: 10px 0 0; display: none">
+                                    <legend class="legend-right" style="font-size: 1.1em">4th Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -776,7 +837,7 @@
                                             <!-- Height -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="height_4">Height (inches)</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['weight_4'] ?>" class="w3-light-gray" id="weight_4">
+                                                <input disabled placeholder="<?php echo $_SESSION['height_4'] ?>" class="w3-light-gray" id="height_4">
                                             </div>
                                         </div>
 
@@ -797,38 +858,32 @@
                                         <div class="row">
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
-                                                <label for="package_description_4">Additional Information about package</label>
+                                                <label for="package_description_4">Additional Information</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['package_description_4'] ?>" class="w3-light-gray" id="package_description_4">
                                             </div>
                                         </div>
-
-                                            <!-- hide other items -->
-                                            <div style="margin: 0 0 7px;" class="sliderWrapper">
-                                                <span id="fourthItem" style="margin-left: 0" onclick="hidePackages()">
-                                                    - hide other packages
-                                                </span>
-                                            </div>
                                 </fieldset>
 
                                 <!-- Edit Button -->
                                 <div>
-                                    <a type="button" style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                    <a style="float: left; width: 15%" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
                                 </div>
                     </fieldset>
 
                     <!-- Package Destination Preview -->
-                    <fieldset style="padding-bottom: 30px; margin: 50px 0 30px">
-                        <legend>Package Destination</legend>
+                    <div class="formtitle">Package Destination</div>
+                    <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 30px 0">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Where is it going?</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="name_ec_dest"> Full Name (or Company)</label>
+                                    <label for="name_ec_dest">Full Name (or Company)</label>
                                     <input disabled placeholder="<?php echo $_SESSION['name_ec_dest'] ?>" class="w3-light-gray" id="name_ec_dest">
                                 </div>
 
                                 <!-- Contact's Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="contactname_ec_dest"> Contact's Name</label>
+                                    <label for="contactname_ec_dest">Contact's Name</label>
                                     <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['contactname_ec_dest'] ?>" id="contactname_ec_dest">
                                 </div>
                             </div>
@@ -865,7 +920,7 @@
                                 <!-- Country -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="countryId">Country</label>
-                                    <input disabled class="w3-light-gray" placeholder="Finland" id="">
+                                    <input disabled class="w3-light-gray" placeholder="Finland" id="countryId">
                                 </div>
 
                                 <!-- State -->
@@ -927,7 +982,7 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a type="button" style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left; width: 15%" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
@@ -945,23 +1000,6 @@
             </div>
         </div>
     </div>
-
-    <!-- International Telephone Country Code -->
-    <script src="js/intlTelInput.js"></script>
-    <script>
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
-                    var countryCode = (resp && resp.country) ? resp.country : "";
-                    callback(countryCode);
-                });
-            },
-            utilsScript: "js/utils.js?1562189064761" // just for formatting/placeholders etc
-        });
-    </script>
-
 
     <!-- JavaScript Full Screen Overlay Nav -->
     <script>
@@ -1027,6 +1065,9 @@
             var e = document.getElementById('secondPackage');
             e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
 
+            var a = document.getElementById('textchange');
+            a.innerText = ((a.innerText !== '+ show other packages') ?  '+ show other packages' : '- hide other packages');
+
             var e1 = document.getElementById('thirdPackage');
             e1.style.display = ((e1.style.display !== 'none') ?  'none' : 'block');
 
@@ -1069,16 +1110,16 @@
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
-                    <i class="footer-FB fab fa-facebook-f"></i>
+                    <img src="images/facebook.png" class="footer-FB" alt="facebook icon">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-instagram"></i>
+                    <img src="images/instagram.png" class="footer-INSTA" alt="instagram icon">
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <img src="images/twitter.png" class="footer-INSTA" alt="twitter icon">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <img src="images/linkedin.png" class="footer-LI" alt="linkedin icon">
                 </a>
             </p>
         </div>

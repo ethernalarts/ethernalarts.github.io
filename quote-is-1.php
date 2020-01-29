@@ -1,6 +1,7 @@
 <?php
     session_start(); // Session starts here.
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +11,24 @@
 
     <title>VLink Express Courier - Get a Quote (International Shipping - Shipment Origin)</title>
 
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
+
     <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
-    <link href="css/progressbar.css" type="text/css" rel="stylesheet">
-    <link href="./css/misc.css" type="text/css" rel="stylesheet">
+    <link href="css/misc.css" type="text/css" rel="stylesheet">
     <link href="css/intlTelInput.css" rel="stylesheet">
-    <link href="./css/w3.css" type="text/css" rel="stylesheet">
-    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
-    <link href="./css/vlink.css" type="text/css" rel="stylesheet">
+    <link href="css/w3.css" type="text/css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="css/regform2.css" rel="stylesheet" type="text/css">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -35,12 +45,13 @@
 
         .body {
             width: 100%;
+            max-width: 1440px;
             margin: 0;
             background-image: none;
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 160px;
         }
 
         .parallax {
@@ -48,7 +59,7 @@
             background-image: url("images/is-pic.jpg");
 
             /* Set a specific height */
-            min-height: 440px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -57,55 +68,53 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 270px;
+        .subheader-top {
+            margin-top: 230px;
         }
 
-        .countries, .states, .cities {
-            background-color: white;
-            border-bottom: 1px solid #878787;
-            font-size: 1.03em;
+        .subheader-bottom {
+            margin: 10px auto 30px;
+        }
+
+        .container-form input {
+            margin: 0;
+            font-size: 18px;
+            border: 0;
+            padding: 0;
+            vertical-align: middle;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .subheader-h2 {
-                margin-top: 280px;
-            }
-
-            #hi {
-                margin: 40px 0 0;
-                text-align: center;
-                font: 1.4em Verdana, sans-serif;
-            }
-
             .container {
-                padding: 0 30px;
+                padding: 0 80px;
             }
         }
 
-        /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-            .subheader-h2 {
-                margin-top: 280px;
-            }
-
-            #hi {
-                margin: 40px 0 0;
-                text-align: center;
-                font-size: 1.3em;
-            }
-
+        /* On screens that are 1000px wide or less, go from three columns to two columns */
+        @media screen and (max-width: 1000px) {
             .container {
-                padding: 0 30px;
+                padding: 0 50px;
+            }
+        }
+
+        /* On screens that are 770px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 770px) {
+            .container {
+                padding: 0 25px;
             }
 
-            .container-form input, .container-form select {
+            .col-sm-6 {
                 width: 100%;
             }
-            
+
             button.w3-button.w3-red-cancel {
-                margin-top: 1px;
+                margin: 5px 0 0;
+                width: 40%;
+            }
+
+            button.w3-button.w3-green-continue {
+                width: 40%;
             }
         }
     </style>
@@ -148,7 +157,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 365px;">Quote - International Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 380px">International Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -193,159 +205,213 @@
                 <span style="font: 1.25em Montserrat, sans-serif;">(Step 1 of 5)</span>
             </div>
 
-            <h2 id="hi">Please tell us about your Shipment.</h2>
-
-            <h3 id="required">
-                <code class="w3-code">
-                    <span class="required">*</span>&nbsp;&nbsp;Indicates required fields
-                </code>
-            </h3>
-
             <!-- Container for Get a Quote form  -->
-            <div class="w3-card-quote-is">
+            <div class="w3-card-4">
 
                 <!-- International Shipping Quote form -->
                 <form class="container-form" method="post" style="padding-bottom: 0" action="quote-is-2.php">
+                    <h3 class="h3-contactform">Please tell us about your Shipment.</h3>
+                    <div class="formtitle">Shipment Origin</div>
                     <!-- Shipment Origin -->
-                    <fieldset style="margin: 0 0 20px; padding-bottom: 20px">
-                        <legend>Shipment Origin</legend>
+                    <fieldset class="nofieldset" style="margin-bottom: 50px">
+                        <legend style="margin-bottom: 10px" class="legend-middle"><span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="name"> Full Name (or Company) <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. Bruce Wayne (or Wayne Enterprises)"
-                                           name="name" id="name" type="text" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Name">
+                                        <label for="name">Full Name (or Company) <span class="required">*</span></label>
+                                        <input class="input100" type="text" name="name"  id="name" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
                                 <!-- Contact's Name -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="contact_name"> Contact's Name <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. Alfred Pennyworth" name="contact_name" id="contact_name" type="text" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Contact Name">
+                                        <label for="contact_name">Contact's Name <span class="required">*</span></label>
+                                        <input class="input100" name="contact_name" id="contact_name" type="text" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Gender -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="gender">Gender <span class="required">*</span></label>
-                                    <select class="choice" name="gender" id="gender" required>
-                                        <option value="0" selected="selected">Select Gender</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="gender">Gender <span class="required">*</span></label>
+                                            <select name="gender" id="gender" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Title -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="title">Title</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Mr, Mrs, Cpt, Dr. etc." name="title" id="title" type="text">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Title">
+                                        <label for="title">Title <span class="required">*</span></label>
+                                        <input class="input100" type="text" name="title" id="title" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Telephone -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="phone">Telephone <span class="required">*</span></label>
-                                    <input class="w3-light-gray" name="phone" id="phone" type="tel" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Telephone">
+                                        <label for="phone">Telephone <span class="required">*</span></label>
+                                        <input class="input100" type="tel" name="phone" id="phone" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
                                 <!-- Email -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="email">Email <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. email@mail.com" name="email" id="email" type="email" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Email">
+                                        <label for="email">Email <span class="required">*</span></label>
+                                        <input class="input100" type="email" name="email" id="email" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Country -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="countryId">Country <span class="required">*</span></label>
-                                    <select name="country" class="choice countries" id="countryId" type="select" required>
-                                        <option value="0" selected="selected">Select Country</option>
-                                    </select>
+                                    <div class="input-group m-t-40 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="countryId">Country <span class="required">*</span></label>
+                                            <select name="country" class="countries" id="countryId" type="select" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- State -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="stateId">State <span class="required">*</span></label>
-                                    <select name="state" class="choice states" id="stateId" type="select" required>
-                                        <option value="0" selected="selected">Select State</option>
-                                    </select>
+                                    <div class="input-group m-t-40 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="stateId">State <span class="required">*</span></label>
+                                            <select name="state" class="states" id="stateId" type="select" required>
+                                                <option selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- City -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="cityId">City <span class="required">*</span></label>
-                                    <select name="city" class="choice cities" id="cityId" type="select" required>
-                                        <option value="0" selected="selected">Select City</option>
-                                    </select>
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="cityId">City <span class="required">*</span></label>
+                                            <select name="city" class="cities" id="cityId" type="select" required>
+                                                <option selected="selected"></option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Zip Code -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="zip_code">Zip Code <span class="required">*</span></label>
-                                    <input class="w3-light-gray" style="padding: 0.84em 13px" placeholder="e.g. 123456" name="zip_code" id="zip_code" type="number" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zip Code">
+                                        <label for="zip_code">Zip Code <span class="required">*</span></label>
+                                        <input class="input100" name="zip_code" id="zip_code" type="number" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Street Address -->
                                 <div class="col-xs-12 col-sm-12">
-                                    <label for="street_add">Street Address <span class="required">*</span></label>
-                                    <input class="w3-light-gray" placeholder="e.g. 3M, Microkatu, 70210 Kuopio" name="street_add" id="street_add" type="text" required>
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Street Address">
+                                        <label for="street_add">Street Address <span class="required">*</span></label>
+                                        <input class="input100" name="street_add" id="street_add" type="text" required>
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Street Address 2 -->
                                 <div class="col-xs-12 col-sm-12">
-                                    <label for="street_add2">Street Address 2</label>
-                                    <input class="w3-light-gray" placeholder="Apartment, suite, floor, building, unit etc."
-                                           name="street_add2" id="street_add2" type="text">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                        <label for="street_add2">Street Address 2 (or Apartment, suite, floor, building, unit etc)</label>
+                                        <input class="input100" name="street_add2" id="street_add2" type="text">
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Department -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="department">Department, c/o, etc.</label>
-                                    <input class="w3-light-gray" placeholder="e.g. Sales (or c/o Clark Kent)" name="department" id="department" type="text">
+                                    <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                        <label for="department">Department, c/o, etc.</label>
+                                        <input class="input100" name="department" id="department" type="text">
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
                                 <!-- Residential Address? -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="residential_add">Is this a residential address? <span class="required">*</span></label>
-                                    <select name="residential_add" id="residential_add" class="choice" required>
-                                        <option value="0" selected="selected">Select an answer</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                    <div class="input-group m-t-39 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="residential_add">Is this a residential address? <span class="required">*</span></label>
+                                            <select name="residential_add" id="residential_add" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- Shipping Option -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="shipping_options">Shipping Service Option <span class="required">*</span></label>
-                                    <select class="choice" name="shipping_options" id="shipping_options" required>
-                                        <option value="0" selected="selected">Select Shipping Option</option>
-                                        <option value="VLink Standard">VLink Standard</option>
-                                        <option value="VLink Worldwide Express">VLink Worldwide Express</option>
-                                        <option value="VLink Worldwide Express Plus">VLink Worldwide Express Plus</option>
-                                        <option value="VLink Worldwide TimeSaver">VLink Worldwide TimeSaver</option>
-                                    </select>
+                                    <div class="input-group m-t-51 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="shipping_options">Shipping Service Option <span class="required">*</span></label>
+                                            <select class="choice" name="shipping_options" id="shipping_options" required>
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option value="VLink Standard">VLink Standard</option>
+                                                <option value="VLink Worldwide Express">VLink Worldwide Express</option>
+                                                <option value="VLink Worldwide Express Plus">VLink Worldwide Express Plus</option>
+                                                <option value="VLink Worldwide TimeSaver">VLink Worldwide TimeSaver</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Shipment Updates? -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="status_updates">Should we send you shipment updates? <span class="required">*</span></label>
-                                    <select name="status_updates" id="status_updates" class="choice">
-                                        <option value="0" selected="selected">Select an answer </option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                    <div class="input-group m-t-51 m-b-35">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <label for="status_updates">Should we send shipment updates? <span class="required">*</span></label>
+                                            <select name="status_updates" id="status_updates">
+                                                <option disabled="disabled" selected="selected"></option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
@@ -363,16 +429,6 @@
             </div>
         </div>
     </div>
-
-    <!-- JavaScript to change color of <option selected> -->
-    <script>
-        $(".choice").change(function () {
-            if($(this).val() === "0") $(this).addClass("empty");
-            else $(this).removeClass("empty")
-        });
-
-        $(".choice").change();
-    </script>
 
     <!-- International Telephone Country Code -->
     <script src="js/intlTelInput.js"></script>
@@ -403,7 +459,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link (for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");
@@ -444,6 +500,14 @@
             <i class="scroll-icon fas fa-3x fa-angle-up"></i>
         </div>
     </div>
+
+    <script src="js/main.js"></script>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
 </body>
 
     <!-- footer -->
@@ -462,16 +526,16 @@
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
-                    <i class="footer-FB fab fa-facebook-f"></i>
+                    <img src="images/facebook.png" class="footer-FB" alt="facebook icon">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-instagram"></i>
+                    <img src="images/instagram.png" class="footer-INSTA" alt="instagram icon">
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <img src="images/twitter.png" class="footer-INSTA" alt="twitter icon">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <img src="images/linkedin.png" class="footer-LI" alt="linkedin icon">
                 </a>
             </p>
         </div>
