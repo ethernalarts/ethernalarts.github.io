@@ -70,7 +70,7 @@
         fwrite($myfile, $length);
         $width = 'Width (inches)= '.$_SESSION['width_ss']."\r\n";   //width
         fwrite($myfile, $width);
-        $colour = 'Colour = '.$_SESSION['colour_ss']."\r\n";   //colour
+        $colour = 'Colour = '.$_SESSION['color_ss']."\r\n";   //colour
         fwrite($myfile, $colour);
         $height = 'Height (inches)= '.$_SESSION['height_ss']."\r\n";   //height
         fwrite($myfile, $height);
@@ -96,7 +96,7 @@
         fwrite($myfile, $length);
         $width = 'Width (inches)= '.$_SESSION['width_ss_2']."\r\n";   //width
         fwrite($myfile, $width);
-        $colour = 'Colour = '.$_SESSION['colour_ss_2']."\r\n";   //colour
+        $colour = 'Colour = '.$_SESSION['color_ss_2']."\r\n";   //colour
         fwrite($myfile, $colour);
         $height = 'Height (inches)= '.$_SESSION['height_ss_2']."\r\n";   //height
         fwrite($myfile, $height);
@@ -122,7 +122,7 @@
         fwrite($myfile, $length);
         $width = 'Width (inches)= '.$_SESSION['width_ss_3']."\r\n";   //width
         fwrite($myfile, $width);
-        $colour = 'Colour = '.$_SESSION['colour_ss_3']."\r\n";   //colour
+        $colour = 'Colour = '.$_SESSION['color_ss_3']."\r\n";   //colour
         fwrite($myfile, $colour);
         $height = 'Height (inches)= '.$_SESSION['height_ss_3']."\r\n";   //height
         fwrite($myfile, $height);
@@ -148,7 +148,7 @@
         fwrite($myfile, $length);
         $width = 'Width (inches)= '.$_SESSION['width_ss_4']."\r\n";   //width
         fwrite($myfile, $width);
-        $colour = 'Colour = '.$_SESSION['colour_ss_4']."\r\n";   //colour
+        $colour = 'Colour = '.$_SESSION['color_ss_4']."\r\n";   //colour
         fwrite($myfile, $colour);
         $height = 'Height (inches)= '.$_SESSION['height_ss_4']."\r\n";   //height
         fwrite($myfile, $height);

@@ -289,7 +289,7 @@
                                         <div class="rs-select2 js-select-simple select--no-search">
                                             <label for="shipment_type">Shipment Type <span class="required">*</span></label>
                                             <select name="shipment_type" id="shipment_type" required>
-                                                <option value="" disabled="disabled" selected="selected">Select Shipment Type</option>
+                                                <option value="nil" disabled="disabled" selected="selected"></option>
                                                 <option value="Luggage">Luggage</option>
                                                 <option value="Jewellery">Jewellery</option>
                                                 <option value="Electronic">Electronic</option>
@@ -415,7 +415,7 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <label for="shipment_type">Shipment Type</label>
                                         <select name="shipment_type_2" id="shipment_type">
-                                            <option value=" " disabled="disabled" selected="selected">Select Shipment Type</option>
+                                            <option value="nil" disabled="disabled" selected="selected"></option>
                                             <option value="Luggage">Luggage</option>
                                             <option value="Jewellery">Jewellery</option>
                                             <option value="Electronic">Electronic</option>
@@ -541,7 +541,7 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <label for="shipment_type_3">Shipment Type</label>
                                         <select name="shipment_type_3" id="shipment_type_3">
-                                            <option value="Nil" disabled="disabled" selected="selected">Select Shipment Type</option>
+                                            <option value=" " disabled="disabled" selected="selected"></option>
                                             <option value="Luggage">Luggage</option>
                                             <option value="Jewellery">Jewellery</option>
                                             <option value="Electronic">Electronic</option>
@@ -667,7 +667,7 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <label for="shipment_type">Shipment Type</label>
                                         <select name="shipment_type_4" id="shipment_type">
-                                            <option value="" disabled="disabled" selected="selected">Select Shipment Type</option>
+                                            <option value=" " disabled="disabled" selected="selected"></option>
                                             <option value="Luggage">Luggage</option>
                                             <option value="Jewellery">Jewellery</option>
                                             <option value="Electronic">Electronic</option>

@@ -24,8 +24,8 @@
         $_SESSION['length_ss']=$_POST['length_ss'];
     if(isset($_POST['width_ss']))
         $_SESSION['width_ss']=$_POST['width_ss'];
-    if(isset($_POST['colour_ss']))
-        $_SESSION['colour_ss']=$_POST['colour_ss'];
+    if(isset($_POST['color_ss']))
+        $_SESSION['color_ss']=$_POST['color_ss'];
     if(isset($_POST['height_ss']))
         $_SESSION['height_ss']=$_POST['height_ss'];
     if(isset($_POST['item_descr_ss']))
@@ -49,8 +49,8 @@
         $_SESSION['length_ss_2']=$_POST['length_ss_2'];
     if(isset($_POST['width_ss_2']))
         $_SESSION['width_ss_2']=$_POST['width_ss_2'];
-    if(isset($_POST['colour_ss_2']))
-        $_SESSION['colour_ss_2']=$_POST['colour_ss_2'];
+    if(isset($_POST['color_ss_2']))
+        $_SESSION['color_ss_2']=$_POST['color_ss_2'];
     if(isset($_POST['height_ss_2']))
         $_SESSION['height_ss_2']=$_POST['height_ss_2'];
     if(isset($_POST['item_descr_ss_2']))
@@ -74,8 +74,8 @@
         $_SESSION['length_ss_3']=$_POST['length_ss_3'];
     if(isset($_POST['width_ss_3']))
         $_SESSION['width_ss_3']=$_POST['width_ss_3'];
-    if(isset($_POST['colour_ss_3']))
-        $_SESSION['colour_ss_3']=$_POST['colour_ss_3'];
+    if(isset($_POST['color_ss_3']))
+        $_SESSION['color_ss_3']=$_POST['color_ss_3'];
     if(isset($_POST['height_ss_3']))
         $_SESSION['height_ss_3']=$_POST['height_ss_3'];
     if(isset($_POST['item_descr_ss_3']))
@@ -99,8 +99,8 @@
         $_SESSION['length_ss_4']=$_POST['length_ss_4'];
     if(isset($_POST['width_ss_4']))
         $_SESSION['width_ss_4']=$_POST['width_ss_4'];
-    if(isset($_POST['colour_ss_4']))
-        $_SESSION['colour_ss_4']=$_POST['colour_ss_4'];
+    if(isset($_POST['color_ss_4']))
+        $_SESSION['color_ss_4']=$_POST['color_ss_4'];
     if(isset($_POST['height_ss_4']))
         $_SESSION['height_ss_4']=$_POST['height_ss_4'];
     if(isset($_POST['item_descr_ss_4']))
@@ -114,21 +114,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VLink Domestic Shipping - Get a Quote (Secure Storage - Review Details)</title>
+    <title>VLink Express Courier - Get a Quote (Secure Storage - Review Details)</title>
 
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
-    <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/misc.css" rel="stylesheet">
-    <link href="css/w3.css" rel="stylesheet">
-    <link href="css/mobile-menu-top.css" rel="stylesheet">
-    <link href="css/vlink.css" rel="stylesheet">
+
+    <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+    <link href="css/misc.css" type="text/css" rel="stylesheet">
+    <link href="css/w3.css" type="text/css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+
+    <link href="css/regform2.css" rel="stylesheet" type="text/css">
+    <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script defer src="fontawesome-free-5.7.2-web/js/all.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/statecity.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -144,7 +149,7 @@
         }
 
         .container {
-            padding: 0 190px;
+            padding: 0 160px;
         }
 
         .parallax {
@@ -152,7 +157,7 @@
             background-image: url("images/ss-review.jpg");
 
             /* Set a specific height */
-            min-height: 480px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -161,8 +166,81 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 290px;
+        .subheader-top {
+            margin-top: 230px;
+        }
+
+        .subheader-bottom {
+            margin: 10px auto 30px;
+        }
+
+        .container-form input {
+            margin: 0 0 35px;
+            font-size: 18px;
+            border: 0;
+            border-bottom: 2px solid lightgreen;
+            padding: 7px 0 10px;
+        }
+
+        .container-form textarea {
+            font-family: Poppins-Medium, roboto, Verdana, Montserrat, serif;
+            margin: 0 0 33px;
+            font-size: 18px;
+            width: 100%;
+            height: auto;
+            padding: 7px 0;
+            border-bottom: 2px solid lightgreen;
+            color: #666;
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #666;
+            font-size: 19px;
+            font-weight: 500;
+            font-style: normal;
+            opacity: 1; /* Firefox */
+            font-family: Poppins-Medium, roboto, Verdana, Montserrat, serif;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #666;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #666;
+        }
+
+        a.w3-button.w3-green-continue {
+            font-family: "Montserrat Medium", sans-serif;
+            margin: 10px 0 0;
+            font-size: 16px;
+            color: #fff;
+            padding: 13px 20px 17px;
+            width: 25%;
+            height: 50px;
+            background-color: #57b846;
+            border-radius: 25px;
+
+            box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        a.w3-button.w3-green-continue:hover {
+
+            box-shadow: 0 10px 30px 0px rgba(79, 155, 62, 0.96);
+            -moz-box-shadow: 0 10px 30px 0px rgba(77, 155, 66, 0.96);
+            -webkit-box-shadow: 0 10px 30px 0px rgba(80, 155, 59, 0.96);
+            -o-box-shadow: 0 10px 30px 0px rgba(69, 155, 55, 0.95);
+            -ms-box-shadow: 0 10px 30px 0px rgba(77, 155, 65, 0.95);
+
+            -webkit-appearance: none;
+            border: 0 solid transparent;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -239,7 +317,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 290px;">Quote - Secure Storage</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 270px">Secure Storage</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -282,16 +363,16 @@
               <span style="font: 1.25em Montserrat, sans-serif;">(Step 3 of 3)</span>
           </div>
 
-            <h2 id="hi">Please review your details</h2>
-
             <!-- Container for Get a Quote form  -->
-            <div class="w3-card-quote-is">
+            <div class="w3-card-4">
 
                 <!-- Get a Quote form -->
                 <form class="container-form" method="post" style="padding-bottom: 0" action="saveinfo-ss.php">
+                    <h3 class="h3-contactform">And that's it. We are done.</h3>
+                    <div class="formtitle">Review Your Details</div>
                     <!-- Package Origin Preview -->
-                    <fieldset style="padding-bottom: 30px; margin: 0 0 30px">
-                        <legend>Basic Information</legend>
+                    <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 0 0 30px">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Basic Details</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
@@ -414,13 +495,14 @@
 
                             <!-- Edit Button -->
                             <div>
-                                <a style="float: left" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                <a style="float: left; width: 15%;" onClick="history.go(-2)" class="w3-button w3-medium w3-green-continue">Edit</a>
                             </div>
                     </fieldset>
 
                     <!-- Item Details Preview -->
-                    <fieldset style="margin: 50px 0 30px">
-                        <legend>Item Details</legend>
+                    <div class="formtitle">Item Details</div>
+                    <fieldset class="nofieldset" style="margin: 30px 0 50px">
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Item Dimensions</legend>
                             <div class="row">
                                 <!-- Storage Option -->
                                 <div class="col-xs-12 col-sm-6">
@@ -481,7 +563,7 @@
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="colour_ss">Colour</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['colour_ss'] ?>" class="w3-light-gray" id="colour_ss">
+                                    <input disabled placeholder="<?php echo $_SESSION['color_ss'] ?>" class="w3-light-gray" id="color_ss">
                                 </div>
 
                                 <!-- Height -->
@@ -495,20 +577,20 @@
                                 <!-- Additional Info -->
                                 <div class="col-xs-12 col-sm-12">
                                     <label for="item_descr_ss">Additional Information about item</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['item_descr_ss'] ?>" class="w3-light-gray" id="item_descr_ss">
+                                    <textarea disabled placeholder="<?php echo $_SESSION['item_descr_ss'] ?>" class="w3-light-gray" id="item_descr_ss"></textarea>
                                 </div>
                             </div>
 
                                 <!-- Show other shipments -->
-                                <div style="margin: 0 0 30px;" class="sliderWrapper">
+                                <div style="margin: 0 0 40px;" class="sliderWrapper">
                                     <span style="margin-left: 0" onclick="secondItem()">
                                         + show other items
                                     </span>
                                 </div>
 
                                 <!-- 2nd item -->
-                                <fieldset id="secondItem" style="margin: 10px 0 30px; display: none">
-                                    <legend>2nd Item Details</legend>
+                                <fieldset id="secondItem" class="nofieldset" style="margin: 30px 0 10px; display: none">
+                                    <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">2nd Item Details</legend>
                                         <div class="row">
                                             <!-- Storage Option -->
                                             <div class="col-xs-12 col-sm-6">
@@ -569,7 +651,7 @@
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="colour_ss_2">Colour</label>
-                                                <input disabled style="background-color: $_SESSION['colour_ss_2']" class="w3-light-gray" id="colour_ss_2">
+                                                <input disabled placeholder="<?php echo $_SESSION['color_ss_2'] ?>" class="w3-light-gray" id="colour_ss_2">
                                             </div>
 
                                             <!-- Height -->
@@ -583,15 +665,15 @@
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
                                                 <label for="item_descr_ss_2">Additional Information about item</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['item_descr_ss_2'] ?>" class="w3-light-gray" id="item_descr_ss_2">
+                                                <textarea disabled placeholder="<?php echo $_SESSION['item_descr_ss_2'] ?>" class="w3-light-gray" id="item_descr_ss_2"></textarea>
                                             </div>
                                         </div>
                                 </fieldset>
 
                                 <!-- 3rd item -->
-                                <fieldset id="thirdItem" style="margin: 10px 0 30px; display: none">
-                                    <legend>3rd Item Details</legend>
-                                        <div class="row">>
+                                <fieldset id="thirdItem" class="nofieldset" style="margin: 30px 0 10px; display: none">
+                                    <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">3rd Item Details</legend>
+                                        <div class="row">
                                             <!-- Storage Option -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="storage_type_ss_3">Storage Option</label>
@@ -651,7 +733,7 @@
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="colour_ss_3">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_ss_3'] ?>" class="w3-light-gray" id="colour_ss_3">
+                                                <input disabled placeholder="<?php echo $_SESSION['color_ss_3'] ?>" class="w3-light-gray" id="colour_ss_3">
                                             </div>
 
                                             <!-- Height -->
@@ -665,14 +747,14 @@
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
                                                 <label for="item_descr_ss_3">Additional Information about item</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['item_descr_ss_3'] ?>" class="w3-light-gray" id="item_descr_ss_3">
+                                                <textarea disabled placeholder="<?php echo $_SESSION['item_descr_ss_3'] ?>" class="w3-light-gray" id="item_descr_ss_3"></textarea>
                                             </div>
                                         </div>
                                 </fieldset>
 
                                 <!-- 4th item -->
-                                <fieldset id="fourthItem" style="margin: 10px 0 30px; display: none">
-                                    <legend>4th Item Details</legend>
+                                <fieldset id="fourthItem" class="nofieldset" style="margin: 30px 0 0; display: none">
+                                    <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">4th Item Details</legend>
                                         <div class="row">
                                             <!-- Storage Option -->
                                             <div class="col-xs-12 col-sm-6">
@@ -733,7 +815,7 @@
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="colour_ss_4">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_ss_4'] ?>" class="w3-light-gray" id="colour_ss_4">
+                                                <input disabled placeholder="<?php echo $_SESSION['color_ss_4'] ?>" class="w3-light-gray" id="colour_ss_4">
                                             </div>
 
                                             <!-- Height -->
@@ -746,20 +828,20 @@
                                         <div class="row">
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
-                                                <label for="item_descr_ss_4">Additional Information about item</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['item_descr_ss_4'] ?>" class="w3-light-gray" id="item_descr_ss_4">
+                                                <label for="item_descr_ss_4">Additional Information about the item</label>
+                                                <textarea disabled placeholder="<?php echo $_SESSION['item_descr_ss_4'] ?>" class="w3-light-gray" id="item_descr_ss_4"></textarea>
                                             </div>
                                         </div>
 
                                             <!-- hide other items -->
-                                            <div style="margin: 0 0 7px;" class="sliderWrapper">
-                                                <span id="fourthItem" style="margin-left: 0" onclick="hideItems()">- hide other items</span>
-                                            </div>
+<!--                                            <div style="margin: 0 0 7px;" class="sliderWrapper">-->
+<!--                                                <span id="fourthItem" style="margin-left: 0" onclick="hideItems()">- hide other items</span>-->
+<!--                                            </div>-->
                                 </fieldset>
 
                                 <!-- Edit Button -->
                                 <div>
-                                    <a style="float: left" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
+                                    <a style="float: left; width: 15%" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
                                 </div>
                     </fieldset>
 
@@ -891,23 +973,23 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->
         <div class="div-footer-followus">
             <p>
                 <a target="_blank" href="https://www.facebook.com/vlinkexpresscourier">
-                    <i class="footer-FB fab fa-facebook-f"></i>
+                    <img src="images/facebook.png" class="footer-FB" alt="facebook icon">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-instagram"></i>
+                    <img src="images/instagram.png" class="footer-INSTA" alt="instagram icon">
                 </a>
                 <a target="_blank" href="https://www.twitter.com/vlinkexpresscourier">
-                    <i class="footer-INSTA fab fa-twitter"></i>
+                    <img src="images/twitter.png" class="footer-INSTA" alt="twitter icon">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/vlinkexpresscourier">
-                    <i class="footer-LI fab fa-linkedin"></i>
+                    <img src="images/linkedin.png" class="footer-LI" alt="linkedin icon">
                 </a>
             </p>
         </div>

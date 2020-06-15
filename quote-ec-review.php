@@ -89,7 +89,7 @@
             background-image: url("images/ec-review.jpg");
 
             /* Set a specific height */
-            min-height: 430px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -98,16 +98,71 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 260px;
+        .subheader-top {
+            margin-top: 230px;
+        }
+
+        .subheader-bottom {
+            margin: 10px auto 30px;
         }
 
         .container-form input {
-            color: #808080;
+            margin: 0 0 33px;
             font-size: 18px;
             border: 0;
             border-bottom: 2px solid #57b846;
             padding: 0 0 10px;
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #666;
+            font-size: 19px;
+            font-weight: 500;
+            font-style: normal;
+            opacity: 1; /* Firefox */
+            font-family: Poppins-Medium, roboto, Verdana, Montserrat, serif;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #666;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #666;
+        }
+
+        a.w3-button.w3-green-continue {
+            font-family: "Montserrat Medium", sans-serif;
+            margin: 0;
+            font-size: 16px;
+            color: #fff;
+            padding: 13px 20px 17px;
+            width: 25%;
+            height: 50px;
+            background-color: #57b846;
+            border-radius: 25px;
+
+
+            box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+            -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        a.w3-button.w3-green-continue:hover {
+
+            box-shadow: 0 10px 30px 0px rgba(79, 155, 62, 0.96);
+            -moz-box-shadow: 0 10px 30px 0px rgba(77, 155, 66, 0.96);
+            -webkit-box-shadow: 0 10px 30px 0px rgba(80, 155, 59, 0.96);
+            -o-box-shadow: 0 10px 30px 0px rgba(69, 155, 55, 0.95);
+            -ms-box-shadow: 0 10px 30px 0px rgba(77, 155, 65, 0.95);
+
+            -webkit-appearance: none;
+            border: 0 solid transparent;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -184,7 +239,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 440px">Quote - Domestic Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 330px">Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -236,7 +294,7 @@
                     <h3 class="h3-contactform">And that's it. We are done.</h3>
                     <div class="formtitle">Review Your Details</div>
                     <!-- Package Origin Preview -->
-                    <fieldset class="nofieldset" style="margin-bottom: 30px">
+                    <fieldset class="nofieldset" style="margin-bottom: 50px">
                         <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Origin Preview</legend>
                             <div class="row">
                                 <!-- Full Name -->
@@ -284,7 +342,7 @@
                                 <!-- Country -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="countryId">Country</label>
-                                    <input disabled class="w3-light-gray" placeholder="Finland" id="">
+                                    <input disabled class="w3-light-gray" placeholder="Finland" id="" >
                                 </div>
 
                                 <!-- State -->
@@ -365,8 +423,9 @@
                     </fieldset>
 
                     <!-- Return Address Preview -->
+                    <div class="formtitle">Return Address</div>
                     <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 30px 0">
-                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Return Address</legend>
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">In case nobody's home</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
@@ -480,8 +539,9 @@
                     </fieldset>
 
                     <!-- Package Details Preview -->
+                    <div class="formtitle">Package Details</div>
                     <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 30px 0">
-                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Details</legend>
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Dimensions</legend>
                             <div class="row">
                                 <!-- Package Type -->
                                 <div class="col-xs-12 col-sm-6">
@@ -542,7 +602,7 @@
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
                                     <label for="colour">Colour</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['colour'] ?>" class="w3-light-gray" id="colour">
+                                    <input disabled placeholder="<?php echo $_SESSION['color'] ?>" class="w3-light-gray" id="colour">
                                 </div>
 
                                 <!-- Texture -->
@@ -630,7 +690,7 @@
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="colour_2">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_2'] ?>" class="w3-light-gray" id="colour_2">
+                                                <input disabled placeholder="<?php echo $_SESSION['color_2'] ?>" class="w3-light-gray" id="colour_2">
                                             </div>
 
                                             <!-- Texture -->
@@ -712,7 +772,7 @@
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="colour_3">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_3'] ?>" class="w3-light-gray" id="colour_3">
+                                                <input disabled placeholder="<?php echo $_SESSION['color_3'] ?>" class="w3-light-gray" id="colour_3">
                                             </div>
 
                                             <!-- Texture -->
@@ -794,7 +854,7 @@
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
                                                 <label for="colour_4">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_4'] ?>" class="w3-light-gray" id="colour_4">
+                                                <input disabled placeholder="<?php echo $_SESSION['color_4'] ?>" class="w3-light-gray" id="colour_4">
                                             </div>
 
                                             <!-- Texture -->
@@ -827,8 +887,9 @@
                     </fieldset>
 
                     <!-- Package Destination Preview -->
+                    <div class="formtitle">Package Destination</div>
                     <fieldset class="nofieldset" style="padding-bottom: 30px; margin: 30px 0">
-                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Package Destination</legend>
+                        <legend class="legend-middle" style="font-style: normal; margin-bottom: 20px">Where is it going?</legend>
                             <div class="row">
                                 <!-- Full Name -->
                                 <div class="col-xs-12 col-sm-6">
@@ -1072,7 +1133,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->

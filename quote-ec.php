@@ -57,7 +57,7 @@
             background-image: url("images/ec-pic.jpg");
 
             /* Set a specific height */
-            min-height: 430px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -66,16 +66,20 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 250px;
+        .subheader-top {
+            margin-top: 230px;
+        }
+
+        .subheader-bottom {
+            margin: 10px auto 30px;
+        }
+
+        input:disabled {
+            padding-left: 0;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
-            .subheader-h2 {
-                margin-top: 260px;
-            }
-
             .container {
                 padding: 0 50px;
             }
@@ -85,10 +89,6 @@
         @media screen and (max-width: 750px) {
             .container {
                 padding: 0 20px;
-            }
-
-            .subheader-h2 {
-                margin-top: 260px;
             }
 
             button.w3-button.w3-red-cancel {
@@ -140,7 +140,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 440px">Quote - Domestic Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 310px">Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -193,21 +196,23 @@
                     <div class="formtitle">Package Origin</div>
                         <!-- Package Origin -->
                         <fieldset class="nofieldset card-body" style="margin-bottom: 50px">
-                            <legend class="legend-middle"><span class="required">*</span>&nbsp;&nbsp;Indicates required fields</legend>
+                            <legend class="legend-middle"><span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields</legend>
                                 <div class="row">
                                     <!-- Full Name -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Name">
-                                            <input class="input100" type="text" name="name_ec" required>
-                                            <span class="focus-input100" data-placeholder="Full Name (or Company)  *"></span>
+                                            <label for="name_ec">Full Name (or Company) <span class="required">*</span></label>
+                                            <input class="input100" type="text" name="name_ec"  id="name_ec" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Contact's Name -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Contact's Name">
-                                            <input class="input100" type="text" name="contactname_ec" required>
-                                            <span class="focus-input100" data-placeholder="Contact's Name  *"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Contact Name">
+                                            <label for="contactname_ec">Contact's Name <span class="required">*</span></label>
+                                            <input class="input100" name="contactname_ec" id="contactname_ec" type="text" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -215,10 +220,11 @@
                                 <div class="row">
                                     <!-- Gender -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-47 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="gender_ec">
-                                                    <option disabled="disabled" selected="selected">Gender  *</option>
+                                                <label for="gender_ec">Gender <span class="required">*</span></label>
+                                                <select name="gender_ec" id="gender_ec" required>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option>Male</option>
                                                     <option>Female</option>
                                                 </select>
@@ -230,8 +236,9 @@
                                     <!-- Title -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Title">
-                                            <input class="input100" type="text" name="title_ec" required>
-                                            <span class="focus-input100" data-placeholder="Title  *"></span>
+                                            <label for="title_ec">Title <span class="required">*</span></label>
+                                            <input class="input100" type="text" name="title_ec" id="title_ec" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -239,17 +246,19 @@
                                 <div class="row">
                                     <!-- Telephone -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Telephone Number">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Telephone">
+                                            <label for="phone_ec">Telephone <span class="required">*</span></label>
                                             <input class="input100" type="tel" name="phone_ec" id="phone_ec" required>
-                                            <span class="focus-input100" data-placeholder=" "></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Email -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Email Address">
-                                            <input class="input100" type="email" name="email_ec" required>
-                                            <span class="focus-input100" data-placeholder="Email  *"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Email">
+                                            <label for="email_ec">Email <span class="required">*</span></label>
+                                            <input class="input100" type="email" name="email_ec" id="email_ec" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -257,19 +266,20 @@
                                 <div class="row">
                                     <!-- Country -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" style="color: #ebebeb" >
-                                            <input class="input100 countries" name="country_ec" disabled>
+                                        <div class="wrap-input100 validate-input m-t-30 m-b-35">
+                                            <label for="countryId">Country </label>
                                             <input type="hidden" name="country_ec" id="countryId" value="FI"/>
-                                            <span class="focus-input100" data-placeholder="Finland"></span>
+                                            <input disabled placeholder="Finland" id="country_ec"/>
                                         </div>
                                     </div>
 
                                     <!-- State -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-47 m-b-35">
+                                        <div class="input-group m-t-40 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select class="states order-alpha" name="state_ec" id="stateId" type="select" required>
-                                                    <option disabled="disabled" selected="selected">State  *</option>
+                                                <label for="stateId">State <span class="required">*</span></label>
+                                                <select name="state_ec" class="states" id="stateId" type="select" required>
+                                                    <option selected="selected"></option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -280,10 +290,11 @@
                                 <div class="row">
                                     <!-- City -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-47 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select class="cities order-alpha" name="city_ec" id="cityId" type="select" required>
-                                                    <option disabled="disabled" selected="selected">City  *</option>
+                                                <label for="cityId">City <span class="required">*</span></label>
+                                                <select name="city_ec" class="cities" id="cityId" type="select" required>
+                                                    <option selected="selected"></option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -292,9 +303,10 @@
 
                                     <!-- Zip Code -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zipcode">
-                                            <input class="input100" type="number" name="zipcode_ec" required>
-                                            <span class="focus-input100" data-placeholder="Zipcode  *"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zip Code">
+                                            <label for="zipcode_ec">Zip Code <span class="required">*</span></label>
+                                            <input class="input100" name="zipcode_ec" id="zipcode_ec" type="number" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -302,9 +314,10 @@
                                 <div class="row">
                                     <!-- Street Address -->
                                     <div class="col-xs-12 col-sm-12">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Street">
-                                            <input class="input100" type="text" name="address_ec" required>
-                                            <span class="focus-input100" data-placeholder="Street Address  *"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Street Address">
+                                            <label for="address_ec">Street Address <span class="required">*</span></label>
+                                            <input class="input100" name="address_ec" id="address_ec" type="text" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -312,17 +325,19 @@
                                 <div class="row">
                                     <!-- Street Address 2 -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="text" name="apt_ec" required>
-                                            <span class="focus-input100" data-placeholder="Apartment, Suite, Building, Unit etc."></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                            <label for="apt_ec">Apartment, Suite, Building, Unit etc.</label>
+                                            <input class="input100" name="apt_ec" id="apt_ec" type="text">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Department -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="text" name="dept_ec">
-                                            <span class="focus-input100" data-placeholder="Department"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                            <label for="dept_ec">Department</label>
+                                            <input class="input100" name="dept_ec" id="dept_ec" type="text">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -330,17 +345,19 @@
                                 <div class="row">
                                     <!-- Pickup Date -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-50 m-b-35">
-                                            <input class="input--style-2 js-datepicker" type="text" placeholder="Pickup Date  *" name="pickupdate">
+                                        <div class="wrap-input100 validate-input m-t-34 m-b-35">
+                                            <label for="pickupdate">Pickup Date <span class="required">*</span></label>
+                                            <input class="input--style-2 js-datepicker" type="text" placeholder=" " name="pickupdate" required>
                                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                         </div>
                                     </div>
 
                                     <!-- Pickup Time -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter a pickup time">
-                                            <input class="input100" type="text" name="pickuptime" required>
-                                            <span class="focus-input100" data-placeholder="Pickup Time  *"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35">
+                                            <label for="pickuptime">Pickup Time <span class="required">*</span></label>
+                                            <input class="input100" name="pickuptime" id="pickuptime" type="text">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -350,8 +367,9 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-51 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="resAdd_ec" type="select" required>
-                                                    <option disabled="disabled" selected="selected">Is this a residential address? *</option>
+                                                <label for="resAdd_ec">Is this a residential address? <span class="required">*</span></label>
+                                                <select class="choice" name="resAdd_ec" id="resAdd_ec" required>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -364,8 +382,9 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-51 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="pkg_update_ec" type="select" required>
-                                                    <option disabled="disabled" selected="selected">Should we send you shipment updates? *</option>
+                                                <label for="pkg_update_ec">Should we send you package updates? <span class="required">*</span></label>
+                                                <select class="choice" name="pkg_update_ec" id="pkg_update_ec" required>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -483,7 +502,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->

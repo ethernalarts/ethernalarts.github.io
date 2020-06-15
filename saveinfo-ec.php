@@ -142,7 +142,7 @@
         fwrite($myfile, $width);
         $height = 'Height = '.$_SESSION['height']."\r\n";   //height
         fwrite($myfile, $height);
-        $colour = 'Colour = '.$_SESSION['colour']."\r\n";   //Colour
+        $colour = 'Colour = '.$_SESSION['color']."\r\n";   //Colour
         fwrite($myfile, $colour);
         $texture = 'Texture = '.$_SESSION['texture']."\r\n";   //Texture
         fwrite($myfile, $texture);
@@ -168,7 +168,7 @@
         fwrite($myfile, $width);
         $height = 'Height = '.$_SESSION['height_2']."\r\n";   //height
         fwrite($myfile, $height);
-        $colour = 'Colour = '.$_SESSION['colour_2']."\r\n";   //Colour
+        $colour = 'Colour = '.$_SESSION['color_2']."\r\n";   //Colour
         fwrite($myfile, $colour);
         $texture = 'Texture = '.$_SESSION['texture_2']."\r\n";   //Texture
         fwrite($myfile, $texture);
@@ -194,7 +194,7 @@
         fwrite($myfile, $width);
         $height = 'Height = '.$_SESSION['height_3']."\r\n";   //height
         fwrite($myfile, $height);
-        $colour = 'Colour = '.$_SESSION['colour_3']."\r\n";   //Colour
+        $colour = 'Colour = '.$_SESSION['color_3']."\r\n";   //Colour
         fwrite($myfile, $colour);
         $texture = 'Texture = '.$_SESSION['texture_3']."\r\n";   //Texture
         fwrite($myfile, $texture);
@@ -220,7 +220,7 @@
         fwrite($myfile, $width);
         $height = 'Height = '.$_SESSION['height_4']."\r\n";   //height
         fwrite($myfile, $height);
-        $colour = 'Colour = '.$_SESSION['colour_4']."\r\n";   //Colour
+        $colour = 'Colour = '.$_SESSION['color_4']."\r\n";   //Colour
         fwrite($myfile, $colour);
         $texture = 'Texture = '.$_SESSION['texture_4']."\r\n";   //Texture
         fwrite($myfile, $texture);

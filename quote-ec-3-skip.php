@@ -32,7 +32,7 @@
         $_SESSION['package_description']=$_POST['package_description'];
 
     //2nd package details
-    if(isset($_POST['package_type_2']))
+    if(!empty($_POST['package_type_2']))
         $_SESSION['package_type_2']=$_POST['package_type_2'];
     if(isset($_POST['delivery_options_2']))
         $_SESSION['delivery_options_2']=$_POST['delivery_options_2'];
@@ -164,7 +164,7 @@
             background-image: url("images/ec-pic3.jpg");
 
             /* Set a specific height */
-            min-height: 430px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -173,8 +173,16 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 260px;
+        .subheader-top {
+            margin-top: 230px;
+        }
+
+        .subheader-bottom {
+            margin: 10px auto 30px;
+        }
+
+        input:disabled {
+            padding-left: 0;
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -253,7 +261,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 440px">Quote - Domestic Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 310px">Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -305,21 +316,23 @@
                         <h3 class="h3-contactform">Where is it going?</h3>
                         <div class="formtitle">Package Destination</div>
                         <fieldset class="nofieldset" style="margin-bottom: 30px">
-                            <legend class="legend-middle"><span class="required">*</span>&nbsp;&nbsp;Indicates required fields</legend>
+                            <legend class="legend-middle"><span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields</legend>
                                 <div class="row">
                                     <!-- Full Name -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Name">
+                                            <label for="name_ec_dest">Full Name (or Company) <span class="required">*</span></label>
                                             <input class="input100" type="text" name="name_ec_dest" required>
-                                            <span class="focus-input100" data-placeholder="Full Name (or Company)  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Contact's Name -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Contact's Name">
+                                            <label for="contactname_ec_dest">Contact's Name <span class="required">*</span></label>
                                             <input class="input100" type="text" name="contactname_ec_dest" required>
-                                            <span class="focus-input100" data-placeholder="Contact's Name  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -327,10 +340,11 @@
                                 <div class="row">
                                     <!-- Gender -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-47 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="gender_ec_dest">Gender <span class="required">*</span></label>
                                                 <select name="gender_ec_dest" required>
-                                                    <option disabled="disabled" value=" " selected="selected">Gender  *</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Male">Male</option>
                                                     <option value="Female">Female</option>
                                                 </select>
@@ -342,8 +356,9 @@
                                     <!-- Title -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Title">
+                                            <label for="title_ec_dest">Title <span class="required">*</span></label>
                                             <input class="input100" type="text" name="title_ec_dest" required>
-                                            <span class="focus-input100" data-placeholder="Title  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -352,16 +367,18 @@
                                     <!-- Telephone -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Telephone Number">
+                                            <label for="phone_ec_dest">Telephone <span class="required">*</span></label>
                                             <input class="input100" type="tel" name="phone_ec_dest" id="phone_ec_dest" required>
-                                            <span class="focus-input100" data-placeholder=" "></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Email -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Email Address">
+                                            <label for="email_ec_dest">Email <span class="required">*</span></label>
                                             <input class="input100" type="email" name="email_ec_dest" required>
-                                            <span class="focus-input100" data-placeholder="Email  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -369,10 +386,10 @@
                                 <div class="row">
                                     <!-- Country -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" style="color: #ebebeb" >
-                                            <input class="input100 countries" name="country_ec" disabled>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" style="color: #ebebeb">
+                                            <label for="countryId">Country </label>
                                             <input type="hidden" name="country_ec_dest" id="countryId" value="FI"/>
-                                            <span class="focus-input100" data-placeholder="Finland"></span>
+                                            <input disabled placeholder="Finland" id="country_ec_dest"/>
                                         </div>
                                     </div>
 
@@ -380,8 +397,9 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-47 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="stateId">State <span class="required">*</span></label>
                                                 <select class="states order-alpha" name="state_ec_dest" id="stateId" type="select" required>
-                                                    <option disabled="disabled" selected="selected">State  *</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -392,10 +410,11 @@
                                 <div class="row">
                                     <!-- City -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-47 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="cityId">City <span class="required">*</span></label>
                                                 <select class="cities order-alpha" name="city_ec_dest" id="cityId" type="select" required>
-                                                    <option disabled="disabled" selected="selected">City  *</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -404,9 +423,10 @@
 
                                     <!-- Zip Code -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zipcode">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Zip Code">
+                                            <label for="zipcode_ec_dest">Zip Code <span class="required">*</span></label>
                                             <input class="input100" type="number" name="zipcode_ec_dest" required>
-                                            <span class="focus-input100" data-placeholder="Zipcode  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -415,8 +435,9 @@
                                     <!-- Street Address -->
                                     <div class="col-xs-12 col-sm-12">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Street">
+                                            <label for="address_ec_dest">Street Address <span class="required">*</span></label>
                                             <input class="input100" type="text" name="address_ec_dest" required>
-                                            <span class="focus-input100" data-placeholder="Street Address  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -425,16 +446,18 @@
                                     <!-- Street Address 2 -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                            <label for="apt_ec_dest">Apartment, Suite, Building, Unit etc.</label>
                                             <input class="input100" type="text" name="apt_ec_dest">
-                                            <span class="focus-input100" data-placeholder="Apartment, Suite, Building, Unit etc."></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Department -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                            <label for="dept_ec_dest">Department</label>
                                             <input class="input100" type="text" name="dept_ec_dest">
-                                            <span class="focus-input100" data-placeholder="Department"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -444,8 +467,9 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-51 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="resAdd_ec_dest">Is this a residential address? <span class="required">*</span></label>
                                                 <select name="resAdd_ec_dest" type="select" required>
-                                                    <option disabled="disabled" value=" " selected="selected">Is this a residential address? *</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -458,8 +482,9 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-51 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="notify_dest">Should we send recipient shipment status? <span class="required">*</span></label>
                                                 <select name="notify_dest" type="select" required>
-                                                    <option disabled="disabled" value=" " selected="selected">Should we send recipient shipment status? *</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>

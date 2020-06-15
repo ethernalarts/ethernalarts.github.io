@@ -67,7 +67,7 @@
             background-image: url("images/ec-pic2.jpg");
 
             /* Set a specific height */
-            min-height: 430px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -76,8 +76,31 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 270px;
+        .subheader-top {
+            margin-top: 230px;
+        }
+
+        .subheader-bottom {
+            margin: 10px auto 30px;
+        }
+
+        input:disabled {
+            padding-left: 0;
+        }
+
+        .container-form input {
+            margin: 0;
+            font-size: 18px;
+            border: 0;
+            padding: 0;
+        }
+
+        .container-form input[type="color"] {
+            height: 50px;
+            cursor: pointer;
+            padding: 0.9em 0;
+            border-radius: 0;
+            border: 0 solid rgba(100, 150, 238, 0.51);
         }
 
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -164,7 +187,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 440px;">Quote - Domestic Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 310px">Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -217,14 +243,15 @@
                         <div class="formtitle">Package Details</div>
                         <!-- 1st Package Details -->
                         <fieldset class="nofieldset" style="margin-bottom: 30px">
-                            <legend class="legend-middle"><span class="required">*</span>&nbsp;&nbsp;Indicates required fields</legend>
+                            <legend class="legend-middle"><span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields</legend>
                                 <div class="row">
                                     <!-- Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-35 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="package_type">Package Type <span class="required">*</span></label>
                                                 <select name="package_type" type="select" required>
-                                                    <option disabled="disabled" selected="selected">Package Type  *</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
@@ -242,10 +269,11 @@
 
                                     <!-- Delivery Option -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-35 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="delivery_options">Delivery Option <span class="required">*</span></label>
                                                 <select name="delivery_options" type="select" required>
-                                                    <option disabled="disabled" selected="selected">Delivery Option  *</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="VLink Ground">VLink Ground</option>
                                                     <option value="VLink Next Day Air">VLink Next Day Air</option>
                                                     <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
@@ -266,17 +294,19 @@
                                 <div class="row">
                                     <!-- Package Type (OTHER) -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
+                                            <label for="other">If package type is 'OTHER', specify <span>*</span></label>
                                             <input class="input100" type="text" name="other">
-                                            <span class="focus-input100" data-placeholder="If package type is 'OTHER', specify"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Package's Worth -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                            <label for="worth">Declared Value (USD) <span class="required">*</span></label>
                                             <input class="input100" type="number" name="worth" required>
-                                            <span class="focus-input100" data-placeholder="Declared Value (USD)  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -285,16 +315,18 @@
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Weight">
+                                            <label for="weight">Weight (pounds) <span class="required">*</span></label>
                                             <input class="input100" type="text" name="weight" required>
-                                            <span class="focus-input100" data-placeholder="Weight (pounds)  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Length">
+                                            <label for="length">Length (inches) <span class="required">*</span></label>
                                             <input class="input100" type="text" name="length" required>
-                                            <span class="focus-input100" data-placeholder="Length (inches) *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -303,16 +335,18 @@
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Width">
+                                            <label for="width">Width (inches) <span class="required">*</span></label>
                                             <input class="input100" type="text" name="width" required>
-                                            <span class="focus-input100" data-placeholder="Width (inches)  *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Height">
+                                            <label for="height">Height (inches) <span class="required">*</span></label>
                                             <input class="input100" type="text" name="height" required>
-                                            <span class="focus-input100" data-placeholder="Height (inches) *"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -321,16 +355,18 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package Color">
-                                            <input class="input100" name="color" type="text" required>
-                                            <span class="focus-input100" data-placeholder="Color  *"></span>
+                                            <label for="color">Colour <span class="required">*</span></label>
+                                            <input class="input100" name="color" id="color" type="color" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Texture -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package Texture">
-                                            <input class="input100" name="texture" type="text" required>
-                                            <span class="focus-input100" data-placeholder="Texture *"></span>
+                                        <div class="wrap-input100 validate-input m-t-45 m-b-35" data-validate = "Please state the texture of the package">
+                                            <label for="texture">Texture <span class="required">*</span></label>
+                                            <input class="input100" type="text" name="texture" required>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -338,9 +374,10 @@
                                 <div class="row">
                                     <!-- Additional Info -->
                                     <div class="col-xs-12 col-sm-12">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-48 m-b-35" data-validate = "">
+                                            <label for="package_description">Anything else we should know about your package?</label>
                                             <textarea class="input100" type="text" name="package_description"></textarea>
-                                            <span class="focus-input100" data-placeholder="Anything else we should know about your package?"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -355,14 +392,15 @@
 
                         <!-- 2nd Package Details -->
                         <fieldset class="nofieldset" id="secondPackage" style="margin: 0 0 20px; display: none">
-                            <legend class="legend-right">2nd Package Details</legend>
+                            <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif">2nd Package Details</legend>
                                 <div class="row">
                                     <!-- Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-25 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="package_type_2">
-                                                    <option disabled="disabled" value=" " selected="selected">Package Type</option>
+                                                <label for="package_type_2">Package Type</label>
+                                                <select name="package_type_2" type="select">
+                                                    <option disabled="disabled" value=" " selected="selected"></option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
@@ -380,20 +418,21 @@
 
                                     <!-- Delivery Option -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-25 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="delivery_options_2">
-                                                    <option disabled="disabled" value=" " selected="selected">Delivery Option</option>
+                                                <label for="delivery_options_2">Delivery Option</label>
+                                                <select name="delivery_options_2" type="select">
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="VLink Ground">VLink Ground</option>
                                                     <option value="VLink Next Day Air">VLink Next Day Air</option>
                                                     <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
                                                     <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
                                                     <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                                    <option value="Special Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                                    <option value="Special Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                                    <option value="Special Service(Clinical Express)">Special Service (Clinical Express)</option>
-                                                    <option value="Time Critical Service(Dedicated Express)">Time Critical Service (VLink Dedicated Express)</option>
-                                                    <option value="Time Critical Service(Special Express)">Time Critical Service (VLink Special Express)</option>
+                                                    <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                                    <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
+                                                    <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
+                                                    <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
+                                                    <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -404,17 +443,19 @@
                                 <div class="row">
                                     <!-- Package Type (OTHER) -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
+                                            <label for="other_2">If package type is 'OTHER', specify</label>
                                             <input class="input100" type="text" name="other_2">
-                                            <span class="focus-input100" data-placeholder="If package type is 'OTHER', specify"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Package's Worth -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                            <label for="worth_2">Declared Value (USD)</label>
                                             <input class="input100" type="number" name="worth_2">
-                                            <span class="focus-input100" data-placeholder="Declared Value (USD)"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -422,17 +463,19 @@
                                 <div class="row">
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="weight_2">
-                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Weight">
+                                            <label for="weight_2">Weight (pounds)</label>
+                                            <input class="input100" type="text" name="weight_2">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="length_2">
-                                            <span class="focus-input100" data-placeholder="Length (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Length">
+                                            <label for="length_2">Length (inches)</label>
+                                            <input class="input100" type="text" name="length_2">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -440,17 +483,19 @@
                                 <div class="row">
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="width_2">
-                                            <span class="focus-input100" data-placeholder="Width (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Width">
+                                            <label for="width_2">Width (inches)</label>
+                                            <input class="input100" type="text" name="width_2">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="height_2">
-                                            <span class="focus-input100" data-placeholder="Height (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Height">
+                                            <label for="height_2">Height (inches)</label>
+                                            <input class="input100" type="text" name="height_2">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -458,17 +503,19 @@
                                 <div class="row">
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="color_2" type="text">
-                                            <span class="focus-input100" data-placeholder="Color"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package Color">
+                                            <label for="color_2">Color</label>
+                                            <input class="input100" name="color_2" id="color_2" type="color">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Texture -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="texture_2" type="text">
-                                            <span class="focus-input100" data-placeholder="Texture"></span>
+                                        <div class="wrap-input100 validate-input m-t-45 m-b-35" data-validate = "Please state the texture of the package">
+                                            <label for="texture_2">Texture</label>
+                                            <input class="input100" type="text" name="texture_2">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -476,9 +523,10 @@
                                 <div class="row">
                                     <!-- Additional Info -->
                                     <div class="col-xs-12 col-sm-12">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-48 m-b-35" data-validate = "">
+                                            <label for="package_description_2">Anything else we should know about your package?</label>
                                             <textarea class="input100" type="text" name="package_description_2"></textarea>
-                                            <span class="focus-input100" data-placeholder="Anything else we should know about your package?"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -493,14 +541,15 @@
 
                         <!-- 3rd Package Details -->
                         <fieldset class="nofieldset" id="thirdPackage" style="margin: 0 0 20px; display: none">
-                            <legend class="legend-right">3rd Package Details</legend>
+                            <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif">3rd Package Details</legend>
                                 <div class="row">
                                     <!-- Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-25 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="package_type_3">Package Type</label>
                                                 <select name="package_type_3" type="select">
-                                                    <option disabled="disabled" selected="selected">Package Type</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
@@ -518,10 +567,11 @@
 
                                     <!-- Delivery Option -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-25 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="delivery_options_3">Delivery Option</label>
                                                 <select name="delivery_options_3" type="select">
-                                                    <option disabled="disabled" selected="selected">Delivery Option</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="VLink Ground">VLink Ground</option>
                                                     <option value="VLink Next Day Air">VLink Next Day Air</option>
                                                     <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
@@ -542,17 +592,19 @@
                                 <div class="row">
                                     <!-- Package Type (OTHER) -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
+                                            <label for="other_3">If package type is 'OTHER', specify</label>
                                             <input class="input100" type="text" name="other_3">
-                                            <span class="focus-input100" data-placeholder="If package type is 'OTHER', specify"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Package's Worth -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                            <label for="worth_3">Declared Value (USD)</label>
                                             <input class="input100" type="number" name="worth_3">
-                                            <span class="focus-input100" data-placeholder="Declared Value (USD)"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -560,17 +612,19 @@
                                 <div class="row">
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="weight_3">
-                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Weight">
+                                            <label for="weight_3">Weight (pounds)</label>
+                                            <input class="input100" type="text" name="weight_3">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="length_3">
-                                            <span class="focus-input100" data-placeholder="Length (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Length">
+                                            <label for="length_3">Length (inches)</label>
+                                            <input class="input100" type="text" name="length_3">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -578,17 +632,19 @@
                                 <div class="row">
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="width_3">
-                                            <span class="focus-input100" data-placeholder="Width (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Width">
+                                            <label for="width_2">Width (inches)</label>
+                                            <input class="input100" type="text" name="width_2">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="height_3">
-                                            <span class="focus-input100" data-placeholder="Height (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Height">
+                                            <label for="height_2">Height (inches)</label>
+                                            <input class="input100" type="text" name="height_2">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -596,17 +652,19 @@
                                 <div class="row">
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="color_3" type="text">
-                                            <span class="focus-input100" data-placeholder="Color"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package Color">
+                                            <label for="color_3">Color</label>
+                                            <input class="input100" name="color_3" id="color_3" type="color">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Texture -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="texture_3" type="text">
-                                            <span class="focus-input100" data-placeholder="Texture"></span>
+                                        <div class="wrap-input100 validate-input m-t-45 m-b-35" data-validate = "Please state the texture of the package">
+                                            <label for="texture_3">Texture</label>
+                                            <input class="input100" type="text" name="texture_3">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -614,9 +672,10 @@
                                 <div class="row">
                                     <!-- Additional Info -->
                                     <div class="col-xs-12 col-sm-12">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-48 m-b-35" data-validate = "">
+                                            <label for="package_description_3">Anything else we should know about your package?</label>
                                             <textarea class="input100" type="text" name="package_description_3"></textarea>
-                                            <span class="focus-input100" data-placeholder="Anything else we should know about your package?"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -631,14 +690,15 @@
 
                         <!-- 4th Package Details -->
                         <fieldset class="nofieldset" id="fourthPackage" style="margin: 0 0 20px; display: none">
-                            <legend class="legend-right">4th Package Details</legend>
+                            <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif">4th Package Details</legend>
                                 <div class="row">
                                     <!-- Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-25 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="package_type_4">Package Type</label>
                                                 <select name="package_type_4" type="select">
-                                                    <option disabled="disabled" selected="selected">Package Type</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
@@ -656,10 +716,11 @@
 
                                     <!-- Delivery Option -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="input-group m-t-25 m-b-35">
+                                        <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
+                                                <label for="delivery_options_4">Delivery Option</label>
                                                 <select name="delivery_options_4" type="select">
-                                                    <option disabled="disabled" selected="selected">Delivery Option</option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                     <option value="VLink Ground">VLink Ground</option>
                                                     <option value="VLink Next Day Air">VLink Next Day Air</option>
                                                     <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
@@ -680,17 +741,19 @@
                                 <div class="row">
                                     <!-- Package Type (OTHER) -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
+                                            <label for="other_4">If package type is 'OTHER', specify</label>
                                             <input class="input100" type="text" name="other_4">
-                                            <span class="focus-input100" data-placeholder="If package type is 'OTHER', specify"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Package's Worth -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                            <label for="worth_4">Declared Value (USD)</label>
                                             <input class="input100" type="number" name="worth_4">
-                                            <span class="focus-input100" data-placeholder="Declared Value (USD)"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -698,17 +761,19 @@
                                 <div class="row">
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="weight_4">
-                                            <span class="focus-input100" data-placeholder="Weight (pounds)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Weight">
+                                            <label for="weight_4">Weight (pounds)</label>
+                                            <input class="input100" type="text" name="weight_4">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="length_4">
-                                            <span class="focus-input100" data-placeholder="Length (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Length">
+                                            <label for="length_4">Length (inches)</label>
+                                            <input class="input100" type="text" name="length_4">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -716,17 +781,19 @@
                                 <div class="row">
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="width_4">
-                                            <span class="focus-input100" data-placeholder="Width (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Width">
+                                            <label for="width_4">Width (inches)</label>
+                                            <input class="input100" type="text" name="width_4">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" type="number" name="height_4">
-                                            <span class="focus-input100" data-placeholder="Height (inches)"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Height">
+                                            <label for="height_4">Height (inches)</label>
+                                            <input class="input100" type="text" name="height_4">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -734,17 +801,19 @@
                                 <div class="row">
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="color_4" type="text">
-                                            <span class="focus-input100" data-placeholder="Color"></span>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package Color">
+                                            <label for="color_4">Color</label>
+                                            <input class="input100" name="color_4" id="color_4" type="color">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Texture -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
-                                            <input class="input100" name="texture_4" type="text">
-                                            <span class="focus-input100" data-placeholder="Texture"></span>
+                                        <div class="wrap-input100 validate-input m-t-45 m-b-35" data-validate = "Please state the texture of the package">
+                                            <label for="texture_4">Texture</label>
+                                            <input class="input100" type="text" name="texture_4">
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -752,9 +821,10 @@
                                 <div class="row">
                                     <!-- Additional Info -->
                                     <div class="col-xs-12 col-sm-12">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "">
+                                        <div class="wrap-input100 validate-input m-t-48 m-b-35" data-validate = "">
+                                            <label for="package_description_4">Anything else we should know about your package?</label>
                                             <textarea class="input100" type="text" name="package_description_4"></textarea>
-                                            <span class="focus-input100" data-placeholder="Anything else we should know about your package?"></span>
+                                            <span class="focus-input100"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -888,7 +958,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->

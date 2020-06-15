@@ -59,7 +59,7 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
+        .subheader-top {
             margin-top: 260px;
         }
 
@@ -145,7 +145,7 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 225px;">Contact Us</div>
+        <div class="subheader-top" style="width: 225px;">Contact Us</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -189,7 +189,7 @@
                     <div class="formtitle">We'd love to hear from you</div>
 
                         <fieldset class="nofieldset">
-                            <legend class="legend-middle"><span class="required">*</span>&nbsp;&nbsp;Indicates required fields</legend>
+                            <legend class="legend-middle"><span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields</legend>
 
                             <div class="row">
                                 <!-- First Name -->
@@ -272,7 +272,7 @@
                     <div>
                         <p class="w3-center" style="font: 1.12em Poppins-Regular, sans-serif; line-height: 1.5em">
                             <span style="font: italic 500 1.03em 'Quicksand Bold', serif; color: blue">Address</span><br>
-                            No. 3M, Microkatu, 70210<br>
+                            No 3M, Microkatu, 70210<br>
                             Kuopio, Finland.<br><br>
                             <span style="font: italic 1.03em 'Quicksand Bold', serif; color: blue">Phone</span><br>
                             +358 9 42453389
@@ -367,7 +367,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->

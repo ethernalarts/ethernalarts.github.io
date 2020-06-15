@@ -89,7 +89,7 @@
             background-image: url("images/ec-review.jpg");
 
             /* Set a specific height */
-            min-height: 430px;
+            min-height: 470px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -98,8 +98,12 @@
             background-size: cover;
         }
 
-        .subheader-h2 {
-            margin-top: 250px;
+        .subheader-top {
+            margin-top: 230px;
+        }
+
+        .subheader-bottom {
+            margin: 10px auto 30px;
         }
 
         .container-form input {
@@ -233,7 +237,10 @@
         </span>
 
         <!-- Subheader. Just below the navbar -->
-        <div class="subheader-h2" style="width: 470px">Quote - Domestic Shipping</div>
+        <div class="subheader-top" style="width: 130px">Quote</div>
+
+        <!-- Subheader. Just below the navbar -->
+        <div class="subheader-bottom" style="width: 330px">Domestic Shipping</div>
     </div>
 
     <!-- Mobile Menu -->
@@ -592,7 +599,7 @@
                             <div class="row">
                                 <!-- Colour -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="color">Colour</label>
+                                    <label for="color">Color</label>
                                     <input disabled placeholder="<?php echo $_SESSION['color'] ?>" class="w3-light-gray" id="color">
                                 </div>
 
@@ -612,15 +619,15 @@
                             </div>
 
                                 <!-- Show other shipments -->
-                                <div style="margin: 0 0 30px;" class="sliderWrapper">
+                                <div style="margin: 0 0 40px;" class="sliderWrapper">
                                     <span id="textchange" style="margin-left: 0" onclick="secondPackage()">
                                         + show other packages
                                     </span>
                                 </div>
 
                                 <!-- 2nd package -->
-                                <fieldset id="secondPackage" class="nofieldset" style="margin: 10px 0; display: none">
-                                    <legend class="legend-right" style="font: normal 500 1.2em Roboto, sans-serif">2nd Package Details</legend>
+                                <fieldset id="secondPackage" class="nofieldset" style="margin: 30px 0 10px; display: none">
+                                    <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">2nd Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -680,8 +687,8 @@
                                         <div class="row">
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="colour_2">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_2'] ?>" class="w3-light-gray" id="colour_2">
+                                                <label for="colour_2">Color</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['color_2'] ?>" class="w3-light-gray" id="colour_2">
                                             </div>
 
                                             <!-- Texture -->
@@ -701,8 +708,8 @@
                                 </fieldset>
 
                                 <!-- 3rd package -->
-                                <fieldset id="thirdPackage" class="nofieldset" style="margin: 10px 0; display: none">
-                                    <legend class="legend-right" style="font-size: 1.1em">3rd Package Details</legend>
+                                <fieldset id="thirdPackage" class="nofieldset" style="margin: 30px 0 10px; display: none">
+                                    <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">3rd Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -762,8 +769,8 @@
                                         <div class="row">
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="colour_3">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_3'] ?>" class="w3-light-gray" id="colour_3">
+                                                <label for="colour_3">Color</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['color_3'] ?>" class="w3-light-gray" id="colour_3">
                                             </div>
 
                                             <!-- Texture -->
@@ -783,8 +790,8 @@
                                 </fieldset>
 
                                 <!-- 4th package -->
-                                <fieldset id="fourthPackage" class="nofieldset" style="padding-bottom: 0; margin: 10px 0 0; display: none">
-                                    <legend class="legend-right" style="font-size: 1.1em">4th Package Details</legend>
+                                <fieldset id="fourthPackage" class="nofieldset" style="padding-bottom: 0; margin: 30px 0 0; display: none">
+                                    <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">4th Package Details</legend>
                                         <div class="row">
                                             <!-- Package Type -->
                                             <div class="col-xs-12 col-sm-6">
@@ -844,8 +851,8 @@
                                         <div class="row">
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="colour_4">Colour</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['colour_4'] ?>" class="w3-light-gray" id="colour_4">
+                                                <label for="colour_4">Color</label>
+                                                <input disabled placeholder="<?php echo $_SESSION['color_4'] ?>" class="w3-light-gray" id="colour_4">
                                             </div>
 
                                             <!-- Texture -->
@@ -1103,7 +1110,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->

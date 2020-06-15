@@ -803,7 +803,7 @@
                             </div>
 
                                 <!-- Show other shipments -->
-                                <div style="margin: 0 0 30px;" class="sliderWrapper">
+                                <div style="margin: 0 0 40px;" class="sliderWrapper">
                                     <span id="textchange" style="margin-left: 0" onclick="secondShipment()">
                                         + show other shipments
                                     </span>
@@ -811,7 +811,7 @@
 
                                 <!-- 2nd shipment -->
                                 <fieldset id="secondShipment" class="nofieldset" style="margin: 30px 0 10px; display: none">
-                                    <legend class="legend-right" style="font: normal 500 1.2em Roboto, sans-serif">2nd Shipment Details</legend>
+                                    <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">2nd Shipment Details</legend>
                                     <div class="row">
                                         <!-- Shipment Type -->
                                         <div class="col-xs-12 col-sm-6">
@@ -891,7 +891,7 @@
 
                                 <!-- 3rd Shipment Details -->
                                 <fieldset id="thirdShipment" class="nofieldset" style="margin: 30px 0 10px; display: none">
-                                  <legend class="legend-right" style="font: normal 500 1.2em Roboto, sans-serif">3rd Shipment Details</legend>
+                                  <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">3rd Shipment Details</legend>
                                     <div class="row">
                                         <!-- Shipment Type -->
                                         <div class="col-xs-12 col-sm-6">
@@ -973,7 +973,7 @@
 
                                 <!-- 4th Shipment Details -->
                                 <fieldset id="fourthShipment" class="nofieldset" style="margin: 30px 0 0; display: none">
-                                <legend class="legend-right" style="font: normal 500 1.2em Roboto, sans-serif">4th Shipment Details</legend>
+                                <legend class="legend-middle" style="font: normal 500 1.2em Roboto, sans-serif; margin: 20px auto">4th Shipment Details</legend>
                                     <div class="row">
                                         <!-- Shipment Type -->
                                         <div class="col-xs-12 col-sm-6">
@@ -1050,8 +1050,7 @@
 
                                 <!-- Edit Button -->
                                 <div>
-                                    <a style="float: left; width: 15%" onClick="history.go(-1)"
-                                       class="w3-button w3-medium w3-green-continue">Edit</a>
+                                    <a style="float: left; width: 15%" onClick="history.go(-1)" class="w3-button w3-medium w3-green-continue">Edit</a>
                                 </div>
                     </fieldset>
 
@@ -1172,7 +1171,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->

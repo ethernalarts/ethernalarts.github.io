@@ -45,7 +45,7 @@
 
     } else {
         $_SESSION['error'] = "Invalid Email Address";
-        header("location: quote-is-3.php");     //redirecting to third page
+        //header("location: quote-is-3.php");     //redirecting to third page
     }
 ?>
 
@@ -89,13 +89,12 @@
         .body {
             width: 100%;
             max-width: 1440px;
-            height: auto;
             margin: 0;
             background-image: none;
         }
 
         .container {
-            padding: 0 160px;
+            padding: 0 170px;
         }
 
         .parallax {
@@ -898,7 +897,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->
