@@ -51,11 +51,12 @@
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-free-5.7.2-web/css/all.css" rel="stylesheet" type="text/css">
 
-    <link href="css/back-to-top.css" rel="stylesheet">
-    <link href="css/misc.css" rel="stylesheet">
-    <link href="./css/w3.css" type="text/css" rel="stylesheet">
-    <link href="./css/mobile-menu-top.css" type="text/css" rel="stylesheet">
+    <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+    <link href="css/misc.css" type="text/css" rel="stylesheet">
+    <link href="css/w3.css" type="text/css" rel="stylesheet">
+    <link href="css/mobile-menu-top.css" type="text/css" rel="stylesheet">
 
+    <link href="css/regform2.css" rel="stylesheet" type="text/css">
     <link href="css/vlink.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -63,8 +64,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="js/w3.js"></script>
-    <script src="js/statecity.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <div class="thetop"></div>
 
@@ -107,11 +107,23 @@
         }
 
         .container-form input {
-            margin: 0 0 33px;
+            margin: 0 0 35px;
             font-size: 18px;
             border: 0;
-            border-bottom: 2px solid #57b846;
-            padding: 0 0 10px;
+            border-bottom: 2px solid lightgreen;
+            padding: 7px 0 10px;
+        }
+
+        .container-form textarea {
+            font-family: Poppins-Medium, roboto, Verdana, Montserrat, serif;
+            margin: 0 0 33px;
+            font-size: 18px;
+            width: 100%;
+            height: auto;
+            resize: none;
+            padding: 7px 0;
+            border-bottom: 2px solid lightgreen;
+            color: #666;
         }
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -131,7 +143,7 @@
 
         a.w3-button.w3-green-continue {
             font-family: "Montserrat Medium", sans-serif;
-            margin: 0;
+            margin: 10px 0 0;
             font-size: 16px;
             color: #fff;
             padding: 13px 20px 17px;
@@ -139,7 +151,6 @@
             height: 50px;
             background-color: #57b846;
             border-radius: 25px;
-
 
             box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
             -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
@@ -178,6 +189,11 @@
 
         /* On screens that are 770px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 770px) {
+
+            a.w3-button.w3-green-continue {
+                width: 23% !important;
+            }
+
             .formtitle {
                 font-size: 1.83em;
             }
@@ -190,10 +206,6 @@
                 width: 100%;
                 border: 0;
                 border-bottom: 2px solid #57b846;
-            }
-
-            a.w3-button.w3-green-continue {
-                width: 40% !important;
             }
         }
     </style>
@@ -368,7 +380,7 @@
                                 <!-- Street Address -->
                                 <div class="col-xs-12 col-sm-12">
                                     <label for="address_ec">Street Address</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec'] ?>" id="address_ec">
+                                    <textarea disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec'] ?>" id="address_ec"></textarea>
                                 </div>
                             </div>
 
@@ -498,7 +510,7 @@
                                 <!-- Street Address -->
                                 <div class="col-xs-12 col-sm-12">
                                     <label for="address_ec_ra">Street Address</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec'] ?>" id="address_ec_ra">
+                                    <textarea disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec'] ?>" id="address_ec_ra"></textarea>
                                 </div>
                             </div>
 
@@ -555,9 +567,9 @@
                             </div>
 
                             <div class="row">
-                                <!-- Package Type (OTHER)-->
+                                <!-- 'Package Type' Description -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="other">Package Type (OTHER)</label>
+                                    <label for="other">'Package Type' Description</label>
                                     <input disabled placeholder="<?php echo $_SESSION['other'] ?>" class="w3-light-gray" id="other">
                                 </div>
 
@@ -614,7 +626,7 @@
                                 <!-- Additional Info -->
                                 <div class="col-xs-12 col-sm-12">
                                     <label for="package_description">Additional Information</label>
-                                    <input disabled placeholder="<?php echo $_SESSION['package_description'] ?>" class="w3-light-gray" id="package_description">
+                                    <textarea disabled placeholder="<?php echo $_SESSION['package_description'] ?>" class="w3-light-gray" id="package_description"></textarea>
                                 </div>
                             </div>
 
@@ -643,9 +655,9 @@
                                         </div>
 
                                         <div class="row">
-                                            <!-- Package Type (OTHER)-->
+                                            <!-- 'Package Type' Description -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="other_2">Package Type (OTHER)</label>
+                                                <label for="other_2">'Package Type' Description</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['other_2'] ?>" class="w3-light-gray" id="other_2">
                                             </div>
 
@@ -687,7 +699,7 @@
                                         <div class="row">
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="colour_2">Color</label>
+                                                <label for="color_2">Color</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['color_2'] ?>" class="w3-light-gray" id="colour_2">
                                             </div>
 
@@ -702,7 +714,7 @@
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
                                                 <label for="package_description_2">Additional Information</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['package_description_2'] ?>" class="w3-light-gray" id="package_description_2">
+                                                <textarea disabled placeholder="<?php echo $_SESSION['package_description_2'] ?>" class="w3-light-gray" id="package_description_2"></textarea>
                                             </div>
                                         </div>
                                 </fieldset>
@@ -719,15 +731,15 @@
 
                                             <!-- Delivery Option -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="delivery_options_3"> Shipment's Worth (USD)</label>
+                                                <label for="delivery_options_3">Delivery Option</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['delivery_options_3'] ?>" class="w3-light-gray" id="delivery_options_3">
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <!-- Package Type (OTHER)-->
+                                            <!-- 'Package Type' Description -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="other_3">Package Type (OTHER)</label>
+                                                <label for="other_3">'Package Type' Description</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['other_3'] ?>" class="w3-light-gray" id="other_3">
                                             </div>
 
@@ -769,7 +781,7 @@
                                         <div class="row">
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="colour_3">Color</label>
+                                                <label for="color_3">Color</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['color_3'] ?>" class="w3-light-gray" id="colour_3">
                                             </div>
 
@@ -784,7 +796,7 @@
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
                                                 <label for="package_description_3">Additional Information</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['package_description_3'] ?>" class="w3-light-gray" id="package_description_3">
+                                                <textarea disabled placeholder="<?php echo $_SESSION['package_description_3'] ?>" class="w3-light-gray" id="package_description_3"></textarea>
                                             </div>
                                         </div>
                                 </fieldset>
@@ -801,15 +813,15 @@
 
                                             <!-- Delivery Option -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="delivery_options_4"> Shipment's Worth (USD)</label>
+                                                <label for="delivery_options_4">Delivery Option</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['delivery_options_4'] ?>" class="w3-light-gray" id="delivery_options_4">
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <!-- Package Type (OTHER)-->
+                                            <!-- 'Package Type' Description -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="other_4">Package Type (OTHER)</label>
+                                                <label for="other_4">'Package Type' Description</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['other_4'] ?>" class="w3-light-gray" id="other_4">
                                             </div>
 
@@ -851,7 +863,7 @@
                                         <div class="row">
                                             <!-- Colour -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="colour_4">Color</label>
+                                                <label for="color_4">Color</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['color_4'] ?>" class="w3-light-gray" id="colour_4">
                                             </div>
 
@@ -866,7 +878,7 @@
                                             <!-- Additional Info -->
                                             <div class="col-xs-12 col-sm-12">
                                                 <label for="package_description_4">Additional Information</label>
-                                                <input disabled placeholder="<?php echo $_SESSION['package_description_4'] ?>" class="w3-light-gray" id="package_description_4">
+                                                <textarea disabled placeholder="<?php echo $_SESSION['package_description_4'] ?>" class="w3-light-gray" id="package_description_4"></textarea>
                                             </div>
                                         </div>
                                 </fieldset>
@@ -955,7 +967,7 @@
                                 <!-- Street Address -->
                                 <div class="col-xs-12 col-sm-12">
                                     <label for="address_ec_dest">Street Address</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec_dest'] ?>" id="address_ec_dest">
+                                    <textarea disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ec_dest'] ?>" id="address_ec_dest"></textarea>
                                 </div>
                             </div>
 

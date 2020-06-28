@@ -187,7 +187,8 @@
             margin: 0 0 33px;
             font-size: 18px;
             width: 100%;
-            height: auto;
+            height: 100px;
+            resize: none;
             padding: 7px 0;
             border-bottom: 2px solid lightgreen;
             color: #666;
@@ -258,10 +259,9 @@
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
-            #hi {
-                margin: 60px 0 0;
-                text-align: center;
-                font: 1.3em Verdana, sans-serif;
+
+            a.w3-button.w3-green-continue {
+                width: 23% !important;
             }
 
             .container {
@@ -461,7 +461,7 @@
                                 <!-- Street Address -->
                                 <div class="col-xs-12 col-sm-12">
                                     <label for="address_ss">Street Address</label>
-                                    <input disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ss'] ?>" id="address_ss">
+                                    <textarea disabled class="w3-light-gray" placeholder="<?php echo $_SESSION['address_ss'] ?>" id="address_ss"></textarea>
                                 </div>
                             </div>
 
@@ -518,9 +518,9 @@
                             </div>
 
                             <div class="row">
-                                <!-- Item Type (OTHER)-->
+                                <!-- Briefly Describe 'Item Type' -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="other_ss">Item Type (OTHER)</label>
+                                    <label for="other_ss">'Item Type' Description</label>
                                     <input disabled placeholder="<?php echo $_SESSION['other_ss'] ?>" class="w3-light-gray" id="other_ss">
                                 </div>
 
@@ -560,9 +560,9 @@
                             </div>
 
                             <div class="row">
-                                <!-- Colour -->
+                                <!-- Color -->
                                 <div class="col-xs-12 col-sm-6">
-                                    <label for="colour_ss">Colour</label>
+                                    <label for="color_ss">Colour</label>
                                     <input disabled placeholder="<?php echo $_SESSION['color_ss'] ?>" class="w3-light-gray" id="color_ss">
                                 </div>
 
@@ -583,7 +583,7 @@
 
                                 <!-- Show other shipments -->
                                 <div style="margin: 0 0 40px;" class="sliderWrapper">
-                                    <span style="margin-left: 0" onclick="secondItem()">
+                                    <span id="textchange" style="margin-left: 0" onclick="secondItem()">
                                         + show other items
                                     </span>
                                 </div>
@@ -606,9 +606,9 @@
                                         </div>
 
                                         <div class="row">
-                                            <!-- Item Type (OTHER)-->
+                                            <!-- Briefly Describe 'Item Type' -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="other_ss_2">Item Type (OTHER)</label>
+                                                <label for="other_ss_2">'Item Type' Description</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['other_ss_2'] ?>" class="w3-light-gray" id="other_ss_2">
                                             </div>
 
@@ -688,9 +688,9 @@
                                         </div>
 
                                         <div class="row">
-                                            <!-- Item Type (OTHER)-->
+                                            <!-- Briefly Describe 'Item Type' -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="other_ss_3">Item Type (OTHER)</label>
+                                                <label for="other_ss_3">'Item Type' Description</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['other_ss_3'] ?>" class="w3-light-gray" id="other_ss_3">
                                             </div>
 
@@ -770,9 +770,9 @@
                                         </div>
 
                                         <div class="row">
-                                            <!-- Item Type (OTHER)-->
+                                            <!-- Briefly Describe Item Type -->
                                             <div class="col-xs-12 col-sm-6">
-                                                <label for="other_ss_4">Item Type (OTHER)</label>
+                                                <label for="other_ss_4">'Item Type' Description</label>
                                                 <input disabled placeholder="<?php echo $_SESSION['other_ss_4'] ?>" class="w3-light-gray" id="other_ss_4">
                                             </div>
 
@@ -832,11 +832,6 @@
                                                 <textarea disabled placeholder="<?php echo $_SESSION['item_descr_ss_4'] ?>" class="w3-light-gray" id="item_descr_ss_4"></textarea>
                                             </div>
                                         </div>
-
-                                            <!-- hide other items -->
-<!--                                            <div style="margin: 0 0 7px;" class="sliderWrapper">-->
-<!--                                                <span id="fourthItem" style="margin-left: 0" onclick="hideItems()">- hide other items</span>-->
-<!--                                            </div>-->
                                 </fieldset>
 
                                 <!-- Edit Button -->
@@ -937,6 +932,9 @@
         function secondItem() {
             var e = document.getElementById('secondItem');
             e.style.display = ((e.style.display !== 'none') ?  'none' : 'block');
+
+            var a = document.getElementById('textchange');
+            a.innerText = ((a.innerText !== '+ show other items') ?  '+ show other items' : '- hide other items');
 
             var e1 = document.getElementById('thirdItem');
             e1.style.display = ((e1.style.display !== 'none') ?  'none' : 'block');
