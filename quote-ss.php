@@ -248,7 +248,7 @@
                                     <!-- Title -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Title">
-                                            <label for="title_ss">Title </label>
+                                            <label for="title_ss">Title <span class="required">*</span></label>
                                             <input class="input100" type="text" name="title_ss" id="title_ss" required>
                                             <span class="focus-input100"></span>
                                         </div>
@@ -311,7 +311,7 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="stateId">State <span class="required">*</span></label>
                                                 <select name="state_ss" class="states" id="stateId" type="select" required>
-                                                    <option selected="selected"></option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -326,7 +326,7 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="cityId">City <span class="required">*</span></label>
                                                 <select name="city_ss" class="cities" id="cityId" type="select" required>
-                                                    <option selected="selected"></option>
+                                                    <option disabled="disabled" selected="selected"></option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>

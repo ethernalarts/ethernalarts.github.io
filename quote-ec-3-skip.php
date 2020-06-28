@@ -1,6 +1,11 @@
 <?php
-    //let's start the session
+    //start the session
     session_start();
+
+    $package_type_3 = "";
+    $delivery_options_3 = "";
+    $package_type_4 = "";
+    $delivery_options_4 = "";
 
     header("Cache-Control: no cache");
     session_cache_limiter("private_no_expire");
@@ -31,8 +36,9 @@
     if(isset($_POST['package_description']))
         $_SESSION['package_description']=$_POST['package_description'];
 
+
     //2nd package details
-    if(!empty($_POST['package_type_2']))
+    if(isset($_POST['package_type_2']))
         $_SESSION['package_type_2']=$_POST['package_type_2'];
     if(isset($_POST['delivery_options_2']))
         $_SESSION['delivery_options_2']=$_POST['delivery_options_2'];
@@ -55,11 +61,18 @@
     if(isset($_POST['package_description_2']))
         $_SESSION['package_description_2']=$_POST['package_description_2'];
 
+
     //3rd package details
-    if(isset($_POST['package_type_3']))
+    if(isset($_POST['package_type_3'])) {
         $_SESSION['package_type_3']=$_POST['package_type_3'];
-    if(isset($_POST['delivery_options_3']))
+    } else {
+        $package_type_3 = "";
+    }
+    if(isset($_POST['delivery_options_3'])) {
         $_SESSION['delivery_options_3']=$_POST['delivery_options_3'];
+    } else {
+        $delivery_options_3 = "";
+    }
     if(isset($_POST['other_3']))
         $_SESSION['other_3']=$_POST['other_3'];
     if(isset($_POST['worth_3']))
@@ -79,11 +92,17 @@
     if(isset($_POST['package_description_3']))
         $_SESSION['package_description_3']=$_POST['package_description_3'];
 
+
     //4th package details
     if(isset($_POST['package_type_4']))
         $_SESSION['package_type_4']=$_POST['package_type_4'];
-    if(isset($_POST['delivery_options_4']))
+
+    if(isset($_POST['delivery_options_4'])) {
         $_SESSION['delivery_options_4']=$_POST['delivery_options_4'];
+    } else {
+        $delivery_options_4 = "";
+    }
+
     if(isset($_POST['other_4']))
         $_SESSION['other_4']=$_POST['other_4'];
     if(isset($_POST['worth_4']))
@@ -603,7 +622,7 @@
 
         <!-- Copyright -->
         <p class="footercopyrite">
-            Copyright <i class="copyright far fa-copyright"></i> 2019 VLink Express Courier Ltd. All Rights Reserved.
+            Copyright <i class="copyright far fa-copyright"></i> 2020 VLink Express Courier Ltd. All Rights Reserved.
         </p>
 
         <!-- Social Media icons -->

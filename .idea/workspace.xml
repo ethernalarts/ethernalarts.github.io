@@ -58,7 +58,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -273,7 +273,9 @@
       <workItem from="1591294414889" duration="52760000" />
       <workItem from="1591788954918" duration="165000" />
       <workItem from="1591789851202" duration="965000" />
-      <workItem from="1591792822398" duration="5810000" />
+      <workItem from="1591792822398" duration="28618000" />
+      <workItem from="1592441634711" duration="387000" />
+      <workItem from="1592442061445" duration="57617000" />
     </task>
     <task id="LOCAL-00001" summary="first V-Link Express Courier VCS with GitHub through WebStorm">
       <created>1559020118947</created>
@@ -411,25 +413,33 @@
     <option name="LAST_COMMIT_MESSAGE" value="first V-Link Express Courier VCS with GitHub through WebStorm" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="48" key="SettingsEditor" timestamp="1591795495015">
+    <state x="568" y="294" key="#Custom_Plugin_Repositories" timestamp="1592443628881">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="184" y="48" key="SettingsEditor/0.40.1366.728@0.40.1366.728" timestamp="1591795495015" />
+    <state x="568" y="294" key="#Custom_Plugin_Repositories/0.40.1366.728@0.40.1366.728" timestamp="1592443628881" />
+    <state x="190" y="40" key="SettingsEditor" timestamp="1593278996594">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="190" y="40" key="SettingsEditor/0.40.1366.728@0.40.1366.728" timestamp="1593278996594" />
     <state x="378" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1591294424103">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="378" y="226" key="com.intellij.ide.util.TipDialog/0.40.1366.728@0.40.1366.728" timestamp="1591294424103" />
-    <state x="328" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591689416300">
+    <state x="328" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593303046628">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="328" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1366.728@0.40.1366.728" timestamp="1591689416300" />
-    <state x="339" y="182" key="run.anything.popup" timestamp="1591701572671">
+    <state x="328" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1366.728@0.40.1366.728" timestamp="1593303046628" />
+    <state x="0" y="140" width="1339" height="716" key="dock-window-1" timestamp="1593281216313">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="339" y="182" key="run.anything.popup/0.40.1366.728@0.40.1366.728" timestamp="1591701572671" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1591297843422">
+    <state x="0" y="140" width="1339" height="716" key="dock-window-1/0.40.1366.728@0.40.1366.728" timestamp="1593281216313" />
+    <state x="339" y="182" key="run.anything.popup" timestamp="1592922322812">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1591297843422" />
+    <state x="339" y="182" key="run.anything.popup/0.40.1366.728@0.40.1366.728" timestamp="1592922322812" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1593278988774">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1593278988774" />
   </component>
 </project>

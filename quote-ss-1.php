@@ -260,6 +260,7 @@
                     <form class="container-form"  style="padding-bottom: 0" method="post" action="quote-ss-review.php">
                         <h3 class="h3-contactform">So, what are we looking at?</h3>
                         <div class="formtitle">Item Details</div>
+
                         <!-- 1st Item details -->
                         <fieldset class="nofieldset" style="padding-bottom: 50px">
                             <legend class="legend-middle"><span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields</legend>
@@ -270,7 +271,7 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="storage_type_ss">Storage Option <span class="required">*</span></label>
                                                 <select name="storage_type_ss" id="storage_type_ss" type="select" required>
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Secure Storage">Secure Storage</option>
                                                     <option value="Secure Storage plus">Secure Storage + </option>
                                                     <option value="Secure Storage plus plus">Secure Storage ++ </option>
@@ -286,14 +287,15 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="item_type_ss">Select Item Type <span class="required">*</span></label>
                                                 <select name="item_type_ss" id="item_type_ss" type="select" required>
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Document">Document</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
+                                                    <option value="Mobile Phone">Mobile Phone</option>
+                                                    <option value="Computer">Computer</option>
                                                     <option value="Fabric">Fabric</option>
                                                     <option value="Battery">Battery</option>
                                                     <option value="Wine">Wine and/or Cigars</option>
-                                                    <option value="Automobile">Automobile</option>
                                                     <option value="Perishable">Perishables</option>
                                                     <option value="Machine Parts">Machine Parts</option>
                                                     <option value="Other">Other</option>
@@ -305,18 +307,18 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Item Type (OTHER) -->
+                                    <!-- Briefly Describe Item Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other_ss">If package type is 'OTHER', specify </label>
-                                            <input class="input100" type="text" id="other_ss" name="other_ss">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Describe Item type">
+                                            <label for="other_ss">'Item Type' Description <span class="required">*</span></label>
+                                            <input class="input100" type="text" id="other_ss" name="other_ss" required>
                                             <span class="focus-input100"></span>
                                         </div>
                                     </div>
 
                                     <!-- Item's Worth -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Item's worth">
                                             <label for="worth_ss">Declared Value (USD) <span class="required">*</span></label>
                                             <input class="input100" type="number" name="worth_ss" id="worth_ss" required>
                                             <span class="focus-input100"></span>
@@ -327,7 +329,7 @@
                                 <div class="row">
                                     <!-- Storage Duration -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Storage duration">
                                             <label for="duration_ss">Storage Duration (in weeks) <span class="required">*</span></label>
                                             <input class="input100" type="number" name="duration_ss" id="duration_ss" required>
                                             <span class="focus-input100"></span>
@@ -374,7 +376,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- Colour -->
+                                    <!-- Color -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-26 m-b-35" data-validate = "Enter Item Color">
                                             <label for="color_ss">Colour <span class="required">*</span></label>
@@ -411,9 +413,9 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <label for="storage_type_ss_2">Storage Option </label>
+                                                <label for="storage_type_ss_2">Storage Option</label>
                                                 <select name="storage_type_ss_2" id="storage_type_ss_2" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Secure Storage">Secure Storage</option>
                                                     <option value="Secure Storage plus">Secure Storage +</option>
                                                     <option value="Secure Storage plus plus">Secure Storage ++</option>
@@ -427,16 +429,17 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <label for="item_type_ss_2">Select Item Type </label>
+                                                <label for="item_type_ss_2">Select Item Type</label>
                                                 <select name="item_type_ss_2" id="item_type_ss_2" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Document">Document</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
+                                                    <option value="Mobile Phone">Mobile Phone</option>
+                                                    <option value="Computer">Computer</option>
                                                     <option value="Fabric">Fabric</option>
                                                     <option value="Battery">Battery</option>
                                                     <option value="Wine">Wine and/or Cigars</option>
-                                                    <option value="Automobile">Automobile</option>
                                                     <option value="Perishable">Perishables</option>
                                                     <option value="Machine Parts">Machine Parts</option>
                                                     <option value="Other">Other</option>
@@ -448,10 +451,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Item Type (OTHER) -->
+                                    <!-- Briefly Describe Item Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other_ss_2">If package type is 'OTHER', specify </label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Describe Item type">
+                                            <label for="other_ss_2">'Item Type' Description</label>
                                             <input class="input100" type="text" id="other_ss_2" name="other_ss_2">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -459,7 +462,7 @@
 
                                     <!-- Item's Worth -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Item's worth">
                                             <label for="worth_ss_2">Declared Value (USD) </label>
                                             <input class="input100" type="number" name="worth_ss_2" id="worth_ss_2">
                                             <span class="focus-input100"></span>
@@ -470,7 +473,7 @@
                                 <div class="row">
                                     <!-- Storage Duration -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter storage duration">
                                             <label for="duration_ss_2">Storage Duration (in weeks) </label>
                                             <input class="input100" type="number" name="duration_ss_2" id="duration_ss_2">
                                             <span class="focus-input100"></span>
@@ -554,9 +557,9 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <label for="storage_type_ss_3">Storage Option </label>
+                                                <label for="storage_type_ss_3">Storage Option</label>
                                                 <select name="storage_type_ss_3" id="storage_type_ss_3" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Secure Storage">Secure Storage</option>
                                                     <option value="Secure Storage plus">Secure Storage + </option>
                                                     <option value="Secure Storage plus plus">Secure Storage ++ </option>
@@ -570,16 +573,17 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <label for="item_type_ss_3">Select Item Type </label>
+                                                <label for="item_type_ss_3">Select Item Type</label>
                                                 <select name="item_type_ss_3" id="item_type_ss_3" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Document">Document</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
+                                                    <option value="Mobile Phone">Mobile Phone</option>
+                                                    <option value="Computer">Computer</option>
                                                     <option value="Fabric">Fabric</option>
                                                     <option value="Battery">Battery</option>
                                                     <option value="Wine">Wine and/or Cigars</option>
-                                                    <option value="Automobile">Automobile</option>
                                                     <option value="Perishable">Perishables</option>
                                                     <option value="Machine Parts">Machine Parts</option>
                                                     <option value="Other">Other</option>
@@ -591,10 +595,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Item Type (OTHER) -->
+                                    <!-- Briefly Describe Item Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other_ss_3">If package type is 'OTHER', specify </label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Describe Item type">
+                                            <label for="other_ss_3">'Item Type' Description</label>
                                             <input class="input100" type="text" id="other_ss_3" name="other_ss_3">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -602,8 +606,8 @@
 
                                     <!-- Item's Worth -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
-                                            <label for="worth_ss_3">Declared Value (USD) </label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Item's worth">
+                                            <label for="worth_ss_3">Declared Value (USD)</label>
                                             <input class="input100" type="number" name="worth_ss_3" id="worth_ss_3">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -613,8 +617,8 @@
                                 <div class="row">
                                     <!-- Storage Duration -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
-                                            <label for="duration_ss_3">Storage Duration (in weeks) </label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter storage duration">
+                                            <label for="duration_ss_3">Storage Duration (in weeks)</label>
                                             <input class="input100" type="number" name="duration_ss_3" id="duration_ss_3">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -623,7 +627,7 @@
                                     <!-- Weight -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Weight">
-                                            <label for="weight_ss_3">Weight (pounds) </label>
+                                            <label for="weight_ss_3">Weight (pounds)</label>
                                             <input class="input100" type="number" name="weight_ss_3"  id="weight_ss_3">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -634,7 +638,7 @@
                                     <!-- Length -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Length">
-                                            <label for="length_ss_3">Length (inches) </label>
+                                            <label for="length_ss_3">Length (inches)</label>
                                             <input class="input100" type="number" name="length_ss_3"  id="length_ss_3">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -643,7 +647,7 @@
                                     <!-- Width -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Width">
-                                            <label for="width_ss_3">Width (inches) </label>
+                                            <label for="width_ss_3">Width (inches)</label>
                                             <input class="input100" name="width_ss_3" id="width_ss_3" type="number">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -654,7 +658,7 @@
                                     <!-- Height -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Height">
-                                            <label for="height_ss_3">Height (inches) </label>
+                                            <label for="height_ss_3">Height (inches)</label>
                                             <input class="input100" type="number" name="height_ss_3" id="height_ss_3">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -663,7 +667,7 @@
                                     <!-- Colour -->
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="wrap-input100 validate-input m-t-26 m-b-35" data-validate = "Enter Item Color">
-                                            <label for="color_ss_3">Colour </label>
+                                            <label for="color_ss_3">Color</label>
                                             <input class="input100" name="color_ss_3" id="color_ss_3" type="color">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -699,7 +703,7 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="storage_type_ss_4">Storage Option </label>
                                                 <select name="storage_type_ss_4" id="storage_type_ss_4" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Secure Storage">Secure Storage</option>
                                                     <option value="Secure Storage plus">Secure Storage + </option>
                                                     <option value="Secure Storage plus plus">Secure Storage ++ </option>
@@ -715,14 +719,15 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="item_type_ss_4">Select Item Type </label>
                                                 <select name="item_type_ss_4" id="item_type_ss_4" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Document">Document</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
+                                                    <option value="Mobile Phone">Mobile Phone</option>
+                                                    <option value="Computer">Computer</option>
                                                     <option value="Fabric">Fabric</option>
                                                     <option value="Battery">Battery</option>
                                                     <option value="Wine">Wine and/or Cigars</option>
-                                                    <option value="Automobile">Automobile</option>
                                                     <option value="Perishable">Perishables</option>
                                                     <option value="Machine Parts">Machine Parts</option>
                                                     <option value="Other">Other</option>
@@ -734,10 +739,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Item Type (OTHER) -->
+                                    <!-- Briefly Describe Item Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other_ss_4">If package type is 'OTHER', specify </label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Describe Item type">
+                                            <label for="other_ss_4">'Item Type' Description </label>
                                             <input class="input100" type="text" id="other_ss_4" name="other_ss_4">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -745,7 +750,7 @@
 
                                     <!-- Item's Worth -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Item's worth">
                                             <label for="worth_ss_4">Declared Value (USD) </label>
                                             <input class="input100" type="number" name="worth_ss_4" id="worth_ss_4">
                                             <span class="focus-input100"></span>
@@ -756,7 +761,7 @@
                                 <div class="row">
                                     <!-- Storage Duration -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter Package's worth">
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter storage duration">
                                             <label for="duration_ss_4">Storage Duration (in weeks) </label>
                                             <input class="input100" type="number" name="duration_ss_4" id="duration_ss_4">
                                             <span class="focus-input100"></span>
@@ -863,7 +868,7 @@
         }
     </script>
 
-    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link(for mobile menu) -->
+    <!-- JavaScript for Top Nav Drop Down List for Get a Quote Link (for mobile menu) -->
     <script>
         function myFunction() {
             var x = document.getElementById("demo");

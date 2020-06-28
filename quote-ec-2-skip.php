@@ -2,6 +2,11 @@
     //let's start the session
     session_start();
 
+    $package_type_3 = "";
+    $delivery_options_3 = "";
+    $package_type_4 = "";
+    $delivery_options_4 = "";
+
     header("Cache-Control: no cache");
     session_cache_limiter("private_no_expire");
 
@@ -103,6 +108,12 @@
             border: 0 solid rgba(100, 150, 238, 0.51);
         }
 
+        .container-form textarea {
+            width: 100%;
+            height: 100px;
+            resize: none;
+        }
+
         /* On screens that are 1200px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 1200px) {
             #hi {
@@ -114,20 +125,12 @@
             .container {
                 padding: 0 40px;
             }
-
-            .subheader-h2 {
-                margin-top: 280px;
-            }
         }
 
         /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 750px) {
             .container {
                 padding: 0 20px;
-            }
-
-            .subheader-h2 {
-                margin-top: 280px;
             }
 
             .container-form input, .container-form select {
@@ -241,6 +244,7 @@
                     <form class="container-form"  style="padding-bottom: 0" method="post" action="quote-ec-3-skip.php">
                         <h3 class="h3-contactform">So, what are we looking at?</h3>
                         <div class="formtitle">Package Details</div>
+
                         <!-- 1st Package Details -->
                         <fieldset class="nofieldset" style="margin-bottom: 30px">
                             <legend class="legend-middle"><span style="font-family: Roboto, serif">*</span>&nbsp;&nbsp;Indicates required fields</legend>
@@ -250,13 +254,14 @@
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="package_type">Package Type <span class="required">*</span></label>
-                                                <select name="package_type" type="select" required>
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                <select name="package_type" type="select" id="package_type" required>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
                                                     <option value="Laptop">Computer (Laptop)</option>
                                                     <option value="Desktop">Computer (Desktop)</option>
+                                                    <option value="Mobile Phone">Mobile Phone</option>
                                                     <option value="Document">Document</option>
                                                     <option value="Battery">Battery</option>
                                                     <option value="Machine Parts">Machine Parts</option>
@@ -273,7 +278,7 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="delivery_options">Delivery Option <span class="required">*</span></label>
                                                 <select name="delivery_options" type="select" required>
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                    <option value="" disabled="disabled" selected="selected"></option>
                                                     <option value="VLink Ground">VLink Ground</option>
                                                     <option value="VLink Next Day Air">VLink Next Day Air</option>
                                                     <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
@@ -292,10 +297,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Package Type (OTHER) -->
+                                    <!-- Briefly Describe Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other">If package type is 'OTHER', specify <span>*</span></label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Describe package type">
+                                            <label for="other">'Package Type' Description <span class="required">*</span></label>
                                             <input class="input100" type="text" name="other">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -399,13 +404,14 @@
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="package_type_2">Package Type</label>
-                                                <select name="package_type_2" type="select">
-                                                    <option disabled="disabled" value=" " selected="selected"></option>
+                                                <select name="package_type_2" id="package_type_2" type="select">
+                                                    <option value="" disabled="disabled" selected></option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
                                                     <option value="Laptop">Computer (Laptop)</option>
                                                     <option value="Desktop">Computer (Desktop)</option>
+                                                    <option value="Mobile Phone">Mobile Phone</option>
                                                     <option value="Document">Document</option>
                                                     <option value="Battery">Battery</option>
                                                     <option value="Machine Parts">Machine Parts</option>
@@ -421,8 +427,8 @@
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="delivery_options_2">Delivery Option</label>
-                                                <select name="delivery_options_2" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                <select name="delivery_options_2" id="delivery_options_2" type="select">
+                                                    <option value="" disabled="disabled" selected></option>
                                                     <option value="VLink Ground">VLink Ground</option>
                                                     <option value="VLink Next Day Air">VLink Next Day Air</option>
                                                     <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
@@ -441,10 +447,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Package Type (OTHER) -->
+                                    <!-- Briefly Describe Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other_2">If package type is 'OTHER', specify</label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Briefly Describe Package Type">
+                                            <label for="other_2">'Package Type' Description</label>
                                             <input class="input100" type="text" name="other_2">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -548,17 +554,18 @@
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="package_type_3">Package Type</label>
-                                                <select name="package_type_3" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
-                                                    <option value="Luggage">Luggage</option>
-                                                    <option value="Jewellery">Jewellery</option>
-                                                    <option value="Electronic">Electronic</option>
-                                                    <option value="Laptop">Computer (Laptop)</option>
-                                                    <option value="Desktop">Computer (Desktop)</option>
-                                                    <option value="Document">Document</option>
-                                                    <option value="Battery">Battery</option>
-                                                    <option value="Machine Parts">Machine Parts</option>
-                                                    <option value="Other">Other</option>
+                                                <select name="package_type_3" id="package_type_3" type="select">
+                                                    <option <?php if ($package_type_3 == "" ) echo 'selected' ; ?> value="" disabled></option>
+                                                    <option <?php if ($package_type_3 == "Luggage" ) echo 'selected' ; ?> value="Luggage">Luggage</option>
+                                                    <option <?php if ($package_type_3 == "Jewellery" ) echo 'selected' ; ?> value="Jewellery">Jewellery</option>
+                                                    <option <?php if ($package_type_3 == "Electronic" ) echo 'selected' ; ?> value="Electronic">Electronic</option>
+                                                    <option <?php if ($package_type_3 == "Laptop" ) echo 'selected' ; ?> value="Laptop">Computer (Laptop)</option>
+                                                    <option <?php if ($package_type_3 == "Desktop" ) echo 'selected' ; ?> value="Desktop">Computer (Desktop)</option>
+                                                    <option <?php if ($package_type_3 == "Mobile Phone" ) echo 'selected' ; ?> value="Mobile Phone">Mobile Phone</option>
+                                                    <option <?php if ($package_type_3 == "Document" ) echo 'selected' ; ?> value="Document">Document</option>
+                                                    <option <?php if ($package_type_3 == "Battery" ) echo 'selected' ; ?> value="Battery">Battery</option>
+                                                    <option <?php if ($package_type_3 == "Machine Parts" ) echo 'selected' ; ?> value="Machine Parts">Machine Parts</option>
+                                                    <option <?php if ($package_type_3 == "Other" ) echo 'selected' ; ?> value="Other">Other</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -570,18 +577,18 @@
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="delivery_options_3">Delivery Option</label>
-                                                <select name="delivery_options_3" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
-                                                    <option value="VLink Ground">VLink Ground</option>
-                                                    <option value="VLink Next Day Air">VLink Next Day Air</option>
-                                                    <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
-                                                    <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
-                                                    <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                                    <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                                    <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                                    <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
-                                                    <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
-                                                    <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
+                                                <select name="delivery_options_3" id="delivery_options_3" type="select">
+                                                    <option <?php if ($delivery_options_3 == "" ) echo 'selected' ; ?> value="" disabled></option>
+                                                    <option <?php if ($delivery_options_3 == "VLink Ground" ) echo 'selected' ; ?> value="VLink Ground">VLink Ground</option>
+                                                    <option <?php if ($delivery_options_3 == "VLink Next Day Air" ) echo 'selected' ; ?> value="VLink Next Day Air">VLink Next Day Air</option>
+                                                    <option <?php if ($delivery_options_3 == "VLink 2nd Day Air A.M." ) echo 'selected' ; ?> value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
+                                                    <option <?php if ($delivery_options_3 == "VLink 2nd Day Air" ) echo 'selected' ; ?> value="VLink 2nd Day Air">VLink 2nd Day Air</option>
+                                                    <option <?php if ($delivery_options_3 == "VLink 3 Day Select" ) echo 'selected' ; ?> value="VLink 3 Day Select">VLink 3 Day Select</option>
+                                                    <option <?php if ($delivery_options_3 == "Special Service (Dangerous Goods)" ) echo 'selected' ; ?> value="Special Service (Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                                    <option <?php if ($delivery_options_3 == "Special Service (Secure Transport)" ) echo 'selected' ; ?> value="Special Service (Secure Transport)">Special Service (Secure Transport)</option>
+                                                    <option <?php if ($delivery_options_3 == "Special Service (Clinical Express)" ) echo 'selected' ; ?> value="Special Service (Clinical Express)">Special Service (Clinical Express)</option>
+                                                    <option <?php if ($delivery_options_3 == "Time Critical Service (VLink Dedicated Express)" ) echo 'selected' ; ?> value="Time Critical Service (Dedicated Express)">Time Critical Service (VLink Dedicated Express)</option>
+                                                    <option <?php if ($delivery_options_3 == "Time Critical Service (VLink Special Express" ) echo 'selected' ; ?> value="Time Critical Service (VLink Special Express)">Time Critical Service (VLink Special Express)</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -590,10 +597,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Package Type (OTHER) -->
+                                    <!-- Briefly Describe Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other_3">If package type is 'OTHER', specify</label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Briefly Describe Package Type">
+                                            <label for="other_3">'Package Type' Description</label>
                                             <input class="input100" type="text" name="other_3">
                                             <span class="focus-input100"></span>
                                         </div>
@@ -697,13 +704,14 @@
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="package_type_4">Package Type</label>
-                                                <select name="package_type_4" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
+                                                <select name="package_type_4" id="package_type_4" type="select">
+                                                    <option selected value="" disabled="disabled"></option>
                                                     <option value="Luggage">Luggage</option>
                                                     <option value="Jewellery">Jewellery</option>
                                                     <option value="Electronic">Electronic</option>
                                                     <option value="Laptop">Computer (Laptop)</option>
                                                     <option value="Desktop">Computer (Desktop)</option>
+                                                    <option value="Mobile Phone">Mobile Phone</option>
                                                     <option value="Document">Document</option>
                                                     <option value="Battery">Battery</option>
                                                     <option value="Machine Parts">Machine Parts</option>
@@ -719,18 +727,18 @@
                                         <div class="input-group m-t-39 m-b-35">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <label for="delivery_options_4">Delivery Option</label>
-                                                <select name="delivery_options_4" type="select">
-                                                    <option disabled="disabled" selected="selected"></option>
-                                                    <option value="VLink Ground">VLink Ground</option>
-                                                    <option value="VLink Next Day Air">VLink Next Day Air</option>
-                                                    <option value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
-                                                    <option value="VLink 2nd Day Air">VLink 2nd Day Air</option>
-                                                    <option value="VLink 3 Day Select">VLink 3 Day Select</option>
-                                                    <option value="S. Service(Dangerous Goods)">Special Service (Dangerous Goods)</option>
-                                                    <option value="S. Service(Secure Transport)">Special Service (Secure Transport)</option>
-                                                    <option value="S. Service(Clinical Exp.)">Special Service (Clinical Express)</option>
-                                                    <option value="T.C. Service(Dedicated Exp.)">Time Critical Service (VLink Dedicated Express)</option>
-                                                    <option value="T.C. Service(Special Exp.)">Time Critical Service (VLink Special Express)</option>
+                                                <select name="delivery_options_4" id="delivery_options_4" type="select">
+                                                    <option <?php if ($delivery_options_4 == "" ) echo 'selected' ; ?> value="" disabled selected></option>
+                                                    <option <?php if ($delivery_options_4 == "VLink Ground" ) echo 'selected' ; ?> value="VLink Ground">VLink Ground</option>
+                                                    <option <?php if ($delivery_options_4 == "VLink Next Day Air" ) echo 'selected' ; ?> value="VLink Next Day Air">VLink Next Day Air</option>
+                                                    <option <?php if ($delivery_options_4 == "VLink 2nd Day Air A.M." ) echo 'selected' ; ?> value="VLink 2nd Day Air A.M.">VLink 2nd Day Air A.M.</option>
+                                                    <option <?php if ($delivery_options_4 == "VLink 2nd Day Air" ) echo 'selected' ; ?> value="VLink 2nd Day Air">VLink 2nd Day Air</option>
+                                                    <option <?php if ($delivery_options_4 == "VLink 3 Day Select" ) echo 'selected' ; ?> value="VLink 3 Day Select">VLink 3 Day Select</option>
+                                                    <option <?php if ($delivery_options_4 == "Special Service (Dangerous Goods)" ) echo 'selected' ; ?> value="Special Service (Dangerous Goods)">Special Service (Dangerous Goods)</option>
+                                                    <option <?php if ($delivery_options_4 == "Special Service (Secure Transport)" ) echo 'selected' ; ?> value="Special Service (Secure Transport)">Special Service (Secure Transport)</option>
+                                                    <option <?php if ($delivery_options_4 == "Special Service (Clinical Express)" ) echo 'selected' ; ?> value="Special Service (Clinical Express)">Special Service (Clinical Express)</option>
+                                                    <option <?php if ($delivery_options_4 == "Time Critical Service (VLink Dedicated Express)" ) echo 'selected' ; ?> value="Time Critical Service (Dedicated Express)">Time Critical Service (VLink Dedicated Express)</option>
+                                                    <option <?php if ($delivery_options_4 == "Time Critical Service (VLink Special Express" ) echo 'selected' ; ?> value="Time Critical Service (VLink Special Express)">Time Critical Service (VLink Special Express)</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -739,10 +747,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <!-- Package Type (OTHER) -->
+                                    <!-- Briefly Describe Package Type -->
                                     <div class="col-xs-12 col-sm-6">
-                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "If package type is 'OTHER', specify">
-                                            <label for="other_4">If package type is 'OTHER', specify</label>
+                                        <div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Briefly Describe Package Type">
+                                            <label for="other_4">'Package Type' Description</label>
                                             <input class="input100" type="text" name="other_4">
                                             <span class="focus-input100"></span>
                                         </div>

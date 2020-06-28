@@ -130,7 +130,7 @@
         fwrite($myfile, $package_type);
         $delivery_option = 'Delivery option = '.$_SESSION['delivery_options']."\r\n";   //Delivery options
         fwrite($myfile, $delivery_option);
-        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other']."\r\n";   //Package Type (Other)
+        $pkgtype_other = 'Package Type Description = '.$_SESSION['other']."\r\n";   //Package Type (Other)
         fwrite($myfile, $pkgtype_other);
         $worth = 'Shipment Worth = '.$_SESSION['worth']."\r\n";   //worth
         fwrite($myfile, $worth);
@@ -156,7 +156,7 @@
         fwrite($myfile, $package_type);
         $delivery_option = 'Delivery option = '.$_SESSION['delivery_options_2']."\r\n";   //Delivery options
         fwrite($myfile, $delivery_option);
-        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other_2']."\r\n";   //Package Type (Other)
+        $pkgtype_other = 'Package Type Description = '.$_SESSION['other_2']."\r\n";   //Package Type (Other)
         fwrite($myfile, $pkgtype_other);
         $worth = 'Shipment Worth = '.$_SESSION['worth_2']."\r\n";   //worth
         fwrite($myfile, $worth);
@@ -182,7 +182,7 @@
         fwrite($myfile, $package_type);
         $delivery_option = 'Delivery option = '.$_SESSION['delivery_options_3']."\r\n";   //Delivery options
         fwrite($myfile, $delivery_option);
-        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other_3']."\r\n";   //Package Type (Other)
+        $pkgtype_other = 'Package Type Description = '.$_SESSION['other_3']."\r\n";   //Package Type (Other)
         fwrite($myfile, $pkgtype_other);
         $worth = 'Shipment Worth = '.$_SESSION['worth_3']."\r\n";   //worth
         fwrite($myfile, $worth);
@@ -208,7 +208,7 @@
         fwrite($myfile, $package_type);
         $delivery_option = 'Delivery option = '.$_SESSION['delivery_options_4']."\r\n";   //Delivery options
         fwrite($myfile, $delivery_option);
-        $pkgtype_other = 'Package Type (Other) = '.$_SESSION['other_4']."\r\n";   //Package Type (Other)
+        $pkgtype_other = 'Package Type Description = '.$_SESSION['other_4']."\r\n";   //Package Type (Other)
         fwrite($myfile, $pkgtype_other);
         $worth = 'Shipment Worth = '.$_SESSION['worth_4']."\r\n";   //worth
         fwrite($myfile, $worth);
